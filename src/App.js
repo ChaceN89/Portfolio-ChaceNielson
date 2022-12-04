@@ -4,7 +4,9 @@
  */
  import React from "react";
  import './index.css';
- import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+ import { Routes, Route } from 'react-router-dom'
+ import { HashRouter } from 'react-router-dom'
+
  import Home from './pages/Home';
  import Gallery from './pages/Gallery'
  import PageNotFound from './pages/PageNotFound';
@@ -14,7 +16,7 @@
  function App() {
    return (
      <div className='body-font font-poppins'>
-       <Router>
+       <HashRouter>
          <Routes>
            <Route path="/" element={<Home/>}/>
            <Route path="Gallery" element={<Gallery/>}/>
@@ -22,7 +24,7 @@
            <Route path="Contact" element={<ContactThanks/>}/>
            <Route path="*" element={<PageNotFound/>} /> 
          </Routes>
-       </Router>
+       </HashRouter>
      </div>
    );
  }

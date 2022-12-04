@@ -11,7 +11,7 @@ import Navbar from '../components/Navbar';
 import PhotoCarousel from '../components/PhotoCarousel';
 import ProjectList from '../components/ProjectList'
 import SkillList from '../components/SkillList';
-// import Line from '../miniComponents/Line';
+import Line from '../miniComponents/Line';
 
 function Home() {
 
@@ -34,15 +34,15 @@ function Home() {
     <>
       <Navbar/>
       <Intoduction/>
-        {/* <Line/> */}
+        <Line/>
       <SkillList/> 
-        {/* <Line/> */}
+        <Line/>
       <PhotoCarousel/>
-        {/* <Line/> */}
+        <Line/>
       <ProjectList/>
-        {/* <Line/> */}
+        <Line/>
       <HobbyList/>
-        {/* <Line/> */}
+        <Line/>
       <ContactForm/>
       <Footer/>
     </>

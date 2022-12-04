@@ -17,7 +17,7 @@ import SectionHeader from '../miniComponents/SectionHeader'
 
 function ContactForm() {
 
-  const myDomaion =  "http://localhost:3000/Contact"
+  const myDomaion =  "https://chacen89.github.io/Contact"
   const myEmail ="chacen@shaw.ca"
 
   const labelCSS = "block mb-2 text-sm font-medium text-gray-300"
