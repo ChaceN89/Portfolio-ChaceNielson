@@ -16,7 +16,7 @@ function ProjectList() {
     {name:"Website", link:"https://aviar.herokuapp.com/", icon: <CgWebsite size={20}/>}
   ]
   const portfolioLinks= [
-    {name:"GitHub", link:"https://github.com/ChaceN89/personal-portfolio", icon:<BsGithub size={20}/>}
+    {name:"GitHub", link:"https://github.com/ChaceN89/Portfolio-ChaceNielson", icon:<BsGithub size={20}/>}
   ]
 
   return (
