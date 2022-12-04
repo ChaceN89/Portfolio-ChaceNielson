@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Portfolio-ChaceNielson/static/css/main.623b23d3.css",
+    "main.js": "/Portfolio-ChaceNielson/static/js/main.a2851893.js",
+    "static/js/787.d0f9e5f6.chunk.js": "/Portfolio-ChaceNielson/static/js/787.d0f9e5f6.chunk.js",
+    "index.html": "/Portfolio-ChaceNielson/index.html",
+    "main.623b23d3.css.map": "/Portfolio-ChaceNielson/static/css/main.623b23d3.css.map",
+    "main.a2851893.js.map": "/Portfolio-ChaceNielson/static/js/main.a2851893.js.map",
+    "787.d0f9e5f6.chunk.js.map": "/Portfolio-ChaceNielson/static/js/787.d0f9e5f6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.623b23d3.css",
+    "static/js/main.a2851893.js"
+  ]
+}
