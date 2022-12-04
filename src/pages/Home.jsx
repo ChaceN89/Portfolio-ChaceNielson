@@ -16,7 +16,6 @@ import Line from '../miniComponents/Line';
 function Home() {
 
   useEffect(() => {
-    console.log("here")
     const observer = new IntersectionObserver((entries) =>{
       entries.forEach((entry) => {
         if(entry.isIntersecting){

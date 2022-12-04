@@ -16,7 +16,6 @@
  function App() {
    return (
      <div className='body-font font-poppins'>
-       <HashRouter>
          <Routes>
            <Route path="/" element={<Home/>}/>
            <Route path="Gallery" element={<Gallery/>}/>
@@ -24,7 +23,6 @@
            <Route path="Contact" element={<ContactThanks/>}/>
            <Route path="*" element={<PageNotFound/>} /> 
          </Routes>
-       </HashRouter>
      </div>
    );
  }
