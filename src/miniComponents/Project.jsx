@@ -25,12 +25,14 @@ function Project({name, description, img, techStackName="Tech Stack", techStack=
 
 
   return (
-    <div className='proAnimation hiddenClass 
+    <div className='proAnimation hiddenClass '>
+    <div className='
     bg-slate-400 bg-opacity-5 grid grid-cols-3 shadow-2xl 
       backdrop-blur-xl rounded-lg bg-blend-normal 
       border border-opacity-0 border-white hover:border-opacity-40
       hover:scale-105'>
-      
+
+
       <img src={process.env.PUBLIC_URL + img} className=' bg-black col-span-2 rounded-tl-lg rounded-br-lg  h-full w-full object-scale-down 
 									' alt="..."/>
       
@@ -61,6 +63,7 @@ function Project({name, description, img, techStackName="Tech Stack", techStack=
             )
           })}
       </div>
+    </div>
     </div>
   )
 
