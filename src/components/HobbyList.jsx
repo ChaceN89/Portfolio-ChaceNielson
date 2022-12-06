@@ -12,35 +12,35 @@ function HobbyList() {
             <Project 
               name={"Music"} 
               description={"Electric Guitar and Song Writing "} 
-              img={'photos/guitar1.png'} 
+              img={'/photos/guitar1.png'} 
               techStackName={""} 
               // internalLink={"Gallery"}
             />    
             <Project 
               name={"Snowbarding"} 
               description={""} 
-              img={'photos/snowboard6.png'} 
+              img={'/photos/snowboard6.png'} 
               techStackName={""} 
               // internalLink={"Gallery"}
             />
             <Project 
               name={"Rock Climbing"} 
               description={""} 
-              img={'photos/climbing5.jpg'} 
+              img={'/photos/climbing5.jpg'} 
               techStackName={""} 
               // internalLink={"Gallery"}
             />
             <Project 
               name={"Backpacking"} 
               description={""} 
-              img={'photos/backpacking2.jpg'} 
+              img={'/photos/backpacking2.jpg'} 
               techStackName={""} 
               // internalLink={"Gallery"}
             />
             <Project 
               name={"Ice Climbing"} 
               description={""} 
-              img={'photos/iceClimbing2.jpg'} 
+              img={'/photos/iceClimbing2.jpg'} 
               techStackName={""} 
               // internalLink={"Gallery"}
             />

@@ -27,13 +27,13 @@ function ProjectList() {
             <Project 
               name={"Drill Ops"} 
               description={"Full stack application for analysis of drilling data, large data files, react tables and the D3 Library. First project lead position"} 
-              img={'projectPhotos/geothermal.png'} 
+              img={'/projectPhotos/geothermal.png'} 
               techStack={["ReactJS", "FastApi", "Postgres", "Tailwind"]}
             />
             <Project 
               name={"Aviar"} 
               description={"Full stack photo sharing application. Uses JWTs for authentication of user accounts."} 
-              img={'projectPhotos/aviar_collections.png'} 
+              img={'/projectPhotos/aviar_collections.png'} 
               techStackName={"MERN Stack"} 
               techStack={[ "ReactJS", "ExpressJS", "NodeJS", "MongoDB"]} 
               externalLinks={aviarLinks} 
@@ -41,21 +41,21 @@ function ProjectList() {
             <Project 
               name={"Portfolio"} 
               description={"My portfolio website made with react."} 
-              img={'projectPhotos/portfolio.png'} 
+              img={'/projectPhotos/portfolio.png'} 
               techStack={["ReactJS", "Tailwind",]}
               externalLinks={portfolioLinks} 
             />
             <Project 
               name={"Space Survive"} 
               description={"Video game based on asteroids. Includes multiple modes, power ups, achievments and different enemy behaviour"} 
-              img={'projectPhotos/spaceSurvive3.png'} 
+              img={'/projectPhotos/spaceSurvive3.png'} 
               techStack={["Unity Game Engine","C#" ]}
               // internalLink={"VideoGames"}
               />
             <Project 
               name={"Flappy Bird Clone"} 
               description={"A clone of the phone game Flappy Bird"} 
-              img={'projectPhotos/CopyRightBird.png'} 
+              img={'/projectPhotos/CopyRightBird.png'} 
               techStack={["Unity Game Engine","C#" ]}
               // internalLink={"VideoGames"}
             />
