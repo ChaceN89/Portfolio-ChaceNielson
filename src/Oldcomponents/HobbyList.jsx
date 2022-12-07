@@ -1,6 +1,6 @@
 import React from 'react'
 import Project from '../miniComponents/Project'
-import SectionHeader from '../miniComponents/SectionHeader'
+import SectionHeader from '../components/SectionHeader'
 
 function HobbyList() {
   return (

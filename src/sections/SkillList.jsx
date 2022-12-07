@@ -1,24 +1,23 @@
 /**
- * All my skills list in responsive grid columsn box
- * and a little descrition
+ * All my skills listed in responsive grid box
  */
 import React from 'react'
-// individual skill component to display icon and text
-import Skill from '../miniComponents/Skill';
 
-// icons representing skills
+// icons for skills
 import { FaPython, FaReact, FaNodeJs, FaUnity, FaCss3 } from "react-icons/fa";
 import { AiOutlineHtml5, AiOutlineGithub } from "react-icons/ai";
 import { GrMysql } from "react-icons/gr";
 import { SiFastapi, SiPostgresql, SiMongodb, SiJava, SiTailwindcss, SiCplusplus, SiJavascript } from "react-icons/si";
-import SectionHeader from '../miniComponents/SectionHeader';
+
+// components
+import Skill from '../components/Skill';
+import SectionHeader from '../components/SectionHeader';
 
 function SkillList() {
-  return (
-    <section id="Skills" className='py-28 hiddenClass sectionWidth sectionVert min-h-screen'> 
+  return(
+    <section id="Skills" className='section'>
       <SectionHeader title={"My Technical Skills"} description={"What I've Learned Through My Experiences"}/>
-
-      <ul className='mt-4 grid grid-cols-3 gap-10 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-6'>
+      <ul className='pt-10 container mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-6 lg:max-w-4xl'>
         <Skill label={"ReactJS"} icon={<FaReact color={"blue"} size={65} />}/>
         <Skill label={"JavaScript"} icon={<SiJavascript color='yellow' size={65} />}/>
         <Skill label={"HTML"} icon={<AiOutlineHtml5 color='red' size={65} />}/>
@@ -37,8 +36,10 @@ function SkillList() {
         <Skill label={"Git/Github"} icon={<AiOutlineGithub size={65} />}/>
       </ul>
     </section>
-    
   )
+
+
+
 }
 
 export default SkillList

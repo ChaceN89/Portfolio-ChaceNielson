@@ -5,7 +5,7 @@
  */
 import React from 'react'
 import Project from '../miniComponents/Project'
-import SectionHeader from '../miniComponents/SectionHeader'
+import SectionHeader from '../components/SectionHeader'
 import {CgWebsite} from 'react-icons/cg'
 import { BsGithub} from "react-icons/bs";
 
@@ -18,6 +18,17 @@ function ProjectList() {
   const portfolioLinks= [
     {name:"GitHub", link:"https://github.com/ChaceN89/Portfolio-ChaceNielson", icon:<BsGithub size={20}/>}
   ]
+
+
+  return(
+    <section>
+      
+    </section>
+  )
+
+
+
+
 
   return (
     <section id="Projects" className='hiddenClass sectionWidth sectionVert'> 

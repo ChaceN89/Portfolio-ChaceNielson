@@ -5,12 +5,33 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 @layer components {
-  .sectionWidth {
-    @apply relative flex flex-col items-center max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 
+  /* for all sections */
+  .section {
+    @apply  min-h-screen py-10 container mx-auto px-2 sm:px-7 md:px-10 
   }
-  .sectionVert{
-    @apply py-20
+
+  /* for introduction paragraph */
+  .introParagraph{
+    @apply p-4 sm:px-10 sm:text-justify place-self-stretch 2xl:px-20
   }
+  .introParagraph > p{
+    @apply p-2
+  }
+
+  /*Fort Photo Carousel */
+  .arrow{
+    @apply absolute text-white z-20  select-none cursor-pointer opacity-20 hover:opacity-100 text-3xl md:text-5xl hover:text-black 
+  }
+  .leftArrow{
+    @apply top-1/2 left-12 
+  }
+  .rightArrow{
+    @apply top-1/2 right-12 
+  }
+  .bottomArrow{
+    @apply left-1/2 bottom-8
+  }
+
 
   .projectList{
     @apply my-4 pl-4 ml-2 sm:ml-12 md:mx-24 lg:mx-20 pb-10
@@ -26,6 +47,22 @@
 
 }
 
+
+/* image carousel css for transistions*/
+.slide {
+  opacity: 0;
+  transition-duration: 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  transition-duration: 2s;
+  transform: scale(1.08);
+}
+
+
+
+
 /* remove scrollbar on text areas */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -37,7 +74,6 @@
 }
 
 /* remove main scroll bar */
-
 /* hide scrollbar but allow scrolling */
 body {
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
@@ -49,17 +85,6 @@ body::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
 
-/* image carousel css for transistions*/
-.slide {
-  opacity: 0;
-  transition-duration: 1s ease;
-}
-
-.slide.active {
-  opacity: 1;
-  transition-duration: 1s;
-  transform: scale(1.08);
-}
 
 
 /* animations on scroll */
@@ -83,7 +108,7 @@ body::-webkit-scrollbar {
   }
 }
 
-/* deplay ijn projects */
+/* deplay in projects */
 .proAnimation:nth-child(n){
   transition-delay: 200ms  ;
 }

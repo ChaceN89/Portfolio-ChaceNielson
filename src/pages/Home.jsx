@@ -3,15 +3,16 @@
  * Displays Nav, sections and footer
  */
 import React, {useEffect} from 'react'
-import ContactForm from '../components/ContactForm';
-import Footer from '../components/Footer';
-import HobbyList from '../components/HobbyList';
-import Intoduction from '../components/Intoduction';
-import Navbar from '../components/Navbar';
-import PhotoCarousel from '../components/PhotoCarousel';
-import ProjectList from '../components/ProjectList'
-import SkillList from '../components/SkillList';
-import Line from '../miniComponents/Line';
+import BreakPointVisual from '../sections/BreakPointVisual';
+import ContactForm from '../Oldcomponents/ContactForm';
+import Footer from '../Oldcomponents/Footer';
+import HobbyList from '../Oldcomponents/HobbyList';
+import Intoduction from '../sections/Intoduction';
+import Navbar from '../sections/Navbar';
+import PhotoCarousel from '../sections/PhotoCarousel';
+import ProjectList from '../sections/ProjectList'
+import SkillList from '../sections/SkillList';
+import Line from '../components/Line';
 
 function Home() {
 
@@ -29,23 +30,43 @@ function Home() {
     hiddenElements.forEach((el) => observer.observe(el))
   },[])
 
-  return (
-    <>
-      <Navbar/>
-      <Intoduction/>
-        <Line/>
-      <SkillList/> 
-        <Line/>
-      <PhotoCarousel/>
-        <Line/>
-      <ProjectList/>
-        <Line/>
-      <HobbyList/>
-        <Line/>
-      <ContactForm/>
-      <Footer/>
-    </>
-  )
+
+return (
+  <>
+  <BreakPointVisual/>
+  <Navbar/>
+
+  <Intoduction/>
+  <Line/>
+  <SkillList/> 
+  <Line/>
+  <PhotoCarousel/>
+  <Line/>
+  <ProjectList/>
+  <Line/>
+  </>
+)
+
+
+
+
+  // return (
+  //   <>
+  //     <Navbar/>
+  //     <Intoduction/>
+  //       <Line/>
+  //     <SkillList/> 
+  //       <Line/>
+  //     <PhotoCarousel/>
+  //       <Line/>
+  //     <ProjectList/>
+  //       <Line/>
+  //     <HobbyList/>
+  //       <Line/>
+  //     <ContactForm/>
+  //     <Footer/>
+  //   </>
+  // )
 }
 
 export default Home

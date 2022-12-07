@@ -4,12 +4,12 @@
  *  may have links to the gallery page to see the photos more openly
  */
 import React from 'react'
-import Carousel from '../miniComponents/Carousel'
-import SectionHeader from '../miniComponents/SectionHeader'
+import Carousel from '../components/Carousel'
+import SectionHeader from '../components/SectionHeader'
 
 function PhotoCarousel() {
   return (
-    <section id="PhotoCarousel" className=' hiddenClass sectionWidth sectionVert min-h-screen'> 
+    <section id="PhotoCarousel" className='section'> 
       <SectionHeader title={"Photo Gallery"} description={"Some of my Interests"}/>
       <Carousel/>
      </section>

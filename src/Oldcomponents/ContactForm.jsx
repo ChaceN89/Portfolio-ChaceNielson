@@ -7,7 +7,7 @@
  * 
  */
 import DownloadCV from '../miniComponents/DownloadCV'
-import SectionHeader from '../miniComponents/SectionHeader'
+import SectionHeader from '../components/SectionHeader'
 
 import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
