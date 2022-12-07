@@ -4,7 +4,7 @@
  * reacts to size of screen
  */
 import React from 'react'
-import ExternalLinks from '../miniComponents/ExternalLinks';
+import ExternalLinks from '../components/ExternalLinks';
 
 function Intoduction() {
 

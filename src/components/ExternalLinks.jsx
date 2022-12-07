@@ -5,8 +5,8 @@
 import React from 'react'
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
 import { IoLogoYoutube } from "react-icons/io";
-// import { TfiGallery } from "react-icons/tfi";
-// import {Link} from 'react-router-dom'
+import { TfiGallery } from "react-icons/tfi";
+import {Link} from 'react-router-dom'
 
 function ExternalLinks({size=25}) {
   return (
@@ -23,9 +23,9 @@ function ExternalLinks({size=25}) {
         <a href="https://www.youtube.com/channel/UCXcMrM3Vk3TpXu3crQ6Yakg" target="_blank" rel="noreferrer" className='text-white hover:scale-110 hover:text-slate-300'>
             <IoLogoYoutube size={size}/>
         </a>
-        {/* <Link to="Gallery" className='text-white hover:scale-110 hover:text-slate-300'>
+        <Link to="Gallery" className='text-white hover:scale-110 hover:text-slate-300'>
             <TfiGallery size={size}/>
-        </Link> */}
+        </Link>
 
     </div>
   )

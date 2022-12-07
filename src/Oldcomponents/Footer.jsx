@@ -3,7 +3,7 @@
  * Contains Avatar image, link back to top with My Name, and list of links to see my other stuff
  */
 import React from 'react'
-import ExternalLinks from '../miniComponents/ExternalLinks';
+import ExternalLinks from '../components/ExternalLinks';
 import { Link } from 'react-scroll';
 
 function Footer() {

@@ -3,7 +3,7 @@
  * Link to section of the current page
  */
 import React from 'react'
-import NavIcon from '../miniComponents/NavIcon' // link element 
+import NavIcon from '../components/NavIcon' // link element 
 
 // react icons
 import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";

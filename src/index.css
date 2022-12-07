@@ -33,16 +33,15 @@
   }
 
 
-  .projectList{
-    @apply my-4 pl-4 ml-2 sm:ml-12 md:mx-24 lg:mx-20 pb-10
-  }
-
-  .projectList > ul{
-    @apply grid gap-6 
-      grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 
-      mx-20 sm:mx-16 md:mx-16 lg:mx-0
+  .projectCardList {
+    @apply grid
+      grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  mx-10 lg:mx-6
+      gap-0 lg:gap-6 xl:gap-8
       text-xs  md:text-sm
-      pt-6
+      pt-6 
+  }
+  .projectCardList > li {
+    @apply self-end
   }
 
 }

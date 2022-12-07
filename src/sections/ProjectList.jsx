@@ -8,6 +8,7 @@ import Project from '../miniComponents/Project'
 import SectionHeader from '../components/SectionHeader'
 import {CgWebsite} from 'react-icons/cg'
 import { BsGithub} from "react-icons/bs";
+import ProjectCard from '../components/ProjectCard';
 
 function ProjectList() {
 
@@ -21,8 +22,69 @@ function ProjectList() {
 
 
   return(
-    <section>
-      
+    <section id="Projects" className='section'>
+      <SectionHeader title={"Technical Projects"} description={"My Projects Using Various Tech Stacks"} />
+      <ul className='projectCardList'>
+        <ProjectCard
+          name={"GEO Predict"} 
+          description={"Full stack application for analysis of drilling data, large data files, react tables and the D3 Library. First project lead position"} 
+          img={'/projectPhotos/geothermal.png'} 
+          techStack={["ReactJS", "FastApi", "Postgres", "Tailwind"]}
+          internalLink={"Gallery"}
+        />
+        <ProjectCard
+          name={"Drill Ops"} 
+          description={"Full stack application for analysis of drilling data, large data "} 
+          img={'/photos/mountains8.jpg'} 
+          techStack={["ReactJS", "FastApi", "Postgres", "Tailwind"]}
+        />
+        <ProjectCard
+          name={"Drill Ops"} 
+          description={"Full stack application for analysis of drilling data, large data files, react ta lonmg Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam placeat aliquid, alias aspernatur sed repellendus et, laborum consequatur corporis neque itaque odit libero blanditiis recusandae excepturi. Non eligendi, laudantium, nulla natus minus explicabo vitae vel eaque autem alias quaerat, expedita illum assumenda asperiores rerum!"} 
+          img={'/photos/climbing4.jpeg'} 
+          externalLinks={aviarLinks} 
+        />
+          <ProjectCard
+          name={"Drill Ops"} 
+          description={"Full stack application for analysis of drilling data, large data files, react ta lonmg Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam placeat aliquid, alias aspernatur sed repellendus et, laborum consequatur corporis neque itaque odit libero blanditiis recusandae excepturi. Non eligendi, laudantium, nulla natus minus explicabo vitae vel eaque autem alias quaerat, expedita illum assumenda asperiores rerum!"} 
+          img={'/photos/backpacking4.jpeg'} 
+          externalLinks={aviarLinks} 
+        />
+        <ProjectCard
+          name={"Drill Ops"} 
+          description={""} 
+          img={'/photos/backpacking4.jpeg'} 
+          externalLinks={aviarLinks} 
+        />
+        <ProjectCard
+          name={"Drill Ops"} 
+          description={""} 
+          img={'/photos/backpacking4.jpeg'} 
+          externalLinks={aviarLinks} 
+        />
+        <ProjectCard
+          name={"Portfolio"}
+          
+          description={"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit, iste incidunt recusandae, minima atque fuga neque pariatur eveniet quasi obcaecati id asperiores nihil ipsam distinctio cupiditate explicabo. Reprehenderit, dignissimos adipisci?"} 
+          img={'/projectPhotos/portfolio.png'} 
+          externalLinks={aviarLinks} 
+        />
+        <ProjectCard 
+              name={"Space Survive"} 
+              description={"Video game based on asteroids. Includes multiple modes, power ups, achievments and different enemy behaviour"} 
+              img={'/projectPhotos/spaceSurvive3.png'} 
+              techStack={["Unity Game Engine","C#" ]}
+              // internalLink={"VideoGames"}
+              />
+            <ProjectCard
+              name={"Flappy Bird Clone"} 
+              description={"A clone of the phone game Flappy Bird"} 
+              img={'/projectPhotos/CopyRightBird.png'} 
+              techStack={["Unity Game Engine","C#" ]}
+              // internalLink={"VideoGames"}
+            />
+
+      </ul>
     </section>
   )
 
