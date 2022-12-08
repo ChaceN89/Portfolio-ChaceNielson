@@ -51,9 +51,78 @@
   .contactButton{
     @apply bg-black text-white rounded-2xl bg-opacity-20 backdrop-blur-xl shadow-lg font-medium py-3 px-6 w-fit hover:bg-white hover:text-black
   }
- 
+
+
+  .model{
+    @apply  w-full h-full fixed top-0 left-0 flex justify-center items-center bg-black
+  }
+
+  .isOpen{
+    @apply  p-0
+  }
+  .model > img{
+    @apply w-auto max-w-full h-auto max-h-full block p-10 mx-auto
+  }
 
 }
+
+.modal {
+  transition: opacity .4s ease, visibility .4s ease transform .5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  overflow: hidden;
+  z-index: 999;
+}
+
+.model.isOpen {
+  visibility: visible;
+  opacity: 1;
+  transition-duration: .4s;
+  transform: scale(1);
+}
+
+.modal img{}
+
+/*.mode33{
+  width: 100% ;
+  height:100%;
+  position:fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  transition: opacity .4s ease, visibility .4s ease transform .5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  overflow: hidden;
+  z-index: 999;
+}
+
+.modal.isOpen{
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+
+}
+
+.modal img{
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  display: block;
+  line-height: 0;
+  box-sizing: border-box;
+  padding: 20px 0 20px;
+  margin: 0 auto;
+} */
+
+
+
 
 
 @media only screen and (max-width: 600px) {
@@ -65,10 +134,7 @@
     -webkit-column-width:33%;
     -moz-column-width:33%;
     -column-width:33%;
-  }
-  .pics{
-  }
-  
+  } 
 }
 
 @media only screen and (min-width: 600px) {
@@ -80,9 +146,6 @@
     -moz-column-width:33%;
     -column-width:33%;
   }
-  .pics{
-  }
-  
 }
 
 @media only screen and (min-width: 768px) {
@@ -94,22 +157,7 @@
     -moz-column-width:33%;
     -column-width:33%;
   }
-  .pics{
-  }
-
 }
-
-/* 
-.gallery{
-  -webkit-column-count: 3;
-  -moz-column-count: 3;
-  -column-count: 3;
-  -webkit-column-width:33%;
-  -moz-column-width:33%;
-  -column-width:33%;
-}
-.pics{
-} */
 
 
 
