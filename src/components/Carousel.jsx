@@ -40,7 +40,9 @@ function Carousel() {
 		<div className='pt-12 container mx-auto relative h-fit'>
 			<FaArrowLeft className="arrow leftArrow" onClick={prevSlide}/>
 			<FaArrowRight className="arrow rightArrow" onClick={nextSlide}/>
-			<ImShuffle className="arrow bottomArrow" onClick={randomSlide}/>
+			<div className='flex justify-center'>
+				<ImShuffle className="arrow bottomArrow" onClick={randomSlide}/>
+			</div>
 			{carouselData.map((item, index) =>{
 				return(
 					<div key={index} className={index === current ? 'slide active ' : 'slide'}>

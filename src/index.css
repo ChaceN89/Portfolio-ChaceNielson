@@ -29,7 +29,7 @@
     @apply top-1/2 right-12 
   }
   .bottomArrow{
-    @apply left-1/2 bottom-8
+    @apply bottom-8
   }
 
   /* grid list for projects and hobbies */
