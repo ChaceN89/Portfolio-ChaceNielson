@@ -37,7 +37,7 @@ function ProjectCard({name, description, img, techStackName=null, techStack=[], 
             </div>
         </div>
 
-        <div className='-mt-32 pt-32 px-5  pb-4 bg-gray-400 bg-opacity-20 shadow-2xl rounded-2xl h-full'>
+        <div className='-mt-32 pt-32 px-1.5 sm:px-5  pb-4 bg-gray-400 bg-opacity-20 shadow-2xl rounded-2xl h-full'>
             <InnerProjectCard
                 name={name}
                 description={description}

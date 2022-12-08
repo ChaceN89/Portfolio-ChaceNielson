@@ -167,7 +167,7 @@ body::-webkit-scrollbar {
 /* class for when thigns are shown */
 .showClass {
   opacity: 1;
-  transition-delay: 200ms;
+  transition-delay: 300ms;
 }
 
 /* if user doesn't want transitions wit hbrowser preference */
