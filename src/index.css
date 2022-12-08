@@ -32,6 +32,7 @@
     @apply left-1/2 bottom-8
   }
 
+  /* grid list for projects and hobbies */
   .projectCardList {
     @apply grid
       grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 
@@ -42,6 +43,7 @@
   }
 
 
+  /* items for contact page */
   .contactLabel{
     @apply block mb-2 text-sm font-medium text-gray-300
   }
@@ -53,20 +55,19 @@
   }
 
 
+  /* position elements for gallery using tailwind */
   .model{
-    @apply  w-full h-full fixed top-0 left-0 flex justify-center items-center bg-black rounded-lg bg-opacity-70
+    @apply w-full fixed top-0 left-0 flex justify-center items-center bg-black rounded-3xl bg-opacity-70
   }
-
   .isOpen{
-    @apply  p-0 select-none
+    @apply  select-none
   }
   .model > img{
     @apply w-auto max-w-full h-auto max-h-full block p-10 mx-auto
   }
-
 }
 
-/* transisiton properties of gallery */
+/* transisiton properties of gallery using regular css */
 .modal {
   transition: opacity .4s ease, visibility .4s ease transform .5s ease-in-out;
   visibility: hidden;
@@ -84,7 +85,7 @@
 }
 
 
-/* for gallery layout */
+/* for gallery layout with responsive layout */
 @media only screen and (max-width: 600px) {
   .gallery{
     -webkit-column-count: 1;
@@ -117,7 +118,6 @@
     -column-width:33%;
   }
 }
-
 
 
 /* image carousel css for transistions*/

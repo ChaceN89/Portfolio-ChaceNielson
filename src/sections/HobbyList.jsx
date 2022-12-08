@@ -10,7 +10,6 @@ function HobbyList() {
     <section id="Hobbies" className='section hiddenClass'>
       <SectionHeader title={"My Hobbies"} description={"Things Ive Picked Up over the years"}/>
       <ul className='projectCardList'>
-
         <ProjectCard
           name={"Music"} 
           description={"Electic guitar and song writing. I've even started soldering guitar pedals in my free time."} 
@@ -36,7 +35,6 @@ function HobbyList() {
           description={"I've lived near the mountians my whole live and love spending any time in nature "} 
           img={'/photos/mountains8.jpg'} 
         />
-
         <ProjectCard
           name={"Ice Climbing"} 
           description={"I've lived near the mountians my whole live and love spending any time in nature "} 
@@ -47,7 +45,6 @@ function HobbyList() {
           description={"I enjoy playing guitar and have taken to building my own guitar pedals"} 
           img={'/projectPhotos/gp_finsihed.jpeg'} 
         />
-
       </ul>
     </section>
   )
