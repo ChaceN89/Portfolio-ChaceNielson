@@ -160,7 +160,8 @@ body::-webkit-scrollbar {
 /* class for when things are hidden */
 .hiddenClass {
   opacity: 0;
-  filter: blur((200px));
+  filter: blur((5px));
+  translate: translateX(-100%);
   transition: all 1s;
 }
 
@@ -179,7 +180,7 @@ body::-webkit-scrollbar {
 
 /* deplay in projects */
 .projDelay:nth-child(n){
-  transition-delay: 100ms  ;
+  transition-delay: 200ms  ;
 }
 
 
