@@ -6,7 +6,7 @@
   giver alerta if it fails
  * 
  */
-import DownloadCV from '../miniComponents/DownloadCV'
+import DownloadCV from '../components/DownloadCV'
 import SectionHeader from '../components/SectionHeader'
 
 import React, { useRef } from 'react';
@@ -34,37 +34,38 @@ function ContactForm() {
       });
   };
 
-  return (
-    <section id="Contact" className='hiddenClass sectionVert mx-20 min-h-screen'> 
-      <SectionHeader title={"Contact Me"} description={"Want to learn more about me? Interested in software? Send me a message."}/>
 
+  return(
+    <section id="Contact" className='section'>
+      <SectionHeader title={"Contact Me"} description={"Want to learn more about me? Interested in software? Send me a message."}/>
       <DownloadCV/>
 
-      <form ref={form} onSubmit={sendEmail} className="flex flex-col justify-center mx-10 sm:mx-24 md:mx-32 lg:mx-auto max-w-3xl space-y-8 ">
+      <form ref={form} onSubmit={sendEmail} className="flex flex-col space-y-6 justify-center container mx-auto lg:max-w-3xl">
 
         <input type="hidden" name='to_name' value="Chace" />
 
-
         <div>
-            <label className={labelCSS}>Your Name</label>
-            <input  type="text" name="from_name" className={inputCSS}  placeholder="John Doe" required/>
+            <label className="contactLabel">Your Name</label>
+            <input  type="text" name="from_name" className="contactInput"  placeholder="John Doe" required/>
         </div>
 
         <div>
-            <label className={labelCSS}>Your email</label>
-            <input type="email" name="user_email" className={inputCSS} placeholder="name@example.com" required/>
+            <label className="contactLabel">Your email</label>
+            <input type="email" name="user_email" className="contactInput" placeholder="name@example.com" required/>
         </div>
 
         <div>
-            <label className={labelCSS}>Your Message</label>
+            <label className="contactLabel">Your Message</label>
             <textarea id="message" name="message" rows="5"  maxLength="1000"  className={inputCSS + " max-h-fit resize-none  no-scrollbar"} placeholder="Leave your thoughts here..." required></textarea>
         </div>
-    
-        <button type="submit" value="Send" className={buttonCSS}> Send Message </button>
+
+        <button type="submit" value="Send" className="contactButton"> Send Message </button>
       </form>
 
     </section>
+
   )
+
 }
 
 export default ContactForm

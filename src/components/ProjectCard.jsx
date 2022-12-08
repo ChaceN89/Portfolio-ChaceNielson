@@ -10,7 +10,7 @@ function ProjectCard({name, description, img, techStackName="Tech Stack", techSt
   }
 
   return(   
-    <li className='rounded-3xl backdrop-blur-2xl'>
+    <li className='rounded-3xl backdrop-blur-2xl overflow-hidden'>
         <div className='overflow-hidden hover:scale-105'>
             <div className='inline-block p-4 '>
                 <Link to={internalLink} className={cursor}>

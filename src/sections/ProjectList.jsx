@@ -4,7 +4,6 @@
  * will have a project component and hobbies in the same project cards
  */
 import React from 'react'
-import Project from '../miniComponents/Project'
 import SectionHeader from '../components/SectionHeader'
 import {CgWebsite} from 'react-icons/cg'
 import { BsGithub} from "react-icons/bs";
@@ -87,17 +86,14 @@ function ProjectList() {
       </ul>
     </section>
   )
+}
+
+export default ProjectList
 
 
+/***
 
-
-
-  return (
-    <section id="Projects" className='hiddenClass sectionWidth sectionVert'> 
-      <SectionHeader title={"Technical Projects"} description={"My Projects Using Various Tech Stacks"} />
-      <div className='projectList'>
-        <ul>
-            <Project 
+    <Project 
               name={"Drill Ops"} 
               description={"Full stack application for analysis of drilling data, large data files, react tables and the D3 Library. First project lead position"} 
               img={'/projectPhotos/geothermal.png'} 
@@ -132,10 +128,5 @@ function ProjectList() {
               techStack={["Unity Game Engine","C#" ]}
               // internalLink={"VideoGames"}
             />
-          </ul>
-      </div>
-      </section>
-  )
-}
 
-export default ProjectList
+ */

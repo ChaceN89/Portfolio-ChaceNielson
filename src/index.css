@@ -35,13 +35,25 @@
 
   .projectCardList {
     @apply grid
-      grid-cols-1 lg:grid-cols-2 xl:grid-cols-3  mx-10 lg:mx-6
+      grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 
+      mx-10 md:mx-14 
       gap-0 lg:gap-6 xl:gap-8
       text-xs  md:text-sm
       pt-6 
   }
   .projectCardList > li {
     @apply self-end
+  }
+
+
+  .contactLabel{
+    @apply block mb-2 text-sm font-medium text-gray-300
+  }
+  .contactInput{
+    @apply block w-full p-2.5 shadow-lg rounded-lg bg-gray-50 bg-opacity-10 backdrop-blur-xl
+  }
+  .contactButton{
+    @apply bg-black text-white rounded-2xl bg-opacity-20 backdrop-blur-xl shadow-lg font-medium py-3 px-6 w-fit hover:bg-white hover:text-black
   }
 
 }
@@ -55,7 +67,7 @@
 
 .slide.active {
   opacity: 1;
-  transition-duration: 2s;
+  transition-duration: 1s;
   transform: scale(1.08);
 }
 

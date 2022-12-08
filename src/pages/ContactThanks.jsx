@@ -8,11 +8,11 @@ function ContactThanks() {
 
     const navigate = useNavigate()
 
-    useEffect(() => {
-        setTimeout(() => {
-        navigate('/event')
-        }, 6000)
-    }, [navigate])
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //     navigate('/event')
+    //     }, 6000)
+    // }, [navigate])
 
     const buttonCSS = "bg-black text-white rounded-2xl bg-opacity-20 backdrop-blur-xl shadow-lg font-medium py-2 text-lg w-1/4 hover:bg-white hover:text-black flex justify-center"
 
@@ -22,7 +22,7 @@ function ContactThanks() {
             <AiOutlineCheckCircle size={100}/>
             <h1 className="text-4xl font-bold text-center">Thank You!</h1>
             <p className='text-center'>Thanks for your interest! I will get back to you as soon as possible </p>
-            <Link to={"/"} className={buttonCSS + " flex items-center space-x-1"}>
+            <Link to={"/"} className={buttonCSS + " flex items-center space-x-1 p-4"}>
                 <BsArrowLeft/> <span>Home</span>
             </Link>
         </div>

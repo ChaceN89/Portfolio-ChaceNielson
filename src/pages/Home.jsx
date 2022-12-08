@@ -4,9 +4,9 @@
  */
 import React, {useEffect} from 'react'
 import BreakPointVisual from '../sections/BreakPointVisual';
-import ContactForm from '../Oldcomponents/ContactForm';
-import Footer from '../Oldcomponents/Footer';
-import HobbyList from '../Oldcomponents/HobbyList';
+import ContactForm from '../sections/ContactForm';
+import Footer from '../sections/Footer';
+import HobbyList from '../sections/HobbyList';
 import Intoduction from '../sections/Intoduction';
 import Navbar from '../sections/Navbar';
 import PhotoCarousel from '../sections/PhotoCarousel';
@@ -44,6 +44,10 @@ return (
   <Line/>
   <ProjectList/>
   <Line/>
+  <HobbyList/>
+  <Line/>
+  <ContactForm/>
+  <Footer/>
   </>
 )
 
