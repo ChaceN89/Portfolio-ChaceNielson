@@ -4,7 +4,7 @@ import ProjectCard from '../components/ProjectCard'
 
 function HobbyList() {
   return(
-    <section id="Projects" className='section'>
+    <section id="Hobbies" className='section hiddenClass'>
       <SectionHeader title={"My Hobbies"} description={"Things Ive Picked Up over the years"}/>
       <ul className='projectCardList'>
 

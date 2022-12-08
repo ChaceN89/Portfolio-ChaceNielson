@@ -9,7 +9,7 @@ import ExternalLinks from '../components/ExternalLinks';
 function Intoduction() {
 
   return(
-    <section id='Home' className='section 
+    <section id='Home' className='section hiddenClass
       flex flex-col items-center
       lg:grid lg:grid-cols-2 place-items-center
     '>

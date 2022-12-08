@@ -21,7 +21,7 @@ function ProjectList() {
 
 
   return(
-    <section id="Projects" className='section'>
+    <section id="Projects" className='section hiddenClass '>
       <SectionHeader title={"Technical Projects"} description={"My Projects Using Various Tech Stacks"} />
       <ul className='projectCardList'>
         <ProjectCard
