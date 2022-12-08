@@ -1,3 +1,7 @@
+/**
+ * Photo Carousel to display all sizes of photos in a fixed space
+ * Used arrow keys to navigate between photos (may not work on some browsers)
+ */
 import React, {useState} from 'react'
 import { carouselData } from '../carouselData';
 import { ImShuffle } from "react-icons/im";
@@ -22,12 +26,13 @@ function Carousel() {
 
 	document.onkeydown = (e)=> {
 		switch (e.keyCode) {
-			case 37:
+			case 37: //left arrow button
 				prevSlide()
 				break;
-			case 39:
+			case 39: // right arrow button
 				nextSlide()
 				break;
+			default:
 		}
 	};
 

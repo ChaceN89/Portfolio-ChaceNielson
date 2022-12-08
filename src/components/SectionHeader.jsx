@@ -1,3 +1,6 @@
+/**
+ * The header at top of most sections
+ */
 import React from 'react'
 
 function SectionHeader({title, description}) {

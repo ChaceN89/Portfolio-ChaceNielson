@@ -1,3 +1,4 @@
+/**Shows after an email is send, will redirect to home page after 4 seconds  */
 import React, { useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 
@@ -11,7 +12,7 @@ function ContactThanks() {
     useEffect(() => {
         setTimeout(() => {
         navigate('/event')
-        }, 6000)
+        }, 4000)
     }, [navigate])
 
     const buttonCSS = "bg-black text-white rounded-2xl bg-opacity-20 backdrop-blur-xl shadow-lg font-medium py-2 text-lg w-1/4 hover:bg-white hover:text-black flex justify-center"

@@ -3,7 +3,6 @@
  * Displays Nav, sections and footer
  */
 import React, {useEffect} from 'react'
-import BreakPointVisual from '../sections/BreakPointVisual';
 import ContactForm from '../sections/ContactForm';
 import Footer from '../sections/Footer';
 import HobbyList from '../sections/HobbyList';
@@ -33,9 +32,7 @@ function Home() {
 
 return (
   <>
-  <BreakPointVisual/>
   <Navbar/>
-
   <Intoduction/>
   <Line/>
   <SkillList/> 

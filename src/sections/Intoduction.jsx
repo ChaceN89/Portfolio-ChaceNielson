@@ -1,5 +1,5 @@
 /**
- * INtro to me
+ * Intro to me
  * description of myself and picture of me, also a list of external links to github etc
  * reacts to size of screen
  */

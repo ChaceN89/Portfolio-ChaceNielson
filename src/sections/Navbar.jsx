@@ -14,7 +14,7 @@ import { MdOutlineConnectWithoutContact } from "react-icons/md";
 
 function Navbar() {
   return (
-    <nav className='fixed inset-y-1/2 -translate-y-40 
+    <nav className='fixed inset-y-1/2 -translate-y-48
       ml-0 sm:ml-4 md:ml-6 2xl:ml-12
       -translate-x-20 sm:translate-x-0 
       p-2 md:p-4 

@@ -1,8 +1,10 @@
+/**
+ * Downlaod Resume and Cover Letter and can add mor buttons if need be
+ */
 import React from 'react'
-import {AiOutlineCloudDownload} from 'react-icons/ai'
+import DownloadButton from './DownloadButton';
 
 function DownloadCV() {
-
     const downloadResume = () => {
 		try { 
 			const fileName = "Chace Nielson - Resume.pdf" 
@@ -24,24 +26,10 @@ function DownloadCV() {
 
 	return (
 		<div className='py-6 flex justify-center space-x-4 sm:space-x-20 lg:space-x-36'>
-
-			<button onClick={downloadResume} className='relative group rounded-xl shadow bg-black cursor-pointer flex justify-between items-center overflow-hidden  hover:bg-white hover:text-black  opacity-70'>
-				<div className=' p-2 bg-white bg-opacity-20   flex justify-center items-center '>
-					<AiOutlineCloudDownload size={30} className="hover:text-black hover:scale-105"/>
-				</div>
-				<div className="px-5">Resume</div> 
-			</button>
-			
-			<button onClick={downloadCoverLetter}  className='group rounded-xl shadow bg-black cursor-pointer flex justify-between items-center overflow-hidden  hover:bg-white hover:text-black  opacity-70'>
-				<div className='relative p-2 bg-white bg-opacity-20   flex justify-center items-center '>
-					<AiOutlineCloudDownload size={30} className="hover:text-black hover:scale-105"/>
-				</div>
-				<p className="px-5">Cover Letter</p>
-			</button>
-	
+			<DownloadButton onClick={downloadResume} name={"Resume"}/>
+			<DownloadButton onClick={downloadCoverLetter} name={"Cover Letter"}/>
 		</div>
 	)
-
 }
 
 export default DownloadCV

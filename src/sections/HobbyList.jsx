@@ -1,3 +1,6 @@
+/**
+ * List of all hobbies, used same CSS as project list
+ */
 import React from 'react'
 import SectionHeader from '../components/SectionHeader'
 import ProjectCard from '../components/ProjectCard'
@@ -9,25 +12,42 @@ function HobbyList() {
       <ul className='projectCardList'>
 
         <ProjectCard
-          name={"Drill Ops"} 
-          description={"Full stack application for analysis of drilling data, large data "} 
+          name={"Music"} 
+          description={"Electic guitar and song writing. I've even started soldering guitar pedals in my free time."} 
+          img={'/photos/guitar1.png'} 
+        />
+        <ProjectCard
+          name={"Snowboading"} 
+          description={"I'm always up for a trip to the slopes. Theres nothing quite like a powder day."} 
+          img={'/photos/snowboard6.png'} 
+        />
+        <ProjectCard
+          name={"Backpacking"} 
+          description={"bckpacking is one of my favourite wasy to experience nature. Theres somthing about spending days out in the bush that you can't get from a day hike."} 
+          img={'/photos/backpacking2.jpg'} 
+        />
+        <ProjectCard
+          name={"Rock Climbing"} 
+          description={"Rock climbing is a great activity and combines working with my hands with my love of the outdoors."} 
+          img={'/photos/climbing3.jpg'} 
+        />
+        <ProjectCard
+          name={"Hiking"} 
+          description={"I've lived near the mountians my whole live and love spending any time in nature "} 
           img={'/photos/mountains8.jpg'} 
         />
-          <ProjectCard
-          name={"Drill Ops"} 
-          description={"Full stack application for analysis of drilling data, large data files, react ta lonmg Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam placeat aliquid, alias aspernatur sed repellendus et, laborum consequatur corporis neque itaque odit libero blanditiis recusandae excepturi. Non eligendi, laudantium, nulla natus minus explicabo vitae vel eaque autem alias quaerat, expedita illum assumenda asperiores rerum!"} 
-          img={'/photos/backpacking4.jpeg'} 
+
+        <ProjectCard
+          name={"Ice Climbing"} 
+          description={"I've lived near the mountians my whole live and love spending any time in nature "} 
+          img={'/photos/iceClimbing2.jpg'} 
         />
         <ProjectCard
-          name={"Drill Ops"} 
-          description={""} 
-          img={'/photos/backpacking4.jpeg'} 
+          name={"Guitar Pedal"} 
+          description={"I enjoy playing guitar and have taken to building my own guitar pedals"} 
+          img={'/projectPhotos/gp_finsihed.jpeg'} 
         />
-        <ProjectCard
-          name={"Drill Ops"} 
-          description={""} 
-          img={'/photos/backpacking4.jpeg'} 
-        />
+
       </ul>
     </section>
   )

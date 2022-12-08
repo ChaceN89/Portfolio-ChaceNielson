@@ -32,17 +32,13 @@
     @apply left-1/2 bottom-8
   }
 
-
   .projectCardList {
     @apply grid
       grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 
       mx-10 md:mx-14 
-      gap-0 lg:gap-6 xl:gap-8
+      gap-4 lg:gap-6 xl:gap-8
       text-xs  md:text-sm
-      pt-6 
-  }
-  .projectCardList > li {
-    @apply self-end
+      pt-6 justify-items-stretch
   }
 
 
@@ -72,8 +68,6 @@
 }
 
 
-
-
 /* remove scrollbar on text areas */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -95,7 +89,6 @@ body {
 body::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
-
 
 
 /* animations on scroll */
@@ -121,7 +114,7 @@ body::-webkit-scrollbar {
 
 /* deplay in projects */
 .projDelay:nth-child(n){
-  transition-delay: 200ms  ;
+  transition-delay: 100ms  ;
 }
 
 

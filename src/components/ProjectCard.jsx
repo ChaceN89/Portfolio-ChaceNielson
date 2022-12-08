@@ -1,7 +1,23 @@
+/**
+ * Main project card to dispaly a project or a hobby as well
+ * can have lots of text or no text
+ * Arguments
+ name - the name of the project
+description - a breif description
+img - image path relative to public folder
+techStackName - name of tech stack used, default is null but common to use "Tech Stack"
+techStack - List of all technologies used as part of tech stack ["a", "b"]
+internalLink - link to internal page example "Gallery" ->   internalLink={"Gallery"}
+
+externalLinks - List of external link to show at bottom, list if a lsit of objects with following strucutre
+{name:"name", link:"url", icon:<Icon size={20}/>
+ * 
+ */
 import React from 'react'
 import { Link } from 'react-router-dom'
+import InnerProjectCard from './InnerProjectCard'
 
-function ProjectCard({name, description, img, techStackName="Tech Stack", techStack=[], externalLinks=[],  internalLink=null}) {
+function ProjectCard({name, description, img, techStackName=null, techStack=[], externalLinks=[],  internalLink=null}) {
 
       // set the cursor type base doff internal link
   var cursor= "cursor-default" 
@@ -10,8 +26,8 @@ function ProjectCard({name, description, img, techStackName="Tech Stack", techSt
   }
 
   return(   
-    <li className='rounded-3xl backdrop-blur-2xl overflow-hidden projDelay hiddenClass'>
-        <div className='overflow-hidden hover:scale-105'>
+    <li className='h-full rounded-3xl backdrop-blur-2xl overflow-hidden projDelay  '>
+        <div className=' overflow-hidden hover:scale-105'>
             <div className='inline-block p-4 '>
                 <Link to={internalLink} className={cursor}>
                 <div className=' overflow-hidden rounded-3xl'> 
@@ -21,29 +37,14 @@ function ProjectCard({name, description, img, techStackName="Tech Stack", techSt
             </div>
         </div>
 
-        <div className='-mt-28 py-28 px-5 pb-10 bg-gray-400 bg-opacity-20 shadow-2xl rounded-2xl'>
-            <div>{name}</div>
-            <div>{description}</div>
-
-            <div className=' flex flex-col items-center  text-black'>
-                <div className=''>{techStackName}</div>
-                {techStack.map((item)=>{
-                    return (<div className='' key={item}>{item}</div>)
-                })}
-            </div>
-
-            <div className=''>
-                {externalLinks.map((item,index)=>{
-                    return (
-                        <a key={index} href={item.link} target="_blank" rel="noreferrer"
-                        className='' 
-                        >
-                        <div>{item.icon}</div>
-                        <div>{item.name}</div>
-                    </a>
-                    )
-                })}
-            </div>
+        <div className='-mt-32 pt-32 px-5  pb-4 bg-gray-400 bg-opacity-20 shadow-2xl rounded-2xl h-full'>
+            <InnerProjectCard
+                name={name}
+                description={description}
+                techStackName={techStackName}
+                techStack={techStack}
+                externalLinks={externalLinks}
+            />
         </div>
     </li>
   )
