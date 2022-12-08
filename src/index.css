@@ -54,11 +54,11 @@
 
 
   .model{
-    @apply  w-full h-full fixed top-0 left-0 flex justify-center items-center bg-black
+    @apply  w-full h-full fixed top-0 left-0 flex justify-center items-center bg-black rounded-lg bg-opacity-70
   }
 
   .isOpen{
-    @apply  p-0
+    @apply  p-0 select-none
   }
   .model > img{
     @apply w-auto max-w-full h-auto max-h-full block p-10 mx-auto
@@ -66,6 +66,7 @@
 
 }
 
+/* transisiton properties of gallery */
 .modal {
   transition: opacity .4s ease, visibility .4s ease transform .5s ease-in-out;
   visibility: hidden;
@@ -82,51 +83,9 @@
   transform: scale(1);
 }
 
-.modal img{}
 
-/*.mode33{
-  width: 100% ;
-  height:100%;
-  position:fixed;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  transition: opacity .4s ease, visibility .4s ease transform .5s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-  transform: scale(0);
-  overflow: hidden;
-  z-index: 999;
-}
-
-.modal.isOpen{
-  visibility: visible;
-  opacity: 1;
-  transform: scale(1);
-
-}
-
-.modal img{
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 100%;
-  display: block;
-  line-height: 0;
-  box-sizing: border-box;
-  padding: 20px 0 20px;
-  margin: 0 auto;
-} */
-
-
-
-
-
+/* for gallery layout */
 @media only screen and (max-width: 600px) {
-
   .gallery{
     -webkit-column-count: 1;
     -moz-column-count: 1;
