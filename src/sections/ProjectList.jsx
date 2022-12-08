@@ -4,27 +4,77 @@
  * will have a project component and hobbies in the same project cards
  */
 import React from 'react'
-import Project from '../miniComponents/Project'
-import SectionHeader from '../miniComponents/SectionHeader'
-import {CgWebsite} from 'react-icons/cg'
+import SectionHeader from '../components/SectionHeader'
+import {TfiWorld} from 'react-icons/tfi'
 import { BsGithub} from "react-icons/bs";
+import ProjectCard from '../components/ProjectCard';
 
 function ProjectList() {
 
   const aviarLinks= [
     {name:"GitHub", link:"https://github.com/ChaceN89/Aviar", icon:<BsGithub size={20}/>},
-    {name:"Website", link:"https://aviar.herokuapp.com/", icon: <CgWebsite size={20}/>}
+    {name:"Website", link:"https://aviar.herokuapp.com/", icon: <TfiWorld size={20}/>}
   ]
   const portfolioLinks= [
     {name:"GitHub", link:"https://github.com/ChaceN89/Portfolio-ChaceNielson", icon:<BsGithub size={20}/>}
   ]
 
-  return (
-    <section id="Projects" className='hiddenClass sectionWidth sectionVert'> 
+
+  return(
+    <section id="Projects" className='section hiddenClass '>
       <SectionHeader title={"Technical Projects"} description={"My Projects Using Various Tech Stacks"} />
-      <div className='projectList'>
-        <ul>
-            <Project 
+      <ul className='projectCardList'>
+        <ProjectCard
+          name={"GEO Predict"} 
+          description={"Full stack application for analysis of drilling data, large data files, react tables and the D3 Library. First project lead position."} 
+          img={'/projectPhotos/geothermal.png'} 
+          techStackName={"Tech Stack"}
+          techStack={["ReactJS", "FastApi", "Postgres", "Tailwind"]}
+        />
+        <ProjectCard
+          name={"Aviar"} 
+          description={"Full stack photo sharing application. Uses JWTs for authentication of user accounts. USers"} 
+          img={'/projectPhotos/aviar_collections.png'} 
+          techStackName={"Mern Stack"}
+          techStack={["ReactJS", "FastApi", "Postgres", "Tailwind", "Heroku"]}
+          externalLinks={aviarLinks}
+        />
+        <ProjectCard
+          name={"Portfolio"}
+          description={"My portfolio website made with React and Tailwind. Use regualr CSS for fade in transitions"} 
+          img={'/projectPhotos/portfolio.png'} 
+          techStackName={"Tech Stack"}
+          techStack={["ReactJS", "Tailwind", "CSS"]}
+          externalLinks={portfolioLinks} 
+        />
+        <ProjectCard 
+          name={"Space Survive"} 
+          description={"Video game based on asteroids. Includes multiple modes, power ups, achievments and different enemy behaviours/types."} 
+          img={'/projectPhotos/spaceSurvive3.png'} 
+          techStackName={"Tools"}
+          techStack={["Unity Game Engine","C#" ]}
+          internalLink={"VideoGames"}
+          />
+        <ProjectCard
+          name={"Flappy Bird Clone"} 
+          description={"A clone of the phone game Flappy Bird with difficulty progression"} 
+          img={'/projectPhotos/CopyRightBird.png'} 
+          techStackName={"Tools"}
+          techStack={["Unity Game Engine","C#" ]}
+          internalLink={"VideoGames"}
+        />
+
+      </ul>
+    </section>
+  )
+}
+
+export default ProjectList
+
+
+/***
+
+    <Project 
               name={"Drill Ops"} 
               description={"Full stack application for analysis of drilling data, large data files, react tables and the D3 Library. First project lead position"} 
               img={'/projectPhotos/geothermal.png'} 
@@ -59,10 +109,5 @@ function ProjectList() {
               techStack={["Unity Game Engine","C#" ]}
               // internalLink={"VideoGames"}
             />
-          </ul>
-      </div>
-      </section>
-  )
-}
 
-export default ProjectList
+ */

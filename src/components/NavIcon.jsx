@@ -14,7 +14,6 @@ function NavIcon({link, Icon}) {
       >
           {Icon}
       </Link>
-
   )
 }
 

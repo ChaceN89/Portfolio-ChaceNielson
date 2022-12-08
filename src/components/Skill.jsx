@@ -1,5 +1,5 @@
 /**
- * Display and Icomn
+ * Resuable skill icon and name component
  */
 import React from 'react'
 
