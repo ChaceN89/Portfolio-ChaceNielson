@@ -13,7 +13,7 @@ function ProjectList() {
 
   const aviarLinks= [
     {name:"GitHub", link:"https://github.com/ChaceN89/Aviar", icon:<BsGithub size={20}/>},
-    {name:"Website", link:"https://aviar.herokuapp.com/", icon: <TfiWorld size={20}/>}
+    // {name:"Website", link:"https://aviar.herokuapp.com/", icon: <TfiWorld size={20}/>}
   ]
   const portfolioLinks= [
     {name:"GitHub", link:"https://github.com/ChaceN89/Portfolio-ChaceNielson", icon:<BsGithub size={20}/>}
@@ -36,7 +36,7 @@ function ProjectList() {
           description={"Full stack photo sharing application. Uses JWTs for authentication of user accounts. It was deployed on Heroku. "} 
           img={'/projectPhotos/aviar_collections.png'} 
           techStackName={"Mern Stack"}
-          techStack={["ReactJS", "FastApi", "Postgres", "Tailwind", "Heroku"]}
+          techStack={["ReactJS", "FastApi", "Postgres", "Tailwind"]}
           externalLinks={aviarLinks}
         />
         <ProjectCard
