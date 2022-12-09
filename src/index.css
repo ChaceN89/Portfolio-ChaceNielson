@@ -168,7 +168,7 @@ body::-webkit-scrollbar {
 /* class for when thigns are shown */
 .showClass {
   opacity: 1;
-  transition-delay: 300ms;
+  transition-delay: 400ms;
 }
 
 /* if user doesn't want transitions wit hbrowser preference */
@@ -178,10 +178,40 @@ body::-webkit-scrollbar {
   }
 }
 
-/* deplay in projects */
+
 .projDelay:nth-child(n){
+  transition-delay: 300ms  ;
+}
+
+/* deplay in projects */
+.projDelay:nth-child(1){
   transition-delay: 200ms  ;
 }
+.projDelay:nth-child(2){
+  transition-delay: 300ms  ;
+}
+.projDelay:nth-child(3){
+  transition-delay: 400ms  ;
+}
+.projDelay:nth-child(4){
+  transition-delay: 500ms  ;
+}
+.projDelay:nth-child(5){
+  transition-delay: 600ms  ;
+}
+.projDelay:nth-child(6){
+  transition-delay: 700ms  ;
+}
+.projDelay:nth-child(7){
+  transition-delay: 800ms  ;
+}
+.projDelay:nth-child(8){
+  transition-delay: 900ms  ;
+}
+.projDelay:nth-child(9){
+  transition-delay: 1000ms  ;
+}
+
 
 
 /* main color of text and the background */

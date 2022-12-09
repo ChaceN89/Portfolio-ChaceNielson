@@ -33,7 +33,7 @@ function ProjectList() {
         />
         <ProjectCard
           name={"Aviar"} 
-          description={"Full stack photo sharing application. Uses JWTs for authentication of user accounts. USers"} 
+          description={"Full stack photo sharing application. Uses JWTs for authentication of user accounts. It was deployed on Heroku. "} 
           img={'/projectPhotos/aviar_collections.png'} 
           techStackName={"Mern Stack"}
           techStack={["ReactJS", "FastApi", "Postgres", "Tailwind", "Heroku"]}
@@ -41,7 +41,7 @@ function ProjectList() {
         />
         <ProjectCard
           name={"Portfolio"}
-          description={"My portfolio website made with React and Tailwind. Use regualr CSS for fade in transitions"} 
+          description={"My portfolio website is made with React and Tailwind. It uses regular CSS for fade-in transitions."} 
           img={'/projectPhotos/portfolio.png'} 
           techStackName={"Tech Stack"}
           techStack={["ReactJS", "Tailwind", "CSS"]}
@@ -49,7 +49,7 @@ function ProjectList() {
         />
         <ProjectCard 
           name={"Space Survive"} 
-          description={"Video game based on asteroids. Includes multiple modes, power ups, achievments and different enemy behaviours/types."} 
+          description={"A video game based on asteroids. Includes multiple modes, power-ups, achievements, save states and different enemy behaviours/types. "} 
           img={'/projectPhotos/spaceSurvive3.png'} 
           techStackName={"Tools"}
           techStack={["Unity Game Engine","C#" ]}
@@ -57,7 +57,7 @@ function ProjectList() {
           />
         <ProjectCard
           name={"Flappy Bird Clone"} 
-          description={"A clone of the phone game Flappy Bird with difficulty progression"} 
+          description={"A clone of the phone game Flappy Bird, with difficulty progression and save states."} 
           img={'/projectPhotos/CopyRightBird.png'} 
           techStackName={"Tools"}
           techStack={["Unity Game Engine","C#" ]}

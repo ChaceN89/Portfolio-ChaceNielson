@@ -12,17 +12,17 @@ function HobbyList() {
       <ul className='projectCardList'>
         <ProjectCard
           name={"Music"} 
-          description={"Electic guitar and song writing. I've even started soldering guitar pedals in my free time."} 
+          description={"I play electric guitar and occasionally spend time writing and composing songs with friends."} 
           img={'/photos/guitar1.png'} 
         />
         <ProjectCard
           name={"Snowboading"} 
-          description={"I'm always up for a trip to the slopes. Theres nothing quite like a powder day."} 
+          description={"I'm always up for a trip to the slopes. There's nothing quite like a powder day."} 
           img={'/photos/snowboard6.png'} 
         />
         <ProjectCard
           name={"Backpacking"} 
-          description={"bckpacking is one of my favourite wasy to experience nature. Theres somthing about spending days out in the bush that you can't get from a day hike."} 
+          description={"Backpacking is one of my favourite ways to experience nature. There's something about spending days out in the bush that you can't get from a day hike."} 
           img={'/photos/backpacking2.jpg'} 
         />
         <ProjectCard
@@ -32,17 +32,17 @@ function HobbyList() {
         />
         <ProjectCard
           name={"Hiking"} 
-          description={"I've lived near the mountians my whole live and love spending any time in nature "} 
+          description={"I've lived near the mountains my whole life and love spending any time in nature."} 
           img={'/photos/mountains8.jpg'} 
         />
         <ProjectCard
           name={"Ice Climbing"} 
-          description={"I've lived near the mountians my whole live and love spending any time in nature "} 
+          description={"I've also taken my love for rock climbing and taken it into the winter."} 
           img={'/photos/iceClimbing2.jpg'} 
         />
         <ProjectCard
-          name={"Guitar Pedal"} 
-          description={"I enjoy playing guitar and have taken to building my own guitar pedals"} 
+          name={"Guitar Pedals"} 
+          description={"I enjoy playing guitar and have taken to building my own guitar pedals."} 
           img={'/projectPhotos/gp_finsihed.jpeg'} 
         />
       </ul>
