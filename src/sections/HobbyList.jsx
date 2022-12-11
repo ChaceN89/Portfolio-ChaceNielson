@@ -20,11 +20,13 @@ function HobbyList() {
           name={"Snowboading"} 
           description={"I'm always up for a trip to the slopes. There's nothing quite like a powder day."} 
           img={'/photos/snowboard6.png'} 
+          internalLink={"Videos/#Snowboarding"}
         />
         <ProjectCard
           name={"Backpacking"} 
           description={"Backpacking is one of my favourite ways to experience nature. There's something about spending days out in the bush that you can't get from a day hike."} 
           img={'/photos/backpacking2.jpg'} 
+          internalLink={"Videos/#Backpacking"}
         />
         <ProjectCard
           name={"Rock Climbing"} 
@@ -35,6 +37,8 @@ function HobbyList() {
           name={"Hiking"} 
           description={"I've lived near the mountains my whole life and love spending any time in nature."} 
           img={'/photos/mountains8.jpg'} 
+          internalLink={"Videos/#Hiking"}
+
         />
         <ProjectCard
           name={"Ice Climbing"} 
@@ -45,6 +49,12 @@ function HobbyList() {
           name={"Guitar Pedals"} 
           description={"I enjoy playing guitar and have taken to building my own guitar pedals."} 
           img={'/projectPhotos/gp_finsihed.jpeg'} 
+        />
+        <ProjectCard
+          name={"Homes of Hope "} 
+          description={"I participated in the Homes of Hope program, building a home in Tijuana Mexico for a family."} 
+          img={'/projectPhotos/gp_finsihed.jpeg'} 
+          internalLink={"Videos/#Mexico"}
         />
       </ul>
     </section>

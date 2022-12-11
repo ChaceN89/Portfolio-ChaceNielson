@@ -49,7 +49,7 @@ function Gallery() {
         {carouselData.map((item, index)=>{
           return(
             <div className='pics rounded-3xl'>
-              <img id='image' onClick={()=>getImg(item.image)} key={index}  src={item.image} alt="..." className=' object-contain rounded-xl py-2 cursor-pointer '/>
+              <img id='image' onClick={()=>getImg(item.image)} key={index} loading='lazy' src={item.image} alt="..." className=' object-contain rounded-xl py-2 cursor-pointer '/>
             </div>
           )
         })

@@ -48,7 +48,7 @@ function Carousel() {
 					<div key={index} className={index === current ? 'slide active ' : 'slide'}>
 						<div className='grid grid-cols-1 place-items-center  relative h-fit w-auto'>
 							{index === current && (
-								<img id='image' key={index} src={item.image} alt="..." className='rounded-[2rem] object-contain  max-h-[40rem] max-w-full p-4'/>
+								<img id='image' key={index} loading='eager' src={item.image} alt="..." className='rounded-[2rem] object-contain  max-h-[40rem] max-w-full p-4'/>
 							)}
 						</div>
 					</div>

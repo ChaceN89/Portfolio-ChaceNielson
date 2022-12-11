@@ -12,13 +12,12 @@ import PhotoCarousel from '../sections/PhotoCarousel';
 import ProjectList from '../sections/ProjectList'
 import SkillList from '../sections/SkillList';
 import Line from '../components/Line';
-import BreakPointVisual from '../sections/BreakPointVisual'
 import { useLocation } from 'react-router-dom';
 
 function Home() {
+  const {  hash  } = useLocation(); // get status of the hash in router
 
-  const {  hash  } = useLocation(); // get status 
-
+  // use Effect for Scroll to section on load
   useEffect(() => {
     // if not a hash link, scroll to top
     if (hash === '') {
@@ -36,8 +35,7 @@ function Home() {
     }
   }, [hash ]);
 
-
-
+  // useEffect for animations to add/remove showClass
   useEffect(() => {
     const observer = new IntersectionObserver((entries) =>{
       entries.forEach((entry) => {
@@ -51,7 +49,6 @@ function Home() {
     const hiddenElements = document.querySelectorAll('.hiddenClass')
     hiddenElements.forEach((el) => observer.observe(el))
   },[])
-
 
   return (
     <>
@@ -70,7 +67,6 @@ function Home() {
     <Footer/>
     </>
   )
-
 }
 
 export default Home

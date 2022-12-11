@@ -9,7 +9,9 @@ import { ImVideoCamera } from "react-icons/im";
 import { TfiGallery } from "react-icons/tfi";
 import {Link} from 'react-router-dom'
 
-function ExternalLinks({size=25}) {
+function ExternalLinks({size=25, animate=false}) {
+    
+
   return (
     <div className='flex space-x-3 md:space-x-6'>
         <a href="https://github.com/ChaceN89" target="_blank" rel="noreferrer" className=' text-white hover:scale-110 hover:text-slate-300'>
@@ -30,7 +32,6 @@ function ExternalLinks({size=25}) {
         <Link to="Videos" className='text-white hover:scale-110 hover:text-slate-300'>
             <ImVideoCamera size={size}/>
         </Link>
-
     </div>
   )
 }

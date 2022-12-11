@@ -27,80 +27,68 @@ function Videos() {
         }
       }, 500);
     }
-  }, [hash ]);
+  }, [hash]);
 
   return (
     <div className='container mx-auto py-10'>
-
       <div className='fixed top-10 left-10'>  
-        <Link to="/">
+        <Link to="/#Hobbies">
           <BsArrow90DegLeft className='p-1 fixed top-6 left-6 hover:text-white hover:opacity-100 opacity-40 hover:scale-105 cursor-pointer select-none'    size={40}/>
         </Link>
       </div>
-
-
       <SectionHeader title={"Videos"} description={"A little more depth to some of my projects and hobbies"}/>
-
-        <VideoCard 
-          img="/videos/guitar.mp4"
-          title={"Music"} 
-          description={"My cover of Shelter by Porter Robinson"} 
-          id={"Music"} 
-          reverse={true}
-        />
-        {/* <hr className='container mx-auto h-0.5 border border-white ' /> */}
-        <VideoCard 
-          img="/videos/mountTemple.mp4"
-          title={"Hiking"} 
-          description={"My trip Lake Louise to climb mount temple"} 
-          id={"Hiking"} 
-          mutedDefault={true}
-        />
-        {/* <hr className='container mx-auto h-0.5 border border-white ' /> */}
-        <VideoCard 
-          img="/videos/Mexico.mp4"
-          title={"Mexico"} 
-          description={"My trip to mexico with homes of hope to build a home for a family"} 
-          id={"Mexico"} 
-          mutedDefault={true}
-          reverse={true}
-        />
-        {/* <hr className='container mx-auto h-0.5 border border-white ' /> */}
-        <VideoCard 
-          img="/videos/backpacking.mp4"
-          title={"Backpacking"} 
-          description={"My trip to mexico with homes of hope to build a home for a family"} 
-          id={"Backpacking"} 
-          mutedDefault={true}
-          // reverse={true}
-        />
-        {/* <hr className='container mx-auto h-0.5 border border-white ' /> */}
-        <VideoCard 
-          img="/videos/snowboarding.mp4"
-          title={"Snowboarding"} 
-          description={"Snowboarding at Sunshine"} 
-          id={"Snowboarding"} 
-          mutedDefault={true}
-          reverse={true}
-        />
-        {/* <hr className='container mx-auto h-0.5 border border-white ' /> */}
-        <VideoCard 
-          img="/videos/"
-          title={"Space Survive"} 
-          description={"My first video made with unity game engine. I used pre made assets and mad emy own sounds effects"} 
-          id={"SpaceSurvive"} 
-          mutedDefault={true}
-        />
-        {/* <hr className='container mx-auto h-0.5 border border-white ' /> */}
-        <VideoCard 
-          img="/videos/"
-          title={"Flappy Bird Clone"} 
-          description={"Remake of flappy bird"} 
-          id={"FlappyBird"} 
-          mutedDefault={true}
-          reverse={true}
-        />
-
+      <VideoCard 
+        img="/videos/mountTemple.mp4"
+        title={"Hiking"} 
+        description={"My trip to Lake Louise to climb mount temple."} 
+        id={"Hiking"} 
+        mutedDefault={true}
+        reverse={true}
+      />
+      <VideoCard 
+        img="/videos/guitar.mp4"
+        title={"Music"} 
+        description={"My cover of Shelter by Porter Robinson"} 
+        id={"Music"} 
+      />
+      <VideoCard 
+        img="/videos/Mexico.mp4"
+        title={"Mexico"} 
+        description={"My trip to Mexico with homes of hope to build a home for a family."} 
+        id={"Mexico"} 
+        mutedDefault={true}
+        reverse={true}
+      />
+      <VideoCard 
+        img="/videos/backpacking.mp4"
+        title={"Backpacking"} 
+        description={"Solo Backpacking in Kananaskis."} 
+        id={"Backpacking"} 
+        mutedDefault={true}
+      />
+      <VideoCard 
+        img="/videos/snowboarding.mp4"
+        title={"Snowboarding"} 
+        description={"Snowboarding at Sunshine"} 
+        id={"Snowboarding"} 
+        mutedDefault={true}
+        reverse={true}
+      />
+      <VideoCard 
+        img="/videos/"
+        title={"Space Survive"} 
+        description={"My first video game was made with Unity Game Engine. I used pre-made assets and created my own sounds effects."} 
+        id={"SpaceSurvive"} 
+        mutedDefault={true}
+      />
+      <VideoCard 
+        img="/videos/"
+        title={"Flappy Bird Clone"} 
+        description={"Remake of flappy bird using Unity Game Engine."} 
+        id={"FlappyBird"} 
+        mutedDefault={true}
+        reverse={true}
+      />
     </div>
   )
 }

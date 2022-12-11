@@ -21,18 +21,16 @@ function ProjectCard({name, description, img, techStackName=null, techStack=[], 
 
       // set the cursor type base doff internal link
   var cursor= "cursor-default" 
-  var border= "" 
   if (internalLink){ //if there is an internal link to another page set the cusor to be a pointer when over element
     cursor ="cusor-pointer"
-    border="hover:border-opacity-100"
   }
 
   return(   
     <li className='h-full rounded-3xl backdrop-blur-2xl overflow-hidden hiddenClass projDelay  '>
         <div className=' overflow-hidden hover:scale-105'>
-            <div className='inline-block p-2 '>
+            <div className='inline-block p-3 '>
                 <Link to={internalLink} className={cursor}>
-                <div className={` overflow-hidden rounded-3xl border-4 border-white border-t-0 border-opacity-0 ${border} `}> 
+                <div className='overflow-hidden rounded-3xl'> 
                     <img src={process.env.PUBLIC_URL + img} className='' alt="..."/>
                 </div>
                 </Link>
