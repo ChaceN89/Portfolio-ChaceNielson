@@ -14,6 +14,7 @@ function HobbyList() {
           name={"Music"} 
           description={"I play electric guitar and occasionally spend time writing and composing songs with friends."} 
           img={'/photos/guitar1.png'} 
+          internalLink={"Videos/#Music"}
         />
         <ProjectCard
           name={"Snowboading"} 

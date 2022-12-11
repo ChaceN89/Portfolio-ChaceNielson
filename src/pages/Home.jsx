@@ -12,8 +12,31 @@ import PhotoCarousel from '../sections/PhotoCarousel';
 import ProjectList from '../sections/ProjectList'
 import SkillList from '../sections/SkillList';
 import Line from '../components/Line';
+import BreakPointVisual from '../sections/BreakPointVisual'
+import { useLocation } from 'react-router-dom';
 
 function Home() {
+
+  const {  hash  } = useLocation(); // get status 
+
+  useEffect(() => {
+    // if not a hash link, scroll to top
+    if (hash === '') {
+      window.scrollTo(0, 0);
+    }
+    // else scroll to id element ex <div id="hashName">...
+    else {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth"} );
+        }
+      },100);
+    }
+  }, [hash ]);
+
+
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) =>{
@@ -30,44 +53,24 @@ function Home() {
   },[])
 
 
-return (
-  <>
-  <Navbar/>
-  <Intoduction/>
-  <Line/>
-  <SkillList/> 
-  <Line/>
-  <PhotoCarousel/>
-  <Line/>
-  <ProjectList/>
-  <Line/>
-  <HobbyList/>
-  <Line/>
-  <ContactForm/>
-  <Footer/>
-  </>
-)
+  return (
+    <>
+    <Navbar/>
+    <Intoduction/>
+    <Line/>
+    <SkillList/> 
+    <Line/>
+    <PhotoCarousel/>
+    <Line/>
+    <ProjectList/>
+    <Line/>
+    <HobbyList/>
+    <Line/>
+    <ContactForm/>
+    <Footer/>
+    </>
+  )
 
-
-
-
-  // return (
-  //   <>
-  //     <Navbar/>
-  //     <Intoduction/>
-  //       <Line/>
-  //     <SkillList/> 
-  //       <Line/>
-  //     <PhotoCarousel/>
-  //       <Line/>
-  //     <ProjectList/>
-  //       <Line/>
-  //     <HobbyList/>
-  //       <Line/>
-  //     <ContactForm/>
-  //     <Footer/>
-  //   </>
-  // )
 }
 
 export default Home
