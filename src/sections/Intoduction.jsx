@@ -35,7 +35,7 @@ function Intoduction() {
             I've made this portfolio to give you a glimpse into my life and learn a bit more about what kind of person I am. I hope you enjoy it.
           </p>
           <div className='flex justify-center p-4'>
-            <ExternalLinks size={30}/>
+            <ExternalLinks size={30} animate={true}/>
           </div>
         </div>
     </section>

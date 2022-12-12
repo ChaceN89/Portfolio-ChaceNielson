@@ -40,7 +40,7 @@ function Videos() {
       <VideoCard 
         img="/videos/mountTemple.mp4"
         title={"Hiking"} 
-        description={"My trip to Lake Louise to climb mount temple."} 
+        description={"My trip to Lake Louise to climb Mount Temple."} 
         id={"Hiking"} 
         mutedDefault={true}
         reverse={true}
