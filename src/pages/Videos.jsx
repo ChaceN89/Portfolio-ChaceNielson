@@ -33,7 +33,7 @@ function Videos() {
     <div className='container mx-auto py-10'>
       <div className='fixed top-10 left-10'>  
         <Link to="/#Hobbies">
-          <BsArrow90DegLeft className='p-1 fixed top-6 left-6 hover:text-white hover:opacity-100 opacity-40 hover:scale-105 cursor-pointer select-none'    size={40}/>
+          <BsArrow90DegLeft className='p-1 fixed top-6 left-6 hover:text-white hover:opacity-100 opacity-40 hover:scale-105 cursor-pointer select-none z-50'    size={40}/>
         </Link>
       </div>
       <SectionHeader title={"Videos"} description={"A little more depth to some of my projects and hobbies"}/>

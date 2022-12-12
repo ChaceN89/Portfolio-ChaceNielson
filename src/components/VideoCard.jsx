@@ -15,7 +15,7 @@ function VideoCard({img, title, description, id="", reverse=false, mutedDefault=
   }
 
   return (
-    <section id={id} className={usedCss + "my-4  flex flex-col md:flex-row overflow-auto  max-h-screen  items-center  bg-white bg-opacity-10 rounded-xl  backdrop-blur-3xl"}>
+    <section id={id} className={usedCss + "my-4  flex flex-col md:flex-row overflow-auto  max-h-screen  items-center  bg-white bg-opacity-10 rounded-xl z-10 "}>
 
         <div className= 'md:w-1/2 text-center  rounded-xl flex-col justify-center p-2'>
           <div className=' text-center font-bold text-3xl sm:text-5xl pb-2 underline  '>{title}</div>

@@ -22,19 +22,19 @@ function Intoduction() {
           </div>
        
         <div className='introParagraph'>
-          <p>
+          <p className='hiddenClass projDelay'>
             My name is Chace Nielson and I'm a software developer with a special interest in full-stack web design. I'm currently completing my Software Engineering degree at the University of Calgary.
           </p>
-          <p>
+          <p className='hiddenClass projDelay'>
             Trying new things is second nature to me. Whether it's new foods, cultures, adventures or skills, I'm always looking for exciting opportunities. Programming was something I first tried when I got to university. It was so influential that I changed my major to spend more of my time programming. 
           </p>
-          <p>
+          <p className='hiddenClass projDelay'>
             I've taken time to develop many skills and hobbies. These include my love for the outdoors, snowboarding, ice and rock climbing, backpacking, and mountain biking. As well as more technical hobbies such as web design, video game design, and song writing. 
           </p>
-          <p>
+          <p className='hiddenClass projDelay'>
             I've made this portfolio to give you a glimpse into my life and learn a bit more about what kind of person I am. I hope you enjoy it.
           </p>
-          <div className='flex justify-center p-4'>
+          <div className='flex justify-center p-4 hiddenClass projDelay'>
             <ExternalLinks size={30} animate={true}/>
           </div>
         </div>

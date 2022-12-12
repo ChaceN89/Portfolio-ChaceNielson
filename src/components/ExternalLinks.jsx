@@ -16,7 +16,7 @@ function ExternalLinks({size=25, animate=false}) {
     }
 
   return (
-    <div className='flex space-x-3 md:space-x-6'>
+    <div className='flex space-x-3 md:space-x-6 hiddenClass projDelay'>
         <a href="https://github.com/ChaceN89" target="_blank" rel="noreferrer" className={' text-white hover:scale-110 hover:text-slate-300 ' + delayCss}>
             <BsGithub size={size}/>
         </a>

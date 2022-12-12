@@ -15,7 +15,7 @@ import ScrollToTop from "./components/ScrollToTop";
  
  function App() {
    return (
-     <div className='body-font font-poppins'>
+     <div className='body-font font-sans'>
         <ScrollToTop/>
         <Routes>
            <Route path="/" element={<Home/>}/>
