@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend");
+
+body{
+  font-family: "Lexend", sans-serif;
+}
+
 
 @layer components {
   /* for all sections */
@@ -181,7 +186,7 @@ body::-webkit-scrollbar {
 
 
 
-/* deplay in projects */
+/* deplay in projects only 6 are delayed and the rest are loaded together */
 .projDelay:nth-child(1){
   transition-delay: 200ms  ;
 }
@@ -200,28 +205,6 @@ body::-webkit-scrollbar {
 .projDelay:nth-child(6){
   transition-delay: 950ms  ;
 }
-.projDelay:nth-child(7){
-  transition-delay: 1100ms  ;
-}
-.projDelay:nth-child(8){
-  transition-delay: 1250ms  ;
-}
-.projDelay:nth-child(9){
-  transition-delay: 1400ms  ;
-}
-.projDelay:nth-child(10){
-  transition-delay: 1550ms  ;
-}
-.projDelay:nth-child(11){
-  transition-delay: 1700ms  ;
-}
-.projDelay:nth-child(12){
-  transition-delay: 1850ms  ;
-}
-.projDelay:nth-child(13){
-  transition-delay: 2000ms  ;
-}
-
 
 
 /* main color of text and the background */
