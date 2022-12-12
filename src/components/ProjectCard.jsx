@@ -28,9 +28,9 @@ function ProjectCard({name, description, img, techStackName=null, techStack=[], 
   return(   
     <li className='h-full rounded-3xl backdrop-blur-2xl overflow-hidden hiddenClass projDelay  '>
         <div className=' overflow-hidden hover:scale-105'>
-            <div className='inline-block p-4 '>
+            <div className='inline-block p-3 '>
                 <Link to={internalLink} className={cursor}>
-                <div className=' overflow-hidden rounded-3xl'> 
+                <div className='overflow-hidden rounded-3xl'> 
                     <img src={process.env.PUBLIC_URL + img} className='' alt="..."/>
                 </div>
                 </Link>

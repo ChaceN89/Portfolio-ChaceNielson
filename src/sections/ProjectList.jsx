@@ -53,15 +53,15 @@ function ProjectList() {
           img={'/projectPhotos/spaceSurvive3.png'} 
           techStackName={"Tools"}
           techStack={["Unity Game Engine","C#" ]}
-          internalLink={"VideoGames"}
-          />
+          internalLink={"Videos/#SpaceSurvive"}  
+        />
         <ProjectCard
           name={"Flappy Bird Clone"} 
           description={"A clone of the phone game Flappy Bird, with difficulty progression and save states."} 
           img={'/projectPhotos/CopyRightBird.png'} 
           techStackName={"Tools"}
           techStack={["Unity Game Engine","C#" ]}
-          internalLink={"VideoGames"}
+          internalLink={"Videos/#FlappyBird"}
         />
 
       </ul>

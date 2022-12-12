@@ -12,9 +12,30 @@ import PhotoCarousel from '../sections/PhotoCarousel';
 import ProjectList from '../sections/ProjectList'
 import SkillList from '../sections/SkillList';
 import Line from '../components/Line';
+import { useLocation } from 'react-router-dom';
 
 function Home() {
+  const {  hash  } = useLocation(); // get status of the hash in router
 
+  // use Effect for Scroll to section on load
+  useEffect(() => {
+    // if not a hash link, scroll to top
+    if (hash === '') {
+      window.scrollTo(0, 0);
+    }
+    // else scroll to id element ex <div id="hashName">...
+    else {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth"} );
+        }
+      },100);
+    }
+  }, [hash ]);
+
+  // useEffect for animations to add/remove showClass
   useEffect(() => {
     const observer = new IntersectionObserver((entries) =>{
       entries.forEach((entry) => {
@@ -29,45 +50,23 @@ function Home() {
     hiddenElements.forEach((el) => observer.observe(el))
   },[])
 
-
-return (
-  <>
-  <Navbar/>
-  <Intoduction/>
-  <Line/>
-  <SkillList/> 
-  <Line/>
-  <PhotoCarousel/>
-  <Line/>
-  <ProjectList/>
-  <Line/>
-  <HobbyList/>
-  <Line/>
-  <ContactForm/>
-  <Footer/>
-  </>
-)
-
-
-
-
-  // return (
-  //   <>
-  //     <Navbar/>
-  //     <Intoduction/>
-  //       <Line/>
-  //     <SkillList/> 
-  //       <Line/>
-  //     <PhotoCarousel/>
-  //       <Line/>
-  //     <ProjectList/>
-  //       <Line/>
-  //     <HobbyList/>
-  //       <Line/>
-  //     <ContactForm/>
-  //     <Footer/>
-  //   </>
-  // )
+  return (
+    <>
+    <Navbar/>
+    <Intoduction/>
+    <Line/>
+    <SkillList/> 
+    <Line/>
+    <PhotoCarousel/>
+    <Line/>
+    <ProjectList/>
+    <Line/>
+    <HobbyList/>
+    <Line/>
+    <ContactForm/>
+    <Footer/>
+    </>
+  )
 }
 
 export default Home
