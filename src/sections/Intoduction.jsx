@@ -12,7 +12,7 @@ function Intoduction() {
     <section id='Home' className='section hiddenClass
       flex flex-col items-center
       lg:grid lg:grid-cols-2 place-items-center'>
-        <div className='pb-2 pt-5 text-5xl sm:text-6xl xl:text-7xl text-center font-bold'>Chace Nielson</div>
+        <div className='pb-2 pt-5 text-5xl sm:text-6xl xl:text-7xl text-center font-bold titleFont'>Chace Nielson</div>
 
         <div className='row-span-2 container mx-6 my-2 max-w-xs sm:max-w-md md:max-w-md lg:max-w-lg bg-white bg-opacity-60 backdrop-blur-lg rounded-xl '>
             <img src={process.env.PUBLIC_URL + '/portaits/portrait4.jpg'} 
