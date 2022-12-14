@@ -77,14 +77,14 @@ function Videos() {
       <VideoCard 
         img="/videos/SpaceSurvive_small.mp4"
         title={"Space Survive"} 
-        description={"My first video game was made with Unity Game Engine. I used pre-made assets and created my own sounds effects."} 
+        description={"My first video game was made with Unity Game Engine. I created a progression system with saving score and accessing different modes."} 
         id={"SpaceSurvive"} 
         mutedDefault={false}
       />
       <VideoCard 
         img="/videos/FlappyBird.mp4"
         title={"Flappy Bird Clone"} 
-        description={"Remake of flappy bird using Unity Game Engine."} 
+        description={"Remake of flappy bird using Unity Game Engine. Saved high scores and increased difficulty over time."} 
         id={"FlappyBird"} 
         mutedDefault={false}
         reverse={true}
