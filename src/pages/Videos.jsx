@@ -75,18 +75,18 @@ function Videos() {
         reverse={true}
       />
       <VideoCard 
-        img="/videos/"
+        img="/videos/SpaceSurvive_small.mp4"
         title={"Space Survive"} 
         description={"My first video game was made with Unity Game Engine. I used pre-made assets and created my own sounds effects."} 
         id={"SpaceSurvive"} 
-        mutedDefault={true}
+        mutedDefault={false}
       />
       <VideoCard 
-        img="/videos/"
+        img="/videos/FlappyBird.mp4"
         title={"Flappy Bird Clone"} 
         description={"Remake of flappy bird using Unity Game Engine."} 
         id={"FlappyBird"} 
-        mutedDefault={true}
+        mutedDefault={false}
         reverse={true}
       />
     </div>
