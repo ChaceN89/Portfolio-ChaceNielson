@@ -33,10 +33,10 @@ function ProjectList() {
         />
         <ProjectCard
           name={"Aviar"} 
-          description={"Full stack photo sharing application. Uses JWTs for authentication of user accounts. It was deployed on Heroku. "} 
+          description={"Full stack photo sharing application. Uses JWTs for authentication of user accounts. It was deployed on Heroku."} 
           img={'/projectPhotos/aviar_collections.png'} 
           techStackName={"Mern Stack"}
-          techStack={["ReactJS", "FastApi", "Postgres", "Tailwind"]}
+          techStack={["MongoDB", "ExpressJS", "ReactJS", "NodeJS"]}
           externalLinks={aviarLinks}
         />
         <ProjectCard
