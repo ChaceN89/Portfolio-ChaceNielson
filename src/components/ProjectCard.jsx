@@ -14,24 +14,24 @@ externalLinks - List of external link to show at bottom, list if a lsit of objec
  * 
  */
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom'
 import InnerProjectCard from './InnerProjectCard'
 
 import { AiOutlineClose } from 'react-icons/ai'
-import { BsArrow90DegLeft } from "react-icons/bs";
 import ModalProjectCard from './ModalProjectCard';
+import { useIsInViewport } from './useIsInViewport'; // function to tell if a ref is visible in the viewport
 
-function ProjectCard({name, description, img, techStackName=null, techStack=[], externalLinks=[], modelPopUp=null}) {
+function ProjectCard({name, description, img, techStackName=null, techStack=[], externalLinks=[], modalInfo=null}) {
 
     // set the cursor type base doff internal link
     var cursor= "cursor-default" 
-    if (modelPopUp){ //if there is an internal link to another page set the cusor to be a pointer when over element
+    if (modalInfo){ //if there is an internal link to another page set the cusor to be a pointer when over element
         cursor ="cusor-pointer"
     }
 
+    // for the modal and the toggle if modal Inof contains data
     const [modal, setModal] = useState(false)
     const toggleModal=()=>{
-        if (modelPopUp != null){
+        if (modalInfo != null){
             setModal(!modal)
         }
     }
@@ -43,9 +43,18 @@ function ProjectCard({name, description, img, techStackName=null, techStack=[], 
         }
     });
 
+    // create reference for paretn - when the ref changes and if it changes to not in view close the modal
+    const ref1 = useRef(null);
+    const isInViewport1 = useIsInViewport(ref1);
+    useEffect(() => {
+      if (!isInViewport1){ // if not in viewport
+        setModal(false)
+      }
+    }, [isInViewport1])
+    
 
   return(   
-    <div>
+    <div ref={ref1}>
         <li className='h-full rounded-3xl backdrop-blur-2xl border border-gray-400 border-opacity-10 border-dotted overflow-hidden hiddenClass projDelay  '>
             <div className=' overflow-hidden hover:scale-105'>
                 <div className='inline-block p-3 '>
@@ -69,12 +78,16 @@ function ProjectCard({name, description, img, techStackName=null, techStack=[], 
         </li>
 
         {/* modal PopUp */}
-        <div className={modal ? "fixed h-screen w-screen model isOpen z-40" : "h-0 modal"} >
-            <AiOutlineClose className='closeModal'  onClick={toggleModal}  size={40}/>
-            <ModalProjectCard
-            
-            />
-        </div>
+        {modalInfo &&
+            <div className={modal ? "fixed h-screen w-screen model isOpen overflow-hidden z-40" : "h-0 modal"} >
+                <AiOutlineClose className='closeModal'  onClick={toggleModal}  size={40}/>
+                <ModalProjectCard
+                    title={name}
+                    techStack={techStack}
+                    modalInfo={modalInfo}
+                />
+            </div>
+        }
     </div>
   )
 }

@@ -15,7 +15,7 @@ function Intoduction() {
       flex flex-col items-center
       lg:grid lg:grid-cols-2 place-items-center'>
         
-        <div className='pb-2 pt-5 text-5xl sm:text-6xl xl:text-5xl text-center font-bold titleFont'>Chace Nielson</div>
+        <div className='pb-2 pt-5 text-5xl text-center font-bold titleFont'>Chace Nielson</div>
 
         <OpeningPhotos/>
        

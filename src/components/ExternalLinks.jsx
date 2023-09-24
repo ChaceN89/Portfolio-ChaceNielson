@@ -19,7 +19,6 @@ function ExternalLinks({size=25, animate=false}) {
     // css for all the icons
     const iconCSS =' text-white hover:scale-110 hover:text-slate-300 hover:transition-none '
   
-  
     return (
     <div className={'flex space-x-3 md:space-x-6 group ' +delayCss  }>
         <a href="https://github.com/ChaceN89" target="_blank" rel="noreferrer" className={iconCSS + " " + delayCss}>

@@ -16,7 +16,7 @@ import SectionHeader from '../components/SectionHeader';
 function SkillList() {
   return(
     <section id="MySkills" className='section hiddenClass'>
-      <SectionHeader title={"My Technical Skills"} description={"The Skills I'm The Most Confident In"}/>
+      <SectionHeader title={"My Technical Skills"} description={"The Skills I'm The Strongest In"}/>
       <ul className='pt-10 container mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-6 lg:max-w-4xl'>
         <Skill label={"ReactJS"} icon={<FaReact color={"blue"} size={65} />}/>
         <Skill label={"JavaScript"} icon={<SiJavascript color='yellow' size={65} />}/>

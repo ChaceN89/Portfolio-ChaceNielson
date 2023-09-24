@@ -12,14 +12,11 @@ import PageNotFound from './pages/PageNotFound';
 import Videos from './pages/Videos';
 import ContactThanks from './pages/ContactThanks';
 import ScrollToTop from "./components/ScrollToTop";
-
-import BreakPointVisual from './sections/BreakPointVisual'
  
  function App() {
    return (
      <div>
         <ScrollToTop/>
-        <BreakPointVisual/>
         <Routes>
            <Route path="/" element={<Home/>}/>
            <Route path="/Gallery" element={<Gallery/>}/>

@@ -1,6 +1,9 @@
 /**
  * Main page of application
  * Displays Nav, sections and footer
+ * 
+ * also is in charge of the animation of appearing 
+ * can turn off the dissapearing
  */
 import React, {useEffect} from 'react'
 import ContactForm from '../sections/ContactForm';
@@ -42,7 +45,8 @@ function Home() {
         if(entry.isIntersecting){
             entry.target.classList.add("showClass")
           }else{
-            entry.target.classList.remove("showClass")
+            //------ this linecasues animations to repeart as you navigate the app - comment it out so items that appear don't disapear again -------
+            // entry.target.classList.remove("showClass") //uncomment this line to have items dissaper when they leave the viewport
         }
       })
     })
