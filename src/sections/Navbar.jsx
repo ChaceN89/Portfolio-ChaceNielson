@@ -8,9 +8,11 @@ import NavIcon from '../components/NavIcon' // link element
 // react icons
 import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
 import { BiBrain } from "react-icons/bi";
+import { GrTask } from "react-icons/gr";
+import { GiSkills, GiGiftOfKnowledge } from "react-icons/gi";
 import { BsCamera } from "react-icons/bs";
-import { FaGuitar } from "react-icons/fa";
-import { MdOutlineConnectWithoutContact } from "react-icons/md";
+import { FaGuitar, FaAngellist } from "react-icons/fa";
+import { MdOutlineConnectWithoutContact, MdOutlinePhotoSizeSelectActual } from "react-icons/md";
 
 function Navbar() {
   return (
@@ -25,10 +27,10 @@ function Navbar() {
       text-black text-opacity-50 text-3xl 
       hover:bg-opacity-60 hover:text-opacity-100 ' >
         <NavIcon link={"Home"} Icon={<AiOutlineHome/>} />
-        <NavIcon link={"Skills"} Icon={<BiBrain/>}/>
-        <NavIcon link={"PhotoCarousel"} Icon={<BsCamera/>} />
-        <NavIcon link={"Projects"} Icon={<AiOutlineProject/>}/>
-        <NavIcon link={"Hobbies"} Icon={<FaGuitar/>}/>
+        <NavIcon link={"MySkills"} Icon={<GiSkills/>}/>
+        <NavIcon link={"PhotoCarousel"} Icon={<MdOutlinePhotoSizeSelectActual/>} />
+        <NavIcon link={"MyProjects"} Icon={<GrTask/>}/>
+        <NavIcon link={"MyIntrests"} Icon={<FaAngellist/>}/>
         <NavIcon link={"Contact"} Icon={<MdOutlineConnectWithoutContact/>}/>
     </nav>
   )

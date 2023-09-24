@@ -169,43 +169,20 @@ body::-webkit-scrollbar {
   opacity: 0;
   filter: blur((5px));
   translate: translateX(-100%);
-  transition: all 1s;
+  transition: all 0.5s;
 }
 
 /* class for when thigns are shown */
 .showClass {
   opacity: 1;
-  transition-delay: 400ms;
+  transition-delay: 400ms; /* speed to transition delay from when its on the screen to visible*/
 }
 
-/* if user doesn't want transitions wit hbrowser preference */
+/* if user doesn't want transitions with browser preference */
 @media(prefers-reduced-motion){
   .hiddenClass{
     transition:none
   }
-}
-
-
-
-
-/* deplay in projects only 6 are delayed and the rest are loaded together */
-.projDelay:nth-child(1){
-  transition-delay: 200ms  ;
-}
-.projDelay:nth-child(2){
-  transition-delay: 350ms  ;
-}
-.projDelay:nth-child(3){
-  transition-delay: 500ms  ;
-}
-.projDelay:nth-child(4){
-  transition-delay: 650ms  ;
-}
-.projDelay:nth-child(5){
-  transition-delay: 800ms  ;
-}
-.projDelay:nth-child(6){
-  transition-delay: 950ms  ;
 }
 
 

@@ -1,4 +1,7 @@
-/**Used to see what break point is currently at shows icon in top left */
+/**
+ * Used to see what break point is currently at shows icon in top left 
+ * Not used in actual project but rather for making adjustments - add to App.js to see everywhere
+ * */
 import React from 'react'
 
 function BreakPointVisual() {

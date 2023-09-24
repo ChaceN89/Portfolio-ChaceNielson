@@ -7,6 +7,8 @@ import React from 'react'
 import SectionHeader from '../components/SectionHeader'
 import {TfiWorld} from 'react-icons/tfi'
 import { BsGithub} from "react-icons/bs";
+import { FaUnity} from "react-icons/fa";
+
 import ProjectCard from '../components/ProjectCard';
 
 function ProjectList() {
@@ -15,21 +17,31 @@ function ProjectList() {
     {name:"GitHub", link:"https://github.com/ChaceN89/Aviar", icon:<BsGithub size={20}/>},
     // {name:"Website", link:"https://aviar.herokuapp.com/", icon: <TfiWorld size={20}/>}
   ]
+
   const portfolioLinks= [
     {name:"GitHub", link:"https://github.com/ChaceN89/Portfolio-ChaceNielson", icon:<BsGithub size={20}/>}
+  ]
+  
+  const geoPredictLink =[
+    {name:"Website", link:"http://136.159.140.62/", icon:<TfiWorld size={20}/>}
+  ]
+
+  const cubeGameLinks =[
+    {name:"Play Game", link:"https://chacen89.github.io/CubeGame/", icon:<FaUnity size={20}/>}
   ]
 
 
   return(
-    <section id="Projects" className='section hiddenClass '>
-      <SectionHeader title={"Technical Projects"} description={"My Projects Using Various Tech Stacks"} />
+    <section id="MyProjects" className='section hiddenClass '>
+      <SectionHeader title={"My Technical Projects"} description={"My Projects Using Various Tech Stacks"} />
       <ul className='projectCardList'>
         <ProjectCard
           name={"GEO Predict"} 
-          description={"Full stack application for analysis of drilling data, large data files, react tables and the D3 Library. First project lead position."} 
+          description={"Full stack application for analysis of drilling data, large data files, react tables and the ChartJS Library. First project lead position."} 
           img={'/projectPhotos/geothermal.png'} 
           techStackName={"Tech Stack"}
-          techStack={["ReactJS", "FastApi", "Postgres", "Tailwind"]}
+          techStack={["ReactJS", "FastApi", "Postgres", "Tailwind", "Docker"]}
+          externalLinks={geoPredictLink}
         />
         <ProjectCard
           name={"Aviar"} 
@@ -63,6 +75,14 @@ function ProjectList() {
           techStack={["Unity Game Engine","C#" ]}
           internalLink={"Videos/#FlappyBird"}
         />
+        <ProjectCard
+          name={"Cube Game"} 
+          description={"A simple game meant to explore how to create a game manager, level navigation, and endless game loops."} 
+          img={'/projectPhotos/cubeGame1.png'} 
+          techStackName={"Tools"}
+          techStack={["Unity Game Engine","C#" ]}
+          externalLinks={cubeGameLinks} 
+        />
 
       </ul>
     </section>
@@ -70,44 +90,3 @@ function ProjectList() {
 }
 
 export default ProjectList
-
-
-/***
-
-    <Project 
-              name={"Drill Ops"} 
-              description={"Full stack application for analysis of drilling data, large data files, react tables and the D3 Library. First project lead position"} 
-              img={'/projectPhotos/geothermal.png'} 
-              techStack={["ReactJS", "FastApi", "Postgres", "Tailwind"]}
-            />
-            <Project 
-              name={"Aviar"} 
-              description={"Full stack photo sharing application. Uses JWTs for authentication of user accounts."} 
-              img={'/projectPhotos/aviar_collections.png'} 
-              techStackName={"MERN Stack"} 
-              techStack={[ "ReactJS", "ExpressJS", "NodeJS", "MongoDB"]} 
-              externalLinks={aviarLinks} 
-            />
-            <Project 
-              name={"Portfolio"} 
-              description={"My portfolio website made with react."} 
-              img={'/projectPhotos/portfolio.png'} 
-              techStack={["ReactJS", "Tailwind",]}
-              externalLinks={portfolioLinks} 
-            />
-            <Project 
-              name={"Space Survive"} 
-              description={"Video game based on asteroids. Includes multiple modes, power ups, achievments and different enemy behaviour"} 
-              img={'/projectPhotos/spaceSurvive3.png'} 
-              techStack={["Unity Game Engine","C#" ]}
-              // internalLink={"VideoGames"}
-              />
-            <Project 
-              name={"Flappy Bird Clone"} 
-              description={"A clone of the phone game Flappy Bird"} 
-              img={'/projectPhotos/CopyRightBird.png'} 
-              techStack={["Unity Game Engine","C#" ]}
-              // internalLink={"VideoGames"}
-            />
-
- */

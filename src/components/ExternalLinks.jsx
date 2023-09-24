@@ -15,24 +15,28 @@ function ExternalLinks({size=25, animate=false}) {
         delayCss= " hiddenClass projDelay"
     }
 
-  return (
-    <div className={'flex space-x-3 md:space-x-6 ' +delayCss  }>
-        <a href="https://github.com/ChaceN89" target="_blank" rel="noreferrer" className={' text-white hover:scale-110 hover:text-slate-300 ' + delayCss}>
+    // css for all the icons
+    const iconCSS =' text-white hover:scale-110 hover:text-slate-300 hover:transition-none '
+  
+  
+    return (
+    <div className={'flex space-x-3 md:space-x-6 group ' +delayCss  }>
+        <a href="https://github.com/ChaceN89" target="_blank" rel="noreferrer" className={iconCSS + " " + delayCss}>
             <BsGithub size={size}/>
         </a>
-        <a href="https://www.linkedin.com/in/chace-nielson" target="_blank" rel="noreferrer" className={' text-white hover:scale-110 hover:text-slate-300 ' + delayCss}>
+        <a href="https://www.linkedin.com/in/chace-nielson" target="_blank" rel="noreferrer" className={iconCSS + " " + delayCss}>
             <BsLinkedin size={size}/>
         </a>
-        <a href="https://www.instagram.com/chacenielson/" target="_blank" rel="noreferrer" className={' text-white hover:scale-110 hover:text-slate-300 ' + delayCss}>
+        <a href="https://www.instagram.com/chacenielson/" target="_blank" rel="noreferrer" className={iconCSS + " " + delayCss}>
             <BsInstagram size={size}/>
         </a>
-        <a href="https://www.youtube.com/channel/UCXcMrM3Vk3TpXu3crQ6Yakg" target="_blank" rel="noreferrer" className={' text-white hover:scale-110 hover:text-slate-300 ' + delayCss}>
+        {/* <a href="https://www.youtube.com/channel/UCXcMrM3Vk3TpXu3crQ6Yakg" target="_blank" rel="noreferrer" className={iconCSS + " " + delayCss}>
             <IoLogoYoutube size={size}/>
-        </a>
-        <Link to="Gallery" className={' text-white hover:scale-110 hover:text-slate-300 ' + delayCss}>
+        </a> */}
+        <Link to="Gallery" className={iconCSS + " " + delayCss}>
             <TfiGallery size={size}/>
         </Link>
-        <Link to="Videos" className={' text-white hover:scale-110 hover:text-slate-300 ' + delayCss}>
+        <Link to="Videos" className={iconCSS + " " + delayCss}>
             <ImVideoCamera size={size}/>
         </Link>
     </div>
