@@ -16,9 +16,7 @@ export default function VideoAndPhotoCard({list, type="photo"}) {
 	// html to return for either a video or an image
   return (
     <>
-    <hr className='container mx-auto my-6 h-0.5 border border-white ' />
 
-    <div className='grid xl:grid-cols-2 gap-1'>
 			{list.map((item, index) => (
 				<div className=' flex justify-center'>
 					<div>
@@ -47,7 +45,6 @@ export default function VideoAndPhotoCard({list, type="photo"}) {
 					</div>
 				</div>
 			))}
-    </div>
     </>
 
   )

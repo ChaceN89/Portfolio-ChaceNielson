@@ -1,5 +1,6 @@
 /**
  * Displays a video with text and gives the video section  an ID 
+ * - only used in the video page - which isn't used anymore
  */
 import React from 'react'
 

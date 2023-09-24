@@ -28,9 +28,31 @@ function ProjectList() {
   ]
 
   // Descriptions
-  const SpaceSurviveDescription = "A video game based on asteroids. Includes multiple modes, power-ups, achievements, audio, save states and different enemy types."
-  const SpaceSurviveDescription_Long = SpaceSurviveDescription + " This game was originally taken from a simple tutorial that explain the basics of player movement and implementing enemies. After learning the basics of unity games I decided to add my own style and features to the game. I added enemies each with different behaviour, game saving state, a game mangaer to control the level progressing, music, sounds effects, and more. While I stuck to the style from the original tutorial I made the game my own."
+  const gepPredictDescription_long = 
+    <div className='space-y-2'>
+      <p>
+        I completed this application while working at the Energi Simulation Centre for Geothermal Systems Research at the University of Calgary. The primary objective was to develop an application for managing drilling data files for geothermal wells. The application is designed to handle security, user authentication, and the management of sensitive drilling data. Users can join organizations and share data among themselves.
+      </p>
+      <p>
+        In addition to providing dynamic real-time data visualizations, the application included a set of analysis tools that significantly enhanced drilling efficiency. These tools encompassed physics-based models and machine-learning modules. While I didn't personally create the analysis tools, I dedicated time to reviewing and integrating code authored by others into the web application.
+      </p>
+      <p>
+        I assumed the role of project manager, which presented the opportunity to oversee a small team. My responsibilities involved task assignment, code reviews, as well as screening resumes, conducting interviews, and delivering presentations.
+      </p>
+      <p>
+        The application has been utilized in drilling wells located in Germany, New Mexico, and Sweden.
+      </p>
+    </div>
 
+  const aviarDescription_long = " This application was completed as part of a Software Engineering class at the University of Calgary. It is a full stack application that utilizes  MongoDB database, ExpressJS backend and a ReactJS frontend. I learned a lot about CSS and React components.  Before Heroku changed their terms and conditions I had deployed the application there."
+
+  const spaceSurviveDescription = "A video game based on asteroids. Includes multiple modes, power-ups, achievements, audio, save states and different enemy types."
+  const spaceSurviveDescription_long = spaceSurviveDescription + " This game was originally taken from a simple tutorial that explain the basics of player movement and implementing enemies. After learning the basics of Unity game engine I decided to add my style and features to the game. I added enemies with different behaviours, game saving states, a game manager to control the level progress, music, sound effects, and more. While I stuck to the style from the original tutorial I made the game my own."
+
+
+  // ------------------------------------------------------------------------
+  // ----------------------------- HTML code --------------------------------
+  // ------------------------------------------------------------------------
   return(
     <section id="MyProjects" className='section hiddenClass '>
       <SectionHeader title={"My Technical Projects"} description={"My Projects Using Various Tech Stacks"} />
@@ -43,7 +65,7 @@ function ProjectList() {
           techStack={["ReactJS", "FastApi", "Postgres", "Tailwind", "Docker"]}
           externalLinks={geoPredictLink}
           modalInfo = {{
-            description:"A longer  Desription of the proejct as Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse quidem fugit voluptatum? Officiis ut dolor voluptatum, blanditiis repudiandae minima quod doloremque nam eveniet, eligendi ducimus officia exercitationem odio, tempore suscipit! ",
+            description:gepPredictDescription_long,
             photos:[
               {path:"/projectPhotos/geothermal_Dashboard.png", description:'Main Drilling Visual'},
               {path:"/projectPhotos/geothermal_crossPlot.png", description:'Cross Plotting Visual'},
@@ -59,6 +81,16 @@ function ProjectList() {
           techStackName={"Mern Stack"}
           techStack={["MongoDB", "ExpressJS", "ReactJS", "NodeJS"]}
           externalLinks={aviarLinks}
+          modalInfo = {{
+            description:aviarDescription_long,
+            photos:[
+              {path:"/projectPhotos/aviar_addPost.png", description:'Add Post Page'},
+              {path:"/projectPhotos/aviar_collections.png", description:'User Photo Collections'},
+              {path:"/projectPhotos/aviar_gallery.png", description:'Photo Gallery'},
+              {path:"/projectPhotos/aviar_login.png", description:'Login'},
+              {path:"/projectPhotos/aviar_myAccount.png", description:'User Account Page'},
+            ],
+          }}
         />
 
         <ProjectCard
@@ -72,14 +104,18 @@ function ProjectList() {
 
         <ProjectCard 
           name={"Space Survive"} 
-          description={SpaceSurviveDescription} 
+          description={spaceSurviveDescription} 
           img={'/projectPhotos/spaceSurvive3.png'} 
           techStackName={"Tools"}
           techStack={["Unity Game Engine","C#" ]}
           modalInfo = {{
-            description:SpaceSurviveDescription_Long,
+            description:spaceSurviveDescription_long,
+            photos:[
+              {path:"/projectPhotos/spaceSurvive1.png", description:''},
+              {path:"/projectPhotos/spaceSurvive3.png", description:''},
+            ],
             videos:[
-              {path:"/videos/SpaceSurvive_small.mp4", description:'Game Play'}
+              {path:"/videos/SpaceSurvive_small.mp4", description:'Gameplay'}
             ]
           }}
         />
@@ -89,13 +125,18 @@ function ProjectList() {
           description={"A clone of the phone game Flappy Bird, with difficulty progression and save states."} 
           img={'/projectPhotos/CopyRightBird.png'} 
           techStackName={"Tools"}
-          techStack={["Unity Game Engine","C#" ]}
-          // internalLink={"Videos/#FlappyBird"}
+          techStack={["Unity Game Engine","C#"]}
+          modalInfo = {{
+     
+            videos:[
+              {path:"/videos/FlappyBird.mp4", description:'Gameplay'}
+            ]
+          }}
         />
         
         <ProjectCard
           name={"Cube Game"} 
-          description={"A simple game meant to explore how to create a game manager, level navigation, and endless game loops."} 
+          description={"A simple game meant to explore how to create a game manager, level navigation, and endless game loops. Utilized Unity Physic Engine."} 
           img={'/projectPhotos/cubeGame1.png'} 
           techStackName={"Tools"}
           techStack={["Unity Game Engine","C#" ]}
