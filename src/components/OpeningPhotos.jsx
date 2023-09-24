@@ -3,10 +3,10 @@ import React, {useState} from 'react'
 export default function OpeningPhotos() {
 
     const photoList =[
-        process.env.PUBLIC_URL + '/portaits/portrait4.jpg',
-        process.env.PUBLIC_URL + '/portaits/portraitMountainCrop.jpg',
-        process.env.PUBLIC_URL + '/portaits/portraitJapan.jpg',
-        process.env.PUBLIC_URL + '/portaits/portrait5.jpg'
+      process.env.PUBLIC_URL + '/portaits/portraitJapan.jpg',
+      process.env.PUBLIC_URL + '/portaits/portraitMountainCrop.jpg',
+        // process.env.PUBLIC_URL + '/portaits/portrait4.jpg',
+        // process.env.PUBLIC_URL + '/portaits/portrait5.jpg'
         
     ]
 
@@ -24,7 +24,7 @@ export default function OpeningPhotos() {
     };
 
   return (
-    <div className="row-span-2 container mx-6 my-2 max-w-xs sm:max-w-md md:max-w-md lg:max-w-lg bg-white bg-opacity-60 backdrop-blur-lg rounded-xl rotate-2 z-10">
+    <div className="row-span-2 container mx-6 my-2 max-w-xs sm:max-w-md md:max-w-md lg:max-w-lg bg-white bg-opacity-60 backdrop-blur-lg rounded-xl rotate-3 z-10">
         <img
             src={photoList[nextPhotoIndex()]}
             alt="..."
@@ -36,7 +36,7 @@ export default function OpeningPhotos() {
         <img
             src={photoList[currentPhotoIndex]}
             alt="..."
-            className="p-1 w-full h-full -rotate-2 z-10 bg-white bg-opacity-60 backdrop-blur-lg rounded-xl"
+            className="p-1 w-full h-full -rotate-3 z-10 bg-white bg-opacity-60 backdrop-blur-lg rounded-xl"
             onClick={nextPhoto}
             style={{ cursor: 'pointer' }}
         />

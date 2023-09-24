@@ -20,7 +20,7 @@ function Navbar() {
       ml-0 sm:ml-4 md:ml-6 2xl:ml-12
       -translate-x-20 sm:translate-x-0 
       p-2 md:p-4 
-      z-50 w-fit h-fit 
+      z-40 w-fit h-fit 
       flex flex-col space-y-6 
       rounded-3xl shadow-lg 
       bg-white bg-opacity-[0.03] 

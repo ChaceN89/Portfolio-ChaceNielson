@@ -5,10 +5,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend");
 
 body{
-  font-family: "Lexend", sans-serif;
+  @apply font-montserrat
 }
 .titleFont{
-  font-family: 'GT Walsheim', sans-serif;
+  @apply font-lato
 }
 
 @layer components {
@@ -19,7 +19,7 @@ body{
 
   /* for introduction paragraph */
   .introParagraph{
-    @apply p-4 sm:px-10 sm:text-justify place-self-stretch 2xl:px-20
+    @apply place-self-stretch text-justify sm:px-10 lg:px-6 xl:px-10 2xl:px-14 
   }
   .introParagraph > p{
     @apply p-2
@@ -64,7 +64,7 @@ body{
 
   /* position elements for gallery using tailwind */
   .model{
-    @apply w-full fixed top-0 left-0 flex justify-center items-center bg-black rounded-3xl bg-opacity-70
+    @apply w-full fixed top-0 left-0 flex justify-center items-center bg-black bg-opacity-70
   }
   .isOpen{
     @apply  select-none
@@ -89,6 +89,11 @@ body{
   opacity: 1;
   transition-duration: .4s;
   transform: scale(1);
+}
+
+
+.closeModal{
+  @apply p-1 fixed top-6 right-6 hover:text-white hover:opacity-100 opacity-40 hover:scale-105 cursor-pointer
 }
 
 

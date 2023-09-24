@@ -42,6 +42,19 @@ function ProjectList() {
           techStackName={"Tech Stack"}
           techStack={["ReactJS", "FastApi", "Postgres", "Tailwind", "Docker"]}
           externalLinks={geoPredictLink}
+          modelPopUp = {{
+            description:"A longer  Desription of the proejct ",
+            photos:[
+              '/projectPhotos/geothermalDashboard.png',
+              '/projectPhotos/aviar_collections.png',
+
+            ],
+            videos:[
+              "/videos/mountTemple.mp4"
+            ]
+
+            
+          }}
         />
         <ProjectCard
           name={"Aviar"} 
@@ -51,6 +64,7 @@ function ProjectList() {
           techStack={["MongoDB", "ExpressJS", "ReactJS", "NodeJS"]}
           externalLinks={aviarLinks}
         />
+
         <ProjectCard
           name={"Portfolio"}
           description={"My portfolio website is made with React and Tailwind. It uses regular CSS for fade-in transitions."} 
@@ -59,22 +73,25 @@ function ProjectList() {
           techStack={["ReactJS", "Tailwind", "CSS"]}
           externalLinks={portfolioLinks} 
         />
+
         <ProjectCard 
           name={"Space Survive"} 
           description={"A video game based on asteroids. Includes multiple modes, power-ups, achievements, save states and different enemy behaviours/types. "} 
           img={'/projectPhotos/spaceSurvive3.png'} 
           techStackName={"Tools"}
           techStack={["Unity Game Engine","C#" ]}
-          internalLink={"Videos/#SpaceSurvive"}  
+          // internalLink={"Videos/#SpaceSurvive"}  
         />
+
         <ProjectCard
           name={"Flappy Bird Clone"} 
           description={"A clone of the phone game Flappy Bird, with difficulty progression and save states."} 
           img={'/projectPhotos/CopyRightBird.png'} 
           techStackName={"Tools"}
           techStack={["Unity Game Engine","C#" ]}
-          internalLink={"Videos/#FlappyBird"}
+          // internalLink={"Videos/#FlappyBird"}
         />
+        
         <ProjectCard
           name={"Cube Game"} 
           description={"A simple game meant to explore how to create a game manager, level navigation, and endless game loops."} 

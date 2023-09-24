@@ -8,6 +8,7 @@ import { IoLogoYoutube } from "react-icons/io";
 import { ImVideoCamera } from "react-icons/im";
 import { TfiGallery } from "react-icons/tfi";
 import {Link} from 'react-router-dom'
+import ToolTip from './ToolTip';
 
 function ExternalLinks({size=25, animate=false}) {
     var delayCss = ""
@@ -30,15 +31,17 @@ function ExternalLinks({size=25, animate=false}) {
         <a href="https://www.instagram.com/chacenielson/" target="_blank" rel="noreferrer" className={iconCSS + " " + delayCss}>
             <BsInstagram size={size}/>
         </a>
-        {/* <a href="https://www.youtube.com/channel/UCXcMrM3Vk3TpXu3crQ6Yakg" target="_blank" rel="noreferrer" className={iconCSS + " " + delayCss}>
-            <IoLogoYoutube size={size}/>
-        </a> */}
+
         <Link to="Gallery" className={iconCSS + " " + delayCss}>
-            <TfiGallery size={size}/>
+            <ToolTip
+                value={  <TfiGallery size={size}/> }
+                toolTipText={"My Photo Gallery"}
+            />
         </Link>
-        <Link to="Videos" className={iconCSS + " " + delayCss}>
+
+        {/* <Link to="Videos" className={iconCSS + " " + delayCss}>
             <ImVideoCamera size={size}/>
-        </Link>
+        </Link> */}
     </div>
   )
 }

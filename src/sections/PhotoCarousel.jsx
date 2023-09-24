@@ -10,7 +10,7 @@ import SectionHeader from '../components/SectionHeader'
 function PhotoCarousel() {
   return (
     <section id="PhotoCarousel" className='section hiddenClass h-full'> 
-      <SectionHeader title={"Photo Gallery"} description={"Some Of My Interests"}/>
+      <SectionHeader title={"Photo Gallery"} description={"Some of My Interests"}/>
       <Carousel/>
      </section>
   )

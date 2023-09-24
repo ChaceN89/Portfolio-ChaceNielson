@@ -6,7 +6,17 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif']
+        'open-sans': ['Open Sans', 'Chalkduster'],
+        'roboto': ['Roboto', 'Chalkduster'],
+        'lato': ['Lato', 'Chalkduster'],
+        'montserrat': ['Montserrat', 'Chalkduster'],
+        'nunito': ['Nunito', 'Chalkduster'],
+        'chalkduster': ['Chalkduster', 'cursive'],
+        'wingdings': ['Wingdings'], 
+
+      },
+      fontSize: {
+        medium: '0.950rem',
       },
       height: {
         '102': '28rem',
@@ -22,7 +32,6 @@ module.exports = {
         '158': '64rem',
         '164': '68rem',
         '170': '72rem',
- 
       }
     },
   },

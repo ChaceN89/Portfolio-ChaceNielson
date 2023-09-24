@@ -42,7 +42,7 @@ function Gallery() {
 
       <div className={modal ? "h-full model isOpen" : "h-0 modal"} >
         <img id='image'  src={tempImage} alt="...model" className=''/>
-        <AiOutlineClose className='p-1 fixed top-6 right-6 hover:text-white hover:opacity-100 opacity-40 hover:scale-105 cursor-pointer'  onClick={onClose}  size={40}/>
+        <AiOutlineClose className='closeModal'  onClick={onClose}  size={40}/>
       </div>
  
       <div className='gallery p-4 md:p-6'>
