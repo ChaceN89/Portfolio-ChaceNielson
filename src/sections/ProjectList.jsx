@@ -38,7 +38,7 @@ function ProjectList() {
         <ProjectCard
           name={"GEO Predict"} 
           description={"Full stack application for analysis of drilling data, large data files, react tables and the ChartJS Library. First project lead position."} 
-          img={'/projectPhotos/geothermal.png'} 
+          img={'/projectPhotos/geothermalDashboard.png'} 
           techStackName={"Tech Stack"}
           techStack={["ReactJS", "FastApi", "Postgres", "Tailwind", "Docker"]}
           externalLinks={geoPredictLink}
