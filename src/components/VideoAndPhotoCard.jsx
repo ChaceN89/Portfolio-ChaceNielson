@@ -26,7 +26,7 @@ export default function VideoAndPhotoCard({list, type="photo"}) {
 									className={img_vid_css}
 									id='image' 
 									key={index} 
-									loading='eager' 
+									loading='lazy' 
 									src={process.env.PUBLIC_URL + item.path} 
 									alt="..." 
 								/>

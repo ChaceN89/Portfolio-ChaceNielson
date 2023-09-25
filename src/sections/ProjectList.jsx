@@ -110,10 +110,6 @@ function ProjectList() {
           techStack={["Unity Game Engine","C#" ]}
           modalInfo = {{
             description:spaceSurviveDescription_long,
-            photos:[
-              {path:"/projectPhotos/spaceSurvive1.png", description:''},
-              {path:"/projectPhotos/spaceSurvive3.png", description:''},
-            ],
             videos:[
               {path:"/videos/SpaceSurvive_small.mp4", description:'Gameplay'}
             ]

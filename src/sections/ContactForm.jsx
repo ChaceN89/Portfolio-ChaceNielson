@@ -30,7 +30,7 @@ function ContactForm() {
   };
 
   return(
-    <section id="Contact" className='section hiddenClass'>
+    <section id="ContactMe" className='section hiddenClass'>
       <SectionHeader title={"Contact Me"} description={"Want to learn more about me? Interested in software? Send me a message."}/>
       <DownloadCV/>
 

@@ -37,7 +37,7 @@ function Gallery() {
       </div>
 
       <div className='py-10 container mx-auto px-2 sm:px-7 md:px-10 '>
-        <SectionHeader title= {"My Gallery"} description={"Some of my photos"}/>
+        <SectionHeader title= {"My Gallery"} description={"Some Of My Photos"}/>
       </div>
 
       <div className={modal ? "h-full model isOpen" : "h-0 modal"} >

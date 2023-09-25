@@ -7,7 +7,7 @@ function SectionHeader({title, description}) {
   return (
     <div className='container text-center'>
       <div className="text-3xl sm:text-5xl font-bold titleFontmb-4 text-center">{title}</div>
-      <div className="text-xl sm:text-2xl font-bold titleFont text-center"> {description} </div>
+      <div className="pt-2 text-xl sm:text-2xl font-bold titleFont text-center"> {description} </div>
     </div>
   )
 }

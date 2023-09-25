@@ -16,6 +16,7 @@ import ProjectList from '../sections/ProjectList'
 import SkillList from '../sections/SkillList';
 import Line from '../components/Line';
 import { useLocation } from 'react-router-dom';
+import VolunteeringList from '../sections/VolunteeringList';
 
 function Home() {
   const {  hash  } = useLocation(); // get status of the hash in router
@@ -66,6 +67,8 @@ function Home() {
     <ProjectList/>
     <Line/>
     <HobbyList/>
+    <Line/>
+    <VolunteeringList/>
     <Line/>
     <ContactForm/>
     <Footer/>

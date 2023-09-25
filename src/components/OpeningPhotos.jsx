@@ -3,10 +3,10 @@ import React, {useState} from 'react'
 export default function OpeningPhotos() {
 
     const photoList =[
+      process.env.PUBLIC_URL + '/portaits/portrait6.jpg',
       process.env.PUBLIC_URL + '/portaits/portraitJapan.jpg',
       process.env.PUBLIC_URL + '/portaits/portraitMountainCrop.jpg',
-        // process.env.PUBLIC_URL + '/portaits/portrait4.jpg',
-        // process.env.PUBLIC_URL + '/portaits/portrait5.jpg'
+
         
     ]
 

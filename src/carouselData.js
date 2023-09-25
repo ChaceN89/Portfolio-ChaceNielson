@@ -16,6 +16,70 @@ export const carouselData = [
     
     {image: process.env.PUBLIC_URL + '/photos/climbing4.jpeg'},
 
+    {image: process.env.PUBLIC_URL + '/photos/europe1.JPG'},
+    {image: process.env.PUBLIC_URL + '/photos/europe2.JPEG'},
+    {image: process.env.PUBLIC_URL + '/photos/europe3.JPG'},
+    {image: process.env.PUBLIC_URL + '/photos/europe4.JPG'},
+    {image: process.env.PUBLIC_URL + '/photos/europe5.JPEG'},
+    {image: process.env.PUBLIC_URL + '/photos/europe6.JPG'},
+
+    {image: process.env.PUBLIC_URL + '/photos/japan1.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/japan2.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/japan3.JPG'},
+    {image: process.env.PUBLIC_URL + '/photos/japan4.JPG'},
+    {image: process.env.PUBLIC_URL + '/photos/japan5.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/japan6.JPG'},
+    {image: process.env.PUBLIC_URL + '/photos/japan7.JPG'},
+    {image: process.env.PUBLIC_URL + '/photos/japan8.JPG'},
+    {image: process.env.PUBLIC_URL + '/photos/japan9.JPG'},
+    
+    {image: process.env.PUBLIC_URL + '/photos/temple1.JPG'},
+    {image: process.env.PUBLIC_URL + '/photos/temple2.png'},
+    {image: process.env.PUBLIC_URL + '/photos/temple3.png'},
+    {image: process.env.PUBLIC_URL + '/photos/waterfall1.JPG'},
+
+
+
+    {image: process.env.PUBLIC_URL + '/photos/westCost1.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost2.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost3.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost4.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost5.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost6.png'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost7.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost8.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost9.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost9.jpg'},
+    
+    {image: process.env.PUBLIC_URL + '/photos/westCost24.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/backpacking1.JPG'},
+    {image: process.env.PUBLIC_URL + '/photos/backpacking2.JPG'},
+
+    {image: process.env.PUBLIC_URL + '/photos/westCost23.jpg'},
+  
+
+    {image: process.env.PUBLIC_URL + '/photos/westCost10.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost11.png'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost12.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost13.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost14.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost15.png'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost16.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost17.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost18.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost19.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost20.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost21.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost22.jpg'},
+
+
+    {image: process.env.PUBLIC_URL + '/photos/backpacking6.JPG'},
+    {image: process.env.PUBLIC_URL + '/photos/backpacking7.JPG'},
+
+
+
+
+
     {image: process.env.PUBLIC_URL + '/photos/guitar1.png'}, 
     {image: process.env.PUBLIC_URL + '/photos/guitar2.png'},
     
@@ -42,10 +106,12 @@ export const carouselData = [
 
 
     {image: process.env.PUBLIC_URL + '/photos/mountains18.JPG'},
+
+
+
     
     
     {image: process.env.PUBLIC_URL + '/photos/snowboard4.jpeg'},
-    {image: process.env.PUBLIC_URL + '/photos/backpacking2.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/mountains9.JPG'},
     
     
@@ -60,7 +126,6 @@ export const carouselData = [
     {image: process.env.PUBLIC_URL + '/photos/mountains17.JPG'},
     
     {image: process.env.PUBLIC_URL + '/photos/snowboard5.jpg'},
-    {image: process.env.PUBLIC_URL + '/photos/backpacking1.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/snowboard6.png'},
     {image: process.env.PUBLIC_URL + '/photos/mountains19.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/mountains21.JPG'},

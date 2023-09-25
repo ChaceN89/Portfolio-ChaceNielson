@@ -12,11 +12,11 @@ import { GrTask } from "react-icons/gr";
 import { GiSkills, GiGiftOfKnowledge } from "react-icons/gi";
 import { BsCamera } from "react-icons/bs";
 import { FaGuitar, FaAngellist } from "react-icons/fa";
-import { MdOutlineConnectWithoutContact, MdOutlinePhotoSizeSelectActual } from "react-icons/md";
+import { MdOutlineConnectWithoutContact, MdOutlinePhotoSizeSelectActual, MdVolunteerActivism } from "react-icons/md";
 
 function Navbar() {
   return (
-    <nav className='fixed inset-y-1/2 -translate-y-48
+    <nav className='fixed inset-y-1/2 -translate-y-60
       ml-0 sm:ml-4 md:ml-6 2xl:ml-12
       -translate-x-20 sm:translate-x-0 
       p-2 md:p-4 
@@ -31,7 +31,8 @@ function Navbar() {
         <NavIcon link={"PhotoCarousel"} Icon={<MdOutlinePhotoSizeSelectActual/>} />
         <NavIcon link={"MyProjects"} Icon={<GrTask/>}/>
         <NavIcon link={"MyIntrests"} Icon={<FaAngellist/>}/>
-        <NavIcon link={"Contact"} Icon={<MdOutlineConnectWithoutContact/>}/>
+        <NavIcon link={"Volunteering"} Icon={<MdVolunteerActivism/>}/>
+        <NavIcon link={"ContactMe"} Icon={<MdOutlineConnectWithoutContact/>}/>
     </nav>
   )
 }
