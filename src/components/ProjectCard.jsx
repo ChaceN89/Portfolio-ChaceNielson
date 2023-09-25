@@ -55,7 +55,7 @@ function ProjectCard({name, description, img, techStackName=null, techStack=[], 
 
   return(   
     <div ref={ref1}>
-        <li className='h-full rounded-3xl backdrop-blur-2xl border border-gray-400 border-opacity-10 border-dotted overflow-hidden hiddenClass projDelay  '>
+        <li className='h-full rounded-3xl backdrop-blur-2xl border border-gray-400 border-opacity-5 border-dotted overflow-hidden hiddenClass projDelay  '>
             <div className=' overflow-hidden hover:scale-105'>
                 <div className='inline-block p-3 '>
                     <button onClick={toggleModal} className={cursor}>
