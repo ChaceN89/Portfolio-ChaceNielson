@@ -17,34 +17,34 @@ export default function VideoAndPhotoCard({list, type="photo"}) {
   return (
     <>
 
-			{list.map((item, index) => (
-				<div className=' flex justify-center'>
-					<div>
-						<div className='text-center text-lg'>{item.description}</div>
-						{type ==="photo" ?
-								<img 
-									className={img_vid_css}
-									id='image' 
-									key={index} 
-									loading='lazy' 
-									src={process.env.PUBLIC_URL + item.path} 
-									alt="..." 
-								/>
-							:
-								<video 
-									className={img_vid_css} 
-									muted={true} 
-									controls 
-									autoPlay
-									allowfulscreen={false}
-								>
-									<source src={process.env.PUBLIC_URL + item.path} type="video/mp4" />
-									Your browser does not support the video tag.
-								</video>
-						}
-					</div>
+		{list.map((item, index) => (
+			<div className='flex justify-center'>
+				<div>
+					<div className='text-center text-lg'>{item.description}</div>
+					{type ==="photo" ?
+							<img 
+								className={img_vid_css}
+								id='image' 
+								key={index} 
+								loading='lazy' 
+								src={process.env.PUBLIC_URL + item.path} 
+								alt="..." 
+							/>
+						:
+							<video 
+								className={img_vid_css} 
+								muted={true} 
+								controls 
+								autoPlay
+								allowfulscreen={false}
+							>
+								<source src={process.env.PUBLIC_URL + item.path} type="video/mp4" />
+								Your browser does not support the video tag.
+							</video>
+					}
 				</div>
-			))}
+			</div>
+		))}
     </>
 
   )
