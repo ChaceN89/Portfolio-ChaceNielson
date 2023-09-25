@@ -39,16 +39,14 @@ export const carouselData = [
     {image: process.env.PUBLIC_URL + '/photos/waterfall1.JPG'},
 
 
-
+    {image: process.env.PUBLIC_URL + '/photos/westCost4.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost3.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/westCost1.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/westCost2.jpg'},
-    {image: process.env.PUBLIC_URL + '/photos/westCost3.jpg'},
-    {image: process.env.PUBLIC_URL + '/photos/westCost4.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/westCost7.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/westCost5.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/westCost6.png'},
-    {image: process.env.PUBLIC_URL + '/photos/westCost7.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/westCost8.jpg'},
-    {image: process.env.PUBLIC_URL + '/photos/westCost9.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/westCost9.jpg'},
     
     {image: process.env.PUBLIC_URL + '/photos/westCost24.jpg'},
