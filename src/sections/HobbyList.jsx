@@ -25,7 +25,7 @@ function HobbyList() {
               {path:"/projectPhotos/gp_unsoldered.jpeg", description:''},
             ],
             videos:[
-              {path:"/videos/snowbgoarding.mp4", description:''}
+              {path:"/videos/guitar.mp4", description:''}
             ]
           }}
         />
@@ -101,12 +101,8 @@ function HobbyList() {
               {path:"/photos/climbing3.jpg", description:''},
               {path:"/photos/climbing4.jpeg", description:''},
               {path:"/photos/climbing5.jpg", description:''},
-              {path:"/photos/climbing6.jpg", description:''},
-            
+              {path:"/photos/climbing6.jpg", description:''},         
             ],
-            videos:[
-              {path:"/videos/backpacking.mp4", description:''}
-            ]
           }}
         />
         <ProjectCard
