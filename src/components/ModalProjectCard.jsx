@@ -28,7 +28,7 @@ export default function ModalProjectCard({title, techStack, modalInfo}) {
       ) : null}
 
       {/* grid box of both videos and images */}
-      <div className='grid xl:grid-cols-2 '>
+      <div className='grid xl:grid-cols-2 gap-1'>
 
         {/* Videos and Photos if they exist */}
         <VideoAndPhotoCard
