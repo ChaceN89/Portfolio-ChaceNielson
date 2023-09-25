@@ -176,7 +176,7 @@ function HobbyList() {
           modalInfo = {{
             photos:[
               {path:"/photos/japan1.jpg", description:''},
-              {path:"/photos/japan2.JPG", description:''},
+              {path:"/photos/japan2.jpg", description:''},
               {path:"/photos/japan3.JPG", description:''},
               {path:"/photos/japan4.JPG", description:''},
               {path:"/photos/japan5.jpg", description:''},
