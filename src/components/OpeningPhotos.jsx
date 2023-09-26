@@ -1,17 +1,20 @@
+/**
+ * The photos at the introduction - a photo flipbook
+ */
 import React, {useState} from 'react'
 
 export default function OpeningPhotos() {
 
     const photoList =[
-      process.env.PUBLIC_URL + '/portaits/portrait6.JPG',
-      process.env.PUBLIC_URL + '/portaits/portraitJapan.jpg',
-      process.env.PUBLIC_URL + '/portaits/portraitMountainCrop.jpg',
-
-        
+      process.env.PUBLIC_URL + '/photos/portraits/portrait_outside.jpg',
+      process.env.PUBLIC_URL + '/photos/portraits/portrait_japan.jpg',
+      process.env.PUBLIC_URL + '/photos/portraits/portrait_mountainCrop.jpg',
     ]
 
+    // the currently selected photo index
     const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
 
+    // function to switch to the nexxt photo
     const nextPhoto = () => {
       setCurrentPhotoIndex((prevIndex) =>
         prevIndex === photoList.length - 1 ? 0 : prevIndex + 1

@@ -62,13 +62,13 @@ function Home() {
     <Line/>
     <SkillList/> 
     <Line/>
-    <PhotoCarousel/>
-    <Line/>
     <ProjectList/>
     <Line/>
     <HobbyList/>
     <Line/>
     <VolunteeringList/>
+    <Line/>
+    <PhotoCarousel/>
     <Line/>
     <ContactForm/>
     <Footer/>

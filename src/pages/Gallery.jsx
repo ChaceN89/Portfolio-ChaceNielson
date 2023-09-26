@@ -2,11 +2,17 @@
  * Page containing a gallery of all photos
  */
 import React, { useState } from 'react'
-import { carouselData } from '../carouselData'
+import { mainPhotoList } from '../functions/mainPhotoList'
 import SectionHeader from '../components/SectionHeader'
-import { AiOutlineClose } from 'react-icons/ai'
 import { BsArrow90DegLeft } from "react-icons/bs";
 import { Link } from 'react-router-dom';
+
+// improt to shuffle the array
+import shuffleArray from '../functions/shuffleArray';
+import GalleryPhotos from '../components/GalleryPhotos';
+
+// shuffle the mainPhotoList before using it (jsut the reference)
+const shuffledPhotoList = shuffleArray(mainPhotoList)
 
 function Gallery() {
   // for model pop up
@@ -40,21 +46,13 @@ function Gallery() {
         <SectionHeader title= {"My Gallery"} description={"Some Of My Photos"}/>
       </div>
 
-      <div className={modal ? "h-full model isOpen" : "h-0 modal"} >
-        <img id='image'  src={tempImage} alt="...model" className=''/>
-        <AiOutlineClose className='closeModal'  onClick={onClose}  size={40}/>
-      </div>
- 
-      <div className='gallery p-4 md:p-6'>
-        {carouselData.map((item, index)=>{
-          return(
-            <div className='pics rounded-3xl'>
-              <img id='image' onClick={()=>getImg(item.image)} key={index} loading='lazy' src={item.image} alt="..." className=' object-contain rounded-xl py-2 cursor-pointer '/>
-            </div>
-          )
-        })
-      }
-      </div>
+      <GalleryPhotos 
+        data={shuffledPhotoList}
+        onClickFunction={getImg}
+        closeFunction= {onClose}
+        tempImage={tempImage}
+        modal={modal}
+      />
     </section>
   )
 }

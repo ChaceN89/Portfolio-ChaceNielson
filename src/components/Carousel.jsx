@@ -3,12 +3,12 @@
  * Used arrow keys to navigate between photos (may not work on some browsers)
  */
 import React, {useState} from 'react'
-import { carouselData } from '../carouselData';
+import { mainPhotoList } from '../functions/mainPhotoList';
 import { ImShuffle } from "react-icons/im";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 function Carousel() {
-    const numOfSlides = carouselData.length
+    const numOfSlides = mainPhotoList.length
     const randomIndex = Math.floor(Math.random() * (numOfSlides))
     const [current, setCurrent] = useState(randomIndex)
     const prevSlide =()=>{
@@ -43,12 +43,12 @@ function Carousel() {
 			<div className='flex justify-center'>
 				<ImShuffle className="arrow bottomArrow" onClick={randomSlide}/>
 			</div>
-			{carouselData.map((item, index) =>{
+			{mainPhotoList.map((item, index) =>{
 				return(
 					<div key={index} className={index === current ? 'slide active ' : 'slide'}>
 						<div className='grid grid-cols-1 place-items-center  relative h-fit w-auto'>
 							{index === current && (
-								<img id='image' key={index} loading='eager' src={item.image} alt="..." className='rounded-[2rem] object-contain  max-h-[40rem] max-w-full p-4'/>
+								<img id='image' key={index} loading='lazy' src={item.image} alt="..." className='rounded-[2rem] object-contain  max-h-[40rem] max-w-full p-4'/>
 							)}
 						</div>
 					</div>

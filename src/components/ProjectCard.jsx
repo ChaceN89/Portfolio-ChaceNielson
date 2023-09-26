@@ -2,15 +2,19 @@
  * Main project card to dispaly a project or a hobby as well
  * can have lots of text or no text
  * Arguments
- name - the name of the project
+name - the name of the project
 description - a breif description
 img - image path relative to public folder
 techStackName - name of tech stack used, default is null but common to use "Tech Stack"
 techStack - List of all technologies used as part of tech stack ["a", "b"]
-internalLink - link to internal page example "Gallery" ->   internalLink={"Gallery"}
-
 externalLinks - List of external link to show at bottom, list if a lsit of objects with following strucutre
-{name:"name", link:"url", icon:<Icon size={20}/>
+    {name:"name", link:"url", icon:<Icon size={20}/>
+modalInfo:{
+    description - a longer description for the modal popup
+    photos - a lsit of photos {image:url,descritpion:option desctipon}
+    videos a lsit of videos {path :url,descritpion:option desctipon}
+    useGallery - bool to use the gallery for photos in modal
+}
  * 
  */
 import React, { useState, useEffect, useRef } from 'react';
@@ -18,7 +22,7 @@ import InnerProjectCard from './InnerProjectCard'
 
 import { AiOutlineClose } from 'react-icons/ai'
 import ModalProjectCard from './ModalProjectCard';
-import { useIsInViewport } from './useIsInViewport'; // function to tell if a ref is visible in the viewport
+import { useIsInViewport } from '../functions/useIsInViewport';
 
 function ProjectCard({name, description, img, techStackName=null, techStack=[], externalLinks=[], modalInfo=null}) {
 
@@ -80,12 +84,16 @@ function ProjectCard({name, description, img, techStackName=null, techStack=[], 
         {/* modal PopUp */}
         {modalInfo &&
             <div className={modal ? "fixed h-screen w-screen model isOpen overflow-hidden z-40" : "h-0 modal"} >
-                <AiOutlineClose className='closeModal'  onClick={toggleModal}  size={40}/>
-                <ModalProjectCard
-                    title={name}
-                    techStack={techStack}
-                    modalInfo={modalInfo}
-                />
+                {modal && // onlu render if modal is open
+                    <>
+                        <AiOutlineClose className='closeModal'  onClick={toggleModal}  size={40}/>
+                        <ModalProjectCard
+                            title={name}
+                            techStack={techStack}
+                            modalInfo={modalInfo}
+                        />
+                    </>
+                }
             </div>
         }
     </div>

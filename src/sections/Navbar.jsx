@@ -28,10 +28,10 @@ function Navbar() {
       hover:bg-opacity-60 hover:text-opacity-100 ' >
         <NavIcon link={"Home"} Icon={<AiOutlineHome/>} />
         <NavIcon link={"MySkills"} Icon={<GiSkills/>}/>
-        <NavIcon link={"PhotoCarousel"} Icon={<MdOutlinePhotoSizeSelectActual/>} />
         <NavIcon link={"MyProjects"} Icon={<GrTask/>}/>
         <NavIcon link={"MyIntrests"} Icon={<FaAngellist/>}/>
         <NavIcon link={"Volunteering"} Icon={<MdVolunteerActivism/>}/>
+        <NavIcon link={"PhotoCarousel"} Icon={<MdOutlinePhotoSizeSelectActual/>} />
         <NavIcon link={"ContactMe"} Icon={<MdOutlineConnectWithoutContact/>}/>
     </nav>
   )

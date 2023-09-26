@@ -98,7 +98,18 @@ body{
 
 
 /* for gallery layout with responsive layout */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
+  .gallery{
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -column-count: 1;
+    -webkit-column-width:100%;
+    -moz-column-width:100%;
+    -column-width:100%;
+  } 
+}
+
+@media only screen and (min-width: 400px) {
   .gallery{
     -webkit-column-count: 2;
     -moz-column-count: 2;
@@ -120,7 +131,7 @@ body{
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1000px) {
   .gallery{
     -webkit-column-count:4;
     -moz-column-count: 4;
@@ -132,7 +143,7 @@ body{
 }
 
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 1400px) {
   .gallery{
     -webkit-column-count: 5;
     -moz-column-count: 5;
