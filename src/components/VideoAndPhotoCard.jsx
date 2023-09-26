@@ -31,11 +31,11 @@ export default function VideoAndPhotoCard({list, type="photo"}) {
 						<div className='max-h-screen'>
 							<div className='h-[300px] md:h-[400px] lg:h-[500px] xl:h-[600px] 2xl:h-[700px]'>
 								<video
-								className="h-full w-full object-contain"
-								muted={true}
-								controls
-								autoPlay
-								allowfullscreen={false}
+									className="h-full w-full object-contain"
+									muted={true}
+									controls
+									autoPlay
+									playsinline
 								>
 								<source src={item.path} type="video/mp4" />
 								Your browser does not support the video tag.
