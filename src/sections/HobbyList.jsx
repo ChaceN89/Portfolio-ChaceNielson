@@ -29,8 +29,8 @@ import {
 // retrun compoent for the hobbylist
 function HobbyList() {
   return(
-    <section id="MyIntrests" className='section hiddenClass'>
-      <SectionHeader title={"My Hobbies and Intrests"} description={"Things I've Picked Up Over The Years"}/>
+    <section id="MyInterests" className='section hiddenClass'>
+      <SectionHeader title={"My Hobbies and Interests"} description={"Things I've Picked Up Over The Years"}/>
       <ul className='projectCardList'>
         <ProjectCard
           name={"Music"} 

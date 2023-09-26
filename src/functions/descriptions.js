@@ -58,10 +58,10 @@ export const iceClimbingDescription = "I've also applied my love for rock climbi
 
 export const bikingDescription = "I love going out to Bragg Creek or Canmore for a day of mountain biking"
 
-export const travelDsecription = "I love travelling, especially seeing other cultures. My favourite for far is seeing Japan"
+export const travelDsecription = "I love travelling, especially seeing other cultures. My favourite so far is seeing Japan"
 
 //-------------------------------------------------------------------
 // ----------------- voluenteering Descriptions ---------------------
 //-------------------------------------------------------------------
 export const homesOfHopeDescription = "I participated in the Homes of Hope program, building a home in Tijuana Mexico for a family."
-export const basketballDescription = "I've worked closely with the the Bow Valley Bobcats basketball program in Cochrane. I help coach the boys during the year and help with the local spring league team. "
+export const basketballDescription = "I've worked closely with the the Bow Valley Bobcats basketball program in Cochrane. I was an assistant coach for the high school boy's team and also helped out with a local spring league team. "

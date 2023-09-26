@@ -29,7 +29,7 @@ function Navbar() {
         <NavIcon link={"Home"} Icon={<AiOutlineHome/>} />
         <NavIcon link={"MySkills"} Icon={<GiSkills/>}/>
         <NavIcon link={"MyProjects"} Icon={<GrTask/>}/>
-        <NavIcon link={"MyIntrests"} Icon={<FaAngellist/>}/>
+        <NavIcon link={"MyInterests"} Icon={<FaAngellist/>}/>
         <NavIcon link={"Volunteering"} Icon={<MdVolunteerActivism/>}/>
         <NavIcon link={"PhotoCarousel"} Icon={<MdOutlinePhotoSizeSelectActual/>} />
         <NavIcon link={"ContactMe"} Icon={<MdOutlineConnectWithoutContact/>}/>
