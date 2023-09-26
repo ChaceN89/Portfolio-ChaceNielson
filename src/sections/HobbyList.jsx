@@ -110,7 +110,7 @@ function HobbyList() {
         <ProjectCard
           name={"Travel"} 
           description={travelDsecription} 
-          img={'/photos/travel/japan3.JPG'} 
+          img={'/photos/travel/japan3.jpg'} 
           modalInfo = {{
             photos:travelPhotoList,
             useGallery:true
