@@ -6,7 +6,7 @@ import React from 'react'
 // icons for skills
 import { FaPython, FaReact, FaNodeJs, FaUnity, FaCss3, FaDocker } from "react-icons/fa";
 import { AiOutlineHtml5, AiOutlineGithub, AiOutlineLineChart } from "react-icons/ai";
-import { GrMysql } from "react-icons/gr";
+import { GrMysql, GrHadoop } from "react-icons/gr";
 import { SiFastapi, SiPostgresql, SiMongodb, SiJava, SiTailwindcss, SiCplusplus, SiJavascript } from "react-icons/si";
 
 // components
@@ -16,7 +16,7 @@ import SectionHeader from '../components/SectionHeader';
 function SkillList() {
   return(
     <section id="MySkills" className='section hiddenClass'>
-      <SectionHeader title={"My Technical Skills"} description={"The Skills I'm The Strongest In"}/>
+      <SectionHeader title={"My Technical Skills"} description={"The Skills/Technologies I've Used in Projects "}/>
       <ul className='pt-10 container mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-y-6 lg:max-w-4xl'>
         <Skill label={"ReactJS"} icon={<FaReact color={"blue"} size={65} />}/>
         <Skill label={"JavaScript"} icon={<SiJavascript color='yellow' size={65} />}/>
@@ -36,6 +36,7 @@ function SkillList() {
         <Skill label={"Git/Github"} icon={<AiOutlineGithub size={65} />}/>
         <Skill label={"Docker"} icon={<FaDocker color='blue' size={65} />}/>
         <Skill label={"ChartJS"} icon={ <AiOutlineLineChart size={65} /> }/>
+        <Skill label={"Hadoop"} icon={ <GrHadoop color='yellow' size={65} /> }/>
       </ul>
     </section>
   )

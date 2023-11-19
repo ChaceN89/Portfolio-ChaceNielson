@@ -29,7 +29,7 @@ import {
     portfolioDescription,
     spaceSurviveDescription, spaceSurviveDescription_long, 
     flappyBirdCloneDescription,
-    cubeGameDescription
+    cubeGameDescription, JengaDescription
   } from '../functions/descriptions';
 
 // retruns project ist component
@@ -107,6 +107,20 @@ function ProjectList() {
           techStackName={"Tools"}
           techStack={["Unity Game Engine","C#" ]}
           externalLinks={cubeGameLinks} 
+        />
+
+        <ProjectCard
+          name={"Jenga"} 
+          description={JengaDescription} 
+          img={'/photos/projectPhotos/jenga1.jpg'} 
+          techStackName={"Tools"}
+          techStack={["Unity Game Engine","C#", "Haptic Sylulus", "OpenHaptics" ]}
+          modalInfo = {{
+            videos:[
+              {path:process.env.PUBLIC_URL +"/videos/jengaMov1.mp4", description:'Gameplay'},
+              {path:process.env.PUBLIC_URL +"/videos/jengaMov2.mp4", description:'Gameplay'},
+            ],
+          }}
         />
 
       </ul>

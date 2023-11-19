@@ -39,6 +39,7 @@ export const flappyBirdCloneDescription = "A clone of the phone game Flappy Bird
 
 export const cubeGameDescription = "A simple game meant to explore how to create a game manager, level navigation, and endless game loops. Utilized Unity Physic Engine."
 
+export const JengaDescription = "A virtual jenga game made in unity using a haptic stylus pen."
 
 
 
