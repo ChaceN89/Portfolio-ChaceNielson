@@ -11,6 +11,10 @@ import Gallery from './pages/Gallery'
 import PageNotFound from './pages/PageNotFound';
 import ContactThanks from './pages/ContactThanks';
 import ScrollToTop from "./components/ScrollToTop";
+
+//Analytics
+import { initializeGA } from "./functions/googleAnalytics";
+initializeGA();
  
  function App() {
    return (

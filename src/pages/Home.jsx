@@ -18,8 +18,16 @@ import Line from '../components/Line';
 import { useLocation } from 'react-router-dom';
 import VolunteeringList from '../sections/VolunteeringList';
 
+//Google analytics
+import { recordGAPage } from '../functions/googleAnalytics';
+
 function Home() {
   const {  hash  } = useLocation(); // get status of the hash in router
+
+  // google analytics for recording this page
+  useEffect(() => {
+    recordGAPage("Home");
+  }, [])
 
   // use Effect for Scroll to section on load
   useEffect(() => {

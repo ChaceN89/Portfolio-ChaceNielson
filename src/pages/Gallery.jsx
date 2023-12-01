@@ -1,7 +1,7 @@
 /**
  * Page containing a gallery of all photos
  */
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { mainPhotoList } from '../functions/mainPhotoList'
 import SectionHeader from '../components/SectionHeader'
 import { BsArrow90DegLeft } from "react-icons/bs";
@@ -11,6 +11,9 @@ import { Link } from 'react-router-dom';
 import shuffleArray from '../functions/shuffleArray';
 import GalleryPhotos from '../components/GalleryPhotos';
 
+//Google analytics
+import { recordGAPage } from '../functions/googleAnalytics';
+
 // shuffle the mainPhotoList before using it (jsut the reference)
 const shuffledPhotoList = shuffleArray(mainPhotoList)
 
@@ -19,6 +22,10 @@ function Gallery() {
   const [modal, setModal] = useState(false)
   const [tempImage, setTempImage] = useState("")
 
+  useEffect(() => {
+    recordGAPage("Gallery");
+  }, [])
+  
   // fore escape key to escape model
   document.addEventListener('keydown', function(event){
     if(event.key === "Escape"){

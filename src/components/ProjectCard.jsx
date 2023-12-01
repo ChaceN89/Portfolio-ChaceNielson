@@ -24,6 +24,9 @@ import { AiOutlineClose } from 'react-icons/ai'
 import ModalProjectCard from './ModalProjectCard';
 import { useIsInViewport } from '../functions/useIsInViewport';
 
+// google Analytics with // Function to track page view
+import { recordGAEvent } from '../functions/googleAnalytics';
+
 function ProjectCard({name, description, img, techStackName=null, techStack=[], externalLinks=[], modalInfo=null}) {
 
     // set the cursor type base doff internal link
@@ -38,6 +41,7 @@ function ProjectCard({name, description, img, techStackName=null, techStack=[], 
         if (modalInfo != null){
             setModal(!modal)
         }
+        recordGAEvent("Open Modal", name, "Project list")
     }
 
     // fore escape key to escape model
