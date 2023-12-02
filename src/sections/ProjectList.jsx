@@ -11,7 +11,8 @@ import ProjectCard from '../components/ProjectCard';
 // photo Lists
 import {
   geoPredictPhotoList, 
-  aviarPhotoList
+  aviarPhotoList,
+  hapticjengaPhotoList
 } from '../functions/photoLists';
 
 // Link lists
@@ -120,6 +121,7 @@ function ProjectList() {
               {path:process.env.PUBLIC_URL +"/videos/jengaMov1.mp4", description:'Gameplay'},
               {path:process.env.PUBLIC_URL +"/videos/jengaMov2.mp4", description:'Gameplay'},
             ],
+            photos:hapticjengaPhotoList,
           }}
         />
 

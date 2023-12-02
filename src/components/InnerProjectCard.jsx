@@ -2,6 +2,7 @@
  * Inner area of the project card containing the text, seperate to make this easier to work with 
  */
 import React from 'react'
+import { recordGAEvent } from '../functions/googleAnalytics'
 
 function InnerProjectCard({name, description, techStackName=null, techStack=[], externalLinks=[]}) {
   return (
@@ -15,7 +16,9 @@ function InnerProjectCard({name, description, techStackName=null, techStack=[], 
             <div className='flex flex-col sm:flex-row'>
                 {externalLinks.map((item,index)=>{
                     return (
-                        <a key={index} href={item.link} target="_blank" rel="noreferrer" className='flex justify-center items-center pr-4 mx-2 py-1 rounded-2xl  text-white hover:scale-110 hover:text-slate-300 space-x-1 select-none'>
+                        <a onClick={()=> recordGAEvent("Click Link", item.link, "Project list")} 
+                            key={index} href={item.link} 
+                            target="_blank" rel="noreferrer" className='flex justify-center items-center pr-4 mx-2 py-1 rounded-2xl  text-white hover:scale-110 hover:text-slate-300 space-x-1 select-none'>
                             <div>{item.icon}</div>
                             <div>{item.name}</div>
                         </a>

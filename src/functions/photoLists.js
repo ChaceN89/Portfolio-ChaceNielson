@@ -21,6 +21,14 @@ export const aviarPhotoList = [
     {image:process.env.PUBLIC_URL + '/photos/projectPhotos/aviar_collections.jpg', description:'User Photo Collections'},
 ]
 
+export const hapticjengaPhotoList = [
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/jenga_MainMenu.jpg', description:'Main Menu'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/jenga_NormalMode.jpg', description:'Normal Mode'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/jenga_HardMode.jpg', description:'Hard Mode'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/jenga_PauseMenu.jpg', description:'Pause Menu 1'},
+]
+
+//----------------------------
 // Hobby Lists
 export const musicPhotoList = [
     {image: process.env.PUBLIC_URL + '/photos/music/guitar1.jpg'},
