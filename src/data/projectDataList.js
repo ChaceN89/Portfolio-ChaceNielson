@@ -41,6 +41,9 @@ const geoPredictLinks =[
 const cubeGameLinks =[
     {name:"Play Game", link:"https://chacen89.github.io/CubeGame/", icon:<FaUnity size={20}/>}
 ]
+const hapticJengaLinks =[
+    {name:"GitHub", link:"https://github.com/ChaceN89/Haptic-Jenga", icon:<BsGithub size={20}/>}
+]
 
 //List of all the projects to return
 export const projectDataList = [
@@ -115,6 +118,7 @@ export const projectDataList = [
         img:'/photos/projectPhotos/jenga1.jpg', 
         techStackName:"Tools",
         techStack:["Unity Game Engine","C#", "Haptic Sylulus", "OpenHaptics" ],
+        externalLinks:hapticJengaLinks,
         modalInfo:{
           videos:[
             {path:process.env.PUBLIC_URL +"/videos/jengaMov1.mp4", description:'Gameplay'},

@@ -95,6 +95,7 @@ function ProjectCard({name, description, img, techStackName=null, techStack=[], 
                             title={name}
                             techStack={techStack}
                             modalInfo={modalInfo}
+                            externalLinks={externalLinks}
                         />
                     </>
                 }

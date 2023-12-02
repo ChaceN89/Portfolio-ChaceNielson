@@ -13,7 +13,7 @@ function InnerProjectCard({name, description, techStackName=null, techStack=[], 
                 <div className='p-0.5 sm:px-2'>{description}</div>
             </div>
 
-            <div className='flex flex-col sm:flex-row'>
+            <div className='flex flex-col sm:flex-row flex-wrap'>
                 {externalLinks.map((item,index)=>{
                     return (
                         <a onClick={()=> recordGAEvent("Click Link", item.link, "Project list")} 

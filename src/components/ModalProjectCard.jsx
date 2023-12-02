@@ -8,8 +8,9 @@ import React from 'react'
 
 import VideoAndPhotoCard from './VideoAndPhotoCard';
 import GalleryPhotos from './GalleryPhotos';
+import { recordGAEvent } from '../functions/googleAnalytics';
 
-export default function ModalProjectCard({title, techStack, modalInfo}) {
+export default function ModalProjectCard({title, techStack, modalInfo, externalLinks=[]}) {
 
   // get the longer description, photos list and videos list
   const { description=null, photos=null, videos=null, useGallery=false } = modalInfo;
@@ -20,9 +21,24 @@ export default function ModalProjectCard({title, techStack, modalInfo}) {
       <div className='text-3xl sm:text-5xl font-bold titleFontmb-4 text-center'>{title}</div>
       <div className='py-2'>{description}</div>
 
+      {/* tech stack */}
       <div className=' flex py-2 flex-wrap '>
         {techStack.map((item)=>{
           return (<div className='rounded-xl text-black bg-slate-300 font-bold w-fit  py-0.5 px-2 m-1 text-center' key={item}>{item}</div>)
+        })}
+      </div>
+
+      {/* list of links */}
+      <div className=' flex flex-wrap '>
+        {externalLinks.map((item, index)=>{
+          return (
+            <a onClick={()=> recordGAEvent("Click Link", item.link, "Project list")} 
+                key={index} href={item.link} 
+                target="_blank" rel="noreferrer" className='flex justify-center items-center pr-4 mx-2 py-1 rounded-2xl  text-white hover:scale-110 hover:text-slate-300 space-x-1 select-none'>
+                <div>{item.icon}</div>
+                <div>{item.name}</div>
+            </a>
+          )
         })}
       </div>
 
