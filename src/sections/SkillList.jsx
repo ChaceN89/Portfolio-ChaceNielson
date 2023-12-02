@@ -7,7 +7,8 @@ import React from 'react'
 import { FaPython, FaReact, FaNodeJs, FaUnity, FaCss3, FaDocker } from "react-icons/fa";
 import { AiOutlineHtml5, AiOutlineGithub, AiOutlineLineChart } from "react-icons/ai";
 import { GrMysql, GrHadoop } from "react-icons/gr";
-import { SiFastapi, SiPostgresql, SiMongodb, SiJava, SiTailwindcss, SiCplusplus, SiJavascript } from "react-icons/si";
+import { SiFastapi, SiPostgresql, SiMongodb, SiJava, SiTailwindcss, SiCplusplus, SiJavascript, SiBlender } from "react-icons/si";
+import { TbCSharp } from "react-icons/tb";
 
 // components
 import Skill from '../components/Skill';
@@ -26,7 +27,7 @@ function SkillList() {
         <Skill label={"NodeJS"} icon={<FaNodeJs color='green' size={65} />}/>
         <Skill label={"Unity"} icon={<FaUnity size={65} />}/>
         <Skill label={"Java"} icon={<SiJava color='red' size={65} />}/>
-        <Skill label={"C++"} icon={<SiCplusplus color='blue' size={65} />}/>
+        <Skill label={"C++"} icon={<SiCplusplus  size={65} />}/>
         <Skill label={"Python"} icon={<FaPython color='yellow' size={65} />}/>
         <Skill label={"Fastapi"} icon={<SiFastapi  color={"black"}  size={65} />}/>
         <Skill label={"ExpressJS"} icon={<FaNodeJs color='black' size={65} />}/>
@@ -37,6 +38,8 @@ function SkillList() {
         <Skill label={"Docker"} icon={<FaDocker color='blue' size={65} />}/>
         <Skill label={"ChartJS"} icon={ <AiOutlineLineChart size={65} /> }/>
         <Skill label={"Hadoop"} icon={ <GrHadoop color='yellow' size={65} /> }/>
+        <Skill label={"Blender"} icon={ <SiBlender color='orange' size={65} /> }/>
+        <Skill label={"C#"} icon={ <TbCSharp  size={65} /> }/>
       </ul>
     </section>
   )

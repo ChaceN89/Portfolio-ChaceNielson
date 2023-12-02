@@ -57,7 +57,7 @@ export const backpackingPhotoList = [
     {image: process.env.PUBLIC_URL + '/photos/backpacking/westCoast11.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/backpacking/westCoast12.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/backpacking/westCoast13.jpg'},
-    {image: process.env.PUBLIC_URL + '/photos/backpacking/westCoast14.jpg'},
+    // {image: process.env.PUBLIC_URL + '/photos/backpacking/westCoast14.jpg'}, // more or less a copy of westcoast3
     {image: process.env.PUBLIC_URL + '/photos/backpacking/westCoast15.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/backpacking/westCoast16.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/backpacking/westCoast17.jpg'},
@@ -142,13 +142,3 @@ export const travelPhotoList = [
     {image: process.env.PUBLIC_URL + '/photos/travel/europe6.jpg'},
 ]
 
-// Volunteering lists
-export const homeOfHopePhotoList = [
-    {image: process.env.PUBLIC_URL + '/photos/travel/mexico1.jpg'},
-    {image: process.env.PUBLIC_URL + '/photos/travel/mexico3.jpg'},
-    {image: process.env.PUBLIC_URL + '/photos/travel/mexico2.jpg'},
-]
-export const basketballPhotoList = [
-    {image: process.env.PUBLIC_URL + '/photos/other/basketball_bobcasts.jpg'},
-
-]

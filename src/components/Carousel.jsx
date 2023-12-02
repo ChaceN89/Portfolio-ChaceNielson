@@ -3,7 +3,7 @@
  * Used arrow keys to navigate between photos (may not work on some browsers)
  */
 import React, {useState} from 'react'
-import { mainPhotoList } from '../functions/mainPhotoList';
+import { mainPhotoList } from '../data/photoData/mainPhotoList';
 import { ImShuffle } from "react-icons/im";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 

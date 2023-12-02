@@ -1,6 +1,7 @@
 /**
  * List of photos
  * {image:url, description:"optional description "}
+ * Single list of all photos for the main gallery
  */
 
 //giant list of all photos for gallery and carousel

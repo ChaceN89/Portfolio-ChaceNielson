@@ -2,7 +2,7 @@
  * Page containing a gallery of all photos
  */
 import React, { useState, useEffect } from 'react'
-import { mainPhotoList } from '../functions/mainPhotoList'
+import { mainPhotoList } from '../data/photoData/mainPhotoList';
 import SectionHeader from '../components/SectionHeader'
 import { BsArrow90DegLeft } from "react-icons/bs";
 import { Link } from 'react-router-dom';

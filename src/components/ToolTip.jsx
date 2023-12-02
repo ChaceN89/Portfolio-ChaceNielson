@@ -12,7 +12,7 @@ function ToolTip({value, toolTipText}) {
   let timer;
 
   // Set a delay of x milliseconds (adjust as needed)
-  const x  = 1000
+  const x  = 700
 
   const handleMouseEnter = () => {
     timer = setTimeout(() => {
