@@ -7,7 +7,7 @@ function Skill({icon, label}) {
   return (
     <li className='flex flex-col items-center hover:scale-105'>
       {icon}
-      <div className='py-2'>{label}</div>
+      <div className='py-2 text-center flex justify-center'>{label}</div>
     </li>
   )
 }

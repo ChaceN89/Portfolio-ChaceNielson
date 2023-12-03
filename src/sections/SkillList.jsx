@@ -7,8 +7,13 @@ import React from 'react'
 import { FaPython, FaReact, FaNodeJs, FaUnity, FaCss3, FaDocker } from "react-icons/fa";
 import { AiOutlineHtml5, AiOutlineGithub, AiOutlineLineChart } from "react-icons/ai";
 import { GrMysql, GrHadoop } from "react-icons/gr";
-import { SiFastapi, SiPostgresql, SiMongodb, SiJava, SiTailwindcss, SiCplusplus, SiJavascript, SiBlender } from "react-icons/si";
+import { 
+  SiFastapi, SiPostgresql, SiMongodb, SiJava, SiTailwindcss, 
+  SiCplusplus, SiJavascript, SiBlender, SiStreamlit, SiRedux,
+  SiVisualstudio
+} from "react-icons/si";
 import { TbCSharp } from "react-icons/tb";
+
 
 // components
 import Skill from '../components/Skill';
@@ -40,6 +45,9 @@ function SkillList() {
         <Skill label={"Hadoop"} icon={ <GrHadoop color='yellow' size={65} /> }/>
         <Skill label={"Blender"} icon={ <SiBlender color='orange' size={65} /> }/>
         <Skill label={"C#"} icon={ <TbCSharp  size={65} /> }/>
+        <Skill label={"Redux"} icon={ <SiRedux color='blue' size={65} /> }/>
+        <Skill label={"Streamlit"} icon={ <SiStreamlit color='red' size={65} /> }/>
+        <Skill label={"Visual Studio Code"} icon={ <SiVisualstudio color='blue' size={65} /> }/>
       </ul>
     </section>
   )
