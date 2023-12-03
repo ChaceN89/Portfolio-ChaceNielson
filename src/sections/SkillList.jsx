@@ -10,7 +10,7 @@ import { GrMysql, GrHadoop } from "react-icons/gr";
 import { 
   SiFastapi, SiPostgresql, SiMongodb, SiJava, SiTailwindcss, 
   SiCplusplus, SiJavascript, SiBlender, SiStreamlit, SiRedux,
-  SiVisualstudio
+  SiVisualstudiocode
 } from "react-icons/si";
 import { TbCSharp } from "react-icons/tb";
 
@@ -47,7 +47,7 @@ function SkillList() {
         <Skill label={"C#"} icon={ <TbCSharp  size={65} /> }/>
         <Skill label={"Redux"} icon={ <SiRedux color='blue' size={65} /> }/>
         <Skill label={"Streamlit"} icon={ <SiStreamlit color='red' size={65} /> }/>
-        <Skill label={"Visual Studio Code"} icon={ <SiVisualstudio color='blue' size={65} /> }/>
+        <Skill label={"Visual Studio Code"} icon={ <SiVisualstudiocode color='blue' size={65} /> }/>
       </ul>
     </section>
   )
