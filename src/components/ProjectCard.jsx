@@ -27,7 +27,9 @@ import { useIsInViewport } from '../functions/useIsInViewport';
 // google Analytics with // Function to track page view
 import { recordGAEvent } from '../functions/googleAnalytics';
 
-function ProjectCard({name, description, img, techStackName=null, techStack=[], externalLinks=[], modalInfo=null}) {
+import { MdOutlineStar } from "react-icons/md";
+
+function ProjectCard({starred, name, description, img, techStackName=null, techStack=[], externalLinks=[], modalInfo=null}) {
 
     // set the cursor type base doff internal link
     var cursor= "cursor-default" 
@@ -63,10 +65,16 @@ function ProjectCard({name, description, img, techStackName=null, techStack=[], 
 
   return(   
     <div ref={ref1}>
-        <li className='h-full rounded-3xl backdrop-blur-2xl border border-gray-400 border-opacity-5 border-dotted overflow-hidden hiddenClass projDelay  '>
+        <li className='h-full rounded-3xl backdrop-blur-2xl border border-gray-400 border-opacity-5 border-hidden overflow-hidden hiddenClass projDelay  '>
             <div className=' overflow-hidden hover:scale-105'>
                 <div className='inline-block p-3 '>
                     <button onClick={toggleModal} className={cursor}>
+
+                    {starred &&
+                    <MdOutlineStar className='fixed' color='yellow' size={20}/>
+                    
+                    }
+
                     <div className='overflow-hidden rounded-3xl'> 
                         <img src={process.env.PUBLIC_URL + img} className='' alt="..."/>
                     </div>

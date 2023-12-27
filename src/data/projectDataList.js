@@ -52,6 +52,7 @@ const hapticJengaLinks =[
 //List of all the projects to return
 export const projectDataList = [
     {
+        starred:true,
         name:"GEO Predict", 
         description:geoPredictDescription,
         img:'/photos/projectPhotos/geothermal_Dashboard.jpg',
@@ -76,6 +77,7 @@ export const projectDataList = [
         }
     },
     {
+        starred:true,
         name:"Portfolio", 
         description:portfolioDescription,
         img:'/photos/projectPhotos/portfolio.jpg',
@@ -93,6 +95,7 @@ export const projectDataList = [
     },
     {
         name:"Space Survive", 
+        starred:true,
         description:spaceSurviveDescription,
         img:'/photos/projectPhotos/spaceSurvive1.jpg',
         techStackName:"Tools",

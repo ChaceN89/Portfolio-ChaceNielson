@@ -18,6 +18,7 @@ function ProjectList() {
       <ul className='projectCardList'>
         {projectDataList.map((item, index) => (
           <ProjectCard
+            starred={item.starred}
             name={item.name}
             description={item.description}
             img={item.img}
