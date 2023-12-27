@@ -29,6 +29,8 @@ export const geoPredictDescription_long =
 
 export const portfolioDescription = "My portfolio website is made with React and Tailwind. It uses regular CSS for fade-in transitions and a few other sections. It is responsive and uses lots of modular code."
 
+export const genrePredictionDescription = "A notebook using Apache Spark and Machine Learning to attempt to predict a songs genre based on text data."
+
 export const aviarDescription = "Full stack photo sharing application. Uses JWTs for authentication of user accounts. It was deployed on Heroku."
 export const aviarDescription_long = "This application was completed as part of a Software Engineering class at the University of Calgary. It is a full stack application that utilizes  MongoDB database, ExpressJS backend and a ReactJS frontend. I learned a lot about CSS and React components.  Before Heroku changed their terms and conditions I had deployed the application there."
 

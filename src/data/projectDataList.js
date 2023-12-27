@@ -17,6 +17,7 @@ import {
     geoPredictDescription, 
     geoPredictDescription_long, 
     portfolioDescription,
+    genrePredictionDescription,
     spaceSurviveDescription, 
     spaceSurviveDescription_long 
 } from './projectDescriptions';
@@ -34,6 +35,9 @@ const aviarLinks= [
 ]
 const portfolioLinks= [
     {name:"GitHub", link:"https://github.com/ChaceN89/Portfolio-ChaceNielson", icon:<BsGithub size={20}/>}
+]
+const genrePredictionLinks= [
+    {name:"GitHub", link:"https://github.com/ChaceN89/GenrePredictionSpark", icon:<BsGithub size={20}/>}
 ]
 const geoPredictLinks =[
     {name:"Website", link:"http://136.159.140.62/", icon:<TfiWorld size={20}/>}
@@ -80,6 +84,14 @@ export const projectDataList = [
         externalLinks:portfolioLinks,
     },
     {
+        name:"ML Genre Prediction", 
+        description:genrePredictionDescription,
+        img:'/photos/projectPhotos/genrePrediction.jpg',
+        techStackName:"Tech Stack",
+        techStack:["Apache Spark", "Python", "Machine Learning"],
+        externalLinks:genrePredictionLinks,
+    },
+    {
         name:"Space Survive", 
         description:spaceSurviveDescription,
         img:'/photos/projectPhotos/spaceSurvive1.jpg',
@@ -117,7 +129,7 @@ export const projectDataList = [
         description:JengaDescription, 
         img:'/photos/projectPhotos/jenga1.jpg', 
         techStackName:"Tools",
-        techStack:["Unity Game Engine","C#", "Haptic Sylulus", "OpenHaptics" ],
+        techStack:["Unity Game Engine","C#", "Haptic Stylus", "OpenHaptics" ],
         externalLinks:hapticJengaLinks,
         modalInfo:{
           videos:[
