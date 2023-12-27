@@ -31,7 +31,7 @@ function Navbar() {
         <NavIcon link={"MyProjects"} Icon={<GrTask/>}/>
         <NavIcon link={"MyInterests"} Icon={<FaAngellist/>}/>
         <NavIcon link={"Volunteering"} Icon={<MdVolunteerActivism/>}/>
-        <NavIcon link={"PhotoCarousel"} Icon={<MdOutlinePhotoSizeSelectActual/>} />
+        <NavIcon link={"MyPhotos"} Icon={<MdOutlinePhotoSizeSelectActual/>} />
         <NavIcon link={"ContactMe"} Icon={<MdOutlineConnectWithoutContact/>}/>
     </nav>
   )
