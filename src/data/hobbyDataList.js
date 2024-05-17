@@ -88,7 +88,10 @@ export const hobbyDataList = [
         img:'/photos/climbing/climbing3.jpg',
         modalInfo:{
             photos:rockClimbingPhotoList,
-            useGallery:true
+            useGallery:true,
+            videos:[
+                {path:process.env.PUBLIC_URL +"/videos/climbing.mp4"}
+            ],
           }
     },
 

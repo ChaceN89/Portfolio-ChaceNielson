@@ -62,7 +62,7 @@ function SkillList() {
 
         <Skill label={"Docker"} icon={<FaDocker color='#089CEC' size={65} />} />
         <Skill starred={true} label={"Jupyter"} icon={<SiJupyter color='#F37626' size={65} />} />
-        <Skill label={"ML"} SVG_path={"machine-learning.svg"} />
+        <Skill label={"ML"} backgroundColour={"white"} SVG_path={"machine-learning.svg"} />
 
         <Skill label={"Rest API"} roundedBackground={true} backgroundColour={"white"} SVG_path={"rest-api.svg"} />
         <Skill label={"Node.js"} icon={<FaNode color='#68A063' size={65} />} />

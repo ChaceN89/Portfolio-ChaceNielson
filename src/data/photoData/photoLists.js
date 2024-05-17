@@ -150,4 +150,7 @@ export const travelPhotoList = [
 export const basketballPhotoList = [
     {image: process.env.PUBLIC_URL + '/photos/basketball/basketball1.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/basketball/basketball2.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/basketball/basketball3.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/basketball/basketball4.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/basketball/basketball5.jpg'},
 ]
