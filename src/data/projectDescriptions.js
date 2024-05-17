@@ -32,7 +32,7 @@ export const portfolioDescription = "My portfolio website is made with React and
 export const genrePredictionDescription = "A notebook using Apache Spark and Machine Learning to attempt to predict a songs genre based on text data."
 
 export const aviarDescription = "Full stack photo sharing application. Uses JWTs for authentication of user accounts. It was deployed on Heroku."
-export const aviarDescription_long = "This application was completed as part of a Software Engineering class at the University of Calgary. It is a full stack application that utilizes  MongoDB database, ExpressJS backend and a ReactJS frontend. I learned a lot about CSS and React components.  Before Heroku changed their terms and conditions I had deployed the application there."
+export const aviarDescription_long = "This application was completed as part of a Software Engineering class at the University of Calgary. It is a full stack application that utilizes  MongoDB database, ExpressJS backend and a React frontend. I learned a lot about CSS and React components.  Before Heroku changed their terms and conditions I had deployed the application there."
 
 export const spaceSurviveDescription = "A video game based on asteroids. Includes multiple modes, power-ups, achievements, audio, save states and different enemy types."
 export const spaceSurviveDescription_long = spaceSurviveDescription + " This game was originally taken from a simple tutorial that explain the basics of player movement and implementing enemies. After learning the basics of Unity game engine I decided to add my style and features to the game. I added enemies with different behaviours, game saving states, a game manager to control the level progress, music, sound effects, and more. While I stuck to the style from the original tutorial I made the game my own."
@@ -44,5 +44,11 @@ export const cubeGameDescription = "A simple game meant to explore how to create
 export const JengaDescription = "A virtual jenga game made in unity using a haptic stylus pen."
 
 
+export const voiceRecognitionDescription = "An application that allows users to record vocal profiles that can be tested against test audio using a Gaussian Mixture Model.";
+
+export const voiceRecognitionLongDescription = voiceRecognitionDescription + " The application was originally a Jupyter notebook showing the results of various speech models against different test audio files.";
 
 
+export const capstoneDescription = "A physical device and Unity simulation designed for carbon dioxide separation using hydrostatic pressure.";
+
+export const capstoneLongDescription = "This project, 'Energy Storage and Direct Air Capture in the Deep Ocean,' explores innovative methods for carbon dioxide (CO2) separation from the atmosphere. By leveraging deep ocean hydrostatic pressure, we designed a physical prototype and a comprehensive Unity simulation. The prototype, tested in a pool environment, demonstrates the feasibility of CO2 condensation using pressure changes. The Unity simulation illustrates the integration of energy storage and CO2 separation systems, providing an interactive visualization of the device's operation and potential real-world applications. This project lays the groundwork for future advancements in sustainable energy and carbon capture technologies.";

@@ -25,7 +25,26 @@ export const hapticjengaPhotoList = [
     {image:process.env.PUBLIC_URL + '/photos/projectPhotos/jenga_MainMenu.jpg', description:'Main Menu'},
     {image:process.env.PUBLIC_URL + '/photos/projectPhotos/jenga_NormalMode.jpg', description:'Normal Mode'},
     {image:process.env.PUBLIC_URL + '/photos/projectPhotos/jenga_HardMode.jpg', description:'Hard Mode'},
-    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/jenga_PauseMenu.jpg', description:'Pause Menu 1'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/jenga_PauseMenu.jpg', description:'Pause Menu'},
+]
+
+export const voiceRecognitionPhotoList = [
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/voice_recognition1.jpg', description:'Successful Test'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/voice_recognition3.jpg', description:'Failed Test'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/voice_recognition2.jpg', description:'Application Window'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/voice_recognition4.jpg', description:'Results Graph'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/voice_recognition5.jpg', description:'Instructions'},
+]
+export const capstonePhotoList = [
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/capstone2.jpg', description:'Physical Design'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/capstone4.jpg', description:'Deep Pool Test'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/capstone3.jpg', description:'Shallow Pool Test'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/capstone5.jpg', description:'Results'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/capstone6_sim.jpg', description:'Simulation'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/capstone7_sim.jpg', description:'Simulation'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/capstone8_sim.jpg', description:'Simulation'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/capstone9_sim.jpg', description:'Simulation'},
+
 ]
 
 //----------------------------

@@ -18,7 +18,7 @@ export default function ModalProjectCard({title, techStack, modalInfo, externalL
   return (
     <div className='bg-[#1F2021] relative h-5/6 mx-4  rounded-md border border-white p-10 overflow-y-auto overscroll-contain lg:px-20'>
 
-      <div className='text-3xl sm:text-5xl font-bold titleFontmb-4 text-center'>{title}</div>
+      <div className='text-3xl sm:text-6xl font-bold titleFont mb-10 text-center'>{title}</div>
       <div className='py-2'>{description}</div>
 
       {/* tech stack */}

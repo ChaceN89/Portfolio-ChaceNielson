@@ -32,7 +32,7 @@ function Skill({icon, SVG_path, label, backgroundColour=null, roundedBackground=
       
       {/* label at the bottom with the star is selected */}
       <div className='py-2 text-center flex justify-left items-center gap-0.5'>      
-        {starred && <MdOutlineStar color='yellow'/>}
+        {starred && <MdOutlineStar color='#FFD700'/>}
         <div className='truncate'> {label} </div>
       </div>
     </li>

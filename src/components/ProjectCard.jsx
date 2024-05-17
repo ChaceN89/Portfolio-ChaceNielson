@@ -71,7 +71,7 @@ function ProjectCard({starred, name, description, img, techStackName=null, techS
                     <button onClick={toggleModal} className={cursor}>
 
                     {starred &&
-                    <MdOutlineStar className='fixed' color='yellow' size={20}/>
+                    <MdOutlineStar className='fixed' color='#FFD700' size={20}/>
                     
                     }
 
