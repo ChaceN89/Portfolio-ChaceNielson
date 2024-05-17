@@ -6,13 +6,8 @@ import React from 'react'
 import NavIcon from '../components/NavIcon' // link element 
 
 // react icons
-import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
-import { BiBrain } from "react-icons/bi";
-import { GrTask } from "react-icons/gr";
-import { GiSkills, GiGiftOfKnowledge } from "react-icons/gi";
-import { BsCamera } from "react-icons/bs";
-import { FaGuitar, FaAngellist } from "react-icons/fa";
-import { MdOutlineConnectWithoutContact, MdOutlinePhotoSizeSelectActual, MdVolunteerActivism } from "react-icons/md";
+import { FaHome, FaLaptopCode, FaHandsHelping, FaCommentDots,FaImages, FaProjectDiagram, FaHiking} from "react-icons/fa";
+
 
 function Navbar() {
   return (
@@ -26,13 +21,13 @@ function Navbar() {
       bg-white bg-opacity-[0.03] 
       text-black text-opacity-50 text-3xl 
       hover:bg-opacity-60 hover:text-opacity-100 ' >
-        <NavIcon link={"Home"} Icon={<AiOutlineHome/>} />
-        <NavIcon link={"MySkills"} Icon={<GiSkills/>}/>
-        <NavIcon link={"MyProjects"} Icon={<GrTask/>}/>
-        <NavIcon link={"MyInterests"} Icon={<FaAngellist/>}/>
-        <NavIcon link={"Volunteering"} Icon={<MdVolunteerActivism/>}/>
-        <NavIcon link={"MyPhotos"} Icon={<MdOutlinePhotoSizeSelectActual/>} />
-        <NavIcon link={"ContactMe"} Icon={<MdOutlineConnectWithoutContact/>}/>
+        <NavIcon link={"Home"} Icon={<FaHome/>} />
+        <NavIcon link={"MySkills"} Icon={<FaLaptopCode/>} /> {/* Example with FaLaptopCode */}
+        <NavIcon link={"MyProjects"} Icon={<FaProjectDiagram/>}/>
+        <NavIcon link={"MyInterests"} Icon={<FaHiking/>}/>
+        <NavIcon link={"Volunteering"} Icon={<FaHandsHelping/>}/>
+        <NavIcon link={"MyPhotos"} Icon={<FaImages/>} />
+        <NavIcon link={"ContactMe"} Icon={<FaCommentDots/>}/>
     </nav>
   )
 }

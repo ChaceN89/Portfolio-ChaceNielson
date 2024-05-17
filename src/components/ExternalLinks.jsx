@@ -4,8 +4,6 @@
  */
 import React from 'react'
 import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
-import { IoLogoYoutube } from "react-icons/io";
-import { ImVideoCamera } from "react-icons/im";
 import { TfiGallery } from "react-icons/tfi";
 import {Link} from 'react-router-dom'
 import ToolTip from './ToolTip';
@@ -37,10 +35,6 @@ function ExternalLinks({size=25, animate=false}) {
                 toolTipText={"My Photo Gallery"}
             />
         </Link>
-
-        {/* <Link to="Videos" className={iconCSS + " " + delayCss}>
-            <ImVideoCamera size={size}/>
-        </Link> */}
     </div>
   )
 }
