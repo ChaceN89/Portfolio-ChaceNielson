@@ -13,6 +13,8 @@ export const hikingdescription = "I've lived near the mountains my whole life an
 
 export const iceClimbingDescription = "I've also applied my love for rock climbing and taken it into the winter."
 
-export const bikingDescription = "I love going out to Bragg Creek or Canmore for a day of mountain biking"
+export const bikingDescription = "I love going out to Bragg Creek or Canmore for a day of mountain biking."
 
-export const travelDescription = "I love travelling, especially seeing other cultures. My favourite so far is seeing Japan"
+export const travelDescription = "I love travelling, especially seeing other cultures. My favourite so far is seeing Japan."
+
+export const basketballDescription = "I played basketball while attending Cochrane High and later at Medicine Hat College."

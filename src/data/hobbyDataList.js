@@ -5,6 +5,7 @@
 //Descriptions
 import { 
     backpackingDescription, 
+    basketballDescription, 
     bikingDescription, 
     hikingdescription, 
     iceClimbingDescription,
@@ -17,6 +18,7 @@ import {
 //Photos
 import { 
     backpackingPhotoList, 
+    basketballPhotoList, 
     bikingPhotoList, 
     hikingPhotoList, 
     iceClimbingPhotoList, 
@@ -25,6 +27,8 @@ import {
     snowboardingPhotoList, 
     travelPhotoList 
 } from "./photoData/photoLists";
+
+import { BsYoutube } from "react-icons/bs";
 
 
 // Return List of Hobby data
@@ -54,6 +58,19 @@ export const hobbyDataList = [
         }
     },
     {
+        name:"Basketball", 
+        description:basketballDescription,
+        img:'/photos/basketball/basketball1.jpg',
+        modalInfo:{
+            photos:basketballPhotoList,
+            useGallery:true
+        },
+        externalLinks:[
+            {name:"High School", link:"https://youtu.be/AJMJtZt2-g0?si=qHXwWGUBQ1O-psQA", icon:<BsYoutube size={20}/>},
+            {name:"College", link:"https://youtu.be/17dn5CzCtgM?si=WDNFRG1qUBNdfIWP", icon:<BsYoutube size={20}/>}
+        ]
+    },
+    {
         name:"Backpacking", 
         description:backpackingDescription,
         img:'/photos/backpacking/backpacking2.jpg',
@@ -74,6 +91,7 @@ export const hobbyDataList = [
             useGallery:true
           }
     },
+
     {
         name:"Hiking", 
         description:hikingdescription,
@@ -87,20 +105,20 @@ export const hobbyDataList = [
         }
     },
     {
-        name:"Ice Climbing", 
-        description:iceClimbingDescription,
-        img:'/photos/climbing/iceClimbing2.jpg',
-        modalInfo:{
-            photos:iceClimbingPhotoList,
-            useGallery:true
-        }
-    },
-    {
         name:"Biking", 
         description:bikingDescription,
         img:'/photos/biking/biking1.jpg',
         modalInfo:{
             photos:bikingPhotoList,
+            useGallery:true
+        }
+    },
+    {
+        name:"Ice Climbing", 
+        description:iceClimbingDescription,
+        img:'/photos/climbing/iceClimbing2.jpg',
+        modalInfo:{
+            photos:iceClimbingPhotoList,
             useGallery:true
         }
     },
@@ -113,4 +131,5 @@ export const hobbyDataList = [
             useGallery:true
         }
     },
+  
 ]

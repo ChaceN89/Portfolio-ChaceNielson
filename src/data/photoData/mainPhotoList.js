@@ -98,6 +98,7 @@ export const mainPhotoList = [
   {image: process.env.PUBLIC_URL + '/photos/music/guitar3.jpg'},
   
   {image: process.env.PUBLIC_URL + '/photos/other/surfing1.jpg'},
+  {image: process.env.PUBLIC_URL + '/photos/other/kayak1.jpg'},
   
   {image: process.env.PUBLIC_URL + '/photos/portraits/portrait1.jpg'},
   {image: process.env.PUBLIC_URL + '/photos/portraits/portrait2.jpg'},
@@ -113,6 +114,8 @@ export const mainPhotoList = [
   {image: process.env.PUBLIC_URL + '/photos/snowboarding/snowboard4.jpg'},
   {image: process.env.PUBLIC_URL + '/photos/snowboarding/snowboard5.jpg'},
   {image: process.env.PUBLIC_URL + '/photos/snowboarding/snowboard6.jpg'},
+  {image: process.env.PUBLIC_URL + '/photos/snowboarding/snowboard7.jpg'},
+  {image: process.env.PUBLIC_URL + '/photos/snowboarding/snowboard8.jpg'},
   
   {image: process.env.PUBLIC_URL + '/photos/travel/japan1.jpg'},
   {image: process.env.PUBLIC_URL + '/photos/travel/japan2.jpg'},

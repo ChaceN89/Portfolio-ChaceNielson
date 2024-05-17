@@ -39,9 +39,14 @@ export const snowboardingPhotoList = [
     {image: process.env.PUBLIC_URL + '/photos/snowboarding/snowboard1.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/snowboarding/snowboard2.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/snowboarding/snowboard3.jpg'},
-    {image: process.env.PUBLIC_URL + '/photos/snowboarding/snowboard4.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/snowboarding/snowboard5.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/snowboarding/snowboard4.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/snowboarding/snowboard6.jpg'},  
+    {image: process.env.PUBLIC_URL + '/photos/snowboarding/snowboard7.jpg'},  
+    {image: process.env.PUBLIC_URL + '/photos/hiking/mountains12.jpg'},
+
+    {image: process.env.PUBLIC_URL + '/photos/snowboarding/snowboard8.jpg'},  
+    {image: process.env.PUBLIC_URL + '/photos/snowboarding/snowboard9.jpg'},  
 ]
 export const backpackingPhotoList = [
     {image: process.env.PUBLIC_URL + '/photos/backpacking/westCoast1.jpg'},
@@ -101,7 +106,6 @@ export const hikingPhotoList =[
     {image: process.env.PUBLIC_URL + '/photos/hiking/mountains9.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/hiking/mountains10.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/hiking/mountains11.jpg'},
-    {image: process.env.PUBLIC_URL + '/photos/hiking/mountains12.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/hiking/mountains13.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/hiking/mountains14.jpg'},
     {image: process.env.PUBLIC_URL + '/photos/hiking/mountains15.jpg'},
@@ -118,6 +122,7 @@ export const hikingPhotoList =[
 export const iceClimbingPhotoList = [
     {image: process.env.PUBLIC_URL + '/photos/climbing/iceClimbing2.jpg'},  
     {image: process.env.PUBLIC_URL + '/photos/climbing/iceClimbing1.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/climbing/iceClimbing3.jpg'},
 ]
 export const bikingPhotoList = [
     {image: process.env.PUBLIC_URL + '/photos/biking/biking1.jpg'},
@@ -142,3 +147,7 @@ export const travelPhotoList = [
     {image: process.env.PUBLIC_URL + '/photos/travel/europe6.jpg'},
 ]
 
+export const basketballPhotoList = [
+    {image: process.env.PUBLIC_URL + '/photos/basketball/basketball1.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/basketball/basketball2.jpg'},
+]
