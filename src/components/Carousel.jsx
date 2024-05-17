@@ -2,60 +2,79 @@
  * Photo Carousel to display all sizes of photos in a fixed space
  * Used arrow keys to navigate between photos (may not work on some browsers)
  */
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react';
 import { mainPhotoList } from '../data/photoData/mainPhotoList';
-import { ImShuffle } from "react-icons/im";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { ImShuffle } from 'react-icons/im';
+import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 function Carousel() {
-    const numOfSlides = mainPhotoList.length
-    const randomIndex = Math.floor(Math.random() * (numOfSlides))
-    const [current, setCurrent] = useState(randomIndex)
-    const prevSlide =()=>{
+    const numOfSlides = mainPhotoList.length;
+    const [current, setCurrent] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            nextSlide();
+        }, 5000); // Change slide every 5 seconds
+        return () => clearInterval(interval);
+    }, [current]);
+
+    const prevSlide = () => {
         setCurrent(current === 0 ? numOfSlides - 1 : current - 1);
-    }
-    const nextSlide =()=>{
+    };
+
+    const nextSlide = () => {
         setCurrent(current === numOfSlides - 1 ? 0 : current + 1);
-    }
+    };
+
     const randomSlide = () => {
-        setCurrent(Math.floor(Math.random() * (numOfSlides)))
-    }
-    if(numOfSlides ===0 ){
-        return null
+        setCurrent(Math.floor(Math.random() * numOfSlides));
+    };
+
+    if (numOfSlides === 0) {
+        return null;
     }
 
-	document.onkeydown = (e)=> {
-		switch (e.keyCode) {
-			case 37: //left arrow button
-				prevSlide()
-				break;
-			case 39: // right arrow button
-				nextSlide()
-				break;
-			default:
-		}
-	};
-
-	return(
-		<div className='pt-12 container mx-auto relative h-fit'>
-			<FaArrowLeft className="arrow leftArrow" onClick={prevSlide}/>
-			<FaArrowRight className="arrow rightArrow" onClick={nextSlide}/>
-			<div className='flex justify-center'>
-				<ImShuffle className="arrow bottomArrow" onClick={randomSlide}/>
-			</div>
-			{mainPhotoList.map((item, index) =>{
-				return(
-					<div key={index} className={index === current ? 'slide active ' : 'slide'}>
-						<div className='grid grid-cols-1 place-items-center  relative h-fit w-auto'>
-							{index === current && (
-								<img id='image' key={index} loading='lazy' src={item.image} alt="..." className='rounded-[2rem] object-contain  max-h-[40rem] max-w-full p-4'/>
-							)}
-						</div>
-					</div>
-				)
-			})}    
-		</div>
-	)
+    return (
+        <div className="carousel-container relative w-full pt-12">
+            <div className="carousel-inner relative min-h-[50vh] h-64 md:h-96 lg:h-[36rem] xl:h-[48rem] overflow-hidden rounded-lg">
+                {mainPhotoList.map((item, index) => (
+                    <div
+                        key={index}
+                        className={`carousel-item absolute w-full h-full transition-opacity duration-1000 ease-in-out ${
+                            index === current ? 'opacity-100' : 'opacity-0'
+                        }`}
+                    >
+                        <img
+                            src={item.image}
+                            alt={`Slide ${index}`}
+                            className="w-full h-full object-contain"
+                        />
+                    </div>
+                ))}
+            </div>
+            <div
+                className="carousel-control left absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer focus:outline-none"
+                onClick={prevSlide}
+            >
+                <span className="control-arrow flex items-center justify-center w-12 h-12 rounded-full bg-white/30 hover:bg-white/70 focus:ring-4 focus:ring-white dark:focus:ring-gray-800">
+                    <FaArrowLeft className="w-6 h-6 text-white dark:text-gray-800" aria-hidden="true" />
+                    <span className="sr-only">Previous</span>
+                </span>
+            </div>
+            <div
+                className="carousel-control right absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer focus:outline-none"
+                onClick={nextSlide}
+            >
+                <span className="control-arrow flex items-center justify-center w-12 h-12 rounded-full bg-white/30 hover:bg-white/70 focus:ring-4 focus:ring-white dark:focus:ring-gray-800">
+                    <FaArrowRight className="w-6 h-6 text-white dark:text-gray-800" aria-hidden="true" />
+                    <span className="sr-only">Next</span>
+                </span>
+            </div>
+            <div className="flex justify-center mt-4">
+                <ImShuffle className="control-arrow cursor-pointer flex items-center justify-center w-12 h-12 rounded-full bg-white/30 hover:bg-white/70 focus:ring-4 focus:ring-white dark:focus:ring-gray-800" onClick={randomSlide} />
+            </div>
+        </div>
+    );
 }
 
-export default Carousel
+export default Carousel;

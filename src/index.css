@@ -25,19 +25,6 @@ body{
     @apply p-2
   }
 
-  /*Fort Photo Carousel */
-  .arrow{
-    @apply absolute text-white z-20  select-none cursor-pointer opacity-20 hover:opacity-100 text-3xl md:text-5xl hover:text-black 
-  }
-  .leftArrow{
-    @apply top-1/2 left-12 
-  }
-  .rightArrow{
-    @apply top-1/2 right-12 
-  }
-  .bottomArrow{
-    @apply bottom-8
-  }
 
   /* grid list for projects and hobbies */
   .projectCardList {
@@ -155,17 +142,7 @@ body{
 }
 
 
-/* image carousel css for transistions*/
-.slide {
-  opacity: 0;
-  transition-duration: 1s ease;
-}
 
-.slide.active {
-  opacity: 1;
-  transition-duration: 1s;
-  transform: scale(1.08);
-}
 
 
 /* remove scrollbar on text areas */
@@ -225,4 +202,54 @@ html {
     
     /* white with angles white slashes */
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='900' height='250' preserveAspectRatio='none' viewBox='0 0 900 250'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1276%26quot%3b)' fill='none'%3e%3crect width='900' height='250' x='0' y='0' fill='rgba(22%2c 23%2c 24%2c 1)'%3e%3c/rect%3e%3cpath d='M14 250L264 0L447 0L197 250z' fill='url(%23SvgjsLinearGradient1277)'%3e%3c/path%3e%3cpath d='M150.5 250L400.5 0L477 0L227 250z' fill='url(%23SvgjsLinearGradient1277)'%3e%3c/path%3e%3cpath d='M311 250L561 0L682.5 0L432.5 250z' fill='url(%23SvgjsLinearGradient1277)'%3e%3c/path%3e%3cpath d='M463.5 250L713.5 0L928 0L678 250z' fill='url(%23SvgjsLinearGradient1277)'%3e%3c/path%3e%3cpath d='M896 250L646 0L467.5 0L717.5 250z' fill='url(%23SvgjsLinearGradient1278)'%3e%3c/path%3e%3cpath d='M723.5 250L473.5 0L347.5 0L597.5 250z' fill='url(%23SvgjsLinearGradient1278)'%3e%3c/path%3e%3cpath d='M602 250L352 0L137.5 0L387.5 250z' fill='url(%23SvgjsLinearGradient1278)'%3e%3c/path%3e%3cpath d='M441.5 250L191.5 0L136 0L386 250z' fill='url(%23SvgjsLinearGradient1278)'%3e%3c/path%3e%3cpath d='M733.8564474423836 250L900 83.85644744238351L900 250z' fill='url(%23SvgjsLinearGradient1277)'%3e%3c/path%3e%3cpath d='M0 250L166.1435525576165 250L 0 83.85644744238351z' fill='url(%23SvgjsLinearGradient1278)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1276'%3e%3crect width='900' height='250' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1277'%3e%3cstop stop-color='rgba(138%2c 140%2c 143%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(138%2c 140%2c 143%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1278'%3e%3cstop stop-color='rgba(138%2c 140%2c 143%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(138%2c 140%2c 143%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+}
+
+
+
+/* Carousel.css */
+
+.carousel-container {
+  position: relative;
+  width: 100%;
+  padding-top: 3rem;
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out;
+}
+
+.control-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+  transition: background 0.3s;
+}
+
+.control-arrow:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.carousel-control.left {
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.carousel-control.right {
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
 }
