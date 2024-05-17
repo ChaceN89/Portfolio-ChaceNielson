@@ -60,18 +60,18 @@ function SkillList() {
         <Skill label={"Unity"}  backgroundColour={"black"} icon={<FaUnity size={65} />} />
         <Skill label={"Blender"} SVG_path={"blender.svg"} />
 
-        <Skill starred={true} label={"PostgreSQL"} roundedBackground={true} backgroundColour={"#31648C"} icon={<DiPostgresql color='white' size={65} />} />
-        <Skill label={"MySQL"} backgroundColour={"white"} icon={<GrMysql color='#01618A' size={65} />}/>
-        <Skill label={"MongoDB"} icon={<SiMongodb color='#4DA53F' size={65} />} />
+        <Skill label={"Docker"} icon={<FaDocker color='#089CEC' size={65} />} />
+        <Skill starred={true} label={"Jupyter"} icon={<SiJupyter color='#F37626' size={65} />} />
+        <Skill label={"ML"} SVG_path={"machine-learning.svg"} />
 
         <Skill label={"Rest API"} roundedBackground={true} backgroundColour={"white"} SVG_path={"rest-api.svg"} />
         <Skill label={"Node.js"} icon={<FaNode color='#68A063' size={65} />} />
         <Skill label={"Express.js"} icon={<FaNodeJs color='#3FA040' size={65} />} />
         <Skill starred={true} label={"FastAPI"} icon={<SiFastapi  color={"#079487"}  size={65} />} />
 
-        <Skill starred={true} label={"Jupyter Notebook"} icon={<SiJupyter color='#F37626' size={65} />} />
-        <Skill label={"Docker"} icon={<FaDocker color='#089CEC' size={65} />} />
-        <Skill label={"Machine Learning"} SVG_path={"machine-learning.svg"} />
+        <Skill starred={true} label={"PostgreSQL"} roundedBackground={true} backgroundColour={"#31648C"} icon={<DiPostgresql color='white' size={65} />} />
+        <Skill label={"MySQL"} backgroundColour={"white"} icon={<GrMysql color='#01618A' size={65} />}/>
+        <Skill label={"MongoDB"} icon={<SiMongodb color='#4DA53F' size={65} />} />
 
       </ul>
 
