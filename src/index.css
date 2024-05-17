@@ -80,7 +80,7 @@ body{
 
 
 .closeModal{
-  @apply p-1 fixed top-6 right-6 hover:text-white hover:opacity-100 opacity-40 hover:scale-105 cursor-pointer
+  @apply p-1 fixed top-1 sm:top-5 right-2 sm:right-10 hover:text-white hover:opacity-100 opacity-50 hover:scale-150 cursor-pointer
 }
 
 
@@ -240,6 +240,7 @@ html {
 
 .control-arrow:hover {
   background: rgba(255, 255, 255, 0.7);
+  transform: scale(1.2);
 }
 
 .carousel-control.left {

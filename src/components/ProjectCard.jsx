@@ -71,7 +71,7 @@ function ProjectCard({starred, name, description, img, techStackName=null, techS
                     <button onClick={toggleModal} className={cursor}>
 
                     {starred &&
-                    <MdOutlineStar className='fixed' color='#FFD700' size={20}/>
+                    <MdOutlineStar className='fixed' color='#FFD700' size={30}/>
                     
                     }
 
@@ -98,7 +98,7 @@ function ProjectCard({starred, name, description, img, techStackName=null, techS
             <div className={modal ? "fixed h-screen w-screen model isOpen overflow-hidden z-40" : "h-0 modal"} >
                 {modal && // onlu render if modal is open
                     <>
-                        <AiOutlineClose className='closeModal'  onClick={toggleModal}  size={40}/>
+                        <AiOutlineClose className='closeModal'  onClick={toggleModal}  size={60}/>
                         <ModalProjectCard
                             title={name}
                             techStack={techStack}
