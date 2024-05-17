@@ -161,7 +161,7 @@ export const projectDataList = [
         starred:true,
         name:"Cube Game", 
         description:cubeGameDescription,
-        img:'/photos/projectPhotos/cubeGame1.jpg',
+        img:'/photos/projectPhotos/cubegame1.jpg',
         techStackName:"Tools",
         techStack:["Unity","C#" ],
         externalLinks:[
