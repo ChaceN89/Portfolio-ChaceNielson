@@ -69,10 +69,8 @@ function ProjectCard({starred, name, description, img, techStackName=null, techS
             <div className=' overflow-hidden hover:scale-105'>
                 <div className='inline-block p-3 '>
                     <button onClick={toggleModal} className={cursor}>
-
                     {starred &&
-                    <MdOutlineStar className='fixed' color='#FFD700' size={30}/>
-                    
+                        <MdOutlineStar className='fixed' color='#FFD700' size={30}/>
                     }
 
                     <div className='overflow-hidden rounded-3xl'> 

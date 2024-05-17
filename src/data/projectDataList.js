@@ -83,8 +83,8 @@ export const projectDataList = [
             {name:"Project Video", link:"https://www.youtube.com/watch?v=TvnBOPB7dhc", icon:<BsYoutube size={20}/>},
             {name:"Simulation", link:"https://dev3933.d18ixp0pwlw4ex.amplifyapp.com/", icon:<FaProjectDiagram size={20}/>},
             {name:"Simulation Code", link:"https://github.com/ChaceN89/Capstone-Simulation", icon:<BsGithub size={20}/>},
-            {name:"Poster", pdf:"Capstone Poster.pdf",  icon:<BsFileEarmarkPdf size={20}/>},
             {name:"Report", pdf:"Capstone Final Report.pdf",  icon:<BsFileEarmarkPdf size={20}/>},
+            {name:"Project Poster", pdf:"Capstone Poster.pdf",  icon:<BsFileEarmarkPdf size={20}/>},
 
         ],
         modalInfo:{
