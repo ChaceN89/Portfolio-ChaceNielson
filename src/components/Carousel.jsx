@@ -2,7 +2,7 @@
  * Photo Carousel to display all sizes of photos in a fixed space
  * Used arrow keys to navigate between photos (may not work on some browsers)
  */
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { mainPhotoList } from '../data/photoData/mainPhotoList';
 import { ImShuffle } from 'react-icons/im';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
@@ -11,19 +11,19 @@ function Carousel() {
     const numOfSlides = mainPhotoList.length;
     const [current, setCurrent] = useState(0);
 
+    const nextSlide = useCallback(() => {
+        setCurrent(current => (current === numOfSlides - 1 ? 0 : current + 1));
+    }, [numOfSlides]);
+
     useEffect(() => {
         const interval = setInterval(() => {
             nextSlide();
         }, 5000); // Change slide every 5 seconds
         return () => clearInterval(interval);
-    }, [current]);
+    }, [nextSlide]);
 
     const prevSlide = () => {
         setCurrent(current === 0 ? numOfSlides - 1 : current - 1);
-    };
-
-    const nextSlide = () => {
-        setCurrent(current === numOfSlides - 1 ? 0 : current + 1);
     };
 
     const randomSlide = () => {

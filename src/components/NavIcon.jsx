@@ -3,7 +3,7 @@
  * Uses Reactr scoll link to go to the link
  * Has a tool tip to display wher the link is going tp
  */
-import React, {useState} from "react";
+import React from "react";
 import {Link} from 'react-scroll'
 import ToolTip from './ToolTip'
 

@@ -1,7 +1,7 @@
 /**
  * Takes a reference and determines if its in the viewport or not - returns true or false
  */
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 export function useIsInViewport(ref) {
     const [isIntersecting, setIsIntersecting] = useState(false);
