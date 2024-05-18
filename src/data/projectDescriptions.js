@@ -43,12 +43,8 @@ export const cubeGameDescription = "A simple game meant to explore how to create
 
 export const JengaDescription = "A virtual jenga game made in unity using a haptic stylus pen."
 
-
 export const voiceRecognitionDescription = "An application that allows users to record vocal profiles that can be tested against test audio using a Gaussian Mixture Model.";
-
-export const voiceRecognitionLongDescription = voiceRecognitionDescription + " The application was originally a Jupyter notebook showing the results of various speech models against different test audio files.";
-
+export const voiceRecognitionLongDescription = voiceRecognitionDescription + " The application was originally a Jupyter Notebook showing the results of various speech models against different test audio files. It was later adapted into a Dash application to provide a user interface.";
 
 export const capstoneDescription = "A physical device and Unity simulation designed for carbon dioxide separation using hydrostatic pressure.";
-
 export const capstoneLongDescription = "This project was completed for my capstone project at the University of Calgary. 'Energy Storage and Direct Air Capture in the Deep Ocean,' explores innovative methods for carbon dioxide (CO2) separation from the atmosphere. By leveraging deep ocean hydrostatic pressure, we designed a physical prototype and a comprehensive Unity simulation. The prototype, tested in a pool environment, demonstrates the feasibility of CO2 condensation using pressure changes. The Unity simulation illustrates the integration of energy storage and CO2 separation systems, providing an interactive visualization of the device's operation and potential real-world applications. This project lays the groundwork for future advancements in sustainable energy and carbon capture technologies.";
