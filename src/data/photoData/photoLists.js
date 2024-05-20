@@ -141,7 +141,7 @@ export const hikingPhotoList =[
 export const iceClimbingPhotoList = [
     {image: process.env.PUBLIC_URL + '/photos/climbing/iceClimbing2.jpg'},  
     {image: process.env.PUBLIC_URL + '/photos/climbing/iceClimbing1.jpg'},
-    {image: process.env.PUBLIC_URL + '/photos/climbing/iceClimbing3.jpg'},
+    {image: process.env.PUBLIC_URL + '/photos/climbing/iceClimbing.jpg'},
 ]
 export const bikingPhotoList = [
     {image: process.env.PUBLIC_URL + '/photos/biking/biking1.jpg'},

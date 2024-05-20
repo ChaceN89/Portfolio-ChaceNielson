@@ -48,7 +48,6 @@ export const mainPhotoList = [
   {image: process.env.PUBLIC_URL + '/photos/candid/candid1.jpg'},
   {image: process.env.PUBLIC_URL + '/photos/candid/candid2.jpg'},
   {image: process.env.PUBLIC_URL + '/photos/candid/candid3.jpg'},
-  {image: process.env.PUBLIC_URL + '/photos/candid/candid4.jpg'},
   {image: process.env.PUBLIC_URL + '/photos/candid/candid5.jpg'},
   {image: process.env.PUBLIC_URL + '/photos/candid/candid6.jpg'},
   {image: process.env.PUBLIC_URL + '/photos/candid/candid7.jpg'},
@@ -61,6 +60,7 @@ export const mainPhotoList = [
   {image: process.env.PUBLIC_URL + '/photos/climbing/climbing6.jpg'},
   {image: process.env.PUBLIC_URL + '/photos/climbing/iceClimbing1.jpg'},
   {image: process.env.PUBLIC_URL + '/photos/climbing/iceClimbing2.jpg'},
+  {image: process.env.PUBLIC_URL + '/photos/climbing/iceClimbing.jpg'},
   
   {image: process.env.PUBLIC_URL + '/photos/hiking/temple1.jpg'},
   {image: process.env.PUBLIC_URL + '/photos/hiking/temple2.jpg'},
