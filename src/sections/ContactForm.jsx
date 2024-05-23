@@ -18,17 +18,18 @@ function ContactForm() {
   const navigate = useNavigate()
   const form = useRef();
 
-  // fucntion to send email using services
+  // Function to send email using services
   const sendEmail = (e) => {
     e.preventDefault();
     emailjs.sendForm('service_nc4nkbc', 'template_cshjzhq', form.current, 'G7UrU45Q--GNZEv3H')
       .then((result) => {
-          navigate("/Contact")
+          console.log('Email sent successfully:', result.text);
+          navigate("/Contact");
       }, (error) => {
-          alert("Error Sending Email", error)
+          console.error('Error sending email:', error);
+          alert("Error Sending Email: " + error.text);
       });
   };
-
   return(
     <section id="ContactMe" className='section hiddenClass'>
       <SectionHeader title={"Contact Me"} description={"Want to learn more about me? Interested in software? Send me a message."}/>
