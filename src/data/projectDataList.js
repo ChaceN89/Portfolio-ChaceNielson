@@ -113,7 +113,7 @@ export const projectDataList = [
         description:portfolioDescription,
         img:'/photos/projectPhotos/portfolio.jpg',
         techStackName:"Tech Stack",
-        techStack:["React", "Tailwind", "CSS"],
+        techStack:["React", "Tailwind", "CSS", "Vercel"],
         externalLinks:[
             {name:"GitHub", link:"https://github.com/ChaceN89/Portfolio-ChaceNielson", icon:<BsGithub size={20}/>}
         ],
