@@ -21,13 +21,11 @@ function ContactForm() {
   // Function to send email using services
   const sendEmail = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_nc4nkbc', 'template_cshjzhq', form.current, 'G7UrU45Q--GNZEv3H')
+    emailjs.sendForm('service_pw8i0lc', 'template_cshjzhq', form.current, 'G7UrU45Q--GNZEv3H')
       .then((result) => {
-          console.log('Email sent successfully:', result.text);
           navigate("/Contact");
       }, (error) => {
-          console.error('Error sending email:', error);
-          alert("Error Sending Email: " + error.text);
+          alert("Error Sending Email");
       });
   };
   return(
