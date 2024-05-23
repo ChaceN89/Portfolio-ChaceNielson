@@ -17,3 +17,10 @@ This application serves as my personal portfolio, showcasing my projects and ski
 - React
 - Tailwind CSS
 - Regular CSS
+
+
+
+## Deployment on Git Pages
+need to add this line to the JSON in the package.json file
+
+// "homepage": "https://ChaceN89.github.io/Portfolio-ChaceNielson",
