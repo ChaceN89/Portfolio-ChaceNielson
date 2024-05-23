@@ -19,8 +19,12 @@ This application serves as my personal portfolio, showcasing my projects and ski
 - Regular CSS
 
 
-
 ## Deployment on Git Pages
 need to add this line to the JSON in the package.json file
 
-// "homepage": "https://ChaceN89.github.io/Portfolio-ChaceNielson",
+"homepage": "https://ChaceN89.github.io/Portfolio-ChaceNielson",
+
+The application using routing that specifically works on gitpages but will work on other deloyments as well
+
+## Redirect Application 
+The current application redirects to https://portfolio-4gesq0m1e-chace-nielsons-projects.vercel.app/#/ using the index.html file in the docs folder. This index.docs is a simple redirect to the  
