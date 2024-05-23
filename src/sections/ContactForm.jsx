@@ -25,7 +25,7 @@ function ContactForm() {
       .then((result) => {
           navigate("/Contact")
       }, (error) => {
-          alert("Error Sending Email")
+          alert("Error Sending Email", error)
       });
   };
 
