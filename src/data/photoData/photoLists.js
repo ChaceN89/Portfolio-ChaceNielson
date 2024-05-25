@@ -46,6 +46,12 @@ export const capstonePhotoList = [
     {image:process.env.PUBLIC_URL + '/photos/projectPhotos/capstone9_sim.jpg', description:'Simulation'},
 
 ]
+export const musicPlayerPhotoList = [
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/musicPlayer2.jpg', description:'Light Theme'},
+    {image:process.env.PUBLIC_URL + '/photos/projectPhotos/musicPlayer.jpg', description:'Dark Theme'},
+
+
+]
 
 //----------------------------
 // Hobby Lists

@@ -5,7 +5,7 @@
 //icons for the links
 import { TfiWorld } from 'react-icons/tfi'
 import { BsGithub, BsYoutube, BsFileEarmarkPdf } from "react-icons/bs";
-import { FaUnity, FaProjectDiagram } from "react-icons/fa";
+import { FaUnity, FaProjectDiagram, FaMusic } from "react-icons/fa";
 
 // all project descriptions
 import {  
@@ -23,7 +23,8 @@ import {
     voiceRecognitionDescription,
     voiceRecognitionLongDescription,
     capstoneLongDescription,
-    capstoneDescription
+    capstoneDescription,
+    musicPlayerDescription
 } from './projectDescriptions';
 
 //All the photo lists for individual projects
@@ -32,6 +33,7 @@ import {
     capstonePhotoList, 
     geoPredictPhotoList, 
     hapticjengaPhotoList, 
+    musicPlayerPhotoList, 
     voiceRecognitionPhotoList
 } from './photoData/photoLists';
 
@@ -93,14 +95,28 @@ export const projectDataList = [
         }
     },
     {
+        name:"Music Player", 
+        description:musicPlayerDescription,
+        img:'/photos/projectPhotos/musicPlayer1.jpg',
+        techStackName:"Tech Stack",
+        techStack:["Vue", "Tailwind", "Vercel" ],
+        externalLinks:[
+            {name:"Online Player", link:"https://music-player-chace-nielsons-projects.vercel.app/", icon:<FaMusic size={20}/>}, 
+            {name:"GitHub", link:"https://github.com/ChaceN89/music-player", icon:<BsGithub size={20}/>},
+        ],
+        modalInfo:{
+            photos:musicPlayerPhotoList,
+        }
+    },
+    {
         name:"Photo App", 
         description:aviarDescription,
         img:'/photos/projectPhotos/aviar_collections.jpg',
         techStackName:"Mern Stack",
         techStack:["MongoDB", "ExpressJS", "React", "NodeJS"],
         externalLinks:[
+            {name:"Site Walkthrough", link:"https://www.youtube.com/watch?v=mktAIV4sjFQ", icon:<BsYoutube size={20}/>},
             {name:"GitHub", link:"https://github.com/ChaceN89/Aviar", icon:<BsGithub size={20}/>},
-            {name:"Site Walkthrough", link:"https://www.youtube.com/watch?v=mktAIV4sjFQ", icon:<BsYoutube size={20}/>}
         ],
         modalInfo:{
             description:aviarDescription_long,
