@@ -82,12 +82,11 @@ export const projectDataList = [
         techStackName:"Tools",
         techStack:["Unity", "Blender", "3D Printing", "Circuity"],
         externalLinks:[
-            {name:"Project Video", link:"https://www.youtube.com/watch?v=TvnBOPB7dhc", icon:<BsYoutube size={20}/>},
+            {name:"", link:"https://www.youtube.com/watch?v=TvnBOPB7dhc", icon:<BsYoutube size={20}/>},
             {name:"Simulation", link:"https://dev3933.d18ixp0pwlw4ex.amplifyapp.com/", icon:<FaProjectDiagram size={20}/>},
             {name:"Simulation Code", link:"https://github.com/ChaceN89/Capstone-Simulation", icon:<BsGithub size={20}/>},
             {name:"Report", pdf:"Capstone Final Report.pdf",  icon:<BsFileEarmarkPdf size={20}/>},
-            {name:"Project Poster", pdf:"Capstone Poster.pdf",  icon:<BsFileEarmarkPdf size={20}/>},
-
+            {name:"Poster", pdf:"Capstone Poster.pdf",  icon:<BsFileEarmarkPdf size={20}/>},
         ],
         modalInfo:{
             description:capstoneLongDescription,
@@ -141,8 +140,8 @@ export const projectDataList = [
         techStackName:"Tools",
         techStack:["Apache Spark", "Python", "Jupyter", "ML"],
         externalLinks:[
-            {name:"ML Genre Prediction", link:"https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/MusicGenrePrediction/ENSF_544_Final_Project.ipynb", icon:<BsGithub size={20}/>},
-            {name:"Spark Sentiment Analysis", link:"https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/SparkSentimentAnalysis/SparkSentimentMLAnalysis.ipynb", icon:<BsGithub size={20}/>},
+            {name:"Genre Analysis", link:"https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/MusicGenrePrediction/ENSF_544_Final_Project.ipynb", icon:<BsGithub size={20}/>},
+            {name:"Spark", link:"https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/SparkSentimentAnalysis/SparkSentimentMLAnalysis.ipynb", icon:<BsGithub size={20}/>},
             {name:"Report", pdf:"Spark ML Genre Report.pdf",  icon:<BsFileEarmarkPdf size={20}/>},
 
         ],
@@ -158,26 +157,26 @@ export const projectDataList = [
             description:spaceSurviveDescription_long,
             videos:[
                 {path:process.env.PUBLIC_URL +"/videos/SpaceSurvive_small.mp4", description:'Gameplay'}
-              ]
+            ]
         }
     },
     {
         name:"Flappy Bird Clone", 
         description:flappyBirdCloneDescription,
-        img:'/photos/projectPhotos/flappyBirdClone.jpg',
+        img:'/photos/projectPhotos/flappyBird.jpg',
         techStackName:"Tools",
         techStack:["Unity","C#" ],
         modalInfo:{
             videos:[
                 {path:process.env.PUBLIC_URL +"/videos/FlappyBird.mp4", description:'Gameplay'}
-              ],
+            ]
         }
     },
     {
         starred:true,
         name:"Cube Game", 
         description:cubeGameDescription,
-        img:'/photos/projectPhotos/cubegame1.jpg',
+        img:'/photos/projectPhotos/cubegame.jpg',
         techStackName:"Tools",
         techStack:["Unity","C#" ],
         externalLinks:[
