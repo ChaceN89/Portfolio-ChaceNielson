@@ -15,8 +15,8 @@ import { ImGit } from "react-icons/im";
 import { 
   SiFastapi, SiMongodb, SiTailwindcss,
   SiJavascript, SiStreamlit, SiRedux,
-  SiApachespark, SiChartdotjs, SiJupyter
-
+  SiApachespark, SiChartdotjs, SiJupyter,
+  SiTypescript
 } from "react-icons/si";
 
 // icons for general skills 
@@ -36,6 +36,7 @@ function SkillList() {
       <ul className='pt-10 container mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 lg:max-w-4xl xl:grid-cols-8 xl:max-w-6xl gap-y-6'> 
         <Skill starred={true} label={"React"} icon={<FaReact color={"lightblue"} size={65}/>} />
         <Skill starred={true} label={"JavaScript"} backgroundColour={"black"} icon={<SiJavascript color='yellow' size={65} />} />
+        <Skill label={"TypeScript"} backgroundColour={"black"} icon={<SiTypescript color='#267ACC' size={65} />} />
         <Skill starred={true} label={"Tailwind"} icon={<SiTailwindcss color='#38BDF9' size={65} />} />
         <Skill starred={true} label={"HTML5"} roundedBackground={true} backgroundColour={"red"}  icon={<TiHtml5 color='white' size={65} />} />
         <Skill starred={true} label={"CSS"}  icon={<FaCss3Alt color='#2394F0' size={65} />} />

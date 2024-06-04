@@ -24,7 +24,8 @@ import {
     voiceRecognitionLongDescription,
     capstoneLongDescription,
     capstoneDescription,
-    musicPlayerDescription
+    musicPlayerDescription,
+    imageProcessorDescription
 } from './projectDescriptions';
 
 //All the photo lists for individual projects
@@ -82,9 +83,9 @@ export const projectDataList = [
         techStackName:"Tools",
         techStack:["Unity", "Blender", "3D Printing", "Circuity"],
         externalLinks:[
-            {name:"", link:"https://www.youtube.com/watch?v=TvnBOPB7dhc", icon:<BsYoutube size={20}/>},
+            {name:"Overview", link:"https://www.youtube.com/watch?v=TvnBOPB7dhc", icon:<BsYoutube size={20}/>},
             {name:"Simulation", link:"https://dev3933.d18ixp0pwlw4ex.amplifyapp.com/", icon:<FaProjectDiagram size={20}/>},
-            {name:"Simulation Code", link:"https://github.com/ChaceN89/Capstone-Simulation", icon:<BsGithub size={20}/>},
+            {name:"Code", link:"https://github.com/ChaceN89/Capstone-Simulation", icon:<BsGithub size={20}/>},
             {name:"Report", pdf:"Capstone Final Report.pdf",  icon:<BsFileEarmarkPdf size={20}/>},
             {name:"Poster", pdf:"Capstone Poster.pdf",  icon:<BsFileEarmarkPdf size={20}/>},
         ],
@@ -106,6 +107,17 @@ export const projectDataList = [
         modalInfo:{
             photos:musicPlayerPhotoList,
         }
+    },
+    {
+        name:"Task Queue", 
+        description:imageProcessorDescription,
+        img:'/photos/projectPhotos/imageProcessor.jpg',
+        techStackName:"Tech Stack",
+        techStack:["React", "TypeScript", "FastAPI", "Railway" ],
+        externalLinks:[
+            {name:"Web App", link:"https://frontend-production-4f55.up.railway.app/", icon:<TfiWorld size={20}/>}, 
+            {name:"GitHub", link:"https://github.com/ChaceN89/image-processor", icon:<BsGithub size={20}/>},
+        ],
     },
     {
         name:"Photo App", 
