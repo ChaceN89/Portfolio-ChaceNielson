@@ -6,8 +6,7 @@ import React from 'react'
 import NavIcon from '../components/NavIcon' // link element 
 
 // react icons
-import { FaHome, FaLaptopCode, FaHandsHelping, FaCommentDots,FaImages, FaProjectDiagram, FaHiking} from "react-icons/fa";
-
+import { FaHome, FaLaptopCode, FaHandsHelping, FaCommentDots,FaImages, FaCodeBranch, FaHiking} from "react-icons/fa";
 
 function Navbar() {
   return (
@@ -23,7 +22,7 @@ function Navbar() {
       hover:bg-opacity-60 hover:text-opacity-100 ' >
         <NavIcon link={"Home"} Icon={<FaHome/>} />
         <NavIcon link={"MySkills"} Icon={<FaLaptopCode/>} /> {/* Example with FaLaptopCode */}
-        <NavIcon link={"MyProjects"} Icon={<FaProjectDiagram/>}/>
+        <NavIcon link={"MyProjects"} Icon={<FaCodeBranch/>}/>
         <NavIcon link={"MyInterests"} Icon={<FaHiking/>}/>
         <NavIcon link={"Volunteering"} Icon={<FaHandsHelping/>}/>
         <NavIcon link={"MyPhotos"} Icon={<FaImages/>} />

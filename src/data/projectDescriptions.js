@@ -9,7 +9,7 @@
 //-------------------------------------------------------------------
 // ------------------- Project Descriptions -------------------------
 //-------------------------------------------------------------------
-export const geoPredictDescription = "Full stack application for analysis of drilling data, large data files, react tables and the ChartJS Library. First project lead position."
+export const geoPredictDescription = "A Full-Stack application for analysis of drilling data using large data files. Uses React Tables and the ChartJS Library. First project lead position."
 export const geoPredictDescription_long = 
     <div className='space-y-2'>
         <p>
@@ -31,7 +31,7 @@ export const portfolioDescription = "My portfolio website is made with React and
 
 export const genrePredictionDescription = "A notebook using Apache Spark and Machine Learning to attempt to predict a songs genre based on text data."
 
-export const aviarDescription = "Full stack photo sharing application. Uses JWTs for authentication of user accounts. It was deployed on Heroku."
+export const aviarDescription = "Full stack photo sharing application using the MERN stack. Uses JWTs for authentication of user accounts. It was deployed on Heroku."
 export const aviarDescription_long = "This application was completed as part of a Software Engineering class at the University of Calgary. It is a full stack application that utilizes  MongoDB database, ExpressJS backend and a React frontend. I learned a lot about CSS and React components.  Before Heroku changed their terms and conditions I had deployed the application there."
 
 export const spaceSurviveDescription = "A video game based on asteroids. Includes multiple modes, power-ups, achievements, audio, save states and different enemy types."
@@ -41,7 +41,7 @@ export const flappyBirdCloneDescription = "A clone of the phone game Flappy Bird
 
 export const cubeGameDescription = "A simple game meant to explore how to create a game manager, level navigation, and endless game loops. Utilized Unity Physic Engine."
 
-export const JengaDescription = "A virtual jenga game made in unity using a haptic stylus pen."
+export const JengaDescription = "A virtual jenga game made in unity using a haptic stylus pen. The game features difficulty settings and haptic feedback."
 
 export const voiceRecognitionDescription = "An application that allows users to record vocal profiles that can be tested against test audio using a Gaussian Mixture Model.";
 export const voiceRecognitionLongDescription = voiceRecognitionDescription + " The application was originally a Jupyter Notebook showing the results of various speech models against different test audio files. It was later adapted into a Dash application to provide a user interface.";
@@ -52,3 +52,5 @@ export const capstoneLongDescription = "This project was completed for my capsto
 export const musicPlayerDescription = "An online music player built with Vue, featuring a responsive design and theme selection."
 
 export const imageProcessorDescription = "A frontend and backend application to queue tasks using multithreading. The application is for processing images which showcases the task management."
+
+export const jobDashboardDescription = "A full-stack application to store, fetch, create, update and delete jobs."

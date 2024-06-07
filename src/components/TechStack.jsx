@@ -5,14 +5,23 @@
 import React from 'react';
 
 function TechStack({ techStack, techStackName = null }) {
+
+  // return nothing if there is no tech stack items
+  if (techStack.length === 0){
+    return null
+  }
+
   return (
-    <div className={`flex ${techStackName ? 'flex-col sm:items-center align-middle' : 'py-2'} flex-wrap`}>
+    <div className='mt-2 flex-wrap flex flex-col items-center '>
+      {/* the name isn't usually used but left in just in case i use it eentually*/}
       {techStackName && <div className='text-lg underline whitespace-nowrap'>{techStackName}</div>}
-      {techStack.map((item) => (
-        <div className='rounded-xl text-black bg-slate-300 font-bold w-fit py-0.5 px-2 m-1 text-center' key={item}>
-          {item}
-        </div>
-      ))}
+      <div className='flex flex-wrap justify-center items-center'>
+        {techStack.map((item) => (
+          <div className='rounded-lg text-black bg-slate-300 font-bold py-0.5 px-2 m-0.5 text-center inline-block' key={item}>
+            {item}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }

@@ -55,8 +55,8 @@ function SkillList() {
         <Skill starred={true} label={"VS Code"} SVG_path={"visual-studio-code.svg"} />
 
         <Skill label={"Java"} backgroundColour={"black"} roundedBackground={true} SVG_path={"java.svg"} />
-        <Skill label={"C++"} SVG_path={"c-plus-plus.svg"} />
-        <Skill label={"C#"} SVG_path={"c-sharp.svg"} />
+        <Skill starred={true} label={"C++"} SVG_path={"c-plus-plus.svg"} />
+        <Skill starred={true} label={"C#"} SVG_path={"c-sharp.svg"} />
 
         <Skill label={"Unity"}  backgroundColour={"black"} icon={<FaUnity size={65} />} />
         <Skill label={"Blender"} SVG_path={"blender.svg"} />

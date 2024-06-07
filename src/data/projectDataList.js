@@ -5,7 +5,9 @@
 //icons for the links
 import { TfiWorld } from 'react-icons/tfi'
 import { BsGithub, BsYoutube, BsFileEarmarkPdf } from "react-icons/bs";
-import { FaUnity, FaProjectDiagram, FaMusic } from "react-icons/fa";
+import { FaUnity, FaMusic} from "react-icons/fa";
+import { CgWebsite } from "react-icons/cg";
+
 
 // all project descriptions
 import {  
@@ -25,7 +27,8 @@ import {
     capstoneLongDescription,
     capstoneDescription,
     musicPlayerDescription,
-    imageProcessorDescription
+    imageProcessorDescription,
+    jobDashboardDescription
 } from './projectDescriptions';
 
 //All the photo lists for individual projects
@@ -45,26 +48,22 @@ export const projectDataList = [
         name:"GEO Predict", 
         description:geoPredictDescription,
         img:'/photos/projectPhotos/geothermal_Dashboard.jpg',
-        techStackName:"Tech Stack",
-        techStack:["React", "FastAPI", "PostgreSQL", "Tailwind", "Docker"],
+        techStack:["Full-Stack", "Authentication", "React", "FastAPI", "PostgreSQL", "Tailwind", "Docker", "Cloud Deployment"],
         externalLinks:[
-            {name:"Website", link:"http://136.159.140.62/", icon:<TfiWorld size={20}/>}
+            {name:"Overview", link:"https://youtu.be/oTU0C_8-dSw", icon:<BsYoutube size={20}/>},
+            {name:"Website", link:"http://136.159.140.62/", icon:<CgWebsite size={20}/>}
         ],
         modalInfo:{
             description:geoPredictDescription_long,
             photos:geoPredictPhotoList,
-            videos:[
-                {path:process.env.PUBLIC_URL +"/videos/geopredict_walkthrough.mp4", description:'Site Walkthrough'}
-            ]
         }
     },
     {
         starred:true,
-        name:"Voice ID", 
+        name:"Voice Identification", 
         description:voiceRecognitionDescription,
         img:'/photos/projectPhotos/voice_recognition4.jpg',
-        techStackName:"Tech Stack",
-        techStack:[ "Ploty Dash", "Python", "CSS", "ML"],
+        techStack:[ "Ploty-Dash", "Python", "CSS", "Machine Learning"],
         externalLinks:[
             {name:"Application", link:"https://github.com/ChaceN89/voice-recognition", icon:<BsGithub size={20}/>},
             {name:"Notebook", link:"https://github.com/ChaceN89/voice-recognition/blob/main/original_notebook/ENCM%20Final%20Project%20Speech%20Recognition.ipynb", icon:<BsGithub size={20}/>},
@@ -77,17 +76,17 @@ export const projectDataList = [
     },
     {
         starred:true,
-        name:"CO2 Separation", 
+        name:<span>C0<sub>2</sub> Separation</span>, 
         description:capstoneDescription,
         img:'/photos/projectPhotos/capstone9_sim.jpg',
-        techStackName:"Tools",
-        techStack:["Unity", "Blender", "3D Printing", "Circuity"],
+        // techStackName:"Tools",
+        techStack:["Unity","C#", "Blender", "3D-Design", "3D-Printing", "Circuity Design"],
         externalLinks:[
             {name:"Overview", link:"https://www.youtube.com/watch?v=TvnBOPB7dhc", icon:<BsYoutube size={20}/>},
-            {name:"Simulation", link:"https://dev3933.d18ixp0pwlw4ex.amplifyapp.com/", icon:<FaProjectDiagram size={20}/>},
+            {name:"Simulation", link:"https://dev3933.d18ixp0pwlw4ex.amplifyapp.com/", icon:<FaUnity size={20}/>},
             {name:"Code", link:"https://github.com/ChaceN89/Capstone-Simulation", icon:<BsGithub size={20}/>},
-            {name:"Report", pdf:"Capstone Final Report.pdf",  icon:<BsFileEarmarkPdf size={20}/>},
             {name:"Poster", pdf:"Capstone Poster.pdf",  icon:<BsFileEarmarkPdf size={20}/>},
+            {name:"Report", pdf:"Capstone Final Report.pdf",  icon:<BsFileEarmarkPdf size={20}/>},
         ],
         modalInfo:{
             description:capstoneLongDescription,
@@ -98,35 +97,45 @@ export const projectDataList = [
         name:"Music Player", 
         description:musicPlayerDescription,
         img:'/photos/projectPhotos/musicPlayer1.jpg',
-        techStackName:"Tech Stack",
         techStack:["Vue", "Tailwind", "Vercel" ],
         externalLinks:[
-            {name:"Online Player", link:"https://music-player-chace-nielsons-projects.vercel.app/", icon:<FaMusic size={20}/>}, 
+            {name:"Website", link:"https://music-player-chace-nielsons-projects.vercel.app/", icon:<FaMusic size={20}/>}, 
             {name:"GitHub", link:"https://github.com/ChaceN89/music-player", icon:<BsGithub size={20}/>},
         ],
         modalInfo:{
+            description:musicPlayerDescription,
             photos:musicPlayerPhotoList,
         }
     },
     {
-        name:"Task Queue", 
+        starred:true,
+        name:" Image Task Queue", 
         description:imageProcessorDescription,
         img:'/photos/projectPhotos/imageProcessor.jpg',
-        techStackName:"Tech Stack",
         techStack:["React", "TypeScript", "FastAPI", "Railway" ],
         externalLinks:[
-            {name:"Web App", link:"https://frontend-production-4f55.up.railway.app/", icon:<TfiWorld size={20}/>}, 
-            {name:"GitHub", link:"https://github.com/ChaceN89/image-processor", icon:<BsGithub size={20}/>},
+            {name:"Website", link:"https://frontend-production-4f55.up.railway.app/", icon:<TfiWorld size={20}/>}, 
+            {name:"GitHub", link:"https://github.com/ChaceN89/job-dashboard", icon:<BsGithub size={20}/>},
+        ],
+    },
+    {
+        starred:true,
+        name:"Job Dashboard", 
+        description:jobDashboardDescription,
+        img:'/photos/projectPhotos/jobDashboard.jpg',
+        techStack:["Full-Stack", "Vue", "FastAPI", "SQLite", "Tailwind", "Render", "Netlify" ],
+        externalLinks:[
+            {name:"Website", link:"https://job-dashboard-chace.netlify.app/", icon:<TfiWorld size={20}/>}, 
+            {name:"GitHub", link:"", icon:<BsGithub size={20}/>},
         ],
     },
     {
         name:"Photo App", 
         description:aviarDescription,
         img:'/photos/projectPhotos/aviar_collections.jpg',
-        techStackName:"Mern Stack",
-        techStack:["MongoDB", "ExpressJS", "React", "NodeJS"],
+        techStack:["Full-Stack", "Authentication", "MongoDB", "React", "ExpressJS",  "NodeJS"],
         externalLinks:[
-            {name:"Site Walkthrough", link:"https://www.youtube.com/watch?v=mktAIV4sjFQ", icon:<BsYoutube size={20}/>},
+            {name:"Overview", link:"https://www.youtube.com/watch?v=mktAIV4sjFQ", icon:<BsYoutube size={20}/>},
             {name:"GitHub", link:"https://github.com/ChaceN89/Aviar", icon:<BsGithub size={20}/>},
         ],
         modalInfo:{
@@ -139,49 +148,37 @@ export const projectDataList = [
         name:"My Portfolio", 
         description:portfolioDescription,
         img:'/photos/projectPhotos/portfolio.jpg',
-        techStackName:"Tech Stack",
         techStack:["React", "Tailwind", "CSS", "Vercel"],
         externalLinks:[
             {name:"GitHub", link:"https://github.com/ChaceN89/Portfolio-ChaceNielson", icon:<BsGithub size={20}/>}
         ],
     },
     {
-        name:"ML Genre Predict", 
+        name:"Genre Prediction", 
         description:genrePredictionDescription,
         img:'/photos/projectPhotos/genrePrediction.jpg',
-        techStackName:"Tools",
-        techStack:["Apache Spark", "Python", "Jupyter", "ML"],
+        techStack:["Apache Spark", "Python", "Jupyter", "Machine Learning"],
         externalLinks:[
             {name:"Genre Analysis", link:"https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/MusicGenrePrediction/ENSF_544_Final_Project.ipynb", icon:<BsGithub size={20}/>},
             {name:"Spark", link:"https://github.com/ChaceN89/Machine-Learning-Music-Notebooks/blob/main/SparkSentimentAnalysis/SparkSentimentMLAnalysis.ipynb", icon:<BsGithub size={20}/>},
             {name:"Report", pdf:"Spark ML Genre Report.pdf",  icon:<BsFileEarmarkPdf size={20}/>},
-
         ],
     },
     {
-        name:"Space Survive", 
-        starred:true,
-        description:spaceSurviveDescription,
-        img:'/photos/projectPhotos/spaceSurvive1.jpg',
-        techStackName:"Tools",
-        techStack:["Unity","C#" ],
+        name:"Jenga",
+        description:JengaDescription, 
+        img:'/photos/projectPhotos/jenga1.jpg', 
+        techStack:["Unity","C#", "Haptic Pen", "OpenHaptics" ],
+        externalLinks:[
+            {name:"GitHub", link:"https://github.com/ChaceN89/Haptic-Jenga", icon:<BsGithub size={20}/>}
+        ],
         modalInfo:{
-            description:spaceSurviveDescription_long,
+            description:JengaDescription, 
             videos:[
-                {path:process.env.PUBLIC_URL +"/videos/SpaceSurvive_small.mp4", description:'Gameplay'}
-            ]
-        }
-    },
-    {
-        name:"Flappy Bird Clone", 
-        description:flappyBirdCloneDescription,
-        img:'/photos/projectPhotos/flappyBird.jpg',
-        techStackName:"Tools",
-        techStack:["Unity","C#" ],
-        modalInfo:{
-            videos:[
-                {path:process.env.PUBLIC_URL +"/videos/FlappyBird.mp4", description:'Gameplay'}
-            ]
+                {path:process.env.PUBLIC_URL +"/videos/jengaMov1.mp4", description:'Gameplay'},
+                {path:process.env.PUBLIC_URL +"/videos/jengaMov2.mp4", description:'Gameplay'},
+            ],
+            photos:hapticjengaPhotoList,
         }
     },
     {
@@ -189,28 +186,34 @@ export const projectDataList = [
         name:"Cube Game", 
         description:cubeGameDescription,
         img:'/photos/projectPhotos/cubegame.jpg',
-        techStackName:"Tools",
         techStack:["Unity","C#" ],
         externalLinks:[
             {name:"Play Game", link:"https://chacen89.github.io/CubeGame/", icon:<FaUnity size={20}/>}
         ],
     },
     {
-        name:"Jenga",
-        description:JengaDescription, 
-        img:'/photos/projectPhotos/jenga1.jpg', 
-        techStackName:"Tools",
-        techStack:["Unity", "Haptic Pen", "OpenHaptics" ],
-        externalLinks:[
-            {name:"GitHub", link:"https://github.com/ChaceN89/Haptic-Jenga", icon:<BsGithub size={20}/>}
-        ],
+        name:"Flappy Bird Clone", 
+        description:flappyBirdCloneDescription,
+        img:'/photos/projectPhotos/flappyBird.jpg',
+        techStack:["Unity","C#" ],
         modalInfo:{
-          videos:[
-            {path:process.env.PUBLIC_URL +"/videos/jengaMov1.mp4", description:'Gameplay'},
-            {path:process.env.PUBLIC_URL +"/videos/jengaMov2.mp4", description:'Gameplay'},
-          ],
-          photos:hapticjengaPhotoList,
+            description:flappyBirdCloneDescription,
+            videos:[
+                {path:process.env.PUBLIC_URL +"/videos/FlappyBird.mp4", description:'Gameplay'}
+            ]
         }
     },
-
+    {
+        name:"Space Survive", 
+        starred:true,
+        description:spaceSurviveDescription,
+        img:'/photos/projectPhotos/spaceSurvive1.jpg',
+        techStack:["Unity","C#" ],
+        modalInfo:{
+            description:spaceSurviveDescription_long,
+            videos:[
+                {path:process.env.PUBLIC_URL +"/videos/SpaceSurvive_small.mp4", description:'Gameplay'}
+            ]
+        }
+    }
 ]

@@ -14,7 +14,7 @@ body{
 @layer components {
   /* for all sections */
   .section {
-    @apply  min-h-screen py-10 container mx-auto px-2 sm:px-7 md:px-10 
+    @apply  min-h-screen py-10 container mx-auto px-2 sm:px-7 md:px-1
   }
 
   /* for introduction paragraph */

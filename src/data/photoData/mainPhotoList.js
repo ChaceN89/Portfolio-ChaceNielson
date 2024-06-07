@@ -99,6 +99,7 @@ export const mainPhotoList = [
   
   {image: process.env.PUBLIC_URL + '/photos/other/surfing1.jpg'},
   {image: process.env.PUBLIC_URL + '/photos/other/kayak1.jpg'},
+  {image: process.env.PUBLIC_URL + '/photos/other/kayak2.jpg'},
 
   {image: process.env.PUBLIC_URL + '/photos/basketball/basketball1.jpg'},
   {image: process.env.PUBLIC_URL + '/photos/basketball/basketball2.jpg'},

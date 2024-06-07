@@ -3,7 +3,7 @@
  * Also has a link to the gallery of my photos
  */
 import React from 'react'
-import { BsGithub, BsInstagram, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsInstagram, BsLinkedin, BsYoutube } from "react-icons/bs";
 import { TfiGallery } from "react-icons/tfi";
 import {Link} from 'react-router-dom'
 import ToolTip from './ToolTip';
@@ -27,6 +27,9 @@ function ExternalLinks({size=25, animate=false}) {
         </a>
         <a href="https://www.instagram.com/chacenielson/" target="_blank" rel="noreferrer" className={iconCSS + " " + delayCss}>
             <BsInstagram size={size}/>
+        </a>
+        <a href="https://www.instagram.com/chacenielson/" target="_blank" rel="noreferrer" className={iconCSS + " " + delayCss}>
+            <BsYoutube size={size}/>
         </a>
 
         <Link to="Gallery" className={iconCSS + " " + delayCss}>
