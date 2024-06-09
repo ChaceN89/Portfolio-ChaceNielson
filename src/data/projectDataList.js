@@ -65,7 +65,7 @@ export const projectDataList = [
         img:'/photos/projectPhotos/voice_recognition4.jpg',
         techStack:[ "Ploty-Dash", "Python", "CSS", "Machine Learning"],
         externalLinks:[
-            {name:"Application", link:"https://github.com/ChaceN89/voice-recognition", icon:<BsGithub size={20}/>},
+            {name:"Code", link:"https://github.com/ChaceN89/voice-recognition", icon:<BsGithub size={20}/>},
             {name:"Notebook", link:"https://github.com/ChaceN89/voice-recognition/blob/main/original_notebook/ENCM%20Final%20Project%20Speech%20Recognition.ipynb", icon:<BsGithub size={20}/>},
             {name:"Report", pdf:"Voice ID Report.pdf",  icon:<BsFileEarmarkPdf size={20}/>},
         ],
@@ -114,8 +114,8 @@ export const projectDataList = [
         img:'/photos/projectPhotos/imageProcessor.jpg',
         techStack:["React", "TypeScript", "FastAPI", "Railway" ],
         externalLinks:[
-            {name:"Website", link:"https://frontend-production-4f55.up.railway.app/", icon:<TfiWorld size={20}/>}, 
-            {name:"GitHub", link:"https://github.com/ChaceN89/job-dashboard", icon:<BsGithub size={20}/>},
+            {name:"Website", link:"https://main--img-processor.netlify.app/", icon:<TfiWorld size={20}/>}, 
+            {name:"Code", link:"https://github.com/ChaceN89/image-processor", icon:<BsGithub size={20}/>},
         ],
     },
     {
@@ -126,7 +126,7 @@ export const projectDataList = [
         techStack:["Full-Stack", "Vue", "FastAPI", "SQLite", "Tailwind", "Render", "Netlify" ],
         externalLinks:[
             {name:"Website", link:"https://job-dashboard-chace.netlify.app/", icon:<TfiWorld size={20}/>}, 
-            {name:"GitHub", link:"", icon:<BsGithub size={20}/>},
+            {name:"Code", link:"https://github.com/ChaceN89/job-dashboard", icon:<BsGithub size={20}/>},
         ],
     },
     {
@@ -136,7 +136,7 @@ export const projectDataList = [
         techStack:["Full-Stack", "Authentication", "MongoDB", "React", "ExpressJS",  "NodeJS"],
         externalLinks:[
             {name:"Overview", link:"https://www.youtube.com/watch?v=mktAIV4sjFQ", icon:<BsYoutube size={20}/>},
-            {name:"GitHub", link:"https://github.com/ChaceN89/Aviar", icon:<BsGithub size={20}/>},
+            {name:"Code", link:"https://github.com/ChaceN89/Aviar", icon:<BsGithub size={20}/>},
         ],
         modalInfo:{
             description:aviarDescription_long,
@@ -150,7 +150,7 @@ export const projectDataList = [
         img:'/photos/projectPhotos/portfolio.jpg',
         techStack:["React", "Tailwind", "CSS", "Vercel"],
         externalLinks:[
-            {name:"GitHub", link:"https://github.com/ChaceN89/Portfolio-ChaceNielson", icon:<BsGithub size={20}/>}
+            {name:"Code", link:"https://github.com/ChaceN89/Portfolio-ChaceNielson", icon:<BsGithub size={20}/>}
         ],
     },
     {
@@ -170,7 +170,7 @@ export const projectDataList = [
         img:'/photos/projectPhotos/jenga1.jpg', 
         techStack:["Unity","C#", "Haptic Pen", "OpenHaptics" ],
         externalLinks:[
-            {name:"GitHub", link:"https://github.com/ChaceN89/Haptic-Jenga", icon:<BsGithub size={20}/>}
+            {name:"Code", link:"https://github.com/ChaceN89/Haptic-Jenga", icon:<BsGithub size={20}/>}
         ],
         modalInfo:{
             description:JengaDescription, 
