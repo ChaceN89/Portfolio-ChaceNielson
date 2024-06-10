@@ -80,7 +80,13 @@ body{
 
 
 .closeModal{
-  @apply p-1 fixed top-1 sm:top-5 right-2 sm:right-10 hover:text-white hover:opacity-100 opacity-50 hover:scale-150 cursor-pointer
+  @apply   z-50 p-1 fixed 
+  top-2 
+  right-2
+  hover:text-white hover:opacity-100 
+  opacity-50 
+  hover:scale-150 
+  cursor-pointer
 }
 
 

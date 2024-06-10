@@ -100,7 +100,7 @@ export const projectDataList = [
         techStack:["Vue", "Tailwind", "Vercel" ],
         externalLinks:[
             {name:"Website", link:"https://music-player-chace-nielsons-projects.vercel.app/", icon:<FaMusic size={20}/>}, 
-            {name:"GitHub", link:"https://github.com/ChaceN89/music-player", icon:<BsGithub size={20}/>},
+            {name:"Code", link:"https://github.com/ChaceN89/music-player", icon:<BsGithub size={20}/>},
         ],
         modalInfo:{
             description:musicPlayerDescription,
