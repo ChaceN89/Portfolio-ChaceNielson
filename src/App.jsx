@@ -5,17 +5,6 @@
  * This component imports necessary routes and styles, and sets up the Router for the application.
  *
  * @note This component is essential for enabling client-side routing within the application.
- *
- * @component AppWithRouter
- * 
- * @requires react
- * @requires react-router-dom
- * @requires AppRoutes from './routing/AppRoutes'
- * @requires TailwindBreakPoints from './testingComponents/TailwindBreakPoints'
- * @requires AnalyticsTracker from './googleAnalytics/AnalyticsTracker'
- * @requires './styles/Layout.css'
- * @requires './styles/Modal.css'
- * @requires './styles/Gallery.css'
  * 
  * @see {@link https://react.dev/ | React Documentation}
  * @see {@link https://reactrouter.com/ | React Router Documentation}
@@ -24,7 +13,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-26
- * @updated 2024-07-28
+ * @updated Jan 23rd 2025
  * @since 2.1
  */
 
@@ -38,15 +27,12 @@ import './styles/Gallery.css';
 import DisplayTesting from './components/testing/DisplayTesting'; // for display testing components in developemtn 
 import AnalyticsProvider from './components/analytics/AnalyticsProvider';
 import AppRoutes from './components/routing/AppRoutes';
-import { LocationProvider } from './components/routing/LocationProvider';
 
 const AppWithRouter = () => (
   <Router>
     <DisplayTesting/>
     <AnalyticsProvider>
-      <LocationProvider>
-        <AppRoutes/>
-      </LocationProvider>
+      <AppRoutes/>
     </AnalyticsProvider>
   </Router>
 );

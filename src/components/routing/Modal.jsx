@@ -1,17 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { createPortal } from 'react-dom';
+import { useNavigate, useNavigationType } from 'react-router-dom';
+import { IoMdClose } from 'react-icons/io';
+import SlideTransition from '../animations/SlideTransition';
 
 export default function Modal({ children }) {
   const navigate = useNavigate();
+  const navigationType = useNavigationType(); // Get the type of navigation
 
   // Close modal handler
   const handleClose = (e) => {
     e.stopPropagation();
 
-    // Navigate back if there is a history, otherwise redirect to "/"
-    if (window.history.length > 1) {
+    // Navigate back if the user navigated within the app
+    if (navigationType === "PUSH" && window.history.length > 1) {
       navigate(-1);
     } else {
       navigate("/");
@@ -20,6 +22,7 @@ export default function Modal({ children }) {
 
   return (
     <div className="modal-backdrop" onClick={handleClose}>
+      {/* <SlideTransition></SlideTransition> */}
       <motion.div
         className="modal-container"
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside the modal
@@ -28,12 +31,12 @@ export default function Modal({ children }) {
         exit={{ y: '100vh', opacity: 0 }}
         transition={{ duration: 0.3 }}
       >
-        <button className="close-button" onClick={handleClose}>
-          X
+        <button className="modal-close-btn" onClick={handleClose}>
+          <IoMdClose size={30} />
         </button>
-        <div className=' border-2 border-black'>
 
-        {children}
+        <div className='modal-content'>
+          {children}
         </div>
       </motion.div>
     </div>

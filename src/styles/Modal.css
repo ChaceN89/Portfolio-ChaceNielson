@@ -1,29 +1,40 @@
+/**
+ * @file Modal.css
+ * @desc CSS styles for modal components. 
+ * This stylesheet provides styles for a modal overlay and its content.
+ * 
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS | CSS Documentation}
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-26
+ * @updated Jan 23rd 2025
+ */
 .modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 50;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @apply fixed top-0 left-0 w-full h-full bg-black bg-opacity-30 z-50 flex items-center justify-center;
 }
 
 .modal-container {
   @apply relative
-  bg-secondary p-8 rounded-lg shadow-lg
-  mx-4 md:mx-20 
-  min-h-80 
-  max-h-section-height 
+  bg-secondary rounded-xl  
+  border border-primary-dark
+  shadow-md shadow-accent
+  min-h-[40%]
+  max-h-[85%]
   min-w-[40%]
   max-w-[85%]
   text-left
+  overflow-y-auto
+  overflow-x-hidden
   ;
 
+  /* css for  */
 }
 
-.close-button {
-  @apply absolute text-black top-1 right-1 cursor-pointer bg-red-200 hover:bg-slate-300 p-1 rounded-md;
+.modal-content {
+  @apply m-5 p-0.5 h-full  ;
 }
+
+.modal-close-btn{
+  @apply absolute top-0 right-0  text-primary hover:text-accent
+}
+

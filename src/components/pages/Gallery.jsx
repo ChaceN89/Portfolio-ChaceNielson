@@ -14,7 +14,7 @@ export default function Gallery() {
       <br />
       <Link
         className="hover:bg-red-600 hover:text-white p-4 rounded-md bg-blue-300"
-        to="?skill=frontend"
+        to="?expertise=frontend"
       >
         Open Frontend Skills Modal from Gallery
       </Link>

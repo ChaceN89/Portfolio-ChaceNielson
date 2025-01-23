@@ -1,45 +1,16 @@
 /**
  * @file globals.js
  * @module globals
- * @desc Contains global settings and constants used throughout the application.
- * This file serves as a central location for configuration values that may be needed in multiple places.
+ * @desc Defines global constants and configuration values used throughout the application.
+ *       Includes scroll settings, animation parameters, and query parameter names for routing.
  * 
- * @exports globals - An object containing various global settings.
+ * @see {@link https://reactrouter.com/ | React Router Documentation}
  * 
- * @example
- * // Example usage of globals in a component
- * import { globals } from './globals';
- * 
- * function SomeComponent() {
- *   return (
- *     <ScrollLink
- *       to="someSection"
- *       spy={true}
- *       smooth={true}
- *       duration={globals.ScrollLink.duration}
- *       offset={globals.ScrollLink.offset}
- *     >
- *       Scroll to Section
- *     </ScrollLink>
- *   );
- * }
- * 
- * @example
- * // Example usage of project settings in a component
- * import { globals } from './globals';
- * 
- * function ProjectSlider() {
- *   return (
- *     <Slider
- *       slide={globals.project.slide}
- *       initialSlide={globals.project.initialSlide}
- *     />
- *   );
- * }
- * 
+ * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-05
+ * @updated Jan 23, 2025
  */
+
 
 /**
  * Global settings object
@@ -61,3 +32,7 @@ export const globals = {
     initialSlide: 0.5 // Initial slide value for project animations
   }
 };
+
+// for routing parameters - names to be used in the URL link (ex. to={`?${projectParam}=capstone`})
+export const projectParam = "project";
+export const skillParam = "specialization";
