@@ -1,0 +1,55 @@
+/**
+ * @file Gallery.css
+ * @module GalleryStyles
+ * @desc Contains CSS styles for the responsive gallery layout.
+ * This file defines the grid layout for the gallery and adjusts the number of columns based on screen width.
+ * 
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/grid | CSS Grid Documentation}
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/@media | CSS Media Queries Documentation}
+ * 
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ * @author Chace Nielson
+ * @since 2.1
+ */
+
+/* Responsive Gallery Layout */
+.gallery {
+  display: grid; /* Use grid layout */
+  gap: 10px; /* Set gap between grid items */
+}
+
+/* Single column layout for screens up to 500px wide */
+@media only screen and (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr; /* 1 column */
+  }
+}
+
+/* Two column layout for screens 500px wide and up */
+@media only screen and (min-width: 500px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  }
+}
+
+/* Three column layout for screens 840px wide and up */
+@media only screen and (min-width: 840px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  }
+}
+
+/* Four column layout for screens 1200px wide and up */
+@media only screen and (min-width: 1200px) {
+  .gallery {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  }
+}
+
+/* Five column layout for screens 1500px wide and up */
+@media only screen and (min-width: 1500px) {
+  .gallery {
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+  }
+}

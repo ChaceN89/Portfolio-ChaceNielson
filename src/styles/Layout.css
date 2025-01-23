@@ -1,0 +1,32 @@
+/**
+ * @file Layout.css
+ * @desc CSS styles for the layout components of the application.
+ * This stylesheet provides styles for the main content area and the layout container.
+ * 
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS | CSS Documentation}
+ * 
+ * @styles
+ * main - Sets the flex property to allow the main content area to grow and fill available space.
+ * .layout - Styles the layout container with flexbox, sets column direction, and ensures it takes full viewport height.
+ * .layout footer - Ensures the footer has a higher z-index and is positioned relative to its container.
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-26
+ * @updated 2024-07-26
+ * @since 2.1
+ */
+
+ main {
+  flex: 1;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout footer {
+  z-index: 10;
+  position: relative;
+}

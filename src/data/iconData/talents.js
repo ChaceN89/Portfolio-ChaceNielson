@@ -1,3 +1,10 @@
+/**
+ * @file talents.js
+ * @module talents
+ * @desc Contains all icons related to personal talents and abilities.
+ * @created Jan 22, 2025
+ * @updated Jan 22, 2025
+ */
 import { FaBasketballBall, FaBiking, FaGuitar, FaHiking, FaMusic, FaSnowboarding, FaSwimmer } from "react-icons/fa";
 import { GiMountainClimbing } from "react-icons/gi";
 

@@ -1,29 +1,13 @@
 /**
- * @file iconSkills.js
- * @module iconSkills
- * @desc Contains enumeration for technical skills and their corresponding icons.
- * Enumeration of technical skills with corresponding icons and svg paths or react-icons and react-icon color.
+ * @file iconLibrary.js
+ * @module iconLibrary
+ * @desc Combines and organizes icons from various categories such as frontend, backend, AWS, databases, and more. 
+ * All icons are imported from the `iconData` folder and merged into a unified `IconLibrary` object for use across the application.
  * 
- * @example - FOR TESTING PURPOSES - VIEW ALL SKILLS/ICONS
- * import IconSkills from '../data/iconSkills';
- * 
- * @ChaceN89
- * @created 2024-07-28
- * @updated 2024-08-21
+ * @author Chace Nielson
+ * @created July 28, 2024
+ * @updated Jan 22, 2025
  */
-
-import { FaReact, FaNodeJs, FaUnity, FaNode, FaDocker, FaMusic, FaSnowboarding, FaBasketballBall, FaGuitar, FaHiking, FaBiking, FaSwimmer, FaItchIo } from "react-icons/fa";
-import { DiPostgresql } from "react-icons/di";
-import { ImGit } from "react-icons/im";
-import { SiFastapi, SiTailwindcss, SiMongodb, SiApachespark, SiJupyter, SiTypescript, SiRender, SiVercel, SiRailway, SiStreamlit, SiDjango, SiChartdotjs, SiRedux, SiMapbox } from "react-icons/si";
-import { MdOutlineAnimation, MdOutlineBlurOn } from "react-icons/md";
-import { TbBrandFramerMotion } from "react-icons/tb";
-import { TfiWorld } from "react-icons/tfi";
-import { BsGithub, BsYoutube, BsInstagram, BsLinkedin, BsFileEarmarkPdf } from "react-icons/bs";
-import { GiMountainClimbing } from "react-icons/gi";
-import { GrMysql } from "react-icons/gr";
-import { GoCodeReview } from "react-icons/go";
-
 
 import utilityIcons from "./iconData/utilityIcons";
 import socialIcons from "./iconData/social";
@@ -41,22 +25,8 @@ import engineeringIcons from "./iconData/engineering";
 import generalTechIcons from "./iconData/generalTech";
 import dataProcessingIcons from "./iconData/dataProcessing";
 
-// Enumeration of technical skills with corresponding icons and svg paths or react-icons and react-icon color
+// Combines all icons into a single library for use across the application
 const IconLibrary = {
-
-  
-
-
-  
-
-
-
-
-
-
-  
-
-
   ...awsIcons,
   ...backendIcons,
   ...databaseIcons,
@@ -72,7 +42,6 @@ const IconLibrary = {
   ...softSkillIcons,
   ...talentIcons,
   ...utilityIcons,
-
 };
 
 export default IconLibrary;

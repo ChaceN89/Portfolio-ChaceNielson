@@ -1,3 +1,10 @@
+/**
+ * @file aws.js
+ * @module aws
+ * @desc Contains all icons related to AWS services and features.
+ * @created Jan 22, 2025
+ * @updated Jan 22, 2025
+ */
 import { SiAwsamplify } from "react-icons/si";
 
 const folder = "aws";
