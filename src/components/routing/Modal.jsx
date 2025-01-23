@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import { createPortal } from 'react-dom';
 
 export default function Modal({ children }) {
   const navigate = useNavigate();
@@ -28,9 +29,12 @@ export default function Modal({ children }) {
         transition={{ duration: 0.3 }}
       >
         <button className="close-button" onClick={handleClose}>
-          Close
+          X
         </button>
+        <div className=' border-2 border-black'>
+
         {children}
+        </div>
       </motion.div>
     </div>
   );
