@@ -13,13 +13,20 @@
 
 import React from 'react';
 import { Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom';
+
+// layouts
+import Layout from './Layout';
+import Modal from './Modal';
+
+// pages
 import Home from '../pages/Home';
 import Gallery from '../pages/Gallery';
 import Thanks from '../pages/Thanks';
+import PdfViewer from '../pages/PdfViewer';
+
+// Modal pages
 import Project from '../pages/Project';
 import Specialization from '../pages/Specialization';
-import Layout from './Layout';
-import Modal from './Modal';
 
 // global Variables
 import { skillParam, projectParam } from '../../data/globals';
@@ -42,6 +49,7 @@ export default function AppRoutes() {
           <Route path="/photos" element={<Gallery />} />
           <Route path="/thanks" element={<Thanks />} />
           <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="/pdf/:pdfName" element={<PdfViewer />} />
         </Route>
       </Routes>
 

@@ -1,7 +1,9 @@
 /**
- * @file heroData.js
+ * @file heroData.jsx
  * @module heroData
  * @desc Contains data for the hero section used in various parts of the application. Includes top text, name, description, and buttons for navigation or downloads.
+ * 
+ * needs to be jsx to allow for the use of React components in the description
  * 
  * @see {@link https://reactrouter.com/ | React Router Documentation}
  * @see {@link https://www.npmjs.com/package/react-scroll | React Scroll Documentation}
@@ -27,7 +29,7 @@ export const heroData = {
   // List of buttons
   buttons: [
     {
-      pdf: "Chace Nielson - CV.pdf", // This button opens a PDF on the home page
+      link: "/pdf/Chace Nielson - CV.pdf", // This button opens a PDF on the home page
       name: "My CV"
     },
     {
