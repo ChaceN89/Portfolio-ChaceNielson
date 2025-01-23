@@ -5,28 +5,13 @@
  * 
  * @name GEO Predict
  * 
- * @example
- * // Example usage of geoPredict data in a component
- * import { geoPredict } from './geoPredict';
- * 
- * function ProjectComponent() {
- *   return (
- *     <div>
- *       <h2>{geoPredict.name}</h2>
- *       <div>{geoPredict.description}</div>
- *     </div>
- *   );
- * }
- * 
- * @exports geoPredict
- * 
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-08-21
  * @since 2.1
  */
 
-import IconSkills from "../iconSkills";
+import IconSkills from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Web application for analyzing drilling data using machine learning models.";

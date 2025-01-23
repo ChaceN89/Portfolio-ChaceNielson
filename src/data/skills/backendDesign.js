@@ -10,7 +10,7 @@
  * @updated 2024-07-28
  */
 
-import IconSkills from "../iconSkills";
+import IconSkills from "../iconLibrary";
 
 /**
  * Represents the Backend Design skills section.

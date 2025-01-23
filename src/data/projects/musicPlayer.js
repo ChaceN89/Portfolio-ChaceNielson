@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconSkills";
+import IconSkills from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A music player application built with Vue and Tailwind.";

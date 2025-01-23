@@ -1,35 +1,15 @@
 /**
  * @file galleryData.js
  * @module galleryData
- * @desc Contains data for the gallery photos used in various parts of the application.
- * Each photo entry includes the filename and a blurhash for optimized loading.
+ * @desc Contains data for the gallery photos used in various parts of the application. Each photo entry includes the filename and a blurhash for optimized loading.
  * 
- * @see {@link https://blurha.sh/ | BlurHash Website} - For generating BlurHashes
+ * @see {@link https://blurha.sh/ | BlurHash Website}
  * @see {@link https://www.npmjs.com/package/react-blurhash | React BlurHash Library}
  * 
- * @example
- * // Example usage of galleryPhotos in a component
- * import { galleryPhotos } from './galleryData';
- * 
- * function Gallery() {
- *   return (
- *     <div>
- *       {galleryPhotos.map((photo, index) => (
- *         <div key={index}>
- *           <img src={process.env.PUBLIC_URL + '/gallery-photos/' + photo.photo} alt={`Photo ${index + 1}`} />
- *           <Blurhash hash={photo.blurhash} />
- *         </div>
- *       ))}
- *     </div>
- *   );
- * }
- * 
  * @exports galleryPhotos
- * 
  * @author Chace Nielson
- * @since 2.1
- * @created 2024-07-28
- * @updated 2024-07-28
+ * @created July 28, 2024
+ * @updated Jan 22, 2025
  */
 
 export const galleryPhotos = [

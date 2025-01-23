@@ -1,45 +1,13 @@
 /**
  * @file callToActionData.js
  * @module callToActionData
- * @desc Contains data for the call-to-action section used in various pages.
- * This data includes the top and bottom text, images, and buttons for the call-to-action section.
- * The button data is used with react-scroll for smooth scrolling to the specified section.
+ * @desc Contains data for the call-to-action section. All data in the call to action section can be found in this file, including imaged and text 
  * 
- * @requires react
- * @requires react-scroll { Link as ScrollLink }
- * @requires globals from '../globals'
- * 
- * @see {@link https://react.dev/ | React Documentation}
  * @see {@link https://www.npmjs.com/package/react-scroll | React Scroll Documentation}
  * 
- * @example
- * // Example usage of callToActionData in a component
- * import { callToActionData } from '../data/callToActionData';
- * 
- * function CallToActionSection() {
- *   return (
- *     <section>
- *       <h2>{callToActionData.top}</h2>
- *       <div>{callToActionData.bottom}</div>
- *       <img src={callToActionData.img} alt="Call to Action" />
- *       <div>
- *         {callToActionData.buttons.map(button => (
- *           <button key={button.id}>
- *             <ScrollLink to={button.id} spy={true} smooth={true} offset={globals.ScrollLink.offset} duration={globals.ScrollLink.duration}>
- *               {button.name}
- *             </ScrollLink>
- *           </button>
- *         ))}
- *       </div>
- *     </section>
- *   );
- * }
- * 
  * @exports callToActionData
- * 
  * @author Chace Nielson
- * @since 2.1
- * @created 2024-07-28
+ * @created July 28, 2024
  * @updated Jan 22, 2025
  */
 

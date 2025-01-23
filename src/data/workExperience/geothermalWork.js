@@ -15,7 +15,7 @@
  * @updated 2024-08-09
  */
 
-import IconSkills from "../iconSkills";
+import IconSkills from "../iconLibrary";
 
 export const geothermalWork = { // Geothermal
   name: 'Energi Simulation Centre for Geothermal Systems Research',

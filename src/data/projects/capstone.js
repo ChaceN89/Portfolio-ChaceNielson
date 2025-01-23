@@ -5,28 +5,12 @@
  * 
  * @name CO2 Separation
  * 
- * @example
- * // Example usage of capstone data in a component
- * import { capstone } from './capstone';
- * 
- * function ProjectComponent() {
- *   return (
- *     <div>
- *       <h2>{capstone.name}</h2>
- *       <div>{capstone.description}</div>
- *     </div>
- *   );
- * }
- * 
- * @exports capstone
- * 
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-08-09
- * @since 2.1
  */
 
-import IconSkills from "../iconSkills";
+import IconSkills from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = <>Concept simulation and physical prototype for CO<sub>2</sub> separation device.</>;

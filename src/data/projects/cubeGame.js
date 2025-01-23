@@ -5,28 +5,13 @@
  * 
  * @name Cube Game
  * 
- * @example
- * // Example usage of cubeGame data in a component
- * import { cubeGame } from './cubeGame';
- * 
- * function ProjectComponent() {
- *   return (
- *     <div>
- *       <h2>{cubeGame.name}</h2>
- *       <div>{cubeGame.description}</div>
- *     </div>
- *   );
- * }
- * 
- * @exports cubeGame
- * 
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-07-28
  * @since 2.1
  */
 
-import IconSkills from "../iconSkills";
+import IconSkills from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "An endless runner game developed using Unity Game Engine.";

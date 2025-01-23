@@ -5,28 +5,13 @@
  * 
  * @name Jenga
  * 
- * @example
- * // Example usage of jenga data in a component
- * import { jenga } from './jenga';
- * 
- * function ProjectComponent() {
- *   return (
- *     <div>
- *       <h2>{jenga.name}</h2>
- *       <div>{jenga.description}</div>
- *     </div>
- *   );
- * }
- * 
- * @exports jenga
- * 
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-08-21
  * @since 2.1
  */
 
-import IconSkills from "../iconSkills";
+import IconSkills from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Virtual Jenga using haptics built in Unity Game Engine.";

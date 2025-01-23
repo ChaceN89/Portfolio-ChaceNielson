@@ -4,21 +4,6 @@
  * @desc Contains data for the Drillbotics project.
  * 
  * @name Drillbotics
- *
- * @example
- * // Example usage of drillbotics data in a component
- * import { drillbotics } from './drillbotics';
- * 
- * function ProjectComponent() {
- *   return (
- *     <div>
- *       <h2>{drillbotics.name}</h2>
- *       <div>{drillbotics.description}</div>
- *     </div>
- *   );
- * }
- * 
- * @exports drillbotics
  * 
  * @author Chace Nielson
  * @created 2024-07-28
@@ -26,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconSkills";
+import IconSkills from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Functional mini drill rig and real-time GUI.";

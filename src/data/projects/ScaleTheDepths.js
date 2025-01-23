@@ -5,15 +5,13 @@
  * 
  * @name scaleTheDepths
  * 
- * @exports scaleTheDepths
- * 
  * @author Chace Nielson
  * @created 2024-08-21
  * @updated 2024-09-05
  * @since 2.1
  */
 
-import IconSkills from "../iconSkills";
+import IconSkills from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Fishing game and winner of the 2024 GMTK Game Jam.";

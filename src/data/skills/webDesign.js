@@ -10,7 +10,7 @@
  * @updated 2024-08-14
  */
 
-import IconSkills from "../iconSkills";
+import IconSkills from "../iconLibrary";
 
 /**
  * Represents the Web Design skills section.

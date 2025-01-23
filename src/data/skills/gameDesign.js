@@ -11,7 +11,7 @@
  */
 
 import React from 'react';
-import IconSkills from "../iconSkills";
+import IconSkills from "../iconLibrary";
 
 /**
  * Represents the Game Design skills section.

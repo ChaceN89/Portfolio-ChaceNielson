@@ -1,51 +1,13 @@
 /**
  * @file projectData.js
  * @module projectData
- * @desc Contains an array of project objects imported from individual project files.
- * This data is used in the project section of the application.
- * 
- * @requires geoPredict from '../projects/geoPredict'
- * @requires capstone from '../projects/capstone'
- * @requires musicPlayer from '../projects/musicPlayer'
- * @requires portfolio from '../projects/portfolio'
- * @requires voiceIdentification from '../projects/voiceIdentification'
- * @requires imageProcessor from '../projects/imageProcessor'
- * @requires jobDashboard from '../projects/jobDashboard'
- * @requires photoApp from '../projects/photoApp'
- * @requires genrePrediction from '../projects/genrePrediction'
- * @requires jenga from '../projects/jenga'
- * @requires cubeGame from '../projects/cubeGame'
- * @requires flappyBirdClone from '../projects/flappyBirdClone'
- * @requires spaceSurvive from '../projects/spaceSurvive'
- * @requires glassGeckoGames from '../projects/glassGecko'
- * @requires drillbotics from '../projects/drillbotics'
- * 
- * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
- * 
- * @example
- * // Example usage of projects data in a component
- * import { projects } from './projectData';
- * 
- * function ProjectSection() {
- *   return (
- *     <div>
- *       {projects.map((project, index) => (
- *         <div key={index}>
- *           <h3>{project.name}</h3>
- *           <p>{project.description}</p>
- *         </div>
- *       ))}
- *     </div>
- *   );
- * }
+ * @desc Contains an array of project objects imported from individual project files. Used for the project section of the application.
  * 
  * @exports projects
  * @exports projectPageData
- * 
  * @author Chace Nielson
- * @created 2024-07-28
- * @updated 2024-09-05
- * @since 2.1
+ * @created July 28, 2024
+ * @updated Sept 05, 2024
  */
 
 import { geoPredict } from "../projects/geoPredict";

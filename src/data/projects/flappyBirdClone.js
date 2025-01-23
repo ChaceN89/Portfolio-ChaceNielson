@@ -4,21 +4,6 @@
  * @desc Contains data for the Flappy Bird Clone project.
  * 
  * @name Flappy Bird Clone
- *
- * @example
- * // Example usage of flappyBirdClone data in a component
- * import { flappyBirdClone } from './flappyBirdClone';
- * 
- * function ProjectComponent() {
- *   return (
- *     <div>
- *       <h2>{flappyBirdClone.name}</h2>
- *       <div>{flappyBirdClone.description}</div>
- *     </div>
- *   );
- * }
- * 
- * @exports flappyBirdClone
  * 
  * @author Chace Nielson
  * @created 2024-07-28
@@ -26,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconSkills";
+import IconSkills from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A Flappy Bird clone developed using Unity Game Engine.";

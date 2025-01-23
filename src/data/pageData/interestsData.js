@@ -1,39 +1,16 @@
 /**
  * @file interestsData.js
  * @module interestsData
- * @desc Contains data for the interests section used in various parts of the application.
- * Each interest entry includes the name, description, and an icon representing the interest.
- * 
- * @requires ../iconSkills
- *  
- * @example
- * // Example usage of interests in a component
- * import { interests } from './interestsData';
- * 
- * function InterestsSection() {
- *   return (
- *     <div>
- *       {interests.map((interest, index) => (
- *         <div key={index}>
- *           <interest.icon size={32} />
- *           <h3>{interest.name}</h3>
- *           <p>{interest.description}</p>
- *         </div>
- *       ))}
- *     </div>
- *   );
- * }
+ * @desc Contains data for the interests section used in various parts of the application. Each interest includes a name, description, and an icon.
  * 
  * @exports interests
  * @exports interestsPageData
- * 
  * @author Chace Nielson
- * @created 2024-07-28
- * @updated 2024-07-28
- * @since 2.1
+ * @created July 28, 2024
+ * @updated July 28, 2024
  */
 
-import IconSkills from "../iconSkills";
+import IconSkills from "../iconLibrary";
 
 export const interestsPageData = {
   title: "Interests",

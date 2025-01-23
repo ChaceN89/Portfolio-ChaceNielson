@@ -5,28 +5,13 @@
  * 
  * @name Glass Gecko Games
  * 
- * @example
- * // Example usage of glassGeckoGames data in a component
- * import { glassGeckoGames } from './glassGeckoGames';
- * 
- * function ProjectComponent() {
- *   return (
- *     <div>
- *       <h2>{glassGeckoGames.name}</h2>
- *       <div>{glassGeckoGames.description}</div>
- *     </div>
- *   );
- * }
- * 
- * @exports glassGeckoGames
- * 
  * @author Chace Nielson
  * @created 2024-07-28
  * @updated 2024-08-14
  * @since 2.1
  */
 
-import IconSkills from "../iconSkills";
+import IconSkills from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "The website built for the Glass Gecko Games team.";

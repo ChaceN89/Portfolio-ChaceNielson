@@ -15,7 +15,7 @@
  * @updated 2024-08-09
  */
 
-import IconSkills from "../iconSkills";
+import IconSkills from "../iconLibrary";
 
 export const glassGeckoWork = {
   name: 'Glass Gecko Games',
