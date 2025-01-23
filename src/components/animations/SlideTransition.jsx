@@ -1,17 +1,9 @@
 /**
  * @file SlideTransition.jsx
  * @module SlideTransition
- * @desc React component that provides a sliding transition effect for route changes.
- * This component uses the framer-motion library to create smooth slide-in and slide-out animations.
- * The slide direction, duration, delay, and translation distance are customizable through props.
- *
- * @component SlideTransition
+ * @desc A React component that provides sliding transition effects for route changes using Framer Motion.
+ *       Supports customizable direction, duration, delay, and translation distance.
  * 
- * @requires react
- * @requires motion from 'framer-motion'
- * @requires useLocation from 'react-router-dom'
- * 
- * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
  * @see {@link https://www.framer.com/motion/ | Framer Motion Documentation}
  * @see {@link https://reactrouter.com/ | React Router Documentation}
  * 
@@ -22,52 +14,24 @@
  * @param {number} [props.duration=0.3] - The duration of the slide animation in seconds.
  * @param {number} [props.delay=0.1] - The delay before the animation starts in seconds.
  * @param {number} [props.translationDist=100] - The translation distance for the slide effect in pixels.
- * 
- * @returns {JSX.Element} The SlideTransition component that wraps its children with a slide animation.
- * 
- * @example
- * // Example usage of SlideTransition component
- * import SlideTransition from './SlideTransition';
- * 
- * function App() {
- *   return (
- *     <SlideTransition enter="left" exit="right" duration={0.5}>
- *       <YourComponent />
- *     </SlideTransition>
- *   );
- * }
- * 
- * @exports SlideTransition
+ * @param {string} [props.className=''] - Optional CSS class for custom styling.
  * 
  * @author Chace Nielson
- * @since 2.1
- * @created 2024-07-28
- * @updated 2024-07-28
+ * @created Jul 28, 2024
+ * @updated Jan 23, 2025
  */
-
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 
-/**
- * SlideTransition component
- *
- * @param {Object} props - The component props.
- * @param {React.ReactNode} props.children - The child elements to be rendered inside the transition.
- * @param {string} [props.enter='left'] - The direction from which the component enters ('left' or 'right').
- * @param {string} [props.exit='left'] - The direction to which the component exits ('left' or 'right').
- * @param {number} [props.duration=0.3] - The duration of the slide animation in seconds.
- * @param {number} [props.delay=0.1] - The delay before the animation starts in seconds.
- * @param {number} [props.translationDist=100] - The translation distance for the slide effect in pixels.
- * @returns {JSX.Element} The SlideTransition component.
- */
 const SlideTransition = ({ 
   children,
   enter = 'left', 
   exit = 'left', 
   duration = 0.3, 
   delay = 0.1, 
-  translationDist = 100  
+  translationDist = 100,
+  className=''
 }) => {
 
   const location = useLocation(); // Get the current location from the router
@@ -98,6 +62,8 @@ const SlideTransition = ({
       exit="exit"
       variants={variants}
       transition={transition}
+      className={className}
+      onClick={(e) => e.stopPropagation()}
     >
       {children}
     </motion.div>
