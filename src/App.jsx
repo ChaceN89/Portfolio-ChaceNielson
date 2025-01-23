@@ -38,12 +38,15 @@ import './styles/Gallery.css';
 import DisplayTesting from './components/testing/DisplayTesting'; // for display testing components in developemtn 
 import AnalyticsProvider from './components/analytics/AnalyticsProvider';
 import AppRoutes from './components/routing/AppRoutes';
+import { LocationProvider } from './components/routing/LocationProvider';
 
 const AppWithRouter = () => (
   <Router>
     <DisplayTesting/>
     <AnalyticsProvider>
-      <AppRoutes/>
+      <LocationProvider>
+        <AppRoutes/>
+      </LocationProvider>
     </AnalyticsProvider>
   </Router>
 );
