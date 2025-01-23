@@ -3,17 +3,17 @@
   "name": "Chace Nielson Portfolio",
   "icons": [
     {
-      "src": "logos/chacelogoCN-whiteoutline192.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "/logos/logo192x192.png",
+      "type": "image/png",
+      "sizes": "64x64 32x32 24x24 16x16"
     },
     {
-      "src": "logos/chacelogoCN-chacelogoCN-whiteoutline192.png",
+      "src": "/logos/logo192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logos/chacelogoCN-whiteoutline562.png",
+      "src": "/logos/logo562x562.png",
       "type": "image/png",
       "sizes": "512x512"
     }

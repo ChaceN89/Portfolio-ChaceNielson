@@ -2,26 +2,18 @@
  * @file DarkModeTestingToggle.jsx
  * @module DarkModeTestingToggle
  * @description A development-only component for toggling between dark and light modes in the application.
- * This component checks the environment variable `NEXT_PUBLIC_ENVIRONMENT` to ensure it only renders in development mode.
+ * This component checks the environment variable `VITE_ENVIRONMENT` to ensure it only renders in development mode.
  * It updates the `dark` class on the HTML root element to apply the appropriate theme styles.
- * 
- * @component DarkModeTestingToggle
- * 
- * @requires react
- * 
- * @example
- * // Example usage
- * <DarkModeTestingToggle />
- * 
+ *
  * @notes
  * - Adds or removes the `dark` class on the HTML root element (`<html>`).
- * - Only renders when `NEXT_PUBLIC_ENVIRONMENT` is set to 'development'.
+ * - Only renders when `VITE_ENVIRONMENT` is set to 'development'.
  * - Displays a button in the top-right corner of the screen with icons for light mode (☀️) and dark mode (🌙).
  * 
  * @author Chace Nielson
  * @since 1.0
  * @created 2025-01-08
- * @updated 2025-01-08
+ * @updated 2025-01-22
  */
 "use client";
 import React, { useState, useEffect } from 'react';
@@ -31,7 +23,7 @@ function DarkModeTestingToggle() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Check if the environment variable indicates development mode
-  const isDevelopment = process.env.NEXT_PUBLIC_ENVIRONMENT === 'development';
+  const isDevelopment = import.meta.env.VITE_ENVIRONMENT === 'development';
 
   // Update the dark mode class on the HTML root element
   const toggleDarkMode = () => {
