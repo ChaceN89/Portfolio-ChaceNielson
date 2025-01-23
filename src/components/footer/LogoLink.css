@@ -1,0 +1,52 @@
+/**
+ * @file LogoLink.css
+ * @module LogoLinkStyles
+ * @desc This file contains the styles for the underline effect on the text within the LogoLink component.
+ * The underline appears on hover, transitioning smoothly from left to right.
+ * 
+ * @see {@link https://tailwindcss.com/ | Tailwind CSS Documentation}
+ * 
+ * @example
+ * // Example usage in a React component
+ * import './LogoLink.css';
+ * 
+ * function LogoLink() {
+ *   return (
+ *     <div className='logo-link'>
+ *       <h1 className='underline-effect'>CHACE NIELSON</h1>
+ *     </div>
+ *   );
+ * }
+ * 
+ * @exports LogoLinkStyles
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-28
+ * @updated 2024-07-28
+ * @since 2.1
+ */
+
+/* Underline Effect Styles */
+.logo-link .underline-effect {
+  position: relative;
+  transition: color 0.3s ease; /* Transition for the text color */
+}
+
+.logo-link .underline-effect::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0px; /* Adjust to position the underline closer or farther from the text */
+  width: 0;
+  height: 4px; /* Adjust to change the thickness of the underline */
+  @apply bg-accent-dark; /* Customize the underline color using Tailwind's bg-accent class */
+  transition: width 0.3s ease; /* Transition for the underline width */
+}
+
+.logo-link:hover .underline-effect::after {
+  width: 100%; /* Full width underline on hover */
+}
+
+.logo-shadow{
+  filter: drop-shadow(0 0 1px white);
+}

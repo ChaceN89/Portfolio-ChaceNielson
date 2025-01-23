@@ -37,15 +37,13 @@ import './styles/Gallery.css';
 // Components
 import DisplayTesting from './components/testing/DisplayTesting'; // for display testing components in developemtn 
 import AnalyticsProvider from './components/analytics/AnalyticsProvider';
-import TrackableButton from './components/analytics/TrackableButton';
+import AppRoutes from './components/routing/AppRoutes';
 
 const AppWithRouter = () => (
   <Router>
     <DisplayTesting/>
     <AnalyticsProvider>
-      {/* <AppRoutes /> */}
-      Routes go here in future when i creat the AppRoute Component 
-      <TrackableButton/>
+      <AppRoutes/>
     </AnalyticsProvider>
   </Router>
 );
