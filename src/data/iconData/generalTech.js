@@ -12,11 +12,13 @@ const folder = "generalTech";
 const generalTechIcons = {
   MAPBOX_GL: { name: "Mapbox GL", icon: SiMapbox, color: "black" },
   CHART_JS: { name: "Chart.js", icon: SiChartdotjs, color: '#FE777B' },
-  EMAILJS: { name: "Email.js", svg_path: `${folder}/emailjs.svg` },
+  EMAIL_JS: { name: "Email.js", svg_path: `${folder}/emailjs.svg` },
   VS_CODE: { name: "VS Code", svg_path: `${folder}/vs-code.svg` },
   
   SEO: { name: "SEO", svg_path: `${folder}/seo.svg` },
   PWA: { name: "Progressive Web Apps", svg_path: `${folder}/pwa.svg` },
+
+  GOOGLE_ANALYTICS: { name: "Google Analytics", svg_path: `${folder}/google_analytics.svg` },
 };
 
 export default generalTechIcons;

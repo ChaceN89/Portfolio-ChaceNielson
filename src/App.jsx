@@ -35,14 +35,18 @@ import './styles/Modal.css';
 import './styles/Gallery.css';
 
 // Components
-import GoogleAnalytics from './components/googleAnalytics/GoogleAnalytics';
 import DisplayTesting from './components/testing/DisplayTesting'; // for display testing components in developemtn 
+import AnalyticsProvider from './components/analytics/AnalyticsProvider';
+import TrackableButton from './components/analytics/TrackableButton';
 
 const AppWithRouter = () => (
   <Router>
     <DisplayTesting/>
-    <GoogleAnalytics/>
-    {/* <AppRoutes /> */}
+    <AnalyticsProvider>
+      {/* <AppRoutes /> */}
+      Routes go here in future when i creat the AppRoute Component 
+      <TrackableButton/>
+    </AnalyticsProvider>
   </Router>
 );
 
