@@ -21,9 +21,9 @@ export const heroData = {
   top: "Hi, my name is",
   name: "CHACE NIELSON",
   description: (
-    <div>
+    <p>
       I am a <Link className="text-accent hover:underline" to='/skills/engineering'>Software Engineer</Link> with a passion for music and the outdoors. I have worked on various projects, from <Link className="text-accent hover:underline" to='/skills/web-design'>Web Design</Link> to <Link className="text-accent hover:underline" to='/skills/game-design'>Unity Games</Link>.
-    </div>
+    </p>
   ),
   
   // List of buttons

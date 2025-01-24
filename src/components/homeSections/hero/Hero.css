@@ -29,12 +29,7 @@
 /* Hero image wrapper */
 .hero-img-wrapper {
   @apply 
-  lg:bottom-0 lg:right-0  lg:h-full lg:absolute lg:w-auto
-
-  /* h-full
-  lg:absolute lg:bottom-0 lg:right-0 lg:w-auto
-  min-h-108 ; */
-  ;
+  lg:bottom-0 lg:right-0  lg:h-full lg:absolute lg:w-auto;
 }
 
 /* Hero text container */

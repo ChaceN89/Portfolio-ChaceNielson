@@ -29,6 +29,7 @@ import Hero from '../homeSections/hero/Hero';
 import ReturnToTop from '../uiElements/ReturnToTop';
 
 import { globals } from '../../data/globals';
+import CallToAction from '../homeSections/callToAction/CallToAction';
 
 const HomePage = () => {
   const location = useLocation();
@@ -49,7 +50,7 @@ const HomePage = () => {
     <>
       <div id='Home'>
         <Hero/>
-        {/* <CallToAction /> */}
+        <CallToAction />
       </div>
       {/* <div id='Experience'>
         <TechSkills />

@@ -30,7 +30,7 @@ function HeroText() {
         <h1>{heroData.name}</h1>
       </SlideTransition>
       <SlideTransition delay={0.5} duration={1} translationDist={600}>
-        <p>{heroData.description}</p>
+        {heroData.description}
       </SlideTransition>
       <SlideTransition delay={0.6} duration={1} translationDist={600}>
         <div className='text-buttons'>

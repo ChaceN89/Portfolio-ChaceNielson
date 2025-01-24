@@ -1,7 +1,9 @@
 /**
- * @file callToActionData.js
+ * @file callToActionData.jsx
  * @module callToActionData
  * @desc Contains data for the call-to-action section. All data in the call to action section can be found in this file, including imaged and text 
+ * 
+ * Need to be JSX to work with React Components
  * 
  * @see {@link https://www.npmjs.com/package/react-scroll | React Scroll Documentation}
  * 
@@ -27,8 +29,8 @@ export const callToActionData = {
       </p>
     </>
   ),
-  img: process.env.PUBLIC_URL + "/png-portraits/chace-5.png",
-  lowResImg: process.env.PUBLIC_URL + "/png-portraits/chace-5-small.png",
+  img: "/png-portraits/chace-5.png",
+  lowResImg: "/png-portraits/chace-5-small.png",
 
   buttons: [
     {
