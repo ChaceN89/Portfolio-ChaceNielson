@@ -31,7 +31,7 @@ function DisplayList({ title, list }) {
       {list && list.length > 0 && (
         <div className='mt-2'>
           <h3 className='text-lg font-semibold text-primary'>{title}</h3>
-          <ul className='text-base list-disc list-inside'>
+          <ul className='text-base list-disc list-inside space-y-1.5'>
             {list.map((listItem, index) => (
               <li key={index} className='text-primary font-darken'>{listItem}</li>
             ))}

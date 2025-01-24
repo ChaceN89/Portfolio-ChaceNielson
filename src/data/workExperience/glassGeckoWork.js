@@ -37,17 +37,15 @@ export const glassGeckoWork = {
   skills: [
     IconSkills.UNITY,
     IconSkills.PLASTIC_SCM,
+    IconSkills.CSHARP,
+    IconSkills.GAME_DESIGN,
     IconSkills.WEB_DESIGN,
-    IconSkills.REACT,
-    IconSkills.REACT,
     IconSkills.REACT,
   ], 
   softSkills: [
-    IconSkills.TEAM_COLLABORATION,
-    IconSkills.TEAM_COLLABORATION,
+    IconSkills.PROBLEM_SOLVING,
     IconSkills.TEAM_COLLABORATION,
     IconSkills.CREATIVITY,
     IconSkills.COMMUNICATION,
-    IconSkills.ADAPTABILITY,
   ],
 };

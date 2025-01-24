@@ -35,12 +35,15 @@ export const albertaTomorrowWork = { // Alberta Tomorrow
  ],
   skills: [
     IconSkills.AWS,
+    IconSkills.S3,
     IconSkills.VUE,
-    IconSkills.MAPBOX_GL,
     IconSkills.CSS,
+    IconSkills.MAPBOX_GL,
+    IconSkills.UNITY,
+    IconSkills.BLENDER,
   ],
   softSkills: [
-    IconSkills.PROBLEM_SOLVING,
+    IconSkills.CRITICAL_THINKING,
     IconSkills.ADAPTABILITY,
     IconSkills.TIME_MANAGEMENT,
     IconSkills.SELF_MOTIVATION,

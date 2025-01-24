@@ -39,11 +39,13 @@ export const geothermalWork = { // Geothermal
     IconSkills.DOCKER,
     IconSkills.POSTGRESQL,
     IconSkills.FASTAPI,
+    IconSkills.PYTHON,
+    IconSkills.TAILWIND,
   ],
   softSkills: [
-    IconSkills.PROBLEM_SOLVING,
-    IconSkills.TEAM_COLLABORATION,
-    IconSkills.LEADERSHIP,
     IconSkills.SELF_MOTIVATION,
+    IconSkills.LEADERSHIP,
+    IconSkills.TEAM_COLLABORATION,
+    IconSkills.ADAPTABILITY,
   ],
 };
