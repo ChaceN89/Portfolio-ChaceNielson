@@ -40,11 +40,10 @@ function MediaLinks({headerLinks=false}) {
 
   const iconSize = isMediumScreen ? 24 : 18;
 
-
   // what to return if its the header links
   if (headerLinks){
     return (
-      <div className="grid grid-cols-4 xl:grid-cols-6 gap-1.5 relative py-0.5 ">
+      <div className="flex lg:grid lg:grid-cols-4 xl:grid-cols-6 gap-1.5 relative py-0.5 ">
         {mediaLinks.reverse().map((link) => (
           <Tooltip key={link.name} text={link.name}>
             <a

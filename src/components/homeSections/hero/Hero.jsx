@@ -35,12 +35,12 @@ function Hero() {
       backgroundSize="cover"
       bgOpacity={20}
     >
-      <FadeTransition>
+      <FadeTransition duration={1.3}>
         <section className="hero">
           <HeroText />
-          <HeroImg />
           <ScrollWheel to="CallToAction" />
         </section>
+        <HeroImg />
       </FadeTransition>
     </BackgroundWrapper>
   );

@@ -65,7 +65,8 @@ const SlideTransition = ({
       className={className}
       onClick={(e) => e.stopPropagation()}
     >
-      {children}
+      {children} 
+      {/* is in a react fragment so flex doens't work - need a inner class to handle more specific CSS */}
     </motion.div>
   );
 };
