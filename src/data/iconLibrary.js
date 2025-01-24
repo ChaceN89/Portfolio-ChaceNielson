@@ -6,7 +6,7 @@
  * 
  * @author Chace Nielson
  * @created July 28, 2024
- * @updated Jan 22, 2025
+ * @updated Jan 23, 2025
  */
 
 import utilityIcons from "./iconData/utilityIcons";
@@ -27,14 +27,14 @@ import dataProcessingIcons from "./iconData/dataProcessing";
 
 // Combines all icons into a single library for use across the application
 const IconLibrary = {
-  ...awsIcons,
+  ...frontendIcons,
   ...backendIcons,
   ...databaseIcons,
+  ...awsIcons,
   ...dataProcessingIcons,
   ...designToolIcons,
   ...devToolIcons,
   ...engineeringIcons,
-  ...frontendIcons,
   ...gameDesignIcons,
   ...generalTechIcons,
   ...programmingLanguageIcons,

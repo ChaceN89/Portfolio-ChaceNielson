@@ -10,10 +10,10 @@
  * @updated Aug 21, 2024
  */
 
-import { webDesign } from '../skills/webDesign';
-import { backendDesign } from '../skills/backendDesign';
-import { engineering } from '../skills/engineering';
+import { frontend } from '../skills/frontend';
+import { backend } from '../skills/backend';
 import { gameDesign } from '../skills/gameDesign';
+import { devOps } from '../skills/devOps';
 
 // Data for the skill page header
 export const skillPageData = {
@@ -23,8 +23,8 @@ export const skillPageData = {
 
 // Data for various technical skills
 export const techSkills = [
-  webDesign,
-  backendDesign,
+  frontend,
+  backend,
   gameDesign,
-  engineering
+  devOps
 ];

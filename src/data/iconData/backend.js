@@ -15,7 +15,7 @@ const backendIcons = {
   NODE_JS: { name: "Node.js", icon: FaNode, color: "#68A063" },
   REST_API: { name: "RESTful API", svg_path: `${folder}/rest-api.svg` },
   SWAGGER_UI: { name: "Swagger UI", svg_path: `${folder}/swagger.svg` },
-  EXPRESSJS: { name: "ExpressJS", icon: FaNodeJs, color: "#3FA040" },    
+  EXPRESSJS: { name: "Express", svg_path: `${folder}/express.svg` },
   FASTAPI: { name: "FastAPI", icon: SiFastapi, color: "#079487" },
   DJANGO: { name: "Django", svg_path: `${folder}/django.svg` },
 };

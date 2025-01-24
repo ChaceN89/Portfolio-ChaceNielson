@@ -14,6 +14,7 @@ const awsIcons = {
   AMPLIFY: { name: "Amplify", icon: SiAwsamplify, color: "#FF9900" },
   RDS: { name: "RDS", svg_path: `${folder}/RDS.svg` },
   S3: { name: "S3", svg_path: `${folder}/S3.svg` },
+  TERRAFORM: { name: "Terraform", svg_path: `${folder}/terraform.svg` },
 };
 
 export default awsIcons;

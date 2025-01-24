@@ -10,6 +10,8 @@ import { FaDocker } from "react-icons/fa";
 import { GoCodeReview } from "react-icons/go";
 import { ImGit } from "react-icons/im";
 import { SiRailway, SiRender, SiVercel } from "react-icons/si";
+import { SiAsana } from "react-icons/si";
+
 
 const folder = "devTools";
 
@@ -25,9 +27,14 @@ const devToolIcons = {
       
   CLOUD_DEPLOYMENT: { name: "Cloud Deployment", svg_path: `${folder}/cloud-computer.svg` },
   AUTHENTICATION: { name: "Authentication", svg_path: `${folder}/authentication.svg` },
+  JWT: { name: "JWT", svg_path: `${folder}/jwt.svg` },
+  OAUTH: { name: "OAuth Protocol", svg_path: `${folder}/oauth.svg` },
 
   CODE_REVIEWS: { name: "Code Reviews", icon: GoCodeReview, color: 'black' },
   AUTOMATION: { name: "Automation", svg_path: `${folder}/automation.svg` }, 
+
+  AGILE_TOOLS: { name: "Agile Tools", svg_path: `${folder}/agile.svg` },  
+  ASANA: { name: "Asana", icon: SiAsana, color: "black" },
 };
 
 export default devToolIcons;

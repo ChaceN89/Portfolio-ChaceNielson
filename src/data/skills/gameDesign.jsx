@@ -1,46 +1,37 @@
 /**
  * @file gameDesign.js
- * @module gameDesign
- * @desc Contains data for the Game Design skills section.
+ * @desc Contains data for the game Design skills section.
  * 
- * @name Game Design
- * @since 2.1
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated Jan 23, 2025
  */
 
 import React from 'react';
 import IconSkills from "../iconLibrary";
 
-/**
- * Represents the Game Design skills section.
- * @type {Object}
- * @property {string} id - The unique identifier for the Game Design section.
- * @property {string} name - The name of the skills section.
- * @property {string} linkName - The text for the link to see more about Game Design.
- * @property {React.ReactNode} description - A brief description of the Game Design skills.
- * @property {Array<React.Component>} topSkills - The list of top skills with their respective icons.
- * @property {Array<React.Component>} minorSkills - The list of minor skills with their respective icons.
- */
 export const gameDesign = { 
-  id: "game-design",
-  name: "Game Design", 
-  linkName: "See More Game Design", 
+  id: "game-development",
+  name: "Game Development", 
+  linkName: "Discover my Skills and Games", 
   description: (
-    <span>
-      I design and develop engaging games, blending creativity and technical skills with teamwork to create fun and immersive experiences.    
+    <span> 
+      I design and develop captivating games by blending technical expertise, creativity, and collaboration to create fun and immersive experiences.
     </span>
   ),
   topSkills: [
     IconSkills.UNITY,
     IconSkills.BLENDER,
+    IconSkills.PLASTIC_SCM,
     IconSkills.CSHARP,
-    IconSkills.ANIMATION,
   ],
   minorSkills: [
-    IconSkills.GAME_DEVELOPMENT,
+    IconSkills.GAME_DESIGN,
+    IconSkills.ANIMATION,
+    IconSkills.PATHFINDING,
     IconSkills.UNITY_PHYSICS,
-    IconSkills.PLASTIC_SCM,
+    IconSkills.FACTORY_PATTERN,
+    IconSkills.OBSERVER_PATTERN,
+    IconSkills.FLYWEIGHT_PATTERN,
   ],
 };

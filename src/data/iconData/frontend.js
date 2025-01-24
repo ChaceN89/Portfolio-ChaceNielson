@@ -14,8 +14,8 @@ const folder = "frontend";
 
 const frontendIcons = {
   REACT: { name: "React", icon: FaReact, color: "lightblue" },
-  Next: { name: "Next", svg_path: `${folder}/vue.svg` },
-  VUE: { name: "Vue", svg_path: `${folder}/next.svg` },
+  VUE: { name: "Vue", svg_path: `${folder}/vue.svg` },
+  NEXT: { name: "Next", svg_path: `${folder}/next.svg` },
   VITE: { name: "Vite", svg_path: `${folder}/vite.svg` },
 
   RESPONSIVE_DESIGN: { name: "Responsive Design", svg_path: `${folder}/responsive-design.svg` },

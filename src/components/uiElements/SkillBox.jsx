@@ -44,7 +44,7 @@ import ShowIcon from './ShowIcon';
 const SkillBox = ({ skill, useWhiteText = false }) => {
   return (
     <div className="flex flex-col items-center p-2 border border-primary border-opacity-80 rounded-md shadow-xl">
-      <ShowIcon skill={skill} size="2rem" useWhiteText={useWhiteText} />
+      <ShowIcon skill={skill} size="2.5rem" useWhiteText={useWhiteText} />
       <p className="mt-2 text-center text-sm">{skill.name}</p>
     </div>
   );
