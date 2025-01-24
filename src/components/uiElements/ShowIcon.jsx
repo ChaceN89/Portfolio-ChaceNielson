@@ -69,7 +69,7 @@ function ShowIcon({ skill, size = "2rem", useWhiteText = false, diableMag=false 
 
   return (
     <Magnetic padding={5} disabled={diableMag}>
-      <div className='drop-shadow' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: size, height: size }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: size, height: size }}>
         {IconComponent ? (
           <IconComponent style={iconStyle} />
         ) : (

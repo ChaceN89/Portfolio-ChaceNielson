@@ -33,7 +33,7 @@ export const backendDesign = {
   ),
   topSkills: [
     IconSkills.PYTHON,
-    IconSkills.EXPRESS_JS,
+    IconSkills.EXPRESSJS,
     IconSkills.FASTAPI,
     IconSkills.POSTGRESQL,
   ],

@@ -14,27 +14,23 @@
 }
 
 .modal-container {
-  @apply relative
-  bg-secondary rounded-xl  
-  border border-primary-dark
-  shadow-md shadow-accent
-  min-h-[40%]
-  max-h-[85%]
-  min-w-[40%]
-  max-w-[85%]
-  text-left
-  overflow-y-auto
-  overflow-x-hidden
-  ;
-
-  /* css for  */
+  @apply relative bg-secondary rounded-xl  
+  border border-primary-dark shadow-md shadow-accent
+  min-h-[40%] max-h-[85%]
+  min-w-[40%] max-w-[85%]
+  text-left overflow-y-auto overflow-x-hidden;
 }
 
 .modal-content {
-  @apply m-5 p-0.5 h-full  ;
+  @apply m-5 p-0.5 h-full relative;
 }
 
-.modal-close-btn{
-  @apply absolute top-0 right-0  text-primary hover:text-accent
+.modal-close-btn {
+  @apply absolute top-1.5 right-1.5 text-primary hover:text-accent z-50;
 }
 
+
+.no-scroll {
+  overflow: hidden; /* Prevent scrolling */
+  height: 100%;    /* Ensure the height is fixed */
+}

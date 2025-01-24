@@ -97,6 +97,7 @@ export default {
       },
       blur: {
         xs: '1.5px', // Add custom blur-xs utility with a value of 2px
+        xxs: '1px', // Add custom blur-xs utility with a value of 2px
       },
     },
   },

@@ -4,16 +4,6 @@
  * @desc React component that displays a grid of SkillBox components. 
  * It accepts a stack of skills and renders each skill using the SkillBox component.
  *
- * @component SkillBoxContainer
- *
- * @param {Object} props - The component props.
- * @param {Array} props.stack - An array of skill objects to be displayed.
- *
- * @requires react
- * @requires ./SkillBox
- *
- * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
- *
  * @example
  * // Example usage of SkillBoxContainer component
  * import SkillBoxContainer from './SkillBoxContainer';
@@ -33,12 +23,9 @@
  *   );
  * }
  * 
- * @exports SkillBoxContainer
- * 
  * @author Chace Nielson
- * @since 2.1
  * @created 2024-07-28
- * @updated 2024-08-14
+ * @updated Jan 23, 2025
  */
 
 import React from 'react';

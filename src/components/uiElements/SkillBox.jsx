@@ -1,14 +1,9 @@
-import React from 'react';
-import ShowIcon from './ShowIcon';
-
 /**
  * @file SkillBox.jsx
  * @module SkillBox
  * @desc React component that displays an individual skill with an icon and name.
  * This component handles rendering either a React icon or an SVG image, with a conditional
  * check to adjust the icon color if it is white in the ShowIcon component.
- * 
- * @component SkillBox
  *
  * @param {Object} props - The component props.
  * @param {Object} props.skill - The skill object containing the icon, name, color, and svg_path.
@@ -17,11 +12,6 @@ import ShowIcon from './ShowIcon';
  * @param {string} props.skill.color - The color of the skill icon.
  * @param {string} [props.skill.svg_path] - The path to the SVG icon (optional).
  * @param {boolean} [props.useWhiteText=false] - Flag to determine if white text should be used.
- *
- * @requires react
- * @requires ./ShowIcon
- *
- * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
  *
  * @example
  * // Example usage of SkillBox component
@@ -42,14 +32,14 @@ import ShowIcon from './ShowIcon';
  *     </div>
  *   );
  * }
- * 
- * @exports SkillBox
+
  * 
  * @author Chace Nielson
- * @since 2.1
  * @created 2024-07-28
  * @updated 2024-08-14
  */
+import React from 'react';
+import ShowIcon from './ShowIcon';
 
 const SkillBox = ({ skill, useWhiteText = false }) => {
   return (

@@ -7,11 +7,6 @@
  * @see {@link https://www.framer.com/motion/ | Framer Motion Documentation}
  * @see {@link https://reactrouter.com/ | React Router Documentation}
  * 
- * @param {Object} props - The component props.
- * @param {React.ReactNode} props.children - The content to be rendered inside the modal.
- * 
- * @returns {JSX.Element} The Modal component with animations and navigation support.
- * 
  * @example
  * <Modal>
  *   <div>Your Modal Content Here</div>
@@ -33,6 +28,20 @@ export default function Modal({ children }) {
 
   const [isVisible, setIsVisible] = React.useState(true); // Modal visibility state
 
+  // Add or remove the "no-scroll" class from the body
+  useEffect(() => {
+    if (isVisible) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+
+    // Cleanup class on component unmount
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [isVisible]);
+
   // Close modal handler
   const handleClose = (e) => {
     e.stopPropagation();
@@ -40,12 +49,12 @@ export default function Modal({ children }) {
     setIsVisible(false); // Trigger exit animation
     setTimeout(() => {
       // Navigate after the animation ends
-      if (navigationType === "PUSH" && window.history.length > 1) {
+      if (navigationType === 'PUSH' && window.history.length > 1) {
         navigate(-1);
       } else {
-        navigate("/");
+        navigate('/');
       }
-    }, 300); // Match the duration of the exit animation (400ms)
+    }, 300); // Match the duration of the exit animation
   };
 
   // Handle Escape key to close the modal
@@ -78,7 +87,7 @@ export default function Modal({ children }) {
             className="modal-container"
           >
             <button className="modal-close-btn" onClick={handleClose}>
-              <IoMdClose size={30} />
+              <IoMdClose size={34} />
             </button>
 
             <div className="modal-content">
@@ -90,3 +99,4 @@ export default function Modal({ children }) {
     </div>
   );
 }
+

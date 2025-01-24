@@ -12,16 +12,6 @@
 
 import IconSkills from "../iconLibrary";
 
-/**
- * Represents the Web Design skills section.
- * @type {Object}
- * @property {string} id - The unique identifier for the Web Design section.
- * @property {string} name - The name of the skills section.
- * @property {string} linkName - The text for the link to see more about the web design toolkit.
- * @property {React.ReactNode} description - A brief description of the Web Design skills.
- * @property {Array<React.Component>} topSkills - The list of top skills with their respective icons.
- * @property {Array<React.Component>} minorSkills - The list of minor skills with their respective icons.
- */
 export const webDesign = { 
   id: "web-design",
   name: "Web Design",
@@ -34,7 +24,7 @@ export const webDesign = {
   topSkills: [
     IconSkills.REACT,
     IconSkills.JAVASCRIPT,
-    IconSkills.TAILWINDCSS,
+    IconSkills.TAILWIND,
     IconSkills.NODE_JS,
   ],
   minorSkills: [
@@ -54,6 +44,6 @@ export const webDesign = {
     IconSkills.MAPBOX_GL,
     IconSkills.SEO,
     IconSkills.PWA,
-    IconSkills.EMAILJS,
+    IconSkills.EMAIL_JS,
   ],
 };
