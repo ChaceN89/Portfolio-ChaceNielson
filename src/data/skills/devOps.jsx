@@ -19,17 +19,15 @@ export const devOps = {
     </span>
   ),
   topSkills: [
+    IconSkills.AWS,
     IconSkills.DOCKER,
     IconSkills.CI_CD,
-    IconSkills.CLOUD_DEPLOYMENT,
-    IconSkills.AWS,
+    IconSkills.GIT,
   ],
   minorSkills: [
-    // Deployment & Hosting Platforms
-    IconSkills.NETLIFY,
-    IconSkills.VERCEL,
-    IconSkills.RENDER,
-    IconSkills.RAILWAY,
+    // Version Control
+    IconSkills.GITHUB,
+    IconSkills.AGILE_TOOLS,
 
     // Infrastructure Management
     IconSkills.AMPLIFY,
@@ -37,13 +35,15 @@ export const devOps = {
     IconSkills.S3,
     IconSkills.TERRAFORM,
 
+    // Deployment & Hosting Platforms
+    IconSkills.NETLIFY,
+    IconSkills.VERCEL,
+    IconSkills.RENDER,
+    IconSkills.RAILWAY,
+    
     // Automation & Collaboration Tools
     IconSkills.AUTOMATION,
+    IconSkills.CLOUD_DEPLOYMENT,
     IconSkills.CODE_REVIEWS,
-
-    // Version Control
-    IconSkills.GITHUB,
-    IconSkills.GIT,
-    IconSkills.AGILE_TOOLS,
   ],
 };

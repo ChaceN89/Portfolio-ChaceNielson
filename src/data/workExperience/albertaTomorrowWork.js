@@ -20,7 +20,7 @@ import IconSkills from "../iconLibrary";
 export const albertaTomorrowWork = { // Alberta Tomorrow
   name: 'Alberta Tomorrow',
   role: 'Software Developer',
-  img: process.env.PUBLIC_URL + '/png-icons/alberta-tomorrow.jpg',
+  img: '/png-icons/alberta-tomorrow.jpg',
   dates: ['Jan 2024', 'Current'],
   description: 'Contributed to the development of a web application that leverages interactive maps, data visualization, and gamification to promote sustainable land use in Alberta and BC.',
   link: 'https://www.albertatomorrow.ca',

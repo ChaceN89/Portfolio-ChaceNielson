@@ -15,22 +15,21 @@
  */
 
 import React, { useEffect } from 'react';
+// Libraries
 import { useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 
-import Hero from '../homeSections/hero/Hero';
-// import CallToAction from '../homeSections/callToAction/CallToAction';
-// import TechSkills from '../homeSections/techSkills/TechSkills';
-// import JobExperience from '../homeSections/jobExperience/JobExperience';
-// import Interests from '../homeSections/interests/Interests';
-// import ProjectSection from '../homeSections/projects/ProjectSection';
-// import ContactForm from '../homeSections/contactForm/ContactForm';
+// Data
+import { globals } from '../../data/globals';
 
+// UI Elements
 import ReturnToTop from '../uiElements/ReturnToTop';
 
-import { globals } from '../../data/globals';
+// Sections
+import Hero from '../homeSections/hero/Hero';
 import CallToAction from '../homeSections/callToAction/CallToAction';
 import TechSkills from '../homeSections/techSkills/TechSkills';
+import JobExperience from '../homeSections/jobExperience/JobExperience';
 
 const HomePage = () => {
   const location = useLocation();
@@ -55,8 +54,8 @@ const HomePage = () => {
       </div>
       <div id='Experience'>
         <TechSkills />
-        {/* <JobExperience />
-        <Interests /> */}
+        <JobExperience />
+        {/* <Interests /> */}
       </div>
       {/* <div id='Projects'>
         <ProjectSection />

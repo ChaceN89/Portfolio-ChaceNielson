@@ -16,7 +16,7 @@ import { geothermalWork } from "../workExperience/geothermalWork";
 
 export const workExperiencePageData = {
   title: 'Work Experience',
-  description: 'Technical work.',
+  description: 'Real-World Applications of My Skills in Professional Settings'
 };
 
 export const workExperienceList = [

@@ -21,6 +21,7 @@ import { AnimatePresence } from 'framer-motion';
 import { useNavigate, useNavigationType } from 'react-router-dom';
 import { IoMdClose } from 'react-icons/io';
 import SlideTransition from '../animations/SlideTransition';
+import BackgroundWrapper from '../wrappers/BackgroundWrapper';
 
 export default function Modal({ children }) {
   const navigate = useNavigate();
@@ -76,6 +77,7 @@ export default function Modal({ children }) {
 
   return (
     <div className="modal-backdrop" onClick={handleClose}>
+       
       <AnimatePresence>
         {isVisible && (
           <SlideTransition
@@ -86,13 +88,22 @@ export default function Modal({ children }) {
             delay={0.1} // Optional: Customize the delay
             className="modal-container"
           >
-            <button className="modal-close-btn" onClick={handleClose}>
-              <IoMdClose size={34} />
-            </button>
+            <BackgroundWrapper
+              className='overflow-hidden'
+              src={"/png-backgrounds/overlays/scratch-1.png"}
+              bgOpacity={5}
+              backgroundSize = "contain"
+              backgroundRepeat = "repeat"
+            >
 
-            <div className="modal-content">
-              {children}
-            </div>
+              <button className="modal-close-btn" onClick={handleClose}>
+                <IoMdClose size={34} />
+              </button>
+
+              <div className="modal-content">
+                {children}
+              </div>
+            </BackgroundWrapper>
           </SlideTransition>
         )}
       </AnimatePresence>

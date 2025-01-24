@@ -18,7 +18,8 @@ import { devOps } from '../skills/devOps';
 // Data for the skill page header
 export const skillPageData = {
   title: "Technical Skills",
-  description: "A comprehensive overview of my technical expertise.",
+  description: "An In-Depth Look at My Technical Proficiency.",
+  relatedProjectTitle: "Related Projects",
 };
 
 // Data for various technical skills
@@ -28,3 +29,4 @@ export const techSkills = [
   gameDesign,
   devOps
 ];
+

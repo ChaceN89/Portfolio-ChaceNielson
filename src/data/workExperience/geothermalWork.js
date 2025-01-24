@@ -20,7 +20,7 @@ import IconSkills from "../iconLibrary";
 export const geothermalWork = { // Geothermal
   name: 'Energi Simulation Centre for Geothermal Systems Research',
   role: 'Software Developer',
-  img: process.env.PUBLIC_URL + '/png-icons/geothermal.png',
+  img: '/png-icons/geothermal.png',
   dates: ['May 2022', 'Jan 2024'],
   description: 'Developed a web application to simulate geothermal systems and analyze drilling data. Managed a team of engineers and developers, ensuring the successful completion of project goals.',
   link: 'https://ucalgary.ca/labs/geothermal-energy/centre',

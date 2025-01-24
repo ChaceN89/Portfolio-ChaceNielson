@@ -19,7 +19,7 @@ import IconSkills from "../iconLibrary";
 
 export const glassGeckoWork = {
   name: 'Glass Gecko Games',
-  img: process.env.PUBLIC_URL + '/png-icons/glass-gecko-games-icon.png',
+  img: '/png-icons/glass-gecko-games-icon.png',
   description: 'Contributed to game development, website design, and marketing strategies. Collaborated closely with a team of designers and developers to design and implement game features.',
   role: 'Website Development, Game Design',
   dates: ['May 2024', 'Current'],
@@ -39,8 +39,12 @@ export const glassGeckoWork = {
     IconSkills.PLASTIC_SCM,
     IconSkills.WEB_DESIGN,
     IconSkills.REACT,
+    IconSkills.REACT,
+    IconSkills.REACT,
   ], 
   softSkills: [
+    IconSkills.TEAM_COLLABORATION,
+    IconSkills.TEAM_COLLABORATION,
     IconSkills.TEAM_COLLABORATION,
     IconSkills.CREATIVITY,
     IconSkills.COMMUNICATION,

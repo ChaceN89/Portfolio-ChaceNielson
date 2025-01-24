@@ -34,7 +34,7 @@ export default function DisplayTesting() {
       {/* <DarkModeTestingToggle/> */}
       {/* <HeaderTesting/> */}
       {/* <ColorBoxes/> */}
-      <IconList/>
+      {/* <IconList/> */}
     </>
   )
 }

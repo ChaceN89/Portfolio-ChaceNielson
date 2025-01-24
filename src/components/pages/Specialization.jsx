@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
-import { techSkills } from '../../data/pageData/skillsData';
+import { techSkills, skillPageData  } from '../../data/pageData/skillsData';
 import SectionHeader from '../uiElements/SectionHeader';
 import SkillBoxContainer from '../uiElements/SkillBoxContainer';
 
@@ -49,6 +49,9 @@ export default function Specialization() {
         <SectionHeader title={skill.name} subtitle={skill.description} />
       </div>
       <SkillBoxContainer stack={allSkills} />
+
+      <h2 className='font-bold'>{skillPageData.relatedProjectTitle}</h2>
+      <div className='h-111 border-2 border-blue-600'>Display related Projec Here </div>
     </div>
   );
 }
