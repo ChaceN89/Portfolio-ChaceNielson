@@ -28,6 +28,16 @@ const long = (
   </div>
 );
 
+const features = [
+  "Modern and engaging design",
+  "Animations and blurhashing for smooth transitions",
+  "Responsive and mobile-friendly",
+  "SEO optimization",
+  "PWA functionality",
+  "EmailJS integration for contact form",
+];
+
+
 export const glassGeckoGames = {
   starred: true,
   id: "glass-gecko-games",
@@ -35,6 +45,7 @@ export const glassGeckoGames = {
   tag: "UX/UI",
   blurb: short,
   description: long,
+  features: features,
   images: [
     { src: "glassGecko.jpg", blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP" },
   ],

@@ -28,6 +28,10 @@ const long = (
   </div>
 );
 
+const features = [
+  "Mod",
+];
+
 export const musicPlayer = {
   starred: true,
   id: "music-player",
@@ -35,6 +39,7 @@ export const musicPlayer = {
   tag: "UX/UI",
   blurb: short,
   description: long,
+features: features,
   images: [
     { src: "musicPlayer2.jpg", blurhash: "LANm]1_M?brt-;D*js%L~W%3RjD%" },
     { src: "musicPlayer.jpg", blurhash: "LADl{3~pIV00ROxvt7MxD*00xv?b" },

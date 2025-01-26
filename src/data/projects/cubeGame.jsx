@@ -28,12 +28,17 @@ const long = (
   </div>
 );
 
+const features = [
+  "Mod",
+];
+
 export const cubeGame = {
   id: "cube-game",
   name: "Endless Runner Game",
   tag: "Game",
   blurb: short,
   description: long,
+  features: features,
   images: [
     { src: "cubegame.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
     { src: "cube1.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },

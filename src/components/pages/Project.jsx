@@ -19,6 +19,7 @@ import YouTubeEmbed from '../homeSections/projects/YouTubeEmbed';
 import ProjectImageCarousel from '../homeSections/projects/ProjectImageCarousel';
 import SkillBoxContainer from '../uiElements/SkillBoxContainer';
 import ExternalLinks from '../homeSections/projects/ExternalLinks';
+import GalleryPhotos from '../photoGallery/GalleryPhotos';
 
 export default function Project({ projectName }) {
   const navigate = useNavigate();
@@ -66,9 +67,14 @@ export default function Project({ projectName }) {
 
       {/* images */}
       {project.images && project.images.length > 0 && (
-        <div className="pt-4 flex w-full justify-center">
-          <ProjectImageCarousel images={project.images} id={project.id} title={project.name} />
-        </div>
+        <>
+        <GalleryPhotos 
+          galleryFolder={`projects/${project.id}`} 
+          galleryPhotos={project.images} 
+          projectGallery 
+        />
+        {JSON.stringify(project.images)}
+        </>
       )}
 
       {/* Skill Icons */}

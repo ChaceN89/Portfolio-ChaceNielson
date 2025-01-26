@@ -39,8 +39,9 @@ import React from 'react';
 // import Carousel from 'react-gallery-carousel';
 // import 'react-gallery-carousel/dist/index.css';
 import './ImageCarousel.css';
+import GalleryPhotos from '../../photoGallery/GalleryPhotos';
 
-function ProjectImageCarousel({ images, id, title }) {
+function ProjectImageCarousel({galleryFolder, images, id, title }) {
 
   // Set up image objects for carousel component/library
   const carouselImages = images.map((image) => ({
@@ -51,21 +52,7 @@ function ProjectImageCarousel({ images, id, title }) {
 
   return (
     <div className="flex flex-wrap justify-center gap-4 mb-6">
-      {carouselImages.length > 0 ? (
-        // <Carousel
-        //   images={carouselImages}
-        //   isAutoPlaying={true}
-        //   hasThumbnails={true}
-        //   hasIndexBoard={false}
-        //   className="carousel-container"
-        //   objectFit="contain"
-        //   shouldLazyLoad={true} 
-        //   hasSizeButton={false}
-        // />
-        <div>Carousel</div>
-      ) : (
-        null
-      )}
+      {carouselImages.length > 0 && ( <GalleryPhotos galleryPhotos={carouselImages} galleryFolder={galleryFolder} /> )}
     </div>
   );
 }

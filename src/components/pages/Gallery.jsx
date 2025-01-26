@@ -1,25 +1,22 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { projectParam, skillParam } from '../../data/globals'
+import GalleryPhotos from '../photoGallery/GalleryPhotos';
+import FadeTransition from '../animations/FadeTransition';
+import BackgroundWrapper from '../wrappers/BackgroundWrapper';
+import { galleryPhotos, galleryFolder } from '../../data/pageData/galleryData';
 
 
 export default function Gallery() {
   return (
-    <div className="space-y-5 flex flex-col items-center justify-center">
-      <h1>gallery Page</h1>
-      <Link
-        className="hover:bg-red-600 hover:text-white p-4 rounded-md bg-blue-300"
-        to={`?${projectParam}=capstone`}
+    <FadeTransition>
+      <BackgroundWrapper
+        className="min-h-screen"
+        src={"/png-backgrounds/overlays/scratch-1.png"}
+        backgroundRepeat="repeat"
+        backgroundAttachment="scroll"
+        bgOpacity={40}
       >
-        Open Capstone Project Modal from Gallery
-      </Link>
-      <br />
-      <Link
-        className="hover:bg-red-600 hover:text-white p-4 rounded-md bg-blue-300"
-        to={`?${skillParam}=frontend`}
-      >
-        Open Frontend Skills Modal from Gallery
-      </Link>
-    </div>
-  )
+        <GalleryPhotos galleryPhotos={galleryPhotos} galleryFolder={galleryFolder}/>
+      </BackgroundWrapper>
+    </FadeTransition>
+  );
 }

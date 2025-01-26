@@ -4,7 +4,7 @@
  * @desc Utility functions used across the application.
  * 
  * @created July 28, 2024
- * @updated Jan 22, 2025
+ * @updated Jan 26, 2025
  */
 
 /**

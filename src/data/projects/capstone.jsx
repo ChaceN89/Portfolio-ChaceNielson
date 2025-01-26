@@ -30,6 +30,14 @@ const long = (
   </div>
 );
 
+const features = [
+  "Unity simulation of CO2 separation device",
+  "Physical prototype testing",
+  "Deep ocean hydrostatic pressure concept",
+  "Energy storage system visualization",
+  "Controlled pool testing",
+];
+
 export const capstone = {
   starred: true,
   id: "capstone", // id and folder name in the projects folder
@@ -37,6 +45,7 @@ export const capstone = {
   tag: "Engineering",
   blurb: short,
   description: long,
+  features: features,
   images: [
     { src: "highlight.jpg", blurhash: "LYEEK4o$t7od_6e.X7W=-_aJkBWr" },
     { src: "capstone1.jpg", blurhash: "LCCtg~4#5[xt~bkMITWU0C-s-qRj" },

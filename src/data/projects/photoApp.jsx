@@ -28,12 +28,17 @@ const long = (
   </div>
 );
 
+const features = [
+  "Mod",
+];
+
 export const photoApp = {
   id: "photo-app",
   name: "Photo App",
   tag: "Full-Stack",
   blurb: short,
   description: long,
+features: features,
   images: [
     { src: "photo2.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
     { src: "photo6.jpg", blurhash: "LG9@uBj[4nR..At8ogkC%Lt8xuad" },

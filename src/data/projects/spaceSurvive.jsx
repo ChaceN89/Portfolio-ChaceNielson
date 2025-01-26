@@ -28,12 +28,17 @@ const long = (
   </div>
 );
 
+const features = [
+  "Mod",
+];
+
 export const spaceSurvive = {
   id: "space-survive",
   name: "2D Space Shooter",
   tag: "Game",
   blurb: short,
   description: long,
+  features: features,
   images: [
     { src: "spaceSurvive.jpg", blurhash: "L26@E32tL#5kq?Io%%%hyEofR3j?" },
   ],

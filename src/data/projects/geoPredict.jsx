@@ -34,6 +34,10 @@ const long = (
   </div>
 );
 
+const features = [
+  "Mod",
+];
+
 export const geoPredict = {
   starred: true,
   id: "geo-predict", // id and folder name in the projects folder
@@ -41,6 +45,7 @@ export const geoPredict = {
   tag: "Full-Stack",
   blurb: short,
   description: long,
+  features: features,
   images: [
     { src: "highlight.jpg", blurhash: "G39%h%.lA8yWNExv4.t600%M^,X7-qITNG9Y" },
     { src: "crossPlot.jpg", blurhash: "q2Hog|GOtj%4nAwQ$n$-=OnBr_kBX4XNkUbq+S#uVtNYXfXNNrSb*EPKSva3nAm@m@nADhaMxcs;NFR%ozoy:vr2srgJS[Xfkob=" },

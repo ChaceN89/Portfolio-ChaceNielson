@@ -31,6 +31,10 @@ const long = (
   </div>
 );
 
+const features = [
+  "Mod",
+];
+
 export const portfolio = {
   starred: true,
   id: "portfolio",
@@ -38,6 +42,7 @@ export const portfolio = {
   tag: "UX/UI",
   blurb: short,
   description: long,
+features: features,
   images: [
     { src: "portfolio.jpg", blurhash: "C78g,54m9F_4X9V?aexv" },
     { src: "portfolio2.jpg", blurhash: "L78g,54m9F_4X9V?aexv9Ft7s;I." },

@@ -25,12 +25,17 @@ const long = (
   </div>
 );
 
+const features = [
+  "Mod",
+];
+
 export const scaleTheDepths = {
   id: "scale-the-depths",
   name: "Scale The Depths",
   tag: "Game",
   blurb: short,
   description: long,
+features: features,
   images: [
     { src: "scaleTheDepths1.jpg", blurhash: "LaJuWDA0SdTLuPIUwbt8buRPtSoz" },
     { src: "scaleTheDepths2.jpg", blurhash: "LoGKwfoexZI@.TjYn$S54;WAM{t7" },

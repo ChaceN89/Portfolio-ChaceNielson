@@ -28,12 +28,17 @@ const long = (
   </div>
 );
 
+const features = [
+  "Mod",
+];
+
 export const jenga = {
   id: "jenga",
   name: "Virtual Jenga",
   tag: "Game",
   blurb: short,
   description: long,
+features: features,
   images: [
     { src: "jenga5.jpg", blurhash: "LJFiSzt700WB00Rj~pof?uofMeWB" },
     { src: "jenga4.jpg", blurhash: "LCIhpix[00M|00M{~pt7?vt7Meae" },

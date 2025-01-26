@@ -28,6 +28,10 @@ const long = (
   </div>
 );
 
+const features = [
+  "Mod",
+];
+
 export const jobDashboard = {
   starred: true,
   id: "job-dashboard",
@@ -35,6 +39,7 @@ export const jobDashboard = {
   tag: "Full-Stack",
   blurb: short,
   description: long,
+features: features,
   images: [
     { src: "jobDashboard.jpg", blurhash: "L7Op#=4mxu?cE2IokBxb9+%jj=Mv" },
   ],

@@ -28,6 +28,10 @@ const long = (
   </div>
 );
 
+const features = [
+  "Mod",
+];
+
 export const cardGenerator = {
   starred: true,
   id: "card-generator", 
@@ -35,6 +39,7 @@ export const cardGenerator = {
   tag: "UX/UI",
   blurb: short,
   description: long,
+  features: features,
   images: [
     { src: "cardGenerator1.jpg", blurhash: "LDPjP,bc~VxC$uW?NPr=DkWs%Ks8" },
     { src: "cardGenerator2.jpg", blurhash: "LLONRkWDkCjJ~Mj[ofayEBj[oJbF" },

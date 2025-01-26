@@ -28,6 +28,10 @@ const long = (
   </div>
 );
 
+const features = [
+  "Mod",
+];
+
 export const drillbotics = {
   starred: true,
   id: "drillbotics",
@@ -35,6 +39,7 @@ export const drillbotics = {
   tag: "Engineering",
   blurb: short,
   description: long,
+  features: features,
   images: [
     { src: "drillbotics1.jpg", blurhash: "LAH-rkQ,yG-ncrO@%M0L=}00-iIB" },
     { src: "drillbotics0.jpg", blurhash: "L2Ps@p00~nS^00OT_2D*008^R;Di" },

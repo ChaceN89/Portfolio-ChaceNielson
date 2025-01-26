@@ -67,6 +67,7 @@ export const exampleProject = {
       <p>This is a detailed description of the example project, providing insights into the development process, technologies used, and key features implemented.</p>
     </div>
   ),
+  features: features, // List of Features in text
   youtubeEmbed: "youtube-embed link",
   images: [
     { src: "example1.jpg", blurhash: "L9AD+Zxu0z~pIVRjMxRj0L~q0La#" },

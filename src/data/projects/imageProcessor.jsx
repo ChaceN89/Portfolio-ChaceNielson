@@ -31,6 +31,10 @@ const long = (
   </div>
 );
 
+const features = [
+  "Mod",
+];
+
 export const imageProcessor = {
   starred: true,
   id: "image-processor",
@@ -38,6 +42,7 @@ export const imageProcessor = {
   tag: "Full-Stack",
   blurb: short,
   description: long,
+features: features,
   images: [
     { src: "imageProcessor.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
     { src: "imageProcessor2.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
