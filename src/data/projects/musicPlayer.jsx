@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A music player application built with Vue and Tailwind.";
@@ -41,15 +41,15 @@ export const musicPlayer = {
     { src: "musicPlayer1.jpg", blurhash: "LKMQ;at1-;-=t6IUof%2_4%NM{IT" },
   ],
   mainStack: [
-    IconSkills.VUE,
-    IconSkills.TAILWINDCSS,
+    IconLibrary.VUE,
+    IconLibrary.TAILWINDCSS,
   ],
   extendedStack: [
-    IconSkills.VERCEL,
-    IconSkills.RESPONSIVE_DESIGN
+    IconLibrary.VERCEL,
+    IconLibrary.RESPONSIVE_DESIGN
   ],
   externalLinks: [
-    { name: "Website", link: "https://music-player-chace-nielsons-projects.vercel.app/", icon: IconSkills.MUSIC.icon },
-    { name: "Code", link: "https://github.com/ChaceN89/music-player", icon: IconSkills.GITHUB.icon },
+    { name: "Website", link: "https://music-player-chace-nielsons-projects.vercel.app/", icon: IconLibrary.MUSIC.icon },
+    { name: "Code", link: "https://github.com/ChaceN89/music-player", icon: IconLibrary.GITHUB.icon },
   ],
 };

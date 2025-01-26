@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Virtual Jenga using haptics built in Unity Game Engine.";
@@ -43,17 +43,17 @@ export const jenga = {
   ],
   youtubeEmbed: "https://www.youtube.com/watch?v=e-xqfE_f2uc",
   mainStack:[
-    IconSkills.UNITY,
-    IconSkills.CSHARP,
+    IconLibrary.UNITY,
+    IconLibrary.CSHARP,
   ],
   extendedStack:[
-    IconSkills.GIT,
-    IconSkills.UNITY_PHYSICS,
-    IconSkills.OPEN_HAPTICS,
-    IconSkills.HAPTIC_STYLUS,
+    IconLibrary.GIT,
+    IconLibrary.UNITY_PHYSICS,
+    IconLibrary.OPEN_HAPTICS,
+    IconLibrary.HAPTIC_STYLUS,
   ],
   externalLinks: [
-    { name: "Code", link: "https://github.com/ChaceN89/Haptic-Jenga", icon: IconSkills.GITHUB.icon },
-    { name: "Report", pdf: "Jenga Report.pdf", icon: IconSkills.PDF.icon }
+    { name: "Code", link: "https://github.com/ChaceN89/Haptic-Jenga", icon: IconLibrary.GITHUB.icon },
+    { name: "Report", pdf: "Jenga Report.pdf", icon: IconLibrary.PDF.icon }
   ],
 };

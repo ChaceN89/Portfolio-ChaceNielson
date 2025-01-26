@@ -10,7 +10,7 @@
  * @updated 2024-08-09
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = <>Concept simulation and physical prototype for CO<sub>2</sub> separation device.</>;
@@ -49,23 +49,23 @@ export const capstone = {
   ],
   youtubeEmbed: "https://www.youtube.com/watch?v=TvnBOPB7dhc",
   mainStack: [
-    IconSkills.UNITY,
-    IconSkills.BLENDER,
-    IconSkills.CSHARP,
+    IconLibrary.UNITY,
+    IconLibrary.BLENDER,
+    IconLibrary.CSHARP,
   ],
   extendedStack: [
-    IconSkills.SIMULATION,
-    IconSkills.ENGINEERING,
-    IconSkills.CIRCUITY,
-    IconSkills.ANIMATION,
-    IconSkills.LEADERSHIP,
-    IconSkills.ADAPTABILITY,
-    IconSkills.DESIGN_3D,
-    IconSkills.FABRICATION,
+    IconLibrary.SIMULATION,
+    IconLibrary.ENGINEERING,
+    IconLibrary.CIRCUITY,
+    IconLibrary.ANIMATION,
+    IconLibrary.LEADERSHIP,
+    IconLibrary.ADAPTABILITY,
+    IconLibrary.DESIGN_3D,
+    IconLibrary.FABRICATION,
   ],
   externalLinks: [
-    { name: "Unity Simulation", link: "https://dev3933.d18ixp0pwlw4ex.amplifyapp.com/", icon: IconSkills.UNITY.icon },
-    { name: "Poster", pdf: "Capstone Poster.pdf", icon: IconSkills.PDF.icon },
-    { name: "Report", pdf: "Capstone Final Report.pdf", icon: IconSkills.PDF.icon }
+    { name: "Unity Simulation", link: "https://dev3933.d18ixp0pwlw4ex.amplifyapp.com/", icon: IconLibrary.UNITY.icon },
+    { name: "Poster", pdf: "Capstone Poster.pdf", icon: IconLibrary.PDF.icon },
+    { name: "Report", pdf: "Capstone Final Report.pdf", icon: IconLibrary.PDF.icon }
   ],
 };

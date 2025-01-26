@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Image processing task queue using React and FastAPI.";
@@ -44,17 +44,17 @@ export const imageProcessor = {
     { src: "imageProcessor3.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
   ],
   mainStack:[
-    IconSkills.REACT,
-    IconSkills.FASTAPI,
-    IconSkills.TYPESCRIPT,
+    IconLibrary.REACT,
+    IconLibrary.FASTAPI,
+    IconLibrary.TYPESCRIPT,
   ],
   extendedStack:[
-    IconSkills.PYTHON,
-    IconSkills.RAILWAY,
-    IconSkills.RENDER,
+    IconLibrary.PYTHON,
+    IconLibrary.RAILWAY,
+    IconLibrary.RENDER,
   ],
   externalLinks: [
-    { name: "Website", link: "https://main--img-processor.netlify.app/", icon: IconSkills.WORLD.icon },
-    { name: "Code", link: "https://github.com/ChaceN89/image-processor", icon: IconSkills.GITHUB.icon },
+    { name: "Website", link: "https://main--img-processor.netlify.app/", icon: IconLibrary.WORLD.icon },
+    { name: "Code", link: "https://github.com/ChaceN89/image-processor", icon: IconLibrary.GITHUB.icon },
   ],
 };

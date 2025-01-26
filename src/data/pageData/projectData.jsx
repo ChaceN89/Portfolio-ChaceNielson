@@ -73,18 +73,18 @@ export const exampleProject = {
     { src: "example2.jpg", blurhash: "L6CFpEbH00D$^gRkozoJ_3oLx]jE" },
   ],
   mainStack: [
-    IconSkills.REACT,
-    IconSkills.NODEJS,
+    IconLibrary.REACT,
+    IconLibrary.NODEJS,
     // Add more icons as needed
   ],
   extendedStack: [
-    IconSkills.TYPESCRIPT,
-    IconSkills.MONGODB,
+    IconLibrary.TYPESCRIPT,
+    IconLibrary.MONGODB,
     // Add more icons as needed
   ],
   externalLinks: [
-    { name: "GitHub", link: "https://github.com/example", icon: IconSkills.GITHUB.icon },
-    { name: "Live Demo", link: "https://example.com", icon: IconSkills.WORLD.icon },
+    { name: "GitHub", link: "https://github.com/example", icon: IconLibrary.GITHUB.icon },
+    { name: "Live Demo", link: "https://example.com", icon: IconLibrary.WORLD.icon },
   ],
 };
 

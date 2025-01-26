@@ -15,7 +15,7 @@
  * @updated 2024-08-09
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 export const geothermalWork = { // Geothermal
   name: 'Energi Simulation Centre for Geothermal Systems Research',
@@ -35,17 +35,17 @@ export const geothermalWork = { // Geothermal
     'Played a key role in interviewing and selecting candidates for new developer positions.',
   ],
   skills: [
-    IconSkills.REACT,
-    IconSkills.DOCKER,
-    IconSkills.POSTGRESQL,
-    IconSkills.FASTAPI,
-    IconSkills.PYTHON,
-    IconSkills.TAILWIND,
+    IconLibrary.REACT,
+    IconLibrary.DOCKER,
+    IconLibrary.POSTGRESQL,
+    IconLibrary.FASTAPI,
+    IconLibrary.PYTHON,
+    IconLibrary.TAILWIND,
   ],
   softSkills: [
-    IconSkills.SELF_MOTIVATION,
-    IconSkills.LEADERSHIP,
-    IconSkills.TEAM_COLLABORATION,
-    IconSkills.ADAPTABILITY,
+    IconLibrary.SELF_MOTIVATION,
+    IconLibrary.LEADERSHIP,
+    IconLibrary.TEAM_COLLABORATION,
+    IconLibrary.ADAPTABILITY,
   ],
 };

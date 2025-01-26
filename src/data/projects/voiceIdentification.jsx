@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Voice identification user interface using machine learning.";
@@ -46,13 +46,13 @@ export const voiceIdentification = {
     { src: "voice_recognition5.jpg", blurhash: "L3PQ87RjoeM{_2WB_4Rj00xu-:xu" },
   ],
   mainStack: [
-    IconSkills.PLOTLY_DASH,
-    IconSkills.PYTHON,
-    IconSkills.MACHINE_LEARNING,
+    IconLibrary.PLOTLY_DASH,
+    IconLibrary.PYTHON,
+    IconLibrary.MACHINE_LEARNING,
   ],
   externalLinks: [
-    { name: "Code", link: "https://github.com/ChaceN89/voice-recognition", icon: IconSkills.GITHUB.icon },
-    { name: "Notebook", link: "https://github.com/ChaceN89/voice-recognition/blob/main/original_notebook/ENCM%20Final%20Project%20Speech%20Recognition.ipynb", icon: IconSkills.GITHUB.icon },
-    { name: "Report", pdf: "Voice ID Report.pdf", icon: IconSkills.PDF.icon },
+    { name: "Code", link: "https://github.com/ChaceN89/voice-recognition", icon: IconLibrary.GITHUB.icon },
+    { name: "Notebook", link: "https://github.com/ChaceN89/voice-recognition/blob/main/original_notebook/ENCM%20Final%20Project%20Speech%20Recognition.ipynb", icon: IconLibrary.GITHUB.icon },
+    { name: "Report", pdf: "Voice ID Report.pdf", icon: IconLibrary.PDF.icon },
   ],
 };

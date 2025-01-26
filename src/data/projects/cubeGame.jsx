@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "An endless runner game developed using Unity Game Engine.";
@@ -42,14 +42,14 @@ export const cubeGame = {
     { src: "cube4.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
   ],
   mainStack: [
-    IconSkills.UNITY,
-    IconSkills.CSHARP,
+    IconLibrary.UNITY,
+    IconLibrary.CSHARP,
   ],
   extendedStack: [
-    IconSkills.GAME_DEVELOPMENT,
-    IconSkills.UNITY_PHYSICS,
+    IconLibrary.GAME_DEVELOPMENT,
+    IconLibrary.UNITY_PHYSICS,
   ],
   externalLinks: [
-    { name: "Play Game", link: "https://kar2fast.itch.io/cube-game", icon: IconSkills.ITCHIO.icon },
+    { name: "Play Game", link: "https://kar2fast.itch.io/cube-game", icon: IconLibrary.ITCHIO.icon },
   ],
 };

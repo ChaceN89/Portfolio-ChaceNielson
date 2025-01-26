@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Full-Stack photo gallery application with user authentication.";
@@ -44,20 +44,20 @@ export const photoApp = {
   ],
   youtubeEmbed:"https://www.youtube.com/watch?v=mktAIV4sjFQ",
   mainStack: [
-    IconSkills.REACT,
-    IconSkills.MONGODB,
-    IconSkills.EXPRESSJS,
+    IconLibrary.REACT,
+    IconLibrary.MONGODB,
+    IconLibrary.EXPRESSJS,
   ],
   extendedStack: [
-    IconSkills.FULL_STACK,
-    IconSkills.AUTHENTICATION,
-    IconSkills.NODE_JS,
-    IconSkills.RESPONSIVE_DESIGN,
-    IconSkills.HTML,
-    IconSkills.CSS,
+    IconLibrary.FULL_STACK,
+    IconLibrary.AUTHENTICATION,
+    IconLibrary.NODE_JS,
+    IconLibrary.RESPONSIVE_DESIGN,
+    IconLibrary.HTML,
+    IconLibrary.CSS,
   ],
   externalLinks: [
-    { name: "Overview", link: "https://www.youtube.com/watch?v=mktAIV4sjFQ", icon: IconSkills.YOUTUBE.icon },
-    { name: "Code", link: "https://github.com/ChaceN89/Aviar", icon: IconSkills.GITHUB.icon },
+    { name: "Overview", link: "https://www.youtube.com/watch?v=mktAIV4sjFQ", icon: IconLibrary.YOUTUBE.icon },
+    { name: "Code", link: "https://github.com/ChaceN89/Aviar", icon: IconLibrary.GITHUB.icon },
   ],
 };

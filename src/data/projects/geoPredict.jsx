@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Web application for analyzing drilling data using machine learning models.";
@@ -49,25 +49,25 @@ export const geoPredict = {
   ],
   youtubeEmbed: "https://www.youtube.com/watch?v=oTU0C_8-dSw",
   mainStack: [
-    IconSkills.REACT,
-    IconSkills.FASTAPI,
-    IconSkills.POSTGRESQL,
-    IconSkills.TAILWINDCSS,
+    IconLibrary.REACT,
+    IconLibrary.FASTAPI,
+    IconLibrary.POSTGRESQL,
+    IconLibrary.TAILWINDCSS,
   ],
   extendedStack: [
-    IconSkills.FULL_STACK,
-    IconSkills.PYTHON,
-    IconSkills.DOCKER,
-    IconSkills.REDUX,
-    IconSkills.DATA_ANALYSIS,
-    IconSkills.CLOUD_DEPLOYMENT,
-    IconSkills.MACHINE_LEARNING,
-    IconSkills.AUTHENTICATION,
-    IconSkills.LEADERSHIP,
-    IconSkills.CODE_REVIEWS,
-    IconSkills.DATA_VISUALIZATION,
+    IconLibrary.FULL_STACK,
+    IconLibrary.PYTHON,
+    IconLibrary.DOCKER,
+    IconLibrary.REDUX,
+    IconLibrary.DATA_ANALYSIS,
+    IconLibrary.CLOUD_DEPLOYMENT,
+    IconLibrary.MACHINE_LEARNING,
+    IconLibrary.AUTHENTICATION,
+    IconLibrary.LEADERSHIP,
+    IconLibrary.CODE_REVIEWS,
+    IconLibrary.DATA_VISUALIZATION,
   ],
   externalLinks: [
-    { name: "Website", link: "http://136.159.140.62/", icon: IconSkills.WORLD.icon },
+    { name: "Website", link: "http://136.159.140.62/", icon: IconLibrary.WORLD.icon },
   ],
 };

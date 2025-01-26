@@ -15,7 +15,7 @@
  * @updated 2024-08-09
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 export const albertaTomorrowWork = { // Alberta Tomorrow
   name: 'Alberta Tomorrow',
@@ -34,18 +34,18 @@ export const albertaTomorrowWork = { // Alberta Tomorrow
     "Assisted in managing project resources to meet deadlines and budget constraints." 
  ],
   skills: [
-    IconSkills.AWS,
-    IconSkills.S3,
-    IconSkills.VUE,
-    IconSkills.CSS,
-    IconSkills.MAPBOX_GL,
-    IconSkills.UNITY,
-    IconSkills.BLENDER,
+    IconLibrary.AWS,
+    IconLibrary.S3,
+    IconLibrary.VUE,
+    IconLibrary.CSS,
+    IconLibrary.MAPBOX_GL,
+    IconLibrary.UNITY,
+    IconLibrary.BLENDER,
   ],
   softSkills: [
-    IconSkills.CRITICAL_THINKING,
-    IconSkills.ADAPTABILITY,
-    IconSkills.TIME_MANAGEMENT,
-    IconSkills.SELF_MOTIVATION,
+    IconLibrary.CRITICAL_THINKING,
+    IconLibrary.ADAPTABILITY,
+    IconLibrary.TIME_MANAGEMENT,
+    IconLibrary.SELF_MOTIVATION,
   ],
 };

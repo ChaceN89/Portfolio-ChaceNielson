@@ -15,7 +15,7 @@
  * @updated 2024-08-09
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 export const glassGeckoWork = {
   name: 'Glass Gecko Games',
@@ -35,17 +35,17 @@ export const glassGeckoWork = {
     'Collaborated on resolving complex game design issues and challenges.',
   ],
   skills: [
-    IconSkills.UNITY,
-    IconSkills.PLASTIC_SCM,
-    IconSkills.CSHARP,
-    IconSkills.GAME_DESIGN,
-    IconSkills.WEB_DESIGN,
-    IconSkills.REACT,
+    IconLibrary.UNITY,
+    IconLibrary.PLASTIC_SCM,
+    IconLibrary.CSHARP,
+    IconLibrary.GAME_DESIGN,
+    IconLibrary.WEB_DESIGN,
+    IconLibrary.REACT,
   ], 
   softSkills: [
-    IconSkills.PROBLEM_SOLVING,
-    IconSkills.TEAM_COLLABORATION,
-    IconSkills.CREATIVITY,
-    IconSkills.COMMUNICATION,
+    IconLibrary.PROBLEM_SOLVING,
+    IconLibrary.TEAM_COLLABORATION,
+    IconLibrary.CREATIVITY,
+    IconLibrary.COMMUNICATION,
   ],
 };

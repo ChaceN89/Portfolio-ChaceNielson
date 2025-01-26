@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Job dashboard for managing job applications and interviews.";
@@ -39,20 +39,20 @@ export const jobDashboard = {
     { src: "jobDashboard.jpg", blurhash: "L7Op#=4mxu?cE2IokBxb9+%jj=Mv" },
   ],
   mainStack:[
-    IconSkills.VUE,
-    IconSkills.TAILWINDCSS,
-    IconSkills.FASTAPI,
-    IconSkills.SQLITE,
+    IconLibrary.VUE,
+    IconLibrary.TAILWINDCSS,
+    IconLibrary.FASTAPI,
+    IconLibrary.SQLITE,
   ],
   extendedStack:[
-    IconSkills.FULL_STACK,
-    IconSkills.PYTHON,
-    IconSkills.NETLIFY,
-    IconSkills.RENDER,
-    IconSkills.RESPONSIVE_DESIGN
+    IconLibrary.FULL_STACK,
+    IconLibrary.PYTHON,
+    IconLibrary.NETLIFY,
+    IconLibrary.RENDER,
+    IconLibrary.RESPONSIVE_DESIGN
   ],
   externalLinks: [
-    { name: "Website", link: "https://job-dashboard-chace.netlify.app/", icon: IconSkills.WORLD.icon },
-    { name: "Code", link: "https://github.com/ChaceN89/job-dashboard", icon: IconSkills.GITHUB.icon },
+    { name: "Website", link: "https://job-dashboard-chace.netlify.app/", icon: IconLibrary.WORLD.icon },
+    { name: "Code", link: "https://github.com/ChaceN89/job-dashboard", icon: IconLibrary.GITHUB.icon },
   ],
 };

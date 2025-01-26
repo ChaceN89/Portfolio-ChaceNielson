@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "My original portfolio.";
@@ -43,21 +43,21 @@ export const portfolio = {
     { src: "portfolio2.jpg", blurhash: "L78g,54m9F_4X9V?aexv9Ft7s;I." },
   ],
   mainStack: [
-    IconSkills.REACT,
-    IconSkills.TAILWINDCSS,
+    IconLibrary.REACT,
+    IconLibrary.TAILWINDCSS,
   ],
   extendedStack: [
-    IconSkills.FRAMER_MOTION,
-    IconSkills.BLURHASH,
-    IconSkills.VERCEL,
-    IconSkills.RESPONSIVE_DESIGN,
-    IconSkills.SEO,
-    IconSkills.PWA,
-    IconSkills.EMAILJS
+    IconLibrary.FRAMER_MOTION,
+    IconLibrary.BLURHASH,
+    IconLibrary.VERCEL,
+    IconLibrary.RESPONSIVE_DESIGN,
+    IconLibrary.SEO,
+    IconLibrary.PWA,
+    IconLibrary.EMAILJS
   ],
   externalLinks: [
-    { name: "Version 1", link: "https://portfolio-chace-nielson.vercel.app/", icon: IconSkills.WORLD.icon },
-    { name: "Version 1 Code", link: "https://github.com/ChaceN89/Portfolio-ChaceNielson", icon: IconSkills.GITHUB.icon },
-    { name: "Version 2 Code",  link: "https://github.com/ChaceN89/Portfolio-ChaceNielson-V2", icon: IconSkills.GITHUB.icon },
+    { name: "Version 1", link: "https://portfolio-chace-nielson.vercel.app/", icon: IconLibrary.WORLD.icon },
+    { name: "Version 1 Code", link: "https://github.com/ChaceN89/Portfolio-ChaceNielson", icon: IconLibrary.GITHUB.icon },
+    { name: "Version 2 Code",  link: "https://github.com/ChaceN89/Portfolio-ChaceNielson-V2", icon: IconLibrary.GITHUB.icon },
   ]
 };

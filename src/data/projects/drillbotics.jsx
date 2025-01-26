@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Functional mini drill rig and real-time GUI.";
@@ -46,18 +46,18 @@ export const drillbotics = {
   ],
   youtubeEmbed: "https://www.youtube.com/watch?v=5Z8g44RXl2c"  ,
   mainStack: [
-    IconSkills.PLOTLY_DASH,
-    IconSkills.PYTHON,
+    IconLibrary.PLOTLY_DASH,
+    IconLibrary.PYTHON,
   ],
   extendedStack: [
-    IconSkills.ENGINEERING,
-    IconSkills.CIRCUITY,
-    IconSkills.DATA_VISUALIZATION,
-    IconSkills.SIMULATION,
-    IconSkills.FABRICATION
+    IconLibrary.ENGINEERING,
+    IconLibrary.CIRCUITY,
+    IconLibrary.DATA_VISUALIZATION,
+    IconLibrary.SIMULATION,
+    IconLibrary.FABRICATION
   ],
   externalLinks: [
-    { name: "GUI Example", link: "https://www.youtube.com/watch?v=xF9heykeFU4", icon: IconSkills.YOUTUBE.icon },
-    { name: "The Competion", link: "https://drillbotics.com/winners/", icon: IconSkills.WORLD.icon },
+    { name: "GUI Example", link: "https://www.youtube.com/watch?v=xF9heykeFU4", icon: IconLibrary.YOUTUBE.icon },
+    { name: "The Competion", link: "https://drillbotics.com/winners/", icon: IconLibrary.WORLD.icon },
   ],
 };

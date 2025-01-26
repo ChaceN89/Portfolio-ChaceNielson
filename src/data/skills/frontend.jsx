@@ -7,7 +7,7 @@
  * @updated Jan 23, 2025
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 export const frontend = { 
   id: "frontend-development",
@@ -19,31 +19,31 @@ export const frontend = {
     </span>
   ),
   topSkills: [
-    IconSkills.NEXT,
-    IconSkills.REACT,
-    IconSkills.JAVASCRIPT,
-    IconSkills.TAILWIND,
+    IconLibrary.NEXT,
+    IconLibrary.REACT,
+    IconLibrary.JAVASCRIPT,
+    IconLibrary.TAILWIND,
   ],
   minorSkills: [
-    IconSkills.VUE,
-    IconSkills.VITE,
-    IconSkills.TYPESCRIPT,
+    IconLibrary.VUE,
+    IconLibrary.VITE,
+    IconLibrary.TYPESCRIPT,
         
-    IconSkills.RESPONSIVE_DESIGN,
-    IconSkills.HTML,
-    IconSkills.CSS,
+    IconLibrary.RESPONSIVE_DESIGN,
+    IconLibrary.HTML,
+    IconLibrary.CSS,
     
-    IconSkills.REDUX,
-    IconSkills.CHART_JS,
-    IconSkills.FRAMER_MOTION,
-    IconSkills.STREAMLIT,
+    IconLibrary.REDUX,
+    IconLibrary.CHART_JS,
+    IconLibrary.FRAMER_MOTION,
+    IconLibrary.STREAMLIT,
 
-    IconSkills.EMAIL_JS,
-    IconSkills.GOOGLE_ANALYTICS,
+    IconLibrary.EMAIL_JS,
+    IconLibrary.GOOGLE_ANALYTICS,
 
-    IconSkills.PWA,
-    IconSkills.SEO,
-    IconSkills.DATA_VISUALIZATION,
+    IconLibrary.PWA,
+    IconLibrary.SEO,
+    IconLibrary.DATA_VISUALIZATION,
 
   ],
 };

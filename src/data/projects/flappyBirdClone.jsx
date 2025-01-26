@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A Flappy Bird clone developed using Unity Game Engine.";
@@ -36,11 +36,11 @@ export const flappyBirdClone = {
   ],
   youtubeEmbed: "https://www.youtube.com/watch?v=KOZBFfWv8B8"  ,
   mainStack: [
-    IconSkills.UNITY,
-    IconSkills.CSHARP,
+    IconLibrary.UNITY,
+    IconLibrary.CSHARP,
   ],
   extendedStack: [
-    IconSkills.GAME_DEVELOPMENT,
-    IconSkills.UNITY_PHYSICS,
+    IconLibrary.GAME_DEVELOPMENT,
+    IconLibrary.UNITY_PHYSICS,
   ],
 };

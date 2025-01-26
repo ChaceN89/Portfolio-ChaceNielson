@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A 2D space adventure game developed using Unity Game Engine.";
@@ -39,11 +39,11 @@ export const spaceSurvive = {
   ],
   youtubeEmbed:"https://www.youtube.com/watch?v=pwIbyhqWbsM",
   mainStack: [
-    IconSkills.UNITY,
-    IconSkills.CSHARP,
+    IconLibrary.UNITY,
+    IconLibrary.CSHARP,
   ],
   extendedStack: [
-    IconSkills.GAME_DEVELOPMENT,
+    IconLibrary.GAME_DEVELOPMENT,
   ],
 
 };

@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A React Application with State Management.";
@@ -42,16 +42,16 @@ export const cardGenerator = {
 
   ],
   mainStack: [
-    IconSkills.REACT,
-    IconSkills.TAILWINDCSS,
+    IconLibrary.REACT,
+    IconLibrary.TAILWINDCSS,
   ],
   extendedStack: [
-    IconSkills.NETLIFY,
-    IconSkills.STATEMANAGEMENT,
-    IconSkills.RESPONSIVE_DESIGN
+    IconLibrary.NETLIFY,
+    IconLibrary.STATEMANAGEMENT,
+    IconLibrary.RESPONSIVE_DESIGN
   ],
   externalLinks: [
-    { name: "Website", link: "https://card-generator-glass-gecko.netlify.app/", icon: IconSkills.WORLD.icon },
-    { name: "Code", link: "https://github.com/GlassGeckoGames/monster-mash-card-generator", icon: IconSkills.GITHUB.icon },
+    { name: "Website", link: "https://card-generator-glass-gecko.netlify.app/", icon: IconLibrary.WORLD.icon },
+    { name: "Code", link: "https://github.com/GlassGeckoGames/monster-mash-card-generator", icon: IconLibrary.GITHUB.icon },
   ],
 };

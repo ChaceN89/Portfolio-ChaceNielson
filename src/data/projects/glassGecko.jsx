@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "The website built for the Glass Gecko Games team.";
@@ -39,22 +39,22 @@ export const glassGeckoGames = {
     { src: "glassGecko.jpg", blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP" },
   ],
   mainStack: [
-    IconSkills.REACT,
-    IconSkills.TAILWINDCSS,
+    IconLibrary.REACT,
+    IconLibrary.TAILWINDCSS,
   ],
   extendedStack: [
-    IconSkills.FRAMER_MOTION,
-    IconSkills.BLURHASH,
-    IconSkills.NETLIFY,
-    IconSkills.CI_CD,
-    IconSkills.TEAM_COLLABORATION,
-    IconSkills.RESPONSIVE_DESIGN,
-    IconSkills.SEO,
-    IconSkills.PWA,
-    IconSkills.EMAILJS
+    IconLibrary.FRAMER_MOTION,
+    IconLibrary.BLURHASH,
+    IconLibrary.NETLIFY,
+    IconLibrary.CI_CD,
+    IconLibrary.TEAM_COLLABORATION,
+    IconLibrary.RESPONSIVE_DESIGN,
+    IconLibrary.SEO,
+    IconLibrary.PWA,
+    IconLibrary.EMAILJS
   ],
   externalLinks: [
-    { name: "Visit Site", link: "https://glassgeckogames.com", icon: IconSkills.WORLD.icon },
-    { name: "Code", link: "https://github.com/GlassGeckoGames/company-website", icon: IconSkills.GITHUB.icon },
+    { name: "Visit Site", link: "https://glassgeckogames.com", icon: IconLibrary.WORLD.icon },
+    { name: "Code", link: "https://github.com/GlassGeckoGames/company-website", icon: IconLibrary.GITHUB.icon },
   ],
 };

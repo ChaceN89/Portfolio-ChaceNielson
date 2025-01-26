@@ -8,7 +8,7 @@
  */
 
 import React from 'react';
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 export const gameDesign = { 
   id: "game-development",
@@ -20,18 +20,18 @@ export const gameDesign = {
     </span>
   ),
   topSkills: [
-    IconSkills.UNITY,
-    IconSkills.BLENDER,
-    IconSkills.PLASTIC_SCM,
-    IconSkills.CSHARP,
+    IconLibrary.UNITY,
+    IconLibrary.BLENDER,
+    IconLibrary.PLASTIC_SCM,
+    IconLibrary.CSHARP,
   ],
   minorSkills: [
-    IconSkills.GAME_DESIGN,
-    IconSkills.ANIMATION,
-    IconSkills.PATHFINDING,
-    IconSkills.UNITY_PHYSICS,
-    IconSkills.FACTORY_PATTERN,
-    IconSkills.OBSERVER_PATTERN,
-    IconSkills.FLYWEIGHT_PATTERN,
+    IconLibrary.GAME_DESIGN,
+    IconLibrary.ANIMATION,
+    IconLibrary.PATHFINDING,
+    IconLibrary.UNITY_PHYSICS,
+    IconLibrary.FACTORY_PATTERN,
+    IconLibrary.OBSERVER_PATTERN,
+    IconLibrary.FLYWEIGHT_PATTERN,
   ],
 };

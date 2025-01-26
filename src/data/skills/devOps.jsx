@@ -7,7 +7,7 @@
  * @updated Jan 23, 2025
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 export const devOps = {
   id: "devops",
@@ -19,31 +19,31 @@ export const devOps = {
     </span>
   ),
   topSkills: [
-    IconSkills.AWS,
-    IconSkills.DOCKER,
-    IconSkills.CI_CD,
-    IconSkills.GIT,
+    IconLibrary.AWS,
+    IconLibrary.DOCKER,
+    IconLibrary.CI_CD,
+    IconLibrary.GIT,
   ],
   minorSkills: [
     // Version Control
-    IconSkills.GITHUB,
-    IconSkills.AGILE_TOOLS,
+    IconLibrary.GITHUB,
+    IconLibrary.AGILE_TOOLS,
 
     // Infrastructure Management
-    IconSkills.AMPLIFY,
-    IconSkills.RDS,
-    IconSkills.S3,
-    IconSkills.TERRAFORM,
+    IconLibrary.AMPLIFY,
+    IconLibrary.RDS,
+    IconLibrary.S3,
+    IconLibrary.TERRAFORM,
 
     // Deployment & Hosting Platforms
-    IconSkills.NETLIFY,
-    IconSkills.VERCEL,
-    IconSkills.RENDER,
-    IconSkills.RAILWAY,
+    IconLibrary.NETLIFY,
+    IconLibrary.VERCEL,
+    IconLibrary.RENDER,
+    IconLibrary.RAILWAY,
     
     // Automation & Collaboration Tools
-    IconSkills.AUTOMATION,
-    IconSkills.CLOUD_DEPLOYMENT,
-    IconSkills.CODE_REVIEWS,
+    IconLibrary.AUTOMATION,
+    IconLibrary.CLOUD_DEPLOYMENT,
+    IconLibrary.CODE_REVIEWS,
   ],
 };

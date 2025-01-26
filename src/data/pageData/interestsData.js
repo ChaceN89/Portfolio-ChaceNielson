@@ -10,7 +10,7 @@
  * @updated July 28, 2024
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 export const interestsPageData = {
   title: "Interests",
@@ -21,31 +21,31 @@ export const interests = [
   { 
     name: "Snowboarding", 
     description: "I discovered snowboarding in university and have been hooked ever since. It's my favorite winter activity.", 
-    icon: IconSkills.SNOWBOARDING,
+    icon: IconLibrary.SNOWBOARDING,
   },
   { 
     name: "Basketball",
     description: "I played basketball in high school and college, and now enjoy officiating games.",
-    icon: IconSkills.BASKETBALL
+    icon: IconLibrary.BASKETBALL
   },
   { 
     name: "Music",
     description: "I've been playing guitar for 5 years, enjoying both performing songs and writing my own music.",
-    icon: IconSkills.MUSIC
+    icon: IconLibrary.MUSIC
   },
   { 
     name: "Hiking",
     description: "The mountains are my favorite escape. I enjoy hiking and backpacking in all seasons.",
-    icon: IconSkills.HIKING
+    icon: IconLibrary.HIKING
   },
   { 
     name: "Climbing",
     description: "From rock climbing to ice climbing and mountaineering, I've loved climbing my entire life.",
-    icon: IconSkills.MOUNTAIN_CLIMBING
+    icon: IconLibrary.MOUNTAIN_CLIMBING
   },
   { 
     name: "Swimming",
     description: "Swimming has become a recent passion — a fun way to stay active and enjoy the water.",
-    icon: IconSkills.SWIMMING
+    icon: IconLibrary.SWIMMING
   }
 ];

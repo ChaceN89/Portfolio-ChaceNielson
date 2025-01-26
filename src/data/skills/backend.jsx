@@ -7,7 +7,7 @@
  * @updated Jan 23, 2025
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 export const backend = { 
   id: "backend-development",
@@ -19,37 +19,37 @@ export const backend = {
     </span>
   ),
   topSkills: [
-    IconSkills.PYTHON,
-    IconSkills.EXPRESSJS,
-    IconSkills.DJANGO,
-    IconSkills.POSTGRESQL,
+    IconLibrary.PYTHON,
+    IconLibrary.EXPRESSJS,
+    IconLibrary.DJANGO,
+    IconLibrary.POSTGRESQL,
   ],
   minorSkills: [
     // Core Backend Skills
-    IconSkills.FASTAPI,
-    IconSkills.REST_API,
-    IconSkills.NODE_JS,
-    IconSkills.RDS,
-    IconSkills.S3,
+    IconLibrary.FASTAPI,
+    IconLibrary.REST_API,
+    IconLibrary.NODE_JS,
+    IconLibrary.RDS,
+    IconLibrary.S3,
     
     // Databases & Storage
-    IconSkills.MONGODB,
-    IconSkills.MYSQL,
-    IconSkills.SQLITE,
-    IconSkills.AUTHENTICATION,
-    IconSkills.JWT,
-    IconSkills.OAUTH,
+    IconLibrary.MONGODB,
+    IconLibrary.MYSQL,
+    IconLibrary.SQLITE,
+    IconLibrary.AUTHENTICATION,
+    IconLibrary.JWT,
+    IconLibrary.OAUTH,
 
 
     // Backend Frameworks & Tools
-    IconSkills.SWAGGER_UI,
-    IconSkills.PLOTLY_DASH,
+    IconLibrary.SWAGGER_UI,
+    IconLibrary.PLOTLY_DASH,
 
     // Data Processing & Machine Learning
-    IconSkills.APACHE_SPARK,
-    IconSkills.DATA_ANALYSIS,
-    IconSkills.MACHINE_LEARNING,
-    IconSkills.JUPYTER,
-    IconSkills.TENSORFLOW
+    IconLibrary.APACHE_SPARK,
+    IconLibrary.DATA_ANALYSIS,
+    IconLibrary.MACHINE_LEARNING,
+    IconLibrary.JUPYTER,
+    IconLibrary.TENSORFLOW
   ]
 };

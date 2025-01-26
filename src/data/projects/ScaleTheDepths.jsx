@@ -11,7 +11,7 @@
  * @since 2.1
  */
 
-import IconSkills from "../iconLibrary";
+import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Fishing game and winner of the 2024 GMTK Game Jam.";
@@ -41,16 +41,16 @@ export const scaleTheDepths = {
   ],
   // youtubeEmbed: "",
   mainStack:[
-    IconSkills.UNITY,
-    IconSkills.CSHARP,
+    IconLibrary.UNITY,
+    IconLibrary.CSHARP,
   ],
   extendedStack:[
-    IconSkills.PLASTIC_SCM,
-    IconSkills.TEAM_COLLABORATION,
+    IconLibrary.PLASTIC_SCM,
+    IconLibrary.TEAM_COLLABORATION,
   ],
   externalLinks: [
-    { name: "Play the Game", link: "https://serpexnessie.itch.io/scale-the-depths", icon: IconSkills.ITCHIO.icon },
-    { name: "GMTK Game Jam 2024", link: "https://itch.io/jam/gmtk-2024", icon: IconSkills.WORLD.icon },
-    { name: "Top 20 Results Video", link: "https://youtu.be/gqCAeFjB8Uo?si=Wxp0ATxZGN4vtOGH&t=1133", icon: IconSkills.YOUTUBE.icon },
+    { name: "Play the Game", link: "https://serpexnessie.itch.io/scale-the-depths", icon: IconLibrary.ITCHIO.icon },
+    { name: "GMTK Game Jam 2024", link: "https://itch.io/jam/gmtk-2024", icon: IconLibrary.WORLD.icon },
+    { name: "Top 20 Results Video", link: "https://youtu.be/gqCAeFjB8Uo?si=Wxp0ATxZGN4vtOGH&t=1133", icon: IconLibrary.YOUTUBE.icon },
   ],
 };
