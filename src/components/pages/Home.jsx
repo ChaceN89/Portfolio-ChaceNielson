@@ -30,6 +30,7 @@ import Hero from '../homeSections/hero/Hero';
 import CallToAction from '../homeSections/callToAction/CallToAction';
 import TechSkills from '../homeSections/techSkills/TechSkills';
 import JobExperience from '../homeSections/jobExperience/JobExperience';
+import Interests from '../homeSections/interests/Interests';
 
 const HomePage = () => {
   const location = useLocation();
@@ -55,12 +56,12 @@ const HomePage = () => {
       <div id='Experience'>
         <TechSkills />
         <JobExperience />
-        {/* <Interests /> */}
+        <Interests />
       </div>
-      {/* <div id='Projects'>
-        <ProjectSection />
+      <div className='h-72' id='Projects'>
+        {/* <ProjectSection /> */}
       </div>
-      <div id='ContactMe'>
+      {/* <div id='ContactMe'>
         <ContactForm />
       </div> */}
       <ReturnToTop />
