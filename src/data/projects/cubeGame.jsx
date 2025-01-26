@@ -46,7 +46,7 @@ export const cubeGame = {
     IconLibrary.CSHARP,
   ],
   extendedStack: [
-    IconLibrary.GAME_DEVELOPMENT,
+    IconLibrary.GAME_DESIGN,
     IconLibrary.UNITY_PHYSICS,
   ],
   externalLinks: [

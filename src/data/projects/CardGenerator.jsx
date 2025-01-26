@@ -43,7 +43,7 @@ export const cardGenerator = {
   ],
   mainStack: [
     IconLibrary.REACT,
-    IconLibrary.TAILWINDCSS,
+    IconLibrary.TAILWIND,
   ],
   extendedStack: [
     IconLibrary.NETLIFY,

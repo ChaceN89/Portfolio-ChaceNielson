@@ -52,7 +52,7 @@ export const geoPredict = {
     IconLibrary.REACT,
     IconLibrary.FASTAPI,
     IconLibrary.POSTGRESQL,
-    IconLibrary.TAILWINDCSS,
+    IconLibrary.TAILWIND,
   ],
   extendedStack: [
     IconLibrary.FULL_STACK,

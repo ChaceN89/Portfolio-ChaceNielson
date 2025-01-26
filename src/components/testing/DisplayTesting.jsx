@@ -28,6 +28,11 @@ export default function DisplayTesting() {
   // Render children only if in development mode
   if (!isDevelopment) return null;
 
+  // Change title to append "Dev | " to front if in development mode to differentiate tabs when looking at the deployed site
+  if (isDevelopment && !document.title.startsWith('Dev | ')) {
+    document.title = `Dev | ${document.title}`;
+  }
+
   return (
     <>
       <TailwindBreakPoints/>

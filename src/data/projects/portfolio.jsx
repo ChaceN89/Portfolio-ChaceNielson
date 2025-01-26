@@ -44,7 +44,7 @@ export const portfolio = {
   ],
   mainStack: [
     IconLibrary.REACT,
-    IconLibrary.TAILWINDCSS,
+    IconLibrary.TAILWIND,
   ],
   extendedStack: [
     IconLibrary.FRAMER_MOTION,
@@ -53,7 +53,7 @@ export const portfolio = {
     IconLibrary.RESPONSIVE_DESIGN,
     IconLibrary.SEO,
     IconLibrary.PWA,
-    IconLibrary.EMAILJS
+    IconLibrary.EMAIL_JS
   ],
   externalLinks: [
     { name: "Version 1", link: "https://portfolio-chace-nielson.vercel.app/", icon: IconLibrary.WORLD.icon },

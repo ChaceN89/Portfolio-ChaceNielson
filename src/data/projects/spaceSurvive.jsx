@@ -43,7 +43,7 @@ export const spaceSurvive = {
     IconLibrary.CSHARP,
   ],
   extendedStack: [
-    IconLibrary.GAME_DEVELOPMENT,
+    IconLibrary.GAME_DESIGN,
   ],
 
 };

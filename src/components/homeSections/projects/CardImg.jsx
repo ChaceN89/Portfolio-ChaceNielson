@@ -5,14 +5,7 @@
  * This component uses Framer Motion for animations, including opacity and blur
  * effects based on initial load, click state, and hover state. It also utilizes 
  * the ImageComponent wrapper for displaying images with a blurhash.
- *
- * @component CardImg
  * 
- * @requires react
- * @requires motion from 'framer-motion'
- * @requires ImageComponent from '../../wrappers/ImageComponent'
- * 
- * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
  * @see {@link https://www.framer.com/motion/ | Framer Motion Documentation}
  * 
  * @example
@@ -50,8 +43,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
- * @since 2.1
+ * @updated Jan 26 2025
  */
 
 import React from 'react';
@@ -66,9 +58,7 @@ function CardImg({ isInitialLoad, isClicked, isHovered, projID, imgSrc, imgBlurh
       animate={{ 
         opacity: (isInitialLoad || isHovered ? 1 : 0.6),
         filter: isInitialLoad || isClicked || isHovered ? 'blur(0px)' : 'blur(0.5px)',
-        scale: isHovered ? 1.05 : 1 // Add this line to handle scaling
       }}
-      whileHover={{ scale: 1.1 }} // Add this line to handle hover scaling
       transition={{ 
         delay: 0.2, 
         duration: 0.4, ease: 'easeInOut' 

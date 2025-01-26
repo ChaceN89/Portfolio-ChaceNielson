@@ -4,20 +4,7 @@
  * @desc React component that renders an individual project card with animations.
  * This component uses Framer Motion for animations, including elevation on view
  * and hover effects. It also includes navigation to a detailed project page.
- *
- * @component ProjectCard
  * 
- * @requires react
- * @requires useState, useRef, useEffect from 'react'
- * @requires useLocation, useNavigate from 'react-router-dom'
- * @requires useAnimation, useInView from 'framer-motion'
- * @requires ElevateOnView from '../../animations/ElevateOnView'
- * @requires './Card.css'
- * @requires CardImg from './CardImg'
- * @requires CardText from './CardText'
- * @requires CardLearnMore from './CardLearnMore'
- * 
- * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
  * @see {@link https://reactrouter.com/ | React Router Documentation}
  * @see {@link https://www.framer.com/motion/ | Framer Motion Documentation}
  * 
@@ -47,27 +34,32 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
- * @since 2.1
+ * @updated Jan 26 2025
  */
 
+// React
 import React, { useState, useRef, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useAnimation, useInView } from 'framer-motion';
-import ElevateOnView from '../../animations/ElevateOnView';
+
+// Styles
 import './Card.css';
+
+// Components
+import ElevateOnView from '../../animations/ElevateOnView';
 import CardImg from './CardImg';
 import CardText from './CardText';
 import CardLearnMore from './CardLearnMore';
 
 function ProjectCard({ project }) {
-  const location = useLocation();
   const navigate = useNavigate();
 
+  // State variables for hover and click effects
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   const [isInitialLoad, setIsInitialLoad] = useState(true);
 
+  // ref and controls for Framer Motion to determine when the card is in view for animations
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: '0px 0px -75px 0px' });
   const controls = useAnimation();
@@ -79,11 +71,10 @@ function ProjectCard({ project }) {
     }
   }, [controls, inView]);
 
-
   // function to navigate to the project page
   const clickLearnMore = (e) => {
     e.preventDefault();
-    navigate(`/project/${project.id}`, { state: { background: location } });
+    navigate(`/?project=${project.id}`);
   };
 
   return (
@@ -103,7 +94,6 @@ function ProjectCard({ project }) {
           imgBlurhash={project.images[0].blurhash}
           isHovered={isHovered}
         />
-
         <CardText
           clickLearnMore={clickLearnMore}
           isInitialLoad={isInitialLoad}
@@ -111,11 +101,9 @@ function ProjectCard({ project }) {
           inView={inView}
           project={project}
         />
-
         <CardLearnMore
           isHovered={isHovered}
         />
-
       </div>
     </ElevateOnView>
   );

@@ -5,16 +5,7 @@
  * This component uses Framer Motion for slide-in and slide-out animations and AnimatePresence
  * for conditional rendering based on click and hover state. It also includes tooltips and icons 
  * for the main tech stack used in the project.
- *
- * @component CardText
  * 
- * @requires react
- * @requires AnimatePresence, motion from 'framer-motion'
- * @requires globals from '../../data/globals'
- * @requires ShowIcon from '../../components/uiElements/ShowIcon'
- * @requires Tooltip from '../../components/uiElements/Tooltip'
- * 
- * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
  * @see {@link https://www.framer.com/motion/ | Framer Motion Documentation}
  * 
  * @example
@@ -52,8 +43,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
- * @since 2.1
+ * @updated Jan 26 2025
  */
 
 import React from 'react';
@@ -80,38 +70,38 @@ function CardText({ project, isInitialLoad, inView }) {
         }}
       >
         <div className='flex flex-col justify-between h-full p-1.5'>
-          
           <div className=''>
             <h3 className='underline' >{project.name}</h3>
             <p className="text-sm text-darken pt-0.5">{project.blurb}</p>
           </div>
-
-          <div className='flex flex-wrap justify-between w-full  items-center'>
-            <span className='text-darken'>{project.tag}</span>
-            <div className='flex space-x-2 justify-end items-center'>
-              {project.mainStack.map((skill, index) => (
-                <React.Fragment key={index}>
-                  <Tooltip text={skill.name} openDuration={500}>
-                    <ShowIcon 
-                      skill={skill}
-                      size="2.5rem"
-                      useWhiteText={true}
-                      diableMag={true}
-                    />
-                  </Tooltip>
-                  {index < project.mainStack.length - 1 && (
-                    <div className='h-0.5 rounded-full border-accent border-2'/>
-                  )}
-                </React.Fragment>
-              ))}
-            </div>
-          </div>
-
         </div>
 
+        <div className='flex flex-wrap justify-between w-full items-center p-1'>
+          <span className='text-darken '>{project.tag}</span>
+          <div className='flex space-x-2 justify-end items-center'>
+            {project.mainStack.map((skill, index) => (
+              <React.Fragment key={index}>
+                <Tooltip text={skill.name} openDuration={500}>
+                  <ShowIcon 
+                    skill={skill}
+                    size="2.5rem"
+                    useWhiteText={true}
+                    diableMag={true}
+                    noDropShadow
+                  />
+                </Tooltip>
+                {index < project.mainStack.length - 1 && ( // Add the dot between icons
+                  <div className='h-0.5 rounded-full border-accent border-2'/>
+                )}
+              </React.Fragment>
+            ))}
+            
+          </div>
+        </div>
       </motion.div>
     </AnimatePresence>
-  );
+  )
+
 }
 
 export default CardText;

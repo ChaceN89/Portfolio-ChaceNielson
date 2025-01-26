@@ -42,7 +42,7 @@ export const musicPlayer = {
   ],
   mainStack: [
     IconLibrary.VUE,
-    IconLibrary.TAILWINDCSS,
+    IconLibrary.TAILWIND,
   ],
   extendedStack: [
     IconLibrary.VERCEL,

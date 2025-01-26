@@ -7,7 +7,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-05
+ * @updated Jan 26 2025
  */
 import React, { useState, useEffect } from 'react';
 import { projects, projectPageData } from '../../../data/pageData/projectData';
@@ -58,14 +58,13 @@ function ProjectSection() {
       >
         <div className='card-grid-wrapper'>
           {visibleProjects.map((project, index) => (
-            // <ProjectCard key={index} project={project} />
-            <div className='w-full border-2 border-white p-10'>{project.name}</div>
+            <ProjectCard key={index} project={project} />
           ))}
         </div>
         {visibleProjects.length < projects.length && (
           <button 
             onClick={handleViewMore} 
-            className='w-full border-2 bg-frosted-glass text-secondary rounded-lg p-1.5 mt-6 hover:bg-opacity-70 hover:backdrop-blur-none hover:bg-secondary hover:text-primary'
+            className='w-full border-2 bg-frosted-glass text-secondary rounded-lg p-1.5 mt-6 hover:bg-opacity-70 hover:backdrop-blur-none hover:bg-secondary hover:text-primary max-w-md mx-auto flex justify-center items-center' 
           >
             View More...
           </button>

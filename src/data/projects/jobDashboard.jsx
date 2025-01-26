@@ -40,7 +40,7 @@ export const jobDashboard = {
   ],
   mainStack:[
     IconLibrary.VUE,
-    IconLibrary.TAILWINDCSS,
+    IconLibrary.TAILWIND,
     IconLibrary.FASTAPI,
     IconLibrary.SQLITE,
   ],
