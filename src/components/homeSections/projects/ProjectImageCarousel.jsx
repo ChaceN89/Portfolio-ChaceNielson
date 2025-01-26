@@ -36,8 +36,8 @@
  */
 
 import React from 'react';
-import Carousel from 'react-gallery-carousel';
-import 'react-gallery-carousel/dist/index.css';
+// import Carousel from 'react-gallery-carousel';
+// import 'react-gallery-carousel/dist/index.css';
 import './ImageCarousel.css';
 
 function ProjectImageCarousel({ images, id, title }) {
@@ -52,16 +52,17 @@ function ProjectImageCarousel({ images, id, title }) {
   return (
     <div className="flex flex-wrap justify-center gap-4 mb-6">
       {carouselImages.length > 0 ? (
-        <Carousel
-          images={carouselImages}
-          isAutoPlaying={true}
-          hasThumbnails={true}
-          hasIndexBoard={false}
-          className="carousel-container"
-          objectFit="contain"
-          shouldLazyLoad={true} 
-          hasSizeButton={false}
-        />
+        // <Carousel
+        //   images={carouselImages}
+        //   isAutoPlaying={true}
+        //   hasThumbnails={true}
+        //   hasIndexBoard={false}
+        //   className="carousel-container"
+        //   objectFit="contain"
+        //   shouldLazyLoad={true} 
+        //   hasSizeButton={false}
+        // />
+        <div>Carousel</div>
       ) : (
         null
       )}

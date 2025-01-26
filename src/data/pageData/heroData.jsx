@@ -29,7 +29,7 @@ export const heroData = {
   // List of buttons
   buttons: [
     {
-      link: "/pdf/Chace Nielson - CV.pdf", // This button opens a PDF on the home page
+      pdf: "Chace Nielson - CV.pdf", // This button opens a PDF on the home page
       name: "My CV"
     },
     {

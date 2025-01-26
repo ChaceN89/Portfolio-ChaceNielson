@@ -22,7 +22,6 @@ import Modal from './Modal';
 import Home from '../pages/Home';
 import Gallery from '../pages/Gallery';
 import Thanks from '../pages/Thanks';
-import PdfViewer from '../pages/PdfViewer';
 
 // Modal pages
 import Project from '../pages/Project';
@@ -37,8 +36,8 @@ export default function AppRoutes() {
 
   // Get query parameters
   const params = new URLSearchParams(location.search);
-  const projectName = params.get(projectParam);
-  const specializationName = params.get(skillParam);
+  const projectID = params.get(projectParam);
+  const specializationID = params.get(skillParam);
 
   return (
     <>
@@ -49,21 +48,20 @@ export default function AppRoutes() {
           <Route path="/photos" element={<Gallery />} />
           <Route path="/thanks" element={<Thanks />} />
           <Route path="*" element={<Navigate to="/" replace />} />
-          <Route path="/pdf/:pdfName" element={<PdfViewer />} />
         </Route>
       </Routes>
 
       {/* Modal for Projects */}
-      {projectName && (
+      {projectID && (
         <Modal onClose={() => {navigate(location.pathname);}} > 
-          <Project projectName={projectName} />
+          <Project projectName={projectID} />
         </Modal>
       )}
 
       {/* Modal for Skills */}
-      {specializationName && (
+      {specializationID && (
         <Modal onClose={() => {navigate(location.pathname);}} > 
-          <Specialization specializationName={specializationName} />
+          <Specialization specializationID={specializationID} />
         </Modal>
       )}
     </>

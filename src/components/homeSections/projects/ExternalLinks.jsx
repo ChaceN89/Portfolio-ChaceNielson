@@ -37,7 +37,7 @@
  * @since 2.1
  */
 import React from 'react';
-import { openPdf } from '../../functions/utils';
+import { openPdf } from '../../../utils/utils';
 
 function ExternalLinks({ externalLinks }) {
   return (

@@ -19,6 +19,7 @@ import { heroData } from '../../../data/pageData/heroData';
 import SlideTransition from '../../animations/SlideTransition';
 import MyButton from '../../buttons/MyButton';
 import MediaLinks from '../../footer/MediaLinks';
+import { openPdf } from '../../../utils/utils';
 
 function HeroText() {
   return (
@@ -39,7 +40,8 @@ function HeroText() {
               key={index}
               className="w-full lg:w-auto"
               to={button.id}
-              link={button.link}
+              onClick={button.pdf ? () => openPdf(button.pdf) : undefined}
+
             >
               {button.name}
             </MyButton>

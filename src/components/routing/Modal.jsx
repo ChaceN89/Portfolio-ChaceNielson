@@ -91,15 +91,13 @@ export default function Modal({ children }) {
             <BackgroundWrapper
               className='overflow-hidden'
               src={"/png-backgrounds/overlays/scratch-1.png"}
-              bgOpacity={5}
+              bgOpacity={4}
               backgroundSize = "contain"
               backgroundRepeat = "repeat"
             >
-
               <button className="modal-close-btn" onClick={handleClose}>
                 <IoMdClose size={34} />
               </button>
-
               <div className="modal-content">
                 {children}
               </div>
