@@ -44,8 +44,8 @@
 }
 
 .card-wrapper{
-  @apply relative  
-  border-2 border-secondary rounded-md 
+  @apply relative text-secondary
+  border-2 border-secondary-dark rounded-lg
   bg-primary bg-opacity-90
   overflow-hidden shadow-md 
   cursor-pointer 
@@ -54,5 +54,5 @@
 }
 
 .card-thin-border{
-  @apply border-t-2  border-secondary border-opacity-35
+  @apply border-t-2  border-secondary border-opacity-35 overflow-hidden
 }

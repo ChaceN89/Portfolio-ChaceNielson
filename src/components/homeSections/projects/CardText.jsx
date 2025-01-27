@@ -56,7 +56,7 @@ function CardText({ project, isInitialLoad, inView }) {
   return (
     <AnimatePresence>
       <motion.div
-        className="absolute bottom-0 left-0 w-full h-1/2 flex flex-col justify-between bg-frosted-glass border-t-2 card-thin-border"
+        className="absolute bottom-0 left-0 w-full h-1/2 flex flex-col justify-between bg-frosted-glass border-t-2 card-thin-border rounded-b-lg p-1.5"
         initial={{ y: "100%" }}
         animate={
           inView && { 

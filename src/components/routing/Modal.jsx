@@ -55,7 +55,7 @@ export default function Modal({ children }) {
       } else {
         navigate('/');
       }
-    }, 300); // Match the duration of the exit animation
+    }, 800); // Match the duration of the exit animation
   };
 
   // Handle Escape key to close the modal
@@ -83,9 +83,9 @@ export default function Modal({ children }) {
           <SlideTransition
             enter="right" // Slide in from the right
             exit="left"   // Slide out to the left
-            duration={0.3} // Match the timeout duration
-            translationDist={500} // Customize the slide distance
-            delay={0.1} // Optional: Customize the delay
+            duration={0.5} // Match the timeout duration
+            translationDist={800} // Customize the slide distance
+            delay={0.2} // Optional: Customize the delay
             className="modal-container"
           >
             <BackgroundWrapper

@@ -51,7 +51,7 @@ import CardImg from './CardImg';
 import CardText from './CardText';
 import CardLearnMore from './CardLearnMore';
 
-function ProjectCard({ project }) {
+function ProjectCard({ project, darkBorder }) {
   const navigate = useNavigate();
 
   // State variables for hover and click effects

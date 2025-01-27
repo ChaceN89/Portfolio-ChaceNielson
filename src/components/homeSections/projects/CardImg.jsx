@@ -53,7 +53,7 @@ import ImageComponent from '../../wrappers/ImageComponent';
 function CardImg({ isInitialLoad, isClicked, isHovered, projID, imgSrc, imgBlurhash }) {
   return (
     <motion.div
-      className="w-full h-full"
+      className="w-full h-full rounded-md overflow-hidden"
       initial={{ opacity: 1, filter: 'blur(0px)', scale: 1 }}
       animate={{ 
         opacity: (isInitialLoad || isHovered ? 1 : 0.6),

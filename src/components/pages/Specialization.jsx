@@ -54,7 +54,7 @@ export default function Specialization({ specializationID }) {
         {skill.relatedProjects && skill.relatedProjects.length > 0 && (
           <>
             <h3 className="my-2 pt-2 underline">Related Projects</h3>
-            <div className="mt-4 text-secondary grid lg:grid-cols-2 gap-4">
+            <div className="mt-4  grid lg:grid-cols-2 gap-4">
               {skill.relatedProjects.map((project, index) => (
                 <ProjectCard key={index} project={project} />
               ))}

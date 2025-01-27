@@ -47,7 +47,7 @@ function CardLearnMore({ isHovered }) {
     <AnimatePresence>
       {isHovered && (
         <motion.div
-          className="absolute top-0 right-0 bg-frosted-glass rounded-bl-lg py-0.5 px-1.5 text-sm border-l-2 border-b-2 card-thin-border"
+          className="absolute top-0 right-0 bg-frosted-glass border-t-0 rounded-bl-lg py-0.5 px-1.5 text-sm border-l-2 border-b-2 rounded-tr-lg overflow-hidden z-0"
           initial={{ y: '-100%' }}
           animate={{ y: 0, transition: { delay: 0, duration: globals.project.slide } }}
           exit={{ y: '-100%', transition: { duration: globals.project.slide } }}
