@@ -44,7 +44,7 @@ export default function Project({ projectName }) {
       <SectionHeader title={project.name} subtitle={project.blurb} />
       <ExternalLinks externalLinks={project.externalLinks} />
 
-      <hr className="border-primary border-opacity-60 mb-2" />
+      <hr className="border-primary border-opacity-60 mb-4" />
 
       {/* Content */}
       <div className='flex  flex-col lg:flex-row gap-4'>

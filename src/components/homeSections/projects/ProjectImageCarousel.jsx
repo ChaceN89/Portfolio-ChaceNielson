@@ -59,7 +59,7 @@ const ProjectImageCarousel = ({ images, id, title, hidePhotos=false }) => {
           hasMediaButton={false}
           hasThumbnails={true}
           hasIndexBoard={false}
-          className="max-h-102"
+          className="max-h-96 md:max-h-102 lg:max-h-80 xl:max-h-96 2xl:max-h-108"
           objectFit="contain"
           shouldLazyLoad={true} 
           // hasSizeButton={false}

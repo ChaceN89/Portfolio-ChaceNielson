@@ -46,7 +46,7 @@ export default function Specialization({ specializationID }) {
         <SectionHeader title={skill.name} subtitle={skill.description} />
       </div>
 
-      <hr className="border-primary border-opacity-60 mb-2" />
+      <hr className="border-primary border-opacity-60 mb-4" />
 
       <SkillBoxContainer stack={allSkills} />
       

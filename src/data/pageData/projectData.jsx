@@ -35,11 +35,11 @@ export const projectPageData = {
 };
 
 export const projects = [
+  capstone,
   dicom3dPrint,
   scaleTheDepths,
   glassGeckoGames,
   geoPredict,
-  capstone,
   drillbotics,
   voiceIdentification,
   photoApp,
