@@ -38,7 +38,6 @@ import Carousel from 'react-gallery-carousel';
 import 'react-gallery-carousel/dist/index.css';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'; // Import icons
 
-
 const ProjectImageCarousel = ({ images, id, title, hidePhotos=false }) => {
   // Set up image objects for carousel component/library
   const carouselImages = images.map((image) => ({

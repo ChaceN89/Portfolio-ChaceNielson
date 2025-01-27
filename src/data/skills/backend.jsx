@@ -8,6 +8,11 @@
  */
 
 import IconLibrary from "../iconLibrary";
+import { projects } from "../pageData/projectData";
+import { geoPredict } from "../projects/geoPredict";
+import { imageProcessor } from "../projects/imageProcessor";
+import { jobDashboard } from "../projects/jobDashboard";
+import { photoApp } from "../projects/photoApp";
 
 export const backend = { 
   id: "backend-development",
@@ -51,5 +56,12 @@ export const backend = {
     IconLibrary.MACHINE_LEARNING,
     IconLibrary.JUPYTER,
     IconLibrary.TENSORFLOW
+  ],
+
+  relatedProjects:[
+    geoPredict,
+    photoApp,
+    imageProcessor,
+    jobDashboard
   ]
 };

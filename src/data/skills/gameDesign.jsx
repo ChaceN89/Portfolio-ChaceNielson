@@ -9,6 +9,12 @@
 
 import React from 'react';
 import IconLibrary from "../iconLibrary";
+import { flappyBirdClone } from '../projects/flappyBirdClone';
+import { jenga } from '../projects/jenga';
+import { cubeGame } from '../projects/cubeGame';
+import { capstone } from '../projects/capstone';
+import { scaleTheDepths } from '../projects/ScaleTheDepths';
+import { spaceSurvive } from '../projects/spaceSurvive';
 
 export const gameDesign = { 
   id: "game-development",
@@ -34,4 +40,12 @@ export const gameDesign = {
     IconLibrary.OBSERVER_PATTERN,
     IconLibrary.FLYWEIGHT_PATTERN,
   ],
+  relatedProjects:[
+    scaleTheDepths,
+    jenga,
+    capstone,
+    spaceSurvive,
+    flappyBirdClone,
+    cubeGame,
+  ]
 };

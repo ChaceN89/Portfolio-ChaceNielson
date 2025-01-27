@@ -17,6 +17,8 @@ import { useNavigate } from 'react-router-dom';
 import { techSkills, skillPageData } from '../../data/pageData/skillsData';
 import SectionHeader from '../uiElements/SectionHeader';
 import SkillBoxContainer from '../uiElements/SkillBoxContainer';
+import ProjectCard from '../homeSections/projects/ProjectCard';
+import FadeTransition from '../animations/FadeTransition';
 
 export default function Specialization({ specializationID }) {
   const navigate = useNavigate();
@@ -47,9 +49,19 @@ export default function Specialization({ specializationID }) {
       <hr className="border-primary border-opacity-60 mb-2" />
 
       <SkillBoxContainer stack={allSkills} />
-
-      <h2 className="font-bold">{skillPageData.relatedProjectTitle}</h2>
-      <div className="h-111 border-2 border-blue-600">Display related Project Here</div>
+      
+      <FadeTransition duration={1.5}>
+        {skill.relatedProjects && skill.relatedProjects.length > 0 && (
+          <>
+            <h3 className="my-2 pt-2 underline">Related Projects</h3>
+            <div className="mt-4 text-secondary grid lg:grid-cols-2 gap-4">
+              {skill.relatedProjects.map((project, index) => (
+                <ProjectCard key={index} project={project} />
+              ))}
+            </div>
+          </>
+        )}
+      </FadeTransition>
     </div>
   );
 }

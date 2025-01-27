@@ -8,6 +8,11 @@
  */
 
 import IconLibrary from "../iconLibrary";
+import { geoPredict } from "../projects/geoPredict";
+import { glassGeckoGames } from "../projects/glassGecko";
+import { imageProcessor } from "../projects/imageProcessor";
+import { jobDashboard } from "../projects/jobDashboard";
+import { portfolio } from "../projects/portfolio";
 
 export const devOps = {
   id: "devops",
@@ -46,4 +51,11 @@ export const devOps = {
     IconLibrary.CLOUD_DEPLOYMENT,
     IconLibrary.CODE_REVIEWS,
   ],
+  relatedProjects:[
+    glassGeckoGames,
+    geoPredict,
+    imageProcessor,
+    jobDashboard,
+    portfolio,
+  ]
 };
