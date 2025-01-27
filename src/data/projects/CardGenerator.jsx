@@ -14,23 +14,19 @@
 import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
-const short = "A React Application with State Management.";
+const short = "A random playing card generator.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
-      Built for the Glass Gecko Games team to test card game mechanics before building a Unity game. The application allows users to generate a random playing card using artwork or their own custom images. It uses state management to keep track of the card data and the user's settings.
+      Built for the Glass Gecko Games team to test card game mechanics before building a Unity game. The application allows users to generate a random playing card using artwork or their own custom images. It uses <span className="font-bold">state management</span> to keep track of the card data and the user's settings.
     </p>
     <p>
-      It features a clean and responsive UI, with a simple design that allows users to easily generate a card and download an image. The application is deployed using Netlify.
+      It features a clean and <span className="font-bold">responsive UI</span>, with a simple design that allows users to easily generate a card and download an image. The application is deployed using Netlify.
     </p>
   </div>
 );
-
-const features = [
-  "Mod",
-];
 
 export const cardGenerator = {
   starred: true,
@@ -39,12 +35,12 @@ export const cardGenerator = {
   tag: "UX/UI",
   blurb: short,
   description: long,
-  features: features,
   images: [
     { src: "cardGenerator1.jpg", blurhash: "LDPjP,bc~VxC$uW?NPr=DkWs%Ks8" },
     { src: "cardGenerator2.jpg", blurhash: "LLONRkWDkCjJ~Mj[ofayEBj[oJbF" },
     { src: "cardGenerator3.jpg", blurhash: "LCPs*Qo#~oni$vkWNiV@9Hbc%Ji_" },
-
+    { src: "cardGenerator4.jpg", blurhash: "LCPs*Qo#~oni$vkWNiV@9Hbc%Ji_" },
+    { src: "cardGenerator5.jpg", blurhash: "LCPs*Qo#~oni$vkWNiV@9Hbc%Ji_" },
   ],
   mainStack: [
     IconLibrary.REACT,

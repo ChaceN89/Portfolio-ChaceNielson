@@ -59,8 +59,14 @@ const ProjectImageCarousel = ({ images, id, title, hidePhotos=false }) => {
           hasMediaButton={false}
           hasThumbnails={true}
           hasIndexBoard={false}
-          className="max-h-96 md:max-h-102 lg:max-h-80 xl:max-h-96 2xl:max-h-108"
-          objectFit="contain"
+          className="max-h-96 md:max-h-102 lg:max-h-80 xl:max-h-96 2xl:max-h-108 "
+          objectFit="cover"
+          objectFitAtMax="contain"
+          style={{
+            display: 'flex',
+            alignItems: 'center', // Vertically centers content
+            justifyContent: 'center', // Horizontally centers content
+          }}
           shouldLazyLoad={true} 
           // hasSizeButton={false}
           leftIcon = {<FaChevronLeft size={40} className="text-opacity-45 text-black hover:text-accent" />}
