@@ -32,6 +32,7 @@ import TechSkills from '../homeSections/techSkills/TechSkills';
 import JobExperience from '../homeSections/jobExperience/JobExperience';
 import Interests from '../homeSections/interests/Interests';
 import ProjectSection from '../homeSections/projects/ProjectSection';
+import ContactForm from '../homeSections/contactForm/ContactForm';
 
 const HomePage = () => {
   const location = useLocation();
@@ -62,9 +63,9 @@ const HomePage = () => {
       <div id='Projects'>
         <ProjectSection/>
       </div>
-      {/* <div id='ContactMe'>
+      <div id='ContactMe'>
         <ContactForm />
-      </div> */}
+      </div>
       <ReturnToTop />
     </>
   );
