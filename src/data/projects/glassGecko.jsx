@@ -47,7 +47,13 @@ export const glassGeckoGames = {
   description: long,
   features: features,
   images: [
+    { src: "glassgecko_highlight.png", blurhash: "q5CZOvIAxgbY5lM|00S4^ssp%4ogJBoMMxWB9QX4XLogZ$WAx]Rj[DxvYixaVGNGROMxDlbZo{s;i_WBt7V@uNn~ZORkXObHR-WB" },
     { src: "glassGecko.jpg", blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP" },
+    { src: "glassGecko2.png", blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP" },
+    { src: "glassGecko3.png", blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP" },
+    { src: "glassGecko4.png", blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP" },
+    { src: "glassGecko5.png", blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP" },
+    { src: "glassGecko6.png", blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP" },
   ],
   mainStack: [
     IconLibrary.REACT,

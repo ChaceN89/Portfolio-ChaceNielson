@@ -59,10 +59,10 @@ const ProjectImageCarousel = ({ images, id, title, hidePhotos=false }) => {
           hasMediaButton={false}
           hasThumbnails={true}
           hasIndexBoard={false}
-          className="max-h-96"
+          className="max-h-102"
           objectFit="contain"
           shouldLazyLoad={true} 
-          hasSizeButton={false}
+          // hasSizeButton={false}
           leftIcon = {<FaChevronLeft size={40} className="text-opacity-45 text-black hover:text-accent" />}
           rightIcon = {<FaChevronRight size={40} className="text-opacity-45 text-black hover:text-accent" />}
         />

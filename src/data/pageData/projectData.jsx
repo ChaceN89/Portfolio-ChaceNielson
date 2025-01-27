@@ -27,6 +27,7 @@ import { glassGeckoGames } from "../projects/glassGecko";
 import { drillbotics } from "../projects/drillbotics";
 import { cardGenerator } from "../projects/CardGenerator";
 import { scaleTheDepths } from "../projects/ScaleTheDepths";
+import { dicom3dPrint } from "../projects/DICOM3dPrints";
 
 export const projectPageData = {
   title: "My Projects",
@@ -34,6 +35,7 @@ export const projectPageData = {
 };
 
 export const projects = [
+  dicom3dPrint,
   scaleTheDepths,
   glassGeckoGames,
   geoPredict,
@@ -83,9 +85,10 @@ export const exampleProject = {
     IconLibrary.MONGODB,
     // Add more icons as needed
   ],
-  externalLinks: [
+  externalLinks: [ // External links to the project, can be GitHub, live demo, or links to pdf if you use the pdf key
     { name: "GitHub", link: "https://github.com/example", icon: IconLibrary.GITHUB.icon },
-    { name: "Live Demo", link: "https://example.com", icon: IconLibrary.WORLD.icon },
+    { name: "Report", pdf: "Capstone Final Report.pdf", icon: IconLibrary.PDF.icon }
+
   ],
 };
 */

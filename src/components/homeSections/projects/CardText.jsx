@@ -72,7 +72,7 @@ function CardText({ project, isInitialLoad, inView }) {
         <div className='flex flex-col justify-between h-full p-1.5'>
           <div className=''>
             <h3 className='underline' >{project.name}</h3>
-            <p className="text-sm text-darken pt-0.5">{project.blurb}</p>
+            <p className="text-[0.8rem] text-darken pt-0.5">{project.blurb}</p>
           </div>
         </div>
 

@@ -19,6 +19,8 @@ const generalTechIcons = {
   PWA: { name: "Progressive Web Apps", svg_path: `${folder}/pwa.svg` },
 
   GOOGLE_ANALYTICS: { name: "Google Analytics", svg_path: `${folder}/google_analytics.svg` },
+  THREE_D_SLICER: { name: "3D Slicer", svg_path: `${folder}/3D-Slicer.svg` },
+  DICOM: { name: "DICOM", svg_path: `${folder}/dicom.svg` },
 };
 
 export default generalTechIcons;
