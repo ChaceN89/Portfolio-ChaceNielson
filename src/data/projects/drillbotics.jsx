@@ -14,23 +14,20 @@
 import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
-const short = "Functional mini drill rig and real-time GUI.";
+const short = "Functional mini drill rig with a real-time GUI for performance monitoring and data visualization.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
-      This project was a collaborative effort with the Drillbotics team at the University of Calgary to design and build a functional mini drill rig for the prestigious Drillbotics competition. Our rig was meticulously evaluated on its drilling performance, efficiency, and capabilities in data collection and visualization, leading our team to secure second place.
+      This project was a collaborative effort with the <span className="font-bold">Drillbotics team</span> at the University of Calgary to design and build a functional <span className="font-bold">mini drill rig</span> for the prestigious <span className="font-bold">Drillbotics competition</span>. Our rig was meticulously evaluated on its drilling performance, efficiency, and capabilities in data collection and visualization, leading our team to secure <span className="font-bold">second place</span>.
     </p>
     <p> 
-      My primary responsibility was the development of a graphical user interface (GUI) that enabled real-time plotting of the drilling operations, recorded from the sensor. This GUI, built with Plotly Dash and Python, provided an intuitive and powerful platform for monitoring and analyzing the drilling process as it unfolded.
+      My primary responsibility was the development of a <span className="font-bold">graphical user interface (GUI)</span> that enabled <span className="font-bold">real-time plotting</span> of the drilling operations, recorded from the sensor. This GUI, built with Plotly Dash and Python, provided anintuitive and powerful platform for monitoring and analyzing the drilling process as it unfolded.
     </p>
   </div>
 );
 
-const features = [
-  "Mod",
-];
 
 export const drillbotics = {
   starred: true,
@@ -39,7 +36,6 @@ export const drillbotics = {
   tag: "Engineering",
   blurb: short,
   description: long,
-  features: features,
   images: [
     { src: "drillbotics1.jpg", blurhash: "LAH-rkQ,yG-ncrO@%M0L=}00-iIB" },
     { src: "drillbotics0.jpg", blurhash: "L2Ps@p00~nS^00OT_2D*008^R;Di" },
@@ -49,7 +45,7 @@ export const drillbotics = {
     { src: "drillbotics5.jpg", blurhash: "L7GudjTH=v~D%$Io9a-:01%LR+D*" },
     { src: "drillbotics6.jpg", blurhash: "LAF=jk~p-p?a_3o#tQRjR5RkIoRi" },
   ],
-  youtubeEmbed: "https://www.youtube.com/watch?v=5Z8g44RXl2c"  ,
+  youtubeEmbed: "https://www.youtube.com/watch?v=5Z8g44RXl2c",
   mainStack: [
     IconLibrary.PLOTLY_DASH,
     IconLibrary.PYTHON,
@@ -63,6 +59,6 @@ export const drillbotics = {
   ],
   externalLinks: [
     { name: "GUI Example", link: "https://www.youtube.com/watch?v=xF9heykeFU4", icon: IconLibrary.YOUTUBE.icon },
-    { name: "The Competion", link: "https://drillbotics.com/winners/", icon: IconLibrary.WORLD.icon },
+    { name: "Drillbotics Results for the 2023-2024 Competition", link: "https://drillbotics.com/winners/", icon: IconLibrary.WORLD.icon },
   ],
 };
