@@ -31,18 +31,15 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-26
- * @updated 2024-08-06
- * @since 2.1
+ * @updated jan 26, 2025
  */
-
 import React from 'react';
-// import Carousel from 'react-gallery-carousel';
-// import 'react-gallery-carousel/dist/index.css';
-import './ImageCarousel.css';
-import GalleryPhotos from '../../photoGallery/GalleryPhotos';
+import Carousel from 'react-gallery-carousel';
+import 'react-gallery-carousel/dist/index.css';
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'; // Import icons
 
-function ProjectImageCarousel({galleryFolder, images, id, title }) {
 
+const ProjectImageCarousel = ({ images, id, title, hidePhotos=false }) => {
   // Set up image objects for carousel component/library
   const carouselImages = images.map((image) => ({
     src: `/projects/${id}/${image.src}`,
@@ -50,9 +47,27 @@ function ProjectImageCarousel({galleryFolder, images, id, title }) {
     // Add any other properties needed by the carousel library
   }));
 
+  if (hidePhotos) {
+    return null;
+  }
+
   return (
-    <div className="flex flex-wrap justify-center gap-4 mb-6">
-      {carouselImages.length > 0 && ( <GalleryPhotos galleryPhotos={carouselImages} galleryFolder={galleryFolder} /> )}
+    <div className="flex flex-wrap justify-center gap-4 border-2 rounded-2xl overflow-hidden">
+      {carouselImages.length > 0 && (
+        <Carousel
+          images={carouselImages}
+          isAutoPlaying={true}
+          hasMediaButton={false}
+          hasThumbnails={true}
+          hasIndexBoard={false}
+          className="max-h-96"
+          objectFit="contain"
+          shouldLazyLoad={true} 
+          hasSizeButton={false}
+          leftIcon = {<FaChevronLeft size={40} className="text-opacity-45 text-black hover:text-accent" />}
+          rightIcon = {<FaChevronRight size={40} className="text-opacity-45 text-black hover:text-accent" />}
+        />
+      )}
     </div>
   );
 }

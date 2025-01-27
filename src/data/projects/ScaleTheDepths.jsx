@@ -21,6 +21,8 @@ const long = (
   <div className='space-y-2'>
     <p>
       Scale the Depths was created for the 2024 GMTK Game Jam, where the theme was "Built to Scale." We took a literal approach, putting the player in control of a robot tasked with scaling fish to feed hungry aquatic customers. The game stood out among over 7,000 submissions and was selected as a <strong>Winner of the jam</strong>.
+
+      <iframe className="rounded-xl"  frameBorder="0" src="https://itch.io/embed/2912112?border_width=5&amp;link_color=FFA500" width="100%" height="165"><a href="https://serpexnessie.itch.io/scale-the-depths">Scale the Depths by Serpexnessie, Mancavea, Glass Gecko Games, Kar2fast, 4n6u, E-man248, Pepocandii</a></iframe>
     </p> 
   </div>
 );
@@ -54,7 +56,6 @@ features: features,
     IconLibrary.TEAM_COLLABORATION,
   ],
   externalLinks: [
-    { name: "Play the Game", link: "https://serpexnessie.itch.io/scale-the-depths", icon: IconLibrary.ITCHIO.icon },
     { name: "GMTK Game Jam 2024", link: "https://itch.io/jam/gmtk-2024", icon: IconLibrary.WORLD.icon },
     { name: "Top 20 Results Video", link: "https://youtu.be/gqCAeFjB8Uo?si=Wxp0ATxZGN4vtOGH&t=1133", icon: IconLibrary.YOUTUBE.icon },
   ],

@@ -39,6 +39,7 @@ export const spaceSurvive = {
   blurb: short,
   description: long,
   features: features,
+  hidePhotos: true,
   images: [
     { src: "spaceSurvive.jpg", blurhash: "L26@E32tL#5kq?Io%%%hyEofR3j?" },
   ],

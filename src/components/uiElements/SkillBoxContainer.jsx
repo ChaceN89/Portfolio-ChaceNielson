@@ -31,11 +31,14 @@
 import React from 'react';
 import SkillBox from './SkillBox';
 
-function SkillBoxContainer({ stack }) {
+function SkillBoxContainer({ stack, isSmall=false }) {
+
+  const containerClass = isSmall ? "grid-cols-2  md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-4" : "grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4";
+
   return (
-    <div className="p-4">
+    <div className="py-2">
       {stack && stack.length > 0 && (
-        <div className="grid text-sm md:text-base grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 mb-4">
+        <div className={`grid text-sm md:text-base gap-4  ${containerClass}`}>
           {stack.map((skill, index) => (
             <SkillBox key={index} skill={skill} />
           ))}

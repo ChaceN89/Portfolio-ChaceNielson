@@ -36,6 +36,7 @@ export const flappyBirdClone = {
   blurb: short,
   description: long,
   features: features,
+  hidePhotos: true,
   images: [
     { src: "flappyBird.jpg", blurhash: "L8CI]Vs~Ros~8[obWHkA.Uk8oYs~" },
   ],

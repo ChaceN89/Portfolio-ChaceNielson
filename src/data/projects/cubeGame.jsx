@@ -25,6 +25,7 @@ const long = (
     <p>
       The game demonstrates essential game mechanics and physics, highlighting the capabilities of Unity for developing engaging and interactive experiences.
     </p>
+    <iframe className="rounded-xl"  frameBorder="0" src="https://itch.io/embed/2918493?border_width=5&amp;link_color=FFA500" width="100%" height="165"><a href="https://kar2fast.itch.io/cube-game">Cube Game by Kar2fast</a></iframe>
   </div>
 );
 
@@ -54,7 +55,5 @@ export const cubeGame = {
     IconLibrary.GAME_DESIGN,
     IconLibrary.UNITY_PHYSICS,
   ],
-  externalLinks: [
-    { name: "Play Game", link: "https://kar2fast.itch.io/cube-game", icon: IconLibrary.ITCHIO.icon },
-  ],
+
 };

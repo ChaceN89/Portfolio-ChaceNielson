@@ -1,14 +1,15 @@
 /**
+ * @file Project.jsx
+ * @module Project
+ * @desc Displays details about a specific project, including its tech stack, media, and external links.
  * 
+ * @author Chace Nielson
+ * @created Jan 26, 2025
+ * @updated Jan 26, 2025
  */
-
 //React
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Element, scroller } from 'react-scroll';
-
-// Icons
-import { FaArrowAltCircleDown } from "react-icons/fa";
 
 // data
 import { projects } from '../../data/pageData/projectData'; // Assuming you have a file with project data
@@ -16,10 +17,9 @@ import { projects } from '../../data/pageData/projectData'; // Assuming you have
 // components
 import SectionHeader from '../uiElements/SectionHeader';
 import YouTubeEmbed from '../homeSections/projects/YouTubeEmbed';
-import ProjectImageCarousel from '../homeSections/projects/ProjectImageCarousel';
 import SkillBoxContainer from '../uiElements/SkillBoxContainer';
 import ExternalLinks from '../homeSections/projects/ExternalLinks';
-import GalleryPhotos from '../photoGallery/GalleryPhotos';
+import ProjectImageCarousel from '../homeSections/projects/ProjectImageCarousel';
 
 export default function Project({ projectName }) {
   const navigate = useNavigate();
@@ -36,52 +36,32 @@ export default function Project({ projectName }) {
     return null;
   }
 
-  // Scroll to the images section
-  const scrollToImages = () => {
-    scroller.scrollTo("skillBoxContainer", {
-      containerId: "project-modal-container", // reference to id in parent container
-      smooth: true
-    });
-  };
-
-
+  // Get the full stack by combining the main stack and extended stack
   const fullStack = project.extendedStack ? [...project.mainStack, ...project.extendedStack] : project.mainStack;
-
 
   return (
     <div  className="text-primary">
-      <div className="py-1">
-        <SectionHeader title={project.name} subtitle={project.blurb} />
+      <SectionHeader title={project.name} subtitle={project.blurb} />
+      <ExternalLinks externalLinks={project.externalLinks} />
+
+      <hr className="border-primary border-opacity-60 mb-2" />
+
+      {/* Content */}
+      <div className='flex  flex-col lg:flex-row gap-4'>
+        <div className='lg:w-1/2'>
+          <div className='black lg:hidden'>
+            <YouTubeEmbed youtubeEmbed={project.youtubeEmbed} />
+          </div>
+          {project.description}
+          <SkillBoxContainer stack={fullStack} isSmall />
+        </div>
+        <div className='lg:w-1/2'>
+          <div className='hidden lg:block'>
+            <YouTubeEmbed youtubeEmbed={project.youtubeEmbed} />
+          </div>
+          <ProjectImageCarousel images={project.images} id={project.id} title={project.name} hidePhotos={project.hidePhotos} />
+        </div>
       </div>
-      <div className=" flex flex-wrap flex-col-reverse items-start sm:items-center sm:flex-row justify-start py-2">
-
-        <ExternalLinks externalLinks={project.externalLinks} />
-      </div>
-
-      <hr className="border-primary border-opacity-60" />
-
-      {/* description */}
-      <div className="py-4">{project.description}</div>
-
-      <YouTubeEmbed youtubeEmbed={project.youtubeEmbed} />
-
-      {/* images */}
-      {project.images && project.images.length > 0 && (
-        <>
-        <GalleryPhotos 
-          galleryFolder={`projects/${project.id}`} 
-          galleryPhotos={project.images} 
-          projectGallery 
-        />
-        {JSON.stringify(project.images)}
-        </>
-      )}
-
-      {/* Skill Icons */}
-      <Element name="skillBoxContainer">
-        <SkillBoxContainer stack={fullStack} />
-      </Element>
-
     </div>
   );
 }

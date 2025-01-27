@@ -43,6 +43,9 @@ export default function Specialization({ specializationID }) {
       <div className="py-1">
         <SectionHeader title={skill.name} subtitle={skill.description} />
       </div>
+
+      <hr className="border-primary border-opacity-60 mb-2" />
+
       <SkillBoxContainer stack={allSkills} />
 
       <h2 className="font-bold">{skillPageData.relatedProjectTitle}</h2>

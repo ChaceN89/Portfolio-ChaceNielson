@@ -41,7 +41,6 @@ function HeroText() {
               className="w-full lg:w-auto"
               to={button.id}
               onClick={button.pdf ? () => openPdf(button.pdf) : undefined}
-
             >
               {button.name}
             </MyButton>

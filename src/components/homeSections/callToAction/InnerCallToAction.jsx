@@ -19,15 +19,15 @@ import ImageComponent from '../../wrappers/ImageComponent';
 function InnerCallToAction() {
   return (
     <div className="inner-call-to-action bg-frosted-glass">
-      <div className="col-span-1 hidden md:flex items-end justify-center">
+      <div className="col-span-2 hidden md:flex items-end justify-end">
         <ImageComponent
           src={callToActionData.img}
           lowResSrc={callToActionData.lowResImg}
           alt="Chace Hiking"
-          className="object-contain w-40 h-56 md:w-56 md:h-72" // Adjust width and height as needed
+          className="object-contain max-w-40 h-56 md:max-w-56 md:h-72" // Adjust width and height as needed
         />
       </div>
-      <div className="col-span-2 flex flex-col h-full justify-center items-start p-6">
+      <div className="col-span-1 flex flex-col h-full justify-center items-start p-6">
         <h2>{callToActionData.top}</h2>
         <h4 className="mt-2">{callToActionData.bottom}</h4>
         <div className="mt-6 flex justify-start md:justify-start space-x-2 z-30">

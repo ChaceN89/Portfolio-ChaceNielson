@@ -58,17 +58,17 @@ export const projects = [
 /**
 
 export const exampleProject = {
-  id: "example-project",
-  name: "Example Project",
-  tag: "Web Development",
-  blurb: "A short description of the example project.",
-  description: (
+  id: "example-project", // Unique identifier seen by user in the URL
+  name: "Example Project", // Name of the project on card and modal
+  tag: "Web Development", // Tag appears on card to give brief context
+  blurb: "A short description of the example project seen on the modal. Meant to be a summary.",
+  description: ( // Long description of the project seen on the modal - can be styled with JSX for paragraphs, lists, etc.
     <div className='space-y-2'>
       <p>This is a detailed description of the example project, providing insights into the development process, technologies used, and key features implemented.</p>
     </div>
   ),
-  features: features, // List of Features in text
-  youtubeEmbed: "youtube-embed link",
+  youtubeEmbed: "youtube-embed link", // can be null if no video but direct link to yotube video if available
+  hidePhotos: true, // doens't show photos in the modal 
   images: [
     { src: "example1.jpg", blurhash: "L9AD+Zxu0z~pIVRjMxRj0L~q0La#" },
     { src: "example2.jpg", blurhash: "L6CFpEbH00D$^gRkozoJ_3oLx]jE" },
@@ -88,5 +88,4 @@ export const exampleProject = {
     { name: "Live Demo", link: "https://example.com", icon: IconLibrary.WORLD.icon },
   ],
 };
-
- */
+*/
