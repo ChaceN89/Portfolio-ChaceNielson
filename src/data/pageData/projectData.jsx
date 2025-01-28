@@ -29,6 +29,8 @@ import { cardGenerator } from "../projects/CardGenerator";
 import { scaleTheDepths } from "../projects/ScaleTheDepths";
 import { dicom3dPrint } from "../projects/DICOM3dPrints";
 import { energyTomorrow } from "../projects/EnergyTomorrow";
+import { li } from "framer-motion/client";
+import { library } from "../projects/library";
 
 export const projectPageData = {
   title: "My Projects",
@@ -36,10 +38,11 @@ export const projectPageData = {
 };
 
 export const projects = [
+  library,
+  scaleTheDepths,
   energyTomorrow,
   capstone,
   dicom3dPrint,
-  scaleTheDepths,
   glassGeckoGames,
   geoPredict,
   drillbotics,
