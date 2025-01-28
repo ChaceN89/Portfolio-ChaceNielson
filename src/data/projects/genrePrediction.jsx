@@ -40,7 +40,9 @@ export const genrePrediction = {
   description: long,
   features: features,
   images: [
-    { src: "genrePrediction.jpg", blurhash: "LIR{uws%#rkX.8bJX5ad_MW@Xknh" },
+    { src: "genrePrediction0.jpg", blurhash: "LIR{uws%#rkX.8bJX5ad_MW@Xknh" },
+    { src: "genrePrediction1.jpg", blurhash: "LIR{uws%#rkX.8bJX5ad_MW@Xknh" },
+    { src: "genrePrediction2.jpg", blurhash: "LIR{uws%#rkX.8bJX5ad_MW@Xknh" },
   ],
   mainStack: [
     IconLibrary.APACHE_SPARK,

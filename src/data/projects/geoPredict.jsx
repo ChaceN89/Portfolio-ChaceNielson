@@ -14,29 +14,49 @@
 import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
-const short = "Web application for analyzing drilling data using machine learning models.";
+const short = "AI-powered app for managing and analyzing drilling data in real time.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
-  <div className='space-y-2'>
+  <div className="space-y-4">
     <p>
-      GEO Predict is a full-stack web application that allows users to upload drilling data and analyze it using machine learning models. It is a prototype meant to test the feasibility of using machine learning models to predict drilling outcomes.
+      <span className="font-bold">GEO Predict</span> is a full-stack web application designed to enable users to upload, manage, and analyze drilling data using advanced <span className="font-bold">machine learning models</span>. The goal of the application is to predict drilling data outcomes and assist in optimizing operations.
     </p>
     <p>
-      The application is built using React, FastAPI, and PostgreSQL. The front-end is built using React and Tailwind CSS, and the back-end is built using FastAPI and PostgreSQL. The application is deployed using Docker and the University of Calgary Cloud Stack. 
+      This project was developed during my time at the <span className="font-bold">Energi Simulation Centre for Geothermal Systems Research</span> at the University of Calgary. The application leverages modern technologies, including <span className="font-bold">React</span>, <span className="font-bold">Tailwind CSS</span>, <span className="font-bold">FastAPI</span>, and <span className="font-bold">PostgreSQL</span>. Deployment is managed using <span className="font-bold">Docker</span> and the University of Calgary's <span className="font-bold">Cloud Stack</span>.
     </p>
     <p>
-      I completed this application while working at the Energi Simulation Centre for Geothermal Systems Research at the University of Calgary. The primary objective was to develop an application for managing drilling data files for geothermal wells. The application is designed to handle security, user authentication, and the management of sensitive drilling data. Users can join organizations and share data among themselves.
+      <span className="underline font-semibold">Key Features</span>
+      <ul className="list-disc list-inside pl-5">
+        <li>Comprehensive management of drilling data</li>
+        <li>Sharing of data across teams and organizations</li>
+        <li>Real-time data visualization for live wells</li>
+        <li>
+          Integration with <span className="font-bold">Pason</span> to fetch live well data using <span className="font-bold">WITSML</span>
+        </li>
+        <li>Secure authentication and access control</li>
+        <li>Organization-based user collaboration</li>
+        <li>Used for active  geothermal drilling operations in <span className="font-bold">Germany</span>, <span className="font-bold">New Mexico</span>, and <span className="font-bold">Sweden</span>.</li>
+      </ul>
     </p>
     <p>
-      I assumed the role of project manager, which presented the opportunity to oversee a small team. My responsibilities involved task assignment, code reviews, as well as screening CVs, conducting interviews, and delivering presentations. The application has been utilized in drilling wells located in Germany, New Mexico, and Sweden.
+      <span className="underline font-semibold">Primary Objective</span>
+      <br />
+      The primary aim of this project was to develop a secure application for managing sensitive geothermal drilling data. The application supports features like data sharing among organizations, real-time updates, and robust security mechanisms to ensure the integrity and confidentiality of drilling information.
+    </p>
+    <p>
+      <span className="underline font-semibold">My Responsibilities</span>
+      <ul className="list-disc list-inside pl-5">
+        <li>Oversaw the project as <span className="font-bold">Project Manager</span></li>
+        <li>Assigned tasks and conducted code reviews</li>
+        <li>Reviewed CVs and conducted technical interviews</li>
+        <li>Delivered presentations to stakeholders</li>
+      </ul>
     </p>
   </div>
 );
 
-const features = [
-  "Mod",
-];
+
 
 export const geoPredict = {
   starred: true,
@@ -45,7 +65,6 @@ export const geoPredict = {
   tag: "Full-Stack",
   blurb: short,
   description: long,
-  features: features,
   images: [
     { src: "highlight.jpg", blurhash: "G39%h%.lA8yWNExv4.t600%M^,X7-qITNG9Y" },
     { src: "crossPlot.jpg", blurhash: "q2Hog|GOtj%4nAwQ$n$-=OnBr_kBX4XNkUbq+S#uVtNYXfXNNrSb*EPKSva3nAm@m@nADhaMxcs;NFR%ozoy:vr2srgJS[Xfkob=" },

@@ -18,35 +18,38 @@ const short = "Image processing task queue using React and FastAPI.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
-  <div className='space-y-2'>
+  <div className="space-y-2">
     <p>
-      This project is an image processing task queue built with React and FastAPI. Users can upload images for processing, which are managed efficiently in a queue. The application is developed using TypeScript and showcases the seamless integration of frontend and backend technologies to handle asynchronous image processing tasks.
+      <span className="font-bold">Image Task Queue</span> is a backend-centric application built with <span className="font-bold">FastAPI</span>, designed to process images asynchronously using an efficient task queue system. This project showcases the integration of advanced backend technologies to handle large-scale, multi-user image processing workflows.
     </p>
     <p>
-      Deployed on Railway and Render, the system ensures efficient task management and provides a responsive user interface for monitoring the status of image processing jobs. It demonstrates robust handling of image processing workflows, delivering an effective solution for managing and processing large volumes of images asynchronously. 
+      The system uses <span className="font-bold">multithreading</span> to manage concurrent tasks effectively, assigning each one an ID to track its progress. Images submitted by users are processed asynchronously, with the application keeping track of each task's progress and completion status.
     </p>
     <p>
-      The frontend and functionality is simple as the main focus is the task queue in the backend using FastAPI. The application is designed to handle multiple users and tasks concurrently, ensuring efficient processing of images in a queue system.
+      Deployed on <span className="font-bold">Railway</span> and then <span className="font-bold">Render</span>, the application is built for scalability and efficiency. While the frontend is minimal, the primary focus is on the robust backend architecture, designed to support concurrent users and deliver a smooth image processing experience.
+    </p>
+    <p>
+      This project, while simple, demonstrates how to build and optimize a scalable task queue system using FastAPI, TypeScript, and Python, highlighting the seamless handling of asynchronous workflows for managing large volumes of image processing tasks.
     </p>
   </div>
 );
 
-const features = [
-  "Mod",
-];
-
 export const imageProcessor = {
   starred: true,
   id: "image-processor",
-  name: "Image Task Queue",
-  tag: "Full-Stack",
+  name: "Image Processor",
+  tag: "Backend",
   blurb: short,
   description: long,
-features: features,
   images: [
-    { src: "imageProcessor.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
+    { src: "imageProcessor0.jpg", blurhash: "LFL$FtRP.S_N0]%MM_E14PRjQ-D%" },
     { src: "imageProcessor2.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
+    { src: "imageProcessor1.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
+    { src: "imageProcessor4.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
+    { src: "imageProcessor5.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
     { src: "imageProcessor3.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
+    { src: "imageProcessor6.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
+    { src: "imageProcessor7.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },
   ],
   mainStack:[
     IconLibrary.REACT,

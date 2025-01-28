@@ -40,9 +40,9 @@ export const dicom3dPrint = {
   blurb: short,
   description: long,
   images: [
+    { src: "3dPrint_7.jpg", blurhash: "CpJ*n~M_~qohjLW9k9og" },
     { src: "3dPrint_1.jpg", blurhash: "CDKwRrE1?^L~%1RkMxV@" },
     { src: "3dPrint_2.jpg", blurhash: "CAJ*n-.m01-qE0_3xZNF" },
-    { src: "3dPrint_7.jpg", blurhash: "CpJ*n~M_~qohjLW9k9og" },
     { src: "3dPrint_3.jpg", blurhash: "CsPP+Pf6_NkCoffQRjay" },
     { src: "3dPrint_4.jpg", blurhash: "C8HLrE00RH_100-xt:Rj" },
     { src: "3dPrint_5.jpg", blurhash: "CBJ*#c9pS.t100t1R:xt" },
