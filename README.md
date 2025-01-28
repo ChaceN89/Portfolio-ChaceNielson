@@ -1,51 +1,67 @@
-
-ok great now since i transitioned this app from react to react+vite. I want to improve the readme 
-
-i listed a few thinsg i want to add to it
-
-
-
-
 # Chace Nielson Portfolio
 
-Welcome to the repository for Chace Nielson's portfolio. This site showcases my skills, work experience, projects, and more.
+Welcome to the repository for Chace Nielson's portfolio. This site showcases my skills, work experience, projects, and more. The application has been migrated to **React + Vite** for improved performance and development efficiency.
 
-
-
-Addition things to add
-
-Its in Vite now so needs to be updated
-
-test build 
-npm run build 
-npm run preview
-
-
-include technologies i used as a newheader before instalation - an about the proejct section
-react vite, tailwind, css, 
-
-features
-modal routing using params - epxlain this rout and that you can view it withou leavingthe main page
-contact form using email js
-google analytics 
-animatio
-http://localhost:4173/?project=scale-the-depths
-
+---
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Environment Variables](#environment-variables)
-- [Running the Project](#running-the-project)
-- [Data Files](#data-files)
-  - [Home Page Data](#home-page-data)
-  - [Photos Page Data](#photos-page-data)
-  - [Thanks Page Data](#thanks-page-data)
-- [Public Folder Structure](#public-folder-structure)
-- [Pages](#pages)
-- [Components](#components)
-- [Development](#development)
-- [More Information](#more-information)
+1. [About the Project](#about-the-project)
+2. [Features](#features)
+3. [Technologies Used](#technologies-used)
+4. [Installation](#installation)
+5. [Environment Variables](#environment-variables)
+6. [Running the Project](#running-the-project)
+7. [Testing the Build](#testing-the-build)
+8. [Data Files](#data-files)
+9. [Public Folder Structure](#public-folder-structure)
+10. [Pages](#pages)
+11. [Components](#components)
+12. [Development](#development)
+13. [Libraries Used](#libraries-used)
+14. [More Information](#more-information)
+
+---
+
+## About the Project
+
+This project is a professional portfolio website showcasing Chace Nielson's skills, projects, and work experience. It has been developed to provide a seamless, interactive, and visually appealing experience. The application uses **React + Vite** for faster builds and better development workflow.
+
+---
+
+## Features
+
+- **Modal Routing Using Params**  
+  Modal-based routing allows users to view detailed project information without leaving the main page. Example:  
+  `http://localhost:4173/?project=scale-the-depths`
+
+- **Contact Form with EmailJS**  
+  Users can send messages directly via a contact form integrated with EmailJS.
+
+- **Google Analytics**  
+  Tracks user interactions and behavior using Google Analytics for insights.
+
+- **Animations**  
+  Smooth animations are implemented using **Framer Motion** for better user experience.
+
+- **Optimized Build**  
+  The application leverages Vite for lightning-fast build times and efficient development.
+
+---
+
+## Technologies Used
+
+- **React**  
+- **Vite**  
+- **Tailwind CSS**  
+- **Framer Motion**  
+- **EmailJS**  
+- **Google Analytics**  
+- **React Router**  
+- **React Icons**  
+- **Blurhash**  
+
+---
 
 ## Installation
 
@@ -54,6 +70,8 @@ To install the necessary dependencies, run:
 ```bash
 npm install
 ```
+
+---
 
 ## Environment Variables
 
@@ -67,65 +85,97 @@ VITE_APP_EMAILJS_USER_ID=.......
 VITE_APP_VERSION=0.0.0
 VITE_GOOGLE_MEASUREMENT_ID=G-........
 
-VITE_APP_ENVIRONMENT=development // only for development environment
+VITE_APP_ENVIRONMENT=development
 ```
-- The file will not be tracked by git
+- The `.env` file will not be tracked by git.
+
+---
 
 ## Running the Project
 
-To run the local version of the project, run:
+To run the local version of the project, use:
 
 ```bash
 npm run dev
 ```
 
+---
+
+## Testing the Build
+
+To test the production build locally:
+
+```bash
+npm run build
+npm run preview
+```
+
+---
+
 ## Data Files
 
 ### Application Data
 
-- The data folder under `src/data` contains page data and project and skills data
+- The `src/data` folder contains data for:
+  - Home page sections (e.g., Hero, Skills, Projects)
+  - Project and skill details
+  - Contact page content
+
+---
 
 ## Public Folder Structure
 
-- Various image files for projects, logos, portraits and backgrounds.
-- Also contains a folder of svg icons
+The `public` folder contains:
+
+- **Images**: Project images, logos, and background images.
+- **Icons**: A folder with SVG icons for the site.
+- **Manifest**: The `manifest.json` file for PWA support.
+
+---
 
 ## Pages
 
-The site is broken up into the following pages:
+The site includes the following pages:
 
-- **Home**: Main page containing sections like Hero, Call to Action, Technical Skills, Work Experience, Interests, Projects, and Contact.
-- **Photos**: Displays a carousel of photos and videos.
-- **Thanks**: A thank you page displayed after form submission.
+- **Home**: Showcasing skills, work experience, projects, and more.
+- **Photos**: A carousel of images and videos.
+- **Thanks**: Displayed after form submission.
+
+---
 
 ## Components
 
-The components for the site are located in the `src/components` folder. Each component is documented and used throughout the site to build the UI.
+The `src/components` folder contains modular components used across the site. Each component is documented and reused for consistency.
+
+---
 
 ## Development
 
-The `TailwindBreakPoints.jsx` component shows the breakpoints during development. You can turn this off by changing the environment variable `VITE_APP_ENVIRONMENT` to something other than `development`.
+- The `TailwindBreakPoints.jsx` component shows breakpoints during development. It can be toggled off by changing the environment variable `VITE_APP_ENVIRONMENT` to something other than `development`.
+
+---
 
 ## Libraries Used
 
-The application uses the following libraries:
+- **React**
+- **Vite**
+- **Tailwind CSS**
+- **Framer Motion**
+- **React Router**
+- **EmailJS**
+- **React Icons**
+- **React GA4**
+- **React Modal**
+- **Blurhash**
 
-- React
-- Tailwind CSS
-- Framer Motion
-- React Router
-- EmailJS
-- React Icons
-- React GA4
-- React Modal
-- Blurhash
-- And more...
+For a complete list of libraries, refer to the `package.json` file.
 
-For more information, refer to the `package.json` file.
+---
 
 ## More Information
 
 For more information, contact Chace Nielson:
 
-- Website: [chacenielson.com](https://chacenielson.com)
+- Website: [chacenielson.com](https://chacenielson.com)  
 - Email: [chacen@shaw.ca](mailto:chacen@shaw.ca)
+
