@@ -1,4 +1,11 @@
 
+ok great now since i transitioned this app from react to react+vite. I want to improve the readme 
+
+i listed a few thinsg i want to add to it
+
+
+
+
 # Chace Nielson Portfolio
 
 Welcome to the repository for Chace Nielson's portfolio. This site showcases my skills, work experience, projects, and more.
