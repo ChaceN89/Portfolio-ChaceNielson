@@ -46,7 +46,6 @@ export const backend = {
     IconLibrary.JWT,
     IconLibrary.OAUTH,
 
-
     // Backend Frameworks & Tools
     IconLibrary.SWAGGER_UI,
     IconLibrary.PLOTLY_DASH,

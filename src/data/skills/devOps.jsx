@@ -53,11 +53,11 @@ export const devOps = {
     IconLibrary.CODE_REVIEWS,
   ],
   relatedProjects:[
-    glassGeckoGames,
     geoPredict,
     library,
     imageProcessor,
     jobDashboard,
+    glassGeckoGames,
     portfolio,
   ]
 };

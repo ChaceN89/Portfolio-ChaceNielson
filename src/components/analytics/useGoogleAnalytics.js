@@ -22,7 +22,7 @@
 import { useEffect } from 'react';
 import ReactGA from 'react-ga4';
 
-export const trackingId = import.meta.env.VITE_GOOGLE_MEASUREMENT_ID || "YOUR_GA_ID";
+export const trackingId = import.meta.env.GOOGLE_MEASUREMENT_ID || "YOUR_GA_ID";
 const appVersion = import.meta.env.APP_VERSION || "No Version Specified";
 const id = import.meta.env.USER_ID || null; // Optional for future use
 
