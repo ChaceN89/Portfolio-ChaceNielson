@@ -31,7 +31,7 @@ const long = (
 );
 
 export const energyTomorrow = {
-  id: "enery-tomorrow",
+  id: "energy-tomorrow",
   name: "Energy Tomorrow",
   tag: "Game",
   blurb: short,
