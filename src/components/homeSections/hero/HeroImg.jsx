@@ -1,0 +1,29 @@
+/**
+ * @file HeroImg.jsx
+ * @module HeroImg
+ * @desc React component that displays the hero image.
+ * 
+ * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-28
+ * @updated 2024-08-09
+ */
+
+import React from 'react';
+import ImageComponent from '../../wrappers/ImageComponent';
+
+function HeroImg() {
+  return (
+    <div className="hero-img-wrapper">
+      <ImageComponent 
+        className="h-144 lg:w-full lg:h-full object-cover"
+        src="/png-portraits/chace-2.png" 
+        lowResSrc="/png-portraits/chace-2-small-2.png"
+        alt="Hero Chace Nielson" 
+      />
+    </div>
+  );
+}
+
+export default HeroImg;

@@ -36,11 +36,11 @@
  * @author Chace Nielson
  * @since 2.1
  * @created 2024-07-29
- * @updated 2024-07-29
+ * @updated Jan 26 2025
  */
 
 import React from 'react';
-import Magnetic from '../../animations/Magnetic';
+import Magnetic from '../animations/Magnetic';
 
 /**
  * ShowIcon component
@@ -49,9 +49,10 @@ import Magnetic from '../../animations/Magnetic';
  * @param {Object} props.skill - The skill object containing icon information.
  * @param {string} [props.size="2rem"] - The size of the icon.
  * @param {boolean} [props.useWhiteText=false] - Flag to determine if white text should be used.
+ * @param {boolean} [props.noDropShadow=false] - Flag to determine if the drop shadow should be removed.
  * @returns {JSX.Element} The ShowIcon component.
  */
-function ShowIcon({ skill, size = "2rem", useWhiteText = false, diableMag=false }) {
+function ShowIcon({ skill, size = "2rem", useWhiteText = false, diableMag=false, noDropShadow=false }) {
   // Determine the icon color based on the useWhiteText prop
   let iconColor;
   if (useWhiteText) {
@@ -69,11 +70,11 @@ function ShowIcon({ skill, size = "2rem", useWhiteText = false, diableMag=false 
 
   return (
     <Magnetic padding={5} disabled={diableMag}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: size, height: size }}>
+      <div className={`${!noDropShadow && 'drop-shadow'}`} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: size, height: size }}>
         {IconComponent ? (
           <IconComponent style={iconStyle} />
         ) : (
-          <img src={process.env.PUBLIC_URL + "/svg-icons/" + skill.svg_path} alt={skill.name} style={imgStyle} />
+          <img src={`/svg-icons/${skill.svg_path}`} alt={skill.name} style={imgStyle} />
         )}
       </div>
     </Magnetic>

@@ -5,12 +5,6 @@
  * The component conditionally scrolls based on the presence of the 'to' prop. If 'to' is provided, it scrolls to the target;
  * otherwise, it triggers the onClick event. The styling is consistent using the 'buttonStyle' class from the CSS file.
  * 
- * @component MyButton
- * 
- * @requires react
- * @requires react-scroll
- * @requires ../../globals
- * 
  * @see {@link https://github.com/fisshy/react-scroll|react-scroll documentation}
  * @see {@link https://tailwindcss.com/docs/installation|Tailwind CSS documentation}
  * 
@@ -42,10 +36,7 @@
  * @returns {JSX.Element} The rendered Button component.
  * 
  * @created 2024-07-17
- * @updated 2024-07-31
- * @since 2.1
- * 
- * @exports MyButton
+ * @updated jan 26, 2025
  */
 
 import React from 'react';

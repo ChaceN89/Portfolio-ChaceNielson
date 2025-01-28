@@ -15,12 +15,12 @@
  * @updated 2024-08-09
  */
 
-import IconSkills from "../iconSkills";
+import IconLibrary from "../iconLibrary";
 
 export const geothermalWork = { // Geothermal
   name: 'Energi Simulation Centre for Geothermal Systems Research',
   role: 'Software Developer',
-  img: process.env.PUBLIC_URL + '/png-icons/geothermal.png',
+  img: '/png-icons/geothermal.png',
   dates: ['May 2022', 'Jan 2024'],
   description: 'Developed a web application to simulate geothermal systems and analyze drilling data. Managed a team of engineers and developers, ensuring the successful completion of project goals.',
   link: 'https://ucalgary.ca/labs/geothermal-energy/centre',
@@ -35,15 +35,17 @@ export const geothermalWork = { // Geothermal
     'Played a key role in interviewing and selecting candidates for new developer positions.',
   ],
   skills: [
-    IconSkills.REACT,
-    IconSkills.DOCKER,
-    IconSkills.POSTGRESQL,
-    IconSkills.FASTAPI,
+    IconLibrary.REACT,
+    IconLibrary.DOCKER,
+    IconLibrary.POSTGRESQL,
+    IconLibrary.FASTAPI,
+    IconLibrary.PYTHON,
+    IconLibrary.TAILWIND,
   ],
   softSkills: [
-    IconSkills.PROBLEM_SOLVING,
-    IconSkills.TEAM_COLLABORATION,
-    IconSkills.LEADERSHIP,
-    IconSkills.SELF_MOTIVATION,
+    IconLibrary.SELF_MOTIVATION,
+    IconLibrary.LEADERSHIP,
+    IconLibrary.TEAM_COLLABORATION,
+    IconLibrary.ADAPTABILITY,
   ],
 };

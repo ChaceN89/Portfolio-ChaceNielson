@@ -52,9 +52,8 @@
  */
 
 import React from 'react';
-import ImageComponent from '../../wrappers/ImageComponent';
+import ImageComponent from '../wrappers/ImageComponent';
 import Modal from 'react-modal';
-import { galleryPhotos } from '../../data/pageData/galleryData';
 import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -72,7 +71,16 @@ Modal.setAppElement('#root'); // This is to avoid screen reader issues
  * @param {number} props.direction - Direction of the navigation for the transition effect.
  * @returns {JSX.Element} The ModalPhotos component.
  */
-function ModalPhotos({ isModalOpen, closeModal, activePhotoIndex, nextPhoto, prevPhoto, direction }) {
+function ModalPhotos({ 
+  galleryPhotos,
+  galleryFolder, 
+  isModalOpen, 
+  closeModal, 
+  activePhotoIndex, 
+  nextPhoto, 
+  prevPhoto, 
+  direction 
+}) {
 
   const variants = {
     enter: (direction) => {
@@ -93,13 +101,14 @@ function ModalPhotos({ isModalOpen, closeModal, activePhotoIndex, nextPhoto, pre
     },
   };
 
+
   return (
     <Modal
       isOpen={isModalOpen}
       onRequestClose={closeModal}
-      contentLabel="Photo Modal"
+      contentLabel={`Photo Library Modal`}
       className="flex items-center justify-center outline-none pt-12"
-      overlayClassName="fixed inset-0 bg-black bg-opacity-70 z-30 flex items-center justify-center"
+      overlayClassName="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center"
     >
       <div className='relative z-35 max-h-section-height h-120 min-w-[34rem] w-full bg-secondary p-10 rounded'>
         {/* Close button for the modal */}
@@ -129,11 +138,12 @@ function ModalPhotos({ isModalOpen, closeModal, activePhotoIndex, nextPhoto, pre
               className='absolute top-0 left-0 w-full h-full'
             >
               <ImageComponent
-                src={`${process.env.PUBLIC_URL}/gallery-photos/${galleryPhotos[activePhotoIndex].photo}`}
+                src={`/${galleryFolder}/${galleryPhotos[activePhotoIndex].src}`}
                 alt={`Chace Nielson Photo ${activePhotoIndex + 1}`}
                 className='object-cover w-full rounded-sm'
                 blurHash={galleryPhotos[activePhotoIndex].blurhash}
               />
+              <div className='text-black'>{`/${galleryFolder}/${galleryPhotos[activePhotoIndex].src}`}</div>
             </motion.div>
           </AnimatePresence>
         </div>

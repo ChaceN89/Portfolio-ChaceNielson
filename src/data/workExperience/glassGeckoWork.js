@@ -15,11 +15,11 @@
  * @updated 2024-08-09
  */
 
-import IconSkills from "../iconSkills";
+import IconLibrary from "../iconLibrary";
 
 export const glassGeckoWork = {
   name: 'Glass Gecko Games',
-  img: process.env.PUBLIC_URL + '/png-icons/glass-gecko-games-icon.png',
+  img: '/png-icons/glass-gecko-games-icon.png',
   description: 'Contributed to game development, website design, and marketing strategies. Collaborated closely with a team of designers and developers to design and implement game features.',
   role: 'Website Development, Game Design',
   dates: ['May 2024', 'Current'],
@@ -35,15 +35,17 @@ export const glassGeckoWork = {
     'Collaborated on resolving complex game design issues and challenges.',
   ],
   skills: [
-    IconSkills.UNITY,
-    IconSkills.PLASTIC_SCM,
-    IconSkills.WEB_DESIGN,
-    IconSkills.REACT,
+    IconLibrary.UNITY,
+    IconLibrary.PLASTIC_SCM,
+    IconLibrary.CSHARP,
+    IconLibrary.GAME_DESIGN,
+    IconLibrary.WEB_DESIGN,
+    IconLibrary.REACT,
   ], 
   softSkills: [
-    IconSkills.TEAM_COLLABORATION,
-    IconSkills.CREATIVITY,
-    IconSkills.COMMUNICATION,
-    IconSkills.ADAPTABILITY,
+    IconLibrary.PROBLEM_SOLVING,
+    IconLibrary.TEAM_COLLABORATION,
+    IconLibrary.CREATIVITY,
+    IconLibrary.COMMUNICATION,
   ],
 };

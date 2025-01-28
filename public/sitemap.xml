@@ -4,57 +4,57 @@
   <!-- Homepage -->
   <url>
     <loc>https://chacenielson.com/</loc>
-    <lastmod>2024-08-08</lastmod>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Project Pages -->
   <url>
-    <loc>https://chacenielson.com/project/space-survive</loc>
-    <lastmod>2024-08-08</lastmod>
+    <loc>https://chacenielson.com/?project=library</loc>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chacenielson.com/project/drillbotics</loc>
-    <lastmod>2024-08-08</lastmod>
+    <loc>https://chacenielson.com/?project=scale-the-depths</loc>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chacenielson.com/project/geo-predict</loc>
-    <lastmod>2024-08-08</lastmod>
+    <loc>https://chacenielson.com/?project=capstone</loc>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chacenielson.com/project/capstone</loc>
-    <lastmod>2024-08-08</lastmod>
+    <loc>https://chacenielson.com/?project=energy-tomorrow</loc>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chacenielson.com/project/voice-identification</loc>
-    <lastmod>2024-08-08</lastmod>
+    <loc>https://chacenielson.com/?project=drillbotics</loc>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chacenielson.com/project/cube-game</loc>
-    <lastmod>2024-08-08</lastmod>
+    <loc>https://chacenielson.com/?project=geo-predict</loc>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chacenielson.com/project/music-player</loc>
-    <lastmod>2024-08-08</lastmod>
+    <loc>https://chacenielson.com/?project=voice-identification</loc>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chacenielson.com/project/image-processor</loc>
-    <lastmod>2024-08-08</lastmod>
+    <loc>https://chacenielson.com/?project=image-processor</loc>
+    <lastmod>2025-01-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

@@ -1,74 +1,51 @@
 /**
  * @file interestsData.js
  * @module interestsData
- * @desc Contains data for the interests section used in various parts of the application.
- * Each interest entry includes the name, description, and an icon representing the interest.
- * 
- * @requires ../iconSkills
- *  
- * @example
- * // Example usage of interests in a component
- * import { interests } from './interestsData';
- * 
- * function InterestsSection() {
- *   return (
- *     <div>
- *       {interests.map((interest, index) => (
- *         <div key={index}>
- *           <interest.icon size={32} />
- *           <h3>{interest.name}</h3>
- *           <p>{interest.description}</p>
- *         </div>
- *       ))}
- *     </div>
- *   );
- * }
+ * @desc Contains data for the interests section used in various parts of the application. Each interest includes a name, description, and an icon.
  * 
  * @exports interests
  * @exports interestsPageData
- * 
  * @author Chace Nielson
- * @created 2024-07-28
- * @updated 2024-07-28
- * @since 2.1
+ * @created July 28, 2024
+ * @updated July 28, 2024
  */
 
-import IconSkills from "../iconSkills";
+import IconLibrary from "../iconLibrary";
 
 export const interestsPageData = {
   title: "Interests",
-  description: "I have a variety of interests outside of programming. Here are a few of my favorites."
+  description: "I have a variety of interests outside of programming that inspire my creativity and fuel my passion for learning. Here are a few of my favorites."
 };
 
 export const interests = [
   { 
     name: "Snowboarding", 
-    description: "I picked up snowboarding in university and have been hooked ever since. It's my favorite winter activity.", 
-    icon: IconSkills.SNOWBOARDING,
+    description: "I discovered snowboarding in university and have been hooked ever since. It's my favorite winter activity.", 
+    icon: IconLibrary.SNOWBOARDING,
   },
   { 
     name: "Basketball",
-    description: "I played basketball in high school and college, and I still play in local leagues when I can.",
-    icon: IconSkills.BASKETBALL
+    description: "I played basketball in high school and college, and now enjoy officiating games.",
+    icon: IconLibrary.BASKETBALL
   },
   { 
     name: "Music",
-    description: "I have been playing guitar for the last 4 years. I enjoy playing songs and writing my own music.",
-    icon: IconSkills.MUSIC
+    description: "I've been playing guitar for 5 years, enjoying both performing songs and writing my own music.",
+    icon: IconLibrary.MUSIC
   },
   { 
     name: "Hiking",
-    description: "I love the mountains and enjoy hiking and backpacking in the summer and winter.",
-    icon: IconSkills.HIKING
+    description: "The mountains are my favorite escape. I enjoy hiking and backpacking in all seasons.",
+    icon: IconLibrary.HIKING
   },
   { 
     name: "Climbing",
-    description: "I have been climbing my whole life. I enjoy rock climbing, mountaineering, and ice climbing.",
-    icon: IconSkills.MOUNTAIN_CLIMBING
+    description: "From rock climbing to ice climbing and mountaineering, I've loved climbing my entire life.",
+    icon: IconLibrary.MOUNTAIN_CLIMBING
   },
   { 
     name: "Swimming",
-    description: "I recently picked up swimming as a way to stay in shape and enjoy the water.",
-    icon: IconSkills.SWIMMING
+    description: "Swimming has become a recent passion — a fun way to stay active and enjoy the water.",
+    icon: IconLibrary.SWIMMING
   }
 ];

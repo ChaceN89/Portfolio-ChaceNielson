@@ -4,19 +4,7 @@
  * @desc React component that displays a library of photos and provides functionality for viewing and navigating through photos in a modal.
  * This component calls all the photo elements and includes functions to navigate through the photos within the modal.
  * Also avoids using the modal if the screen is too small or on mobile.
- * 
- * @note This component is part of the photo gallery feature of the application.
- *
- * @component GalleryPhotos
- * 
- * @requires react
- * @requires useState, useEffect from 'react'
- * @requires galleryPhotos from '../../data/pageData/galleryData'
- * @requires useMediaQuery from 'react-responsive'
- * @requires Photo from './Photo'
- * @requires ModalPhotos from './ModalPhotos'
- * 
- * @see {@link https://react.dev/ | React Documentation}
+
  * @see {@link https://github.com/contra/react-responsive | React Responsive Documentation}
  * 
  * @returns {JSX.Element} The GalleryPhotos component that displays a library of photos with modal navigation.
@@ -31,12 +19,10 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
- * @since 2.1
+ * @updated jan 25, 2025
  */
 
 import React, { useState, useEffect } from 'react';
-import { galleryPhotos } from '../../data/pageData/galleryData';
 import { useMediaQuery } from 'react-responsive';
 import Photo from './Photo';
 import ModalPhotos from './ModalPhotos';
@@ -50,12 +36,8 @@ const sectionVariants = {
   },
 };
 
-/**
- * GalleryPhotos component
- *
- * @returns {JSX.Element} The GalleryPhotos component.
- */
-export default function GalleryPhotos() {
+
+export default function GalleryPhotos({galleryFolder, galleryPhotos}) {
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [direction, setDirection] = useState(0);
@@ -108,20 +90,31 @@ export default function GalleryPhotos() {
     setActivePhotoIndex((prevIndex) => (prevIndex - 1 + galleryPhotos.length) % galleryPhotos.length);
   };
 
+  if (!galleryPhotos.length) {
+    return (
+      <div className='text-center h-full py-10 '>
+        <p>No photos to display.</p>
+      </div>
+    );
+  }
+
+
   return (
     <div
-      className='gallery px-4 md:px-6 py-2 text-center relative'
+      className={`gallery px-4 md:px-6 py-2 text-center relative`}
       initial="hidden"
       variants={sectionVariants}
     >
       {/* Render each photo in the gallery */}
       {galleryPhotos.map((item, index) => (
-        <Photo key={index} item={item} index={index} openModal={openModal} />
+        <Photo key={index} galleryFolder={galleryFolder} item={item} index={index} openModal={openModal} />
       ))}
 
       {/* Render the modal if the screen size is large */}
       {isLargeScreen && (
         <ModalPhotos 
+          galleryPhotos={galleryPhotos}
+          galleryFolder={galleryFolder}
           isModalOpen={isModalOpen} 
           closeModal={closeModal} 
           activePhotoIndex={activePhotoIndex} 

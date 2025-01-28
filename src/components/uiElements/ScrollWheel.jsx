@@ -46,19 +46,17 @@
  */
 
 import React from 'react';
+// Libraries
 import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
-import { globals } from '../../data/globals';
 import { Link as ScrollLink } from 'react-scroll';
-import ImageComponent from '../../wrappers/ImageComponent';
 
-/**
- * ScrollWheel component
- *
- * @param {Object} props - The component props.
- * @param {string} [props.to="CallToAction"] - The target element to scroll to.
- * @returns {JSX.Element|null} The ScrollWheel component or null if the screen height is less than 400px.
- */
+// Component
+import ImageComponent from '../wrappers/ImageComponent';
+
+// data
+import { globals } from '../../data/globals';
+
 function ScrollWheel({ to = "CallToAction" }) {
   // Check if the screen height is greater than 400px
   const isTallEnough = useMediaQuery({ query: '(min-height: 400px)' });
@@ -103,7 +101,7 @@ function ScrollWheel({ to = "CallToAction" }) {
             duration={globals.ScrollLink.duration}
           >
             <ImageComponent
-              src={`${process.env.PUBLIC_URL}/png-icons/scroll.png`}
+              src='/png-icons/scroll.png'
               alt="Scroll"
               className="h-12 lg:h-14 xl:h-16 hover:scale-110 opacity-45 hover:opacity-75 cursor-s-resize"
             />

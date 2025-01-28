@@ -15,12 +15,12 @@
  * @updated 2024-08-09
  */
 
-import IconSkills from "../iconSkills";
+import IconLibrary from "../iconLibrary";
 
 export const albertaTomorrowWork = { // Alberta Tomorrow
   name: 'Alberta Tomorrow',
   role: 'Software Developer',
-  img: process.env.PUBLIC_URL + '/png-icons/alberta-tomorrow.jpg',
+  img: '/png-icons/alberta-tomorrow.jpg',
   dates: ['Jan 2024', 'Current'],
   description: 'Contributed to the development of a web application that leverages interactive maps, data visualization, and gamification to promote sustainable land use in Alberta and BC.',
   link: 'https://www.albertatomorrow.ca',
@@ -34,15 +34,18 @@ export const albertaTomorrowWork = { // Alberta Tomorrow
     "Assisted in managing project resources to meet deadlines and budget constraints." 
  ],
   skills: [
-    IconSkills.AWS,
-    IconSkills.VUE,
-    IconSkills.MAPBOX_GL,
-    IconSkills.CSS,
+    IconLibrary.AWS,
+    IconLibrary.S3,
+    IconLibrary.VUE,
+    IconLibrary.CSS,
+    IconLibrary.MAPBOX_GL,
+    IconLibrary.UNITY,
+    IconLibrary.BLENDER,
   ],
   softSkills: [
-    IconSkills.PROBLEM_SOLVING,
-    IconSkills.ADAPTABILITY,
-    IconSkills.TIME_MANAGEMENT,
-    IconSkills.SELF_MOTIVATION,
+    IconLibrary.CRITICAL_THINKING,
+    IconLibrary.ADAPTABILITY,
+    IconLibrary.TIME_MANAGEMENT,
+    IconLibrary.SELF_MOTIVATION,
   ],
 };

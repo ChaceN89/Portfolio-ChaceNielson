@@ -36,15 +36,14 @@
  * @exports Photo
  * 
  * @author Chace Nielson
- * @since 2.1
  * @created 2024-07-28
- * @updated 2024-07-28
+ * @updated jan 25, 2025
  */
 
 import React from 'react';
 import LazyLoad from 'react-lazy-load';
-import ImageComponent from '../../wrappers/ImageComponent';
-import ScrollToTop from '../../routing/ScrollToTop';
+import ImageComponent from '../wrappers/ImageComponent';
+import ScrollToTop from '../../utils/ScrollToTop';
 
 /**
  * Photo component
@@ -55,7 +54,7 @@ import ScrollToTop from '../../routing/ScrollToTop';
  * @param {function} props.openModal - Function to open the modal for the photo.
  * @returns {JSX.Element} The Photo component.
  */
-function Photo({ item, index, openModal }) {
+function Photo({ item, galleryFolder, index, openModal }) {
   return (
     <>
       <ScrollToTop />
@@ -67,8 +66,8 @@ function Photo({ item, index, openModal }) {
             onClick={() => openModal(index)}
           >
             <ImageComponent
-              src={`${process.env.PUBLIC_URL}/gallery-photos/${item.photo}`}
-              alt={`Chace Nielson Photo ${index + 1}`}
+              src={`/${galleryFolder}/${item.src}`}
+              alt={`${item.photo} ${index + 1}`}
               className='object-cover w-full h-full rounded-md sm:cursor-pointer'
               blurHash={item.blurhash}
             />

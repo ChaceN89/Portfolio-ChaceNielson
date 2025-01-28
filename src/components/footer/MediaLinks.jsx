@@ -7,31 +7,8 @@
  * 
  * includes an option for the head links using same links infomation
  * 
- * @component MediaLinks
- * 
- * @requires react
- * @requires useMediaQuery from 'react-responsive'
- * @requires Tooltip from '../uiElements/Tooltip'
- * @requires IconSkills from '../../data/iconSkills'
- * 
  * @see {@link https://react.dev/ | React Documentation}
  * @see {@link https://github.com/contra/react-responsive | React Responsive Documentation}
- * 
- * @returns {JSX.Element} The MediaLinks component that displays social media icons with tooltips.
- * 
- * @example
- * // Example usage of MediaLinks in a footer component
- * import MediaLinks from '../components/footer/MediaLinks';
- * 
- * function Footer() {
- *   return (
- *     <footer className="footer">
- *       <MediaLinks />
- *     </footer>
- *   );
- * }
- * 
- * @exports MediaLinks
  * 
  * @author Chace Nielson
  * @created 2024-07-28
@@ -42,7 +19,7 @@
 import React from 'react';
 import Tooltip from '../uiElements/Tooltip';
 import { useMediaQuery } from 'react-responsive';
-import IconSkills from '../../data/iconSkills';
+import IconLibrary from '../../data/iconLibrary';
 
 /**
  * MediaLinks component
@@ -54,20 +31,19 @@ function MediaLinks({headerLinks=false}) {
 
   // links to use for both footer and header
   const mediaLinks = [
-    { name: "GitHub", icon: IconSkills.GITHUB.icon, link: "https://github.com/ChaceN89" },
-    { name: "LinkedIn", icon: IconSkills.LINKEDIN.icon, link: "https://www.linkedin.com/in/chace-nielson" },
-    { name: "YouTube", icon: IconSkills.YOUTUBE.icon, link: "https://www.youtube.com/@chacenielson5413" },
-    { name: "Instagram", icon: IconSkills.INSTAGRAM.icon, link: "https://www.instagram.com/chacenielson" },
-    { name: "Itch.io", icon: IconSkills.ITCHIO.icon, link: "https://kar2fast.itch.io/" }
+    { name: "GitHub", icon: IconLibrary.GITHUB.icon, link: "https://github.com/ChaceN89" },
+    { name: "LinkedIn", icon: IconLibrary.LINKEDIN.icon, link: "https://www.linkedin.com/in/chace-nielson" },
+    { name: "YouTube", icon: IconLibrary.YOUTUBE.icon, link: "https://www.youtube.com/@chacenielson5413" },
+    { name: "Instagram", icon: IconLibrary.INSTAGRAM.icon, link: "https://www.instagram.com/chacenielson" },
+    { name: "Itch.io", icon: IconLibrary.ITCHIO.icon, link: "https://kar2fast.itch.io/" }
   ];
 
   const iconSize = isMediumScreen ? 24 : 18;
 
-
   // what to return if its the header links
   if (headerLinks){
     return (
-      <div className="grid grid-cols-4 xl:grid-cols-6 gap-1.5 relative py-0.5 ">
+      <div className="flex lg:grid lg:grid-cols-4 xl:grid-cols-6 gap-1.5 relative py-0.5 ">
         {mediaLinks.reverse().map((link) => (
           <Tooltip key={link.name} text={link.name}>
             <a

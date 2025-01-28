@@ -1,0 +1,65 @@
+/**
+ * @file photoApp.js
+ * @module photoApp
+ * @desc Contains data for the Photo App project.
+ * 
+ * @name Photo App
+ * 
+ * @author Chace Nielson
+ * @created 2024-07-28
+ * @updated Jan 27th, 2025
+ */
+
+import IconLibrary from "../iconLibrary";
+
+// Short description (blurb) to be displayed on the project card
+const short = "A full-stack photo gallery app with user authentication and sharing capabilities.";
+
+// Long description for the modal page, providing detailed information about the project
+const long = (
+  <div className="space-y-2">
+    <p>
+      <span className="font-bold">Aviar</span> is a full-stack photo gallery application designed to help users upload, organize, and manage their photo collections effortlessly. Built using the <span className="font-bold">MERN stack</span> (MongoDB, ExpressJS, React, NodeJS), it provides a scalable and reliable platform for photo management.
+    </p>
+    <p>
+      Key features include <span className="font-bold">user authentication</span>, <span className="font-bold">photo categorization</span>, and the ability to <span className="font-bold">share collections</span> with others. The application offers a responsive, user-friendly interface, ensuring seamless photo management across devices.
+    </p>
+    <p>
+      This project showcases the power of the MERN stack for building comprehensive applications, combining scalability with intuitive design to create an efficient photo gallery solution.
+    </p>
+  </div>
+);
+
+export const photoApp = {
+  id: "photo-app",
+  name: "Photo App",
+  tag: "Full-Stack",
+  blurb: short,
+  description: long,
+  images: [
+    { src: "photo2.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
+    { src: "photo6.jpg", blurhash: "LG9@uBj[4nR..At8ogkC%Lt8xuad" },
+    { src: "photo5.jpg", blurhash: "LGB;C8-n01IV?wtSs+t7gjjX-=xs" },
+    { src: "photo4.jpg", blurhash: "LN9tisoI9Ft6?wofIot7tRogt7oz" },
+    { src: "photo3.jpg", blurhash: "LGAdcs%L00NI?wxvoJkBx]o#-;$%" },
+    { src: "photo1.jpg", blurhash: "LCAKgzxu00Sjx]xu.AWC_2t8Rks+" },
+  ],
+  youtubeEmbed:"https://www.youtube.com/watch?v=mktAIV4sjFQ",
+  mainStack: [
+    IconLibrary.REACT,
+    IconLibrary.MONGODB,
+    IconLibrary.EXPRESSJS,
+  ],
+  extendedStack: [
+    IconLibrary.FULL_STACK,
+    IconLibrary.AUTHENTICATION,
+    IconLibrary.NODE_JS,
+    IconLibrary.HTML,
+    IconLibrary.CSS,
+    IconLibrary.RESPONSIVE_DESIGN,
+  ],
+  externalLinks: [
+    { name: "Overview", link: "https://www.youtube.com/watch?v=mktAIV4sjFQ", icon: IconLibrary.YOUTUBE.icon },
+    { name: "Code", link: "https://github.com/ChaceN89/Aviar", icon: IconLibrary.GITHUB.icon },
+  ],
+};
