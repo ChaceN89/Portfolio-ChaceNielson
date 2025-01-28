@@ -18,18 +18,30 @@ const short = "Fishing game and winner of the 2024 GMTK Game Jam.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
-  <div className='space-y-2'>
+  <div className="space-y-2">
     <p>
-      Scale the Depths was created for the 2024 GMTK Game Jam, where the theme was "Built to Scale." We took a literal approach, putting the player in control of a robot tasked with scaling fish to feed hungry aquatic customers. The game stood out among over 7,000 submissions and was selected as a <strong>Winner of the jam</strong>.
+      <span className="font-bold">Scale The Depths</span> was created for the <span className="font-bold">2024 GMTK Game Jam</span>, where the theme was "Built to Scale." Players control a robot tasked with scaling fish to feed hungry aquatic customers in a creative and literal interpretation of the theme. The game stood out among over 7,000 submissions, earning the title of <span className="font-bold">Winner of the jam</span>.
+    </p>
+    <p>
+      Since its release, the game has gained significant traction on <span className="font-bold">Itch.io</span>, receiving over <span className="font-bold">50K views</span> and maintaining a <span className="font-bold">4.6-star rating</span>. Its success has also sparked interest in a full version, leading to over <span className="font-bold">12K wishlists</span> on <span className="font-bold">Steam</span>.
+    </p>
 
-      <iframe className="rounded-xl"  frameBorder="0" src="https://itch.io/embed/2912112?border_width=5&amp;link_color=FFA500" width="100%" height="165"><a href="https://serpexnessie.itch.io/scale-the-depths">Scale the Depths by Serpexnessie, Mancavea, Glass Gecko Games, Kar2fast, 4n6u, E-man248, Pepocandii</a></iframe>
-    </p> 
+    <iframe
+      className="rounded-xl"
+      frameBorder="0"
+      src="https://itch.io/embed/2912112?border_width=5&amp;link_color=FFA500"
+      width="100%"
+      height="165"
+    >
+      <a href="https://serpexnessie.itch.io/scale-the-depths">
+        Scale the Depths by Serpexnessie, Mancavea, Glass Gecko Games, Kar2fast, 4n6u, E-man248, Pepocandii
+      </a>
+    </iframe>
+    <p>
+      This project highlights creative gameplay design, polished visuals, and seamless collaboration with a diverse team of developers, resulting in a highly engaging and award-winning experience.
+    </p>
   </div>
 );
-
-const features = [
-  "Mod",
-];
 
 export const scaleTheDepths = {
   id: "scale-the-depths",
@@ -37,7 +49,6 @@ export const scaleTheDepths = {
   tag: "Game",
   blurb: short,
   description: long,
-features: features,
   images: [
     { src: "scaleTheDepths1.jpg", blurhash: "LaJuWDA0SdTLuPIUwbt8buRPtSoz" },
     { src: "scaleTheDepths2.jpg", blurhash: "LoGKwfoexZI@.TjYn$S54;WAM{t7" },

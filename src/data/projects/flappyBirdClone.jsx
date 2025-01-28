@@ -25,17 +25,12 @@ const long = (
   </div>
 );
 
-const features = [
-  "Mod",
-];
-
 export const flappyBirdClone = {
   id: "flappy-bird-clone",
   name: "Flappy Bird Clone",
   tag: "Game",
   blurb: short,
   description: long,
-  features: features,
   hidePhotos: true,
   images: [
     { src: "flappyBird.jpg", blurhash: "L8CI]Vs~Ros~8[obWHkA.Uk8oYs~" },

@@ -7,39 +7,33 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
- * @since 2.1
+ * @updated Jan 27th, 2025
  */
 
 import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
-const short = "Job dashboard for managing job applications and interviews.";
+const short = "A job manager built with FastAPI and Vue.js, featuring dark mode styles.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
-  <div className='space-y-2'>
+  <div className="space-y-2">
     <p>
-      This project is a job dashboard application designed to help users manage their job applications and interviews. It is built with Vue.js and FastAPI, and uses SQLite for data storage.
+      The <span className="font-bold">Job Dashboard</span> is a web app designed to help users track and manage job applications and interviews. It uses <span className="font-bold">FastAPI</span> for backend processing and <span className="font-bold">SQLite</span> for reliable data storage.
     </p>
     <p>
-      The full-stack project is deployed using Netlify and Render.
+      The frontend, built with <span className="font-bold">Vue.js</span> and styled with <span className="font-bold">Tailwind CSS</span>, is simple and features a sleek <span className="font-bold">dark mode</span>. The app is deployed on <span className="font-bold">Netlify</span> and <span className="font-bold">Render</span> for scalability and performance.
     </p>
   </div>
 );
-
-const features = [
-  "Mod",
-];
 
 export const jobDashboard = {
   starred: true,
   id: "job-dashboard",
   name: "Job Dashboard",
-  tag: "Full-Stack",
+  tag: "Backend",
   blurb: short,
   description: long,
-features: features,
   images: [
     { src: "jobDashboard.jpg", blurhash: "L7Op#=4mxu?cE2IokBxb9+%jj=Mv" },
   ],

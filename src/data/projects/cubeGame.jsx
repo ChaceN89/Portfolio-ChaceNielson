@@ -14,7 +14,7 @@
 import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
-const short = "A simple yet addictive endless runner built built.";
+const short = "A simple endless runner built in Unity, using physics.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
@@ -37,17 +37,12 @@ const long = (
   </div>
 );
 
-const features = [
-  "Mod",
-];
-
 export const cubeGame = {
   id: "cube-game",
   name: "Cube game",
   tag: "Game",
   blurb: short,
   description: long,
-  features: features,
   images: [
     { src: "cube00.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
     { src: "cube0.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },

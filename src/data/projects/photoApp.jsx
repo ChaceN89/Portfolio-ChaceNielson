@@ -7,30 +7,28 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-09
- * @since 2.1
+ * @updated Jan 27th, 2025
  */
 
 import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
-const short = "Full-Stack photo gallery application with user authentication.";
+const short = "A full-stack photo gallery app with user authentication and sharing capabilities.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
-  <div className='space-y-2'>
+  <div className="space-y-2">
     <p>
-      This full-stack photo gallery application, named Aviar, allows users to upload, organize, and manage their photo collections with ease. Built using the MERN stack (MongoDB, ExpressJS, React, and NodeJS), the app offers a scalable and robust solution for photo management. Key features include user authentication, photo categorization, and sharing capabilities.
+      <span className="font-bold">Aviar</span> is a full-stack photo gallery application designed to help users upload, organize, and manage their photo collections effortlessly. Built using the <span className="font-bold">MERN stack</span> (MongoDB, ExpressJS, React, NodeJS), it provides a scalable and reliable platform for photo management.
     </p>
     <p>
-      The app delivers a responsive, user-friendly interface, enabling seamless photo management across devices. This project exemplifies the effective use of the MERN stack to create a comprehensive and intuitive photo gallery application.
+      Key features include <span className="font-bold">user authentication</span>, <span className="font-bold">photo categorization</span>, and the ability to <span className="font-bold">share collections</span> with others. The application offers a responsive, user-friendly interface, ensuring seamless photo management across devices.
+    </p>
+    <p>
+      This project showcases the power of the MERN stack for building comprehensive applications, combining scalability with intuitive design to create an efficient photo gallery solution.
     </p>
   </div>
 );
-
-const features = [
-  "Mod",
-];
 
 export const photoApp = {
   id: "photo-app",
@@ -38,7 +36,6 @@ export const photoApp = {
   tag: "Full-Stack",
   blurb: short,
   description: long,
-features: features,
   images: [
     { src: "photo2.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
     { src: "photo6.jpg", blurhash: "LG9@uBj[4nR..At8ogkC%Lt8xuad" },
@@ -57,9 +54,9 @@ features: features,
     IconLibrary.FULL_STACK,
     IconLibrary.AUTHENTICATION,
     IconLibrary.NODE_JS,
-    IconLibrary.RESPONSIVE_DESIGN,
     IconLibrary.HTML,
     IconLibrary.CSS,
+    IconLibrary.RESPONSIVE_DESIGN,
   ],
   externalLinks: [
     { name: "Overview", link: "https://www.youtube.com/watch?v=mktAIV4sjFQ", icon: IconLibrary.YOUTUBE.icon },

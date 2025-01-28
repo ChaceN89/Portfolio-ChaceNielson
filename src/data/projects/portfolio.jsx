@@ -14,26 +14,32 @@
 import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
-const short = "My original portfolio.";
+const short = "Showcasing my skills and projects with a modern, streamlined portfolio.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
-  <div className='space-y-2'>
+  <div className="space-y-2">
     <p>
-      My portfolio highlight my tachnical skills and projects. It is built using React and Tailwind CSS. The portfolio features a clean and modern design, providing an overview of my work and contact information. 
+      <span className="font-bold">My Portfolio</span> is a personal website designed to showcase my technical skills, projects, and contact information. Built with <span className="font-bold">React</span>, <span className="font-bold">Tailwind CSS</span> and <span className="font-bold">Vite</span>, the portfolio features a clean, modern design that highlights my work.
     </p>
     <p>
-      The project is deployed using Vercel, demonstrating the use of modern web technologies to create an effective personal branding website. Currently I am on the second version of my portfolio. 
+      <span className="font-bold">Version 1</span> of my portfolio served as my first personal branding website, but it included too much extra information and lacked organization in showcasing projects. While it effectively demonstrated the basics of web development, it left room for improvement in terms of design and usability.
     </p>
     <p>
-      My orginal portfolio had too much extra information and lacked some features. The new version uses blurhashing to blur images on load and Framer Motion to create animations. It is more organized and has a more streamlined user experience to better showcase my work.
+      <span className="font-bold">Version 2</span> addresses these shortcomings with several enhancements:
+      <ul className="list-disc list-inside pl-5">
+        <li>Implemented <span className="font-bold">blurhashing</span> to blur images during loading, improving performance and aesthetics.</li>
+        <li>Integrated <span className="font-bold">Framer Motion</span> for animations, adding dynamic interactions to create a polished experience.</li>
+        <li>Streamlined the layout and navigation to better organize projects and skills.</li>
+        <li><span className="font-bold">Modal routing</span> is used to display skills and projects over the main page.</li>
+        <li>Enhanced responsiveness and accessibility for a consistent experience across devices.</li>
+      </ul>
+    </p>
+    <p>
+      Deployed on <span className="font-bold">Vercel</span>, the portfolio demonstrates modern web development practices, with features like responsive design, SEO optimization, and progressive web app (PWA) functionality.
     </p>
   </div>
 );
-
-const features = [
-  "Mod",
-];
 
 export const portfolio = {
   starred: true,
@@ -42,23 +48,25 @@ export const portfolio = {
   tag: "UX/UI",
   blurb: short,
   description: long,
-features: features,
   images: [
-    { src: "portfolio.jpg", blurhash: "C78g,54m9F_4X9V?aexv" },
+    { src: "portfolio0.jpg", blurhash: "C78g,54m9F_4X9V?aexv" },
+    { src: "portfolio1.jpg", blurhash: "C78g,54m9F_4X9V?aexv" },
     { src: "portfolio2.jpg", blurhash: "L78g,54m9F_4X9V?aexv9Ft7s;I." },
   ],
   mainStack: [
     IconLibrary.REACT,
     IconLibrary.TAILWIND,
+    IconLibrary.VITE
   ],
   extendedStack: [
     IconLibrary.FRAMER_MOTION,
-    IconLibrary.BLURHASH,
     IconLibrary.VERCEL,
     IconLibrary.RESPONSIVE_DESIGN,
     IconLibrary.SEO,
     IconLibrary.PWA,
-    IconLibrary.EMAIL_JS
+    IconLibrary.EMAIL_JS,
+    IconLibrary.GOOGLE_ANALYTICS,
+    IconLibrary.BLURHASH,
   ],
   externalLinks: [
     { name: "Version 1", link: "https://portfolio-chace-nielson.vercel.app/", icon: IconLibrary.WORLD.icon },

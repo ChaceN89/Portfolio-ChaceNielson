@@ -7,30 +7,25 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
- * @since 2.1
+ * @updated Jan 27th, 2025
  */
 
 import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
-const short = "A music player application built with Vue and Tailwind.";
+const short = "A simple music player with dark/light mode, built with Vue and Tailwind..";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
-  <div className='space-y-2'>
+  <div className="space-y-2">
     <p>
-      This is a music player application built using Vue.js and Tailwind CSS. The application allows users to play music online.
+      This <span className="font-bold">Music Player</span> is a web application built with <span className="font-bold">Vue.js</span> and <span className="font-bold">Tailwind CSS</span>, allowing users to play music online with ease.
     </p>
     <p>
-      It features a clean and responsive UI, and dark/light mode and volume control settings. The application is deployed using Vercel.
+      The app features a clean, responsive design and supports <span className="font-bold">dark/light mode</span>, along with basic controls like volume adjustment. It is deployed using <span className="font-bold">Vercel</span> for seamless performance.
     </p>
   </div>
 );
-
-const features = [
-  "Mod",
-];
 
 export const musicPlayer = {
   starred: true,
@@ -39,7 +34,6 @@ export const musicPlayer = {
   tag: "UX/UI",
   blurb: short,
   description: long,
-features: features,
   images: [
     { src: "musicPlayer2.jpg", blurhash: "LANm]1_M?brt-;D*js%L~W%3RjD%" },
     { src: "musicPlayer.jpg", blurhash: "LADl{3~pIV00ROxvt7MxD*00xv?b" },

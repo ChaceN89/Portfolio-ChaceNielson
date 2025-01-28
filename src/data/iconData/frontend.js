@@ -29,7 +29,7 @@ const frontendIcons = {
   STATEMANAGEMENT: { name: "State Management", svg_path: `${folder}/state-management.svg` },
 
   FRAMER_MOTION: { name: "Framer Motion", icon: TbBrandFramerMotion, color: "black" },
-  BLURHASH: { name: "BlurHash", icon: MdOutlineBlurOn, color: "black" },
+  BLURHASH: { name: "BlurHashing", icon: MdOutlineBlurOn, color: "black" },
 };
 
 export default frontendIcons;

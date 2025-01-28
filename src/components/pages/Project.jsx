@@ -52,7 +52,9 @@ export default function Project({ projectName }) {
           <div className='black lg:hidden'>
             <YouTubeEmbed youtubeEmbed={project.youtubeEmbed} />
           </div>
-          {project.description}
+          <div className='pb-2'>
+            {project.description}
+          </div>
           <SkillBoxContainer stack={fullStack} isSmall />
         </div>
         <div className='lg:w-1/2'>

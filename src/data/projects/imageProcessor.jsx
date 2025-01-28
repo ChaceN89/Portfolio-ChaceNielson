@@ -7,14 +7,13 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-07-28
- * @since 2.1
+ * @updated Jan 27th, 2025
  */
 
 import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
-const short = "Image processing task queue using React and FastAPI.";
+const short = "Backend-focused image processing queue with FastAPI and multithreading.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (

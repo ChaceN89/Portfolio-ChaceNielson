@@ -28,17 +28,12 @@ const long = (
   </div>
 );
 
-const features = [
-  "Mod",
-];
-
 export const genrePrediction = {
   id: "genre-prediction",
   name: "Genre Prediction",
   tag: "Machine Learning",
   blurb: short,
   description: long,
-  features: features,
   images: [
     { src: "genrePrediction0.jpg", blurhash: "LIR{uws%#rkX.8bJX5ad_MW@Xknh" },
     { src: "genrePrediction1.jpg", blurhash: "LIR{uws%#rkX.8bJX5ad_MW@Xknh" },

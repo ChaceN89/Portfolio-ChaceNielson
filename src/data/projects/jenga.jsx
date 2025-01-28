@@ -7,30 +7,28 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-21
- * @since 2.1
+ * @updated Jan 27th, 2025
  */
 
 import IconLibrary from "../iconLibrary";
 
 // Short description (blurb) to be displayed on the project card
-const short = "Virtual Jenga using haptics built in Unity Game Engine.";
+const short = "Virtual Jenga built in Unity, featuring haptic feedback and realistic physics.";
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
-  <div className='space-y-2'>
+  <div className="space-y-2">
     <p>
-      This project features a Haptic Jenga game developed with Unity and C#. It utilizes a haptic pen and the OpenHaptics toolkit to deliver tactile feedback, providing users with a tangible interaction experience.
+      <span className="font-bold">Virtual Jenga</span> is a haptics-driven game developed in <span className="font-bold">Unity</span> with <span className="font-bold">C#</span>, designed to replicate the traditional Jenga experience in a virtual environment. The game utilizes a tactile <span className="font-bold">haptic stylus</span> powered by the <span className="font-bold">OpenHaptics toolkit</span>, delivering a realistic sense of touch for block manipulation.
     </p>
     <p>
-      Simulating the traditional Jenga game, players can manipulate blocks using the haptic pen, experiencing realistic touch sensations. This project showcases the integration of haptic technology in game development, significantly enhancing the user's immersive experience.
+      Players can interact with the blocks using the haptic pen, experiencing tactile feedback that mimics the sensation of touching, pulling, and balancing blocks in real-time. This integration of haptic technology enhances the immersion, allowing users to feel the weight and texture of the virtual blocks as they play.
+    </p>
+    <p>
+      Setting up the physics in Unity was a critical component of this project. Using <span className="font-bold">Unity's Physics Engine</span>, the blocks were carefully modeled to behave like their real-world counterparts, creating a simulation of weight, friction, and collisions. The physics system seamlessly interacts with the haptic feedback, ensuring that every touch and movement feels natural and responsive.
     </p>
   </div>
 );
-
-const features = [
-  "Mod",
-];
 
 export const jenga = {
   id: "jenga",
@@ -38,7 +36,6 @@ export const jenga = {
   tag: "Game",
   blurb: short,
   description: long,
-  features: features,
   hidePhotos: true,
   images: [
     { src: "jenga5.jpg", blurhash: "LJFiSzt700WB00Rj~pof?uofMeWB" },

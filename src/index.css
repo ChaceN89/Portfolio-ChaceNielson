@@ -53,7 +53,7 @@
  }
  
  .bg-frosted-glass {
-   @apply bg-primary bg-opacity-45 backdrop-blur-md;
+   @apply bg-primary bg-opacity-65 backdrop-blur-md;
  }
  
  .bg-frosted-container {

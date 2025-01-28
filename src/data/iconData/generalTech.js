@@ -16,7 +16,7 @@ const generalTechIcons = {
   VS_CODE: { name: "VS Code", svg_path: `${folder}/vs-code.svg` },
   
   SEO: { name: "SEO", svg_path: `${folder}/seo.svg` },
-  PWA: { name: "Progressive Web Apps", svg_path: `${folder}/pwa.svg` },
+  PWA: { name: "Progressive Web App", svg_path: `${folder}/pwa.svg` },
 
   GOOGLE_ANALYTICS: { name: "Google Analytics", svg_path: `${folder}/google_analytics.svg` },
   THREE_D_SLICER: { name: "3D Slicer", svg_path: `${folder}/3D-Slicer.svg` },
