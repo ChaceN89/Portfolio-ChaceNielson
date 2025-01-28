@@ -28,6 +28,7 @@ import { drillbotics } from "../projects/drillbotics";
 import { cardGenerator } from "../projects/CardGenerator";
 import { scaleTheDepths } from "../projects/ScaleTheDepths";
 import { dicom3dPrint } from "../projects/DICOM3dPrints";
+import { energyTomorrow } from "../projects/EnergyTomorrow";
 
 export const projectPageData = {
   title: "My Projects",
@@ -35,6 +36,7 @@ export const projectPageData = {
 };
 
 export const projects = [
+  energyTomorrow,
   capstone,
   dicom3dPrint,
   scaleTheDepths,
