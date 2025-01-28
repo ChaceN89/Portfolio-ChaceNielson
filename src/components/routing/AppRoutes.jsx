@@ -40,7 +40,7 @@ export default function AppRoutes() {
   const specializationID = params.get(skillParam);
 
   return (
-    <>
+    <div className='min-w-56 overflow-x-hidden'>
       {/* Main App Routes */}
       <Routes >
         <Route path="/" element={<Layout />}>
@@ -64,6 +64,6 @@ export default function AppRoutes() {
           <Specialization specializationID={specializationID} />
         </Modal>
       )}
-    </>
+    </div>
   );
 }

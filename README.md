@@ -3,6 +3,28 @@
 
 Welcome to the repository for Chace Nielson's portfolio. This site showcases my skills, work experience, projects, and more.
 
+
+
+Addition things to add
+
+Its in Vite now so needs to be updated
+
+test build 
+npm run build 
+npm run preview
+
+
+include technologies i used as a newheader before instalation - an about the proejct section
+react vite, tailwind, css, 
+
+features
+modal routing using params - epxlain this rout and that you can view it withou leavingthe main page
+contact form using email js
+google analytics 
+animatio
+http://localhost:4173/?project=scale-the-depths
+
+
 ## Table of Contents
 
 - [Installation](#installation)
@@ -31,13 +53,14 @@ npm install
 Create a `.env` file in the root directory with the following content:
 
 ```env
-REACT_APP_EMAILJS_SERVICE_ID=service_.......
-REACT_APP_EMAILJS_TEMPLATE_ID=template_.......
-REACT_APP_EMAILJS_USER_ID=.......
+VITE_APP_EMAILJS_SERVICE_ID=service_.......
+VITE_APP_EMAILJS_TEMPLATE_ID=template_.......
+VITE_APP_EMAILJS_USER_ID=.......
 
-REACT_APP_GA_TRACKING_ID=G-........
+VITE_APP_VERSION=0.0.0
+VITE_GOOGLE_MEASUREMENT_ID=G-........
 
-REACT_APP_ENVIRONMENT=development // only for development environment
+VITE_APP_ENVIRONMENT=development // only for development environment
 ```
 - The file will not be tracked by git
 
@@ -46,7 +69,7 @@ REACT_APP_ENVIRONMENT=development // only for development environment
 To run the local version of the project, run:
 
 ```bash
-npm start
+npm run dev
 ```
 
 ## Data Files
@@ -74,7 +97,7 @@ The components for the site are located in the `src/components` folder. Each com
 
 ## Development
 
-The `TailwindBreakPoints.jsx` component shows the breakpoints during development. You can turn this off by changing the environment variable `REACT_APP_ENVIRONMENT` to something other than `development`.
+The `TailwindBreakPoints.jsx` component shows the breakpoints during development. You can turn this off by changing the environment variable `VITE_APP_ENVIRONMENT` to something other than `development`.
 
 ## Libraries Used
 

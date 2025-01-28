@@ -16,7 +16,7 @@ export const contactPageData = {
   description: "Send me a message and let's start a conversation.",
 
   // EmailJS variables
-  EMAILJS_USER_ID: import.meta.env.APP_EMAILJS_USER_ID,
-  EMAILJS_SERVICE_ID: import.meta.env.APP_EMAILJS_SERVICE_ID,
-  EMAILJS_TEMPLATE_ID: import.meta.env.APP_EMAILJS_TEMPLATE_ID,
+  EMAILJS_USER_ID: import.meta.env.VITE_APP_EMAILJS_USER_ID,
+  EMAILJS_SERVICE_ID: import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID: import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
 };

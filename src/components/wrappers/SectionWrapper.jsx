@@ -19,16 +19,13 @@
  */
 import React from 'react';
 import SectionHeader from '../uiElements/SectionHeader';
-import SlideTransition from '../animations/SlideTransition';
 
 function SectionWrapper({ children, title, subtitle }) {
   return (
     <div className='container mx-auto pb-10 px-2'>
-      <SlideTransition>
-        <div className='py-10 pb-8'>
-          <SectionHeader title={title} subtitle={subtitle} />
-        </div>
-      </SlideTransition>
+      <div className='py-10 pb-8'>
+        <SectionHeader title={title} subtitle={subtitle} />
+      </div>
       <div className='px-4'>
         {children}
       </div>
