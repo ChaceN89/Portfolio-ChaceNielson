@@ -15,6 +15,7 @@ import { cubeGame } from '../projects/cubeGame';
 import { capstone } from '../projects/capstone';
 import { scaleTheDepths } from '../projects/ScaleTheDepths';
 import { spaceSurvive } from '../projects/spaceSurvive';
+import { energyTomorrow } from '../projects/EnergyTomorrow';
 
 export const gameDesign = { 
   id: "game-development",
@@ -42,6 +43,7 @@ export const gameDesign = {
   ],
   relatedProjects:[
     scaleTheDepths,
+    energyTomorrow,
     jenga,
     capstone,
     spaceSurvive,

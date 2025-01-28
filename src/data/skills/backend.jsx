@@ -12,6 +12,7 @@ import { projects } from "../pageData/projectData";
 import { geoPredict } from "../projects/geoPredict";
 import { imageProcessor } from "../projects/imageProcessor";
 import { jobDashboard } from "../projects/jobDashboard";
+import { library } from "../projects/library";
 import { photoApp } from "../projects/photoApp";
 
 export const backend = { 
@@ -59,6 +60,7 @@ export const backend = {
   ],
 
   relatedProjects:[
+    library,
     geoPredict,
     photoApp,
     imageProcessor,

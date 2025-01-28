@@ -12,6 +12,7 @@ import { geoPredict } from "../projects/geoPredict";
 import { glassGeckoGames } from "../projects/glassGecko";
 import { imageProcessor } from "../projects/imageProcessor";
 import { jobDashboard } from "../projects/jobDashboard";
+import { library } from "../projects/library";
 import { portfolio } from "../projects/portfolio";
 
 export const devOps = {
@@ -54,6 +55,7 @@ export const devOps = {
   relatedProjects:[
     glassGeckoGames,
     geoPredict,
+    library,
     imageProcessor,
     jobDashboard,
     portfolio,
