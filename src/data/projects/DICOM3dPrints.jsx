@@ -24,10 +24,10 @@ export const long = (
       The "DICOM to 3D Print Pipeline" project developed a workflow to convert <BoldSpan>DICOM</BoldSpan> files from CT and MRI scans into physical 3D models of anatomical structures. These models provide a detailed and realistic view of the human body.
     </p>
     <p>
-      The pipeline used tools like <BoldSpan>3D Slicer</BoldSpan>  for segmentation, <BoldSpan>Blender</BoldSpan>  for mesh cleanup and supports, and 3D PrinterOS for slicing and printing. Models were created to analyze bones, tissues, and articulated joints, with noise analysis and mesh refinement improving results.
+      The pipeline used tools like <BoldSpan>3D Slicer</BoldSpan>  for segmentation, <BoldSpan>Blender</BoldSpan>  for mesh cleanup and support structures, and 3D PrinterOS for slicing and printing. Models were created to analyze bones, tissues, and articulated joints, with noise analysis and mesh refinement improving results.
     </p>
     <p>
-      Highlights include 3D prints of a heart, spine, and jaw, showcasing segmentation, thresholding, and articulated joints. Challenges like noisy DICOM data and print optimization were addressed effectively.
+      Highlights include 3D prints of a heart, spine, and jaw, showcasing segmentation, thresholding, and articulated joints. Challenges such as noisy DICOM data and print optimization were effectively addressed.
     </p>
     <p>
       This project demonstrates the potential of 3D printing in medical education, patient care, and prosthetic design, offering accessible and accurate anatomical models.

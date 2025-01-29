@@ -21,11 +21,7 @@ export const gameDesign = {
   id: "game-development",
   name: "Game Development", 
   linkName: "Discover my Skills and Games", 
-  description: (
-    <span> 
-      I design and develop captivating games by blending technical expertise, creativity, and collaboration to create fun and immersive experiences.
-    </span>
-  ),
+  description: "I craft captivating games by blending technical expertise, creativity, and collaboration, delivering fun and immersive experiences.",
   topSkills: [
     IconLibrary.UNITY,
     IconLibrary.BLENDER,

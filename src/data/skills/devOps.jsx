@@ -19,11 +19,7 @@ export const devOps = {
   id: "devops",
   name: "DevOps",
   linkName: "Explore My DevOps Toolkit",
-  description: (
-    <span>
-      I specialize in streamlining development and deployment processes through automation, efficient workflows, and modern tech solutions.
-    </span>
-  ),
+  description: "I specialize in automating development and deployment processes, optimizing workflows, and leveraging modern technologies for efficiency.",
   topSkills: [
     IconLibrary.AWS,
     IconLibrary.DOCKER,

@@ -24,7 +24,7 @@ const long = (
       This project was a collaborative effort with the <BoldSpan>Drillbotics team</BoldSpan> at the University of Calgary to design and build a functional <BoldSpan>mini drill rig</BoldSpan> for the prestigious <BoldSpan>Drillbotics competition</BoldSpan>. Our rig was meticulously evaluated on its drilling performance, efficiency, and capabilities in data collection and visualization, leading our team to secure <BoldSpan>second place</BoldSpan>.
     </p>
     <p> 
-      My primary responsibility was the development of a <BoldSpan>graphical user interface (GUI)</BoldSpan> that enabled <BoldSpan>real-time plotting</BoldSpan> of the drilling operations, recorded from the sensor. This GUI, built with Plotly Dash and Python, provided anintuitive and powerful platform for monitoring and analyzing the drilling process as it unfolded.
+      My primary responsibility was the development of a <BoldSpan>graphical user interface (GUI)</BoldSpan> that enabled <BoldSpan>real-time plotting</BoldSpan> of the drilling operations, recorded from the sensor. This GUI, built with Plotly Dash and Python, provided an intuitive and powerful platform for monitoring and analyzing the drilling process as it unfolded.
     </p>
   </div>
 );

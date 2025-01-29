@@ -37,8 +37,7 @@ export const albertaTomorrowWork = {
       enhancing its accuracy and usability.
     </>,
     <>
-      Integrated features with <BoldSpan>Mapbox API</BoldSpan>, improving the application's <BoldSpan>interactive mapping</BoldSpan> 
-      capabilities.
+      Integrated features with <BoldSpan>Mapbox API</BoldSpan>, improving the application's <BoldSpan>interactive mapping</BoldSpan> capabilities.
     </>,
     <>
       Designed and developed a prototype for <BoldLink to={"?project=energy-tomorrow"}>Energy Tomorrow</BoldLink> using <BoldSpan>Unity</BoldSpan> and <BoldSpan>game design principles</BoldSpan> to create an interactive educational experience.

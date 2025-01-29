@@ -19,11 +19,7 @@ export const backend = {
   id: "backend-development",
   name: "Backend Development", 
   linkName: "Explore My Tools and Applications", 
-  description: (
-    <span>
-     With expertise in server-side logic, database architecture, and scalable APIs, I design powerful backends to support modern applications.
-    </span>
-  ),
+  description: "I specialize in server-side logic, database architecture, and scalable APIs, designing robust backends that power modern applications.",
   topSkills: [
     IconLibrary.PYTHON,
     IconLibrary.EXPRESSJS,

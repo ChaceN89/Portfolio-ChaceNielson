@@ -20,10 +20,10 @@ const short = "Backend-focused image processing queue with FastAPI and multithre
 const long = (
   <div className="space-y-2">
     <p>
-      <BoldSpan>Image Task Queue</BoldSpan> is a backend-centric application built with <BoldSpan>FastAPI</BoldSpan>, designed to process images asynchronously using an efficient task queue system. This project allows users to edit multiple images in multiple way at the same time, with the system managing the tasks concurrently.
+      <BoldSpan>Image Task Queue</BoldSpan> is a backend-centric application built with <BoldSpan>FastAPI</BoldSpan>, designed to process images asynchronously using an efficient task queue system. This project allows users to edit multiple images in multiple ways at the same time, with the system managing the tasks concurrently.
     </p>
     <p>
-      The system uses <BoldSpan>multithreading</BoldSpan> to manage concurrent tasks effectively, assigning each one an ID to track its progress. Images submitted by users are processed asynchronously, with the application keeping track of each task's progress and completion status.
+      The system uses <BoldSpan>multithreading</BoldSpan> to manage concurrent tasks effectively, assigning each task an ID to track its progress. Images submitted by users are processed asynchronously, with the application keeping track of each task's progress and completion status.
     </p>
     <p>
       Deployed on <BoldSpan>Railway</BoldSpan> and then <BoldSpan>Render</BoldSpan>, the application is built for scalability and efficiency. While the frontend is minimal, the primary focus is on the robust backend architecture, designed to support concurrent users and deliver a smooth image processing experience.

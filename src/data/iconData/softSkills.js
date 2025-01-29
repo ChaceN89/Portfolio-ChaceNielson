@@ -18,7 +18,7 @@ const softSkillIcons = {
   ADAPTABILITY: { name: "Adaptability", svg_path: `${folder}/adaptation.svg` },
   CRITICAL_THINKING: { name: "Critical Thinking", svg_path: `${folder}/critical-thinking.svg` },
   CREATIVITY: { name: "Creativity", svg_path: `${folder}/creativity.svg` },
-  SELF_MOTIVATION: { name: "Self Motivation", svg_path: `${folder}/self-motivation.svg` },
+  SELF_MOTIVATION: { name: "Self-Motivation", svg_path: `${folder}/self-motivation.svg` },
 };
 
 export default softSkillIcons;

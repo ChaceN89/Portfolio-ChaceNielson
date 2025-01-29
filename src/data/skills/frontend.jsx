@@ -8,7 +8,7 @@
  */
 
 import IconLibrary from "../iconLibrary";
-import { cardGenerator } from "../projects/CardGenerator";
+import { cardGenerator } from "../projects/cardGenerator";
 import { glassGeckoGames } from "../projects/glassGecko";
 import { library } from "../projects/library";
 import { musicPlayer } from "../projects/musicPlayer";
@@ -19,11 +19,8 @@ export const frontend = {
   id: "frontend-development",
   name: "Frontend Development",
   linkName: "See More Skills and Projects", 
-  description: (
-    <span>
-      With 3+ years of experience, I enjoy creating interactive and responsive applications tailored to diverse use cases.
-    </span>
-  ),
+  description: "With 3+ years of experience, I specialize in building interactive, responsive applications tailored to diverse needs.",
+
   topSkills: [
     IconLibrary.NEXT,
     IconLibrary.REACT,

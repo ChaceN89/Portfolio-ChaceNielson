@@ -20,10 +20,10 @@ const short = "A 3D city-building game focused on energy management and sustaina
 const long = (
   <div className="space-y-2">
     <p>
-      <BoldSpan>Energy Tomorrow</BoldSpan> is a 3D city-building simulation game where players take on the challenge of managing a city from an <BoldSpan>energy perspective</BoldSpan>. The game is developed using <BoldSpan>Unity</BoldSpan>, <BoldSpan>Blender</BoldSpan>, and <BoldSpan>C#</BoldSpan>, bringing an immersive and interactive experience to players.
+      <BoldSpan>Energy Tomorrow</BoldSpan> is a 3D city-building simulation game where players take on the challenge of managing a city from an <BoldSpan>energy perspective</BoldSpan>. The game is developed using <BoldSpan>Unity</BoldSpan>, <BoldSpan>Blender</BoldSpan>, and <BoldSpan>C#</BoldSpan>, delivering an immersive and interactive experience.
     </p>
     <p>
-      Players can design their city by placing components like <BoldSpan>housing</BoldSpan> and <BoldSpan>roads</BoldSpan>, while managing and upgrading <BoldSpan>energy resources</BoldSpan>. The game tracks critical metrics, including energy output, energy consumption, city budget, pollution, and renewable energy percentage, allowing players to see how their decisions impact the city’s growth and sustainability.
+      Players can design their city by placing components like <BoldSpan>housing</BoldSpan> and <BoldSpan>roads</BoldSpan> while managing and upgrading <BoldSpan>energy resources</BoldSpan>. The game tracks critical metrics, including energy output, energy consumption, city budget, pollution, and renewable energy percentage, allowing players to see how their decisions impact the city’s growth and sustainability.
     </p>
     <p>
       Currently in its prototype phase, <BoldSpan>Energy Tomorrow</BoldSpan> aims to expand by incorporating <BoldSpan>real-world data</BoldSpan> for realistic city simulations. This feature will enable users to explore how energy solutions and infrastructure changes can impact actual cities.

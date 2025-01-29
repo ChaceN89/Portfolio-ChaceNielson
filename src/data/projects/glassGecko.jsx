@@ -21,7 +21,7 @@ const short = "The website built for the Glass Gecko Games team.";
 const long = (
   <div className='space-y-2'>
     <p>
-      This website was created for the <BoldSpan>Glass Gecko Games</BoldSpan> team. Built using <BoldSpan>React</BoldSpan> and <BoldSpan>Tailwind CSS</BoldSpan>, it features animations and <BoldSpan>blurhashing</BoldSpan> of images and backgrounds for a smooth and seamless experience. 
+      This website was created for the <BoldSpan>Glass Gecko Games</BoldSpan> team. Built using <BoldSpan>React</BoldSpan> and <BoldSpan>Tailwind CSS</BoldSpan>, it features animations and <BoldSpan>blurhashing</BoldSpan> of images and backgrounds for a seamless and visually appealing experience. 
       The site highlights <BoldSpan>games</BoldSpan> and the <BoldSpan>team</BoldSpan>.
     </p>
     <p>

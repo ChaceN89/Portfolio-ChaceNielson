@@ -21,7 +21,7 @@ const short = "AI-powered app for managing and analyzing drilling data in real t
 const long = (
   <div className="space-y-4">
     <p>
-      <BoldSpan>GEO Predict</BoldSpan> is a full-stack web application designed to enable users to upload, manage, and analyze drilling data using advanced <BoldSpan>machine learning models</BoldSpan>. The goal of the application is to predict drilling data outcomes and assist in optimizing operations.
+      <BoldSpan>GEO Predict</BoldSpan> is a full-stack web application designed to enable users to upload, manage, and analyze drilling data using advanced <BoldSpan>machine learning models</BoldSpan>. The application predicts drilling data outcomes and helps optimize operations.
     </p>
     <p>
       This project was developed during my time at the <BoldSpan>Energi Simulation Centre for Geothermal Systems Research</BoldSpan> at the University of Calgary. The application leverages modern technologies, including <BoldSpan>React</BoldSpan>, <BoldSpan>Tailwind CSS</BoldSpan>, <BoldSpan>FastAPI</BoldSpan>, and <BoldSpan>PostgreSQL</BoldSpan>. Deployment is managed using <BoldSpan>Docker</BoldSpan> and the University of Calgary's <BoldSpan>Cloud Stack</BoldSpan>.
@@ -50,7 +50,7 @@ const long = (
       <ul className="list-disc list-inside pl-5">
         <li>Oversaw the project as <BoldSpan>Project Manager</BoldSpan></li>
         <li>Assigned tasks and conducted code reviews</li>
-        <li>Reviewed CVs and conducted technical interviews</li>
+        <li>Reviewed resumes and conducted technical interviews</li>
         <li>Delivered presentations to stakeholders</li>
       </ul>
     </div>

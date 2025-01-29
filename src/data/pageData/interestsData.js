@@ -30,7 +30,7 @@ export const interests = [
   },
   { 
     name: "Music",
-    description: "I've been playing guitar for 5 years, enjoying both performing songs and writing my own music.",
+    description: "I've been playing guitar for 5 years, enjoying both performing and writing my own music.",
     icon: IconLibrary.MUSIC
   },
   { 
@@ -45,7 +45,7 @@ export const interests = [
   },
   { 
     name: "Swimming",
-    description: "Swimming has become a recent passion — a fun way to stay active and enjoy the water.",
+    description: "Swimming has become a recent passion — a great way to stay active and enjoy the water.",
     icon: IconLibrary.SWIMMING
   }
 ];

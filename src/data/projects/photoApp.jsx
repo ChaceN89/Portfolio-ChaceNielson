@@ -20,7 +20,7 @@ const short = "A full-stack photo gallery app with user authentication and shari
 const long = (
   <div className="space-y-2">
     <p>
-      <BoldSpan>Aviar</BoldSpan> is a full-stack photo gallery application designed to help users upload, organize, and manage their photo collections effortlessly. Built using the <BoldSpan>MERN stack</BoldSpan> (MongoDB, ExpressJS, React, NodeJS), it provides a scalable and reliable platform for photo management.
+      <BoldSpan>Aviar</BoldSpan> is a full-stack photo gallery application designed to help users upload, organize, and manage their photo collections effortlessly. Built with the <BoldSpan>MERN stack</BoldSpan> (MongoDB, ExpressJS, React, NodeJS), it provides a scalable and reliable platform for photo management.
     </p>
     <p>
       Key features include <BoldSpan>user authentication</BoldSpan>, <BoldSpan>photo categorization</BoldSpan>, and the ability to <BoldSpan>share collections</BoldSpan> with others. The application offers a responsive, user-friendly interface, ensuring seamless photo management across devices.

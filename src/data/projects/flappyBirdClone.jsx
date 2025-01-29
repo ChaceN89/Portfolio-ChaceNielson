@@ -20,8 +20,7 @@ const short = "A Flappy Bird clone developed using Unity Game Engine.";
 const long = (
   <div className='space-y-2'>
     <p>
-      This project is a Flappy Bird clone developed with Unity and C#. Players control a bird navigating through pipes and avoiding collisions.
-    </p>
+      This project is a Flappy Bird clone built with Unity and C#. Players control a bird, navigating through pipes while avoiding collisions.    </p>
   </div>
 );
 

@@ -24,7 +24,7 @@ const long = (
       This capstone project, titled "Energy Storage and Direct Air Capture in the Deep Ocean," was conducted at the University of Calgary to explore innovative methods for <BoldSpan>atmospheric CO<sub>2</sub> separation</BoldSpan>  by leveraging deep ocean hydrostatic pressure. A secondary goal was to create a Unity simulation displaying the energy storage and CO<sub>2</sub> separation systems.
     </p>
     <p>
-      Our team designed both a physical prototype and a comprehensive <BoldSpan>Unity simulation</BoldSpan> to validate and demonstrate the concept. The prototype was tested in a controlled pool environment, showcasing the device's potential.
+      Our team designed both a physical prototype and a comprehensive <BoldSpan>Unity simulation</BoldSpan> to validate and demonstrate the concept. The prototype was tested in a controlled pool environment, demonstrating the device's potential.
     </p>
     <p>
       The <BoldSpan>Unity simulation</BoldSpan> further enhances this project by offering an interactive visualization of the <BoldSpan>energy storage system </BoldSpan>and its real-world applications. It allows users to explore the CO<sub>2</sub> separation process, the energy storage system, and the device's overall operation in detail.

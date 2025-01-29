@@ -35,7 +35,7 @@ export const geothermalWork = {
       Led development of a geothermal web application using <BoldSpan>React</BoldSpan> and <BoldSpan>FastAPI</BoldSpan> to analyze <BoldSpan>drilling data</BoldSpan> from geothermal wells in <BoldSpan>New Mexico</BoldSpan>, <BoldSpan>Germany</BoldSpan>, and <BoldSpan>Sweden</BoldSpan>.
     </>,
     <>
-      Designed and deployed <BoldLink to={"?project=geo-predict"}>Geo Predict</BoldLink>, a machine-learning-powered tool for <BoldSpan>predicting drilling data</BoldSpan>, enabling more accurate geothermal well assessments.
+      Designed and deployed <BoldLink to={"?project=geo-predict"}>GEO Predict</BoldLink>, a machine-learning-powered tool for <BoldSpan>predicting drilling data</BoldSpan>, enabling more accurate geothermal well assessments.
     </>,
     <>
       Managed a team of <BoldSpan>10 developers</BoldSpan>, overseeing <BoldSpan>full-stack development</BoldSpan> and ensuring successful project execution.

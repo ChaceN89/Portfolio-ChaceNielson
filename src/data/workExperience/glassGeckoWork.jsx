@@ -34,18 +34,13 @@ export const glassGeckoWork = {
   link: 'https://glassgeckogames.com/',
   achievements: [
     <>
-      Designed and launched the <BoldLink to={"?project=glass-gecko-games"}>Company Website</BoldLink>, 
-      boosting <BoldSpan>user engagement</BoldSpan> to <BoldSpan>80+ weekly visitors</BoldSpan> through 
-      intuitive UI/UX and responsive design.
+      Designed and launched the <BoldLink to={"?project=glass-gecko-games"}>Company Website</BoldLink>, boosting <BoldSpan>user engagement</BoldSpan> to <BoldSpan>80+ weekly visitors</BoldSpan> through intuitive UI/UX and responsive design.
     </>,
     <>
-      Won <BoldSpan>1st place</BoldSpan> in the <BoldSpan>GMTK 2024 Game Jam</BoldSpan>, 
-      ranking <BoldSpan>#1 out of 8,000+ participants</BoldSpan> with <BoldLink to={"?project=scale-the-depths"}>Scale the Depths</BoldLink>, 
-      which has been played <BoldSpan>30,000+ times</BoldSpan>.
+      Won <BoldSpan>1st place</BoldSpan> in the <BoldSpan>GMTK 2024 Game Jam</BoldSpan>, ranking <BoldSpan>#1 out of 8,000+ participants</BoldSpan> with <BoldLink to={"?project=scale-the-depths"}>Scale the Depths</BoldLink>, which has been played <BoldSpan>30,000+ times</BoldSpan>.
     </>,
     <>
-      Implemented <BoldSpan>gameplay mechanics</BoldSpan> and UI components that enhanced 
-      <BoldSpan>player experience</BoldSpan> and in-game progression.
+      Implemented <BoldSpan>gameplay mechanics</BoldSpan> and UI components that enhanced <BoldSpan> player experience</BoldSpan> and in-game progression.
     </>,
   ],
   responsibilities: [

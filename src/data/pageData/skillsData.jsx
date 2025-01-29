@@ -18,7 +18,7 @@ import { devOps } from '../skills/devOps';
 // Data for the skill page header
 export const skillPageData = {
   title: "Technical Skills",
-  description: "An In-Depth Look at My Technical Proficiency. Click on a Specialization to Learn More.",
+  description: "A deeper dive into my technical expertise. Click on a specialization to learn more.",
   relatedProjectTitle: "Related Projects",
 };
 

@@ -21,10 +21,10 @@ const short = "Fishing game and winner of the 2024 GMTK Game Jam.";
 const long = (
   <div className="space-y-2">
     <p>
-      <BoldSpan>Scale The Depths</BoldSpan> was created for the <BoldSpan>2024 GMTK Game Jam</BoldSpan>, where the theme was "Built to Scale." Players control a robot tasked with scaling fish to feed hungry aquatic customers in a creative and literal interpretation of the theme. The game stood out among over 7,000 submissions, earning the title of <BoldSpan>Winner of the jam</BoldSpan>.
+      <BoldSpan>Scale The Depths</BoldSpan> was created for the <BoldSpan>2024 GMTK Game Jam</BoldSpan>, where the theme was "Built to Scale." Players control a robot tasked with scaling fish to feed hungry aquatic customers in a creative and literal interpretation of the theme. The game stood out among over 7,000 submissions, earning the title of <BoldSpan>Game Jam Winners</BoldSpan>.
     </p>
     <p>
-      Since its release, the game has gained significant traction on <BoldSpan>Itch.io</BoldSpan>, receiving over <BoldSpan>50K views</BoldSpan> and maintaining a <BoldSpan>4.6-star rating</BoldSpan>. Its success has also sparked interest in a full version, leading to over <BoldSpan>12K wishlists</BoldSpan> on <BoldSpan>Steam</BoldSpan>.
+      Since its release, the game has gained significant traction on <BoldSpan>Itch.io</BoldSpan>, receiving over <BoldSpan>50K views</BoldSpan> and maintaining a <BoldSpan>4.6-star rating</BoldSpan>. Its success has also sparked interest in a full version, resulting in over <BoldSpan>12K wishlists</BoldSpan> on <BoldSpan>Steam</BoldSpan>.
     </p>
 
     <iframe
