@@ -11,6 +11,7 @@
  */
 
 import IconLibrary from "../iconLibrary";
+import { BoldSpan } from "../../components/uiElements/InLineText";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A full-stack photo gallery app with user authentication and sharing capabilities.";
@@ -19,10 +20,10 @@ const short = "A full-stack photo gallery app with user authentication and shari
 const long = (
   <div className="space-y-2">
     <p>
-      <span className="font-bold">Aviar</span> is a full-stack photo gallery application designed to help users upload, organize, and manage their photo collections effortlessly. Built using the <span className="font-bold">MERN stack</span> (MongoDB, ExpressJS, React, NodeJS), it provides a scalable and reliable platform for photo management.
+      <BoldSpan>Aviar</BoldSpan> is a full-stack photo gallery application designed to help users upload, organize, and manage their photo collections effortlessly. Built using the <BoldSpan>MERN stack</BoldSpan> (MongoDB, ExpressJS, React, NodeJS), it provides a scalable and reliable platform for photo management.
     </p>
     <p>
-      Key features include <span className="font-bold">user authentication</span>, <span className="font-bold">photo categorization</span>, and the ability to <span className="font-bold">share collections</span> with others. The application offers a responsive, user-friendly interface, ensuring seamless photo management across devices.
+      Key features include <BoldSpan>user authentication</BoldSpan>, <BoldSpan>photo categorization</BoldSpan>, and the ability to <BoldSpan>share collections</BoldSpan> with others. The application offers a responsive, user-friendly interface, ensuring seamless photo management across devices.
     </p>
     <p>
       This project showcases the power of the MERN stack for building comprehensive applications, combining scalability with intuitive design to create an efficient photo gallery solution.

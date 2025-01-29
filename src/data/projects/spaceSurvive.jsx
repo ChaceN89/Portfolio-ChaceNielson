@@ -12,6 +12,7 @@
  */
 
 import IconLibrary from "../iconLibrary";
+import { BoldSpan } from "../../components/uiElements/InLineText";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A 2D space adventure game developed using Unity Game Engine.";
@@ -20,7 +21,7 @@ const short = "A 2D space adventure game developed using Unity Game Engine.";
 const long = (
   <div className="space-y-2">
     <p>
-      <span className="font-bold">Space Survive</span> is an exciting 2D survival game set in the vastness of space, developed with <span className="font-bold">Unity</span> and <span className="font-bold">C#</span>. Players control a spaceship, navigating through waves of obstacles and enemies, with the ultimate goal of surviving as long as possible.
+      <BoldSpan>Space Survive</BoldSpan> is an exciting 2D survival game set in the vastness of space, developed with <BoldSpan>Unity</BoldSpan> and <BoldSpan>C#</BoldSpan>. Players control a spaceship, navigating through waves of obstacles and enemies, with the ultimate goal of surviving as long as possible.
     </p>
     <p>
       The game features multiple modes, a scoring system, save points, and a variety of enemy types, including a challenging final boss. Players can unlock achievements and collect power-ups to enhance their abilities, adding depth and replayability to the experience.

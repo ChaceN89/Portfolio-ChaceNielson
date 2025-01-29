@@ -11,6 +11,8 @@
  */
 
 import IconLibrary from "../iconLibrary";
+import { BoldSpan } from "../../components/uiElements/InLineText";
+
 
 // Short description (blurb) to be displayed on the project card
 const short = "A pipeline to transform medical imaging files into 3D-printed anatomical models.";
@@ -19,10 +21,10 @@ const short = "A pipeline to transform medical imaging files into 3D-printed ana
 export const long = (
   <div className="space-y-2">
     <p>
-      The "DICOM to 3D Print Pipeline" project developed a workflow to convert <span className="font-bold">DICOM</span> files from CT and MRI scans into physical 3D models of anatomical structures. These models provide a detailed and realistic view of the human body.
+      The "DICOM to 3D Print Pipeline" project developed a workflow to convert <BoldSpan>DICOM</BoldSpan> files from CT and MRI scans into physical 3D models of anatomical structures. These models provide a detailed and realistic view of the human body.
     </p>
     <p>
-      The pipeline used tools like <span className="font-bold">3D Slicer</span>  for segmentation, <span className="font-bold">Blender</span>  for mesh cleanup and supports, and 3D PrinterOS for slicing and printing. Models were created to analyze bones, tissues, and articulated joints, with noise analysis and mesh refinement improving results.
+      The pipeline used tools like <BoldSpan>3D Slicer</BoldSpan>  for segmentation, <BoldSpan>Blender</BoldSpan>  for mesh cleanup and supports, and 3D PrinterOS for slicing and printing. Models were created to analyze bones, tissues, and articulated joints, with noise analysis and mesh refinement improving results.
     </p>
     <p>
       Highlights include 3D prints of a heart, spine, and jaw, showcasing segmentation, thresholding, and articulated joints. Challenges like noisy DICOM data and print optimization were addressed effectively.

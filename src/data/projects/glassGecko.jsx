@@ -12,6 +12,7 @@
  */
 
 import IconLibrary from "../iconLibrary";
+import { BoldSpan } from "../../components/uiElements/InLineText";
 
 // Short description (blurb) to be displayed on the project card
 const short = "The website built for the Glass Gecko Games team.";
@@ -20,10 +21,14 @@ const short = "The website built for the Glass Gecko Games team.";
 const long = (
   <div className='space-y-2'>
     <p>
-      This website was created for the Glass Gecko Games team, of which I am a part. Built using React and Tailwind CSS, it features animations and blurhashing of images and backgrounds for a smooth and seamless experience. The site highlights games and the team.
+      This website was created for the <BoldSpan>Glass Gecko Games</BoldSpan> team. Built using <BoldSpan>React</BoldSpan> and <BoldSpan>Tailwind CSS</BoldSpan>, it features animations and <BoldSpan>blurhashing</BoldSpan> of images and backgrounds for a smooth and seamless experience. 
+      The site highlights <BoldSpan>games</BoldSpan> and the <BoldSpan>team</BoldSpan>.
     </p>
     <p>
-      The website ensures an engaging user experience through improved organization, animations using Framer Motion, and the use of reusable components. Deployed on Netlify using continual integration, it demonstrates the effective integration of modern web technologies to create a dynamic and interactive platform for showcasing our team's work.
+      The website ensures an engaging user experience through improved <BoldSpan>organization</BoldSpan>, 
+      animations using <BoldSpan>Framer Motion</BoldSpan>, and the use of <BoldSpan>reusable components</BoldSpan>. 
+      Deployed on <BoldSpan>Netlify</BoldSpan> using <BoldSpan>continuous integration</BoldSpan>, it demonstrates the 
+      effective integration of <BoldSpan>modern web technologies</BoldSpan> to create a dynamic and interactive platform for showcasing our team's work.
     </p>
   </div>
 );

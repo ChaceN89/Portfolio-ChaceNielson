@@ -11,6 +11,7 @@
  */
 
 import IconLibrary from "../iconLibrary";
+import { BoldSpan } from "../../components/uiElements/InLineText";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A simple music player with dark/light mode, built with Vue and Tailwind..";
@@ -19,10 +20,10 @@ const short = "A simple music player with dark/light mode, built with Vue and Ta
 const long = (
   <div className="space-y-2">
     <p>
-      This <span className="font-bold">Music Player</span> is a web application built with <span className="font-bold">Vue.js</span> and <span className="font-bold">Tailwind CSS</span>, allowing users to play music online with ease.
+      This <BoldSpan>Music Player</BoldSpan> is a web application built with <BoldSpan>Vue.js</BoldSpan> and <BoldSpan>Tailwind CSS</BoldSpan>, allowing users to play music online with ease.
     </p>
     <p>
-      The app features a clean, responsive design and supports <span className="font-bold">dark/light mode</span>, along with basic controls like volume adjustment. It is deployed using <span className="font-bold">Vercel</span> for seamless performance.
+      The app features a clean, responsive design and supports <BoldSpan>dark/light mode</BoldSpan>, along with basic controls like volume adjustment. It is deployed using <BoldSpan>Vercel</BoldSpan> for seamless performance.
     </p>
   </div>
 );

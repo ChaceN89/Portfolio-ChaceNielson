@@ -12,6 +12,7 @@
  */
 
 import IconLibrary from "../iconLibrary";
+import { BoldSpan } from "../../components/uiElements/InLineText";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Functional mini drill rig with a real-time GUI for performance monitoring and data visualization.";
@@ -20,10 +21,10 @@ const short = "Functional mini drill rig with a real-time GUI for performance mo
 const long = (
   <div className='space-y-2'>
     <p>
-      This project was a collaborative effort with the <span className="font-bold">Drillbotics team</span> at the University of Calgary to design and build a functional <span className="font-bold">mini drill rig</span> for the prestigious <span className="font-bold">Drillbotics competition</span>. Our rig was meticulously evaluated on its drilling performance, efficiency, and capabilities in data collection and visualization, leading our team to secure <span className="font-bold">second place</span>.
+      This project was a collaborative effort with the <BoldSpan>Drillbotics team</BoldSpan> at the University of Calgary to design and build a functional <BoldSpan>mini drill rig</BoldSpan> for the prestigious <BoldSpan>Drillbotics competition</BoldSpan>. Our rig was meticulously evaluated on its drilling performance, efficiency, and capabilities in data collection and visualization, leading our team to secure <BoldSpan>second place</BoldSpan>.
     </p>
     <p> 
-      My primary responsibility was the development of a <span className="font-bold">graphical user interface (GUI)</span> that enabled <span className="font-bold">real-time plotting</span> of the drilling operations, recorded from the sensor. This GUI, built with Plotly Dash and Python, provided anintuitive and powerful platform for monitoring and analyzing the drilling process as it unfolded.
+      My primary responsibility was the development of a <BoldSpan>graphical user interface (GUI)</BoldSpan> that enabled <BoldSpan>real-time plotting</BoldSpan> of the drilling operations, recorded from the sensor. This GUI, built with Plotly Dash and Python, provided anintuitive and powerful platform for monitoring and analyzing the drilling process as it unfolded.
     </p>
   </div>
 );

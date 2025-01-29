@@ -9,6 +9,7 @@
  */
 
 import IconLibrary from "../iconLibrary";
+import { BoldSpan } from "../../components/uiElements/InLineText";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A full-stack library app with Google Sign-In, nested comments, and AWS integration.";
@@ -17,16 +18,16 @@ const short = "A full-stack library app with Google Sign-In, nested comments, an
 const long = (
   <div className="space-y-2">
     <p>
-      <span className="font-bold">PageFlow Library</span> is a full-stack web app for browsing, uploading, and managing books. Built with <span className="font-bold">Django</span> and <span className="font-bold">Next.js</span> utilizing <span className="font-bold">AWS</span>. It supports both visitors and registered users.
+      <BoldSpan>PageFlow Library</BoldSpan> is a full-stack web app for browsing, uploading, and managing books. Built with <BoldSpan>Django</BoldSpan> and <BoldSpan>Next.js</BoldSpan> utilizing <BoldSpan>AWS</BoldSpan>. It supports both visitors and registered users.
     </p>
     <p>
-      Visitors can search for books, view details, and download them freely. Registered users gain access to advanced features like uploading books, managing <span className="font-bold">favorite books</span>, and leaving comments using the app’s <span className="font-bold">nested comment system</span>. Deleted comments are replaced with <span className="font-bold">[deleted]</span> to keep discussions clean and structured.
+      Visitors can search for books, view details, and download them freely. Registered users gain access to advanced features like uploading books, managing <BoldSpan>favorite books</BoldSpan>, and leaving comments using the app’s <BoldSpan>nested comment system</BoldSpan>. Deleted comments are replaced with <BoldSpan>[deleted]</BoldSpan> to keep discussions clean and structured.
     </p>
     <p>
-      Users can update their profiles in the <span className="font-bold">Account Settings</span> section, while admins have access to a powerful <span className="font-bold">Admin Portal</span> to edit or remove books and users.
+      Users can update their profiles in the <BoldSpan>Account Settings</BoldSpan> section, while admins have access to a powerful <BoldSpan>Admin Portal</BoldSpan> to edit or remove books and users.
     </p>
     <p>
-      The app is fully responsive and supports a <span className="font-bold">light/dark mode toggle</span>. It uses AWS services like <span className="font-bold">S3</span> for file storage and <span className="font-bold">RDS(PostgreSQL)</span> for data management, ensuring a modern and scalable library experience.
+      The app is fully responsive and supports a <BoldSpan>light/dark mode toggle</BoldSpan>. It uses AWS services like <BoldSpan>S3</BoldSpan> for file storage and <BoldSpan>RDS(PostgreSQL)</BoldSpan> for data management, ensuring a modern and scalable library experience.
     </p>
   </div>
 );

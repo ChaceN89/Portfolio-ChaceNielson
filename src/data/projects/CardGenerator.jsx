@@ -12,6 +12,7 @@
  */
 
 import IconLibrary from "../iconLibrary";
+import { BoldSpan } from "../../components/uiElements/InLineText";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A random playing card generator.";
@@ -20,10 +21,10 @@ const short = "A random playing card generator.";
 const long = (
   <div className='space-y-2'>
     <p>
-      Built for the Glass Gecko Games team to test card game mechanics before building a Unity game. The application allows users to generate a random playing card using artwork or their own custom images. It uses <span className="font-bold">state management</span> to keep track of the card data and the user's settings.
+      Built for the Glass Gecko Games team to test card game mechanics before building a Unity game. The application allows users to generate a random playing card using artwork or their own custom images. It uses <BoldSpan>state management</BoldSpan> to keep track of the card data and the user's settings.
     </p>
     <p>
-      It features a clean and <span className="font-bold">responsive UI</span>, with a simple design that allows users to easily generate a card and download an image. The application is deployed using Netlify.
+      It features a clean and <BoldSpan>responsive UI</BoldSpan>, with a simple design that allows users to easily generate a card and download an image. The application is deployed using Netlify.
     </p>
   </div>
 );

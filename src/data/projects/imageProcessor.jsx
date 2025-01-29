@@ -11,6 +11,7 @@
  */
 
 import IconLibrary from "../iconLibrary";
+import { BoldSpan } from "../../components/uiElements/InLineText";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Backend-focused image processing queue with FastAPI and multithreading.";
@@ -19,13 +20,13 @@ const short = "Backend-focused image processing queue with FastAPI and multithre
 const long = (
   <div className="space-y-2">
     <p>
-      <span className="font-bold">Image Task Queue</span> is a backend-centric application built with <span className="font-bold">FastAPI</span>, designed to process images asynchronously using an efficient task queue system. This project allows users to edit multiple images in multiple way at the same time, with the system managing the tasks concurrently.
+      <BoldSpan>Image Task Queue</BoldSpan> is a backend-centric application built with <BoldSpan>FastAPI</BoldSpan>, designed to process images asynchronously using an efficient task queue system. This project allows users to edit multiple images in multiple way at the same time, with the system managing the tasks concurrently.
     </p>
     <p>
-      The system uses <span className="font-bold">multithreading</span> to manage concurrent tasks effectively, assigning each one an ID to track its progress. Images submitted by users are processed asynchronously, with the application keeping track of each task's progress and completion status.
+      The system uses <BoldSpan>multithreading</BoldSpan> to manage concurrent tasks effectively, assigning each one an ID to track its progress. Images submitted by users are processed asynchronously, with the application keeping track of each task's progress and completion status.
     </p>
     <p>
-      Deployed on <span className="font-bold">Railway</span> and then <span className="font-bold">Render</span>, the application is built for scalability and efficiency. While the frontend is minimal, the primary focus is on the robust backend architecture, designed to support concurrent users and deliver a smooth image processing experience.
+      Deployed on <BoldSpan>Railway</BoldSpan> and then <BoldSpan>Render</BoldSpan>, the application is built for scalability and efficiency. While the frontend is minimal, the primary focus is on the robust backend architecture, designed to support concurrent users and deliver a smooth image processing experience.
     </p>
     <p>
       This project, while simple, demonstrates how to build and optimize a scalable task queue system using FastAPI, TypeScript, and Python, highlighting the seamless handling of asynchronous workflows for managing large volumes of image processing tasks.

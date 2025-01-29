@@ -12,6 +12,7 @@
  */
 
 import IconLibrary from "../iconLibrary";
+import { BoldSpan } from "../../components/uiElements/InLineText";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Predicting music genres and creating recommendations using machine learning.";
@@ -20,7 +21,7 @@ const short = "Predicting music genres and creating recommendations using machin
 const long = (
   <div className='space-y-2'>
     <p>
-      This project uses machine learning to predict music genres and generate recommendations. Built with Apache Spark, Jupyter Notebook and Python, it involves data analysis, feature extraction, and model training. Leveraging the power of Apache Spark for big data processing, the project explores various machine learning algorithms to achieve accurate predictions.
+      This project uses <BoldSpan>machine learning</BoldSpan> to predict music genres and generate recommendations. Built with Apache Spark, Jupyter Notebook and Python, it involves data analysis, feature extraction, and model training. Leveraging the power of Apache Spark for big data processing, the project explores various <BoldSpan>machine learning</BoldSpan> algorithms to achieve accurate predictions.
     </p>
     <p>
       An interactive Jupyter notebook is provided for experimenting with different models and techniques. This setup allows users to test and refine their approaches in a flexible, hands-on environment.

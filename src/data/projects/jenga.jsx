@@ -11,6 +11,7 @@
  */
 
 import IconLibrary from "../iconLibrary";
+import { BoldSpan } from "../../components/uiElements/InLineText";
 
 // Short description (blurb) to be displayed on the project card
 const short = "Virtual Jenga built in Unity, featuring haptic feedback and realistic physics.";
@@ -19,13 +20,13 @@ const short = "Virtual Jenga built in Unity, featuring haptic feedback and reali
 const long = (
   <div className="space-y-2">
     <p>
-      <span className="font-bold">Virtual Jenga</span> is a haptics-driven game developed in <span className="font-bold">Unity</span> with <span className="font-bold">C#</span>, designed to replicate the traditional Jenga experience in a virtual environment. The game utilizes a tactile <span className="font-bold">haptic stylus</span> powered by the <span className="font-bold">OpenHaptics toolkit</span>, delivering a realistic sense of touch for block manipulation.
+      <BoldSpan>Virtual Jenga</BoldSpan> is a haptics-driven game developed in <BoldSpan>Unity</BoldSpan> with <BoldSpan>C#</BoldSpan>, designed to replicate the traditional Jenga experience in a virtual environment. The game utilizes a tactile <BoldSpan>haptic stylus</BoldSpan> powered by the <BoldSpan>OpenHaptics toolkit</BoldSpan>, delivering a realistic sense of touch for block manipulation.
     </p>
     <p>
       Players can interact with the blocks using the haptic pen, experiencing tactile feedback that mimics the sensation of touching, pulling, and balancing blocks in real-time. This integration of haptic technology enhances the immersion, allowing users to feel the weight and texture of the virtual blocks as they play.
     </p>
     <p>
-      Setting up the physics in Unity was a critical component of this project. Using <span className="font-bold">Unity's Physics Engine</span>, the blocks were carefully modeled to behave like their real-world counterparts, creating a simulation of weight, friction, and collisions. The physics system seamlessly interacts with the haptic feedback, ensuring that every touch and movement feels natural and responsive.
+      Setting up the physics in Unity was a critical component of this project. Using <BoldSpan>Unity's Physics Engine</BoldSpan>, the blocks were carefully modeled to behave like their real-world counterparts, creating a simulation of weight, friction, and collisions. The physics system seamlessly interacts with the haptic feedback, ensuring that every touch and movement feels natural and responsive.
     </p>
   </div>
 );

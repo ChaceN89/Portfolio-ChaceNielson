@@ -62,7 +62,7 @@ function JobDetails({ job }) {
   };
 
   return (
-    <div className='text-primary p-2 px-4 space-y-4'>
+    <div className='text-primary p-4 px-4 lg:px-6 space-y-3'>
       <div className='flex justify-between gap-2'>
         <div className='flex items-start gap-2'>
           <Tooltip openDuration={200} text="Visit">
@@ -77,10 +77,10 @@ function JobDetails({ job }) {
           </div>
         </div>
       </div>
-
+      <hr className="border-primary border-opacity-60 " />
       <p className='py-2'>{description}</p>
       <DisplaySkills skillList={softSkills} />
-      <DisplayList title='Achievements' list={achievements} />
+      <DisplayList title='Achievements' list={achievements} />   
       <DisplaySkills skillList={skills} />
       <DisplayList title='Responsibilities' list={responsibilities} />
     </div>

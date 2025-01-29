@@ -24,28 +24,31 @@ import ReactGA from 'react-ga4';
 
 export const trackingId = import.meta.env.VITE_GOOGLE_MEASUREMENT_ID || "YOUR_GA_ID";
 const appVersion = import.meta.env.VITE_APP_VERSION || "No Version Specified";
-const id = import.meta.env.USER_ID || null; // Optional for future use
+const id = import.meta.env.VITE_USER_ID || null; // Optional for future use
 
 const useGoogleAnalytics = () => {
+  
+  // Initialize Google Analytics in production mode
   useEffect(() => {
-    if (trackingId) {
-      try {
-        ReactGA.initialize([
-          {
-            trackingId,
-            gaOptions: {
-              anonymizeIp: true,
-              clientId: id,
-            },
+    if (import.meta.env.VITE_ENVIRONMENT == "development") {
+      return; // don't initialize Google Analytics if no tracking ID is provided
+    }
+
+    try {
+      ReactGA.initialize([
+        {
+          trackingId,
+          gaOptions: {
+            anonymizeIp: true,
+            clientId: id,
           },
-        ]);
-        ReactGA.set({ app_version: appVersion });
-        if (import.meta.env.MODE === "development") {
-          console.log("Google Analytics initialized successfully");
-        }
-      } catch (error) {
-        console.error("Error initializing Google Analytics", { Error: error });
-      }
+        },
+      ]);
+      ReactGA.set({ app_version: appVersion });
+
+      console.log("Google Analytics initialized successfully");
+    } catch (error) {
+      console.error("Error initializing Google Analytics", { Error: error });
     }
   }, [id]);
 

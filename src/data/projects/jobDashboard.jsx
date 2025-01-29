@@ -11,6 +11,7 @@
  */
 
 import IconLibrary from "../iconLibrary";
+import { BoldSpan } from "../../components/uiElements/InLineText";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A job manager built with FastAPI and Vue.js, featuring dark mode styles.";
@@ -19,10 +20,10 @@ const short = "A job manager built with FastAPI and Vue.js, featuring dark mode 
 const long = (
   <div className="space-y-2">
     <p>
-      The <span className="font-bold">Job Dashboard</span> is a web app designed to help users track and manage job applications and interviews. It uses <span className="font-bold">FastAPI</span> for backend processing and <span className="font-bold">SQLite</span> for reliable data storage.
+      The <BoldSpan>Job Dashboard</BoldSpan> is a web app designed to help users track and manage job applications and interviews. It uses <BoldSpan>FastAPI</BoldSpan> for backend processing and <BoldSpan>SQLite</BoldSpan> for reliable data storage.
     </p>
     <p>
-      The frontend, built with <span className="font-bold">Vue.js</span> and styled with <span className="font-bold">Tailwind CSS</span>, is simple and features a sleek <span className="font-bold">dark mode</span>. The app is deployed on <span className="font-bold">Netlify</span> and <span className="font-bold">Render</span> for scalability and performance.
+      The frontend, built with <BoldSpan>Vue.js</BoldSpan> and styled with <BoldSpan>Tailwind CSS</BoldSpan>, is simple and features a sleek <BoldSpan>dark mode</BoldSpan>. The app is deployed on <BoldSpan>Netlify</BoldSpan> and <BoldSpan>Render</BoldSpan> for scalability and performance.
     </p>
   </div>
 );
