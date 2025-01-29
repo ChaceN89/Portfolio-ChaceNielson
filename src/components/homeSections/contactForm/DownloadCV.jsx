@@ -41,13 +41,13 @@ import { FaFileDownload } from "react-icons/fa";
 
 function DownloadCV() {
   // Functions to open PDFs in a separate tab
-  const openResume = () => openPdf("Chace Nielson - CV.pdf");
+  const openResume = () => openPdf("Chace Nielson - Resume.pdf");
   const openCoverLetter = () => openPdf("Chace Nielson - Cover Letter.pdf");
 
   return (
     <div className='flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:space-x-6'>
       <MyButton onClick={openResume}>
-        <span className='flex items-center gap-1'>My CV <FaFileDownload/></span>
+        <span className='flex items-center gap-1'>Resume <FaFileDownload/></span>
       </MyButton>
       <MyButton onClick={openCoverLetter}>
         <span className='flex items-center gap-1'>Cover Letter <FaFileDownload/></span>

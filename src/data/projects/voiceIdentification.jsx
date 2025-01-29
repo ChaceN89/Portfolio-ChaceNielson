@@ -20,10 +20,10 @@ const short = "Voice identification user interface using machine learning.";
 const long = (
   <div className='space-y-2'>
     <p>
-      This project involved the development of a voice identification system using advanced machine learning algorithms to recognize and verify individuals by their voice. Built with Python and Plotly-Dash, the system processes voice recordings to extract features for analysis. A comprehensive Jupyter notebook supports data analysis and model training, leveraging techniques like Gaussian Mixture Models (GMM) and Convolutional Neural Networks (CNN) to achieve accuracy in voice recognition.
+      This project involved the development of a voice identification system using <span className="font-bold">machine learning algorithms</span> to recognize and verify individuals by their voice. Built with Python and Plotly-Dash, the system processes voice recordings to extract features for analysis. A comprehensive Jupyter notebook supports data analysis and model training, leveraging techniques like <span className="font-bold">Gaussian Mixture Models (GMM)</span> and <span className="font-bold">Convolutional Neural Networks (CNN) </span>  to achieve accuracy in voice recognition.
     </p>
     <p>
-      The concept originated from a class project, which I expanded upon by developing a graphical user interface (GUI) that allows users to upload and analyze voice samples. This extension made the system more user-friendly and accessible, showcasing the potential of Python in conjunction with intuitive data visualization tools.
+      The concept originated from a class project, which I expanded upon by developing a <span className="font-bold">graphical user interface (GUI)</span> that allows users to upload and analyze voice samples. This extension made the system more user-friendly and accessible, showcasing the potential of Python in conjunction with intuitive data visualization tools.
     </p>
     <p>
       The final system features a web interface that is practical and easy to use, enabling efficient and reliable voice identification. The integration of advanced machine learning methods ensures the system's effectiveness, demonstrating the powerful combination of Python and modern machine learning techniques.
