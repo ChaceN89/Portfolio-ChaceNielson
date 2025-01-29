@@ -38,8 +38,22 @@
  */
 import React from 'react';
 import { openPdf } from '../../../utils/utils';
+import useAnalyticsEvent from '../../analytics/useAnalyticsEvent';
 
 function ExternalLinks({ externalLinks }) {
+  const trackEvent = useAnalyticsEvent();
+
+  const handleButtonClick = (link) => {
+
+    openPdf(link.pdf)
+    trackEvent('Button', 'Click', `External Project Link PDF ${link.pdf}`, 1); // Example event
+  }
+
+
+  const truncateURL = (url) => url.replace(/(^\w+:|^)\/\//, '').split('/')[0];
+
+
+
   return (
     <div className="flex flex-wrap items-center text-lg">
       {externalLinks && externalLinks.length> 0 &&
@@ -48,7 +62,7 @@ function ExternalLinks({ externalLinks }) {
             <React.Fragment key={index}>
               {link.pdf ? (
                 <button
-                  onClick={() => openPdf(link.pdf)}
+                  onClick={() => handleButtonClick(link)} 
                   className="m-2 text-primary text-opacity-80 hover:text-accent flex items-center"
                 >
                   {link.icon && <link.icon className="inline-block mr-1" />}
@@ -59,6 +73,7 @@ function ExternalLinks({ externalLinks }) {
                   href={link.link}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackEvent('Button', 'Click', `Opened External Link: ${truncateURL(link.link)}`, 1)}
                   className="m-2 text-primary text-opacity-80 hover:text-accent flex items-center"
                 >
                   {link.icon && <link.icon className="inline-block mr-1" />}

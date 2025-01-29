@@ -50,8 +50,9 @@ import ElevateOnView from '../../animations/ElevateOnView';
 import CardImg from './CardImg';
 import CardText from './CardText';
 import CardLearnMore from './CardLearnMore';
+import useAnalyticsEvent from '../../analytics/useAnalyticsEvent';
 
-function ProjectCard({ project, darkBorder }) {
+function ProjectCard({ project }) {
   const navigate = useNavigate();
 
   // State variables for hover and click effects
@@ -64,6 +65,9 @@ function ProjectCard({ project, darkBorder }) {
   const inView = useInView(ref, { once: true, margin: '0px 0px -75px 0px' });
   const controls = useAnimation();
 
+  // Custom hook to track analytics events
+  const trackEvent = useAnalyticsEvent();
+
   useEffect(() => {
     if (inView) {
       controls.start('visible');
@@ -74,6 +78,7 @@ function ProjectCard({ project, darkBorder }) {
   // function to navigate to the project page
   const clickLearnMore = (e) => {
     e.preventDefault();
+    trackEvent('Button', 'Click', `Project Card ${project?.name}`, 1); // Example event
     navigate(`/?project=${project.id}`);
   };
 
