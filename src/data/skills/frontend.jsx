@@ -8,7 +8,7 @@
  */
 
 import IconLibrary from "../iconLibrary";
-import { cardGenerator } from "../projects/cardGenerator";
+import { cardGenerator } from "../projects/CardGenerator";
 import { glassGeckoGames } from "../projects/glassGecko";
 import { library } from "../projects/library";
 import { musicPlayer } from "../projects/musicPlayer";

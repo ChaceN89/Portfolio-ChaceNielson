@@ -25,7 +25,7 @@ import { flappyBirdClone } from "../projects/flappyBirdClone";
 import { spaceSurvive } from "../projects/spaceSurvive";
 import { glassGeckoGames } from "../projects/glassGecko";
 import { drillbotics } from "../projects/drillbotics";
-import { cardGenerator } from "../projects/cardGenerator";
+import { cardGenerator } from "../projects/CardGenerator";
 import { scaleTheDepths } from "../projects/ScaleTheDepths";
 import { dicom3dPrint } from "../projects/DICOM3dPrints";
 import { energyTomorrow } from "../projects/EnergyTomorrow";
