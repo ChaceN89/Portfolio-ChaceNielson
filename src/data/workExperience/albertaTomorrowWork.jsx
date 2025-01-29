@@ -10,29 +10,57 @@
  * @exports albertaTomorrowWork
  * 
  * @author Chace Nielson
- * @version 2.1
- * @created 2024-07-29
- * @updated 2024-08-09
+ * @version 2.2
+ * @created Jul 29, 2024
+ * @updated Jan 29, 2025
  */
 
 import IconLibrary from "../iconLibrary";
+import React from "react";
+import { BoldSpan, BoldLink } from "../../components/uiElements/InLineText";
 
-export const albertaTomorrowWork = { // Alberta Tomorrow
+export const albertaTomorrowWork = {
   name: 'Alberta Tomorrow',
   role: 'Software Developer',
   img: '/png-icons/alberta-tomorrow.jpg',
   dates: ['Jan 2024', 'Current'],
-  description: 'Contributed to the development of a web application that leverages interactive maps, data visualization, and gamification to promote sustainable land use in Alberta and BC.',
   link: 'https://www.albertatomorrow.ca',
+  
+  description: (
+    <>
+      <BoldSpan>Alberta Tomorrow</BoldSpan> is a non-profit organization that develops <BoldSpan>educational tools</BoldSpan> for sustainable land use and <BoldSpan>energy consumption</BoldSpan>. Its interactive web applications help students across <BoldSpan>Alberta</BoldSpan> and <BoldSpan>British Columbia</BoldSpan> understand the impact of development on the environment through simulations, mapping, and data visualization.
+    </>
+  ),
   achievements: [
-    "Improved a simulation tool to visualize and analyze sustainable land use scenarios.",
-    "Integrated features with Mapbox API, enhancing the application's interactive mapping capabilities."
+    <>
+      Improved a <BoldSpan>simulation tool</BoldSpan> that visualizes and analyzes <BoldSpan>sustainable land use scenarios</BoldSpan>, 
+      enhancing its accuracy and usability.
+    </>,
+    <>
+      Integrated features with <BoldSpan>Mapbox API</BoldSpan>, improving the application's <BoldSpan>interactive mapping</BoldSpan> 
+      capabilities.
+    </>,
+    <>
+      Designed and developed a prototype for <BoldLink to={"?project=energy-tomorrow"}>Energy Tomorrow</BoldLink> using <BoldSpan>Unity</BoldSpan> and <BoldSpan>game design principles</BoldSpan> to create an interactive educational experience.
+    </>,
   ],
   responsibilities: [
-    "Collaborated with a team to design and implement key features for the web application.",
-    "Worked closely with stakeholders to ensure project goals aligned with objectives.",
-    "Assisted in managing project resources to meet deadlines and budget constraints." 
- ],
+    <>
+      Collaborated with a <BoldSpan>multidisciplinary team</BoldSpan> to design and implement key features for the web application.
+    </>,
+    <>
+      Worked closely with <BoldSpan>stakeholders</BoldSpan> to ensure project goals aligned with educational objectives.
+    </>,
+    <>
+      Assisted in managing <BoldSpan>project resources</BoldSpan> to meet deadlines and budget constraints.
+    </>,
+  ],
+  softSkills: [
+    IconLibrary.CRITICAL_THINKING,
+    IconLibrary.ADAPTABILITY,
+    IconLibrary.TIME_MANAGEMENT,
+    IconLibrary.SELF_MOTIVATION,
+  ],
   skills: [
     IconLibrary.AWS,
     IconLibrary.S3,
@@ -41,11 +69,5 @@ export const albertaTomorrowWork = { // Alberta Tomorrow
     IconLibrary.MAPBOX_GL,
     IconLibrary.UNITY,
     IconLibrary.BLENDER,
-  ],
-  softSkills: [
-    IconLibrary.CRITICAL_THINKING,
-    IconLibrary.ADAPTABILITY,
-    IconLibrary.TIME_MANAGEMENT,
-    IconLibrary.SELF_MOTIVATION,
   ],
 };

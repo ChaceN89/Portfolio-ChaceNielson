@@ -26,8 +26,8 @@ const long = (
     <p>
       This project was developed during my time at the <BoldSpan>Energi Simulation Centre for Geothermal Systems Research</BoldSpan> at the University of Calgary. The application leverages modern technologies, including <BoldSpan>React</BoldSpan>, <BoldSpan>Tailwind CSS</BoldSpan>, <BoldSpan>FastAPI</BoldSpan>, and <BoldSpan>PostgreSQL</BoldSpan>. Deployment is managed using <BoldSpan>Docker</BoldSpan> and the University of Calgary's <BoldSpan>Cloud Stack</BoldSpan>.
     </p>
-    <p>
-      <BoldSpan className="underline font-semibold">Key Features</BoldSpan>
+    <div>
+      <BoldSpan className="underline font-semibold">Key Features</BoldSpan>:
       <ul className="list-disc list-inside pl-5">
         <li>Comprehensive management of drilling data</li>
         <li>Sharing of data across teams and organizations</li>
@@ -39,13 +39,13 @@ const long = (
         <li>Organization-based user collaboration</li>
         <li>Used for active  geothermal drilling operations in <BoldSpan>Germany</BoldSpan>, <BoldSpan>New Mexico</BoldSpan>, and <BoldSpan>Sweden</BoldSpan>.</li>
       </ul>
-    </p>
+    </div>
     <p>
       <BoldSpan className="underline font-semibold">Primary Objective</BoldSpan>
       <br />
       The primary aim of this project was to develop a secure application for managing sensitive geothermal drilling data. The application supports features like data sharing among organizations, real-time updates, and robust security mechanisms to ensure the integrity and confidentiality of drilling information.
     </p>
-    <p>
+    <div>
       <BoldSpan className="underline font-semibold">My Responsibilities</BoldSpan>
       <ul className="list-disc list-inside pl-5">
         <li>Oversaw the project as <BoldSpan>Project Manager</BoldSpan></li>
@@ -53,7 +53,7 @@ const long = (
         <li>Reviewed CVs and conducted technical interviews</li>
         <li>Delivered presentations to stakeholders</li>
       </ul>
-    </p>
+    </div>
   </div>
 );
 

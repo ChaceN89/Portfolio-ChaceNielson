@@ -10,29 +10,56 @@
  * @exports geothermalWork
  * 
  * @author Chace Nielson
- * @version 2.1
- * @created 2024-07-28
- * @updated 2024-08-09
+ * @version 2.2
+ * @created Jul 28, 2024
+ * @updated Jan 29, 2025
  */
 
 import IconLibrary from "../iconLibrary";
+import React from "react";
+import { BoldSpan, BoldLink } from "../../components/uiElements/InLineText";
 
-export const geothermalWork = { // Geothermal
+export const geothermalWork = {
   name: 'Energi Simulation Centre for Geothermal Systems Research',
-  role: 'Software Developer',
+  role: 'Lead Software Developer',
   img: '/png-icons/geothermal.png',
   dates: ['May 2022', 'Jan 2024'],
-  description: 'Developed a web application to simulate geothermal systems and analyze drilling data. Managed a team of engineers and developers, ensuring the successful completion of project goals.',
   link: 'https://ucalgary.ca/labs/geothermal-energy/centre',
+  description: (
+    <>
+      The <BoldSpan>Energi Simulation Centre</BoldSpan> at the University of Calgary conducts advanced research on <BoldSpan>geothermal energy systems</BoldSpan>. The team develops predictive models and data-driven applications to optimize <BoldSpan>geothermal well analysis</BoldSpan> and improve renewable energy solutions.
+    </>
+  ),
   achievements: [
-    'Led the development of a web application using React and FastAPI to analyze geothermal wells.',
-    'Awarded the Intern of Merit for exceptional performance.',
-    'The application was successfully utilized to analyze geothermal wells in New Mexico and Germany.',
+    <>
+      Led development of a geothermal web application using <BoldSpan>React</BoldSpan> and <BoldSpan>FastAPI</BoldSpan> to analyze <BoldSpan>drilling data</BoldSpan> from geothermal wells in <BoldSpan>New Mexico</BoldSpan>, <BoldSpan>Germany</BoldSpan>, and <BoldSpan>Sweden</BoldSpan>.
+    </>,
+    <>
+      Designed and deployed <BoldLink to={"?project=geo-predict"}>Geo Predict</BoldLink>, a machine-learning-powered tool for <BoldSpan>predicting drilling data</BoldSpan>, enabling more accurate geothermal well assessments.
+    </>,
+    <>
+      Managed a team of <BoldSpan>10 developers</BoldSpan>, overseeing <BoldSpan>full-stack development</BoldSpan> and ensuring successful project execution.
+    </>,
+    <>
+      Awarded the <BoldSpan>Intern of Merit</BoldSpan> for exceptional contributions and leadership.
+    </>,
   ],
   responsibilities: [
-    'Presented project progress and technical findings to stakeholders, ensuring alignment with project goals.',
-    'Conducted comprehensive code reviews, providing constructive feedback to enhance code quality.',
-    'Played a key role in interviewing and selecting candidates for new developer positions.',
+    <>
+      Led <BoldSpan>code reviews</BoldSpan> and provided mentorship to improve software quality and team efficiency.
+    </>,
+    <>
+      Worked closely with <BoldSpan>researchers and engineers</BoldSpan> to translate complex geothermal data into interactive and user-friendly applications.
+    </>,
+    <>
+      Conducted <BoldSpan>technical interviews</BoldSpan> and played a key role in hiring <BoldSpan>10+ developers</BoldSpan> for the research team.
+    </>,
+  ],
+  softSkills: [
+    IconLibrary.LEADERSHIP,
+    IconLibrary.TEAM_COLLABORATION,
+    IconLibrary.PROBLEM_SOLVING,
+    IconLibrary.ADAPTABILITY,
   ],
   skills: [
     IconLibrary.REACT,
@@ -41,11 +68,6 @@ export const geothermalWork = { // Geothermal
     IconLibrary.FASTAPI,
     IconLibrary.PYTHON,
     IconLibrary.TAILWIND,
-  ],
-  softSkills: [
-    IconLibrary.SELF_MOTIVATION,
-    IconLibrary.LEADERSHIP,
-    IconLibrary.TEAM_COLLABORATION,
-    IconLibrary.ADAPTABILITY,
+    IconLibrary.MACHINE_LEARNING,
   ],
 };
