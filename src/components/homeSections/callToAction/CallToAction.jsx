@@ -29,9 +29,9 @@ const scrollStart = 0;
 const scrollMiddle = window.innerHeight;
 const scrollEnd = 2 * window.innerHeight;
 
-const translateStart = -150;
+const translateStart = -110;
 const translateMiddle = 0;
-const translateEnd = 150;
+const translateEnd = 110;
 
 const parallaxConfig = {
   scrollRange: [scrollStart, scrollMiddle, scrollEnd],
