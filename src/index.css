@@ -86,9 +86,9 @@
    @apply text-lg ;
  }
  
- 
 /* scrollbar styles */
 /* Style the scrollbar track */
+/* Default global scrollbar settings (hides scrollbar) */
 ::-webkit-scrollbar {
   width: 0px; /* Adjust the width of the scrollbar */
   height: 0px; /* Adjust the height of the scrollbar */

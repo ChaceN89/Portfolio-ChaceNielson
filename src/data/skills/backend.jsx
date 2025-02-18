@@ -8,7 +8,6 @@
  */
 
 import IconLibrary from "../iconLibrary";
-import { projects } from "../pageData/projectData";
 import { geoPredict } from "../projects/geoPredict";
 import { imageProcessor } from "../projects/imageProcessor";
 import { jobDashboard } from "../projects/jobDashboard";
