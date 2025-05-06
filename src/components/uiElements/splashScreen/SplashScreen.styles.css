@@ -15,7 +15,7 @@
     transform: translate(0, 0) scale(1);
   }
   100% {
-    transform: translate(-100vw, -100vh) scale(0);
+    transform: translate(100vw, -100vh) scale(0);
   }
 }
 
