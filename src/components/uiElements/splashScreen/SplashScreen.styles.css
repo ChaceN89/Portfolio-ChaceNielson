@@ -22,9 +22,6 @@
   }
 }
 
-
-
-
 .splash-exit {
   animation: blurFadeTransition 1s ease-in-out forwards;
   animation-delay: 0.4s; /* ⏱️ Delay before animation starts */
@@ -32,8 +29,6 @@
 }
 
 
-
-/* Alternate Animations  */
 
 
 /* alternate animation  */

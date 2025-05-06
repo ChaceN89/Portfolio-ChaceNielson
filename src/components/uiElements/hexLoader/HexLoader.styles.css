@@ -10,12 +10,18 @@
  * @updated May 5, 2025 by Chace Nielson
  * ==========================================================================
  */
-.hex-loader {
+ .hex-loader {
   display: flex;
   gap: 0.75rem;
   justify-content: center;
   align-items: center;
-  margin-top: -2rem;
+  margin-top: -3.5rem;
+}
+
+@media (max-width: 446px) {
+  .hex-loader {
+    margin-top: 0rem;
+  }
 }
 
 .hex {

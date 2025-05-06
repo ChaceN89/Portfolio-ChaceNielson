@@ -28,14 +28,19 @@ export default function SplashScreen({
    
       {/* Top Hex Separator */}
       <HexSeparator 
-        rows={8}
+        rows={6}
         hexClass="bg-secondary opacity-10"
         bottom={false}
       />
 
       {/* Main Content */}
       <div className="flex flex-col items-center justify-center flex-grow">
-        <img src={'/logos/logoFull-outline.png'} alt="Site Logo" className="" />
+      <img
+        src="/logos/logoFull-outline.png"
+        alt="Site Logo"
+
+        className="min-w-[300px]  overflow-hidden"
+      />
         <div className="text-xl text-gray-600 text-center">
           {errorInfo ? (
             <ErrorDisplay errorInfo={errorInfo} />
@@ -50,7 +55,7 @@ export default function SplashScreen({
 
       {/* Bottom Hex Separator */}
       <HexSeparator 
-        rows={8}
+        rows={6}
         hexClass="bg-secondary opacity-10"
         bottom={true}
       />
