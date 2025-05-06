@@ -38,6 +38,7 @@ const AppWithRouter = () => (
         <DisplayTesting />
         <AnalyticsProvider>
           <AppLoading/>
+          
         </AnalyticsProvider>
       </Router>
     </Suspense>

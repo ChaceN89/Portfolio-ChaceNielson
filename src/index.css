@@ -40,7 +40,10 @@
  @tailwind components;
  @tailwind utilities;
  
+
  /* overall Css for all html */
+
+
  html{
    @apply bg-primary text-secondary font-montserrat;
  }

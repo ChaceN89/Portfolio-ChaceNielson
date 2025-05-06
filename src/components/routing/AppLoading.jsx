@@ -71,6 +71,15 @@ export default function AppLoading() {
           loadPercent={loadPercent}
         />
       )}
+      {/* Visual noise in backgorund */}
+      <div
+        className="fixed inset-0 pointer-events-none z-[10] "
+        style={{
+          filter: 'url(#noiseFilter)',
+          mixBlendMode: 'multiply',
+          opacity: 0.5,
+        }}
+      />
       <AppRoutes />
     </>
   );

@@ -32,7 +32,7 @@ export default function SplashScreen({
         style={{
           filter: 'url(#noiseFilter)',
           mixBlendMode: 'multiply',
-          opacity: 0.8,
+          opacity: 0.7,
         }}
       />
    
@@ -57,7 +57,7 @@ export default function SplashScreen({
           ):(
             <>
             <HexLoader animate={animateLoader} />
-            <h3 className='mt-2'>{loadPercent}%</h3>
+            <h3 className='mt-2 text-white'>{loadPercent}%</h3>
             </>
           )}
         </div>

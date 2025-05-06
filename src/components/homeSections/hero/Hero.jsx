@@ -29,11 +29,11 @@ function Hero() {
     <BackgroundWrapper 
       id="Interests" 
       className=''
-      src="/png-backgrounds/detailed/range3-trim.png"
-      lowResSrc="/png-backgrounds/detailed/range3-trim-small.png"
-      mobileSrc="/png-backgrounds/detailed/range3.png"
-      backgroundSize="cover"
-      bgOpacity={20}
+      // src="/png-backgrounds/detailed/hero.png"
+      src="/png-backgrounds/detailed/pexels-mayday.jpg"
+      lowResSrc="/png-backgrounds/detailed/hero-blur.png"
+      mobileSrc="/png-backgrounds/detailed/hero-mobile.png"
+      bgOpacity={60}
     >
       <FadeTransition duration={1.3}>
         <section className="hero">
