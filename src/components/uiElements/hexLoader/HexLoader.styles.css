@@ -1,0 +1,57 @@
+/* ==========================================================================
+ * @file HexLoader.styles.css
+ * @module HexLoader
+ * @desc Styles for the animated hexagon loader used during app loading states.
+ *       Provides a rotating conveyor effect with staggered delays and clip-path
+ *       defined hexagon shapes. Optional animation controlled via class toggling.
+ *
+ * @author Chace Nielson
+ * @created May 5, 2025
+ * @updated May 5, 2025 by Chace Nielson
+ * ==========================================================================
+ */
+.hex-loader {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: -3rem;
+}
+
+.hex {
+  position: relative;
+  width: 41px;
+  height: 36px;
+  background: rgb(255, 255, 255);
+  clip-path: polygon(
+    25% 0%, 75% 0%,
+    100% 50%,
+    75% 100%, 25% 100%,
+    0% 50%
+  );
+  z-index: 1;
+}
+
+.animate {
+  animation: hexRotate 2.5s infinite ease-in-out;
+  animation-fill-mode: both;
+}
+
+/* Staggered delays for the conveyor effect */
+.hex1 { animation-delay: 0s; }
+.hex2 { animation-delay: 0.5s; }
+.hex3 { animation-delay: 1s; }
+.hex4 { animation-delay: 1.5s; }
+
+@keyframes hexRotate {
+  0%   { transform: rotate(0deg); }
+  18%  { transform: rotate(120deg); }
+  20%  { transform: rotate(120deg); }
+  38%  { transform: rotate(240deg); }
+  40%  { transform: rotate(240deg); }
+  58%  { transform: rotate(360deg); }
+  60%  { transform: rotate(360deg); }
+
+  /* 🛑 Hold the final state longer before reset */
+  100% { transform: rotate(360deg); }
+}

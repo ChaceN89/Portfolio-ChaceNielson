@@ -15,8 +15,6 @@ export default {
         
         accent: '#FFA500', // lighter color
         'accent-dark': '#CC5500', // darker color
-
-        spotlight: '#f0f0f0', // off white or fffeee
       },
       fontFamily: {
         'open-sans': ['Open Sans', 'sans-serif'],

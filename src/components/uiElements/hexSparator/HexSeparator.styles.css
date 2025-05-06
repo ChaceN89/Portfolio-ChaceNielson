@@ -1,0 +1,57 @@
+/* ==========================================================================
+ * @file hex-separator.css
+ * @module UI/HexSeparator
+ * @desc Styles for the HexSeparator component. Provides a flexible,
+ *       interlocking hexagonal grid used as section separators or visual accents.
+ *       Supports top and bottom placement with bleed-over and responsive alignment.
+ *
+ * @author Chace Nielson
+ * @created Mar 24, 2025
+ * @updated Mar 24, 2025
+ * ==========================================================================
+ */
+
+ /* Main partent of the grid layour */
+.hex-grid {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -0%); /* X and Y center */
+
+  z-index: 0;
+  width: max-content; /* allow natural overflow */
+  pointer-events: none;
+  z-index: 0;
+  margin-top: 0px;
+}
+
+/* Style for a secodn prop */
+.bottom-hex-grid{
+  margin-bottom: -18px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+/* Style in each row */
+.hex-row {
+  display: flex;
+  gap: 19px;
+  margin-top: -18.5px;
+}
+
+/* The offset of each row */
+.hex-row-offset {
+  margin-left: 30px; /* half width + half gap */
+}
+
+/* each individual hexagon */
+.hexagon {
+  width: 41px;
+  height: 36px;
+  clip-path: polygon(
+    25% 0%, 75% 0%,
+    100% 50%,
+    75% 100%, 25% 100%,
+    0% 50%
+  );
+}

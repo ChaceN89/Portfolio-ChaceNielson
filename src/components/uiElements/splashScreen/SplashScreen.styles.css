@@ -1,0 +1,33 @@
+/* ==========================================================================
+ * @file SplashScreen.styles.css
+ * @module SplashScreen
+ * @desc Contains exit animation styles for the SplashScreen component,
+ *       including vertical slide and fade-out effects during transition.
+ *       Combines transform and opacity animations for a smooth screen wipe.
+ *
+ * @author Chace Nielson
+ * @created May 5, 2025
+ * @updated May 5, 2025 by Chace Nielson
+ * ==========================================================================
+ */
+ @keyframes splashTransform {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(-100vw, -100vh) scale(0);
+  }
+}
+
+@keyframes splashFade {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.splash-exit {
+  animation: 
+    splashTransform 2s ease forwards,
+    splashFade 2s ease forwards;
+  pointer-events: none;
+}
+

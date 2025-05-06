@@ -17,7 +17,7 @@
  * @since 2.1
  */
 
-import React from 'react';
+import React, { Suspense, lazy, memo} from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './styles/Layout.css';
 import './styles/Modal.css';
@@ -26,15 +26,22 @@ import './styles/Gallery.css';
 // Components
 import DisplayTesting from './components/testing/DisplayTesting'; // for display testing components in developemtn 
 import AnalyticsProvider from './components/analytics/AnalyticsProvider';
-import AppRoutes from './components/routing/AppRoutes';
+import ErrorBoundary from './components/routing/ErrorBoundary';
+import SplashScreen from './components/uiElements/splashScreen/SplashScreen';
+
+const AppLoading = memo(lazy(() => import("./components/routing/AppLoading"))); // Memoized Home component
 
 const AppWithRouter = () => (
-  <Router>
-    <DisplayTesting/>
-    <AnalyticsProvider>
-      <AppRoutes/>
-    </AnalyticsProvider>
-  </Router>
+  <ErrorBoundary>
+    <Suspense fallback={<SplashScreen animateLoader={false} />}>
+      <Router>
+        <DisplayTesting />
+        <AnalyticsProvider>
+          <AppLoading/>
+        </AnalyticsProvider>
+      </Router>
+    </Suspense>
+  </ErrorBoundary>
 );
 
 export default AppWithRouter;
