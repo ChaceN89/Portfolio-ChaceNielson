@@ -18,11 +18,10 @@ import AppRoutes from './AppRoutes';
 import SplashScreen from '../uiElements/splashScreen/SplashScreen';
 
 export default function AppLoading() {
-  const [showSplash, setShowSplash] = useState(true);
-  const [removeSplash, setRemoveSplash] = useState(false);
-  const [loadPercent, setLoadPercent] = useState(0); 
+  const [showSplash, setShowSplash] = useState(true);      // Show the loading screen/splash screen - remove from DOM after fade out (after animation)
+  const [removeSplash, setRemoveSplash] = useState(false); // flag to start removing the splash screen in an animation
+  const [loadPercent, setLoadPercent] = useState(0);       // percentage of loading - used to animate the loading bar in the splash screen (artificial)
 
-  const bufferTimeToRemove = 10000;   // Duration of fade animation
 
   const artificialLoadingTime = 1500; // artificial loading time before he splash screen fades out
   const steps = 4; // how many increments between 0 and 100% the loading bar will have
@@ -31,6 +30,7 @@ export default function AppLoading() {
   
   // This effect simulates loading by incrementing the loadPercent state
   useEffect(() => {
+
     let count = 0;
   
     // udpate an interval to increment the loadPercent state and at end of the loading time, fade out the splash screen
@@ -41,18 +41,25 @@ export default function AppLoading() {
       // If the loading is done, clear the interval and set the splash screen to fade out
       if (count >= steps) {
         clearInterval(interval);
-        setRemoveSplash(true);
-        setTimeout(() => setShowSplash(false), 1000); // optional fade duration
+        setRemoveSplash(true); // ✅ start fade-out
+
       }
     }, incrementTime);
     
-    // Hard remove the splash screen after the buffer time - to stop it from being rendered now that the loading is done
-    setTimeout(() => setShowSplash(false), bufferTimeToRemove);
-
-    return () => {
-      clearInterval(interval);
-    };
+    return () => clearInterval(interval);
   }, [artificialLoadingTime, steps, showSplash]);
+  
+  
+
+  // hard fail-safe timer to remove the splash screen fom the DOm after buffer time
+  const RemoveFromDOMTime = 10000;   // Duration of fade animation
+
+  useEffect(() => {
+    const failsafe = setTimeout(() => setShowSplash(false), RemoveFromDOMTime);
+    return () => clearTimeout(failsafe);
+    
+    
+  }, [showSplash]);
 
 
   // return <SplashScreen loadPercent={loadPercent} />;

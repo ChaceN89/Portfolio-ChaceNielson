@@ -10,20 +10,21 @@
  * @updated May 5, 2025 by Chace Nielson
  * ==========================================================================
  */
- @keyframes splashTransform {
+@keyframes splashTransform {
   0% {
     opacity: 1;
-    transform: translate(0, 0) scale(1);
+    filter: blur(0px);
   }
+
   100% {
     opacity: 0;
-    transform: translate(50vw, -50vh) scale(0);
+    filter: blur(20px);
   }
 }
 
 .splash-exit {
-  animation: splashTransform 1s ease forwards;
-  animation-delay: 0.3s; /* ⏱️ Delay before animation starts */
+  animation: splashTransform 1s ease-in-out forwards;
+  animation-delay: 0.4s; /* ⏱️ Delay before animation starts */
   pointer-events: none;
 }
 
