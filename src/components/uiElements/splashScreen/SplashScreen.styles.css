@@ -12,22 +12,18 @@
  */
  @keyframes splashTransform {
   0% {
+    opacity: 1;
     transform: translate(0, 0) scale(1);
   }
   100% {
-    transform: translate(100vw, -100vh) scale(0);
+    opacity: 0;
+    transform: translate(50vw, -50vh) scale(0);
   }
 }
 
-@keyframes splashFade {
-  0%   { opacity: 1; }
-  100% { opacity: 0; }
-}
-
 .splash-exit {
-  animation: 
-    splashTransform 2s ease forwards,
-    splashFade 2s ease forwards;
+  animation: splashTransform 1s ease forwards;
+  animation-delay: 0.3s; /* ⏱️ Delay before animation starts */
   pointer-events: none;
 }
 

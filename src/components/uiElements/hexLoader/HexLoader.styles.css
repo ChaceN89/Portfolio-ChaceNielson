@@ -23,6 +23,7 @@
   width: 41px;
   height: 36px;
   background: rgb(255, 255, 255);
+  /* background: linear-gradient(90deg, white, black ); */
   clip-path: polygon(
     25% 0%, 75% 0%,
     100% 50%,
@@ -45,13 +46,14 @@
 
 @keyframes hexRotate {
   0%   { transform: rotate(0deg); }
-  18%  { transform: rotate(120deg); }
-  20%  { transform: rotate(120deg); }
-  38%  { transform: rotate(240deg); }
-  40%  { transform: rotate(240deg); }
-  58%  { transform: rotate(360deg); }
-  60%  { transform: rotate(360deg); }
-
-  /* 🛑 Hold the final state longer before reset */
+  15%  { transform: rotate(60deg); }
+  20%  { transform: rotate(60deg); }
+  35%  { transform: rotate(120deg); }
+  40%  { transform: rotate(120deg); }
+  55%  { transform: rotate(180deg); }
+  60%  { transform: rotate(180deg); }
+  75%  { transform: rotate(240deg); }
+  80%  { transform: rotate(240deg); }
+  95%  { transform: rotate(300deg); }
   100% { transform: rotate(360deg); }
 }

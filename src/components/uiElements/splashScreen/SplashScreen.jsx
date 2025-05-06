@@ -15,6 +15,7 @@ import HexLoader from '../hexLoader/HexLoader';
 import './SplashScreen.styles.css'; // Import the CSS file for hexagon styles
 
 export default function SplashScreen({ 
+  loadPercent = 0,
   transitionOut = false, 
   animateLoader = true,
   errorInfo = null,
@@ -39,7 +40,10 @@ export default function SplashScreen({
           {errorInfo ? (
             <ErrorDisplay errorInfo={errorInfo} />
           ):(
+            <>
             <HexLoader animate={animateLoader} />
+            <h3 className='mt-2'>{loadPercent}%</h3>
+            </>
           )}
         </div>
       </div>
