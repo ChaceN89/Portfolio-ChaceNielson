@@ -15,6 +15,8 @@ import LogoLink from './LogoLink';
 import MediaLinks from './MediaLinks';
 
 function Footer() {
+
+return"footer"
   return (
     <footer className="bg-frosted-glass flex relative bottom-0">
       <div className='container mx-auto flex justify-between items-center p-1 sm:p-2'>

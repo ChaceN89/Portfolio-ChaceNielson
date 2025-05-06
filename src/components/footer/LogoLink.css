@@ -36,15 +36,15 @@
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0px; /* Adjust to position the underline closer or farther from the text */
-  width: 0;
-  height: 4px; /* Adjust to change the thickness of the underline */
-  @apply bg-accent-dark; /* Customize the underline color using Tailwind's bg-accent class */
-  transition: width 0.3s ease; /* Transition for the underline width */
+  /* bottom: 0px; Adjust to position the underline closer or farther from the text */
+  /* width: 0; */
+  /* height: 4px; Adjust to change the thickness of the underline */
+  /* @apply bg-accent-dark; Customize the underline color using Tailwind's bg-accent class */
+  /* transition: width 0.3s ease;  */
 }
 
 .logo-link:hover .underline-effect::after {
-  width: 100%; /* Full width underline on hover */
+  width: 100%; 
 }
 
 .logo-shadow{

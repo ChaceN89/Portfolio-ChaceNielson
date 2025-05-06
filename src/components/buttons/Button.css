@@ -1,6 +1,6 @@
 /* Button styles */
 
-.glow-on-hover {
+/* .glow-on-hover {
   @apply py-3 px-8 cursor-pointer relative z-0 rounded-lg
   min-w-44 hover:scale-95
   flex items-center justify-center;
@@ -24,7 +24,7 @@
 }
 
 .glow-on-hover:hover:before {
-  opacity: 1;
+  opacity: 1;tac
 }
 
 .glow-on-hover:after {
@@ -42,4 +42,4 @@
   0% { background-position: 0 0; }
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
-}
+} */

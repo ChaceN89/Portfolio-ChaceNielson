@@ -39,6 +39,7 @@
  * @since 2.1
  */
 
+ /*
 .card-grid-wrapper{
   @apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6
 }
@@ -56,3 +57,5 @@
 .card-thin-border{
   @apply border-t-2  border-secondary border-opacity-35 overflow-hidden
 }
+
+*/

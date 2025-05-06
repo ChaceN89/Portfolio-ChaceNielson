@@ -44,10 +44,11 @@ export default function AppRoutes() {
       {/* Main App Routes */}
       <Routes >
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
+          {/* <Route index element={<Home />} />
           <Route path="/photos" element={<Gallery />} />
           <Route path="/thanks" element={<Thanks />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
+          <Route path="*" element={<Navigate to="/" replace />} /> */}
+          
         </Route>
       </Routes>
 
@@ -58,12 +59,33 @@ export default function AppRoutes() {
         </Modal>
       )}
 
-      {/* Modal for Skills */}
+      {/* Modal for Skills
       {specializationID && (
         <Modal onClose={() => {navigate(location.pathname);}} > 
           <Specialization specializationID={specializationID} />
         </Modal>
-      )}
+      )} */}
     </div>
   );
 }
+
+
+
+// PageTransition component for animating page transitions
+const PageTransition = ({ children }) => {
+  
+  return (children);
+
+  // transition mess up the back/forward button scrolling mechanics 
+  return (
+    <motion.div
+      key="page-transition"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.3 }}
+    >
+      {children}
+    </motion.div>
+  );
+};

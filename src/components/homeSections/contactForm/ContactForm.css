@@ -17,7 +17,7 @@
  * @since 2.1
  */
 
- .contact-label {
+ /* .contact-label {
   @apply block text-base font-medium text-secondary;
 }
 
@@ -25,4 +25,4 @@
   @apply block w-full shadow-lg rounded-lg bg-secondary bg-opacity-10 backdrop-blur-lg
   mt-1 px-3 py-2
   focus:ring-2 focus:ring-accent focus:ring-opacity-50 focus:outline-none;
-}
+} */

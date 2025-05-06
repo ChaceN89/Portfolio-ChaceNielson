@@ -76,6 +76,10 @@ function Navbar() {
     }
   };
 
+
+  return("Navbar")
+
+
   return (
     <nav className="bg-frosted-glass pb-1 fixed top-0 w-full z-45">
 
