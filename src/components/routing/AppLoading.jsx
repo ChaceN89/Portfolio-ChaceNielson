@@ -57,8 +57,6 @@ export default function AppLoading() {
   useEffect(() => {
     const failsafe = setTimeout(() => setShowSplash(false), RemoveFromDOMTime);
     return () => clearTimeout(failsafe);
-    
-    
   }, [showSplash]);
 
 
