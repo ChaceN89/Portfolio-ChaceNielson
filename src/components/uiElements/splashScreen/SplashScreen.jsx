@@ -23,8 +23,18 @@ export default function SplashScreen({
   return (
     <div className={` overflow-hidden
       fixed inset-0 z-50 flex flex-col justify-between min-h-screen bg-primary 
-      ${transitionOut ? 'splash-exit' : ''}
-      `}>
+      ${transitionOut && 'splash-exit'}`}
+  
+    >
+      {/* SVG Filter for Noise */}
+      <div
+        className="absolute inset-0 pointer-events-none z-[999] "
+        style={{
+          filter: 'url(#noiseFilter)',
+          mixBlendMode: 'multiply',
+          opacity: 0.8,
+        }}
+      />
    
       {/* Top Hex Separator */}
       <HexSeparator 
@@ -34,12 +44,12 @@ export default function SplashScreen({
       />
 
       {/* Main Content */}
-      <div className="flex flex-col items-center justify-center flex-grow">
+      <div className="flex flex-col items-center justify-center flex-grow ">
       <img
         src="/logos/logoFull-outline.png"
         alt="Site Logo"
 
-        className="min-w-[300px]  overflow-hidden"
+        className="min-w-[300px] overflow-hidden"
       />
         <div className="text-xl text-gray-600 text-center">
           {errorInfo ? (

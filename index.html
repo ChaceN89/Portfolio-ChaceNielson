@@ -72,11 +72,23 @@
       }
     </script>
 
+  
     <title>Chace Nielson</title>
   </head>
   <body>
     <!-- Noscript -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
+
+    <!-- GlobalNoise Styl -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none; z-index: 99999;" >
+      <filter id="noiseFilter">
+        <feTurbulence id="turbulence" type="fractalNoise" baseFrequency="0.8" numOctaves="5" stitchTiles="stitch" seed="0" />
+        <feColorMatrix type="saturate" values="0" />
+        <feBlend mode="multiply" in2="SourceGraphic" />
+      </filter>
+    </svg>
+    
+    
     
     <!-- Root Div -->
     <div id="root"></div>
