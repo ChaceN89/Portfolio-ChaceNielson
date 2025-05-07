@@ -19,9 +19,6 @@
 
 import React, { Suspense, lazy, memo} from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-// import './global-styles/Layout.css';
-// import './global-styles/Modal.css';
-// import './global-styles/Gallery.css';
 
 // Components
 import DisplayTesting from './components/testing/DisplayTesting'; // for display testing components in developemtn 

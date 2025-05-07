@@ -1,6 +1,19 @@
+/**
+ * @file main.jsx
+ * @author Chace Nielson
+ * 
+ * @description Entry point for the React application.
+ * This file sets up the React application, imports global styles, and renders the main App component.
+ */
+
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
+
+// Import all Global CSS styles
 import './index.css'
+import './global-styles/ScrollBar.styles.css'
+
+// Import the main App component
 import App from './App.jsx'
 
 // Suppress specific warning about defaultProps for the "ProjectImageCarousel" specifically

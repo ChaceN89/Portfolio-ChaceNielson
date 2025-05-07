@@ -1,1 +1,105 @@
+/**
+ * Filename: index.css
+ * Author: Chace Nielson
+ * Created: May 6th, 2025
+ * Updated: May 6th, 2025
+ * 
+ * Description:
+ * This stylesheet cotains global/base styles for the website. It includes
+ * definitions for the primary and secondary color schemes, as well as
+ * utility classes for spacing, text alignment, and other common styles.
+ * 
+ * Notes
+ *    - This file is imported by all other stylesheets in the project if they need access to its styles specifically, jsx does not need to import this file
+ *    - It is used to define global styles and variables that are shared across
+ *    Tailwind 4 https://tailwindcss.com/blog/tailwindcss-v4
+ */
+
+/* IMport fonts and tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Lexend&family=Open+Sans&family=Roboto&family=Lato&family=Montserrat&family=Nunito&family=Poppins:wght@400;700&family=Bebas+Neue&display=swap');
 @import "tailwindcss";
+
+
+/* Theme for the site  */
+@theme {
+  /* === Typography === */
+  --font-title-text: "Lexend", sans-serif;        /* Display titles, headers */
+  --font-main-text: "Montserrat", sans-serif;     /* Body text */
+
+  /* === Primary Backgrounds (light, clean, elegant) === */
+  --color-primary: rgb(255, 245, 250);             /* Blush white */
+  --color-primary-alt: rgb(235, 245, 255);         /* Light icy blue */
+
+  /* === Secondary (Dark UI Base) === */
+  --color-secondary: rgb(35, 31, 31);              /* Deep black-gray (text / backgrounds) */
+  --color-secondary-alt: rgb(34, 35, 39);          /* Slate gray (cards / contrast panels) */
+
+  /* === Accent (Cool Teal for interactive elements) === */
+  --color-accent: rgb(0, 191, 166);                /* Teal accent (buttons, icons) */
+  --color-accent-alt: rgb(102, 211, 194);          /* Soft teal (hover/secondary accent) */
+
+  /* === Tertiary (Warm tone for CTAs, highlights) === */
+  --color-tertiary: rgb(255, 153, 102);            /* Burnt peach (alerts, highlights) */
+  --color-tertiary-alt: rgb(255, 194, 161);        /* Light peach (backgrounds, hover) */
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title-text);
+}
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+h3 {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+h5 {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+h6 {
+  font-size: 1rem;
+  font-weight: 200;
+}
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+small {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  font-weight: 300;
+}
+
+/* Global HTML & Body styles */
+html, body {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-family: var(--font-main-text);
+}
+
+/* Important Global Styles */
+
+/* Global noise background */
+.noise-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  filter: url(#noiseFilter);
+  mix-blend-mode: multiply;
+  opacity: 0.5;
+}

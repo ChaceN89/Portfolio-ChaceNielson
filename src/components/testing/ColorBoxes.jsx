@@ -27,12 +27,14 @@ import React from 'react';
 
 const ColorBoxes = () => {
   const colors = [
-    { name: 'Primary', className: 'bg-primary hover:bg-primary-dark' },
-    { name: 'Primary Dark', className: 'bg-primary-dark hover:bg-primary' },
-    { name: 'Secondary', className: 'bg-secondary hover:bg-secondary-dark' },
-    { name: 'Secondary Dark', className: 'bg-secondary-dark hover:bg-secondary' },
-    { name: 'Accent', className: 'bg-accent hover:bg-accent-dark' },
-    { name: 'Accent Dark', className: 'bg-accent-dark hover:bg-accent' },
+    { name: 'Primary', className: 'bg-primary ' },
+    { name: 'Primary Alt', className: 'bg-primary-alt ' },
+    { name: 'Secondary', className: 'bg-secondary ' },
+    { name: 'Secondary Alt', className: 'bg-secondary-alt ' },
+    { name: 'Accent', className: 'bg-accent ' },
+    { name: 'Accent Alt', className: 'bg-accent-alt ' },
+    { name: 'Tertiary ', className: 'bg-tertiary ' },
+    { name: 'Tertiary Alt', className: 'bg-tertiary-alt ' },
   ];
 
   return (

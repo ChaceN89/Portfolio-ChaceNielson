@@ -20,6 +20,7 @@ export default function SplashScreen({
   animateLoader = true,
   errorInfo = null,
 }) {
+  // z index for the splash screen is above the rest of the app
   return (
     <div className={` overflow-hidden
       fixed inset-0 z-50 flex flex-col justify-between min-h-screen bg-primary 
@@ -28,54 +29,85 @@ export default function SplashScreen({
     >
       {/* SVG Filter for Noise */}
       <div
-        className="absolute inset-0 pointer-events-none z-[999] "
+        className="absolute inset-0 pointer-events-none z-[0]"
         style={{
           filter: 'url(#noiseFilter)',
           mixBlendMode: 'multiply',
           opacity: 0.7,
         }}
       />
-   
-      {/* Top Hex Separator */}
-      <HexSeparator 
-        rows={6}
-        hexClass="bg-secondary opacity-10"
-        bottom={false}
-      />
 
-      {/* Main Content */}
-      <div className="flex flex-col items-center justify-center flex-grow ">
-      <img
-        src="/logos/logoFull-outline.png"
-        alt="Site Logo"
+      {/* 🔵 Top Separator - high */}
+      <div className="z-[30]">
+        <HexSeparator 
+          rows={6}
+          hexClass="bg-black opacity-85"
+          bottom={false}
+        />
+      </div>
 
-        className="min-w-[300px] overflow-hidden"
-      />
-        <div className="text-xl text-gray-600 text-center">
+      {/* 🟢 Main Content - medium */}
+      <div className="z-[10] flex flex-col items-center justify-center flex-grow">
+        <img
+          src="/logos/logoFull-outline.png"
+          alt="Site Logo"
+          className="min-w-[300px] overflow-hidden"
+        />
+        <div className="text-xl text-center">
           {errorInfo ? (
             <ErrorDisplay errorInfo={errorInfo} />
-          ):(
+          ) : (
             <>
-            <HexLoader animate={animateLoader} />
-            <h3 className='mt-2 text-white'>{loadPercent}%</h3>
+              <HexLoader animate={animateLoader} />
+              <PercentLoader loadPercent={loadPercent} />
             </>
           )}
         </div>
       </div>
 
-      {/* Bottom Hex Separator */}
-      <HexSeparator 
-        rows={6}
-        hexClass="bg-secondary opacity-10"
-        bottom={true}
+      {/* 🔵 Bottom Separator - high */}
+      <div className="z-[30]">
+        <HexSeparator 
+          rows={6}
+          hexClass="bg-black opacity-85"
+          bottom={true}
+        />
+      </div>
+    </div>
+  );
+}
+
+// PercentLoader component for the perentage bar 
+function PercentLoader({ loadPercent }) {
+
+  var percentText = loadPercent.toString();
+  if (loadPercent === 0) {
+    loadPercent = 1;
+  }
+
+  return (
+    <div className="flex items-center justify-center  gap-2 px-4 w-screen">
+      <div
+        className="h-[7px] bg-secondary transition-all duration-300 w-full rounded-full"
+        style={{ flex: loadPercent / 200 }}
+      />
+
+      {/* Percent */}
+      <h3 className="whitespace-nowrap text-lg font-medium w-16">
+        {percentText}
+      </h3>
+
+      {/* Right Line */}
+      <div
+        className="h-[7px] bg-secondary transition-all duration-300 w-full rounded-full"
+        style={{ flex: loadPercent / 200 }}
       />
     </div>
   );
 }
 
 
-
-
+// Function to diapl error message is splash is used for error handling
 function ErrorDisplay({ errorInfo }) {
   return (
     <div className="flex flex-col items-center text-gray-200">

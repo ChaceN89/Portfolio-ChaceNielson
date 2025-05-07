@@ -13,10 +13,21 @@
 import React from 'react';
 import LogoLink from './LogoLink';
 import MediaLinks from './MediaLinks';
+import { Link } from 'react-router-dom';
 
 function Footer() {
 
-return"footer"
+  return (
+    <footer className="flex gap-6 p-4 bg-primary text-secondary text-lg  w-full z-50 h-56 border-t-2 border-gray-300 bg-red-100">
+      <div className='h-56 w-56 border-2 border-amber-600 bg-gray-700 '/>
+      <Link to="/" className="hover:text-blue-300 transition-colors">Home</Link>
+      <Link to="/projects" className="hover:text-blue-300 transition-colors">Projects</Link>
+      <Link to="/contact" className="hover:text-blue-300 transition-colors">Contact</Link>
+      <Link to="/about" className="hover:text-blue-300 transition-colors">About</Link>
+      <Link to="/thanks" className="hover:text-blue-300 transition-colors">Thanks</Link>
+    </footer>
+  );
+
   return (
     <footer className="bg-frosted-glass flex relative bottom-0">
       <div className='container mx-auto flex justify-between items-center p-1 sm:p-2'>
