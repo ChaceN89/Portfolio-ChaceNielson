@@ -85,12 +85,12 @@ function Navbar() {
     return (
       <nav className="flex gap-6 p-4 bg-primary text-secondary text-lg fixed top-0 w-full z-45">
       <LinkItem
-        scrollTo="Hero"
-        router={"/"}
+        scrollTo={"Hero"}
+        router="/"
         className="hover:text-blue-300 transition-colors"
         activeClassName="underline"
       >
-        Hero
+        Home
       </LinkItem>
 
       <LinkItem

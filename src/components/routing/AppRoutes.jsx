@@ -54,9 +54,19 @@ export default function AppRoutes() {
   const { pathname } = useLocation(); // Get the current location of Router
   const navigationType = useNavigationType(); // Get the type of navigation
 
+
+  // Scroll Position UseEffect
   useEffect(() => { // Call useEffect every time the pathname (location) changes
-    if (navigationType !== "POP") { // If the navigation type is  not POP (back/forward button)
-      window.scrollTo(0, 0); // Scroll to top
+    let timeout;
+
+    if (navigationType !== "POP") { // Only If the navigation type is  not POP (back/forward button) - back/forward saves scroll position
+      timeout = setTimeout(() => {
+        window.scrollTo(0, 0);
+      }, 500); // Match your transition duration
+    }
+
+    return () => {
+      clearTimeout(timeout); // Clear the timeout on unmount
     }
   }, [pathname]); // Activated when pathname changes
   
@@ -64,10 +74,11 @@ export default function AppRoutes() {
   return (
     <div className='min-w-56 overflow-x-hidden z-'>
       {/* Main App Routes */}
-      {/* <AnimatePresence mode="wait"> */}
+      <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Layout />}>
             <Route index element={<PageTransition><TestHomePage name="Home" /></PageTransition>} />
+
             <Route path="/projects" element={<PageTransition><TestPage name="Projects" /></PageTransition>} />
             <Route path="/contact" element={<PageTransition><TestPage name="Contact" /></PageTransition>} />
             <Route path="/thanks" element={<PageTransition><TestPage name="Thanks" /></PageTransition>} />
@@ -75,7 +86,7 @@ export default function AppRoutes() {
             <Route path="*" element={<PageTransition><TestPage name="404 - Not Found" /></PageTransition>} />
           </Route>
         </Routes>
-      {/* </AnimatePresence> */}
+      </AnimatePresence>
 
 
       {/* Modal for Projects */}
@@ -124,7 +135,40 @@ const PageTransition = ({ children }) => {
 function TestHomePage({ name }) {
   return(
     <div className='my-20'>
-      <div id="Hero" className='bg-secondary/40 h-96 border'> Hero</div>
+      <div id="Hero" className='bg-secondary/40 h-96 border'> 
+        <BackgroundWrapper
+          background="/backgrounds/computer-1.png"
+          backgroundClass='w-screen h-96'
+          childClass='flex h-full w-full items-center justify-center gap-4'
+          fixed
+          // blur={10}
+          // noise
+        >
+          <div>
+
+            <h1>H1: {name}</h1>
+            <h2>H2: {name}</h2>
+            <h3>H3: {name}</h3>
+          </div>
+          <div className='grid grid-cols-3 gap-4 '>
+            <ImageComponent
+              src={"/backgrounds/pexels-12.jpg"} alt={"aaaa"}
+              className="rounded-xl  h-72 object-cover"
+            />
+            <ImageComponent
+              src={"/backgrounds/pexels-4.jpg"} alt={"aaaa"}
+              className="rounded-xl  h-72 object-cover"
+            />
+            <ImageComponent
+              src={"/backgrounds/pexels-1.jpg"} alt={"aaaa"}
+              className="rounded-xl  h-72 object-cover"
+            />
+
+          </div>
+
+        </BackgroundWrapper>
+      
+      </div>
       <div id="Projects" className='bg-white/90 h-56 border'> Projects</div>
       <div id="TechStack" className='bg-red-400/40 h-72 border'> TechStack</div>
       <div id="CallToAction" className='bg-accent/40 h-80 border'> CallToAction</div>
