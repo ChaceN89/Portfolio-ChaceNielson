@@ -114,30 +114,24 @@ const PageTransition = ({ children }) => {
   // Don't use framer motion for page transitions  - find new react transition library
 
   return (
-    <motion.div
-      initial={{ opacity: 0, x: 1000 }}
-      animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -1000 }}
-      transition={{ duration: 0.5, ease: 'easeInOut' }}
-      onAnimationStart={() => {
-        console.log("Enter animation started");
-      }}
-      onAnimationComplete={() => {
-        console.log("Enter animation completed");
-      }}
-    >
-      {children}
-    </motion.div>
+<motion.div
+  initial={{ opacity: 0, position: 'relative', left: '100vw' }}
+  animate={{ opacity: 1, left: 0 }}
+  exit={{ opacity: 0, left: '-100vw' }}
+  transition={{ duration: 0.5, ease: 'easeInOut' }}
+>
+  {children}
+</motion.div>
   );
 };
 
 function TestAboutPage({ name }) {
   return(
     <div className='my-20'>
-      <div id="Gallery" className='bg-secondary/40 h-96 border'> 
+      <div id="Gallery" className='bg-secondary/40  border'> 
         <BackgroundWrapper
           background="/backgrounds/computer-1.png"
-          backgroundClass='w-screen h-96'
+          backgroundClass='w-screen '
           childClass='flex h-full w-full items-center justify-center gap-4'
           fixed
           // blur={10}
@@ -179,36 +173,41 @@ function TestAboutPage({ name }) {
 
 function TestHomePage({ name }) {
   return(
-    <div className='my-20'>
-      <div id="Hero" className='bg-secondary/40 h-96 border'> 
+    <div className='my-15'>
+      <div id="Hero" className='bg-secondary/40   '> 
         <BackgroundWrapper
-          background="/backgrounds/computer-1.png"
-          backgroundClass='w-screen h-96'
-          childClass='flex h-full w-full items-center justify-center gap-4'
+          background="/backgrounds/pexels-17.jpg"
+          backgroundClass='w-screen min-h-[90vh]'
+          childClass='flex h-full w-full items-start py-20 justify-center gap-4'
           fixed
-          // blur={10}
-          // noise
+          noise
         >
-          <div>
+          <div className=' '>
 
-            <h1>H1: {name}</h1>
-            <h2>H2: {name}</h2>
-            <h3>H3: {name}</h3>
-          </div>
-          <div className='grid grid-cols-3 gap-4 '>
+            <h1 className='mix-blend-difference'>Chace Nielson</h1>
+            <h2>Software Engineer</h2>
+            <h3>Full-Stack Developer</h3>
+            <h3>Game Developer</h3>
+            <h3></h3>
+          <div className='grid grid-cols-3 gap-4 w-3/4 '>
             <ImageComponent
-              src={"/backgrounds/pexels-12.jpg"} alt={"aaaa"}
-              className="rounded-xl  h-72 object-cover"
-            />
+              src={"/portraits/pngs/chace-2.png"} alt={"aaaa"}
+              className="rounded-xl  h-54 "
+              />
             <ImageComponent
               src={"/backgrounds/pexels-4.jpg"} alt={"aaaa"}
-              className="rounded-xl  h-72 object-cover"
-            />
+              className="rounded-xl  h-54 object-cover"
+              />
             <ImageComponent
               src={"/backgrounds/pexels-1.jpg"} alt={"aaaa"}
-              className="rounded-xl  h-72 object-cover"
-            />
+              className="rounded-xl  h-54 object-cover"
+              />
+            <ImageComponent
+              src={"/backgrounds/pexels-1.jpg"} alt={"aaaa"}
+              className="rounded-xl  h-54 object-cover"
+              />
 
+              </div>
           </div>
 
         </BackgroundWrapper>

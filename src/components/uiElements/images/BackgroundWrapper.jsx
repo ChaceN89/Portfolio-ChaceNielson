@@ -17,7 +17,6 @@
  * @updated Aug 9, 2024
  */
 
-import { filter } from 'framer-motion/client';
 import React, { useEffect, useState } from 'react';
 
 export default function BackgroundWrapper({ 
@@ -72,15 +71,12 @@ export default function BackgroundWrapper({
     zIndex: 0,
     filter: `blur(${blur}px)`,
     backgroundPosition: 'center',
-    // transform: 'scale(1.05)', // slightly zoom out to allow blur bleed
-
-
   };
 
   return (
     <div className={`${backgroundClass} relative overflow-hidden `}>
     
-      {/* SVG Filter for Noise */}
+      {/* SVG Filter for Noise
       {noise && (
         <div
           className="absolute inset-0 pointer-events-none z-2"
@@ -90,7 +86,7 @@ export default function BackgroundWrapper({
             opacity: 0.5,
           }}
         />
-      )}
+      )} */}
 
       {/* Blurry low-res background */}
       {backgroundSm && (
@@ -106,14 +102,29 @@ export default function BackgroundWrapper({
       )}
 
       {/* Sharp high-res background */}
-      <div
-        className={`absolute inset-0 transition-opacity duration-1000`}
-        style={{
-          ...baseBackgroundStyle,
-          backgroundImage: `url(${background})`,
-          opacity: loaded ? opacity : 0,
-        }}
-      />
+      <div className="absolute inset-0">
+  {/* Background image */}
+  <div
+    className="absolute inset-0 transition-opacity duration-1000"
+    style={{
+      ...baseBackgroundStyle,
+      backgroundImage: `url(${background})`,
+      opacity: loaded ? opacity : 0,
+    }}
+  />
+
+  {/* Noise overlay */}
+  {noise && (
+    <div
+      className="absolute inset-0 pointer-events-none"
+      style={{
+        filter: 'url(#noiseFilter)', // assumes <svg> exists in index.html
+        mixBlendMode: 'multiply',
+        opacity: 0.5,
+      }}
+    />
+  )}
+</div>
 
       {/* Foreground content */}
       <div className={` ${childClass} relative z-2  `}>
