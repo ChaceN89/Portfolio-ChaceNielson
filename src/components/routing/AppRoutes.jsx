@@ -54,15 +54,19 @@ export default function AppRoutes() {
   // Get navigation type
   const navigationType = useNavigationType(); // Get the type of navigation
 
+
+  useEffect(() => { // Call useEffect every time the pathname (location) changes
+    window.scrollTo(0, 0); // Scroll to top
+  }, [pathname]); // Activated when pathname changes
   
 
   return (
     <div className='min-w-56 overflow-x-hidden z-'>
       {/* Main App Routes */}
-
+      <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Layout />}>
-            <Route index element={<PageTransition><TestPage name="Home" /></PageTransition>} />
+            <Route index element={<PageTransition><TestHomePage name="Home" /></PageTransition>} />
             <Route path="/projects" element={<PageTransition><TestPage name="Projects" /></PageTransition>} />
             <Route path="/contact" element={<PageTransition><TestPage name="Contact" /></PageTransition>} />
             <Route path="/thanks" element={<PageTransition><TestPage name="Thanks" /></PageTransition>} />
@@ -70,6 +74,7 @@ export default function AppRoutes() {
             <Route path="*" element={<PageTransition><TestPage name="404 - Not Found" /></PageTransition>} />
           </Route>
         </Routes>
+      </AnimatePresence>
 
 
       {/* Modal for Projects */}
@@ -92,7 +97,7 @@ export default function AppRoutes() {
 
 const PageTransition = ({ children }) => {
 
-  return children;
+  // return children;
 
   // Don't use framer motion for page transitions  - find new react transition library
 
@@ -114,6 +119,19 @@ const PageTransition = ({ children }) => {
   );
 };
 
+
+function TestHomePage({ name }) {
+  return(
+    <div className='my-20'>
+      <div id="Hero" className='bg-secondary/40 h-96 border'> Hero</div>
+      <div id="Projects" className='bg-white/90 h-56 border'> Projects</div>
+      <div id="TechStack" className='bg-red-400/40 h-72 border'> TechStack</div>
+      <div id="CallToAction" className='bg-accent/40 h-80 border'> CallToAction</div>
+      <div className='h-96'></div>
+    </div>
+  )
+
+}
 
 
 function TestPage({ name }) {

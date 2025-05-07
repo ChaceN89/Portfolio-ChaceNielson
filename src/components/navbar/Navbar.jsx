@@ -50,6 +50,7 @@ import "./Navbar.css";
 
 import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
+import LinkItem from './LinkItem';
 
 
 /**
@@ -81,19 +82,75 @@ function Navbar() {
   };
 
 
-  return (
-    <nav className="flex gap-6 p-4 bg-primary text-secondary text-lg fixed top-0 w-full z-45">
-      <NavLink to="/" className="hover:text-blue-300 transition-colors">Home</NavLink>
-      <NavLink to="/projects" className="hover:text-primary transition-colors">Projects</NavLink>
-      {/* <Link to="/projects" className="hover:text-primary-alt transition-colors">Projects</Link> */}
-      <NavLink to="/contact" className="hover:text-secondary transition-colors">Contact</NavLink>
-      {/* <Link to="/contact" className="hover:text-secondary-alt transition-colors">Contact</Link> */}
-      <NavLink to="/about" className="hover:text-accent transition-colors">About</NavLink>
-      {/* <Link to="/about" className="hover:text-accent-alt transition-colors">About</Link> */}
-      <NavLink to="/thanks" className="hover:text-tertiary transition-colors">Thanks</NavLink>
-      {/* <Link to="/thanks" className="hover:text-tertiary-alt transition-colors">Thanks</Link> */}
-    </nav>
-  );
+    return (
+      <nav className="flex gap-6 p-4 bg-primary text-secondary text-lg fixed top-0 w-full z-45">
+      <LinkItem
+        scrollTo="Hero"
+        router={"/"}
+        className="hover:text-blue-300 transition-colors"
+        activeClassName="underline"
+      >
+        Hero
+      </LinkItem>
+
+      <LinkItem
+        scrollTo="Projects"
+        className="hover:text-primary transition-colors"
+        activeClassName="underline"
+      >
+        Projects
+      </LinkItem>
+
+      <LinkItem
+        scrollTo="TechStack"
+        className="hover:text-red-400 transition-colors"
+        activeClassName="underline"
+      >
+        Tech Stack
+      </LinkItem>
+
+      <LinkItem
+        scrollTo="CallToAction"
+        className="hover:text-accent transition-colors"
+        activeClassName="underline"
+      >
+        Call To Action
+      </LinkItem>
+  
+        <LinkItem
+          router="/projects"
+          className="hover:text-primary transition-colors"
+          activeClassName="underline"
+        >
+          Projects
+        </LinkItem>
+  
+        <LinkItem
+          router="/contact"
+          className="hover:text-secondary transition-colors"
+          activeClassName="underline"
+        >
+          Contact
+        </LinkItem>
+  
+        <LinkItem
+          router="/about"
+          className="hover:text-accent transition-colors"
+          activeClassName="underline"
+        >
+          About
+        </LinkItem>
+  
+        <LinkItem
+          router="/thanks"
+          className="hover:text-tertiary transition-colors"
+          activeClassName="underline"
+        >
+          Thanks
+        </LinkItem>
+      </nav>
+    );
+
   
 
   return (
