@@ -48,22 +48,23 @@ export default function AppRoutes() {
   const projectID = params.get(projectParam);
   const specializationID = params.get(skillParam);
 
+  
+  
+  // Get pathnamd for on change and navigation type
   const { pathname } = useLocation(); // Get the current location of Router
-
-
-  // Get navigation type
   const navigationType = useNavigationType(); // Get the type of navigation
 
-
   useEffect(() => { // Call useEffect every time the pathname (location) changes
-    window.scrollTo(0, 0); // Scroll to top
+    if (navigationType !== "POP") { // If the navigation type is  not POP (back/forward button)
+      window.scrollTo(0, 0); // Scroll to top
+    }
   }, [pathname]); // Activated when pathname changes
   
 
   return (
     <div className='min-w-56 overflow-x-hidden z-'>
       {/* Main App Routes */}
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait"> */}
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Layout />}>
             <Route index element={<PageTransition><TestHomePage name="Home" /></PageTransition>} />
@@ -74,7 +75,7 @@ export default function AppRoutes() {
             <Route path="*" element={<PageTransition><TestPage name="404 - Not Found" /></PageTransition>} />
           </Route>
         </Routes>
-      </AnimatePresence>
+      {/* </AnimatePresence> */}
 
 
       {/* Modal for Projects */}
