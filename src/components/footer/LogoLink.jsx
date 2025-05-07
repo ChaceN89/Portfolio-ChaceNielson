@@ -45,7 +45,7 @@ function LogoLink({ width = "w-20" }) {
     <div className={"relative  hover:scale-95 " + width} >
     <ImageComponent 
       className="w-full h-full object-cover filter brightness-50 logo-shadow"
-      src={'/logos/logoFull-tight.png'}
+      src={'/logos/my-logos/logoFull-tight.png'}
       alt="Chace Nielson Logo" 
     />
   </div>

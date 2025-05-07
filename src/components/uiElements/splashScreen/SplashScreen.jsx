@@ -12,6 +12,7 @@ import React from 'react';
 import { FiAlertCircle } from "react-icons/fi"; // Import error icon from react-icons
 import HexSeparator from '../hexSparator/HexSeparator';
 import HexLoader from '../hexLoader/HexLoader';
+import PercentLoader from '../percentLoader/PercentLoader';
 import './SplashScreen.styles.css'; // Import the CSS file for hexagon styles
 
 export default function SplashScreen({ 
@@ -25,7 +26,6 @@ export default function SplashScreen({
     <div className={` overflow-hidden
       fixed inset-0 z-50 flex flex-col justify-between min-h-screen bg-primary 
       ${transitionOut && 'splash-exit'}`}
-  
     >
       {/* SVG Filter for Noise */}
       <div
@@ -49,7 +49,7 @@ export default function SplashScreen({
       {/* 🟢 Main Content - medium */}
       <div className="z-[10] flex flex-col items-center justify-center flex-grow">
         <img
-          src="/logos/logoFull-outline.png"
+          src="/logos/my-logos/logoFull-tight.png"
           alt="Site Logo"
           className="min-w-[300px] overflow-hidden"
         />
@@ -58,7 +58,9 @@ export default function SplashScreen({
             <ErrorDisplay errorInfo={errorInfo} />
           ) : (
             <>
+            <div className="mt-0 sm:-mt-8 flex flex-col items-center">
               <HexLoader animate={animateLoader} />
+            </div>
               <PercentLoader loadPercent={loadPercent} />
             </>
           )}
@@ -78,33 +80,6 @@ export default function SplashScreen({
 }
 
 // PercentLoader component for the perentage bar 
-function PercentLoader({ loadPercent }) {
-
-  var percentText = loadPercent.toString();
-  if (loadPercent === 0) {
-    loadPercent = 1;
-  }
-
-  return (
-    <div className="flex items-center justify-center  gap-2 px-4 w-screen">
-      <div
-        className="h-[7px] bg-secondary transition-all duration-300 w-full rounded-full"
-        style={{ flex: loadPercent / 200 }}
-      />
-
-      {/* Percent */}
-      <h3 className="whitespace-nowrap text-lg font-medium w-16">
-        {percentText}
-      </h3>
-
-      {/* Right Line */}
-      <div
-        className="h-[7px] bg-secondary transition-all duration-300 w-full rounded-full"
-        style={{ flex: loadPercent / 200 }}
-      />
-    </div>
-  );
-}
 
 
 // Function to diapl error message is splash is used for error handling

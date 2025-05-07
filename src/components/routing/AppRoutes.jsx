@@ -33,7 +33,8 @@ import Layout from './Layout';
 import { skillParam, projectParam } from '../../data/globals';
 import ColorBoxes from '../testing/ColorBoxes';
 import HeaderTesting from '../testing/HeaderTesting';
-import ScrollRestoration from './ScrollRestoration';
+import IconList from '../testing/IconList';
+import ImageComponent from '../wrappers/ImageComponent';
 
 export default function AppRoutes() {
   const location = useLocation(); // Current location
@@ -50,23 +51,20 @@ export default function AppRoutes() {
   // Get navigation type
   const navigationType = useNavigationType(); // Get the type of navigation
 
-
   
 
   return (
     <div className='min-w-56 overflow-x-hidden'>
-      {/* <ScrollRestoration/> */}
       {/* Main App Routes */}
       <AnimatePresence
         mode="wait"
         initial={true}
         onExitComplete={() => {
-          console.log("Exit complete");
-          console.log("Location: ", location.pathname);
-          console.log("Navigation Type: ", navigationType);
+ 
+          window.scrollTo({ top: 0, behavior: "auto" });
 
+          // Depending on the navigation type, you can add logic here
           if (typeof window !== "undefined" && navigationType !== "POP") {
-            window.scrollTo({ top: 0, behavior: "auto" }); 
           }
         }}
       >
@@ -104,12 +102,38 @@ export default function AppRoutes() {
 
 const PageTransition = ({ children }) => {
 
+
+  const slideVariants = {
+    initial: {
+      opacity: 0,
+      x: 100, // slide in from right
+      position: 'absolute',
+      width: '100%',
+    },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.6,
+        ease: 'easeOut',
+      },
+    },
+    exit: {
+      opacity: 0,
+      x: -100, // slide out to left
+      transition: {
+        duration: 0.4,
+        ease: 'easeIn',
+      },
+    },
+  };
+
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.4, ease: 'easeInOut' }}
+      initial={{ opacity: 0, x: 800 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -800 }}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
       onAnimationStart={() => {
         console.log("Enter animation started");
       }}
@@ -123,19 +147,35 @@ const PageTransition = ({ children }) => {
 };
 
 
+
+
+
 // TestPage component for testing purposes  - wil lreplace with actual pages onces transitions are working
 function TestPage({ name }) {
 
   const listImgs = [
-    "/png-backgrounds/detailed/pexels-mayday.jpg",
-    "/png-backgrounds/detailed/pexels-6.jpg",
-    "/png-backgrounds/detailed/pexels-2.jpg",
-    "/png-backgrounds/detailed/pexels-3.jpg",
-    "/png-backgrounds/detailed/pexels-4.jpg",
-    "/png-backgrounds/detailed/pexels-5.jpg"
+    "/backgrounds/computer-1.png",
+    "/backgrounds/computer-2.jpg",
+    "/backgrounds/pexels-16.jpg",
+    "/backgrounds/pexels-0.jpg",
+    "/backgrounds/pexels-3.jpg",
+    "/backgrounds/pexels-2.jpg",
+    "/backgrounds/pexels-14.jpg",
+    "/backgrounds/pexels-1.jpg",
+    "/backgrounds/pexels-15.jpg",
+    "/backgrounds/pexels-5.jpg",
+    "/backgrounds/pexels-17.jpg",
+    "/backgrounds/pexels-4.jpg",
+    "/backgrounds/pexels-6.jpg",
+    "/backgrounds/pexels-7.jpg",
+    "/backgrounds/pexels-8.jpg",
+    "/backgrounds/pexels-9.jpg",
+    "/backgrounds/pexels-10.jpg",
+    "/backgrounds/pexels-11.jpg",
+    "/backgrounds/pexels-12.jpg",
+    "/backgrounds/pexels-13.jpg",
 ]
 
-const randomOrder = listImgs.sort(() => Math.random() - 0.5); // shuffle the array
 
 
   return (
@@ -149,22 +189,35 @@ const randomOrder = listImgs.sort(() => Math.random() - 0.5); // shuffle the arr
       <p>P: This is the {name} page.</p>
       <small>Small: This is the {name} page.</small>
 
-      <div className='grid grid-cols-2 gap-4'>
+      <div className='grid grid-cols-3 gap-4 '>
 
         {/* display random order lsit */}
-        {randomOrder.map((img, index) => (
-          <img key={index} src={img} alt="Placeholder" className="rounded-full border-2 border-gray-300 h-56" />
+        {listImgs.map((img, index) => (
+        <div className='flex flex-col items-center justify-center border rounded-2xl p-1' key={index}>
+          <ImageComponent
+          key={index} src={img} alt={img} className="rounded-xl  h-72 object-cover"
+          />
+          
+          {/* <img key={index} src={img} alt={img} className="rounded-xl  h-72 object-cover" /> */}
+        </div>
         ))}
+        <div className='col-span-3 bg-white w-full h-2'/>
 
-        <div>{name}</div>
-        <div>{name}</div>
-        <div>{name}</div>
-        <div>{name}</div>
 
+        <h1 className='bg-primary flex h-full w-full justify-center items-center p-10 '>{name}</h1>
+        <h3 className='col-span-2 bg-primary-alt flex h-full w-full justify-center items-center p-10 '>{name}</h3>
+        <h6 className='col-span-2 bg-secondary text-primary flex h-full w-full justify-center items-center p-10 '>{name}</h6>
+        <h6 className='bg-secondary-alt text-primary flex h-full w-full justify-center items-center p-10 '>{name}</h6>
+        <h6 className='bg-accent flex h-full w-full justify-center items-center p-10 '>{name}</h6>
+        <h6 className='col-span-2 bg-accent-alt flex h-full w-full justify-center items-center p-10 '>{name}</h6>
+        <h6 className='col-span-2 bg-tertiary flex h-full w-full justify-center items-center p-10 '>{name}</h6>
+        <h6 className='bg-tertiary-alt flex h-full w-full justify-center items-center p-10 '>{name}</h6>
+ 
 
       </div>
       <ColorBoxes/>
       <HeaderTesting/>
+      {/* <IconList/> */}
 
     </div>
   );

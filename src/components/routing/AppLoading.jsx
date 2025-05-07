@@ -24,7 +24,7 @@ export default function AppLoading() {
 
 
   const artificialLoadingTime = 1500; // artificial loading time before he splash screen fades out
-  const steps = 6; // how many increments between 0 and 100% the loading bar will have
+  const steps = 4; // how many increments between 0 and 100% the loading bar will have
   const incrementTime = artificialLoadingTime / steps; // time between each increment in milliseconds based on the number of steps
   const percentIncrement = 100 / steps; // percentage increment per step based on the number of steps 
   
@@ -42,7 +42,6 @@ export default function AppLoading() {
       if (count >= steps) {
         clearInterval(interval);
         setRemoveSplash(true); // ✅ start fade-out
-
       }
     }, incrementTime);
     
@@ -58,7 +57,7 @@ export default function AppLoading() {
   }, [showSplash]);
 
 
-  // return <SplashScreen loadPercent={loadPercent} />;
+  return <SplashScreen loadPercent={loadPercent} />;
 
   // Return the loading screen above the main app content
   return (
