@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom';
 function Footer() {
 
   return (
-    <footer className="flex gap-6 p-4 bg-primary text-secondary text-lg  w-full z-50 h-56 border-t-2 border-gray-300 bg-red-100">
+    <footer className="flex gap-6 p-4 bg-primary text-secondary text-lg  w-full z-50 h-56 border-t-2 border-gray-300 ">
       <div className='h-56 w-56 border-2 border-amber-600 bg-gray-700 '/>
       <Link to="/" className="hover:text-blue-300 transition-colors">Home</Link>
       <Link to="/projects" className="hover:text-blue-300 transition-colors">Projects</Link>

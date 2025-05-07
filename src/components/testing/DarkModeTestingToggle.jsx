@@ -52,7 +52,7 @@ function DarkModeTestingToggle() {
   return (
     <div
       onClick={toggleDarkMode}
-      className={`cursor-pointer opacity-30 fixed top-0 right-0 m-1 p-1 z-[100] font-mono text-white h-10 w-10 rounded-full flex items-center justify-center ${
+      className={`cursor-pointer opacity-30 fixed top-20 right-0 m-1 p-1 z-[100] font-mono text-white h-10 w-10 rounded-full flex items-center justify-center ${
         isDarkMode ? 'bg-gray-900' : 'bg-gray-700'
       }`}
     >

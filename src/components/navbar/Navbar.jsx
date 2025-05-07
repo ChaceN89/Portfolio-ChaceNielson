@@ -82,7 +82,7 @@ function Navbar() {
 
 
   return (
-    <nav className="flex gap-6 p-4 bg-primary/10 text-secondary text-lg fixed top-0 w-full z-45">
+    <nav className="flex gap-6 p-4 bg-primary text-secondary text-lg fixed top-0 w-full z-45">
       <NavLink to="/" className="hover:text-blue-300 transition-colors">Home</NavLink>
       <NavLink to="/projects" className="hover:text-primary transition-colors">Projects</NavLink>
       {/* <Link to="/projects" className="hover:text-primary-alt transition-colors">Projects</Link> */}

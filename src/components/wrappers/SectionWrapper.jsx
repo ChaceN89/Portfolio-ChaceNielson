@@ -17,14 +17,13 @@
  * @created 2024-07-29
  * @updated 2024-07-29
  */
-import React from 'react';
-import SectionHeader from '../uiElements/SectionHeader';
 
 function SectionWrapper({ children, title, subtitle }) {
   return (
     <div className='container mx-auto pb-10 px-2'>
-      <div className='py-10 pb-8'>
-        <SectionHeader title={title} subtitle={subtitle} />
+      <div className='py-10 pb-8 space-y-1'>
+        <h1 >{title}</h1>
+        <p>{subtitle}</p>
       </div>
       <div className='px-4'>
         {children}

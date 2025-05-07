@@ -36,10 +36,7 @@ export default function DisplayTesting() {
   return (
     <>
       <TailwindBreakPoints/>
-      {/* <DarkModeTestingToggle/> */}
-      {/* <HeaderTesting/> */}
-      {/* <ColorBoxes/> */}
-      {/* <IconList/> */}
+      <DarkModeTestingToggle/>
     </>
   )
 }

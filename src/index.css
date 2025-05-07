@@ -85,9 +85,10 @@ small {
 
 /* Global HTML & Body styles */
 html, body {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   color: var(--color-secondary);
   font-family: var(--font-main-text);
+  overscroll-behavior: none;
 }
 
 /* Important Global Styles */

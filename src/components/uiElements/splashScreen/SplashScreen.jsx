@@ -85,7 +85,7 @@ export default function SplashScreen({
 // Function to diapl error message is splash is used for error handling
 function ErrorDisplay({ errorInfo }) {
   return (
-    <div className="flex flex-col items-center text-gray-200">
+    <div className="flex flex-col items-center">
       <FiAlertCircle className="w-12 h-12 mb-2" />
       <span >{errorInfo.errorText}</span>
       {errorInfo?.errorLocation && (

@@ -16,7 +16,7 @@
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
-import ImageComponent from '../wrappers/ImageComponent';
+import ImageComponent from '../uiElements/images/ImageComponent';
 import { globals } from '../../data/globals';
 import './LogoLink.css';
 

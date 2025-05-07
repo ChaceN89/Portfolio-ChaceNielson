@@ -34,7 +34,10 @@ import { skillParam, projectParam } from '../../data/globals';
 import ColorBoxes from '../testing/ColorBoxes';
 import HeaderTesting from '../testing/HeaderTesting';
 import IconList from '../testing/IconList';
-import ImageComponent from '../wrappers/ImageComponent';
+import ImageComponent from '../uiElements/images/ImageComponent';
+import BackgroundWrapper from '../uiElements/images/BackgroundWrapper';
+import SectionWrapper from '../wrappers/SectionWrapper';
+import MediaFrame from '../uiElements/mediaFrame/MediaFrame';
 
 export default function AppRoutes() {
   const location = useLocation(); // Current location
@@ -54,20 +57,8 @@ export default function AppRoutes() {
   
 
   return (
-    <div className='min-w-56 overflow-x-hidden'>
+    <div className='min-w-56 overflow-x-hidden z-'>
       {/* Main App Routes */}
-      <AnimatePresence
-        mode="wait"
-        initial={true}
-        onExitComplete={() => {
- 
-          window.scrollTo({ top: 0, behavior: "auto" });
-
-          // Depending on the navigation type, you can add logic here
-          if (typeof window !== "undefined" && navigationType !== "POP") {
-          }
-        }}
-      >
 
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Layout />}>
@@ -80,7 +71,6 @@ export default function AppRoutes() {
           </Route>
         </Routes>
 
-      </AnimatePresence>
 
       {/* Modal for Projects */}
       {/* {projectID && (
@@ -102,31 +92,9 @@ export default function AppRoutes() {
 
 const PageTransition = ({ children }) => {
 
+  return children;
 
-  const slideVariants = {
-    initial: {
-      opacity: 0,
-      x: 100, // slide in from right
-      position: 'absolute',
-      width: '100%',
-    },
-    animate: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        duration: 0.6,
-        ease: 'easeOut',
-      },
-    },
-    exit: {
-      opacity: 0,
-      x: -100, // slide out to left
-      transition: {
-        duration: 0.4,
-        ease: 'easeIn',
-      },
-    },
-  };
+  // Don't use framer motion for page transitions  - find new react transition library
 
   return (
     <motion.div
@@ -148,10 +116,58 @@ const PageTransition = ({ children }) => {
 
 
 
+function TestPage({ name }) {
+
+  return(
+    <div className='my-20'>
+      <h1>Content {name}</h1>
+      <MediaFrame
+        thumbnail={"/backgrounds/computer-1.png"}
+        videoId="MHDH_m0agFM" 
+        alt={"alternate text"}
+        title={"A full title"}
+        className="h-80 lg:h-96"
+      />
+      <MediaFrame
+        thumbnail={"/backgrounds/computer-1.png"}
+        videoId="sgqmCPhj9YA" // ✅ corrected
+        alt={"alternate text"}
+        title={"A full title"}
+        className="h-80 lg:h-96"
+      />
+      <MediaFrame
+        thumbnail={"/backgrounds/computer-1.png"}
+        videoId="AJMJtZt2-g0" // ✅ corrected
+        alt={"alternate text"}
+        title={"A full title"}
+        className="h-80 lg:h-96"
+      />
+    </div>
+  )
+
+  return(
+    <SectionWrapper
+     title={name} 
+     subtitle ={`This is the subtitle for the section called ${name}.`}
+    >
+
+      Chidlren of the subtiel
+
+    </SectionWrapper>
+
+  )
+
+
+}
+
+
+
+
+
 
 
 // TestPage component for testing purposes  - wil lreplace with actual pages onces transitions are working
-function TestPage({ name }) {
+function TestPage2({ name }) {
 
   const listImgs = [
     "/backgrounds/computer-1.png",
@@ -177,9 +193,97 @@ function TestPage({ name }) {
 ]
 
 
+return(
+  <BackgroundWrapper
+      background="/backgrounds/pexels-1.jpg"
+      backgroundSm="/backgrounds/pexels-11.jpg"
+      backgroundClass='w-screen  py-56  '
+      childClass='space-y-20'
+      fixed
+      // blur={10}
+      // noise
+    >
+
+        <h1 className='text-white' >H1: {name}</h1>
+        <h2 className='text-white' >H2: {name}</h2>
+        <h3 className='text-white' >H3: {name}</h3>
+        <h4 className='text-white' >H4: {name}</h4>
+        <h5 className='text-white' >H5: {name}</h5>
+        <h6 className='text-white' >H6: {name}</h6>
+        <p>P: This is the {name} page.</p>
+        <small>Small: This is the {name} page.</small>
+        <ImageComponent
+         src={"/backgrounds/pexels-12.jpg"} alt={"aaaa"}
+          className="rounded-xl  h-72 object-cover"
+          />
+        <ImageComponent
+         src={"/backgrounds/pexels-1.jpg"} alt={"bbbb"}
+          className="rounded-xl  h-72 bg-red-500 object-cover absolute"
+          />
+
+          <BackgroundWrapper
+          background="/backgrounds/pexels-1.jpg"
+          backgroundClass='w-screen h-72  background-opacity-50 my-72'
+          childClass='flex h-full w-full items-center justify-center space-y-2'
+          fixed
+          // blur={10}
+          // noise
+        >
+          <h4 className='text-white'>Title</h4>
+
+
+        </BackgroundWrapper>
+
+        aaaa
+
+
+
+         <div className='bg-red-500 h-5 w-full'>aaa</div>
+        <ImageComponent
+         src={"/backgrounds/pexels-10.jpg"} alt={"aaaa"}
+           backgroundClass='w-full object-cover'
+          />
+          <div className='bg-red-500 h-5 w-full'>Text</div>
+        <ImageComponent
+         src={"/backgrounds/pexels-13.jpg"} alt={"aaaa"}
+          className="rounded-xl   object-cover"
+          />
+        <ImageComponent
+         src={"/backgrounds/pexels-7.jpg"} alt={"aaaa"}
+          className="rounded-xl  h-72 object-cover"
+          />
+
+        <BackgroundWrapper
+          background="/backgrounds/computer-2.jpg"
+          backgroundClass='w-full object-cover overflow-hidden '
+          childClass='space-y-2 w-full h-96 overflow-hidden'
+          fixed
+          
+          
+        ></BackgroundWrapper>
+
+<ImageComponent
+         src={"/backgrounds/pexels-4.jpg"} alt={"aaaa"}
+          className="rounded-xl  h-72 object-cover"
+          />
+<ImageComponent
+         src={"/backgrounds/pexels-15.jpg"} alt={"aaaa"}
+          className="rounded-xl  h-72 object-cover"
+          />
+
+
+
+  </BackgroundWrapper>
+)
+
 
   return (
-    <div className="flex flex-col items-center justify-center border-2  pt-20 space-y-4 p-40">
+    <div className="flex flex-col items-center justify-center border-2  pt-20 space-y-4 p-40 ">
+     
+      <ImageComponent
+        src={"/backgrounds/pexels-0.jpg"} alt={"aaaa"}
+        className="rounded-xl w-96 h-72 object-cover"
+      />
       <h1 >H1: {name}</h1>
       <h2 >H2: {name}</h2>
       <h3 >H3: {name}</h3>
@@ -189,11 +293,44 @@ function TestPage({ name }) {
       <p>P: This is the {name} page.</p>
       <small>Small: This is the {name} page.</small>
 
+      <BackgroundWrapper
+        background="/backgrounds/pexels-13.jpg"
+        backgroundClass='p-20 px-56 '
+        childClass='space-y-2'
+        backgroundSm = "/backgrounds/pexels-11.jpg"
+        fixed
+        blur
+        noise
+      >
+        <h1 className='text-white' >H1: {name}</h1>
+        <h2 className='text-white' >H2: {name}</h2>
+        <h3 className='text-white' >H3: {name}</h3>
+        <h4 className='text-white' >H4: {name}</h4>
+        <h5 className='text-white' >H5: {name}</h5>
+        <h6 className='text-white' >H6: {name}</h6>
+        <p>P: This is the {name} page.</p>
+        <small>Small: This is the {name} page.</small>
+        <ImageComponent
+         src={"/backgrounds/pexels-12.jpg"} alt={"aaaa"}
+          className="rounded-xl  h-72 object-cover"
+          />
+        <ImageComponent
+         src={"/backgrounds/pexels-4.jpg"} alt={"aaaa"}
+          className="rounded-xl  h-72 object-cover"
+          />
+        <ImageComponent
+         src={"/backgrounds/pexels-1.jpg"} alt={"aaaa"}
+          className="rounded-xl  h-72 object-cover"
+          />
+
+
+      </BackgroundWrapper>
+
       <div className='grid grid-cols-3 gap-4 '>
 
         {/* display random order lsit */}
         {listImgs.map((img, index) => (
-        <div className='flex flex-col items-center justify-center border rounded-2xl p-1' key={index}>
+        <div className='flex flex-col items-center justify-center border rounded-xl ' key={index}>
           <ImageComponent
           key={index} src={img} alt={img} className="rounded-xl  h-72 object-cover"
           />

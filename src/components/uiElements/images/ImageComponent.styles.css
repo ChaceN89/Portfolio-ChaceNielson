@@ -1,0 +1,33 @@
+
+@import "tailwindcss";
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) rotateZ(15deg);
+  }
+  100% {
+    transform: translateX(100%) rotateZ(15deg);
+  }
+}
+
+@theme {
+  --color-shimmer: --alpha(var(--color-secondary-alt) / 30%)
+}
+
+.shimmer-overlay {
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 35%,
+    var(--color-shimmer) 50%,
+    rgba(255, 255, 255, 0) 65%
+  );
+  position: absolute;
+  top: -25%; /* expand to accommodate rotation */
+  left: -25%;
+  height: 150%;
+  width: 150%;
+  filter: blur(12px);
+  animation: shimmer 2s infinite;
+  transform: translateX(-100%) rotateZ(15deg);
+  pointer-events: none;
+}
