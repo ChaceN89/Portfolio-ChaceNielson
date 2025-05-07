@@ -82,7 +82,7 @@ export default function AppRoutes() {
             <Route path="/projects" element={<PageTransition><TestPage name="Projects" /></PageTransition>} />
             <Route path="/contact" element={<PageTransition><TestPage name="Contact" /></PageTransition>} />
             <Route path="/thanks" element={<PageTransition><TestPage name="Thanks" /></PageTransition>} />
-            <Route path="/about" element={<PageTransition><TestPage name="About" /></PageTransition>} />
+            <Route path="/about" element={<PageTransition><TestAboutPage name="About" /></PageTransition>} />
             <Route path="*" element={<PageTransition><TestPage name="404 - Not Found" /></PageTransition>} />
           </Route>
         </Routes>
@@ -115,9 +115,9 @@ const PageTransition = ({ children }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, x: 800 }}
+      initial={{ opacity: 0, x: 1000 }}
       animate={{ opacity: 1, x: 0 }}
-      exit={{ opacity: 0, x: -800 }}
+      exit={{ opacity: 0, x: -1000 }}
       transition={{ duration: 0.5, ease: 'easeInOut' }}
       onAnimationStart={() => {
         console.log("Enter animation started");
@@ -131,6 +131,51 @@ const PageTransition = ({ children }) => {
   );
 };
 
+function TestAboutPage({ name }) {
+  return(
+    <div className='my-20'>
+      <div id="Gallery" className='bg-secondary/40 h-96 border'> 
+        <BackgroundWrapper
+          background="/backgrounds/computer-1.png"
+          backgroundClass='w-screen h-96'
+          childClass='flex h-full w-full items-center justify-center gap-4'
+          fixed
+          // blur={10}
+          // noise
+        >
+          <div>
+
+            <h1>H1: {name}</h1>
+            <h2>H2: {name}</h2>
+            <h3>H3: {name}</h3>
+          </div>
+          <div className='grid grid-cols-3 gap-4 '>
+            <ImageComponent
+              src={"/backgrounds/pexels-7.jpg"} alt={"aaaa"}
+              className="rounded-xl  h-72 object-cover"
+            />
+            <ImageComponent
+              src={"/backgrounds/pexels-14.jpg"} alt={"aaaa"}
+              className="rounded-xl  h-72 object-cover"
+            />
+            <ImageComponent
+              src={"/backgrounds/pexels-12.jpg"} alt={"aaaa"}
+              className="rounded-xl  h-72 object-cover"
+            />
+
+          </div>
+
+        </BackgroundWrapper>
+      
+      </div>
+      <div className='h-96'></div>
+      <div id="TimeLine" className='bg-white/90 h-56 border'> Projects</div>
+ 
+      <div className='h-96'></div>
+    </div>
+  )
+
+}
 
 function TestHomePage({ name }) {
   return(

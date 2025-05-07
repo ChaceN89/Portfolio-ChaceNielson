@@ -14,9 +14,9 @@
 import React from "react";
 import { Link as ScrollLink, scroller } from "react-scroll";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { delay } from "framer-motion";
 
 export default function LinkItem({
-  href,
   scrollTo,
   router,
   children,
@@ -26,20 +26,18 @@ export default function LinkItem({
 }) {
   const location = useLocation();
   const navigate = useNavigate();
-  const isHomePage = location.pathname === "/";
+  const onSamePage = location.pathname ? location.pathname === router : false;
+  location.pathname === "/";
+
+  const scrollOffset = -60
 
   const handleClick = (e) => {
     e.preventDefault();
 
-    if (scrollTo) {
-      if (isHomePage) {
-        scroller.scrollTo(scrollTo, {
-          smooth: true,
-          duration: 600,
-          offset: -120,
-        });
-      } else {
-        navigate("/");
+    // If there is a scroll to and we are't in the home page
+    if (scrollTo && !onSamePage) {
+        navigate(router, { replace: true });
+        console.log("navigating to home page before scroll");
 
         const observer = new MutationObserver(() => {
           const targetElement = document.getElementById(scrollTo);
@@ -50,14 +48,14 @@ export default function LinkItem({
               scroller.scrollTo(scrollTo, {
                 smooth: true,
                 duration: 1000,
-                offset: -50,
+                offset: scrollOffset,
               });
-            }, 300);
+            }, 400);
           }
         });
 
         observer.observe(document.body, { childList: true, subtree: true });
-      }
+    
     } else if (router) {
       navigate(router);
     }
@@ -65,26 +63,16 @@ export default function LinkItem({
 
   return (
     <div className="relative hover:cursor-pointer">
-      {/* External Link */}
-      {href && (
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          className={className}
-        >
-          {children}
-        </a>
-      )}
 
-      {/* Scroll Link on Home Page */}
-      {scrollTo && isHomePage && (
+
+      {/* Scrill Link on the same page - active style when in section on the page  */}
+      {scrollTo && onSamePage && (
         <ScrollLink
           to={scrollTo}
           smooth={true}
           duration={1000}
           spy={true}
-          offset={-50}
+          offset={scrollOffset}
           activeClass={!disableActive ? activeClassName : ""}
           className={className}
         >
@@ -92,14 +80,14 @@ export default function LinkItem({
         </ScrollLink>
       )}
 
-      {/* Scroll Link with redirect to Home first */}
-      {scrollTo && !isHomePage && (
+      {/* Scroll Link not on the same page - no need for active style */}
+      {scrollTo && !onSamePage && (
         <a href="/" onClick={handleClick} className={className}>
           {children}
         </a>
       )}
 
-      {/* Router Link */}
+      {/* Router Link with no scrollto - can be active is page is a simple navlink page */}
       {router && !scrollTo && (
         <NavLink
           to={router}

@@ -31,7 +31,8 @@ export default function ImageComponent ({
   src, 
   alt, 
   className = '', 
-  blurHash = "L8N,_Dxu~qxut7ayayfQ_3ayWBWB",
+  // blurHash = "L8N,_Dxu~qxut7ayayfQ_3ayWBWB",
+  blurHash = "LMRC[6009F-;~qt7RjD%Rj%MRjM{",
   onLoad // ✅ callback support
 }) {
 
@@ -52,7 +53,7 @@ export default function ImageComponent ({
   }, [loaded]);
 
   return (
-    <div className={`relative overflow-hidden ${className}`}>
+    <div className={`relative overflow-hidden bg-secondary ${className}`}>
       {showBlur && (
         <div className={`absolute inset-0 z-0 transition-opacity duration-1000 ${loaded ? 'opacity-0' : 'opacity-100'}`}>
           <Blurhash

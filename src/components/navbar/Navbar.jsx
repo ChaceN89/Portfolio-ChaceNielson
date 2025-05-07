@@ -85,7 +85,7 @@ function Navbar() {
     return (
       <nav className="flex gap-6 p-4 bg-primary text-secondary text-lg fixed top-0 w-full z-45">
       <LinkItem
-        scrollTo={"Hero"}
+        scrollTo="Hero"
         router="/"
         className="hover:text-blue-300 transition-colors"
         activeClassName="underline"
@@ -95,6 +95,7 @@ function Navbar() {
 
       <LinkItem
         scrollTo="Projects"
+        router="/"
         className="hover:text-primary transition-colors"
         activeClassName="underline"
       >
@@ -103,6 +104,7 @@ function Navbar() {
 
       <LinkItem
         scrollTo="TechStack"
+        router="/"
         className="hover:text-red-400 transition-colors"
         activeClassName="underline"
       >
@@ -111,11 +113,32 @@ function Navbar() {
 
       <LinkItem
         scrollTo="CallToAction"
+        router="/"
         className="hover:text-accent transition-colors"
         activeClassName="underline"
       >
         Call To Action
       </LinkItem>
+
+      {/* about page */}
+      <LinkItem
+        scrollTo="Gallery"
+        router="/about"
+        className="hover:text-secondary transition-colors"
+        activeClassName="underline"
+      >
+        gallery
+      </LinkItem>
+
+      <LinkItem
+        scrollTo="TimeLine"
+        router="/about"
+        className="hover:text-secondary transition-colors"
+        activeClassName="underline"
+      >
+        timeline
+      </LinkItem>
+
   
         <LinkItem
           router="/projects"
