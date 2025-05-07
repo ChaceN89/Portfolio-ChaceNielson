@@ -11,9 +11,10 @@
  * @updated Jan 23, 2025
  */
 
-import React from 'react';
-import { Routes, Route, Navigate, useLocation, useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React, {useEffect, useRef} from 'react';
+import { Routes, Route, Navigate, useLocation, useNavigate, useNavigationType } from 'react-router-dom';
+import { AnimatePresence, motion } from 'framer-motion';
+
 
 // layouts
 import Layout from './Layout';
@@ -32,6 +33,7 @@ import Layout from './Layout';
 import { skillParam, projectParam } from '../../data/globals';
 import ColorBoxes from '../testing/ColorBoxes';
 import HeaderTesting from '../testing/HeaderTesting';
+import ScrollRestoration from './ScrollRestoration';
 
 export default function AppRoutes() {
   const location = useLocation(); // Current location
@@ -42,21 +44,45 @@ export default function AppRoutes() {
   const projectID = params.get(projectParam);
   const specializationID = params.get(skillParam);
 
+  const { pathname } = useLocation(); // Get the current location of Router
+
+
+  // Get navigation type
+  const navigationType = useNavigationType(); // Get the type of navigation
+
+
+  
+
   return (
     <div className='min-w-56 overflow-x-hidden'>
+      {/* <ScrollRestoration/> */}
       {/* Main App Routes */}
-      <Routes >
-        <Route path="/" element={<Layout />}>
-          <Route index element={<PageTransition><TestPage name="Home" /></PageTransition>} />
-          <Route path="/projects" element={<PageTransition><TestPage name="Projects" /></PageTransition>} />
-          <Route path="/contact" element={<PageTransition><TestPage name="Contact" /></PageTransition>} />
-          <Route path="/thanks" element={<PageTransition><TestPage name="Thanks" /></PageTransition>} />
-          <Route path="/about" element={<PageTransition><TestPage name="About" /></PageTransition>} />
-          <Route path="*" element={<PageTransition><TestPage name="404 - Not Found" /></PageTransition>} />
+      <AnimatePresence
+        mode="wait"
+        initial={true}
+        onExitComplete={() => {
+          console.log("Exit complete");
+          console.log("Location: ", location.pathname);
+          console.log("Navigation Type: ", navigationType);
 
+          if (typeof window !== "undefined" && navigationType !== "POP") {
+            window.scrollTo({ top: 0, behavior: "auto" }); 
+          }
+        }}
+      >
 
-        </Route>
-      </Routes>
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<PageTransition><TestPage name="Home" /></PageTransition>} />
+            <Route path="/projects" element={<PageTransition><TestPage name="Projects" /></PageTransition>} />
+            <Route path="/contact" element={<PageTransition><TestPage name="Contact" /></PageTransition>} />
+            <Route path="/thanks" element={<PageTransition><TestPage name="Thanks" /></PageTransition>} />
+            <Route path="/about" element={<PageTransition><TestPage name="About" /></PageTransition>} />
+            <Route path="*" element={<PageTransition><TestPage name="404 - Not Found" /></PageTransition>} />
+          </Route>
+        </Routes>
+
+      </AnimatePresence>
 
       {/* Modal for Projects */}
       {/* {projectID && (
@@ -76,18 +102,20 @@ export default function AppRoutes() {
 }
 
 
-// PageTransition component for animating page transitions
 const PageTransition = ({ children }) => {
-  
 
-  // transition mess up the back/forward button scrolling mechanics 
   return (
     <motion.div
-      key="page-transition"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: 0.4, ease: 'easeInOut' }}
+      onAnimationStart={() => {
+        console.log("Enter animation started");
+      }}
+      onAnimationComplete={() => {
+        console.log("Enter animation completed");
+      }}
     >
       {children}
     </motion.div>
@@ -97,6 +125,19 @@ const PageTransition = ({ children }) => {
 
 // TestPage component for testing purposes  - wil lreplace with actual pages onces transitions are working
 function TestPage({ name }) {
+
+  const listImgs = [
+    "/png-backgrounds/detailed/pexels-mayday.jpg",
+    "/png-backgrounds/detailed/pexels-6.jpg",
+    "/png-backgrounds/detailed/pexels-2.jpg",
+    "/png-backgrounds/detailed/pexels-3.jpg",
+    "/png-backgrounds/detailed/pexels-4.jpg",
+    "/png-backgrounds/detailed/pexels-5.jpg"
+]
+
+const randomOrder = listImgs.sort(() => Math.random() - 0.5); // shuffle the array
+
+
   return (
     <div className="flex flex-col items-center justify-center border-2  pt-20 space-y-4 p-40">
       <h1 >H1: {name}</h1>
@@ -110,12 +151,17 @@ function TestPage({ name }) {
 
       <div className='grid grid-cols-2 gap-4'>
 
-        <img src="/png-backgrounds/detailed/pexels-mayday.jpg" alt="Placeholder" className="rounded-full border-2 border-gray-300 h-56" />
-        <img src="/png-backgrounds/detailed/pexels-6.jpg" alt="Placeholder" className="rounded-full border-2 border-gray-300 h-56" />
-        <img src="/png-backgrounds/detailed/pexels-2.jpg" alt="Placeholder" className="rounded-full border-2 border-gray-300 h-56" />
-        <img src="/png-backgrounds/detailed/pexels-3.jpg" alt="Placeholder" className="rounded-full border-2 border-gray-300 h-56" />
-        <img src="/png-backgrounds/detailed/pexels-4.jpg" alt="Placeholder" className="rounded-full border-2 border-gray-300 h-56" />
-        <img src="/png-backgrounds/detailed/pexels-5.jpg" alt="Placeholder" className="rounded-full border-2 border-gray-300 h-56" />
+        {/* display random order lsit */}
+        {randomOrder.map((img, index) => (
+          <img key={index} src={img} alt="Placeholder" className="rounded-full border-2 border-gray-300 h-56" />
+        ))}
+
+        <div>{name}</div>
+        <div>{name}</div>
+        <div>{name}</div>
+        <div>{name}</div>
+
+
       </div>
       <ColorBoxes/>
       <HeaderTesting/>

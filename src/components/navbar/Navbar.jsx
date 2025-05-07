@@ -49,6 +49,8 @@ import { Squash as Hamburger } from 'hamburger-react';
 import "./Navbar.css";
 
 import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+
 
 /**
  * Navbar component
@@ -81,15 +83,15 @@ function Navbar() {
 
   return (
     <nav className="flex gap-6 p-4 bg-primary/10 text-secondary text-lg fixed top-0 w-full z-45">
-      <Link to="/" className="hover:text-blue-300 transition-colors">Home</Link>
-      <Link to="/projects" className="hover:text-primary transition-colors">Projects</Link>
-      <Link to="/projects" className="hover:text-primary-alt transition-colors">Projects</Link>
-      <Link to="/contact" className="hover:text-secondary transition-colors">Contact</Link>
-      <Link to="/contact" className="hover:text-secondary-alt transition-colors">Contact</Link>
-      <Link to="/about" className="hover:text-accent transition-colors">About</Link>
-      <Link to="/about" className="hover:text-accent-alt transition-colors">About</Link>
-      <Link to="/thanks" className="hover:text-tertiary transition-colors">Thanks</Link>
-      <Link to="/thanks" className="hover:text-tertiary-alt transition-colors">Thanks</Link>
+      <NavLink to="/" className="hover:text-blue-300 transition-colors">Home</NavLink>
+      <NavLink to="/projects" className="hover:text-primary transition-colors">Projects</NavLink>
+      {/* <Link to="/projects" className="hover:text-primary-alt transition-colors">Projects</Link> */}
+      <NavLink to="/contact" className="hover:text-secondary transition-colors">Contact</NavLink>
+      {/* <Link to="/contact" className="hover:text-secondary-alt transition-colors">Contact</Link> */}
+      <NavLink to="/about" className="hover:text-accent transition-colors">About</NavLink>
+      {/* <Link to="/about" className="hover:text-accent-alt transition-colors">About</Link> */}
+      <NavLink to="/thanks" className="hover:text-tertiary transition-colors">Thanks</NavLink>
+      {/* <Link to="/thanks" className="hover:text-tertiary-alt transition-colors">Thanks</Link> */}
     </nav>
   );
   
