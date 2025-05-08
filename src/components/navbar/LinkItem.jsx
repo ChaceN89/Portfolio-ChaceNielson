@@ -29,7 +29,7 @@ export default function LinkItem({
   const onSamePage = location.pathname ? location.pathname === router : false;
   location.pathname === "/";
 
-  const scrollOffset = -60
+  const scrollOffset = -63
   const scrollDelay = 1000;
   const scrollDuration = 1000;
 

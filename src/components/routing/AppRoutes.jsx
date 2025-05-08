@@ -127,7 +127,7 @@ const PageTransition = ({ children }) => {
 
 function TestAboutPage({ name }) {
   return(
-    <div className='my-15'>
+    <div className=''>
       <div id="Gallery" className='bg-secondary/40  border'> 
         <BackgroundWrapper
           background="/backgrounds/computer-1.png"
@@ -172,50 +172,63 @@ function TestAboutPage({ name }) {
 }
 
 function TestHomePage({ name }) {
+
+  // const background = "/backgrounds/pexels-8.jpg";
+  const background = "/backgrounds/pexels-10.jpg";
+
   return(
     <div >
       <div id="Hero" className='bg-black '> 
         <BackgroundWrapper
-          background="/backgrounds/pexels-10.jpg "
+          background={background}
           backgroundClass='w-screen min-h-[90vh] flex  items-center justify-center '
           fixed
-          // noise
+          noise
           // opacity={0.3}
           blur={10} // cause jitter
         >
           <BackgroundWrapper 
-            background="/backgrounds/pexels-10.jpg"
-            backgroundClass='h-fit w-full  text-accent rounded-full border-2 border-red-400/20' 
-            childClass='flex h-full w-full items-start p-32 justify-center gap-4 '
+            background={background}
+            backgroundClass='h-full w-full  text-black rounded-full border-2 ' 
+            childClass='flex h-full w-full items-center px-40 justify-around gap-4 '
             fixed
           >
-            <div>
+            <div className='w-[65vw] flex  items-center justify-around gap-4'>
 
-            <h2 className='whitespace-nowrap '>Chace Nielson</h2>
-            <ul className='bullet-list list-inside'>
-              <li>Software Engineer</li>
-              <li>Full-Stack Developer</li>
-              <li>Game Developer</li>
-            </ul>
        
+            <div className='text-white '>
+
+              <h2 className='whitespace-nowrap '>Chace Nielson</h2>
+              <ul className='bullet-list list-inside'>
+                <li><h6>Software Engineer</h6></li>
+                <li><h6>Full-Stack Developer</h6></li>
+                <li><h6>Game Developer</h6></li>
+              </ul>
+
             </div>
-            <div className='grid grid-cols-2 gap-4 w-3/4 '>
+   
+            <div className=' grid grid-cols-2 gap-4 items-center py-10 '>
               <ImageComponent
                 src={"/portraits/pngs/chace-2.png"} alt={"aaaa"}
-                className="rounded-xl  h-54 "
+                className="  h-72 w-72   rounded-bl-[100px] object-cover rounded-xl"
                 imgClass="object-top"
                 />
-              {/* <ImageComponent
-                src={"/backgrounds/pexels-18.jpg"} alt={"aaaa"}
+                <div className='space-y-'>
+
+              <ImageComponent
+                src={"/backgrounds/pexels-4.jpg"} alt={"aaaa"}
                 className="rounded-xl  h-54 object-cover"
-                /> */}
+                />
               <ImageComponent
                 src={"/backgrounds/pexels-1.jpg"} alt={"aaaa"}
                 className="rounded-xl  h-54 object-cover"
                 />
+                </div>
           
 
               </div>
+              </div>
+
           </BackgroundWrapper>
 
         </BackgroundWrapper>
@@ -241,7 +254,7 @@ function TestHomePage({ name }) {
 function TestPage({ name }) {
 
   return(
-    <div className='my-20'>
+    <div className='my-20  space-y-40'>
       <h1>Content {name}</h1>
       <MediaFrame
         thumbnail={"/backgrounds/computer-1.png"}
