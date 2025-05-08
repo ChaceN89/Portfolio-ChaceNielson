@@ -31,7 +31,7 @@ export default function ImageComponent ({
   src, 
   alt, 
   className = '', 
-  // blurHash = "L8N,_Dxu~qxut7ayayfQ_3ayWBWB",
+  imgClass = '',
   blurHash = "LMRC[6009F-;~qt7RjD%Rj%MRjM{",
   onLoad // ✅ callback support
 }) {
@@ -73,7 +73,7 @@ export default function ImageComponent ({
         src={src}
         alt={alt}
         onLoad={() => setLoaded(true)}
-        className={`z-1 transition-opacity duration-1000 ease-in-out w-full h-full object-cover ${loaded ? 'opacity-100' : 'opacity-0'}`}
+        className={`z-1 transition-opacity duration-1000 ease-in-out w-full h-full object-cover ${imgClass} ${loaded ? 'opacity-100' : 'opacity-0'}`}
       />
     </div>
   );

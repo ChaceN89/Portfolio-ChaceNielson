@@ -14,7 +14,7 @@ export default function Layout() {
 
       <main className="flex-1 relative z-10 flex flex-col overflow-hidden">
         
-        <div className="relative ">
+        <div className="relative">
           <Outlet />
         </div>
 

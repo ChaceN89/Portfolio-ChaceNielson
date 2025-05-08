@@ -69,24 +69,32 @@ export default function BackgroundWrapper({
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     zIndex: 0,
-    filter: `blur(${blur}px)`,
     backgroundPosition: 'center',
   };
 
   return (
     <div className={`${backgroundClass} relative overflow-hidden `}>
     
-      {/* SVG Filter for Noise
+      {/* SVG Filter for Noise */}
       {noise && (
         <div
           className="absolute inset-0 pointer-events-none z-2"
           style={{
             filter: 'url(#noiseFilter)',
             mixBlendMode: 'multiply',
-            opacity: 0.5,
+            opacity: 1,
           }}
         />
-      )} */}
+      )}
+
+      {/* Overlay blur as a separate layer */}
+      {blur && (
+        <div
+          className="absolute inset-0 z-[1] pointer-events-none"
+          style={{ backdropFilter: `blur(${blur}px)` }}
+        />
+      )}
+
 
       {/* Blurry low-res background */}
       {backgroundSm && (
@@ -102,29 +110,15 @@ export default function BackgroundWrapper({
       )}
 
       {/* Sharp high-res background */}
-      <div className="absolute inset-0">
-  {/* Background image */}
-  <div
-    className="absolute inset-0 transition-opacity duration-1000"
-    style={{
-      ...baseBackgroundStyle,
-      backgroundImage: `url(${background})`,
-      opacity: loaded ? opacity : 0,
-    }}
-  />
-
-  {/* Noise overlay */}
-  {noise && (
-    <div
-      className="absolute inset-0 pointer-events-none"
-      style={{
-        filter: 'url(#noiseFilter)', // assumes <svg> exists in index.html
-        mixBlendMode: 'multiply',
-        opacity: 0.5,
-      }}
-    />
-  )}
-</div>
+      <div
+        className="absolute inset-0 transition-opacity duration-1000 "
+        style={{
+          ...baseBackgroundStyle,
+          backgroundImage: `url(${background})`,
+          opacity: loaded ? opacity : 0,
+          color: 'transparent',
+        }}
+      />
 
       {/* Foreground content */}
       <div className={` ${childClass} relative z-2  `}>

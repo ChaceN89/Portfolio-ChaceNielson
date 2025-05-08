@@ -1,68 +1,21 @@
 /**
  * @file Navbar.jsx
  * @module Navbar
- * @desc React component for the navigation bar. 
- * This component includes a logo link, navigation items, and a responsive hamburger menu for smaller screens.
- * It also displays a progress bar at the top of the navbar that indicates the scroll progress of the page.
- * 
- * @note This component is part of the main layout of the application.
- *
- * @component Navbar
- * 
- * @requires react
- * @requires useState from 'react'
- * @requires NavbarItems from './NavbarItems'
- * @requires framer-motion { motion, useScroll, useSpring }
- * @requires hamburger-react { Squash as Hamburger }
- * @requires ./Navbar.css
- * 
- * @see {@link https://react.dev/ | React Documentation}
- * @see {@link https://www.framer.com/docs/ | Framer Motion Documentation}
- * @see {@link https://hamburger-react.netlify.app/ | Hamburger React Documentation}
- * 
- * @returns {JSX.Element} The Navbar component that provides navigation links and a responsive menu.
- * 
- * @example
- * // Example usage of Navbar in a layout component
- * import Navbar from '../components/navbar/Navbar';
- * 
- * function Layout() {
- *   return (
- *     <div className="layout">
- *       <Navbar />
- *       // Main content here
- *     </div>
- *   );
- * }
- * 
- * @exports Navbar
- * 
- * @created 2024-07-28
- * @updated 2024-08-08
- * @since 2.1
+ * @desc React component for the navigation bar.
+ *       Dynamically renders navigation links from `navLinks` array, supports scroll and routing.
  */
 
 import React, { useState } from 'react';
-import NavbarItems from './NavbarItems';
 import { motion, useScroll, useSpring } from 'framer-motion';
 import { Squash as Hamburger } from 'hamburger-react';
+import LinkItem from './LinkItem';
+import { navLinks } from '../../data/nav/navData';
 import "./Navbar.css";
 
-import { Link } from 'react-router-dom';
-import { NavLink } from 'react-router-dom';
-import LinkItem from './LinkItem';
-
-
-/**
- * Navbar component
- *
- * @returns {JSX.Element} The Navbar component.
- */
-function Navbar() {
+export default function Navbar() {
   const [isHamburgerNavOpen, setIsHamburgerNavOpen] = useState(false);
   const [animateMenu, setAnimateMenu] = useState(false);
 
-  // Create a spring animation for the scroll progress
   const { scrollYProgress } = useScroll();
   const springScrollYProgress = useSpring(scrollYProgress, {
     stiffness: 300,
@@ -70,143 +23,66 @@ function Navbar() {
     mass: 1
   });
 
-  // Toggle the hamburger menu
   const toggleMenu = () => {
     if (!isHamburgerNavOpen) {
       setIsHamburgerNavOpen(true);
       setAnimateMenu(true);
     } else {
       setAnimateMenu(false);
-      setTimeout(() => setIsHamburgerNavOpen(false), 150); // slight delay to allow animation to finish
+      setTimeout(() => setIsHamburgerNavOpen(false), 150);
     }
   };
 
-
-    return (
-      <nav className="flex gap-6 p-4 bg-primary text-secondary text-lg fixed top-0 w-full z-45">
-      <LinkItem
-        scrollTo="Hero"
-        router="/"
-        className="hover:text-blue-300 transition-colors"
-        activeClassName="underline"
-      >
-        Home
-      </LinkItem>
-
-      <LinkItem
-        scrollTo="Projects"
-        router="/"
-        className="hover:text-primary transition-colors"
-        activeClassName="underline"
-      >
-        Projects
-      </LinkItem>
-
-      <LinkItem
-        scrollTo="TechStack"
-        router="/"
-        className="hover:text-red-400 transition-colors"
-        activeClassName="underline"
-      >
-        Tech Stack
-      </LinkItem>
-
-      <LinkItem
-        scrollTo="CallToAction"
-        router="/"
-        className="hover:text-accent transition-colors"
-        activeClassName="underline"
-      >
-        Call To Action
-      </LinkItem>
-
-      {/* about page */}
-      <LinkItem
-        scrollTo="Gallery"
-        router="/about"
-        className="hover:text-secondary transition-colors"
-        activeClassName="underline"
-      >
-        gallery
-      </LinkItem>
-
-      <LinkItem
-        scrollTo="TimeLine"
-        router="/about"
-        className="hover:text-secondary transition-colors"
-        activeClassName="underline"
-      >
-        timeline
-      </LinkItem>
-
-  
-        <LinkItem
-          router="/projects"
-          className="hover:text-primary transition-colors"
-          activeClassName="underline"
-        >
-          Projects
-        </LinkItem>
-  
-        <LinkItem
-          router="/contact"
-          className="hover:text-secondary transition-colors"
-          activeClassName="underline"
-        >
-          Contact
-        </LinkItem>
-  
-        <LinkItem
-          router="/about"
-          className="hover:text-accent transition-colors"
-          activeClassName="underline"
-        >
-          About
-        </LinkItem>
-  
-        <LinkItem
-          router="/thanks"
-          className="hover:text-tertiary transition-colors"
-          activeClassName="underline"
-        >
-          Thanks
-        </LinkItem>
-      </nav>
-    );
-
-  
-
   return (
     <nav className="bg-frosted-glass pb-1 fixed top-0 w-full z-45">
-
-      {/* Scroll progress bar */}
-      <motion.div 
-        className='w-full h-1 bg-accent origin-left z-40'
+      {/* <motion.div 
+        className='w-full h-0.5 bg-primary origin-left z-40'
         style={{ scaleX: springScrollYProgress }}
-      />
+      /> */}
+
       <div className="bg-frosted-container container mx-auto flex justify-end md:justify-center items-center p-0.5 md:p-2">
-        
-        {/* Navigation items for large screens */}
-        <div className="hidden md:flex">
-          <NavbarItems textSize="text-lg" />
+
+        {/* Desktop nav */}
+        <div className="hidden md:flex gap-6">
+          {navLinks.map(({ label, icon: Icon, ...linkProps }) => (
+            <LinkItem key={label} {...linkProps}
+            className='text-lg hover:text-accent transition-colors'
+            activeClassName="underline"
+            
+            >
+              <span className="flex items-center gap-2">
+                <Icon /> {label}
+              </span>
+            </LinkItem>
+          ))}
+
         </div>
-  
-        {/* Hamburger menu button for small screens */}
+
+        {/* Hamburger menu button */}
         <button onClick={toggleMenu} className="text-secondary -mt-1.5 md:hidden z-50 hover:text-accent-dark flex gap-1 h-0">
           <Hamburger size={20} toggled={isHamburgerNavOpen} rounded />
         </button>
-  
-        {/* Hamburger menu items */}
+
+        {/* Mobile menu */}
         {isHamburgerNavOpen && (
           <div className={`fixed md:hidden min-h-screen top-0 left-0 z-45 w-full flex justify-center items-center transition-opacity duration-300 h-full ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
-            <div className="hamburger-bg flex justify-center items-center w-full h-full">
-              <NavbarItems toggleMenu={toggleMenu} textSize="text-2xl" />
+            <div className="hamburger-bg flex flex-col gap-6 justify-center items-center w-full h-full">
+              {navLinks.map((link, index) => (
+                <LinkItem
+                  key={index}
+                  scrollTo={link.scrollTo}
+                  router={link.router}
+                  href={link.href}
+                  className="text-2xl hover:text-accent"
+                  activeClassName="underline"
+                >
+                  {link.label}
+                </LinkItem>
+              ))}
             </div>
           </div>
         )}
       </div>
     </nav>
   );
-}
-
-export default Navbar;
+} 

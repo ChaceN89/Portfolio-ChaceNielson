@@ -62,7 +62,7 @@ export default function AppRoutes() {
     if (navigationType !== "POP") { // Only If the navigation type is  not POP (back/forward button) - back/forward saves scroll position
       timeout = setTimeout(() => {
         window.scrollTo(0, 0);
-      }, 500); // Match your transition duration
+      }, 200); // Match your transition duration
     }
 
     return () => {
@@ -109,19 +109,15 @@ export default function AppRoutes() {
 
 const PageTransition = ({ children }) => {
 
-  // return children;
-
-  // Don't use framer motion for page transitions  - find new react transition library
-
   return (
-<motion.div
-  initial={{ opacity: 0, position: 'relative', left: '100vw' }}
-  animate={{ opacity: 1, left: 0 }}
-  exit={{ opacity: 0, left: '-100vw' }}
-  transition={{ duration: 0.5, ease: 'easeInOut' }}
->
-  {children}
-</motion.div>
+    <motion.div
+      initial={{ opacity: 0, position: 'relative', left: '100vw' }}
+      animate={{ opacity: 1, left: 0 }}
+      exit={{ opacity: 0, left: '-100vw' }}
+      transition={{ duration: 0.2, ease: 'easeInOut' }}
+    >
+      {children}
+    </motion.div>
   );
 };
 
@@ -131,10 +127,10 @@ function TestAboutPage({ name }) {
       <div id="Gallery" className='bg-secondary/40  border'> 
         <BackgroundWrapper
           background="/backgrounds/computer-1.png"
-          backgroundClass='w-screen '
+          backgroundClass='w-screen h-[600px]'
           childClass='flex h-full w-full items-center justify-center gap-4'
           fixed
-          // blur={10}
+          blur={4}
           // noise
         >
           <div>
@@ -163,7 +159,7 @@ function TestAboutPage({ name }) {
       
       </div>
       <div className='h-96'></div>
-      <div id="TimeLine" className='bg-white/90 h-56 border'> Projects</div>
+      <div id="Timeline" className='bg-white/90 h-56 border'> Projects</div>
  
       <div className='h-96'></div>
     </div>
@@ -173,49 +169,64 @@ function TestAboutPage({ name }) {
 
 function TestHomePage({ name }) {
   return(
-    <div className='my-15'>
-      <div id="Hero" className='bg-secondary/40   '> 
+    <div >
+      <div id="Hero" className='bg-black '> 
         <BackgroundWrapper
-          background="/backgrounds/pexels-17.jpg"
-          backgroundClass='w-screen min-h-[90vh]'
-          childClass='flex h-full w-full items-start py-20 justify-center gap-4'
+          background="/backgrounds/pexels-10.jpg "
+          backgroundClass='w-screen min-h-[90vh] flex  items-center justify-center '
           fixed
-          noise
+          // noise
+          // opacity={0.3}
+          blur={10} // cause jitter
         >
-          <div className=' '>
+          <BackgroundWrapper 
+            background="/backgrounds/pexels-10.jpg"
+            backgroundClass='h-fit w-full  text-accent rounded-full border-2 border-red-400/20' 
+            childClass='flex h-full w-full items-start p-32 justify-center gap-4 '
+            fixed
+          >
+            <div>
 
-            <h1 className='mix-blend-difference'>Chace Nielson</h1>
-            <h2>Software Engineer</h2>
-            <h3>Full-Stack Developer</h3>
-            <h3>Game Developer</h3>
-            <h3></h3>
-          <div className='grid grid-cols-3 gap-4 w-3/4 '>
-            <ImageComponent
-              src={"/portraits/pngs/chace-2.png"} alt={"aaaa"}
-              className="rounded-xl  h-54 "
-              />
-            <ImageComponent
-              src={"/backgrounds/pexels-4.jpg"} alt={"aaaa"}
-              className="rounded-xl  h-54 object-cover"
-              />
-            <ImageComponent
-              src={"/backgrounds/pexels-1.jpg"} alt={"aaaa"}
-              className="rounded-xl  h-54 object-cover"
-              />
-            <ImageComponent
-              src={"/backgrounds/pexels-1.jpg"} alt={"aaaa"}
-              className="rounded-xl  h-54 object-cover"
-              />
+            <h2 className='whitespace-nowrap '>Chace Nielson</h2>
+            <ul className='bullet-list list-inside'>
+              <li>Software Engineer</li>
+              <li>Full-Stack Developer</li>
+              <li>Game Developer</li>
+            </ul>
+       
+            </div>
+            <div className='grid grid-cols-2 gap-4 w-3/4 '>
+              <ImageComponent
+                src={"/portraits/pngs/chace-2.png"} alt={"aaaa"}
+                className="rounded-xl  h-54 "
+                imgClass="object-top"
+                />
+              {/* <ImageComponent
+                src={"/backgrounds/pexels-18.jpg"} alt={"aaaa"}
+                className="rounded-xl  h-54 object-cover"
+                /> */}
+              <ImageComponent
+                src={"/backgrounds/pexels-1.jpg"} alt={"aaaa"}
+                className="rounded-xl  h-54 object-cover"
+                />
+          
 
               </div>
-          </div>
+          </BackgroundWrapper>
 
         </BackgroundWrapper>
       
       </div>
-      <div id="Projects" className='bg-white/90 h-56 border'> Projects</div>
-      <div id="TechStack" className='bg-red-400/40 h-72 border'> TechStack</div>
-      <div id="CallToAction" className='bg-accent/40 h-80 border'> CallToAction</div>
+      <div id="Projects" className='bg-white/90 h-56 border'> 
+        my 3 large projects (alberta Tomorrow, Glass gecko games website, Scale the Depths)
+      </div>
+      <div id="TechStack" className='bg-red-400/40 h-72 border'> 
+        Prime tehnologies and tools i use, link to see all of them
+      </div>
+      <div id="CallToAction" className='bg-accent/40 h-80 border'> 
+        Call to action, link to contact me
+        //softskills
+      </div>
       <div className='h-96'></div>
     </div>
   )
@@ -235,6 +246,15 @@ function TestPage({ name }) {
         title={"A full title"}
         className="h-80 lg:h-96"
       />
+      <h1>H1: {name}</h1>
+      <h2>H2: {name}</h2>
+      <h3>H3: {name}</h3> 
+      <h4>H4: {name}</h4>
+      <h5>H5: {name}</h5>
+      <h6>H6: {name}</h6>
+      <p>Paragraph: {name}</p>
+      <small>Small: {name}</small>
+
       <MediaFrame
         thumbnail={"/backgrounds/computer-1.png"}
         videoId="sgqmCPhj9YA" // ✅ corrected
@@ -252,220 +272,7 @@ function TestPage({ name }) {
     </div>
   )
 
-  return(
-    <SectionWrapper
-     title={name} 
-     subtitle ={`This is the subtitle for the section called ${name}.`}
-    >
 
-      Chidlren of the subtiel
-
-    </SectionWrapper>
-
-  )
 
 
 }
-
-
-
-
-
-
-
-// TestPage component for testing purposes  - wil lreplace with actual pages onces transitions are working
-function TestPage2({ name }) {
-
-  const listImgs = [
-    "/backgrounds/computer-1.png",
-    "/backgrounds/computer-2.jpg",
-    "/backgrounds/pexels-16.jpg",
-    "/backgrounds/pexels-0.jpg",
-    "/backgrounds/pexels-3.jpg",
-    "/backgrounds/pexels-2.jpg",
-    "/backgrounds/pexels-14.jpg",
-    "/backgrounds/pexels-1.jpg",
-    "/backgrounds/pexels-15.jpg",
-    "/backgrounds/pexels-5.jpg",
-    "/backgrounds/pexels-17.jpg",
-    "/backgrounds/pexels-4.jpg",
-    "/backgrounds/pexels-6.jpg",
-    "/backgrounds/pexels-7.jpg",
-    "/backgrounds/pexels-8.jpg",
-    "/backgrounds/pexels-9.jpg",
-    "/backgrounds/pexels-10.jpg",
-    "/backgrounds/pexels-11.jpg",
-    "/backgrounds/pexels-12.jpg",
-    "/backgrounds/pexels-13.jpg",
-]
-
-
-return(
-  <BackgroundWrapper
-      background="/backgrounds/pexels-1.jpg"
-      backgroundSm="/backgrounds/pexels-11.jpg"
-      backgroundClass='w-screen  py-56  '
-      childClass='space-y-20'
-      fixed
-      // blur={10}
-      // noise
-    >
-
-        <h1 className='text-white' >H1: {name}</h1>
-        <h2 className='text-white' >H2: {name}</h2>
-        <h3 className='text-white' >H3: {name}</h3>
-        <h4 className='text-white' >H4: {name}</h4>
-        <h5 className='text-white' >H5: {name}</h5>
-        <h6 className='text-white' >H6: {name}</h6>
-        <p>P: This is the {name} page.</p>
-        <small>Small: This is the {name} page.</small>
-        <ImageComponent
-         src={"/backgrounds/pexels-12.jpg"} alt={"aaaa"}
-          className="rounded-xl  h-72 object-cover"
-          />
-        <ImageComponent
-         src={"/backgrounds/pexels-1.jpg"} alt={"bbbb"}
-          className="rounded-xl  h-72 bg-red-500 object-cover absolute"
-          />
-
-          <BackgroundWrapper
-          background="/backgrounds/pexels-1.jpg"
-          backgroundClass='w-screen h-72  background-opacity-50 my-72'
-          childClass='flex h-full w-full items-center justify-center space-y-2'
-          fixed
-          // blur={10}
-          // noise
-        >
-          <h4 className='text-white'>Title</h4>
-
-
-        </BackgroundWrapper>
-
-        aaaa
-
-
-
-         <div className='bg-red-500 h-5 w-full'>aaa</div>
-        <ImageComponent
-         src={"/backgrounds/pexels-10.jpg"} alt={"aaaa"}
-           backgroundClass='w-full object-cover'
-          />
-          <div className='bg-red-500 h-5 w-full'>Text</div>
-        <ImageComponent
-         src={"/backgrounds/pexels-13.jpg"} alt={"aaaa"}
-          className="rounded-xl   object-cover"
-          />
-        <ImageComponent
-         src={"/backgrounds/pexels-7.jpg"} alt={"aaaa"}
-          className="rounded-xl  h-72 object-cover"
-          />
-
-        <BackgroundWrapper
-          background="/backgrounds/computer-2.jpg"
-          backgroundClass='w-full object-cover overflow-hidden '
-          childClass='space-y-2 w-full h-96 overflow-hidden'
-          fixed
-          
-          
-        ></BackgroundWrapper>
-
-<ImageComponent
-         src={"/backgrounds/pexels-4.jpg"} alt={"aaaa"}
-          className="rounded-xl  h-72 object-cover"
-          />
-<ImageComponent
-         src={"/backgrounds/pexels-15.jpg"} alt={"aaaa"}
-          className="rounded-xl  h-72 object-cover"
-          />
-
-
-
-  </BackgroundWrapper>
-)
-
-
-  return (
-    <div className="flex flex-col items-center justify-center border-2  pt-20 space-y-4 p-40 ">
-     
-      <ImageComponent
-        src={"/backgrounds/pexels-0.jpg"} alt={"aaaa"}
-        className="rounded-xl w-96 h-72 object-cover"
-      />
-      <h1 >H1: {name}</h1>
-      <h2 >H2: {name}</h2>
-      <h3 >H3: {name}</h3>
-      <h4 >H4: {name}</h4>
-      <h5 >H5: {name}</h5>
-      <h6 >H6: {name}</h6>
-      <p>P: This is the {name} page.</p>
-      <small>Small: This is the {name} page.</small>
-
-      <BackgroundWrapper
-        background="/backgrounds/pexels-13.jpg"
-        backgroundClass='p-20 px-56 '
-        childClass='space-y-2'
-        backgroundSm = "/backgrounds/pexels-11.jpg"
-        fixed
-        blur
-        noise
-      >
-        <h1 className='text-white' >H1: {name}</h1>
-        <h2 className='text-white' >H2: {name}</h2>
-        <h3 className='text-white' >H3: {name}</h3>
-        <h4 className='text-white' >H4: {name}</h4>
-        <h5 className='text-white' >H5: {name}</h5>
-        <h6 className='text-white' >H6: {name}</h6>
-        <p>P: This is the {name} page.</p>
-        <small>Small: This is the {name} page.</small>
-        <ImageComponent
-         src={"/backgrounds/pexels-12.jpg"} alt={"aaaa"}
-          className="rounded-xl  h-72 object-cover"
-          />
-        <ImageComponent
-         src={"/backgrounds/pexels-4.jpg"} alt={"aaaa"}
-          className="rounded-xl  h-72 object-cover"
-          />
-        <ImageComponent
-         src={"/backgrounds/pexels-1.jpg"} alt={"aaaa"}
-          className="rounded-xl  h-72 object-cover"
-          />
-
-
-      </BackgroundWrapper>
-
-      <div className='grid grid-cols-3 gap-4 '>
-
-        {/* display random order lsit */}
-        {listImgs.map((img, index) => (
-        <div className='flex flex-col items-center justify-center border rounded-xl ' key={index}>
-          <ImageComponent
-          key={index} src={img} alt={img} className="rounded-xl  h-72 object-cover"
-          />
-          
-          {/* <img key={index} src={img} alt={img} className="rounded-xl  h-72 object-cover" /> */}
-        </div>
-        ))}
-        <div className='col-span-3 bg-white w-full h-2'/>
-
-
-        <h1 className='bg-primary flex h-full w-full justify-center items-center p-10 '>{name}</h1>
-        <h3 className='col-span-2 bg-primary-alt flex h-full w-full justify-center items-center p-10 '>{name}</h3>
-        <h6 className='col-span-2 bg-secondary text-primary flex h-full w-full justify-center items-center p-10 '>{name}</h6>
-        <h6 className='bg-secondary-alt text-primary flex h-full w-full justify-center items-center p-10 '>{name}</h6>
-        <h6 className='bg-accent flex h-full w-full justify-center items-center p-10 '>{name}</h6>
-        <h6 className='col-span-2 bg-accent-alt flex h-full w-full justify-center items-center p-10 '>{name}</h6>
-        <h6 className='col-span-2 bg-tertiary flex h-full w-full justify-center items-center p-10 '>{name}</h6>
-        <h6 className='bg-tertiary-alt flex h-full w-full justify-center items-center p-10 '>{name}</h6>
- 
-
-      </div>
-      <ColorBoxes/>
-      <HeaderTesting/>
-      {/* <IconList/> */}
-
-    </div>
-  );
-}
-
-
-
