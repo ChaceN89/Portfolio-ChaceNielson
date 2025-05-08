@@ -59,9 +59,8 @@ export default function Modal({ children }) {
 
     isClosingRef.current = true; // <--- 3. Lock the close function
   
-    setIsVisible(false);
-    setShowBackdrop(false);
-
+    setIsVisible(false);    // Hide the modal
+    setShowBackdrop(false); // Hide the backdrop
 
     setTimeout(() => {
       // Navigate after the animation ends
@@ -70,7 +69,7 @@ export default function Modal({ children }) {
       } else {
         removeParamsFromUrl() // remove the params form the URL
       }
-      
+
       isClosingRef.current = false; // <--- 4. Optionally reset for re-use if modal gets re-opened
 
     }, 1000); // Happens after the animation duration (1000)
