@@ -88,7 +88,7 @@ export default function BackgroundWrapper({
       )}
 
       {/* Overlay blur as a separate layer */}
-      {blur && (
+      {blur>0 && (
         <div
           className="absolute inset-0 z-[1] pointer-events-none"
           style={{ backdropFilter: `blur(${blur}px)` }}

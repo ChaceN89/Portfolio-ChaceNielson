@@ -80,6 +80,10 @@ export default function LinkItem({
           offset={scrollOffset}
           activeClass={!disableActive ? activeClassName : ""}
           className={className}
+          onClick={(e) => {
+            e.preventDefault();
+            navigate(location.pathname); // closes modal smoothly
+          }}
         >
           {children}
         </ScrollLink>

@@ -34,4 +34,19 @@ function shuffleArray(array) {
   return newArray; // Return the shuffled copy
 }
 
-export { openPdf, shuffleArray };
+/**
+ * Function to remove URL parameters from the current page.
+ * This function uses the History API to replace the current URL with a new one that has no parameters.
+ * It does not reload the page, but updates the URL in the address bar.
+ */
+function removeParamsFromUrl() {
+  const currentPath = window.location.pathname;
+  const currentParams = window.location.search;
+  const newPath = currentParams ? `${currentPath}` : currentPath;
+  window.history.replaceState(null, '', newPath);
+}
+
+
+export { openPdf, shuffleArray, removeParamsFromUrl };
+
+

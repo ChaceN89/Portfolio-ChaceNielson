@@ -22,7 +22,6 @@ function Footer() {
       initial={{ y: 0, opacity: 1 }}
       animate={{ y: 0, opacity: 1 }}
       exit={{ y: 100, opacity: 0 }} // slides down + fades out
-      end
       transition={{ duration: 0.4, ease: 'easeInOut' }}
       className="flex gap-6 p-4 bg-primary text-secondary text-lg w-full z-50 h-56 border-t-2 border-gray-300"
     >

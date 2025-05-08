@@ -18,7 +18,6 @@ import { AnimatePresence, motion } from 'framer-motion';
 
 // layouts
 import Layout from './Layout';
-// import Modal from './Modal';
 
 // pages
 // import Home from '../pages/Home';
@@ -26,7 +25,8 @@ import Layout from './Layout';
 // import Thanks from '../pages/Thanks';
 
 // Modal pages
-// import Project from '../pages/Project';
+import Modal from './modal/Modal'; // global Modal
+import Project from '../pages/Project';
 // import Specialization from '../pages/Specialization';
 
 // global Variables
@@ -75,9 +75,16 @@ export default function AppRoutes() {
   }, [pathname]); // Activated when pathname changes
   
 
+
+
   return (
     <div className='min-w-56 overflow-x-hidden z-'>
       {/* Main App Routes */}
+        {projectID && (
+          <Modal > 
+            <Project projectName={projectID} />
+          </Modal>
+        )}
       <AnimatePresence mode="wait">
 
 
@@ -97,11 +104,7 @@ export default function AppRoutes() {
 
 
       {/* Modal for Projects */}
-      {/* {projectID && (
-        <Modal onClose={() => {navigate(location.pathname);}} > 
-          <Project projectName={projectID} />
-        </Modal>
-      )} */}
+  
 
       {/* Modal for Skills
       {specializationID && (
@@ -115,18 +118,18 @@ export default function AppRoutes() {
 
 
 const PageTransition = ({ children }) => {
-  const { pathname } = useLocation(); // Get the current location of Router as a mount key to reset the animation
-  const [fadeOut, setFadeOut] = useState(false); //
 
+  const { pathname } = useLocation(); // Get the current location of Router as a mount key to reset the animation
+  const [fadeOut, setFadeOut] = useState(false); // if the page is fading out or not
 
   return (
     <>
-      {/* Backgroun darken on transition */}
+      {/* Backgroun darken on pagetransition */}
       <motion.div
         key={pathname + "-overlay"}
-        initial={{ opacity: 0.4 }}
-        animate={{ opacity: fadeOut ? 0 : 0.4 }}
-        exit={{ opacity: 0.4 }}
+        initial={{ opacity: 0.5 }}
+        animate={{ opacity: fadeOut ? 0 : 0.5 }}
+        exit={{ opacity: 0.5 }}
         transition={{
           opacity: { duration: fadeOut ? 0.4 : 0, delay:fadeOut ? 0 : 0.2, ease: "easeInOut" }
         }}
@@ -135,6 +138,8 @@ const PageTransition = ({ children }) => {
         }}
         className="fixed inset-0 bg-black pointer-events-none z-[5]"
       />
+
+      {/* Page Transitions */}
       <motion.div
         initial={{ opacity: 0, position: 'relative', left: '100vw', filter: 'blur(50px)' }}
         animate={{ opacity: 1, left: 0, filter: 'blur(0px)' }}
@@ -276,9 +281,36 @@ function TestHomePage({ name }) {
 
 function TestPage({ name }) {
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const openModal = (projectId) => {
+    const currentPath = location.pathname;
+    navigate(`${currentPath}?project=${projectId}`);
+  };
+
   return(
     <div className='my-20  space-y-40'>
       <h1>Content {name}</h1>
+
+      {/* Example modal popups */}
+      <div className="flex gap-4">
+        <button
+          onClick={() => openModal("project-1")}
+          className="px-4 py-2 bg-accent text-white rounded hover:bg-accent/80 transition"
+        >
+          Open Modal for Project 1
+        </button>
+
+        <button
+          onClick={() => openModal("scale-the-depths")}
+          className="px-4 py-2 bg-secondary text-white rounded hover:bg-secondary/80 transition"
+        >
+          Open Modal for Project 2
+        </button>
+      </div>
+
+
       <MediaFrame
         thumbnail={"/backgrounds/computer-1.png"}
         videoId="MHDH_m0agFM" 

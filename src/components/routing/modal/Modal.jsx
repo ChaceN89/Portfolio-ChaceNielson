@@ -20,8 +20,12 @@ import React, { useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useNavigate, useNavigationType } from 'react-router-dom';
 import { IoMdClose } from 'react-icons/io';
-import SlideTransition from '../animations/SlideTransition';
-import BackgroundWrapper from '../uiElements/images/BackgroundWrapper';
+import SlideTransition from '../../animations/SlideTransition';
+import BackgroundWrapper from '../../uiElements/images/BackgroundWrapper';
+
+import {removeParamsFromUrl} from '../../../utils/utils'; // Import your utility function to remove params from URL
+
+import './Modal.styles.css'; // Import your CSS styles for the modal
 
 export default function Modal({ children }) {
   const navigate = useNavigate();
@@ -48,14 +52,16 @@ export default function Modal({ children }) {
     e.stopPropagation();
 
     setIsVisible(false); // Trigger exit animation
+    setShowBackdrop(false); // Hide backdrop
     setTimeout(() => {
       // Navigate after the animation ends
       if (navigationType === 'PUSH' && window.history.length > 1) {
         navigate(-1);
       } else {
-        navigate('/');
+        removeParamsFromUrl() // remove the params form the URL
+
       }
-    }, 800); // Match the duration of the exit animation
+    }, 1000); // Happens after the animation duration (1000)
   };
 
   // Handle Escape key to close the modal
@@ -75,37 +81,65 @@ export default function Modal({ children }) {
     };
   }, []);
 
-  return (
-    <div className="modal-backdrop" onClick={handleClose}>
-       
+
+  const [showBackdrop, setShowBackdrop] = React.useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setShowBackdrop(true), 10); // Let browser paint before applying opacity
+    return () => clearTimeout(timeout);
+  }, []);
+
+  return(
+    <div 
+      className={`fixed inset-0 z-40  flex items-center justify-center duration-1000 transition-all 
+        ${showBackdrop && 'backdrop-blur-sm'}
+      `}
+    >
+      
+      {/* page BACKDROP - over entiure screen */}
+      <div
+        onClick={handleClose}
+        className={`
+          absolute inset-0 bg-accent/10  z-0
+          transition-opacity duration-1000 ease-in-out
+          ${showBackdrop ? 'opacity-100' : 'opacity-0'}
+        `}
+      />
+
+
+      {/* Sliding Modal */}
       <AnimatePresence>
         {isVisible && (
           <SlideTransition
             enter="right" // Slide in from the right
             exit="left"   // Slide out to the left
-            duration={0.5} // Match the timeout duration
-            translationDist={800} // Customize the slide distance
-            delay={0.2} // Optional: Customize the delay
-            className="modal-container"
+            duration={0.8} // Match the timeout duration
+            translationDist={100} // Customize the slide distance
+            delay={0.2} 
+            className="modal-container z-1"
           >
+
+            {/* Close Button absolute in top right */}
+            <button className="absolute top-1 right-1 hover:cursor-pointer hover:text-primary z-10" onClick={handleClose}>
+              <IoMdClose size={34} />
+            </button>
+
+            {/* Inner content */}
             <BackgroundWrapper
-              className='overflow-hidden'
-              src={"/png-backgrounds/overlays/scratch-1.png"}
-              bgOpacity={4}
-              backgroundSize = "contain"
-              backgroundRepeat = "repeat"
+              backgroundSm="/overlays/dots-1.png"
+              backgroundClass="bg-accent/40 min-w-[40vw] min-h-[40vh]"
+              noise
+              fixed
             >
-              <button className="modal-close-btn" onClick={handleClose}>
-                <IoMdClose size={34} />
-              </button>
+              {/* Main content */}
               <div className="modal-content">
-                {children}
+                {children} 
               </div>
             </BackgroundWrapper>
           </SlideTransition>
         )}
       </AnimatePresence>
     </div>
-  );
+  )
 }
 
