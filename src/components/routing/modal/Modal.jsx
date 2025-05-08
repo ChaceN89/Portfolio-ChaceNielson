@@ -16,7 +16,7 @@
  * @created Jan 23, 2025
  * @updated Jan 23, 2025
  */
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useNavigate, useNavigationType } from 'react-router-dom';
 import { IoMdClose } from 'react-icons/io';
@@ -31,7 +31,10 @@ export default function Modal({ children }) {
   const navigate = useNavigate();
   const navigationType = useNavigationType(); // Get the type of navigation
 
-  const [isVisible, setIsVisible] = React.useState(true); // Modal visibility state
+  const [isVisible, setIsVisible] = useState(true); // Modal visibility state
+  const [showBackdrop, setShowBackdrop] = useState(false);
+
+
 
   // Add or remove the "no-scroll" class from the body
   useEffect(() => {
@@ -50,40 +53,36 @@ export default function Modal({ children }) {
   // Close modal handler
   const handleClose = (e) => {
     e.stopPropagation();
+    if (!isVisible) return // Prevent closing if already closed or being closed
 
-    setIsVisible(false); // Trigger exit animation
-    setShowBackdrop(false); // Hide backdrop
+    setIsVisible(false);
+    setShowBackdrop(false);
+
+
     setTimeout(() => {
       // Navigate after the animation ends
       if (navigationType === 'PUSH' && window.history.length > 1) {
         navigate(-1);
       } else {
         removeParamsFromUrl() // remove the params form the URL
-
       }
     }, 1000); // Happens after the animation duration (1000)
   };
 
   // Handle Escape key to close the modal
   useEffect(() => {
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') {
-        handleClose(e);
-      }
+    const handleKeyDown = (e) => { // function to handle keydown events
+      if (e.key === 'Escape') handleClose(e);
     };
 
-    // Add event listener for keydown
+    // Add event listener for keydown and remove it on cleanup
+    // This will ensure that the event listener is added only once when the component mounts
     window.addEventListener('keydown', handleKeyDown);
-
-    // Cleanup event listener on component unmount
-    return () => {
-      window.removeEventListener('keydown', handleKeyDown);
-    };
+    return () => window.removeEventListener('keydown', handleKeyDown);
+    
   }, []);
 
-
-  const [showBackdrop, setShowBackdrop] = React.useState(false);
-
+  // Handle backdrop click to close the modal
   useEffect(() => {
     const timeout = setTimeout(() => setShowBackdrop(true), 10); // Let browser paint before applying opacity
     return () => clearTimeout(timeout);
@@ -120,7 +119,10 @@ export default function Modal({ children }) {
           >
 
             {/* Close Button absolute in top right */}
-            <button className="absolute top-1 right-1 hover:cursor-pointer hover:text-primary z-10" onClick={handleClose}>
+            <button 
+              onClick={handleClose}
+              className="absolute top-1 right-1 hover:cursor-pointer hover:text-primary z-10" 
+            >
               <IoMdClose size={34} />
             </button>
 

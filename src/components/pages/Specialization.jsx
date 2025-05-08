@@ -15,10 +15,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { techSkills, skillPageData } from '../../data/pageData/skillsData';
-import SectionHeader from '../uiElements/SectionHeader';
+// import SectionHeader from '../uiElements/SectionHeader';
 import SkillBoxContainer from '../uiElements/SkillBoxContainer';
-import ProjectCard from '../homeSections/projects/ProjectCard';
-import FadeTransition from '../animations/FadeTransition';
+// import ProjectCard from '../homeSections/projects/ProjectCard';
+// import FadeTransition from '../animations/FadeTransition';
 
 export default function Specialization({ specializationID }) {
   const navigate = useNavigate();
@@ -42,15 +42,15 @@ export default function Specialization({ specializationID }) {
 
   return (
     <div className="text-primary">
-      <div className="py-1">
+      {/* <div className="py-1">
         <SectionHeader title={skill.name} subtitle={skill.description} />
-      </div>
+      </div> */}
 
       <hr className="border-primary border-opacity-60 mb-4" />
 
       <SkillBoxContainer stack={allSkills} />
       
-      <FadeTransition duration={1.5}>
+      {/* <FadeTransition duration={1.5}>
         {skill.relatedProjects && skill.relatedProjects.length > 0 && (
           <>
             <h3 className="my-2 pt-2 underline">Related Projects</h3>
@@ -61,7 +61,7 @@ export default function Specialization({ specializationID }) {
             </div>
           </>
         )}
-      </FadeTransition>
+      </FadeTransition> */}
     </div>
   );
 }

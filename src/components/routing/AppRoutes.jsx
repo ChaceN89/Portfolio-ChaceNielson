@@ -15,31 +15,24 @@ import React, {useEffect, useRef, useState} from 'react';
 import { Routes, Route, Navigate, useLocation, useNavigate, useNavigationType } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
-
-// layouts
-import Layout from './Layout';
-
-// pages
+// Pages
 // import Home from '../pages/Home';
 // import Gallery from '../pages/Gallery';
 // import Thanks from '../pages/Thanks';
 
-// Modal pages
-import Modal from './modal/Modal'; // global Modal
-import Project from '../pages/Project';
-// import Specialization from '../pages/Specialization';
+//Layout and  Modal Components
+import Layout from './Layout';                                  // Main Layout Component - nav, footer, outlet for main content
+import Modal from './modal/Modal';                              // Global Modal Component 
+import Project from '../pages/Project';                         // Project Modal Content
+import Specialization from '../pages/Specialization';           // Specialization Modal Content
+import { skillParam, projectParam } from '../../data/globals';  // Modal Param names
 
-// global Variables
-import { skillParam, projectParam } from '../../data/globals';
-import ColorBoxes from '../testing/ColorBoxes';
-import HeaderTesting from '../testing/HeaderTesting';
-import IconList from '../testing/IconList';
+// Components - will removed once  I separae this pages components
 import ImageComponent from '../uiElements/images/ImageComponent';
 import BackgroundWrapper from '../uiElements/images/BackgroundWrapper';
-import SectionWrapper from '../wrappers/SectionWrapper';
 import MediaFrame from '../uiElements/mediaFrame/MediaFrame';
 
-
+// Page Transition Duration Global
 const pageTransitionDuration = 0.6; // Duration of the page transition animation
 
 
@@ -47,48 +40,46 @@ export default function AppRoutes() {
   const location = useLocation(); // Current location
   const navigate = useNavigate(); // Navigation for closing modal
 
-  // Get query parameters
-  const params = new URLSearchParams(location.search);
-  const projectID = params.get(projectParam);
-  const specializationID = params.get(skillParam);
+  // Get query parameters for Modal
+  const params = new URLSearchParams(location.search); // Get the query parameters from the URL
+  const projectID = params.get(projectParam);          // Get the project ID from the query parameters
+  const specializationID = params.get(skillParam);     // Get the specialization ID from the query parameters
 
-  
-  
-  // Get pathnamd for on change and navigation type
+  // Get pathname for on change and navigation type
   const { pathname } = useLocation(); // Get the current location of Router
   const navigationType = useNavigationType(); // Get the type of navigation
 
-
   // Scroll Position UseEffect
   useEffect(() => { // Call useEffect every time the pathname (location) changes
+    
     let timeout;
-
-    if (navigationType !== "POP") { // Only If the navigation type is  not POP (back/forward button) - back/forward saves scroll position
+    // Only If the navigation type is  not POP (back/forward button) - back/forward saves scroll position
+    if (navigationType !== "POP") { 
       timeout = setTimeout(() => {
         window.scrollTo(0, 0);
-      }, pageTransitionDuration*1000); // Match your transition duration
+      }, pageTransitionDuration*1000); // Page transition duration in milliseconds to sync with animation
     }
 
-    return () => {
-      clearTimeout(timeout); // Clear the timeout on unmount
-    }
+    return () => clearTimeout(timeout); // Clear the timeout on unmount
+    
   }, [pathname]); // Activated when pathname changes
   
-
-
-
   return (
     <div className='min-w-56 overflow-x-hidden z-'>
-      {/* Main App Routes */}
-        {projectID && (
-          <Modal > 
-            <Project projectName={projectID} />
-          </Modal>
-        )}
+      {/* Modals */}
+      {projectID && (
+        <Modal> 
+          <Project projectName={projectID} />
+        </Modal>
+      )}
+       {specializationID && (
+        <Modal > 
+          <Specialization specializationID={specializationID} />
+        </Modal>
+      )} 
+
+      {/* Main Routes */}
       <AnimatePresence mode="wait">
-
-
-        
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Layout />}>
             <Route index element={<PageTransition><TestHomePage name="Home" /></PageTransition>} />
@@ -100,18 +91,7 @@ export default function AppRoutes() {
             <Route path="*" element={<PageTransition><TestPage name="404 - Not Found" /></PageTransition>} />
           </Route>
         </Routes>
-      </AnimatePresence>
-
-
-      {/* Modal for Projects */}
-  
-
-      {/* Modal for Skills
-      {specializationID && (
-        <Modal onClose={() => {navigate(location.pathname);}} > 
-          <Specialization specializationID={specializationID} />
-        </Modal>
-      )} */}
+      </AnimatePresence>     
     </div>
   );
 }
@@ -289,6 +269,11 @@ function TestPage({ name }) {
     navigate(`${currentPath}?project=${projectId}`);
   };
 
+  const openSpecializationModal = (specializationId) => {
+    const currentPath = location.pathname;
+    navigate(`${currentPath}?specialization=${specializationId}`);
+  }
+
   return(
     <div className='my-20  space-y-40'>
       <h1>Content {name}</h1>
@@ -296,17 +281,47 @@ function TestPage({ name }) {
       {/* Example modal popups */}
       <div className="flex gap-4">
         <button
-          onClick={() => openModal("project-1")}
+          onClick={() => openModal("energy-tomorrow")}
           className="px-4 py-2 bg-accent text-white rounded hover:bg-accent/80 transition"
         >
-          Open Modal for Project 1
+          energy-tomorrow
+        </button>
+        <button
+          onClick={() => openModal("Incorect path project")}
+          className="px-4 py-2 bg-accent text-white rounded hover:bg-accent/80 transition"
+        >
+          Incorect path project
         </button>
 
         <button
           onClick={() => openModal("scale-the-depths")}
           className="px-4 py-2 bg-secondary text-white rounded hover:bg-secondary/80 transition"
         >
-          Open Modal for Project 2
+          scale-the-depths
+        </button>
+      </div>
+
+      {/* Example modal popups */}
+      <div className="flex gap-4">
+        <button
+          onClick={() => openSpecializationModal("backend-development")}
+          className="px-4 py-2 bg-accent text-white rounded hover:bg-accent/80 transition"
+        >
+          backend-development
+        </button>
+
+        <button
+          onClick={() => openSpecializationModal("Incorrect path specialization")}
+          className="px-4 py-2 bg-accent text-white rounded hover:bg-accent/80 transition"
+        >
+          game-development
+        </button>
+
+        <button
+          onClick={() => openSpecializationModal("frontend-development")}
+          className="px-4 py-2 bg-secondary text-white rounded hover:bg-secondary/80 transition"
+        >
+          frontend-development
         </button>
       </div>
 
