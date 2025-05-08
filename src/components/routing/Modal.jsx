@@ -21,7 +21,7 @@ import { AnimatePresence } from 'framer-motion';
 import { useNavigate, useNavigationType } from 'react-router-dom';
 import { IoMdClose } from 'react-icons/io';
 import SlideTransition from '../animations/SlideTransition';
-import BackgroundWrapper from '../wrappers/BackgroundWrapper';
+import BackgroundWrapper from '../uiElements/images/BackgroundWrapper';
 
 export default function Modal({ children }) {
   const navigate = useNavigate();

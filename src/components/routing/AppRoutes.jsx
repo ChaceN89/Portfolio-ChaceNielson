@@ -11,7 +11,7 @@
  * @updated Jan 23, 2025
  */
 
-import React, {useEffect, useRef} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import { Routes, Route, Navigate, useLocation, useNavigate, useNavigationType } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -79,6 +79,9 @@ export default function AppRoutes() {
     <div className='min-w-56 overflow-x-hidden z-'>
       {/* Main App Routes */}
       <AnimatePresence mode="wait">
+
+
+        
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Layout />}>
             <Route index element={<PageTransition><TestHomePage name="Home" /></PageTransition>} />
@@ -112,16 +115,35 @@ export default function AppRoutes() {
 
 
 const PageTransition = ({ children }) => {
+  const { pathname } = useLocation(); // Get the current location of Router as a mount key to reset the animation
+  const [fadeOut, setFadeOut] = useState(false); //
+
 
   return (
-    <motion.div
-      initial={{ opacity: 0, position: 'relative', left: '100vw', filter: 'blur(0px)' }}
-      animate={{ opacity: 1, left: 0, filter: 'blur(0px)' }}
-      exit={{ opacity: 0, left: '-100vw', filter: 'blur(50px)' }}
-      transition={{ duration: pageTransitionDuration }}
-    >
-      {children}
-    </motion.div>
+    <>
+      {/* Backgroun darken on transition */}
+      <motion.div
+        key={pathname + "-overlay"}
+        initial={{ opacity: 0.4 }}
+        animate={{ opacity: fadeOut ? 0 : 0.4 }}
+        exit={{ opacity: 0.4 }}
+        transition={{
+          opacity: { duration: fadeOut ? 0.4 : 0, delay:fadeOut ? 0 : 0.2, ease: "easeInOut" }
+        }}
+        onAnimationComplete={() => {
+          if (!fadeOut) setFadeOut(true); // start fade out after initial animation
+        }}
+        className="fixed inset-0 bg-black pointer-events-none z-[5]"
+      />
+      <motion.div
+        initial={{ opacity: 0, position: 'relative', left: '100vw', filter: 'blur(50px)' }}
+        animate={{ opacity: 1, left: 0, filter: 'blur(0px)' }}
+        exit={{ opacity: 0, left: '-100vw', filter: 'blur(50px)' }}
+        transition={{ duration: pageTransitionDuration }}
+      >
+        {children}
+      </motion.div>
+    </>
   );
 };
 

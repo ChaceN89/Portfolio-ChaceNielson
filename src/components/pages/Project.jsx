@@ -15,7 +15,7 @@ import { useNavigate } from 'react-router-dom';
 import { projects } from '../../data/pageData/projectData'; // Assuming you have a file with project data
 
 // components
-import SectionHeader from '../uiElements/SectionHeader';
+// import SectionHeader from '../uiElements/SectionHeader';
 import YouTubeEmbed from '../homeSections/projects/YouTubeEmbed';
 import SkillBoxContainer from '../uiElements/SkillBoxContainer';
 import ExternalLinks from '../homeSections/projects/ExternalLinks';
@@ -41,7 +41,7 @@ export default function Project({ projectName }) {
 
   return (
     <div  className="text-primary">
-      <SectionHeader title={project.name} subtitle={project.blurb} />
+      {/* <SectionHeader title={project.name} subtitle={project.blurb} /> */}
       <ExternalLinks externalLinks={project.externalLinks} />
 
       <hr className="border-primary border-opacity-60 mb-4" />
