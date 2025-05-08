@@ -131,11 +131,11 @@ function TestAboutPage({ name }) {
       <div id="Gallery" className='bg-secondary/40  border'> 
         <BackgroundWrapper
           background="/backgrounds/computer-1.png"
-          backgroundClass='w-screen h-[600px]'
+          backgroundClass='w-screen h-[800px]'
           childClass='flex h-full w-full items-center justify-center gap-4'
           fixed
-          blur={4}
-          // noise
+          // blur={2}
+          noise
         >
           <div>
 
