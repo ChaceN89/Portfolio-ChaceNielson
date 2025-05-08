@@ -200,9 +200,9 @@ function TestHomePage({ name }) {
 
               <h2 className='whitespace-nowrap '>Chace Nielson</h2>
               <ul className='bullet-list list-inside'>
-                <li><h6>Software Engineer</h6></li>
-                <li><h6>Full-Stack Developer</h6></li>
-                <li><h6>Game Developer</h6></li>
+                <li><h5>Software Engineer</h5></li>
+                <li><h5>Full-Stack Developer</h5></li>
+                <li><h5>Game Developer</h5></li>
               </ul>
 
             </div>

@@ -48,23 +48,23 @@ export default function NavContent() {
           scrollTo ="Hero"
           router ='/'
           >
-          <p className="hover:">CHACE NIELSON</p>
+          <h6 className="hover:">CHACE NIELSON</h6>
           </LinkItem>
 
         </div>
 
 
         {/* Right Section */}
-        <div className="z-10 flex items-center gap-4">
+        <div className="z-10 flex items-center gap-6">
           {navLinks.map(({ label, icon: Icon, ...linkProps }) => (
             <LinkItem key={label} {...linkProps}
               className='text-lg hover:text-accent '
               activeClassName="underline"
 
             >
-              <span className="flex items-center gap-2 transition-colors">
+              <h6 className="flex items-center gap-2 transition-colors">
                 <Icon /> {label}
-              </span>
+              </h6>
             </LinkItem>
           ))}
         </div>

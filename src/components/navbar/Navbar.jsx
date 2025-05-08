@@ -40,7 +40,7 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleMouseMove = (e) => {
-      if (e.clientY < 200) {
+      if (e.clientY < 300) {
         setHidden(false); // Reveal nav when mouse is near top
       }
     };

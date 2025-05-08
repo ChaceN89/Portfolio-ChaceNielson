@@ -27,24 +27,27 @@
  */
 import {
   FaHome,
-  FaProjectDiagram,
   FaTools,
   FaHandshake,
-  FaUserClock,
-  FaImage,
-  FaHeart,
-  FaFlask,
+  FaUser,
+
   FaEnvelopeOpenText,
 } from "react-icons/fa";
+import { MdFeaturedPlayList } from "react-icons/md";
+
+import { FaCodeBranch } from "react-icons/fa";
+
+
+
+
 
 export const navLinks = [
   { label: "Home", scrollTo: "Hero", router: "/", icon: FaHome },
-  { label: "Projects", scrollTo: "Projects", router: "/", icon: FaProjectDiagram },
+  { label: "Featured", scrollTo: "Projects", router: "/", icon: MdFeaturedPlayList },
   { label: "Skills", scrollTo: "TechStack", router: "/", icon: FaTools },
-  { label: "Let's Connect", scrollTo: "CallToAction", router: "/", icon: FaHandshake },
-  { label: "TimeLine", scrollTo: "Timeline", router: "/about", icon: FaUserClock },
-  { label: "Gallery", scrollTo: "Gallery", router: "/about", icon: FaImage },
-  { label: "Thanks", router: "/thanks", icon: FaHeart },
-  { label: "Side Projects", router: "/projects", icon: FaFlask },
+  { label: "Let's Talk", scrollTo: "CallToAction", router: "/", icon: FaHandshake },
+  { label: "About", router: "/about", icon: FaUser },
+
+  { label: "Projects", router: "/projects", icon: FaCodeBranch },
   { label: "Contact", router: "/contact", icon: FaEnvelopeOpenText },
 ];
