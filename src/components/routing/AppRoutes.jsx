@@ -115,9 +115,9 @@ const PageTransition = ({ children }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, position: 'relative', left: '100vw' }}
-      animate={{ opacity: 1, left: 0 }}
-      exit={{ opacity: 0, left: '-100vw' }}
+      initial={{ opacity: 0, position: 'relative', left: '100vw', filter: 'blur(0px)' }}
+      animate={{ opacity: 1, left: 0, filter: 'blur(0px)' }}
+      exit={{ opacity: 0, left: '-100vw', filter: 'blur(50px)' }}
       transition={{ duration: pageTransitionDuration }}
     >
       {children}
