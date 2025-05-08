@@ -30,6 +30,8 @@ export default function LinkItem({
   location.pathname === "/";
 
   const scrollOffset = -60
+  const scrollDelay = 1000;
+  const scrollDuration = 1000;
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -47,10 +49,10 @@ export default function LinkItem({
             setTimeout(() => {
               scroller.scrollTo(scrollTo, {
                 smooth: true,
-                duration: 1000,
+                duration: scrollDuration,
                 offset: scrollOffset,
               });
-            }, 400);
+            }, scrollDelay);
           }
         });
 
@@ -70,7 +72,7 @@ export default function LinkItem({
         <ScrollLink
           to={scrollTo}
           smooth={true}
-          duration={1000}
+          duration={scrollDuration}
           spy={true}
           offset={scrollOffset}
           activeClass={!disableActive ? activeClassName : ""}

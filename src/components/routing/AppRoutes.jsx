@@ -39,6 +39,10 @@ import BackgroundWrapper from '../uiElements/images/BackgroundWrapper';
 import SectionWrapper from '../wrappers/SectionWrapper';
 import MediaFrame from '../uiElements/mediaFrame/MediaFrame';
 
+
+const pageTransitionDuration = 0.6; // Duration of the page transition animation
+
+
 export default function AppRoutes() {
   const location = useLocation(); // Current location
   const navigate = useNavigate(); // Navigation for closing modal
@@ -62,7 +66,7 @@ export default function AppRoutes() {
     if (navigationType !== "POP") { // Only If the navigation type is  not POP (back/forward button) - back/forward saves scroll position
       timeout = setTimeout(() => {
         window.scrollTo(0, 0);
-      }, 200); // Match your transition duration
+      }, pageTransitionDuration*1000); // Match your transition duration
     }
 
     return () => {
@@ -114,7 +118,7 @@ const PageTransition = ({ children }) => {
       initial={{ opacity: 0, position: 'relative', left: '100vw' }}
       animate={{ opacity: 1, left: 0 }}
       exit={{ opacity: 0, left: '-100vw' }}
-      transition={{ duration: 0.2, ease: 'easeInOut' }}
+      transition={{ duration: pageTransitionDuration }}
     >
       {children}
     </motion.div>
@@ -123,7 +127,7 @@ const PageTransition = ({ children }) => {
 
 function TestAboutPage({ name }) {
   return(
-    <div className='my-20'>
+    <div className='my-15'>
       <div id="Gallery" className='bg-secondary/40  border'> 
         <BackgroundWrapper
           background="/backgrounds/computer-1.png"
