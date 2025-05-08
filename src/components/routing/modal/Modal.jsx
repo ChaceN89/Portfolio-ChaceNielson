@@ -16,7 +16,7 @@
  * @created Jan 23, 2025
  * @updated Jan 23, 2025
  */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { useNavigate, useNavigationType } from 'react-router-dom';
 import { IoMdClose } from 'react-icons/io';
@@ -34,6 +34,7 @@ export default function Modal({ children }) {
   const [isVisible, setIsVisible] = useState(true); // Modal visibility state
   const [showBackdrop, setShowBackdrop] = useState(false);
 
+  const isClosingRef = useRef(false); // <--- 1. Create a persistent flag
 
 
   // Add or remove the "no-scroll" class from the body
@@ -53,8 +54,11 @@ export default function Modal({ children }) {
   // Close modal handler
   const handleClose = (e) => {
     e.stopPropagation();
-    if (!isVisible) return // Prevent closing if already closed or being closed
+    
+    if (isClosingRef.current || !isVisible) return; // <--- 2. Guard against multiple calls
 
+    isClosingRef.current = true; // <--- 3. Lock the close function
+  
     setIsVisible(false);
     setShowBackdrop(false);
 
@@ -66,6 +70,9 @@ export default function Modal({ children }) {
       } else {
         removeParamsFromUrl() // remove the params form the URL
       }
+      
+      isClosingRef.current = false; // <--- 4. Optionally reset for re-use if modal gets re-opened
+
     }, 1000); // Happens after the animation duration (1000)
   };
 
