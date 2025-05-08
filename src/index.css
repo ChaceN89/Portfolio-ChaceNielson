@@ -104,3 +104,8 @@ html, body {
   mix-blend-mode: multiply;
   opacity: 0.5;
 }
+
+.my-drop-shadow {
+  /* filter: drop-shadow(1px 1px 1px black);   */
+  filter: drop-shadow(2px 2px 1px var(--color-secondary));  
+}

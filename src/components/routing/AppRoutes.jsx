@@ -178,6 +178,7 @@ function TestHomePage({ name }) {
 
   return(
     <div >
+
       <div id="Hero" className='bg-black '> 
         <BackgroundWrapper
           background={background}

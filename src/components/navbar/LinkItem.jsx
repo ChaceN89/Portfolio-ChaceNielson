@@ -14,7 +14,6 @@
 import React from "react";
 import { Link as ScrollLink, scroller } from "react-scroll";
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
-import { delay } from "framer-motion";
 
 export default function LinkItem({
   scrollTo,
@@ -22,12 +21,13 @@ export default function LinkItem({
   children,
   className = "",
   activeClassName = "",
-  disableActive = false
+  disableActive = false,
+  handleMouseEnter = null,
+  handleMouseLeave = null
 }) {
   const location = useLocation();
   const navigate = useNavigate();
   const onSamePage = location.pathname ? location.pathname === router : false;
-  location.pathname === "/";
 
   const scrollOffset = -63
   const scrollDelay = 1000;
@@ -64,8 +64,11 @@ export default function LinkItem({
   };
 
   return (
-    <div className="relative hover:cursor-pointer">
-
+    <div 
+      className="relative hover:cursor-pointer"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
 
       {/* Scrill Link on the same page - active style when in section on the page  */}
       {scrollTo && onSamePage && (

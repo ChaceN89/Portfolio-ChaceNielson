@@ -14,7 +14,10 @@ export default function NavContent() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isAtTop = scrollY <= 40 && isHomePage;
+  const isAtTop = scrollY <= 40 && true;
+
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  
 
   return (
     <div
@@ -37,33 +40,41 @@ export default function NavContent() {
 
       <div className="relative flex items-center justify-between">
         {/* Left Section */}
-        <div className="flex items-center gap-2 z-10">
-          <img
-            src="/logos/my-logos/logoFull-outline-small.png"
-            alt="Logo"
-            className="h-8"
-          />
-          
           <LinkItem 
-          scrollTo ="Hero"
-          router ='/'
+            scrollTo ="Hero"
+            router ='/'
           >
-          <h6 className="hover:">CHACE NIELSON</h6>
+            <div className="flex items-center gap-2 z-10 group  transition-all duration-300 ">
+              <img
+                src="/logos/my-logos/logoFull-outline-small.png"
+                alt="Logo"
+                className="h-8 group-hover:opacity-80"
+              />
+              <h6 className="group-hover:text-accent ">CHACE NIELSON</h6>
+            </div>
           </LinkItem>
-
-        </div>
-
 
         {/* Right Section */}
         <div className="z-10 flex items-center gap-6">
-          {navLinks.map(({ label, icon: Icon, ...linkProps }) => (
+          {navLinks.map(({ label, icon: Icon, ...linkProps }, index) => (
             <LinkItem key={label} {...linkProps}
-              className='text-lg hover:text-accent '
+              className={` hover:text-accent 
+                
+                ${hoveredIndex !== null && hoveredIndex !== index ? 'duration-500 blur-[1px]' : 'duration-200'}
+                `}
               activeClassName="underline"
-
+              handleMouseEnter={() => setHoveredIndex(index)}
+              handleMouseLeave={() => setHoveredIndex(null)} 
             >
-              <h6 className="flex items-center gap-2 transition-colors">
-                <Icon /> {label}
+              <h6 className="group flex items-center gap-2 transition-all duration-300 ease-in-out my-drop-shadow ">
+                <span
+                  className="opacity-0 -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0"
+                >
+                  <Icon />
+                </span>
+                <span className="transition-all duration-300 group-hover:translate-x-1">
+                  {label}
+                </span>
               </h6>
             </LinkItem>
           ))}
