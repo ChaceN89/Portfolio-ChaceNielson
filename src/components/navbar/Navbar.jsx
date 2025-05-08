@@ -24,7 +24,7 @@ export default function Navbar() {
   const [lastY, setLastY] = useState(0);
 
   const { scrollY } = useScroll();
-  const debugging = false;
+  const posLocked = true;
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (!hasScrolled && latest > 0) setHasScrolled(true);
@@ -51,7 +51,7 @@ export default function Navbar() {
 
   return (
     <>
-      {debugging ? (
+      {posLocked ? (
         <div className="fixed top-0 w-full z-45">
           <NavContent />
         </div>
