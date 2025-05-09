@@ -23,23 +23,17 @@
  *
  * @author Chace Nielson
  * @created May 7, 2025
- * @updated Aay 7, 2025
+ * @updated May 7, 2025
  */
 import {
   FaHome,
   FaTools,
   FaHandshake,
   FaUser,
-
+  FaCodeBranch,
   FaEnvelopeOpenText,
 } from "react-icons/fa";
 import { MdFeaturedPlayList } from "react-icons/md";
-
-import { FaCodeBranch } from "react-icons/fa";
-
-
-
-
 
 export const navLinks = [
   { label: "Home", scrollTo: "Hero", router: "/", icon: FaHome },

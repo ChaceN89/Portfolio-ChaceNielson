@@ -30,7 +30,7 @@ export default function LinkItem({
   const onSamePage = location.pathname ? location.pathname === router : false;
 
   const scrollOffset = -63
-  const scrollDelay = 1000;
+  const scrollDelay = 600;
   const scrollDuration = 1000;
 
   const handleClick = (e) => {

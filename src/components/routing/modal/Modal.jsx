@@ -135,12 +135,11 @@ export default function Modal({ children }) {
             {/* Inner content */}
             <BackgroundWrapper
               backgroundSm="/overlays/dots-1.png"
-              backgroundClass="bg-accent/40 min-w-[40vw] min-h-[40vh]"
+              backgroundClass=" min-w-[40vw] min-h-[40vh] "
               noise
-              fixed
             >
               {/* Main content */}
-              <div className="modal-content">
+              <div className="modal-content ">
                 {children} 
               </div>
             </BackgroundWrapper>

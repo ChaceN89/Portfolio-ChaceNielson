@@ -32,7 +32,7 @@
 
   /* === Secondary (Dark UI Base) === */
   --color-secondary: rgb(35, 31, 31);              /* Deep black-gray (text / backgrounds) */
-  --color-secondary-alt: rgb(34, 35, 39);          /* Slate gray (cards / contrast panels) */
+  --color-secondary-alt: rgb(17, 17, 17);          /* Slate gray (cards / contrast panels) */
 
   /* === Accent (Cool Teal for interactive elements) === */
   --color-accent: rgb(0, 191, 166);                /* Teal accent (buttons, icons) */

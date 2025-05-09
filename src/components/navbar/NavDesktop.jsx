@@ -17,7 +17,7 @@
  */
 import React, { useState } from 'react'
 import LinkItem from './LinkItem'
-import { navLinks } from '../../data/nav/navData'
+import { navLinks } from '@/data/nav/navData'
 
 export default function NavDesktop() {
 

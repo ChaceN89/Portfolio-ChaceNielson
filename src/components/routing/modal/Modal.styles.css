@@ -2,7 +2,7 @@
 
 .modal-container {
   position: relative;
-  background-color: var(--color-white);
+  background-color: var(--color-primary);
   border-radius: 0.75rem; 
   border: 2px solid var(--color-secondary);
   box-shadow: 0 0 1rem var(--color-secondary);
