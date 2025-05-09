@@ -43,3 +43,42 @@
 .lg-btn:hover .arrow-icon {
   transform: translateX(2px);
 }
+
+
+.lg-btn {
+  position: relative; /* Needed for the pseudo-element to position */
+  overflow: hidden;   /* Ensures the shine stays inside the button */
+}
+
+/* Shine effect */
+.lg-btn::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -75%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    transparent 100%
+  );
+  transform: skewX(-30deg) translateX(-100%);
+  transition: none;
+  pointer-events: none;
+}
+
+/* Animate shine on hover */
+.lg-btn:hover::before {
+  animation: shine 0.8s forwards;
+}
+
+@keyframes shine {
+  0% {
+    transform: skewX(-30deg) translateX(-100%);
+  }
+  100% {
+    transform: skewX(-30deg) translateX(100%);
+  }
+}

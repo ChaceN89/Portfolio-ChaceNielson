@@ -13,17 +13,18 @@
  * @created May 9, 2025
  */
 
-import './Button.css';
+import './Sm-Button.styles.css';
+import './Lg-Button.styles.css';
 import { FaArrowRight } from 'react-icons/fa';
 
-export default function MyButton({ children, callBack, className = '' }) {
+export default function MyButton({ children, callBack, className = 'lg-btn' }) {
   const handleClick = () => {
     if (typeof callBack === 'function') callBack();
     // TODO: Add GA event tracking here
   };
 
   return (
-    <button onClick={handleClick} className={`lg-btn ${className}`}>
+    <button onClick={handleClick} className={className}>
       <span className="label">{children}</span>
       <span className="arrow-box">
         <FaArrowRight className="arrow-icon" />
