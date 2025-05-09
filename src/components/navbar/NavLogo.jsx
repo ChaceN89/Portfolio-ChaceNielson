@@ -1,3 +1,13 @@
+/**
+ * @file NavLogo.jsx
+ * @module NavLogo
+ * @desc React component for rendering the site's logo and name in the navbar.
+ *       Uses a LinkItem wrapper to scroll or navigate to the homepage hero section.
+ *
+ * @author Chace Nielson
+ * @created May 9, 2025
+ * @updated May 9, 2025
+ */
 import React from 'react'
 import LinkItem from './LinkItem'
 
@@ -16,5 +26,5 @@ export default function NavLogo() {
         <h6 className="group-hover:text-accent ">CHACE NIELSON</h6>
       </div>
     </LinkItem>
-)
+  )
 }

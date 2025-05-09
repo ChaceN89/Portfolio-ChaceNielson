@@ -1,15 +1,30 @@
+/**
+ * @file NavContent.jsx
+ * @module NavContent
+ * @desc Core layout structure for the navigation bar.
+ *       Handles responsive rendering of logo, desktop nav, mobile toggle, and menu dropdown.
+ *
+ * @features
+ * - Displays logo (`NavLogo`) and navigation links (`NavDesktop`) on large screens.
+ * - Renders mobile hamburger menu (`NavMobileButton`) and animated dropdown (`NavMobile`) on smaller screens.
+ * - Applies a blur and noise overlay background that reacts to scroll position.
+ * - Uses Framer Motion to animate the dropdown overlay and background fade-in/out.
+ * - Prevents interaction with underlying content via a semi-transparent backdrop when mobile menu is active.
+ *
+ * @author Chace Nielson
+ * @created May 9, 2025
+ * @updated May 9, 2025
+ */
 import { useEffect, useState } from "react";
 import NavDesktop from "./NavDesktop";
 import NavMobile from "./NavMobile";
-import { HiX } from "react-icons/hi";
-import { HiBars3BottomRight } from "react-icons/hi2";
 import NavLogo from "./NavLogo";
+import NavMobileButton from "./NavMobileButton";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function NavContent() {
   const [scrollY, setScrollY] = useState(0);
-
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -17,47 +32,65 @@ export default function NavContent() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isAtTop = scrollY <= 40;   // Check if the page is at the top
+  const isAtTop = scrollY <= 40;
 
-  
   return (
-    <div
-      className="min-w-full h-16 px-4 flex flex-col justify-center transition-all duration-500 relative overflow-hidden bg-secondary/50 text-white"
-      style={{
-        backgroundColor: isAtTop && "transparent" ,
-        backdropFilter: isAtTop ? 'none' : 'blur(6px)', // for other browsers
-      }}
-    >
-      {/* SVG Filter for Noise */}
+    <>
+      {/* Top nav container with blur and noise (overflow hidden ONLY here) */}
       <div
-        className="absolute inset-0 pointer-events-none z-0 transition-opacity duration-500 ease-in-out"
+        className="z-10 relative min-w-full h-16 px-4 flex flex-col justify-center transition-all duration-500 overflow-hidden bg-secondary/50 text-white"
         style={{
-          filter: 'url(#noiseFilter)',
-          mixBlendMode: 'multiply',
-          opacity: isAtTop ? 0 : 1, // fade in/out
+          backgroundColor: isAtTop && "transparent",
+          backdropFilter: isAtTop ? "none" : "blur(6px)",
         }}
-      />
-
-    <div className="relative flex items-center justify-between">
-      <NavLogo/>
-      <NavDesktop />
-      <button
-        className="flex items-center lg:hidden hover:cursor-pointer "
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
       >
-        {isMobileMenuOpen ? (
-          <HiX className="text-white w-6 h-6 transition-transform duration-500 hover:text-accent" />
-        ) : (
-          <HiBars3BottomRight className="text-white w-6 h-6 transition-transform duration-500 hover:text-accent" />
-        )}
-      </button>
-    </div>
+        {/* SVG Filter for Noise */}
+        <div
+          className="absolute inset-0 pointer-events-none z-0 transition-opacity duration-500 ease-in-out"
+          style={{
+            filter: "url(#noiseFilter)",
+            mixBlendMode: "multiply",
+            opacity: isAtTop ? 0 : 1,
+          }}
+        />
+
+        {/* Top nav content */}
+        <div className="relative flex items-center justify-between z-40">
+          <NavLogo />
+          <div className="hidden lg:flex">
+            <NavDesktop />
+          </div>
+          <NavMobileButton
+            setIsMobileMenuOpen={setIsMobileMenuOpen}
+            isMobileMenuOpen={isMobileMenuOpen}
+          />
+        </div>
+      </div>
 
  
 
-    <NavMobile setIsOpen={setIsMobileMenuOpen} isOpen={isMobileMenuOpen}/>
+      {/* Mobile dropdown outside the overflow-hidden container */}
+      <div className="flex lg:hidden relative z-35">
+        <NavMobile setIsOpen={setIsMobileMenuOpen} isOpen={isMobileMenuOpen} />
+      </div>
+
+      {/* background overlay */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            key="mobile-overlay"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="fixed inset-0 bg-accent/30  noise"
+            style={{ pointerEvents: 'auto' }}
+          />
+        )}
+      </AnimatePresence>
 
 
-    </div>
+    </>
   );
 }

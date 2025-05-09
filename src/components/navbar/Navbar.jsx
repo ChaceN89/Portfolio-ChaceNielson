@@ -1,34 +1,44 @@
 /**
  * @file Navbar.jsx
  * @module Navbar
- * @desc React component for the navigation bar.
- *       Dynamically renders navigation links from `navLinks` array, supports scroll and routing.
+ * @desc React component for the global navigation bar.
+ *       Handles scroll-based visibility, mobile responsiveness, and dynamic locking behavior.
+ *
+ * @features
+ * - Hides the navbar on scroll down after a threshold (500px) and reveals on scroll up.
+ * - Reveals the navbar when the mouse approaches the top of the screen (desktop only).
+ * - Locks the navbar visibility on mobile (`< 1020px`) to ensure it always remains visible.
+ * - Responds to screen resizing to toggle mobile lock state in real time.
+ * - Uses Framer Motion for smooth slide-in/out animations.
+ *
+ * @author Chace Nielson
+ * @created May 9, 2025
+ * @updated May 9, 2025
  */
-
-// import React, { useEffect, useState } from 'react';
-// import { motion, useScroll, useSpring } from 'framer-motion';
-// import { Squash as Hamburger } from 'hamburger-react';
-// import LinkItem from './LinkItem';
-// import { navLinks } from '../../data/nav/navData';
-// import "./Navbar.css";
-// import { useLocation } from 'react-router-dom';
-
 import React, { useState, useEffect } from "react";
 import { useScroll, useMotionValueEvent, motion } from "framer-motion";
-import { useLocation } from "react-router-dom";
 import NavContent from "./NavContent";
 
 export default function Navbar() {
+
+  // States for hidden nav, initial scroll and the last Y position of the scaoll
   const [hidden, setHidden] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [lastY, setLastY] = useState(0);
 
+  // get the scroll Positions
   const { scrollY } = useScroll();
-  const posLocked = true;
+  const [isNavPosLocked, setIsNavPosLocked] = useState(false); // is the nav bar locked or can it animation up on scroll
 
+  // useMotionValueEvent is a framer motion hook that allows you to listen to changes in a motion value
   useMotionValueEvent(scrollY, "change", (latest) => {
+
+    if (isNavPosLocked) return; // if locked, do not add event listener
+
+    // If this is the first time the user is scrolling, mark as scrolled
     if (!hasScrolled && latest > 0) setHasScrolled(true);
 
+    // If the user is scrolling up or down, update the hidden state
     if (hasScrolled && latest > lastY && latest > 500) {
       setHidden(true); // scrolling down
     } else if (hasScrolled) {
@@ -38,7 +48,11 @@ export default function Navbar() {
     setLastY(latest);
   });
 
+  // handle the mouse moving close to the top of the screen to trigger the nav to show
   useEffect(() => {
+    if (isNavPosLocked) return; // if locked, do not add event listener
+
+    // Function to handle mouse movement if it is close to the top of the screen
     const handleMouseMove = (e) => {
       if (e.clientY < 300) {
         setHidden(false); // Reveal nav when mouse is near top
@@ -47,105 +61,32 @@ export default function Navbar() {
 
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [isNavPosLocked]);
+
+
+  useEffect(() => {
+    const checkLockState = () => {
+      const shouldLock = window.innerWidth < 1020;
+      setIsNavPosLocked(shouldLock);
+  
+      if (shouldLock) {
+        setHidden(false); // Show nav if switching to mobile while hidden
+      }
+    };
+  
+    checkLockState(); // Run on mount
+    window.addEventListener("resize", checkLockState);
+    return () => window.removeEventListener("resize", checkLockState);
   }, []);
 
   return (
-    <>
-      {posLocked ? (
-        <div className="fixed top-0 w-full z-45">
-          <NavContent />
-        </div>
-      ) : (
-        <motion.nav
-          initial={{ y: 0 }}
-          animate={{ y: hidden ? "-100%" : "0%" }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="fixed top-0 w-full z-45"
-        >
-          <NavContent />
-        </motion.nav>
-      )}
-    </>
+    <motion.nav
+      initial={{ y: 0 }}
+      animate={{ y: hidden ? "-100%" : "0%" }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="fixed top-0 w-full z-35"
+      >
+      <NavContent />
+    </motion.nav>
   );
-
-
-
-
-
-  // const [isHamburgerNavOpen, setIsHamburgerNavOpen] = useState(false);
-  // const [animateMenu, setAnimateMenu] = useState(false);
-
-  // const { scrollYProgress } = useScroll();
-  // const springScrollYProgress = useSpring(scrollYProgress, {
-  //   stiffness: 300,
-  //   damping: 30,
-  //   mass: 1
-  // });
-
-  // const toggleMenu = () => {
-  //   if (!isHamburgerNavOpen) {
-  //     setIsHamburgerNavOpen(true);
-  //     setAnimateMenu(true);
-  //   } else {
-  //     setAnimateMenu(false);
-  //     setTimeout(() => setIsHamburgerNavOpen(false), 150);
-  //   }
-  // };
-
-
-
-
-
-/*
-  return (
-    <nav className="bg-frosted-glass pb-1 fixed top-0 w-full z-45">
-      <motion.div 
-        className='w-full h-0.5 bg-primary origin-left z-40'
-        style={{ scaleX: springScrollYProgress }}
-      />
-
-      <div className="bg-frosted-container container mx-auto flex justify-end md:justify-center items-center p-0.5 md:p-2">
-
-        <div className="hidden md:flex gap-6">
-          {navLinks.map(({ label, icon: Icon, ...linkProps }) => (
-            <LinkItem key={label} {...linkProps}
-              className='text-lg hover:text-accent transition-colors'
-              activeClassName="underline"
-
-            >
-              <span className="flex items-center gap-2">
-                <Icon /> {label}
-              </span>
-            </LinkItem>
-          ))}
-
-        </div>
-
-        <button onClick={toggleMenu} className="text-secondary -mt-1.5 md:hidden z-50 hover:text-accent-dark flex gap-1 h-0">
-          <Hamburger size={20} toggled={isHamburgerNavOpen} rounded />
-        </button>
-
-        {isHamburgerNavOpen && (
-          <div className={`fixed md:hidden min-h-screen top-0 left-0 z-45 w-full flex justify-center items-center transition-opacity duration-300 h-full ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
-            <div className="hamburger-bg flex flex-col gap-6 justify-center items-center w-full h-full">
-              {navLinks.map((link, index) => (
-                <LinkItem
-                  key={index}
-                  scrollTo={link.scrollTo}
-                  router={link.router}
-                  href={link.href}
-                  className="text-2xl hover:text-accent"
-                  activeClassName="underline"
-                >
-                  {link.label}
-                </LinkItem>
-              ))}
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
-  );
-
-  */
-} 
+}

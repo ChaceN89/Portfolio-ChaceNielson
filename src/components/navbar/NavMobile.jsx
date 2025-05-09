@@ -1,128 +1,62 @@
-import React, { useEffect } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
-import { navLinks } from '../../data/nav/navData';
-import { RiScrollToBottomLine } from 'react-icons/ri';
+/**
+ * @file NavMobile.jsx
+ * @module NavMobile
+ * @desc React component for the animated mobile navigation dropdown menu.
+ *       Displays a vertically stacked nav list and handles screen resizing and scroll lock.
+ *
+ * @features
+ * - Renders `NavDesktop` inside a mobile-friendly vertical layout.
+ * - Uses Framer Motion for smooth dropdown expand/collapse animations.
+ * - Automatically closes the menu on screen resize to desktop (`≥ 1020px`).
+ * - Locks page scroll when menu is open using `overflow-hidden` on `<body>`.
+ * - Limits dropdown height to 50% of viewport with internal scrolling support.
+ *
+ * @author Chace Nielson
+ * @created May 9, 2025
+ * @updated May 9, 2025
+ */
+import React, { useEffect } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import NavDesktop from './NavDesktop';
 
+export default function NavMobile({ setIsOpen, isOpen }) {
+  useEffect(() => {
+    document.body.classList.toggle('overflow-hidden', isOpen);
 
-export default function NavMobile({setIsOpen, isOpen }) {
+    const handleResize = () => {
+      if (window.innerWidth >= 1020) {
+        setIsOpen(false);
+      }
+    };
 
-  const dropdownVariants = {
-    hidden: {
-      height: 0,
-      opacity: 0,
-      transition: {
-        duration: 0.2,
-        ease: "easeInOut"
-      }
-    },
-    visible: {
-      height: "auto",
-      opacity: 1,
-      transition: {
-        duration: 0.4,
-        ease: "easeInOut"
-      }
-    },
-    exit: {
-      height: 0,
-      opacity: 0,
-      transition: {
-        duration: 0.2,
-        ease: "easeInOut"
-      }
-    }
-  };
+    window.addEventListener('resize', handleResize);
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [isOpen, setIsOpen]);
+
+  return (
+    <AnimatePresence initial={true} mode="wait">
+      {isOpen && (
+        <motion.div
+          key="mobile-menu"
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: 'auto', opacity: 1 }}
+          exit={{ height: 0, opacity: 0 }}
+          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          className="w-full absolute top-full left-0 z-30 overflow-hidden"
+        >
+          <div className="
+            bg-secondary/95 text-white py-10 border-t-2 border-white/50 rounded-b-4xl 
+            w-full flex flex-col items-center gap-4 
+            max-h-[50svh] overflow-y-auto scroll-element
+          ">
+            <NavDesktop />
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
   
-    useEffect(() => {
-      // Toggle body overflow based on menu open state
-      document.body.classList.toggle("overflow-hidden", isOpen);
-    
-      // Resize handler to auto-close menu on md+
-      const handleResize = () => {
-        if (window.innerWidth >= 768) {
-          setIsOpen(false);
-        }
-      };
-    
-      window.addEventListener("resize", handleResize);
-    
-      // Cleanup
-      return () => {
-        document.body.classList.remove("overflow-hidden");
-        window.removeEventListener("resize", handleResize);
-      };
-    }, [isOpen, setIsOpen]);
-    
-    return (
-      <div className="fixed inset-0 z-50 pointer-events-none">
-      
-        <AnimatePresence initial={false}>
-        {isOpen && (
-            <>
-
-              {/* Dropdown menu */}
-              <motion.div
-                key="mobile-menu"
-                initial="hidden"
-                animate="visible"
-                exit="exit"
-                variants={dropdownVariants}
-                className="w-full overflow-hidden fixed top-16 left-0 z-30 "
-              >
-                  <hr className="border-white border-1 rounded-4xl mt-4 sticky top-0 z-10" />
-            <div className="absolute bottom-2 right-2 text-secondary"><RiScrollToBottomLine size={24} /></div>
-            <div onClick={() => setIsOpen(false)} className="noise-bg "/>
-
-            <div className="p-4 max-h-[50svh] overflow-y-auto scroll-element relative bg-secondary/90  backdrop-blur-2xl  ">
-                  {/* your link items */}
-                  ajhahabr
-                  ajhahabr
-                  <br />
-                  ajhahabr
-                  <br />
-                  ajhahabr
-                  <br />
-                  ajhahabr
-                  <br />
-                  <br />
-                  ajhahabr
-                  <br />
-                  ajhahabr
-                  <br />
-                  ajhahabr
-                  <br />
-                  <br />
-                  ajhahabr
-                  <br />
-                  ajhahabr
-                  <br />
-                  <br />
-                  ajhahabr
-                  <br />
-                  ajhahabr
-                  <br />
-                  <br />
-                  ajhahabr
-                  <br />
-                  ajhahabr
-                  <br />
-                  <br />
-                  ajhahabr
-                  <br />
-                  ajhahabr
-                  <br />
-                  <br />
-                  ajhahabr
-                  <br />
-                  ajhahabr
-                  <br />
-                  ajhahabr
-                  <br />
-                </div>
-              </motion.div>
-            </>
-          )}
-        </AnimatePresence>
-      </div>
-    )
 }
