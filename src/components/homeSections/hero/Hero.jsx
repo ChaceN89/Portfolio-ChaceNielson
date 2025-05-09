@@ -13,13 +13,13 @@
 
 import React from 'react';
 // Animation and background components
-import FadeTransition from '../../animations/FadeTransition';
-import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
+import FadeTransition from '@/animations/FadeTransition';
+import BackgroundWrapper from '@/uiElements/images/BackgroundWrapper';
 
 // Content components
 import HeroText from './HeroText';
 import HeroImg from './HeroImg';
-import ScrollWheel from '../../uiElements/ScrollWheel';
+import ScrollWheel from '@/uiElements/ScrollWheel';
 
 // Style
 import './Hero.css';

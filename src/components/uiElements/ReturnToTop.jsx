@@ -56,7 +56,7 @@ function ReturnToTop() {
       <Tooltip text={"To Top"}>
         <ScrollLink
           className="hover:cursor-n-resize"
-          to={"Home"}
+          to={"Hero"}
           spy={true}
           smooth={true}
           offset={globals.ScrollLink.offset}

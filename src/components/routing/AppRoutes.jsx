@@ -31,6 +31,7 @@ import { skillParam, projectParam } from '../../data/globals';  // Modal Param n
 import ImageComponent from '../uiElements/images/ImageComponent';
 import BackgroundWrapper from '../uiElements/images/BackgroundWrapper';
 import MediaFrame from '../uiElements/mediaFrame/MediaFrame';
+import MyBtn from '../buttons/MyBtn';
 
 // Page Transition Duration Global
 const pageTransitionDuration = 0.6; // Duration of the page transition animation
@@ -371,6 +372,47 @@ function TestPage({ name }) {
   return(
     <div className='my-20  space-y-40'>
       <h1>Content {name}</h1>
+
+      <div className='flex flex-col gap-4'>
+
+        <MyBtn className='sm-btn' children={"See More"}/>
+        <MyBtn children={"Skills"}/>
+        <MyBtn children={"Lets Connect"}/>
+        <MyBtn className='sm-btn' children={"Resume"}/>
+        <MyBtn className='sm-btn' children={"Resume"}/>
+        <MyBtn children={"Projects"}/>
+        <MyBtn children={"More Prohje"}/>
+      </div>
+      <div className='flex gap-4'>
+
+        <MyBtn className='sm-btn' children={"See More"}/>
+        <MyBtn children={"Skills"}/>
+        <MyBtn children={"Lets Connect"}/>
+        <MyBtn className='sm-btn' children={"Resume"}/>
+        <MyBtn className='sm-btn' children={"Resume"}/>
+        <MyBtn children={"Projects"}/>
+        <MyBtn children={"More Prohje"}/>
+      </div>
+      <div className='grid grid-cols-6 gap-4 w-screen'>
+
+        <MyBtn className='sm-btn' children={"See More"}/>
+        <MyBtn children={"Skills"}/>
+        <MyBtn children={"Lets Connect"}/>
+        <MyBtn className='sm-btn' children={"Resume"}/>
+        <MyBtn className='sm-btn' children={"Resume"}/>
+        <MyBtn children={"Projects"}/>
+        <MyBtn children={"More Prohje"}/>
+      </div>
+      <div className='grid grid-cols-2 gap-4 w-screen'>
+
+        <MyBtn className='sm-btn' children={"See More"}/>
+        <MyBtn children={"Skills"}/>
+        <MyBtn children={"Lets Connect"}/>
+        <MyBtn className='sm-btn' children={"Resume"}/>
+        <MyBtn className='sm-btn' children={"Resume"}/>
+        <MyBtn children={"Projects"}/>
+        <MyBtn children={"More Prohje"}/>
+      </div>
 
       {/* Example modal popups */}
       <div className="flex gap-4">
