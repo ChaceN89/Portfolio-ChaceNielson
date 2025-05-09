@@ -83,6 +83,22 @@ small {
   font-weight: 300;
 }
 
+/* No Scroll bar */
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* No scroll for individual elements - use on a single overflow component you don't want to overflow */
+.scroll-element {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
+}
+
+.scroll-element::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
 /* Global HTML & Body styles */
 html, body {
   background-color: var(--color-secondary);
