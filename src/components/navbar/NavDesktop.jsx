@@ -19,7 +19,7 @@ export default function NavDesktop() {
         >
           <h6 className=" group flex items-center justify-end  transition-all duration-300 ease-in-out my-drop-shadow ">
             <div
-              className="opacity-0 -translate-x-4 transition-all duration-400 group-hover:opacity-100 group-hover:translate-x-1.5"
+              className="opacity-0 -translate-x-2 transition-all duration-400 group-hover:opacity-100 group-hover:translate-x-1.5"
             >
               <Icon />
             </div>

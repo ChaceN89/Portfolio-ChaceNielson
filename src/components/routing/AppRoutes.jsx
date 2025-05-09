@@ -86,7 +86,7 @@ export default function AppRoutes() {
 
             <Route path="/projects" element={<PageTransition><TestPage name="Projects" /></PageTransition>} />
             <Route path="/contact" element={<PageTransition><TestPage name="Contact" /></PageTransition>} />
-            <Route path="/thanks" element={<PageTransition><TestPage name="Thanks" /></PageTransition>} />
+            <Route path="/thanks" element={<TestBackgroundPage><TestPage name="Thanks" /></TestBackgroundPage>} />
             <Route path="/about" element={<PageTransition><TestAboutPage name="About" /></PageTransition>} />
             <Route path="*" element={<PageTransition><TestPage name="404 - Not Found" /></PageTransition>} />
           </Route>
@@ -258,6 +258,100 @@ function TestHomePage({ name }) {
 
 }
 
+function TestBackgroundPage({ name }) {
+  return(
+    <div>
+      
+    <BackgroundWrapper
+      background="/backgrounds/pexels-0.jpg"
+      backgroundClass='w-screen h-[100vh] flex  items-center justify-center '
+      childClass="flex h-full w-full items-center justify-start pl-[25%] gap-4"
+      fixed
+      // noise
+      // blur={1} 
+     >
+      <h2>Chace Nielson</h2>
+
+     </BackgroundWrapper>
+    <BackgroundWrapper
+      background="/backgrounds/pexels-0-1.jpg"
+      backgroundClass='w-screen h-[60vh] flex  items-center justify-center '
+      childClass="flex h-full w-full items-center justify-start pl-[25%] gap-4"
+      fixed
+      // noise
+      // blur={1} 
+     >
+      <h2>Chace Nielson</h2>
+
+     </BackgroundWrapper>
+    <BackgroundWrapper
+      background="/backgrounds/pexels-3.jpg"
+      backgroundClass='w-screen h-[90vh] flex  items-center justify-center '
+      childClass="flex h-full w-full items-center justify-start pl-[25%] gap-4"
+      fixed
+      // noise
+      // blur={1} 
+     >
+      <h2>Chace Nielson</h2>
+
+     </BackgroundWrapper>
+    <BackgroundWrapper
+      background="/backgrounds/pexels-3-2.jpg"
+      backgroundClass='w-screen h-[90vh] flex  items-center justify-center '
+      childClass="flex h-full w-full items-center justify-start pl-[25%] gap-4"
+
+      fixed
+      // noise
+     >
+      <h2>Software engineer</h2>
+     </BackgroundWrapper>
+    <BackgroundWrapper
+      background="/backgrounds/pexels-3-1.jpg"
+      backgroundClass='w-screen h-[90vh] flex  items-center justify-center '
+
+      childClass="flex h-full w-full items-center justify-start pl-[25%] gap-4"
+      fixed
+      // noise
+     >
+      <div>
+
+      <h4>Full-Stack Developer</h4>
+      <h4>Game Developer Developer</h4>
+      </div>
+
+     </BackgroundWrapper>
+    <BackgroundWrapper
+      background="/backgrounds/pexels-11.jpg"
+      backgroundClass='w-screen h-[90vh] flex  items-center justify-center '
+      childClass="flex h-full w-full items-center justify-end text-right pr-[10%] gap-4 text-white"
+      fixed
+      // noise
+     >
+      <div>
+
+      < h2>Next JS</h2>
+      < h2>Web Developer </h2>
+      </div>
+
+     </BackgroundWrapper>
+    <BackgroundWrapper
+      background="/backgrounds/pexels-11-1.jpg"
+      backgroundClass='w-screen h-[90vh] flex  items-center justify-center '
+      childClass="flex h-full w-full items-center justify-end text-right pr-[10%] gap-4 text-black"
+      fixed
+      // noise
+     >
+      <div>
+
+      < h2>Unity Game Engine</h2>
+      < h2>Game Developer Developer</h2>
+      </div>
+
+     </BackgroundWrapper>
+  </div>
+
+  )
+}
 
 function TestPage({ name }) {
 

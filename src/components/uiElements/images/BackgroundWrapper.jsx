@@ -61,7 +61,7 @@ export default function BackgroundWrapper({
   }, []);
 
   // Set background attachment and position based on fixed prop and screen size
-  const backgroundAttachment = fixed && screenSize.allowFixed ? 'fixed' : 'fixed';
+  const backgroundAttachment = fixed && screenSize.allowFixed ? 'fixed' : 'scroll';
 
   // Base background styles
   const baseBackgroundStyle = {
