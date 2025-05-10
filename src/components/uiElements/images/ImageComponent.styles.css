@@ -11,7 +11,7 @@
 }
 
 @theme {
-  --color-shimmer: --alpha(var(--color-secondary-alt) / 30%)
+  --color-shimmer: --alpha(var(--color-secondary-alt) / 50%)
 }
 
 .shimmer-overlay {

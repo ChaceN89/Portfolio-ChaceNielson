@@ -13,21 +13,29 @@
  * @created May 9, 2025
  */
 
+import { useState } from 'react';
+import { FaArrowRight } from 'react-icons/fa';
 import './Sm-Button.styles.css';
 import './Lg-Button.styles.css';
-import { FaArrowRight } from 'react-icons/fa';
 
-export default function MyButton({ children, callBack, className = 'lg-btn' }) {
+export default function MyBtn({ children, callBack, className = 'lg-btn' }) {
+  const [clicked, setClicked] = useState(false);
+
   const handleClick = () => {
-    if (typeof callBack === 'function') callBack();
-    // TODO: Add GA event tracking here
+    setClicked(true);
+
+    setTimeout(() => {
+      if (typeof callBack === 'function') callBack();
+    }, 700);
   };
 
   return (
-    <button onClick={handleClick} className={className}>
-      <span className="label">{children}</span>
-      <span className="arrow-box">
-        <FaArrowRight className="arrow-icon" />
+    <button className={`${className} ${clicked ? 'clicked' : ''}`} onClick={handleClick} onMouseLeave={() => setClicked(false)}>
+      <h6 className="label">{children}</h6>
+      <span className='arrow-box-container'>
+        <span className="arrow-box">
+          <FaArrowRight size={20} className="arrow-icon" />
+      </span>
       </span>
     </button>
   );
