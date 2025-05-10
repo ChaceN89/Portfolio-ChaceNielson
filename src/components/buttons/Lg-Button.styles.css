@@ -1,15 +1,17 @@
 @import "tailwindcss";
 
 @theme {
-  --color-abstract: --alpha(var(--color-primary-alt) / 70%);
+  --color-abstract: --alpha(var(--color-primary-alt) / 60%);
+
+  --background-color: --alpha(var(--color-secondary) / 80%);
 
   --load-animation-duration: 0.3s;
   --launch-animation-duration: 0.8s;
 
-  --arrow-y-scale: 1.4;
+  --arrow-y-scale: 1.2;
   --arrow-x-scale: 0.7;
 
-  --arrow-box-size: 2.25rem; /* size of the box */
+  --arrow-box-size: 2rem; /* size of the box */
   --arrow-box-expand-width: 4rem; /* size the box expands to */
 
   --arrow-wind-up: -1.2rem; /* how far the arrow moves to the left  */
@@ -23,7 +25,7 @@
   justify-content: space-between;
   padding: 1rem 1.5rem;
   border-radius: 9999px; /* fully rounded */
-  background-color: var(--color-secondary);
+  background-color: var(--background-color);
   color: var(--color-prmimary);
 
   cursor: pointer;
@@ -34,6 +36,7 @@
   position: relative; /* Needed for the pseudo-element to position */
   overflow: hidden;   /* Ensures the shine stays inside the button */
   min-width: 12rem; /* min width */
+  height: 4rem;
 }
 
 /* The buttons label (children */
@@ -61,49 +64,36 @@
   transition: transform 0.3s ease, width 0.3s ease; /* Add width to the transition */
 }
 
-.lg-btn:hover .arrow-box {
-  animation: boxMorph var(--load-animation-duration) ease-in-out forwards;
-  /* hide overflow */
+/* The box around the arrow */
+.lg-btn .arrow-box {
+  transition: transform var(--load-animation-duration)  ease-in-out, width var(--load-animation-duration) ease-in-out;
+  transform: translateX(0) scale(1, 1);
+  width: var(--arrow-box-size);
   overflow: hidden;
 }
 
-.lg-btn:hover .arrow-icon {
-  animation: arrowLoad var(--load-animation-duration) ease-in-out forwards;
-}
-
-.clicked .arrow-box-container .arrow-icon {
-  animation: arrowLaunch var(--launch-animation-duration) ease-in-out forwards;
-
-}
-
-
-@keyframes boxMorph {
-  0% {
-    transform: translateX(0) scale(1, 1);
-    width: var(--arrow-box-size);
-    
-  }
-  100% {
-
-    transform: translateX(-3px) scale(1, 0.9);
-    width: var(--arrow-box-expand-width); /* 4.25rem */
-  }
-}
-
-
-@keyframes arrowLoad   {
-  0% {
-    transform: translateX(0rem);
-    transform: scale(1, 1);
-
+  /* Hover state for  */
+  .lg-btn:hover .arrow-box {
+    transform:  scale(1, 0.8);
+    width: var(--arrow-box-expand-width);
   }
 
-  100% {
-    /* transform: translateX(var(--arrow-wind-up)) scale(1, 0.6); */
+/* The actual arrow in the box */
+.lg-btn .arrow-icon {
+  transition: transform var(--load-animation-duration) ease-in-out;
+  transform: translateX(0rem) scale(1, 1);
+}
+
+  .lg-btn:hover .arrow-icon {
     transform: translateX(var(--arrow-wind-up)) scale(var(--arrow-x-scale), var(--arrow-y-scale));
-
   }
+
+
+  /* when clicked this is applied */
+.lg-btn-clicked .arrow-box-container .arrow-icon {
+  animation: arrowLaunch var(--launch-animation-duration) ease-in-out forwards;
 }
+
 
 /* Arrow Icon on click movement */
 @keyframes arrowLaunch {
@@ -129,9 +119,9 @@
     transform: translateX(-2rem) scale(1, 1);
     visibility: hidden;
   }
-
   100% {
-    transform: translateX(0) scale(1,1);
+    /* transform: translateX(0) scale(1,1); */
+    transform: translateX(var(--arrow-wind-up)) scale(var(--arrow-x-scale), var(--arrow-y-scale));
     visibility: visible;
   }
 }
@@ -148,9 +138,10 @@
   background: linear-gradient(
     120deg,
     transparent 0%,
-    rgba(255, 255, 255, 0.7) 80%,
+    rgba(255, 255, 255, 0.7) 70%,
     transparent 100%
   );
+  filter: blur(3px);
   transform: skewX(-30deg) translateX(-100%);
   transition: none;
   pointer-events: none;
@@ -158,7 +149,7 @@
 
 /* Animate shine on hover */
 .lg-btn:hover::before {
-  animation: shine 1.5s infinite;
+  animation: shine 2s infinite;
 }
 
 @keyframes shine {

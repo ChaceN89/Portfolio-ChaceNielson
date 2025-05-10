@@ -31,7 +31,19 @@ export default function MyBtn({ children, callBack, className = 'lg-btn' }) {
   };
 
   return (
-    <button className={`${className} ${clicked ? 'clicked' : ''}`} onClick={handleClick} onMouseLeave={() => setClicked(false)}>
+    <button disabled={clicked} className={ `overflow-hidden ${className} ${clicked ? 'lg-btn-clicked' : ''}`} onClick={handleClick} onMouseLeave={() => setClicked(false)}>
+      
+      {/* SVG Filter for Noise */}
+      <div
+        className="absolute inset-0 pointer-events-none z-0 transition-opacity duration-500 ease-in-out"
+        style={{
+          filter: "url(#noiseFilter)",
+          mixBlendMode: "multiply",
+          opacity: 1,
+        }}
+      />
+
+
       <h6 className="label">{children}</h6>
       <span className='arrow-box-container'>
         <span className="arrow-box">
