@@ -206,6 +206,10 @@ function TestHomePage({ name }) {
 
        
             <div className='text-white '>
+            <MyBtn className='sm-btn'  children={"See More"}/>
+            <div>{" "}</div>
+            <MyBtn  children={"See More"}/>
+
 
               <h2 className='whitespace-nowrap '>Chace Nielson</h2>
               <ul className='bullet-list list-inside'>

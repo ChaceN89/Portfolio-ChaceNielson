@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 @theme {
-  --color-abstract: --alpha(var(--color-secondary-alt) / 40%);
+  --color-abstract: --alpha(var(--color-primary-alt) / 70%);
 
-  --load-animation-duration: 0.3s;
-  --launch-animation-duration: 1s;
+  --load-animation-duration: 0.2s;
+  --launch-animation-duration: 0.8s;
 
   --arrow-y-scale: 1.4;
   --arrow-x-scale: 0.7;
@@ -14,6 +14,8 @@
 
   --arrow-wind-up: -1.4rem; /* how far the arrow moves to the left  */
 }
+
+
 
 .lg-btn {
   display: inline-flex;
@@ -26,7 +28,7 @@
 
   cursor: pointer;
   transition: background 0.3s ease;
-  border: 5px solid var(--color-abstract);
+  border: 3px solid var(--color-abstract);
   gap: 1rem; /* space between label and arrow */
   overflow: hidden; 
   position: relative; /* Needed for the pseudo-element to position */
@@ -50,7 +52,7 @@
   align-items: center;
   justify-content: center;
   background-color: var(--color-abstract);
-  color: var(--color-primary);
+  color: var(--color-secondary);
   border-radius: 9999px; /* fully rounded */
   padding: 0.5rem;
   width: var(--arrow-box-size);
