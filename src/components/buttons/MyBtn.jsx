@@ -41,7 +41,7 @@ export default function MyBtn({ children, callBack, sm}) {
         style={{
           filter: "url(#noiseFilter)",
           mixBlendMode: "multiply",
-          opacity: 1,
+          opacity: 0.6,
         }}
       />
 

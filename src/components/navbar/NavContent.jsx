@@ -84,7 +84,7 @@ export default function NavContent() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             onClick={() => setIsMobileMenuOpen(false)}
-            className="fixed inset-0 bg-accent/30  noise"
+            className="fixed inset-0 bg-accent/60  noise"
             style={{ pointerEvents: 'auto' }}
           />
         )}
