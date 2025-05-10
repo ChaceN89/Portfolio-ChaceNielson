@@ -1,5 +1,31 @@
+/**
+ * @file Button.styles.css
+ * @module UI/Button
+ * @desc Custom styles for the MyBtn component. Defines both large (`.lg-btn`) and small (`.sm-btn`) button variants,
+ *       including animated arrow behavior, interactive states, and design variables for hover/click feedback.
+ *
+ * @author Chace Nielson
+ * @created May 9, 2025
+ * @updated May 9, 2025
+ *
+ * @features
+ * - Tailwind base import and custom `@theme` design tokens
+ * - Animated arrow movement and box morph on hover
+ * - Shine animation using `::before` pseudo-element
+ * - Custom active state visual feedback
+ * - Support for `sm` prop with scaled font, dimensions, and animation
+ *
+ * @dependencies
+ * - Tailwind CSS
+ * - Used in conjunction with `MyButton.jsx`
+ *
+ * @notes
+ * - Uses CSS variables for scale and animation control.
+ * - Button layout follows a utility-first design with extendable modifiers.
+ */
 @import "tailwindcss";
 
+/* Therems for this buttons */
 @theme {
   --color-abstract: --alpha(var(--color-primary-alt) / 60%);
 
