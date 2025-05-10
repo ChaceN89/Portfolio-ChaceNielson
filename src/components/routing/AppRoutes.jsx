@@ -32,6 +32,8 @@ import ImageComponent from '../uiElements/images/ImageComponent';
 import BackgroundWrapper from '../uiElements/images/BackgroundWrapper';
 import MediaFrame from '../uiElements/mediaFrame/MediaFrame';
 import MyBtn from '../buttons/MyBtn';
+import { Link as ScrollLink, scroller } from "react-scroll";
+
 
 // Page Transition Duration Global
 const pageTransitionDuration = 0.6; // Duration of the page transition animation
@@ -206,13 +208,33 @@ function TestHomePage({ name }) {
 
        
             <div className='text-white '>
-            <MyBtn  children={"See More a nd alot more"}/>
+            <MyBtn  children={"Projects"} callBack={()=>{
+              scroller.scrollTo("Projects", {
+                smooth: true,
+                duration: 700,
+                offset: -50,
+              });
+      
+            }}/>
             <div>{" "}</div> <br />
-            <MyBtn sm children={"projects"}/>
+            <MyBtn sm children={"Projects"} callBack={()=>{
+              scroller.scrollTo("Projects", {
+                smooth: true,
+                duration: 2000,
+                offset: -50,
+              });
+    
+            }}/>
+     
             <div>{" "}</div> <br />
-            <MyBtn sm  children={"See More"}/>
-            <div>{" "}</div> <br />
-            <MyBtn  children={"See More"}/>
+            <MyBtn  
+              children={"See More"}
+              callBack={()=>{
+              // leave page to alberta tomorrow sute .cs
+              window.open("https://albertatomorrow.ca", "_blank");
+    
+              }}
+            />
 
 
               <h2 className='whitespace-nowrap '>Chace Nielson</h2>
@@ -406,7 +428,7 @@ function TestPage({ name }) {
         <MyBtn className='sm-btn' children={"See More"}/>
         <MyBtn children={"Skills"}/>
         <MyBtn children={"Lets Connect"}/>
-        <MyBtn className='sm-btn' children={"Resume"}/>
+        <MyBtn className='sm-btn' children={"Resume aaa aaa"}/>
         <MyBtn className='sm-btn' children={"Resume"}/>
         <MyBtn children={"Projects"}/>
         <MyBtn children={"More Prohje"}/>

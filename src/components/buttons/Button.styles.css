@@ -8,13 +8,13 @@
   --load-animation-duration: 0.3s;
   --launch-animation-duration: 0.8s;
 
-  --arrow-y-scale: 1.2;
-  --arrow-x-scale: 0.7;
+  --arrow-y-scale: 1.3;
+  --arrow-x-scale: 0.6;
 
   --arrow-box-size: 2rem; /* size of the box */
   --arrow-box-expand-width: 4rem; /* size the box expands to */
 
-  --arrow-wind-up: -1.2rem; /* how far the arrow moves to the left  */
+  --arrow-wind-up: -1.3rem; /* how far the arrow moves to the left  */
 }
 
 
@@ -23,7 +23,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+
+
   border-radius: 9999px; /* fully rounded */
   background-color: var(--background-color);
   color: var(--color-primary);
@@ -38,11 +42,11 @@
   min-width: 12rem; /* min width */
   height: 3.75rem;
 
+
 }
 
 .lg-btn:active{
   background-color: var(--color-abstract);
-  /* color: var(--color-secondary); */
   border: 3px solid var(--color-secondary);
 
   box-shadow: inset 0 0 0.5rem var(--color-secondary),
@@ -82,12 +86,11 @@
   transform: translateX(0) scale(1, 1);
   width: var(--arrow-box-size);
   overflow: hidden;
-
 }
 
   /* Hover state for  */
   .lg-btn:hover .arrow-box {
-    transform:  scale(1, 0.8);
+    transform:  scale(1, 1);
     width: var(--arrow-box-expand-width);
   }
 
@@ -183,23 +186,17 @@
 
 
 
-
+/* Small button overrides */
 .sm-btn {
   height: 2.75rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem; /* Font size */
 }
 
 
-.lg-btn.sm-btn:hover .arrow-box {
-  transform: scale(1, 0.85); /* Slight shrink */
-  width: 3.5rem; /* Smaller than 4rem */
+.sm-btn .label {
+  font-size: 1rem; /* or whatever size you want */
 }
+
 
 .sm-btn .arrow-box {
-  width: 1.75rem;
-  height: 1.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  --arrow-box-size: 1.75rem; /* size of the box */
 }
