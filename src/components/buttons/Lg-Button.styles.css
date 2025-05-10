@@ -3,16 +3,16 @@
 @theme {
   --color-abstract: --alpha(var(--color-primary-alt) / 70%);
 
-  --load-animation-duration: 0.2s;
+  --load-animation-duration: 0.3s;
   --launch-animation-duration: 0.8s;
 
   --arrow-y-scale: 1.4;
   --arrow-x-scale: 0.7;
 
   --arrow-box-size: 2.25rem; /* size of the box */
-  --arrow-box-expand-width: 4.25rem; /* size the box expands to */
+  --arrow-box-expand-width: 4rem; /* size the box expands to */
 
-  --arrow-wind-up: -1.4rem; /* how far the arrow moves to the left  */
+  --arrow-wind-up: -1.2rem; /* how far the arrow moves to the left  */
 }
 
 
@@ -23,8 +23,8 @@
   justify-content: space-between;
   padding: 1rem 1.5rem;
   border-radius: 9999px; /* fully rounded */
-  background-color: var(--color-accent);
-  color: var(--color-secondary);
+  background-color: var(--color-secondary);
+  color: var(--color-prmimary);
 
   cursor: pointer;
   transition: background 0.3s ease;
@@ -79,12 +79,13 @@
 
 @keyframes boxMorph {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) scale(1, 1);
     width: var(--arrow-box-size);
     
   }
   100% {
-    transform: translateX(-3px); /* pull with arrow */
+
+    transform: translateX(-3px) scale(1, 0.9);
     width: var(--arrow-box-expand-width); /* 4.25rem */
   }
 }
@@ -124,13 +125,13 @@
     transform: translateX(3rem) scale(1, 1);
     visibility: hidden;
   }
-  90% {
+  80% {
     transform: translateX(-2rem) scale(1, 1);
     visibility: hidden;
   }
 
   100% {
-    transform: translateX(var(--arrow-wind-up)) scale(var(--arrow-x-scale), var(--arrow-y-scale));
+    transform: translateX(0) scale(1,1);
     visibility: visible;
   }
 }

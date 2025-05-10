@@ -35,7 +35,7 @@ export default function MyBtn({ children, callBack, className = 'lg-btn' }) {
       <h6 className="label">{children}</h6>
       <span className='arrow-box-container'>
         <span className="arrow-box">
-          <FaArrowRight size={20} className="arrow-icon" />
+          <FaArrowRight size={24} className="arrow-icon" />
       </span>
       </span>
     </button>
