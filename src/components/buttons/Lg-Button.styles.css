@@ -36,7 +36,7 @@
   position: relative; /* Needed for the pseudo-element to position */
   overflow: hidden;   /* Ensures the shine stays inside the button */
   min-width: 12rem; /* min width */
-  height: 4rem;
+  height: 3.75rem;
 }
 
 /* The buttons label (children */
@@ -70,6 +70,7 @@
   transform: translateX(0) scale(1, 1);
   width: var(--arrow-box-size);
   overflow: hidden;
+
 }
 
   /* Hover state for  */
@@ -162,4 +163,27 @@
   100% {
     transform: skewX(-30deg) translateX(100%);
   }
+}
+
+
+
+
+.sm-btn {
+  height: 2.75rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem; /* Font size */
+}
+
+
+.lg-btn.sm-btn:hover .arrow-box {
+  transform: scale(1, 0.85); /* Slight shrink */
+  width: 3.5rem; /* Smaller than 4rem */
+}
+
+.sm-btn .arrow-box {
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

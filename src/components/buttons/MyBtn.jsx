@@ -18,7 +18,7 @@ import { FaArrowRight } from 'react-icons/fa';
 import './Sm-Button.styles.css';
 import './Lg-Button.styles.css';
 
-export default function MyBtn({ children, callBack, className = 'lg-btn' }) {
+export default function MyBtn({ children, callBack, sm}) {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
@@ -30,12 +30,14 @@ export default function MyBtn({ children, callBack, className = 'lg-btn' }) {
     }, 1000);
   };
 
+  const className = sm ? 'sm-btn' : '';
+
   return (
-    <button disabled={clicked} className={ `overflow-hidden ${className} ${clicked ? 'lg-btn-clicked' : ''}`} onClick={handleClick} onMouseLeave={() => setClicked(false)}>
+    <button disabled={clicked} className={ `overflow-hidden lg-btn ${className} ${clicked ? 'lg-btn-clicked' : ''}`} onClick={handleClick} onMouseLeave={() => setClicked(false)}>
       
       {/* SVG Filter for Noise */}
       <div
-        className="absolute inset-0 pointer-events-none z-0 transition-opacity duration-500 ease-in-out"
+        className="absolute inset-0 pointer-events-none z-0"
         style={{
           filter: "url(#noiseFilter)",
           mixBlendMode: "multiply",
@@ -48,7 +50,7 @@ export default function MyBtn({ children, callBack, className = 'lg-btn' }) {
       <span className='arrow-box-container'>
         <span className="arrow-box">
           <FaArrowRight size={24} className="arrow-icon" />
-      </span>
+        </span>
       </span>
     </button>
   );

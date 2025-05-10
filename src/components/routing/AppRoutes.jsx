@@ -206,8 +206,12 @@ function TestHomePage({ name }) {
 
        
             <div className='text-white '>
-            <MyBtn className='sm-btn'  children={"See More"}/>
-            <div>{" "}</div>
+            <MyBtn  children={"See More a nd alot more"}/>
+            <div>{" "}</div> <br />
+            <MyBtn sm children={"projects"}/>
+            <div>{" "}</div> <br />
+            <MyBtn sm  children={"See More"}/>
+            <div>{" "}</div> <br />
             <MyBtn  children={"See More"}/>
 
 
