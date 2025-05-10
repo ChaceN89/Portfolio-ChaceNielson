@@ -1,16 +1,18 @@
 @import "tailwindcss";
 
-
 @theme {
-  --color-border: --alpha(var(--color-secondary-alt) / 60%);
+  --color-abstract: --alpha(var(--color-secondary-alt) / 40%);
+
+  --load-animation-duration: 0.3s;
+  --launch-animation-duration: 1s;
 
   --arrow-y-scale: 1.4;
   --arrow-x-scale: 0.7;
 
-  --arrow-box-size: 2.25rem;
-  --arrow-box-width: 4.25rem;
+  --arrow-box-size: 2.25rem; /* size of the box */
+  --arrow-box-expand-width: 4.25rem; /* size the box expands to */
 
-  --arrow-wind-up: -1.4rem;
+  --arrow-wind-up: -1.4rem; /* how far the arrow moves to the left  */
 }
 
 .lg-btn {
@@ -24,7 +26,7 @@
 
   cursor: pointer;
   transition: background 0.3s ease;
-  border: 5px solid var(--color-border);
+  border: 5px solid var(--color-abstract);
   gap: 1rem; /* space between label and arrow */
   overflow: hidden; 
   position: relative; /* Needed for the pseudo-element to position */
@@ -47,8 +49,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
+  background-color: var(--color-abstract);
+  color: var(--color-primary);
   border-radius: 9999px; /* fully rounded */
   padding: 0.5rem;
   width: var(--arrow-box-size);
@@ -58,17 +60,17 @@
 }
 
 .lg-btn:hover .arrow-box {
-  animation: boxMorph 0.3s ease-in-out forwards;
+  animation: boxMorph var(--load-animation-duration) ease-in-out forwards;
   /* hide overflow */
   overflow: hidden;
 }
 
 .lg-btn:hover .arrow-icon {
-  animation: arrowLoad 0.3s ease-in-out forwards;
+  animation: arrowLoad var(--load-animation-duration) ease-in-out forwards;
 }
 
 .clicked .arrow-box-container .arrow-icon {
-  animation: arrowLaunch 1.2s ease-in-out forwards;
+  animation: arrowLaunch var(--launch-animation-duration) ease-in-out forwards;
 
 }
 
@@ -81,7 +83,7 @@
   }
   100% {
     transform: translateX(-3px); /* pull with arrow */
-    width: var(--arrow-box-width); /* 4.25rem */
+    width: var(--arrow-box-expand-width); /* 4.25rem */
   }
 }
 

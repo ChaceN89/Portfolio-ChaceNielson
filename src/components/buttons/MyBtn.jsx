@@ -26,7 +26,7 @@ export default function MyBtn({ children, callBack, className = 'lg-btn' }) {
 
     setTimeout(() => {
       if (typeof callBack === 'function') callBack();
-    }, 700);
+    }, 1000);
   };
 
   return (
