@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@theme{
+  --particle-color: --alpha(var(--color-secondary-alt) / 30%);
+
+}
+
+@keyframes particle-float {
+  0% { transform: translate(0, 0); opacity: 1; }
+  100% { transform: translate(var(--x), var(--y)); opacity: 0; }
+}
+
+.particle {
+  @apply absolute rounded-full pointer-events-none z-[9999];
+  background: var(--particle-color);
+  animation: particle-float 1s ease-out forwards;
+  --x: 0px;
+  --y: 0px;
+}
+
+.bg-flash {
+  animation: flash-bg 300ms ease-out;
+}
+
+@keyframes flash-bg {
+  0%   { background-color: var(--color-secondary); }
+  100% { background-color: transparent; }
+}

@@ -132,7 +132,7 @@
 
 
   /* when clicked this is applied */
-.lg-btn-clicked .arrow-box-container .arrow-icon {
+.btn-clicked .arrow-box-container .arrow-icon {
   animation: arrowLaunch var(--launch-animation-duration) ease-in-out forwards;
 }
 
@@ -210,8 +210,6 @@
   }
 }
 
-
-
 /* Small button overrides */
 .sm-btn {
   height: 2.75rem;
@@ -226,3 +224,5 @@
 .sm-btn .arrow-box {
   --arrow-box-size: 1.75rem; /* size of the box */
 }
+
+

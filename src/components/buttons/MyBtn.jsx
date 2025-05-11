@@ -13,37 +13,46 @@
  * @created May 9, 2025
  */
 
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import './Button.styles.css';
+import { popEffect } from '../../utils/particleEffects';
 
 export default function MyBtn({ children, callBack, sm}) {
+
+  const particleRef = useRef(null);
+  const particleBoxRef = useRef(null);
+
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
     setClicked(true);
+
+    // trigger a particle effect
+    popEffect({
+      target: particleBoxRef.current,
+      parent: particleRef.current,
+      backgroundPulse: true,
+      particleCount: 10,
+    });
   
-    // Call the callback at 800ms
     setTimeout(() => {
       if (typeof callBack === 'function') callBack();
     }, 500);
   
-    // Reset the clicked state at 1000ms
     setTimeout(() => {
       setClicked(false);
     }, 1000);
   };
 
-  const className = sm ? 'sm-btn' : '';
-
   return (
     <button 
       disabled={clicked} 
-      className={ `overflow-hidden lg-btn ${className} ${clicked ? 'lg-btn-clicked' : ''}`} 
+      className={ `overflow-hidden lg-btn ${sm && "sm-btn"} ${clicked ? 'btn-clicked' : ''}`} 
       onClick={handleClick} 
-
       onMouseLeave={() => {
-        if (!clicked) setClicked(false); // Only unset if not in click animation
+        if (!clicked) // Only unset if not in click animation
+          setClicked(false); 
       }}
     >
       
@@ -60,7 +69,11 @@ export default function MyBtn({ children, callBack, sm}) {
 
       <h6 className="label">{children}</h6>
       <span className='arrow-box-container'>
-        <span className="arrow-box">
+        <span className="arrow-box" 
+            ref={particleBoxRef}
+
+        >
+          <div ref={particleRef} className='h-full flex items-center'/>
           <FaArrowRight  className="arrow-icon" />
         </span>
       </span>

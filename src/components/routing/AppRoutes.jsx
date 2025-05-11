@@ -208,14 +208,17 @@ function TestHomePage({ name }) {
 
        
             <div className='text-white '>
-            <MyBtn  children={"Projects"} callBack={()=>{
+            <MyBtn  children={"test"} callBack={()=>{
+              
+            }}/>
+            {/* <MyBtn  children={"Projects"} callBack={()=>{
               scroller.scrollTo("Projects", {
                 smooth: true,
                 duration: 700,
                 offset: -50,
               });
       
-            }}/>
+            }}/> */}
             <div>{" "}</div> <br />
             <MyBtn sm children={"Projects"} callBack={()=>{
               scroller.scrollTo("Projects", {
