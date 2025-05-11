@@ -12,7 +12,10 @@ export function popEffect({
   target,
   parent = document.body,
   backgroundPulse = false,
+  backgroundPulseColor = '#000',
+  backgroundPulseDuration = 300,
   particleCount = 30,
+  particleColor = '#fff',
   particleSizeRange = {min: 4, max: 12},
   particleDuration = 1200,
 } = {}) {
@@ -37,17 +40,60 @@ export function popEffect({
     origin, 
     parent, 
     particleCount,
+    particleColor,
     particleSizeRange,
     particleDuration
   );
 
 
-  // perform the background pluse if enabled
+  // // perform the background pluse if enabled
   if (backgroundPulse && target) {
+    // Set the flash color to match the particle color (hex or CSS var)
+    target.style.setProperty('--flash-color', backgroundPulseColor || particleColor);
+    target.style.setProperty('--flash-duration', `${backgroundPulseDuration}ms`);
+  
     target.classList.add('bg-flash');
-    setTimeout(() => target.classList.remove('bg-flash'), 300);
+    setTimeout(() => {
+      target.classList.remove('bg-flash');
+      target.style.removeProperty('--flash-color');
+    }, backgroundPulseDuration);
   }
+
+  // pulseBackground(backgroundPulseDuration, backgroundPulseColor || particleColor, target, backgroundPulse);
+
+
 }
+
+/**
+ * Creates a temporary overlay on the target element that flashes and fades out.
+ * @param {number} duration - Duration of the pulse in milliseconds.
+ * @param {string} color - Background color (hex, rgb, or CSS var).
+ * @param {HTMLElement} target - The element to overlay.
+ * @param {boolean} enabled - Whether to actually trigger the pulse.
+ */
+export function pulseBackground(duration, color, target, enabled = true) {
+  if (!enabled || !target) return;
+
+  const rect = target.getBoundingClientRect();
+  const overlay = document.createElement('div');
+
+  overlay.className = 'bg-flash-overlay';
+  overlay.style.position = 'absolute';
+  overlay.style.top = `${rect.top + window.scrollY}px`;
+  overlay.style.left = `${rect.left + window.scrollX}px`;
+  overlay.style.width = `${rect.width}px`;
+  overlay.style.height = `${rect.height}px`;
+  overlay.style.pointerEvents = 'none';
+  overlay.style.backgroundColor = color;
+  overlay.style.animation = `flash-fade ${duration}ms ease-out forwards`;
+  overlay.style.zIndex = 9998;
+  overlay.style.borderRadius = getComputedStyle(target).borderRadius;
+
+  document.body.appendChild(overlay);
+
+  setTimeout(() => overlay.remove(), duration);
+}
+
 
 
 
@@ -57,6 +103,7 @@ function scheduleParticleBurst(
   origin, 
   parent, 
   count, 
+  color,
   sizeRange,
   duration,
   index = 0
@@ -64,8 +111,8 @@ function scheduleParticleBurst(
   if (index >= count) return;
 
   requestAnimationFrame(() => {
-    createParticle(origin.x, origin.y, parent, sizeRange, duration);
-    scheduleParticleBurst(origin, parent, count, sizeRange, duration, index + 1);
+    createParticle(origin.x, origin.y, parent, sizeRange, duration, color);
+    scheduleParticleBurst(origin, parent, count, color, sizeRange, duration, index + 1);
   });
 }
 
@@ -75,11 +122,13 @@ function createParticle(
   x, y, 
   parent,
   sizeRange,
-  duration
+  duration,
+  color
 ) {
   const particle = document.createElement('div');
   particle.className = 'particle';
 
+  particle.style.background = color;
 
 
   const { min, max } = sizeRange;

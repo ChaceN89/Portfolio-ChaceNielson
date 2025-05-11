@@ -1,8 +1,17 @@
-@import "tailwindcss";
+.particle {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  z-index: 9999;
+  background: var(--particle-color, #ccc); /* fallback */
+  animation: particle-float var(--particle-duration, 300ms) ease-out forwards;
 
-@theme{
-  --particle-color: --alpha(var(--color-secondary-alt) / 30%);
+  --x: 0px;
+  --y: 0px;
+}
 
+.bg-flash {
+  animation: flash-bg var(--flash-duration, 300ms) ease-out;
 }
 
 @keyframes particle-float {
@@ -10,19 +19,17 @@
   100% { transform: translate(var(--x), var(--y)); opacity: 0; }
 }
 
-.particle {
-  @apply absolute rounded-full pointer-events-none z-[9999];
-  background: var(--particle-color);
-  animation: particle-float 1s ease-out forwards;
-  --x: 0px;
-  --y: 0px;
-}
-
-.bg-flash {
-  animation: flash-bg 300ms ease-out;
-}
-
 @keyframes flash-bg {
-  0%   { background-color: var(--color-secondary); }
+  0%   { background-color: var(--flash-color, #000); }
   100% { background-color: transparent; }
+}
+
+
+@keyframes flash-fade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.bg-flash-overlay {
+  will-change: opacity;
 }

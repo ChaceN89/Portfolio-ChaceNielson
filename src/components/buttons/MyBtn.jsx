@@ -32,8 +32,11 @@ export default function MyBtn({ children, callBack, sm}) {
     popEffect({
       target: particleBoxRef.current,
       parent: particleRef.current,
-      // backgroundPulse: true,
+      backgroundPulse: true,
+      backgroundPulseColor: '#0000FF', // Hex for blue
+      backgroundPulseDuration: 3000,
       particleCount: 10,
+      particleColor: 'var(--color-tertiary)',
       particleSizeRange: {min: 2, max: 12},
       particleDuration: 3200,
     });
