@@ -59,37 +59,42 @@ export function popEffect({
     }, backgroundPulseDuration);
   }
 
-  // pulseBackground(backgroundPulseDuration, backgroundPulseColor || particleColor, target, backgroundPulse);
+  pulseBackground(backgroundPulseDuration, backgroundPulseColor || particleColor, target, backgroundPulse);
 
 
 }
 
 /**
- * Creates a temporary overlay on the target element that flashes and fades out.
- * @param {number} duration - Duration of the pulse in milliseconds.
- * @param {string} color - Background color (hex, rgb, or CSS var).
- * @param {HTMLElement} target - The element to overlay.
- * @param {boolean} enabled - Whether to actually trigger the pulse.
+ * Creates a fading overlay inside the target element for a background flash effect.
+ * @param {number} duration - Duration of the pulse in ms.
+ * @param {string} color - Background color (hex, rgb, CSS var).
+ * @param {HTMLElement} target - The element to flash.
+ * @param {boolean} enabled - Whether to perform the pulse.
  */
 export function pulseBackground(duration, color, target, enabled = true) {
   if (!enabled || !target) return;
 
-  const rect = target.getBoundingClientRect();
-  const overlay = document.createElement('div');
+  // Ensure the target has relative positioning (non-destructive)
+  const originalPosition = getComputedStyle(target).position;
+  if (originalPosition === 'static') {
+    target.style.position = 'relative';
+  }
 
+  const overlay = document.createElement('div');
   overlay.className = 'bg-flash-overlay';
   overlay.style.position = 'absolute';
-  overlay.style.top = `${rect.top + window.scrollY}px`;
-  overlay.style.left = `${rect.left + window.scrollX}px`;
-  overlay.style.width = `${rect.width}px`;
-  overlay.style.height = `${rect.height}px`;
+  overlay.style.top = '0';
+  overlay.style.left = '0';
+  overlay.style.width = '100%';
+  overlay.style.height = '100%';
   overlay.style.pointerEvents = 'none';
   overlay.style.backgroundColor = color;
   overlay.style.animation = `flash-fade ${duration}ms ease-out forwards`;
-  overlay.style.zIndex = 9998;
+  overlay.style.zIndex = -1; // behind particles (which should be z-index 9999 or similar)
   overlay.style.borderRadius = getComputedStyle(target).borderRadius;
+  overlay.style.overflow = 'hidden';
 
-  document.body.appendChild(overlay);
+  target.appendChild(overlay);
 
   setTimeout(() => overlay.remove(), duration);
 }

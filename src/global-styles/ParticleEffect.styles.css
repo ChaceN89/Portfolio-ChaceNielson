@@ -10,17 +10,28 @@
   --y: 0px;
 }
 
-.bg-flash {
-  animation: flash-bg var(--flash-duration, 300ms) ease-out;
-}
 
 @keyframes particle-float {
   0% { transform: translate(0, 0); opacity: 1; }
   100% { transform: translate(var(--x), var(--y)); opacity: 0; }
 }
 
+
+/* .bg-flash {
+  animation: flash-bg var(--flash-duration, 300ms) ease-out;
+} */
+
+/* 
 @keyframes flash-bg {
   0%   { background-color: var(--flash-color, #000); }
   100% { background-color: transparent; }
+} */
+
+@keyframes flash-fade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
+.bg-flash-overlay {
+  will-change: opacity;
+}
