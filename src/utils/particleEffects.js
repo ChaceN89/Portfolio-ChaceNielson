@@ -13,7 +13,7 @@ export function popEffect({
   parent = document.body,
   backgroundPulse = false,
   particleCount = 30,
-  particleSizeRange = 8,
+  particleSizeRange = {min: 4, max: 12},
   particleDuration = 1200,
 } = {}) {
   const origin = { x: 0, y: 0 };
@@ -33,8 +33,16 @@ export function popEffect({
   }
 
   // Schedule the particles over the next few animation frames
-  scheduleParticleBurst(origin, parent, particleCount);
+  scheduleParticleBurst(
+    origin, 
+    parent, 
+    particleCount,
+    particleSizeRange,
+    particleDuration
+  );
 
+
+  // perform the background pluse if enabled
   if (backgroundPulse && target) {
     target.classList.add('bg-flash');
     setTimeout(() => target.classList.remove('bg-flash'), 300);
@@ -43,22 +51,40 @@ export function popEffect({
 
 
 
-function scheduleParticleBurst(origin, parent, count, index = 0) {
+
+
+function scheduleParticleBurst(
+  origin, 
+  parent, 
+  count, 
+  sizeRange,
+  duration,
+  index = 0
+) {
   if (index >= count) return;
 
   requestAnimationFrame(() => {
-    createParticle(origin.x, origin.y, parent);
-    scheduleParticleBurst(origin, parent, count, index + 1);
+    createParticle(origin.x, origin.y, parent, sizeRange, duration);
+    scheduleParticleBurst(origin, parent, count, sizeRange, duration, index + 1);
   });
 }
 
 
 
-function createParticle(x, y, parent) {
+function createParticle(
+  x, y, 
+  parent,
+  sizeRange,
+  duration
+) {
   const particle = document.createElement('div');
   particle.className = 'particle';
 
-  const size = `${Math.random() * 8 + 4}px`;
+
+
+  const { min, max } = sizeRange;
+  const sizeValue = Math.random() * (max - min) + min;
+  const size = `${sizeValue}px`;
   particle.style.width = size;
   particle.style.height = size;
 
@@ -78,7 +104,8 @@ function createParticle(x, y, parent) {
 
   particle.style.setProperty('--x', `${destinationX}px`);
   particle.style.setProperty('--y', `${destinationY}px`);
+  particle.style.setProperty('--particle-duration', `${duration}ms`);
 
   parent.appendChild(particle);
-  setTimeout(() => particle.remove(), 1200);
+  setTimeout(() => particle.remove(), duration);
 }

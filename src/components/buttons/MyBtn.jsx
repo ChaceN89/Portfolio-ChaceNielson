@@ -32,8 +32,10 @@ export default function MyBtn({ children, callBack, sm}) {
     popEffect({
       target: particleBoxRef.current,
       parent: particleRef.current,
-      backgroundPulse: true,
+      // backgroundPulse: true,
       particleCount: 10,
+      particleSizeRange: {min: 2, max: 12},
+      particleDuration: 3200,
     });
   
     setTimeout(() => {
