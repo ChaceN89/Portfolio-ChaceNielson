@@ -24,12 +24,3 @@
   100% { background-color: transparent; }
 }
 
-
-@keyframes flash-fade {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-.bg-flash-overlay {
-  will-change: opacity;
-}
