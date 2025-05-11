@@ -25,18 +25,20 @@ export default function MyBtn({ children, callBack, sm}) {
 
   const [clicked, setClicked] = useState(false);
 
-  const handleClick = () => {
+  const handleClick = (event) => {
     setClicked(true);
 
     // trigger a particle effect
     popEffect({
+      // event,
       target: particleBoxRef.current,
       parent: particleRef.current,
-      backgroundPulse: true,
-      backgroundPulseColor: '#0000FF', // Hex for blue
+      // backgroundPulse: true,
+      // backgroundPulseColor: '#0000FF', // Hex for blue
       backgroundPulseDuration: 3000,
       particleCount: 10,
-      particleColor: 'var(--color-tertiary)',
+      particleColor: 'var(--color-secondary-alt)',
+      particleOpacity: 0.1,
       particleSizeRange: {min: 2, max: 12},
       particleDuration: 3200,
     });

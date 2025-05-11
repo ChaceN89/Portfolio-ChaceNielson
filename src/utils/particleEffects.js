@@ -16,6 +16,7 @@ export function popEffect({
   backgroundPulseDuration = 300,
   particleCount = 30,
   particleColor = '#fff',
+  particleOpacity = 1,
   particleSizeRange = {min: 4, max: 12},
   particleDuration = 1200,
 } = {}) {
@@ -41,23 +42,11 @@ export function popEffect({
     parent, 
     particleCount,
     particleColor,
+    particleOpacity,
     particleSizeRange,
     particleDuration
   );
 
-
-  // // perform the background pluse if enabled
-  if (backgroundPulse && target) {
-    // Set the flash color to match the particle color (hex or CSS var)
-    target.style.setProperty('--flash-color', backgroundPulseColor || particleColor);
-    target.style.setProperty('--flash-duration', `${backgroundPulseDuration}ms`);
-  
-    target.classList.add('bg-flash');
-    setTimeout(() => {
-      target.classList.remove('bg-flash');
-      target.style.removeProperty('--flash-color');
-    }, backgroundPulseDuration);
-  }
 
   pulseBackground(backgroundPulseDuration, backgroundPulseColor || particleColor, target, backgroundPulse);
 
@@ -109,6 +98,7 @@ function scheduleParticleBurst(
   parent, 
   count, 
   color,
+  opacity,
   sizeRange,
   duration,
   index = 0
@@ -116,8 +106,8 @@ function scheduleParticleBurst(
   if (index >= count) return;
 
   requestAnimationFrame(() => {
-    createParticle(origin.x, origin.y, parent, sizeRange, duration, color);
-    scheduleParticleBurst(origin, parent, count, color, sizeRange, duration, index + 1);
+    createParticle(origin.x, origin.y, parent, sizeRange, duration, color, opacity);
+    scheduleParticleBurst(origin, parent, count, color, opacity, sizeRange, duration, index + 1);
   });
 }
 
@@ -128,12 +118,15 @@ function createParticle(
   parent,
   sizeRange,
   duration,
-  color
+  color,
+  opacity
 ) {
   const particle = document.createElement('div');
   particle.className = 'particle';
 
   particle.style.background = color;
+  particle.style.setProperty('--particle-opacity', opacity);
+
 
 
   const { min, max } = sizeRange;
