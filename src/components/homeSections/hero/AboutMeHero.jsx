@@ -1,0 +1,43 @@
+/**
+ * AboutMeHero Component
+ * @file AboutMeHero.jsx
+ * @module AboutMeHero
+ * @desc This component renders the "About Me" section of the homepage.
+ * It includes a brief introduction, an image, and a button to connect.
+ * 
+ * @author Chace Nielson
+ * @created <ay 12th, 2025
+ * @updated <ay 12th, 2025
+ */
+import React from 'react';
+import ImageComponent from '@/components/uiElements/images/ImageComponent';
+import MyBtn from '@/components/buttons/MyBtn';
+import { ScrollToID } from '@/utils/utils';
+
+export default function AboutMeHero() {
+  return (
+    <div id="about-me" className="flex flex-col md:flex-row items-center justify-center gap-10 p-20 text-secondary">
+      
+      <div className=' min-w-48 lg:max-w-60  overflow-hidden rounded-xl rounded-bl-[100px] rounded-tr-[100px] flex justify-center'>
+
+        <ImageComponent
+          src="/portraits/pngs/chace-2.png"
+          alt="Chace Nielson"
+          className="h-72 w-72 object-cover object-top flex justify-center "
+          imgClass=" w-full h-full  transition-transform duration-200 ease-in-out hover:scale-110"
+        />
+      </div>
+
+      <div className="max-w-xl text-center md:text-left space-y-4">
+        <h2 className="text-3xl font-bold">A Little About Me</h2>
+        <p className="text-lg leading-relaxed">
+          Hey, I'm <strong>Chace Nielson</strong> — a software engineer with a passion for building intuitive websites and immersive games.
+          Whether it's crafting smooth user interfaces or designing engaging game mechanics, I love turning ideas into interactive experiences.
+          Coding is how I express creativity — it's where logic meets imagination.
+        </p>
+
+        <MyBtn callBack={()=>ScrollToID("lets-connect")} className>Let’s Connect</MyBtn>
+      </div>
+    </div>
+  );
+}

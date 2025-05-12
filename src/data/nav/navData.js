@@ -36,12 +36,14 @@ import {
 import { MdFeaturedPlayList } from "react-icons/md";
 
 export const navLinks = [
-  { label: "Home", scrollTo: "Hero", router: "/", icon: FaHome },
-  { label: "Featured", scrollTo: "Projects", router: "/", icon: MdFeaturedPlayList },
-  { label: "Skills", scrollTo: "TechStack", router: "/", icon: FaTools },
-  { label: "Let's Talk", scrollTo: "CallToAction", router: "/", icon: FaHandshake },
+  // Home Page Scroll Links
+  { label: "Home", scrollTo: "hero", router: "/", icon: FaHome },
+  { label: "Featured", scrollTo: "featured-projects", router: "/", icon: MdFeaturedPlayList },
+  { label: "Skills", scrollTo: "tech-stacks", router: "/", icon: FaTools },
+  { label: "Let's Talk", scrollTo: "lets-connect", router: "/", icon: FaHandshake },
+  
+  // Pages
   { label: "About", router: "/about", icon: FaUser },
-
   { label: "Projects", router: "/projects", icon: FaCodeBranch },
   { label: "Contact", router: "/contact", icon: FaEnvelopeOpenText },
 ];

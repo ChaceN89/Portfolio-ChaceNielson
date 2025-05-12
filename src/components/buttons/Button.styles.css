@@ -161,14 +161,10 @@
     transform: translateX(-2rem) scale(1, 1);
     visibility: hidden;
   }
-  90% {
-    transform: translateX(0rem) scale(1, 1);
-    visibility: visible;
-  }
   100% {
     /* transform: translateX(0) scale(1,1); */
     transform: translateX(var(--arrow-wind-up)) scale(var(--arrow-x-scale), var(--arrow-y-scale));
-    visibility: visible;
+    visibility: hidden;
   }
 }
 

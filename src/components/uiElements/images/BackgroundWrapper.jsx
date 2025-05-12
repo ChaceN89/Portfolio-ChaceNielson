@@ -23,6 +23,7 @@ export default function BackgroundWrapper({
   children, 
   backgroundClass = "", 
   childClass = "", 
+  overlay = null,
   background, 
   backgroundSm, 
   fixed = false, 
@@ -73,7 +74,7 @@ export default function BackgroundWrapper({
   };
 
   return (
-    <div className={`${backgroundClass} relative overflow-hidden `}>
+    <div className={`relative overflow-hidden ${backgroundClass}`}>
     
       {/* SVG Filter for Noise */}
       {noise && (
@@ -93,6 +94,14 @@ export default function BackgroundWrapper({
           className="absolute inset-0 z-[1] pointer-events-none"
           style={{ backdropFilter: `blur(${blur}px)` }}
         />
+      )}
+
+
+            {/* 👇 Overlay elements like ScrollWheelBtn */}
+      {overlay && (
+        <div className="absolute inset-0 pointer-events-none z-10">
+          {overlay}
+        </div>
       )}
 
 

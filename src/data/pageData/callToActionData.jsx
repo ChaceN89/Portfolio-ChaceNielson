@@ -22,7 +22,7 @@ export const callToActionData = {
   bottom: (
     <>
       <p>
-        I’m always open to new opportunities—let’s <ScrollLink to="ContactMe" className="text-accent hover:underline hover:cursor-pointer" spy={true} smooth={true} offset={globals.ScrollLink.offset} duration={globals.ScrollLink.duration}>collaborate</ScrollLink> and build something amazing!
+        I’m always open to new opportunities—let’s <ScrollLink to="ContactMe" className="text-accent hover:underline hover:cursor-pointer" spy={true} smooth={true} offset={globals.navbarHeight} duration={globals.scrollDuration}>collaborate</ScrollLink> and build something amazing!
       </p>
       <p>
         Explore my portfolio to see how I can bring value to your project.

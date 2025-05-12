@@ -15,7 +15,7 @@ export default function PercentLoader({ loadPercent }) {
       />
 
       {/* Percent */}
-      <h3 className="whitespace-nowrap text-lg font-medium w-20">
+      <h3 className="whitespace-nowrap text-lg font-medium w-24">
         {percentText}
       </h3>
 

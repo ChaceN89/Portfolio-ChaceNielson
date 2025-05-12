@@ -52,12 +52,12 @@ import { useMediaQuery } from 'react-responsive';
 import { Link as ScrollLink } from 'react-scroll';
 
 // Component
-import ImageComponent from '../wrappers/ImageComponent';
+import ImageComponent from './images/ImageComponent';
 
 // data
 import { globals } from '../../data/globals';
 
-export default function ScrollWheelBtn({ to = "CallToAction" }) {
+export default function ScrollWheelBtn({ to = "about-me" }) {
   // Check if the screen height is greater than 400px
   const isTallEnough = useMediaQuery({ query: '(min-height: 400px)' });
 
@@ -81,13 +81,11 @@ export default function ScrollWheelBtn({ to = "CallToAction" }) {
   const fadeInProps = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
-    transition: { delay: 2, duration: 1 }, // Delay and duration for fade-in
+    transition: { delay: 5, duration: 1 }, // Delay and duration for fade-in
   };
 
   return (
     <div className="hidden absolute inset-0 z-15 md:flex justify-center items-end pointer-events-none">
-      {/* Transparent background */}
-      <div className="absolute inset-0 z-0 bg-secondary opacity-0 pointer-events-none" />
       
       {/* Scroll button content */}
       <motion.div className="mb-4 z-10 pointer-events-auto" {...fadeInProps}>
@@ -97,12 +95,11 @@ export default function ScrollWheelBtn({ to = "CallToAction" }) {
             to={to}
             spy={true}
             smooth={true}
-            offset={globals.ScrollLink.offset}
-            duration={globals.ScrollLink.duration}
+            offset={globals.navbarHeight}
+            duration={globals.scrollDuration}
           >
-            <ImageComponent
-              src='/png-icons/scroll.png'
-              alt="Scroll"
+            <img
+              src='/icons/site-icons/scroll.png'
               className="h-12 lg:h-14 xl:h-16 hover:scale-110 opacity-45 hover:opacity-75 cursor-s-resize"
             />
           </ScrollLink>

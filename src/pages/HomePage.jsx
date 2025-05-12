@@ -1,9 +1,23 @@
 import React from 'react'
+import Hero from '@/components/homeSections/hero/Hero'
+import AboutMeHero from '@/components/homeSections/hero/AboutMeHero'
 
 export default function HomePage() {
   return (
     <div>
-      Hopme Page
+       <div id="hero"> 
+        <Hero/>
+        <AboutMeHero/>
+      </div>
+       <div id="featured-projects" className='bg-yellow-400  h-56'> 
+        Featured Projects
+      </div>
+       <div id="tech-stacks" className='bg-pink-400  h-56'> 
+        Tech Stacks
+      </div>
+       <div id="lets-connect" className='bg-red-900  h-56'> 
+        Call To Action
+      </div>
     </div>
   )
 }
@@ -73,83 +87,7 @@ export default HomePage = () => {
       <div >
   
         <div id="Hero" className='bg-black '> 
-          <BackgroundWrapper
-            background={background}
-            backgroundClass='w-screen min-h-[90vh] flex  items-center justify-center '
-            fixed
-            noise
-            // opacity={0.3}
-            blur={10} // cause jitter
-          >
-            <BackgroundWrapper 
-              background={background}
-              backgroundClass='h-full w-full  text-black rounded-full border-2 ' 
-              childClass='flex h-full w-full items-center px-40 justify-around gap-4 '
-              fixed
-            >
-              <div className='w-[65vw] flex  items-center justify-around gap-4'>
-  
-         
-              <div className='text-white '>
-              <MyBtn  children={"test"} callBack={()=>{
-                
-              }}/>
-         
-              <div>{" "}</div> <br />
-              <MyBtn sm children={"Projects"} callBack={()=>{
-                scroller.scrollTo("Projects", {
-                  smooth: true,
-                  duration: 2000,
-                  offset: -50,
-                });
-      
-              }}/>
-       
-              <div>{" "}</div> <br />
-              <MyBtn  
-                children={"See More"}
-                callBack={()=>{
-                // leave page to alberta tomorrow sute .cs
-                window.open("https://albertatomorrow.ca", "_blank");
-      
-                }}
-              />
-  
-  
-                <h2 className='whitespace-nowrap '>Chace Nielson</h2>
-                <ul className='bullet-list list-inside'>
-                  <li><h5>Software Engineer</h5></li>
-                  <li><h5>Full-Stack Developer</h5></li>
-                  <li><h5>Game Developer</h5></li>
-                </ul>
-  
-              </div>
-     
-              <div className=' grid grid-cols-2 gap-4 items-center py-10 '>
-                <ImageComponent
-                  src={"/portraits/pngs/chace-2.png"} alt={"aaaa"}
-                  className="  h-72 w-72   rounded-bl-[100px] object-cover rounded-xl"
-                  imgClass="object-top"
-                  />
-                  <div className='space-y-'>
-  
-                <ImageComponent
-                  src={"/backgrounds/pexels-4.jpg"} alt={"aaaa"}
-                  className="rounded-xl  h-54 object-cover"
-                  />
-                <ImageComponent
-                  src={"/backgrounds/pexels-1.jpg"} alt={"aaaa"}
-                  className="rounded-xl  h-54 object-cover"
-                  />
-                  </div>
-            
-  
-                </div>
-                </div>
-  
-            </BackgroundWrapper>
-  
-          </BackgroundWrapper>
+          
         
         </div>
         <div id="Projects" className='bg-white/90 h-56 border'> 

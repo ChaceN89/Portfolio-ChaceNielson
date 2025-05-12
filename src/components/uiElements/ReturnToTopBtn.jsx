@@ -59,8 +59,8 @@ export default function ReturnToTopBtn() {
           to={"Hero"}
           spy={true}
           smooth={true}
-          offset={globals.ScrollLink.offset}
-          duration={globals.ScrollLink.duration}
+          offset={globals.navbarHeight}
+          duration={globals.scrollDuration}
         >
           <div className="hidden sm:flex w-10 h-10 p-2 bg-secondary rounded-full opacity-15 hover:opacity-60 items-center justify-center">
             <FaArrowUp className="text-primary" />

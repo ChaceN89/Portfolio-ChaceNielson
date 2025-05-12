@@ -4,7 +4,7 @@
  * @desc Utility functions used across the application.
  * 
  * @created July 28, 2024
- * @updated Jan 26, 2025
+ * @updated May 12, 2025
  */
 
 /**
@@ -46,7 +46,31 @@ function removeParamsFromUrl() {
   window.history.replaceState(null, '', newPath);
 }
 
+/**
+ * Function to scroll to a specific element by its ID.
+ * This function uses the react-scroll library to perform smooth scrolling.
+ * @param {string} id - The ID of the element to scroll to.
+ */
+import { scroller } from "react-scroll";
+import { globals } from "@/data/globals";
 
-export { openPdf, shuffleArray, removeParamsFromUrl };
+function ScrollToID(id) {
+  const element = document.getElementById(id);
+  if (element) {
+    scroller.scrollTo(id, {
+      smooth: true, // ← THIS is the missing key
+      duration: globals.scrollDuration,
+      offset: globals.navbarHeight,
+    });
+  }
+}
 
+
+// Export default function utils() {
+export { 
+  openPdf, 
+  shuffleArray, 
+  removeParamsFromUrl, 
+  ScrollToID 
+};
 

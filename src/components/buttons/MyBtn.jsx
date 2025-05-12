@@ -49,7 +49,7 @@ export default function MyBtn({ children, callBack, sm}) {
   
     setTimeout(() => {
       setClicked(false);
-    }, 1000);
+    }, 1400);
   };
 
   return (

@@ -132,10 +132,10 @@ html, body {
 
 .outlined-text {
   text-shadow:
-    -1px -1px 0 black,  
-     1px -1px 0 black,
-    -1px  1px 0 black,
-     1px  1px 0 black;
+    -1.5px -1.5px 0 black,  
+     1.5px -1.5px 0 black,
+    -1.5px  1.5px 0 black,
+     1.5px  1.5px 0 black;
 }
 
 
