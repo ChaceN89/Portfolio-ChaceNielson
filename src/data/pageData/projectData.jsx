@@ -36,6 +36,12 @@ export const projectPageData = {
   description: "A collection of my projects showcasing a variety of skills and technologies.",
 };
 
+export const featuredProjects = [
+  
+  capstone,
+  musicPlayer,
+]
+
 export const projects = [
   library,
   scaleTheDepths,

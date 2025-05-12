@@ -13,13 +13,11 @@ import { ScrollToID } from '@/utils/utils';
 export default function Hero() {
 
 
-  const background = "/backgrounds/pexels-11.jpg"; // coffe desktop 
+  const background = "/backgrounds/hero.jpg"; // coffe desktop 
 
   const images = [
-    "/backgrounds/pexels-4.jpg",
-    "/backgrounds/pexels-5.jpg",
-
-
+    "/backgrounds/computer-1.jpg",
+    "/backgrounds/controller-1.jpg",
   ]
 
   const scrollToSection = (sectionId) => {

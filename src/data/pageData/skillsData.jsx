@@ -14,6 +14,7 @@ import { frontend } from '../techStacks/frontend';
 import { backend } from '../techStacks/backend';
 import { gameDesign } from '../techStacks/game-design';
 import { devOps } from '../techStacks/devOps';
+import { fullstack } from '../techStacks/full-stack';
 
 // Data for the skill page header
 export const skillPageData = {
@@ -27,6 +28,7 @@ export const techSkills = [
   frontend,
   backend,
   gameDesign,
-  devOps
+  devOps,
+  fullstack,
 ];
 

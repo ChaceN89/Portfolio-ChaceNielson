@@ -93,6 +93,6 @@ export const geoPredict = {
     IconLibrary.DATA_VISUALIZATION,
   ],
   externalLinks: [
-    { name: "Website", link: "http://136.159.140.62/", icon: IconLibrary.WORLD.icon },
+    // { name: "Website", link: "http://136.159.140.62/", icon: IconLibrary.WORLD.icon },
   ],
 };

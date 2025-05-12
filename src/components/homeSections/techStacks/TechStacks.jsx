@@ -12,56 +12,39 @@ import { gameDesign } from '@/data/techStacks/game-design'
 
 export default function TechStacks() {
 
-
-  return (
-    <div className='flex flex-col lg:flex-row w-screen text-white md:h-[100vh]'>
-      <BackgroundWrapper
-        background="/backgrounds/pexels-2.jpg"
-        backgroundClass="lg:w-1/2 relative  bg-cover min-h-[50vh] "
-        childClass="flex items-center justify-center"
-        noise
-        fixed
-      >
-        <BackgroundWrapper
-          background="/backgrounds/pexels-2.jpg"
-          backgroundClass=" m-10 rounded-[30px] relative  bg-cover  p-20 border-2 border-white/20 min-h-[80vh]"
-          childClass="flex items-center justify-center"
-          noise
-          blur={2}
-          fixed
-        >
-          <TechStackSection
-            title={"Web Dev"}
-            techStack={fullstack}
-          />
-        </BackgroundWrapper>
-      </BackgroundWrapper>
-      <BackgroundWrapper
-        background="/backgrounds/pexels-17.jpg"
-        backgroundClass="lg:w-1/2 relative  bg-cover min-h-[50vh] "
-        childClass="flex items-center justify-center"
-        noise
-        fixed
-      >
-        <BackgroundWrapper
-          background="/backgrounds/pexels-17.jpg"
-          backgroundClass=" m-10 rounded-[30px] relative  bg-cover  p-20 border-2 border-white/20 min-h-[80vh]"
-          childClass="flex items-center justify-center"
-          noise
-          blur={2}
-          fixed
-        >
-          <TechStackSection
-            title={"Game Dev"}
-            techStack={gameDesign}
-          />
-        </BackgroundWrapper>
-      </BackgroundWrapper>
-
-
+  return(
+    <div className='flex flex-col lg:flex-row w-screen '>
+      <Section
+        title={"Web Dev"}
+        techStack={fullstack}
+        background="/backgrounds/keyboard-1.jpg"
+        backgroundClass="bg-secondary/20 "
+      />
+      <Section
+        title={"Game Dev"}
+        techStack={gameDesign}
+        background="/backgrounds/controller-6.jpg"
+        textStyle = "text-primary outlined-text"
+      />
     </div>
   )
+
 }
 
-
-funcction
+function Section({ title, techStack, background, textStyle="text-secondary" }) {
+  return (
+    <BackgroundWrapper
+      background={background}
+      backgroundClass={`lg:w-1/2  p-10  `}
+      childClass={"flex items-center justify-center  " + textStyle}
+      noise
+      blur={1.5}
+    >
+      <TechStackSection 
+        title={title} 
+        techStack={techStack} 
+        description={techStack.description}
+      />
+    </BackgroundWrapper>
+  );
+}
