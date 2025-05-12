@@ -97,7 +97,7 @@ export default function BackgroundWrapper({
           style={{
             filter: 'url(#noiseFilter)',
             mixBlendMode: 'multiply',
-            opacity: 1,
+            opacity: 0.7,
           }}
         />
       )}

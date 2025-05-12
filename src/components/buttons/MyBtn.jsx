@@ -45,7 +45,7 @@ export default function MyBtn({ children, callBack, sm}) {
   
     setTimeout(() => {
       if (typeof callBack === 'function') callBack();
-    }, 500);
+    }, 300);
   
     setTimeout(() => {
       setClicked(false);

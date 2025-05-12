@@ -29,7 +29,7 @@ import Layout from './Layout';                                  // Main Layout C
 import Modal from './modal/Modal';                              // Global Modal Component 
 import ProjectModal from '@/pages/ProjectModal';                         // Project Modal Content
 import SpecializationModal from '@/pages/SpecializationModal';           // Specialization Modal Content
-import { skillParam, projectParam } from '@/data/globals';  // Modal Param names
+import { techStackParam, projectParam } from '@/data/globals';  // Modal Param names
 
 // Components - will removed once  I separae this pages components
 import ImageComponent from '@/components/uiElements/images/ImageComponent';
@@ -47,7 +47,7 @@ export default function AppRoutes() {
   // Get query parameters for Modal
   const params = new URLSearchParams(location.search); // Get the query parameters from the URL
   const projectID = params.get(projectParam);          // Get the project ID from the query parameters
-  const specializationID = params.get(skillParam);     // Get the specialization ID from the query parameters
+  const specializationID = params.get(techStackParam);     // Get the specialization ID from the query parameters
 
   // Get pathname for on change and navigation type
   const { pathname } = useLocation(); // Get the current location of Router

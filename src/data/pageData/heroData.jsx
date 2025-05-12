@@ -16,14 +16,14 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { projectParam, skillParam } from '../globals';
+import { projectParam, techStackParam } from '../globals';
 
 export const heroData = {
   top: "Hi, my name is",
   name: "CHACE NIELSON",
   description: (
     <p>
-      I’m a passionate <Link className="text-accent hover:underline" to={`?${skillParam}=devOps`}>Software Engineer</Link> who loves tackling projects, from <Link className="text-accent hover:underline" to={`?${skillParam}=frontend-development`}>Web Applications</Link> to <Link className="text-accent hover:underline" to={`?${skillParam}=game-development`}>Video Games</Link>. When I’m not coding, you’ll find me immersed in music or exploring the great outdoors.
+      I’m a passionate <Link className="text-accent hover:underline" to={`?${techStackParam}=devOps`}>Software Engineer</Link> who loves tackling projects, from <Link className="text-accent hover:underline" to={`?${techStackParam}=frontend-development`}>Web Applications</Link> to <Link className="text-accent hover:underline" to={`?${techStackParam}=game-development`}>Video Games</Link>. When I’m not coding, you’ll find me immersed in music or exploring the great outdoors.
     </p>
   ),
   

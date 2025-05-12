@@ -8,12 +8,6 @@
  */
 
 import IconLibrary from "../iconLibrary";
-import { cardGenerator } from "../projects/CardGenerator";
-import { glassGeckoGames } from "../projects/glassGecko";
-import { library } from "../projects/library";
-import { musicPlayer } from "../projects/musicPlayer";
-import { photoApp } from "../projects/photoApp";
-import { portfolio } from "../projects/portfolio";
 
 export const frontend = { 
   id: "frontend-development",
@@ -48,12 +42,5 @@ export const frontend = {
     IconLibrary.SEO,
     IconLibrary.DATA_VISUALIZATION,
   ],
-  relatedProjects: [
-    portfolio,
-    glassGeckoGames,
-    library,
-    photoApp,
-    cardGenerator,
-    musicPlayer
-  ]
+
 };

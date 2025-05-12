@@ -34,4 +34,4 @@ export const globals = {
 
 // for routing parameters - names to be used in the URL link (ex. to={`?${projectParam}=capstone`})
 export const projectParam = "project";
-export const skillParam = "specialization";
+export const techStackParam = "tech-stack";

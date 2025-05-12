@@ -54,6 +54,7 @@ function removeParamsFromUrl() {
 import { scroller } from "react-scroll";
 import { globals } from "@/data/globals";
 
+
 function ScrollToID(id) {
   const element = document.getElementById(id);
   if (element) {
@@ -66,11 +67,28 @@ function ScrollToID(id) {
 }
 
 
+/**
+ * Navigates to a modal route using a query parameter (e.g., ?specialization=ID).
+ * Useful for opening route-based modals while preserving the current path.
+ *
+ * @function openModal
+ * @param {string} type - The query parameter key (e.g., "specialization", "video").
+ * @param {string} id - The ID value to assign to the query parameter.
+ * @param {Function} navigate - The `navigate` function from `useNavigate()` (React Router).
+ * @param {object} location - The `location` object from `useLocation()` (React Router).
+ */
+function openModal({ type, id, navigate, location }) {
+  const currentPath = location.pathname;
+  navigate(`${currentPath}?${type}=${id}`);
+}
+
+
 // Export default function utils() {
 export { 
   openPdf, 
   shuffleArray, 
   removeParamsFromUrl, 
-  ScrollToID 
+  ScrollToID,
+  openModal 
 };
 

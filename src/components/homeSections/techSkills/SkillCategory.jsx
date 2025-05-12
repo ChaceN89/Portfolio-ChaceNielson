@@ -16,13 +16,13 @@ import React from 'react';
 import ElevateOnView from '../../animations/ElevateOnView';
 import MainSkills from './MainSkills';
 import { Link } from 'react-router-dom';
-import { skillParam } from '../../../data/globals';
+import { techStackParam } from '../../../data/globals';
 
 function SkillCategory({ category, index, hoverIndex, handleMouseEnter, handleMouseLeave }) {
   return (
     <ElevateOnView>
       <Link
-        to={`?${skillParam}=${category.id}`}
+        to={`?${techStackParam}=${category.id}`}
         className="block border-faint bg-frosted-glass"
       >
         <div 

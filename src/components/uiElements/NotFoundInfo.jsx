@@ -17,6 +17,7 @@ export default function NotFoundInfo({name}) {
 
   const navigate = useNavigate();
   const returnHome = () => {
+    // check to see if already home
     navigate('/');
   };
 

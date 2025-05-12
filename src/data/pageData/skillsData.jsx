@@ -10,10 +10,10 @@
  * @updated Aug 21, 2024
  */
 
-import { frontend } from '../skills/frontend';
-import { backend } from '../skills/backend';
-import { gameDesign } from '../skills/gameDesign';
-import { devOps } from '../skills/devOps';
+import { frontend } from '../techStacks/frontend';
+import { backend } from '../techStacks/backend';
+import { gameDesign } from '../techStacks/game-design';
+import { devOps } from '../techStacks/devOps';
 
 // Data for the skill page header
 export const skillPageData = {

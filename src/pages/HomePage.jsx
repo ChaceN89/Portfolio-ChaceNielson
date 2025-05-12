@@ -14,7 +14,7 @@ export default function HomePage() {
       <div id="featured-projects" className='bg-yellow-400  h-56'> 
         Featured Projects
       </div>
-      <div id="tech-stacks" className=''> 
+      <div id="tech-stacks"> 
         <TechStacks/>
       </div>
       <div id="lets-connect" className='bg-red-900  h-56'> 
