@@ -14,11 +14,11 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { techSkills, skillPageData } from '../../data/pageData/skillsData';
-// import SectionHeader from '../uiElements/SectionHeader';
-import SkillBoxContainer from '../uiElements/SkillBoxContainer';
-// import ProjectCard from '../homeSections/projects/ProjectCard';
-// import FadeTransition from '../animations/FadeTransition';
+import { techSkills, skillPageData } from '@/data/pageData/skillsData';
+// import SectionHeader from '@/components/uiElements/SectionHeader';
+import SkillBoxContainer from '@/components/uiElements/SkillBoxContainer';
+// import ProjectCard from '@/components/homeSections/projects/ProjectCard';
+// import FadeTransition from '@/components/animations/FadeTransition';
 
 export default function Specialization({ specializationID }) {
   const navigate = useNavigate();

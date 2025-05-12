@@ -16,28 +16,26 @@ import { Routes, Route, Navigate, useLocation, useNavigate, useNavigationType } 
 import { AnimatePresence, motion } from 'framer-motion';
 
 // Pages
-// import Home from '../pages/Home';
+import HomePage from '@/pages/HomePage';
 // import Gallery from '../pages/Gallery';
 // import Thanks from '../pages/Thanks';
 
 //Layout and  Modal Components
 import Layout from './Layout';                                  // Main Layout Component - nav, footer, outlet for main content
 import Modal from './modal/Modal';                              // Global Modal Component 
-import Project from '../pages/Project';                         // Project Modal Content
-import Specialization from '../pages/Specialization';           // Specialization Modal Content
-import { skillParam, projectParam } from '../../data/globals';  // Modal Param names
+import Project from '@/pages/Project';                         // Project Modal Content
+import Specialization from '@/pages/Specialization';           // Specialization Modal Content
+import { skillParam, projectParam } from '@/data/globals';  // Modal Param names
 
 // Components - will removed once  I separae this pages components
-import ImageComponent from '../uiElements/images/ImageComponent';
-import BackgroundWrapper from '../uiElements/images/BackgroundWrapper';
-import MediaFrame from '../uiElements/mediaFrame/MediaFrame';
-import MyBtn from '../buttons/MyBtn';
-import { Link as ScrollLink, scroller } from "react-scroll";
-
+import ImageComponent from '@/components/uiElements/images/ImageComponent';
+import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper';
+import MediaFrame from '@/components/uiElements/mediaFrame/MediaFrame';
+import MyBtn from '@/components/buttons/MyBtn';
+import { scroller } from "react-scroll";
 
 // Page Transition Duration Global
 const pageTransitionDuration = 0.6; // Duration of the page transition animation
-
 
 export default function AppRoutes() {
   const location = useLocation(); // Current location
@@ -85,7 +83,7 @@ export default function AppRoutes() {
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<Layout />}>
-            <Route index element={<PageTransition><TestHomePage name="Home" /></PageTransition>} />
+            <Route index element={<PageTransition><HomePage /></PageTransition>} />
 
             <Route path="/projects" element={<PageTransition><TestPage name="Projects" /></PageTransition>} />
             <Route path="/contact" element={<PageTransition><TestPage name="Contact" /></PageTransition>} />
