@@ -57,7 +57,7 @@ import ImageComponent from '../wrappers/ImageComponent';
 // data
 import { globals } from '../../data/globals';
 
-function ScrollWheel({ to = "CallToAction" }) {
+export default function ScrollWheelBtn({ to = "CallToAction" }) {
   // Check if the screen height is greater than 400px
   const isTallEnough = useMediaQuery({ query: '(min-height: 400px)' });
 
@@ -111,5 +111,3 @@ function ScrollWheel({ to = "CallToAction" }) {
     </div>
   );
 }
-
-export default ScrollWheel;

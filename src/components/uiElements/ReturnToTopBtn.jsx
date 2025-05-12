@@ -50,7 +50,7 @@ import Tooltip from './Tooltip';
  *
  * @returns {JSX.Element} The ReturnToTop button component.
  */
-function ReturnToTop() {
+export default function ReturnToTopBtn() {
   return (
     <div className="fixed bottom-2 right-2 z-10">
       <Tooltip text={"To Top"}>
@@ -70,5 +70,3 @@ function ReturnToTop() {
     </div>
   );
 }
-
-export default ReturnToTop;
