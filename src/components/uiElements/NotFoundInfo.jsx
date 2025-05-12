@@ -1,3 +1,13 @@
+/**
+ * @file NotFoundInfo.jsx
+ * @module NotFoundInfo
+ * @description A React component that displays a 404 Not Found message.
+ * It includes a button to return to the home page and a decorative hexagonal separator.
+ * 
+ * @author Chace Nielson
+ * @created  May 12th 2025
+ * @updated  May 12th 2025
+ */
 import React from 'react'
 import HexSeparator from '@/components/uiElements/hexSparator/HexSeparator'
 import MyBtn from '@/components/buttons/MyBtn'
@@ -14,20 +24,19 @@ export default function NotFoundInfo({name}) {
     <div className='flex flex-col items-center text-center text-primary'>
     
       <HexSeparator randomColors  rows={8} hexClass=' opacity-40' />
-        <div className="font-extrabold relative my-drop-shadow-lg outlined-text text-tertiary opacity-80 text-9xl">
+        <div className="font-extrabold relative my-drop-shadow-lg outlined-text text-accent opacity-80 text-9xl">
           404
         </div>
       
       <div className='space-y-2  flex flex-col items-center justify-center mt-10 text-secondary'>
 
-        <h3>Oops! You're off the map.</h3>
+        <h3>Uh-oh! You’ve reached uncharted code.</h3>
 
         <p>
-          The {name ? name : "page"} you’re looking for doesn’t exist or might’ve moved.
+          The {name ? name : "page"} you're looking for may be under construction or was moved during the last site refactor.
           <br />
-          But no worries — let’s get you back on track.
+          Head back home and explore some of my featured work instead.
         </p>
-    
 
         <MyBtn callBack={returnHome}  >Return Home</MyBtn>
       </div>
