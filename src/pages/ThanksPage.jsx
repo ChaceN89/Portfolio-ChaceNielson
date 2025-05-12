@@ -39,10 +39,11 @@
 import React, { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AiOutlineCheckCircle } from "react-icons/ai";
-import MyButton from '../buttons/MyButton';
-import BackgroundWrapper from '../wrappers/BackgroundWrapper';
+// import MyButton from '../buttons/MyButton';
+// import BackgroundWrapper from '../wrappers/BackgroundWrapper';
 
-function Thanks() {
+
+export default function ThanksPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -57,25 +58,26 @@ function Thanks() {
     navigate('/');
   };
 
+
   return (
-    <BackgroundWrapper
-      className="min-h-section-height h-full flex items-center justify-center"
-      src={"/png-backgrounds/detailed/range4-trim.png"}
-      lowResSrc={"/png-backgrounds/detailed/range4-trim-small.png"}
-      backgroundRepeat="repeat"
-      backgroundAttachment="scroll"
-      bgOpacity={40}
-    >
-      <div className="flex flex-col items-center justify-center space-y-5 bg-frosted-glass rounded-2xl max-w-lg border-faint">
-        <div className='flex gap-4 items-center'>
-          <AiOutlineCheckCircle size={100} />
-          <h1 className="text-4xl font-bold text-center">Thank You!</h1>
-        </div>
-        <p className='text-center'>I appreciate your interest and I will get back to you as soon as possible.</p>
-        <MyButton onClick={returnHome}>Home</MyButton>
-      </div>
-    </BackgroundWrapper>
+    <div>Tnaks Page</div>
+    // <BackgroundWrapper
+    //   className="min-h-section-height h-full flex items-center justify-center"
+    //   src={"/png-backgrounds/detailed/range4-trim.png"}
+    //   lowResSrc={"/png-backgrounds/detailed/range4-trim-small.png"}
+    //   backgroundRepeat="repeat"
+    //   backgroundAttachment="scroll"
+    //   bgOpacity={40}
+    // >
+    //   <div className="flex flex-col items-center justify-center space-y-5 bg-frosted-glass rounded-2xl max-w-lg border-faint">
+    //     <div className='flex gap-4 items-center'>
+    //       <AiOutlineCheckCircle size={100} />
+    //       <h1 className="text-4xl font-bold text-center">Thank You!</h1>
+    //     </div>
+    //     <p className='text-center'>I appreciate your interest and I will get back to you as soon as possible.</p>
+    //     {/* <MyButton onClick={returnHome}>Home</MyButton> */}
+    //   </div>
+    // </BackgroundWrapper>
   );
 }
 
-export default Thanks;

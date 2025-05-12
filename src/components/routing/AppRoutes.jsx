@@ -11,20 +11,24 @@
  * @updated Jan 23, 2025
  */
 
-import React, {useEffect, useRef, useState} from 'react';
-import { Routes, Route, Navigate, useLocation, useNavigate, useNavigationType } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import { Routes, Route, useLocation, useNavigate, useNavigationType } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
 // Pages
 import HomePage from '@/pages/HomePage';
-// import Gallery from '../pages/Gallery';
-// import Thanks from '../pages/Thanks';
+import AboutPage from '@/pages/AboutPage';
+import ContactPage from '@/pages/ContactPage';
+import ThanksPage from '@/pages/ThanksPage';
+import ProjectsPage from '@/pages/ProjectsPage';
+import NotFoundPage from '@/pages/NotFoundPage';
+ 
 
 //Layout and  Modal Components
 import Layout from './Layout';                                  // Main Layout Component - nav, footer, outlet for main content
 import Modal from './modal/Modal';                              // Global Modal Component 
-import Project from '@/pages/Project';                         // Project Modal Content
-import Specialization from '@/pages/Specialization';           // Specialization Modal Content
+import ProjectModal from '@/pages/ProjectModal';                         // Project Modal Content
+import SpecializationModal from '@/pages/SpecializationModal';           // Specialization Modal Content
 import { skillParam, projectParam } from '@/data/globals';  // Modal Param names
 
 // Components - will removed once  I separae this pages components
@@ -39,7 +43,6 @@ const pageTransitionDuration = 0.6; // Duration of the page transition animation
 
 export default function AppRoutes() {
   const location = useLocation(); // Current location
-  const navigate = useNavigate(); // Navigation for closing modal
 
   // Get query parameters for Modal
   const params = new URLSearchParams(location.search); // Get the query parameters from the URL
@@ -70,12 +73,12 @@ export default function AppRoutes() {
       {/* Modals */}
       {projectID && (
         <Modal> 
-          <Project projectName={projectID} />
+          <ProjectModal projectName={projectID} />
         </Modal>
       )}
        {specializationID && (
         <Modal > 
-          <Specialization specializationID={specializationID} />
+          <SpecializationModal specializationID={specializationID} />
         </Modal>
       )} 
 
@@ -85,11 +88,11 @@ export default function AppRoutes() {
           <Route path="/" element={<Layout />}>
             <Route index element={<PageTransition><HomePage /></PageTransition>} />
 
-            <Route path="/projects" element={<PageTransition><TestPage name="Projects" /></PageTransition>} />
-            <Route path="/contact" element={<PageTransition><TestPage name="Contact" /></PageTransition>} />
-            <Route path="/thanks" element={<TestBackgroundPage><TestPage name="Thanks" /></TestBackgroundPage>} />
-            <Route path="/about" element={<PageTransition><TestAboutPage name="About" /></PageTransition>} />
-            <Route path="*" element={<PageTransition><TestPage name="404 - Not Found" /></PageTransition>} />
+            <Route path="/projects" element={<PageTransition><ProjectsPage /></PageTransition>} />
+            <Route path="/about" element={<PageTransition><AboutPage/></PageTransition>} />
+            <Route path="/contact" element={<PageTransition><ContactPage/></PageTransition>} />
+            <Route path="/thanks" element={<TestBackgroundPage><ThanksPage/></TestBackgroundPage>} />
+            <Route path="*" element={<PageTransition><NotFoundPage/></PageTransition>} />
           </Route>
         </Routes>
       </AnimatePresence>     

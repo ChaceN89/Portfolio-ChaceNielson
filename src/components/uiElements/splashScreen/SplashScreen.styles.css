@@ -14,11 +14,13 @@
   0% {
     opacity: 1;
     filter: blur(0px);
+    transform: scale(1);
   }
 
   100% {
     opacity: 0;
     filter: blur(20px);
+    transform: scale(1.5);
   }
 }
 

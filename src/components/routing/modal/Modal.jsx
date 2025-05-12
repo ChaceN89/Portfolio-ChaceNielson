@@ -134,8 +134,9 @@ export default function Modal({ children }) {
 
             {/* Inner content */}
             <BackgroundWrapper
-              backgroundSm="/overlays/dots-1.png"
-              backgroundClass=" min-w-[40vw] min-h-[40vh] "
+              backgroundSm="/overlays/scratch-3.png"
+              backgroundClass=" min-w-[40vw] min-h-[40vh]"
+              opacity={0.3}
               noise
             >
               {/* Main content */}

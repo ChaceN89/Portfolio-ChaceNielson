@@ -17,6 +17,7 @@ import { useNavigate } from 'react-router-dom';
 import { techSkills, skillPageData } from '@/data/pageData/skillsData';
 // import SectionHeader from '@/components/uiElements/SectionHeader';
 import SkillBoxContainer from '@/components/uiElements/SkillBoxContainer';
+import NotFoundInfo from '@/components/uiElements/NotFoundInfo';
 // import ProjectCard from '@/components/homeSections/projects/ProjectCard';
 // import FadeTransition from '@/components/animations/FadeTransition';
 
@@ -31,14 +32,14 @@ export default function Specialization({ specializationID }) {
 
   // Redirect to home if no matching skill is found
   if (!skill) {
-    navigate('/');
-    return null;
+    return <NotFoundInfo  />;
   }
 
   // Combine topSkills and minorSkills for display
   const allSkills = skill.topSkills
     ? [...skill.topSkills, ...skill.minorSkills]
     : skill.topSkills;
+    
 
   return (
     <div className="text-primary">

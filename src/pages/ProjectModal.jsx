@@ -15,11 +15,11 @@ import { useNavigate } from 'react-router-dom';
 import { projects } from '@/data/pageData/projectData'; // Assuming you have a file with project data
 
 // components
-// import SectionHeader from '../uiElements/SectionHeader';
 import YouTubeEmbed from '@/components/homeSections/projects/YouTubeEmbed';
 import SkillBoxContainer from '@/components/uiElements/SkillBoxContainer';
 import ExternalLinks from '@/components/homeSections/projects/ExternalLinks';
 import ProjectImageCarousel from '@/components/homeSections/projects/ProjectImageCarousel';
+import NotFoundInfo from '@/components/uiElements/NotFoundInfo';
 
 export default function Project({ projectName }) {
   const navigate = useNavigate();
@@ -32,8 +32,7 @@ export default function Project({ projectName }) {
 
   // Redirect to home if no matching project is found
   if (!project) {
-    navigate('/');
-    return null;
+    return <NotFoundInfo name={<b>Project</b>} />;
   }
 
   // Get the full stack by combining the main stack and extended stack

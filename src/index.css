@@ -48,15 +48,15 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-title-text);
 }
 h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   font-weight: 700;
 }
 h2 {
-  font-size: 3.5rem;
+  font-size: 3.75rem;
   font-weight: 600;
 }
 h3 {
-  font-size: 3rem;
+  font-size: 3.25rem;
   font-weight: 500;
 }
 h4 {
@@ -126,6 +126,17 @@ html, body {
   filter: drop-shadow(2px 2px 1px var(--color-secondary));  
 }
 
+.my-drop-shadow-lg {
+  filter: drop-shadow(10px 10px 1px var(--color-secondary));
+}
+
+.outlined-text {
+  text-shadow:
+    -1px -1px 0 black,  
+     1px -1px 0 black,
+    -1px  1px 0 black,
+     1px  1px 0 black;
+}
 
 
 

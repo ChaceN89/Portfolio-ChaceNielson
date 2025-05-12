@@ -1,3 +1,15 @@
+import React from 'react'
+
+export default function HomePage() {
+  return (
+    <div>
+      Hopme Page
+    </div>
+  )
+}
+
+
+
 /**
  * @file HomePage.jsx
  * @module HomePage
@@ -14,13 +26,13 @@
  * @updated Jan 23, 2025
  */
 
-import React, { useEffect } from 'react';
-// Libraries
-import { useLocation } from 'react-router-dom';
-import { scroller } from 'react-scroll';
-import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper';
-import MyBtn from '@/components/buttons/MyBtn';
-import ImageComponent from '@/components/uiElements/images/ImageComponent';
+// import React, { useEffect } from 'react';
+// // Libraries
+// import { useLocation } from 'react-router-dom';
+// import { scroller } from 'react-scroll';
+// import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper';
+// import MyBtn from '@/components/buttons/MyBtn';
+// import ImageComponent from '@/components/uiElements/images/ImageComponent';
 
 // Data
 // import { globals } from '../data/globals';
@@ -37,7 +49,9 @@ import ImageComponent from '@/components/uiElements/images/ImageComponent';
 // import ProjectSection from '../components/homeSections/projects/ProjectSection';
 // import ContactForm from '../components/homeSections/contactForm/ContactForm';
 
-const HomePage = () => {
+/*
+
+export default HomePage = () => {
   const location = useLocation();
 
   useEffect(() => {
@@ -80,14 +94,7 @@ const HomePage = () => {
               <MyBtn  children={"test"} callBack={()=>{
                 
               }}/>
-              {/* <MyBtn  children={"Projects"} callBack={()=>{
-                scroller.scrollTo("Projects", {
-                  smooth: true,
-                  duration: 700,
-                  offset: -50,
-                });
-        
-              }}/> */}
+         
               <div>{" "}</div> <br />
               <MyBtn sm children={"Projects"} callBack={()=>{
                 scroller.scrollTo("Projects", {
@@ -158,7 +165,7 @@ const HomePage = () => {
         <div className='h-96'></div>
       </div>
     )
-  
+  */
 
   // return (
   //   <>
@@ -180,6 +187,6 @@ const HomePage = () => {
   //     <ReturnToTop />
   //   </>
   // );
-};
 
-export default HomePage;
+
+
