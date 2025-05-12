@@ -34,7 +34,7 @@ export default function Hero() {
   return (
     <BackgroundWrapper
       background={background}
-      backgroundClass='w-screen min-h-[90vh] flex  items-center justify-center relative '
+      backgroundClass='w-screen min-h-screen flex  items-center justify-center relative '
       childClass='relative'
       fixed
       noise
@@ -71,14 +71,14 @@ export default function Hero() {
               {images.map((src, index) => (
                 <div
                   key={index}
-                  className="overflow-hidden rounded-xl h-32 border-2 border-white/20 w-1/2 cursor-pointer"
+                  className="overflow-hidden rounded-xl h-44 border-2 border-white/20 w-1/2 cursor-pointer"
                   onClick={() => ScrollToID(`tech-stacks`)}
             
                 >
                   <ImageComponent
                     src={src}
                     alt={`Image ${index + 1}`}
-                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-120"
                   />
                 </div>
               ))}

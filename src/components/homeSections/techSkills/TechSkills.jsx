@@ -15,9 +15,9 @@ import React, { useState } from 'react';
 import {skillPageData, techSkills} from '../../../data/pageData/skillsData'; 
 
 // Components
-import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
+import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper';
 import SkillCategory from './SkillCategory';
-import SectionWrapper from '../../wrappers/SectionWrapper';
+// import SectionWrapper from '../../wrappers/SectionWrapper';
 
 export default function TechSkills() {
   // For which of the categories is currently hovered
@@ -32,11 +32,7 @@ export default function TechSkills() {
       backgroundSize = "contain"
       backgroundRepeat = "repeat"
     >
-      <hr/>
-      <SectionWrapper
-        title={skillPageData.title}
-        subtitle={skillPageData.description}
-      >
+
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-4'>
           {techSkills.map((category, index) => (
             <SkillCategory 
@@ -49,8 +45,6 @@ export default function TechSkills() {
             />
           ))}
         </div>
-      </SectionWrapper>
-      <hr />
     </BackgroundWrapper>
   );
 }

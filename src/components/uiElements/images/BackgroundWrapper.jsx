@@ -20,16 +20,27 @@
 import React, { useEffect, useState } from 'react';
 
 export default function BackgroundWrapper({ 
-  children, 
-  backgroundClass = "", 
-  childClass = "", 
-  overlay = null,
-  background, 
-  backgroundSm, 
-  fixed = false, 
-  blur = 0,
-  noise = false,
-  opacity = 1,
+  
+  children,  // the that will be in front of the background
+  overlay = null, // a component absolutly positioned over the background - options
+  
+  // Class for backgroudna and children
+  backgroundClass = "",  // the class specifically affecting the background - also contains the children div
+  childClass = "",  // the class affecting all the children
+  
+  // Srcs
+  background,  // the high-res image URL
+  backgroundSm,  // a low res image URL for blur preload - optional 
+  
+  // Fixed position settings
+  fixed = false,  // background is fixed in place
+  fixedHalf = false,
+  fixedSide = 'left', // or 'right'
+
+  // visual effects
+  blur = 0, // blur amount for the background
+  noise = false, // apply SVG noise filter 
+  opacity = 1,  // the opactity of the background
 }) {
   
   // Load state for the background image (high-res)
@@ -52,7 +63,7 @@ export default function BackgroundWrapper({
   useEffect(() => {
     const checkScreen = () => {
       setScreenSize({
-        allowFixed: window.innerWidth >= 640,
+        allowFixed: window.innerWidth >= 450,
         isLargeScreen: window.innerWidth >= 1024
       });
     };
@@ -72,6 +83,9 @@ export default function BackgroundWrapper({
     zIndex: 0,
     backgroundPosition: 'center',
   };
+
+
+
 
   return (
     <div className={`relative overflow-hidden ${backgroundClass}`}>
