@@ -15,7 +15,6 @@ const databaseIcons = {
   POSTGRESQL: { name: "PostgreSQL", svg_path: `${folder}/postgresql.svg`},
   MYSQL: { name: "MySQL", icon: GrMysql, color: '#01618A' },
   SQLITE: { name: "SQLite", svg_path: `${folder}/sqlite.svg` },
-
 };
 
 export default databaseIcons;

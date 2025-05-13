@@ -11,6 +11,8 @@ import { GoCodeReview } from "react-icons/go";
 import { ImGit } from "react-icons/im";
 import { SiRailway, SiRender, SiVercel } from "react-icons/si";
 import { SiAsana } from "react-icons/si";
+import { HiOutlineDocumentText } from "react-icons/hi";
+import { RiFlowChart } from "react-icons/ri";
 
 
 const folder = "devTools";
@@ -35,6 +37,10 @@ const devToolIcons = {
 
   AGILE_TOOLS: { name: "Agile Tools", svg_path: `${folder}/agile.svg` },  
   ASANA: { name: "Asana", icon: SiAsana, color: "black" },
+
+  DOCUMENTATION: { name: "Documentation", icon: HiOutlineDocumentText, color: "white" },
+  SOFTWARE_ARCHITECTURE: { name: "Software Architecture", icon: RiFlowChart, color: "white" },
 };
+
 
 export default devToolIcons;

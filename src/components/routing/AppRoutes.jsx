@@ -8,7 +8,7 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-26
- * @updated Jan 23, 2025
+ * @updated May 12th, 2025
  */
 
 import React, {useEffect, useState} from 'react';
@@ -30,13 +30,6 @@ import Modal from './modal/Modal';                              // Global Modal 
 import ProjectModal from '@/pages/ProjectModal';                         // Project Modal Content
 import SpecializationModal from '@/pages/SpecializationModal';           // Specialization Modal Content
 import { techStackParam, projectParam } from '@/data/globals';  // Modal Param names
-
-// Components - will removed once  I separae this pages components
-import ImageComponent from '@/components/uiElements/images/ImageComponent';
-import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper';
-import MediaFrame from '@/components/uiElements/mediaFrame/MediaFrame';
-import MyBtn from '@/components/buttons/MyBtn';
-import { scroller } from "react-scroll";
 
 // Page Transition Duration Global
 const pageTransitionDuration = 0.6; // Duration of the page transition animation
@@ -61,7 +54,7 @@ export default function AppRoutes() {
     if (navigationType !== "POP") { 
       timeout = setTimeout(() => {
         window.scrollTo(0, 0);
-      }, pageTransitionDuration*1000); // Page transition duration in milliseconds to sync with animation
+      }, pageTransitionDuration * 1000); // Page transition duration in milliseconds to sync with animation
     }
 
     return () => clearTimeout(timeout); // Clear the timeout on unmount
@@ -101,8 +94,11 @@ export default function AppRoutes() {
 }
 
 
+// Wrapper component for page transitions
+// This component wraps the page content and handles the animation transitions
 const PageTransition = ({ children }) => {
 
+  // Use the pathname to determine the current location
   const { pathname } = useLocation(); // Get the current location of Router as a mount key to reset the animation
   const [fadeOut, setFadeOut] = useState(false); // if the page is fading out or not
 

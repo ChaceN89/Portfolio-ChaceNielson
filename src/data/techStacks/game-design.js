@@ -22,9 +22,11 @@ export const gameDesign = {
     IconLibrary.BLENDER,
     IconLibrary.PLASTIC_SCM,
     IconLibrary.CSHARP,
-    IconLibrary.GITHUB,
     IconLibrary.PYTHON,
-    IconLibrary.GAME_DESIGN,
+    // IconLibrary.GAME_DESIGN,
+    IconLibrary.SOFTWARE_ARCHITECTURE,
+    IconLibrary.TEAM_COLLABORATION,
+    IconLibrary.DOCUMENTATION,
 
     // Odin Inspecotor 
     // collaboration

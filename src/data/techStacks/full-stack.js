@@ -35,7 +35,7 @@ export const fullstack = {
   otherTools: [
 
     {
-      categrory: "Frontend",
+      category: "Frontend",
       skills: [
         IconLibrary.REACT,
         IconLibrary.VITE,
@@ -49,7 +49,8 @@ export const fullstack = {
         IconLibrary.RESPONSIVE_DESIGN,
         IconLibrary.FRAMER_MOTION,
       ],
-    },{
+    },
+    {
       category: "Backend",
       skills: [
         IconLibrary.EXPRESSJS,
@@ -61,20 +62,53 @@ export const fullstack = {
         IconLibrary.POSTGRESQL,
         IconLibrary.DJANGO,
       ],
-    }, {
-      category: "DevOps & Infra",
+    }, 
+    {
+      category: "DevOps & CI/CD",
       skills: [
-        IconLibrary.AWS,
-        IconLibrary.S3,
-        IconLibrary.AUTHENTICATION,
-        IconLibrary.DOCKER,
         IconLibrary.CI_CD,
+        IconLibrary.DOCKER,
         IconLibrary.GIT,
         IconLibrary.GITHUB,
+        IconLibrary.CODE_REVIEWS,
+        IconLibrary.AUTOMATION,
+        IconLibrary.AGILE_TOOLS,
+      ],
+    },
+    {
+      category: "Cloud & Infrastructure",
+      skills: [
+        IconLibrary.AWS,
         IconLibrary.AMPLIFY,
+        IconLibrary.S3,
+        IconLibrary.RDS,
         IconLibrary.TERRAFORM,
         IconLibrary.VERCEL,
         IconLibrary.NETLIFY,
+        IconLibrary.CLOUD_DEPLOYMENT,
+      ],
+    },
+    {
+      category: "Authentication & Security",
+      skills: [
+        IconLibrary.AUTHENTICATION,
+        IconLibrary.JWT,
+        IconLibrary.OAUTH,
+      ],
+    },
+    
+    {
+      category: "Data & Analytics Tools",
+      skills: [
+        IconLibrary.STREAMLIT,
+        IconLibrary.PLOTLY_DASH,
+        IconLibrary.DATA_VISUALIZATION,
+        IconLibrary.JUPYTER,
+        IconLibrary.DATA_ANALYSIS,
+        IconLibrary.HADOOP,
+        IconLibrary.APACHE_SPARK,
+        IconLibrary.MACHINE_LEARNING,
+        IconLibrary.TENSORFLOW,
       ],
     }
   ],

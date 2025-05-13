@@ -36,7 +36,7 @@ export default function FooterContact({ noTitle = false, address = true }) {
         Email:{' '}
         <a
           href="mailto:chacen@shaw.ca"
-          className="text-blue-400 hover:underline"
+          className="text-tertiary-alt hover:underline"
         >
           chacen@shaw.ca
         </a>

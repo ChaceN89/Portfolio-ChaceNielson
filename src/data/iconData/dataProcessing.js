@@ -21,7 +21,7 @@ const dataProcessingIcons = {
   PLOTLY_DASH: { name: "Plotly Dash", svg_path: `${folder}/plotly-dash.svg` },
   JUPYTER: { name: "Jupyter", icon: SiJupyter, color: "#F37626" },
 
-    STREAMLIT: { name: "Streamlit", icon: SiStreamlit, color: "#FF4B4B" },
+  STREAMLIT: { name: "Streamlit", icon: SiStreamlit, color: "#FF4B4B" },
   
 };
 

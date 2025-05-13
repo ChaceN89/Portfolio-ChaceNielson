@@ -9,6 +9,7 @@ const folder = "designTools";
 
 const designToolIcons = {
   BLENDER: { name: "Blender", svg_path: `${folder}/blender.svg` },
+  // Gimp later
 };
 
 export default designToolIcons;

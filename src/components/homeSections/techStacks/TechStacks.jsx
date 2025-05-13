@@ -8,9 +8,14 @@ import TechStackSection from './TechStackSection'
 
 import { fullstack } from '@/data/techStacks/full-stack'
 import { gameDesign } from '@/data/techStacks/game-design'
+import IconList from '@/components/testing/IconList'
 
 
 export default function TechStacks() {
+
+  // return (
+  //   <IconList/>
+  // )
 
   return(
     <div className='flex flex-col lg:flex-row w-screen '>
