@@ -3,6 +3,8 @@ import Hero from '@/components/homeSections/hero/Hero'
 import AboutMeHero from '@/components/homeSections/hero/AboutMeHero'
 import TechSkills from '@/components/homeSections/techSkills/TechSkills'
 import TechStacks from '@/components/homeSections/techStacks/TechStacks'
+import FeaturedProjects from '@/components/homeSections/featuredProjects/FeaturedProjects'
+import LetsConnects from '@/components/homeSections/letsConnect/LetsConnects'
 
 export default function HomePage() {
   return (
@@ -11,14 +13,14 @@ export default function HomePage() {
         <Hero/>
         <AboutMeHero/>
       </div>
-      <div id="featured-projects" className='bg-yellow-400  h-56'> 
-        Featured Projects
+      <div id="featured-projects"> 
+        <FeaturedProjects/>
       </div>
       <div id="tech-stacks"> 
         <TechStacks/>
       </div>
-      <div id="lets-connect" className='bg-red-900  h-56'> 
-        Call To Action
+      <div id="lets-connect"> 
+        <LetsConnects/>
       </div>
     </div>
   )

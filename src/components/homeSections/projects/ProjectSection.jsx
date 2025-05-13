@@ -10,9 +10,9 @@
  * @updated Jan 26 2025
  */
 import React, { useState, useEffect } from 'react';
-import { projects, projectPageData } from '../../../data/pageData/projectData';
-import BackgroundWrapper from '../../wrappers/BackgroundWrapper';
-import SectionWrapper from '../../wrappers/SectionWrapper';
+import { projects, projectPageData } from '@/data/pageData/projectData';
+import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper';
+import SectionWrapper from '@/components/wrappers/SectionWrapper';
 import ProjectCard from './ProjectCard';
 import {
   getInitialVisibleCards,
@@ -20,7 +20,7 @@ import {
   saveToSessionStorage,
   addResizeListener,
   removeResizeListener,
-} from '../../../utils/projectFuncs';
+} from '@/utils/projectFuncs';
 
 function ProjectSection() {
   const [visibleCards, setVisibleCards] = useState(getInitialVisibleCards());
@@ -56,7 +56,7 @@ function ProjectSection() {
         title={projectPageData.title}
         subtitle={projectPageData.description}
       >
-        <div className='card-grid-wrapper'>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
           {visibleProjects.map((project, index) => (
             <ProjectCard key={index} project={project} />
           ))}

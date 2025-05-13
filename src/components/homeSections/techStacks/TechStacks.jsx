@@ -22,8 +22,9 @@ export default function TechStacks() {
       <Section
         title={"Web Dev"}
         techStack={fullstack}
-        background="/backgrounds/keyboard-1.jpg"
+        background="/backgrounds/computer-1.jpg"
         backgroundClass="bg-secondary/20 "
+        textStyle = "text-primary outlined-text"
       />
       <Section
         title={"Game Dev"}

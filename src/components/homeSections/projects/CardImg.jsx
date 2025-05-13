@@ -48,7 +48,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import ImageComponent from '../../wrappers/ImageComponent';
+import ImageComponent from '@/components/uiElements/images/ImageComponent';
 
 function CardImg({ isInitialLoad, isClicked, isHovered, projID, imgSrc, imgBlurhash }) {
   return (
