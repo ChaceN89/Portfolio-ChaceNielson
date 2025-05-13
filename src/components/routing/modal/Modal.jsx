@@ -96,8 +96,8 @@ export default function Modal({ children }) {
 
   return(
     <div 
-      className={`fixed inset-0 z-40  flex items-center justify-center duration-1000 transition-all 
-        ${showBackdrop && 'backdrop-blur-sm'}
+      className={`fixed inset-0 z-40 flex items-center justify-center duration-1000 transition-all 
+         ${showBackdrop ? 'backdrop-blur-sm' : 'hidden'} 
       `}
     >
       

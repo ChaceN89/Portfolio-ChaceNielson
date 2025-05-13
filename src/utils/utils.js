@@ -79,7 +79,12 @@ function ScrollToID(id) {
  */
 function openModal({ type, id, navigate, location }) {
   const currentPath = location.pathname;
-  navigate(`${currentPath}?${type}=${id}`);
+  const searchParams = new URLSearchParams(location.search);
+
+  if (searchParams.get(type) === id) return; // already open
+
+  searchParams.set(type, id);
+  navigate(`${currentPath}?${searchParams.toString()}`, { replace: true });
 }
 
 

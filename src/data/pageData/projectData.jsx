@@ -10,6 +10,7 @@
  * @updated Sept 05, 2024
  */
 
+import { albertaTomorrowHomepage } from "../projects/albertaTomorrow";
 import { geoPredict } from "../projects/geoPredict";
 import { capstone } from "../projects/capstone";
 import { musicPlayer } from "../projects/musicPlayer";
@@ -37,12 +38,14 @@ export const projectPageData = {
 };
 
 export const featuredProjects = [
-  
-  capstone,
-  musicPlayer,
+  albertaTomorrowHomepage,
+  glassGeckoGames,
+  scaleTheDepths,
+  library,
 ]
 
 export const projects = [
+  albertaTomorrowHomepage,
   library,
   scaleTheDepths,
   energyTomorrow,

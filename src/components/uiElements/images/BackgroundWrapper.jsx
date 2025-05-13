@@ -34,8 +34,6 @@ export default function BackgroundWrapper({
   
   // Fixed position settings
   fixed = false,  // background is fixed in place
-  fixedHalf = false,
-  fixedSide = 'left', // or 'right'
 
   // visual effects
   blur = 0, // blur amount for the background
@@ -84,9 +82,6 @@ export default function BackgroundWrapper({
     backgroundPosition: 'center',
   };
 
-
-
-
   return (
     <div className={`relative overflow-hidden ${backgroundClass}`}>
     
@@ -97,7 +92,7 @@ export default function BackgroundWrapper({
           style={{
             filter: 'url(#noiseFilter)',
             mixBlendMode: 'multiply',
-            opacity: 0.7,
+            opacity: 0.5,
           }}
         />
       )}

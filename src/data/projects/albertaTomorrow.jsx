@@ -37,10 +37,10 @@ export const albertaTomorrowHomepage = {
   blurb: short,
   description: long,
   images: [
-    { src: "abTomorrow-1.png", blurhash: "L8HeI3D4^H_4~B=sDj^*-BH;00%L" }, // Replace or add more images as needed
-    { src: "abTomorrow-2.png", blurhash: "L8HeI3D4^H_4~B=sDj^*-BH;00%L" }, // Replace or add more images as needed
-    { src: "abTomorrow-3.png", blurhash: "L8HeI3D4^H_4~B=sDj^*-BH;00%L" }, // Replace or add more images as needed
-    { src: "abTomorrow-4.png", blurhash: "L8HeI3D4^H_4~B=sDj^*-BH;00%L" }, // Replace or add more images as needed
+    { src: "abTomorrow-1.png", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
+    { src: "abTomorrow-2.png", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
+    { src: "abTomorrow-3.png", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
+    { src: "abTomorrow-4.png", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
   ],
   youtubeEmbed: null, // Add video if available
   mainStack: [
@@ -58,6 +58,6 @@ export const albertaTomorrowHomepage = {
     IconLibrary.DEPLOYMENT,
   ],
   externalLinks: [
-    { name: "Live Site", link: "https://albertatomorrow.ca/", icon: IconLibrary.LINK.icon },
+    { name: "Live Site", link: "https://albertatomorrow.ca/", icon: IconLibrary.WORLD.icon },
   ],
 };

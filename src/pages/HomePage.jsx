@@ -5,6 +5,8 @@ import TechSkills from '@/components/homeSections/techSkills/TechSkills'
 import TechStacks from '@/components/homeSections/techStacks/TechStacks'
 import FeaturedProjects from '@/components/homeSections/featuredProjects/FeaturedProjects'
 import LetsConnects from '@/components/homeSections/letsConnect/LetsConnects'
+import ProjectCarousel from '@/components/homeSections/hero/ProjectCarousel'
+
 
 export default function HomePage() {
   return (
@@ -12,6 +14,7 @@ export default function HomePage() {
       <div id="hero"> 
         <Hero/>
         <AboutMeHero/>
+        <ProjectCarousel/>
       </div>
       <div id="featured-projects"> 
         <FeaturedProjects/>
