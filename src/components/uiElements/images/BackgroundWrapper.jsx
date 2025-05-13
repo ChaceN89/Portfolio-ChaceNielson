@@ -20,6 +20,7 @@
 import React, { useEffect, useState } from 'react';
 
 export default function BackgroundWrapper({ 
+  id=null,
   
   children,  // the that will be in front of the background
   overlay = null, // a component absolutly positioned over the background - options
@@ -83,7 +84,7 @@ export default function BackgroundWrapper({
   };
 
   return (
-    <div className={`relative overflow-hidden ${backgroundClass}`}>
+    <div className={`relative overflow-hidden ${backgroundClass}`} id={id}>
     
       {/* SVG Filter for Noise */}
       {noise && (
