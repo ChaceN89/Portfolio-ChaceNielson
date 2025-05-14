@@ -44,7 +44,6 @@ function Section({ title, techStack, background, textStyle="text-secondary" }) {
       backgroundClass={`lg:w-1/2  p-10  `}
       childClass={"flex items-center justify-center  " + textStyle}
       noise
-      blur={1.5}
     >
       <TechStackSection 
         title={title} 

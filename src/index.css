@@ -124,7 +124,7 @@ html, body {
 
 .my-drop-shadow {
   /* filter: drop-shadow(1px 1px 1px black);   */
-  filter: drop-shadow(2px 2px 1px var(--color-secondary));  
+  filter: drop-shadow(2px 2px 0px var(--color-secondary));  
 }
 
 .my-drop-shadow-lg {

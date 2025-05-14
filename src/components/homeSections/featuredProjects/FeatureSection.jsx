@@ -2,9 +2,25 @@ import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper'
 import ImageComponent from '@/components/uiElements/images/ImageComponent';
 import ScrollWheelBtn from '@/components/uiElements/ScrollWheelBtn';
 import React from 'react'
+import MyBtn from '@/components/buttons/MyBtn';
+import { openModal } from '@/utils/utils';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-export default function FeatureSection({ project, background, isLast, nextId }) {
+export default function FeatureSection({ project, background, nextId }) {
   const { src, textColor, bgColor } = background;
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+
+  const handleProjectClick = (id) => {
+    openModal({
+      type: "project",
+      id:id,
+      navigate,
+      location,
+    });
+  }
 
   return (
     <BackgroundWrapper
@@ -13,8 +29,8 @@ export default function FeatureSection({ project, background, isLast, nextId }) 
       backgroundClass="w-screen"
       childClass="flex flex-col md:flex-row items-center justify-center gap-12 min-h-[80vh] px-8 py-24 relative"
       fixed
-      noise
-      overlay={!isLast && nextId ? <ScrollWheelBtn to={nextId} /> : null}
+      // noise
+      overlay={<ScrollWheelBtn to={nextId} />}
     >
       <div className="w-full md:w-1/2 flex justify-center" >
         <ImageComponent
@@ -33,6 +49,12 @@ export default function FeatureSection({ project, background, isLast, nextId }) 
             <div key={idx} className="text-3xl">{icon.icon}</div>
           ))}
         </div>
+        <MyBtn
+        sm
+          className="mt-4"
+          children={"Learn More"}
+          callBack={() => handleProjectClick(project.id)}
+          />
       </div>
     </BackgroundWrapper>
   );

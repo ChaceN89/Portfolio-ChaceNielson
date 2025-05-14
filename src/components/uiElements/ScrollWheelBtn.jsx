@@ -91,7 +91,7 @@ export default function ScrollWheelBtn({ to = "about-me" }) {
       <motion.div className="mb-4 z-10 pointer-events-auto" {...fadeInProps}>
         <motion.div {...bounceProps}>
           <ScrollLink
-            className="hover:cursor-pointer"
+            className="hover:cursor-pointer my-drop-shadow"
             to={to}
             spy={true}
             smooth={true}
