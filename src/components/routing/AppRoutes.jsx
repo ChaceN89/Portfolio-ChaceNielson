@@ -10,9 +10,8 @@
  * @created 2024-07-26
  * @updated May 12th, 2025
  */
-
 import React, {useEffect, useState} from 'react';
-import { Routes, Route, useLocation, useNavigate, useNavigationType } from 'react-router-dom';
+import { Routes, Route, useLocation, useNavigationType } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
 // Pages
@@ -23,12 +22,11 @@ import ThanksPage from '@/pages/ThanksPage';
 import ProjectsPage from '@/pages/ProjectsPage';
 import NotFoundPage from '@/pages/NotFoundPage';
  
-
 //Layout and  Modal Components
 import Layout from './Layout';                                  // Main Layout Component - nav, footer, outlet for main content
 import MyModal from './modal/MyModal';                              // Global Modal Component 
 import ProjectModal from '@/pages/ProjectModal';                         // Project Modal Content
-import SpecializationModal from '@/pages/SpecializationModal';           // Specialization Modal Content
+// import SpecializationModal from '@/pages/SpecializationModal';           // Specialization Modal Content
 import { techStackParam, projectParam } from '@/data/globals';  // Modal Param names
 
 // Page Transition Duration Global
@@ -40,7 +38,7 @@ export default function AppRoutes() {
   // Get query parameters for Modal
   const params = new URLSearchParams(location.search); // Get the query parameters from the URL
   const projectID = params.get(projectParam);          // Get the project ID from the query parameters
-  const specializationID = params.get(techStackParam);     // Get the specialization ID from the query parameters
+  // const specializationID = params.get(techStackParam);     // Get the specialization ID from the query parameters
 
   // Get pathname for on change and navigation type
   const { pathname } = useLocation(); // Get the current location of Router
@@ -63,17 +61,14 @@ export default function AppRoutes() {
   
   return (
     <div className='min-w-56 overflow-x-hidden z-'>
-      {/* Modals */}
-      {projectID && (
-        <MyModal> 
-          <ProjectModal projectName={projectID} />
-        </MyModal>
-      )}
-       {/* {specializationID && (
-        <Modal > 
-          <SpecializationModal specializationID={specializationID} />
-        </Modal>
-      )}  */}
+
+      <AnimatePresence>
+        {projectID && (
+          <MyModal key="project-modal">
+            <ProjectModal projectName={projectID} />
+          </MyModal>
+        )}
+      </AnimatePresence>
 
       {/* Main Routes */}
       <AnimatePresence mode="wait">
