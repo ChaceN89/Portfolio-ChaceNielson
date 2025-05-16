@@ -1,33 +1,81 @@
 /**
  * @file Modal.jsx
  * @module Modal
- * @desc A reusable modal component with smooth slide-in and slide-out animations using Framer Motion.
- *       Handles navigation logic, including closing on backdrop click, Escape key support, and route-based transitions.
- * 
- * @see {@link https://www.framer.com/motion/ | Framer Motion Documentation}
- * @see {@link https://reactrouter.com/ | React Router Documentation}
- * 
- * @example
- * <Modal>
- *   <div>Your Modal Content Here</div>
- * </Modal>
+ * @desc A simplified reusable modal component with a close button and backdrop support. No animations.
  * 
  * @author Chace Nielson
  * @created Jan 23, 2025
- * @updated Jan 23, 2025
+ * @updated May 16, 2025
  */
-import React, { useEffect, useState, useRef } from 'react';
-import { AnimatePresence } from 'framer-motion';
-import { useNavigate, useNavigationType } from 'react-router-dom';
+
+import React, { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { IoMdClose } from 'react-icons/io';
-import SlideTransition from '../../animations/SlideTransition';
-import BackgroundWrapper from '../../uiElements/images/BackgroundWrapper';
+import { removeParamsFromUrl } from '../../../utils/utils';
+import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper';
 
-import {removeParamsFromUrl} from '../../../utils/utils'; // Import your utility function to remove params from URL
+export default function MyModal({ children }) {
+  const navigate = useNavigate();
+  const backdropRef = useRef(null);
 
-import './Modal.styles.css'; // Import your CSS styles for the modal
+  const handleClose = () => {
+    navigate(removeParamsFromUrl(), { replace: true });
+  };
 
-export default function Modal({ children }) {
+  // Close on Escape key
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === 'Escape') handleClose();
+    };
+    window.addEventListener('keydown', handleEsc);
+    return () => window.removeEventListener('keydown', handleEsc);
+  }, []);
+
+  // Close on backdrop click
+  const handleBackdropClick = (e) => {
+    if (e.target === backdropRef.current) handleClose();
+  };
+
+  return (
+    <div
+      
+      onClick={handleBackdropClick}
+      className="fixed inset-0 z-40 flex items-center justify-center"
+    >
+      {/* Backdrop */}
+      <div 
+        ref={backdropRef}
+        className="absolute inset-0 bg-secondary/50 backdrop-blur-sm z-0 transition-opacity duration-500" 
+      />
+
+      {/* Modal */}
+      <BackgroundWrapper 
+        backgroundSm="/overlays/scratch-3.png"
+        backgroundClass=" min-w-[40vw] min-h-[40vh]  p-6  relative bg-white rounded-3xl shadow-2xl shadow-black "
+        opacity={0.2}
+        noise  
+      >
+        
+        {/* Close button */}
+        <button 
+          onClick={handleClose}
+          className="absolute top-2 right-2 hover:cursor-pointer hover:text-tertiary z-10" 
+        >
+          <IoMdClose size={34} />
+        </button>
+
+ 
+          {/* Main content */}
+          <div className="">
+             content
+          </div>
+      </BackgroundWrapper>
+    </div>
+  );
+}
+
+
+function Modal2({ children }) {
   const navigate = useNavigate();
   const navigationType = useNavigationType(); // Get the type of navigation
 

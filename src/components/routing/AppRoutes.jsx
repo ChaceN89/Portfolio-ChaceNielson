@@ -26,7 +26,7 @@ import NotFoundPage from '@/pages/NotFoundPage';
 
 //Layout and  Modal Components
 import Layout from './Layout';                                  // Main Layout Component - nav, footer, outlet for main content
-import Modal from './modal/Modal';                              // Global Modal Component 
+import MyModal from './modal/MyModal';                              // Global Modal Component 
 import ProjectModal from '@/pages/ProjectModal';                         // Project Modal Content
 import SpecializationModal from '@/pages/SpecializationModal';           // Specialization Modal Content
 import { techStackParam, projectParam } from '@/data/globals';  // Modal Param names
@@ -65,15 +65,15 @@ export default function AppRoutes() {
     <div className='min-w-56 overflow-x-hidden z-'>
       {/* Modals */}
       {projectID && (
-        <Modal> 
+        <MyModal> 
           <ProjectModal projectName={projectID} />
-        </Modal>
+        </MyModal>
       )}
-       {specializationID && (
+       {/* {specializationID && (
         <Modal > 
           <SpecializationModal specializationID={specializationID} />
         </Modal>
-      )} 
+      )}  */}
 
       {/* Main Routes */}
       <AnimatePresence mode="wait">
