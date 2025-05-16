@@ -42,7 +42,7 @@ export default function MyModal({ children }) {
   return (
     <div
       onClick={handleBackdropClick}
-      className="fixed inset-0 z-40 flex items-center justify-center"
+      className="fixed inset-0 z-35 flex items-center justify-center"
     >
       {/* Backdrop */}
       <motion.div
@@ -52,7 +52,7 @@ export default function MyModal({ children }) {
         exit={{ opacity: 0 }}
         delay={0.1}
         transition={{ duration: 0.6 }}
-        className="absolute inset-0 bg-black/70 z-0"
+        className="absolute inset-0 bg-black/85 z-0"
       />
 
       <SlideTransition

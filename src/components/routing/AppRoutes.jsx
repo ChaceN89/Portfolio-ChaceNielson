@@ -59,12 +59,29 @@ export default function AppRoutes() {
     
   }, [pathname]); // Activated when pathname changes
   
+
+  // Handle the modal state
+  const [showProjectModal, setShowProjectModal] = useState(false);
+
+  useEffect(() => {
+    // If i have a project id then show the project modal
+    if (projectID) {
+      setShowProjectModal(true);
+    }
+
+    // if project id is removed and the modal is open, close the modal imme
+    if (!projectID && showProjectModal) {
+      setShowProjectModal(false)    
+    }
+  }, [projectID]);
+
+
   return (
     <div className='min-w-56 overflow-x-hidden z-'>
 
       <AnimatePresence>
-        {projectID && (
-          <MyModal key="project-modal">
+        {showProjectModal && (
+          <MyModal >
             <ProjectModal projectName={projectID} />
           </MyModal>
         )}
