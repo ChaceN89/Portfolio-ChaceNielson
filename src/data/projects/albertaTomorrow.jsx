@@ -42,7 +42,7 @@ export const albertaTomorrowHomepage = {
     { src: "abTomorrow-3.png", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
     { src: "abTomorrow-4.png", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
   ],
-  youtubeEmbed: null, // Add video if available
+  youtubeEmbed: "https://www.youtube.com/watch?v=MHDH_m0agFM", // Add video if available
   mainStack: [
     IconLibrary.NEXT,
     IconLibrary.TAILWIND,

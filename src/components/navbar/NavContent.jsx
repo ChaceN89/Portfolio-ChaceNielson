@@ -38,7 +38,7 @@ export default function NavContent() {
     <>
       {/* Top nav container with blur and noise (overflow hidden ONLY here) */}
       <div
-        className="z-10 relative min-w-full h-16 px-4 flex flex-col justify-center transition-all duration-500 overflow-hidden bg-secondary/50 text-white"
+        className="z-10 relative min-w-full h-nav-height px-4 flex flex-col justify-center transition-all duration-500 overflow-hidden bg-secondary/50 text-primary"
         style={{
           backgroundColor: isAtTop && "transparent",
           backdropFilter: isAtTop ? "none" : "blur(6px)",

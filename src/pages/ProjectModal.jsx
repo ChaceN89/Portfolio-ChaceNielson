@@ -8,7 +8,7 @@
  * @updated Jan 26, 2025
  */
 //React
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // data
@@ -21,13 +21,20 @@ import ExternalLinks from '@/components/homeSections/projects/ExternalLinks';
 import ProjectImageCarousel from '@/components/homeSections/projects/ProjectImageCarousel';
 import NotFoundInfo from '@/components/uiElements/NotFoundInfo';
 
-export default function Project({ projectName }) {
-  const navigate = useNavigate();
+export default function ProjectModal({ projectName }) {
+  const [safeProjectName, setSafeProjectName] = useState(projectName);
 
-  // Find the project matching the projectID
+  useEffect(() => {
+    // Only update if a valid name is passed
+    if (projectName) {
+      setSafeProjectName(projectName);
+    }
+  }, [projectName]);
+
   const project = projects.find(
     (proj) =>
-      proj.id.toLowerCase().replace(/\s+/g, '-') === projectName.toLowerCase()
+      proj.id.toLowerCase().replace(/\s+/g, '-') ===
+      safeProjectName?.toLowerCase()
   );
 
   // Redirect to home if no matching project is found
@@ -54,7 +61,7 @@ export default function Project({ projectName }) {
           <div className='pb-2'>
             {project.description}
           </div>
-          <SkillBoxContainer stack={fullStack} isSmall />
+          {/* <SkillBoxContainer stack={fullStack} isSmall /> */}
         </div>
         <div className='lg:w-1/2'>
           <div className='hidden lg:block'>

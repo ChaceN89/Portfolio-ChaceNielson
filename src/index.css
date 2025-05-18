@@ -42,6 +42,8 @@
   /* === Tertiary (Warm tone for CTAs, highlights) === */
   --color-tertiary: rgb(255, 153, 102);            /* Burnt peach (alerts, highlights) */
   --color-tertiary-alt: rgb(255, 194, 161);        /* Light peach (backgrounds, hover) */
+
+  --spacing-nav-height: 4rem
 }
 
 /* Headers */
