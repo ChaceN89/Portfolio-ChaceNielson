@@ -54,7 +54,7 @@ export default function MyModal({ children }) {
         exit={{ opacity: 0 }}
         delay={0.1}
         transition={{ duration: 0.5 }}
-        className="absolute inset-0 bg-black/80 backdrop-blur-sm z-0 "
+        className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 "
       />
 
 
@@ -78,9 +78,8 @@ export default function MyModal({ children }) {
               delay={0.2}
             >
               <BackgroundWrapper 
-                backgroundSm="/overlays/scratch-3.png"
-                backgroundClass="relative bg-primary rounded-3xl border-2 border-secondary/80 "
-                opacity={0.2}
+                backgroundClass="relative rounded-3xl border-2 border-primary/80 bg-accent/50 "
+                opacity={0}
                 noise
               >
                 {/* Close button */}

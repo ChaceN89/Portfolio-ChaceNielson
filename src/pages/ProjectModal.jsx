@@ -50,9 +50,7 @@ export default function ProjectModal({ projectName }) {
       <div className='space-y-1'>
         <h2 className='font-bold'>{project.name}</h2>
         <p className='text-darken'>{project.blurb}</p>
-        <div className='h-48 border'></div>
-        <div className='h-48 border'></div>
-        <div className='h-48 border'></div>
+
       </div>
       <ExternalLinks externalLinks={project.externalLinks} />
 
