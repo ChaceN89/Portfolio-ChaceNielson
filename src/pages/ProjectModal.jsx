@@ -47,7 +47,13 @@ export default function ProjectModal({ projectName }) {
 
   return (
     <div  className="text-primary">
-      {/* <SectionHeader title={project.name} subtitle={project.blurb} /> */}
+      <div className='space-y-1'>
+        <h2 className='font-bold'>{project.name}</h2>
+        <p className='text-darken'>{project.blurb}</p>
+        <div className='h-48 border'></div>
+        <div className='h-48 border'></div>
+        <div className='h-48 border'></div>
+      </div>
       <ExternalLinks externalLinks={project.externalLinks} />
 
       <hr className="border-primary border-opacity-60 mb-4" />

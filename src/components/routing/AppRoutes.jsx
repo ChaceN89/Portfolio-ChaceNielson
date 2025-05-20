@@ -24,7 +24,7 @@ import NotFoundPage from '@/pages/NotFoundPage';
  
 //Layout and  Modal Components
 import Layout from './Layout';                                  // Main Layout Component - nav, footer, outlet for main content
-import MyModal from './modal/MyModal';                              // Global Modal Component 
+import MyModal from './MyModal';                              // Global Modal Component 
 import ProjectModal from '@/pages/ProjectModal';                         // Project Modal Content
 // import SpecializationModal from '@/pages/SpecializationModal';           // Specialization Modal Content
 import { techStackParam, projectParam } from '@/data/globals';  // Modal Param names
