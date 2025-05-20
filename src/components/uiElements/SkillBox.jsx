@@ -32,18 +32,17 @@
  *     </div>
  *   );
  * }
-
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated 2024-08-14
+ * @updated May 20th, 2025
  */
 import React from 'react';
 import ShowIcon from './ShowIcon';
 
 const SkillBox = ({ skill, useWhiteText = false }) => {
   return (
-    <div className="flex flex-col items-center p-2 border border-primary border-opacity-80 rounded-md shadow-md shadow-primary bg-secondary backdrop-blur-sm bg-opacity-20">
+    <div className="flex flex-col items-center justify-center p-2.5 bg-white/20 border border-primary/60 rounded-lg shadow-2xl hover:shadow-sm">
       <ShowIcon skill={skill} size="2.5rem" useWhiteText={useWhiteText} />
       <p className="mt-2 text-center text-sm">{skill.name}</p>
     </div>

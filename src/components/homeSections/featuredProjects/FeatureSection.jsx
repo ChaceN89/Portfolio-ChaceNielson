@@ -44,17 +44,17 @@ export default function FeatureSection({ project, background, nextId }) {
       <div className={`md:w-1/2 space-y-4 rounded-[50px] w-10  ${bgColor} ${textColor} p-8`}>
         <h2 className="text-4xl font-bold">{project.name}</h2>
         <p className="text-xl opacity-90">{project.blurb}</p>
-        <div className="flex flex-wrap gap-2 pt-4">
+        {/* <div className="flex flex-wrap gap-2 pt-4">
           {project.mainStack?.map((icon, idx) => (
             <div key={idx} className="text-3xl">{icon.icon}</div>
           ))}
-        </div>
+        </div> */}
         <MyBtn
-        sm
-          className="mt-4"
-          children={"Learn More"}
+          sm
           callBack={() => handleProjectClick(project.id)}
-          />
+        >
+          Learn More
+        </MyBtn>
       </div>
     </BackgroundWrapper>
   );

@@ -15,11 +15,11 @@ import { useNavigate } from 'react-router-dom';
 import { projects } from '@/data/pageData/projectData'; // Assuming you have a file with project data
 
 // components
-import YouTubeEmbed from '@/components/homeSections/projects/YouTubeEmbed';
 import SkillBoxContainer from '@/components/uiElements/SkillBoxContainer';
 import ExternalLinks from '@/components/homeSections/projects/ExternalLinks';
 import ProjectImageCarousel from '@/components/homeSections/projects/ProjectImageCarousel';
 import NotFoundInfo from '@/components/uiElements/NotFoundInfo';
+import MediaFrame from '@/components/uiElements/mediaFrame/MediaFrame';
 
 export default function ProjectModal({ projectName }) {
   const [safeProjectName, setSafeProjectName] = useState(projectName);
@@ -58,22 +58,39 @@ export default function ProjectModal({ projectName }) {
 
       {/* Content */}
       <div className='flex  flex-col lg:flex-row gap-4'>
+
         <div className='lg:w-1/2'>
           <div className='black lg:hidden'>
-            <YouTubeEmbed youtubeEmbed={project.youtubeEmbed} />
+    
+            <DisplayVideo project={project} />
+            
           </div>
           <div className='pb-2'>
             {project.description}
           </div>
-          {/* <SkillBoxContainer stack={fullStack} isSmall /> */}
+          <SkillBoxContainer stack={fullStack} isSmall />
         </div>
         <div className='lg:w-1/2'>
           <div className='hidden lg:block'>
-            <YouTubeEmbed youtubeEmbed={project.youtubeEmbed} />
-          </div>
+            <DisplayVideo project={project} />
+          </div>  
           <ProjectImageCarousel images={project.images} id={project.id} title={project.name} hidePhotos={project.hidePhotos} />
         </div>
       </div>
     </div>
   );
+}
+
+
+// display for the video portion of the project modal
+function DisplayVideo({project}){
+  if(!project.video || !project.video.youtubeID) return null // display nothing
+  return(
+    <div className='pb-4'>
+      <MediaFrame
+        thumbnail={project.video.thumbnail}
+        videoId={project.video.youtubeID} 
+      />
+    </div>
+  )
 }

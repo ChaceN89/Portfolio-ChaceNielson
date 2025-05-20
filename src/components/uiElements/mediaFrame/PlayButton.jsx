@@ -29,12 +29,12 @@ export default function PlayButton({ videoLoaded, handlePlayClick, canPlayVideo,
     <div className={`absolute inset-0 `} >
       <div
         className={`p-4 flex items-end justify-start inset-0 z-30 h-full w-full group
-          ${isDisabled ? 'hover:cursor-progress  bg-secondary-alt/40' : 'hover:cursor-pointer hover:bg-primary-alt/10'}
+          ${isDisabled ? 'hover:cursor-progress  bg-secondary-alt/40' : 'hover:cursor-pointer hover:bg-primary-alt/20'}
         `}
         onClick={isDisabled ? undefined : handlePlayClick} // ✅ block click while loading
       >
         <div className={`
-          bg-white/10 group-hover:bg-black/50 text-black group-hover:text-white 
+          bg-white/50 group-hover:bg-black/50 text-black group-hover:text-white 
           border-black/40 group-hover:border-white/20
           backdrop-blur-lg px-6 py-3 rounded-full font-semibold shadow-lg transition border 
           ${isDisabled && 'pointer-events-none' }

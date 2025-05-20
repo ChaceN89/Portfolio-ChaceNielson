@@ -78,6 +78,7 @@ export default function MyModal({ children }) {
               delay={0.2}
             >
               <BackgroundWrapper 
+              
                 backgroundClass="relative rounded-3xl border-2 border-primary/80 bg-accent/50 "
                 opacity={0}
                 noise

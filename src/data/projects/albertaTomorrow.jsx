@@ -10,6 +10,7 @@
  * @updated May 12, 2025
  */
 
+import { Thumbnail } from "react-pdf";
 import IconLibrary from "../iconLibrary";
 import { BoldSpan } from "@/components/uiElements/InLineText";
 
@@ -29,20 +30,25 @@ const long = (
   </div>
 );
 
+const proj_id = "alberta-tomorrow-homepage";
+
 export const albertaTomorrowHomepage = {
   starred: true,
-  id: "alberta-tomorrow-homepage",
+  id:proj_id,
   name: <>Alberta Tomorrow Homepage</>,
   tag: "Education",
   blurb: short,
   description: long,
+  video:{
+    thumbnail:"/projects/"+proj_id+'/abTomorrow-0.jpg',
+    youtubeID: "MHDH_m0agFM", // Add video if available
+  },
   images: [
     { src: "abTomorrow-1.png", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
     { src: "abTomorrow-2.png", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
     { src: "abTomorrow-3.png", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
     { src: "abTomorrow-4.png", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
   ],
-  youtubeEmbed: "https://www.youtube.com/watch?v=MHDH_m0agFM", // Add video if available
   mainStack: [
     IconLibrary.NEXT,
     IconLibrary.TAILWIND,
@@ -51,11 +57,11 @@ export const albertaTomorrowHomepage = {
   extendedStack: [
     IconLibrary.FRAMER_MOTION,
     IconLibrary.REACT,
-    IconLibrary.UI_UX,
-    IconLibrary.EDUCATION,
+    // IconLibrary.UI_UX,
+    // IconLibrary.EDUCATION,
     IconLibrary.SIMULATION,
     IconLibrary.SEO,
-    IconLibrary.DEPLOYMENT,
+    // IconLibrary.DEPLOYMENT,
   ],
   externalLinks: [
     { name: "Live Site", link: "https://albertatomorrow.ca/", icon: IconLibrary.WORLD.icon },

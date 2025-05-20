@@ -74,7 +74,7 @@ function ShowIcon({ skill, size = "2rem", useWhiteText = false, diableMag=false,
         {IconComponent ? (
           <IconComponent style={iconStyle} />
         ) : (
-          <img src={`/icons/svg-icons/${skill.svg_path}`} alt={skill.name} style={imgStyle} />
+          <img src={`/icons/svg-icons/${skill.svg_path}`} alt={skill.name} style={imgStyle}  />
         )}
       </div>
     </Magnetic>

@@ -38,6 +38,19 @@ import ImageComponent from "../images/ImageComponent";
 import { useInView } from "react-intersection-observer";
 import { pauseOtherVideos, unmountYouTubePlayer } from "../../../utils/youtubePlayerUtils";
 
+
+// Utility function to extract the YouTube video ID from a URL
+// export function extractYouTubeId(url) {
+//   try {
+//     const regExp = /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?/\s]{11})/i;
+//     const match = url.match(regExp);
+//     return match && match[1];
+//   } catch {
+//     return ""; // Return empty string if URL is invalid
+//   }
+// }
+
+
 export default function MediaFrame({
   videoId,
   thumbnail,
@@ -59,7 +72,11 @@ export default function MediaFrame({
 
   const handleVideoReady = (event) => {
     playerRef.current = event.target;
-    setVideoLoaded(true);
+    
+    // Delay setting videoLoaded to prevent premature clicks
+    setTimeout(() => {
+      setVideoLoaded(true);
+    }, 300); // 100–150ms is usually enough; you can adjust as needed
   };
 
   const myOnPlay = () => {
@@ -100,20 +117,22 @@ export default function MediaFrame({
     };
   }, []);
 
+
+
   if (!videoId) return null;
 
   return (
-    <div className={`w-full max-w-4xl mx-auto space-y-2 text-inherit`}>
+    <div className={`w-full max-w-4xl mx-auto space-y-2 text-inherit `}>
       {title && <h3 className="text-xl font-semibold">{title}</h3>}
 
-      <div ref={ref} className={`relative overflow-hidden ${className}`}>
+      <div ref={ref} className={`relative overflow-hidden rounded-2xl ${className}`}>
         {(inView || preload) && (
           <>
             {thumbnail && (!videoLoaded || !videoIsPlaying) && (
               <ImageComponent
                 src={thumbnail}
                 alt={alt}
-                className="w-full h-full"
+                className="w-full h-full "
               />
             )}
 
