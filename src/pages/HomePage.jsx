@@ -18,7 +18,6 @@ export default function HomePage() {
       </div>
       <div id="featured-projects"> 
         <FeaturedProjects/>
-        <ProjectCarousel/>
       </div>
       <div id="tech-stacks"> 
         <TechStacks/>
