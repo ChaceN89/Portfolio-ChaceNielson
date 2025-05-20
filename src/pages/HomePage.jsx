@@ -15,11 +15,10 @@ export default function HomePage() {
         <Hero/>
 
         <AboutMeHero/>
-
-        {/* <ProjectCarousel/> */}
       </div>
       <div id="featured-projects"> 
         <FeaturedProjects/>
+        <ProjectCarousel/>
       </div>
       <div id="tech-stacks"> 
         <TechStacks/>
