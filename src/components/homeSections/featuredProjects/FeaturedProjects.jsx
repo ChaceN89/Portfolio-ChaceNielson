@@ -14,10 +14,10 @@ export default function FeaturedProjects() {
 
   // Light
   const backgrounds = [
-    {src: "/backgrounds/light-accent.jpg", textColor: "text-primary", bgColor: "bg-accent/40"},
-    {src: "/backgrounds/light-primary.jpg", textColor: "text-secondary", bgColor: "bg-primary/30"},
-    {src: "/backgrounds/light-secondary.jpg", textColor: "text-primary", bgColor: "bg-secondary/40"},
-    {src: "/backgrounds/light-tertiary.jpg", textColor: "text-secondary", bgColor: "bg-tertiary/20"},
+    {src: "/backgrounds/light-accent.jpg", textColor: "text-primary outlined-text", bgColor: "bg-accent/0"},
+    {src: "/backgrounds/light-primary.jpg", textColor: "text-secondary", bgColor: "bg-primary/0"},
+    {src: "/backgrounds/light-secondary.jpg", textColor: "text-primary outlined-text", bgColor: "bg-secondary/0"},
+    {src: "/backgrounds/light-tertiary.jpg", textColor: "text-secondary", bgColor: "bg-tertiary/0"},
   ]
 
   return (

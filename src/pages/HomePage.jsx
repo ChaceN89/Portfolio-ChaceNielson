@@ -13,7 +13,9 @@ export default function HomePage() {
     <div>
       <div id="hero"> 
         <Hero/>
+
         <AboutMeHero/>
+
         {/* <ProjectCarousel/> */}
       </div>
       <div id="featured-projects"> 

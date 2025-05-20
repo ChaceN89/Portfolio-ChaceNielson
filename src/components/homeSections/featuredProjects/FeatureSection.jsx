@@ -29,24 +29,26 @@ export default function FeatureSection({ project, background, nextId }) {
     offset: ['start end', 'end start'], // top of section hits bottom of viewport → bottom hits top
   });
 
-  // Optional: Transform scrollYProgress (0 to 1) into -1 to 1 centered range
+  // Transform scrollYProgress (0 to 1) into -1 to 1 centered range
   const centeredScroll = useTransform(scrollYProgress, [0, 0.5, 1], [-1, 0, 1]);
 
-
+  // Constants for enter and exit distances for all animations
   const enterDis = -0.2
-  const exitDis = 0.35
+  const exitDis = 0.3
 
   // Image animations
-  const imageX = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], ['-50%', '0%', '0%', '0%', '-50%']);
+  const imageX = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], ['25%', '0%', '0%', '0%', '25%']);
   const imageOpacity = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], [0, 1, 1, 1, 0.2]);
   const imageRotate = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], ['-10eg', '0deg', '0deg', '0deg', '10deg']);
   const imageY = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], ['100%', '0%', '0%', '0%', '-100%']);
+  const imageScale = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], [0.8, 1, 1, 1, 0.8]);
+
 
 
   // Text section aniamtions
   const textOpacity = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], [0, 1, 1, 1, 0]);
   const textY = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], ['150%', '0%', '0%', '0%', '-100%']);
-
+  const textScale = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], [0.8, 1, 1, 1, 0.8]);
 
 
 
@@ -62,32 +64,29 @@ export default function FeatureSection({ project, background, nextId }) {
         overlay={<ScrollWheelBtn to={nextId} />}
       >
 
-        {/* left side Image */}
         <motion.div
-          className="w-full md:w-1/2 flex justify-center"
-          style={{ x: imageX, y: imageY, opacity: imageOpacity, rotate: imageRotate }}
+          className={` text-right w-full md:w-1/2 space-y-4 ${bgColor} ${textColor}  p-4 `}
+          style={{ opacity: textOpacity, y: textY, scale: textScale }}
         >
-          <ImageComponent
-            src={`${project.thumbnail.src}`}
-            alt={project.name}
-            blurHash={project.thumbnail.blurhash}
-            className="rounded-xl  h-96 w-[30rem] max-w-[90vw] object-cover border-2 border-white "
-          />
-        </motion.div>
-
-        {/* Right side  */}
-        <motion.div
-          className={`w-full md:w-1/2 space-y-4 rounded-[50px]  ${bgColor} ${textColor} p-4 border`}
-          style={{ opacity: textOpacity, y: textY }}
-          transition={{ type: "spring", stiffness: 80, damping: 18 }}
-        >
-
-          <h2 className="text-4xl font-bold">{project.name}</h2>
+          <h2 className="text-4xl font-bold ">{project.name}</h2>
           <p className="text-xl opacity-90 italic">{project.blurb}</p>
 
           <MyBtn sm callBack={() => handleProjectClick(project.id)}>
             Learn More
           </MyBtn>
+        </motion.div>
+
+
+        <motion.div
+          className="w-full md:w-1/2 flex justify-center"
+          style={{ x: imageX, y: imageY, opacity: imageOpacity, rotate: imageRotate, scale: imageScale }}
+        >
+          <ImageComponent
+            src={`${project.thumbnail.src}`}
+            alt={project.name}
+            blurHash={project.thumbnail.blurhash}
+            className="rounded- h-96 w-[35rem] rounded-xl max-w-[90vw] object-cover border border-white shadow-[0_0_30px_rgba(255,255,255,0.1)] "
+          />
         </motion.div>
 
       </BackgroundWrapper>
