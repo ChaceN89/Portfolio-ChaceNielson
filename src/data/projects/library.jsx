@@ -31,13 +31,18 @@ const long = (
     </p>
   </div>
 );
+const proj_id = "library";
 
 export const library = {
-  id: "library",
+  id: proj_id,
   name: "PageFlow Library",
   tag: "Full-Stack",
   blurb: short,
   description: long,
+  thumbnail:{
+    src: "/projects/" + proj_id + "/library6.jpg",
+    blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw",
+  },
   images: [
     { src: "library5.jpg", blurhash: "L8Pj4700D$?H004.D%Mx8_~q%MIV" },
     { src: "library0.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },

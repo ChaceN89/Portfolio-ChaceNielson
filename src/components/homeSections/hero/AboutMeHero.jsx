@@ -18,7 +18,14 @@ export default function AboutMeHero() {
   return (
     <div id="about-me" className="flex flex-col md:flex-row items-center justify-center gap-10 p-20 text-secondary">
       
-      <div className=' min-w-48 lg:max-w-60  overflow-hidden rounded-xl rounded-bl-[100px] rounded-tr-[100px] flex justify-center'>
+      <div className=' 
+      min-w-48 lg:max-w-60  
+      overflow-hidden 
+      rounded-xl 
+      rounded-bl-[100px] hover:rounded-bl-xl
+      rounded-tr-[100px] hover:rounded-tr-xl
+      transition-all duration-200 ease-in-out
+       flex justify-center'>
 
         <ImageComponent
           src="/portraits/pngs/chace-2.png"

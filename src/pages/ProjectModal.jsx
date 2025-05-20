@@ -5,11 +5,10 @@
  * 
  * @author Chace Nielson
  * @created Jan 26, 2025
- * @updated Jan 26, 2025
+ * @updated May 20th, 2025
  */
 //React
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 
 // data
 import { projects } from '@/data/pageData/projectData'; // Assuming you have a file with project data
@@ -84,12 +83,12 @@ export default function ProjectModal({ projectName }) {
 
 // display for the video portion of the project modal
 function DisplayVideo({project}){
-  if(!project.video || !project.video.youtubeID) return null // display nothing
+  if(!project.youtubeID ) return null // display nothing
   return(
     <div className='pb-4'>
       <MediaFrame
-        thumbnail={project.video.thumbnail}
-        videoId={project.video.youtubeID} 
+        thumbnail={project.thumbnail.src}
+        videoId={project.youtubeID} 
       />
     </div>
   )

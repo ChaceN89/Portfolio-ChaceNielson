@@ -44,12 +44,18 @@ const long = (
   </div>
 );
 
+const proj_id = "scale-the-depths";
+
 export const scaleTheDepths = {
-  id: "scale-the-depths",
+  id: proj_id,
   name: "Scale The Depths",
   tag: "Game",
   blurb: short,
   description: long,
+  thumbnail:{
+    src: "/projects/" + proj_id + "/scaleTheDepths1.jpg",
+    blurhash: "LaJuWDA0SdTLuPIUwbt8buRPtSoz",
+  },
   images: [
     { src: "scaleTheDepths1.jpg", blurhash: "LaJuWDA0SdTLuPIUwbt8buRPtSoz" },
     { src: "scaleTheDepths2.jpg", blurhash: "LoGKwfoexZI@.TjYn$S54;WAM{t7" },

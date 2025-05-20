@@ -39,15 +39,16 @@ export const albertaTomorrowHomepage = {
   tag: "Education",
   blurb: short,
   description: long,
-  video:{
-    thumbnail:"/projects/"+proj_id+'/abTomorrow-0.jpg',
-    youtubeID: "MHDH_m0agFM", // Add video if available
+  thumbnail:{
+    src: "/projects/" + proj_id + "/abTomorrow-0.jpg",
+    blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ",
   },
+  youtubeID: "MHDH_m0agFM", // Add video if available
   images: [
-    { src: "abTomorrow-1.png", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
-    { src: "abTomorrow-2.png", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
-    { src: "abTomorrow-3.png", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
-    { src: "abTomorrow-4.png", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
+    { src: "abTomorrow-1.jpg", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
+    { src: "abTomorrow-2.jpg", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
+    { src: "abTomorrow-3.jpg", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
+    { src: "abTomorrow-4.jpg", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
   ],
   mainStack: [
     IconLibrary.NEXT,

@@ -50,9 +50,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 import { Link as ScrollLink } from 'react-scroll';
+import { useInView } from 'react-intersection-observer';
 
-// Component
-import ImageComponent from './images/ImageComponent';
 
 // data
 import { globals } from '../../data/globals';
@@ -60,6 +59,8 @@ import { globals } from '../../data/globals';
 export default function ScrollWheelBtn({ to = "about-me" }) {
   // Check if the screen height is greater than 400px
   const isTallEnough = useMediaQuery({ query: '(min-height: 400px)' });
+
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.4 }); 
 
   // Only render the component if the screen height is greater than 400px
   if (!isTallEnough) {
@@ -80,12 +81,15 @@ export default function ScrollWheelBtn({ to = "about-me" }) {
 
   const fadeInProps = {
     initial: { opacity: 0 },
-    animate: { opacity: 1 },
+    animate: inView ? { opacity: 1 } : { opacity: 0 },
     transition: { delay: 5, duration: 1 }, // Delay and duration for fade-in
   };
 
   return (
-    <div className="hidden absolute inset-0 z-15 md:flex justify-center items-end pointer-events-none">
+    <div 
+      ref={ref}
+      className="hidden absolute inset-0 z-15 md:flex justify-center items-end pointer-events-none"
+    >
       
       {/* Scroll button content */}
       <motion.div className="mb-4 z-10 pointer-events-auto" {...fadeInProps}>
