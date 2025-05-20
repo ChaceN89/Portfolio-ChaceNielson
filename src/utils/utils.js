@@ -59,7 +59,7 @@ function ScrollToID(id) {
   const element = document.getElementById(id);
   if (element) {
     scroller.scrollTo(id, {
-      smooth: true, // ← THIS is the missing key
+      smooth: true,
       duration: globals.scrollDuration,
       offset: globals.navbarHeight,
     });

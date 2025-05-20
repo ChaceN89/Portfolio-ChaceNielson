@@ -1,11 +1,11 @@
 import React from 'react'
-import Hero from '@/components/homeSections/hero/Hero'
-import AboutMeHero from '@/components/homeSections/hero/AboutMeHero'
-import TechSkills from '@/components/homeSections/techSkills/TechSkills'
+import Hero from '@/components/homeSections/Hero'
+import AboutMeHero from '@/components/homeSections/AboutMeHero'
+import TechSkills from '@/components/specificSections/techSkills/TechSkills'
 import TechStacks from '@/components/homeSections/techStacks/TechStacks'
 import FeaturedProjects from '@/components/homeSections/featuredProjects/FeaturedProjects'
-import LetsConnects from '@/components/homeSections/letsConnect/LetsConnects'
-import ProjectCarousel from '@/components/homeSections/hero/ProjectCarousel'
+import LetsConnects from '@/components/homeSections/LetsConnects'
+import ProjectCarousel from '@/components/homeSections/ProjectCarousel/ProjectCarousel'
 
 
 export default function HomePage() {

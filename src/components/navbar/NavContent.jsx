@@ -44,15 +44,6 @@ export default function NavContent() {
           backdropFilter: isAtTop ? "none" : "blur(6px)",
         }}
       >
-        {/* SVG Filter for Noise */}
-        <div
-          className="absolute inset-0 pointer-events-none z-0 transition-opacity duration-500 ease-in-out"
-          style={{
-            filter: "url(#noiseFilter)",
-            mixBlendMode: "multiply",
-            opacity: isAtTop ? 0 : 1,
-          }}
-        />
 
         {/* Top nav content */}
         <div className="relative flex items-center justify-between z-40">

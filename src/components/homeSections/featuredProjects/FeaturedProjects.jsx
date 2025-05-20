@@ -10,7 +10,7 @@
 import { featuredProjects } from '@/data/pageData/projectData';
 import FeatureSection from './FeatureSection';
 import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper';
-import ProjectCarousel from '../hero/ProjectCarousel';
+import ProjectCarousel from '../ProjectCarousel/ProjectCarousel';
 
 export default function FeaturedProjects() {
 
@@ -41,8 +41,7 @@ export default function FeaturedProjects() {
       })}
       <BackgroundWrapper
         id={``}
-        background={"/backgrounds/light-accent.jpg"}
-        backgroundClass="w-screen"
+        background={backgrounds[0].src}
         fixed
         noise
       >

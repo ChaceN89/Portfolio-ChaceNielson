@@ -19,7 +19,7 @@ import React, { useState, useEffect } from "react";
 import { useScroll, useMotionValueEvent, motion } from "framer-motion";
 import NavContent from "./NavContent";
 
-export default function Navbar() {
+export default function Navbar({forceLock=true}) {
 
   // States for hidden nav, initial scroll and the last Y position of the scaoll
   const [hidden, setHidden] = useState(false);
@@ -54,7 +54,7 @@ export default function Navbar() {
 
     // Function to handle mouse movement if it is close to the top of the screen
     const handleMouseMove = (e) => {
-      if (e.clientY < 300) {
+      if (e.clientY < 800) {
         setHidden(false); // Reveal nav when mouse is near top
       }
     };
@@ -66,11 +66,11 @@ export default function Navbar() {
 
   useEffect(() => {
     const checkLockState = () => {
-      const shouldLock = window.innerWidth < 1020;
+      const shouldLock = forceLock || window.innerWidth < 1020;
       setIsNavPosLocked(shouldLock);
-  
+
       if (shouldLock) {
-        setHidden(false); // Show nav if switching to mobile while hidden
+        setHidden(false);
       }
     };
   

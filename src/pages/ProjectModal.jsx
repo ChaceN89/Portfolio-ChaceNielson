@@ -15,8 +15,8 @@ import { projects } from '@/data/pageData/projectData'; // Assuming you have a f
 
 // components
 import SkillBoxContainer from '@/components/uiElements/SkillBoxContainer';
-import ExternalLinks from '@/components/homeSections/projects/ExternalLinks';
-import ProjectImageCarousel from '@/components/homeSections/projects/ProjectImageCarousel';
+import ExternalLinks from '@/components/specificSections/projects/ExternalLinks';
+import ProjectImageCarousel from '@/components/specificSections/projects/ProjectImageCarousel';
 import NotFoundInfo from '@/components/uiElements/NotFoundInfo';
 import MediaFrame from '@/components/uiElements/mediaFrame/MediaFrame';
 
