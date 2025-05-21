@@ -52,7 +52,7 @@ import { motion, useAnimation, useInView } from 'framer-motion';
  * @param {string} [props.className=''] - Additional CSS classes for the motion div.
  * @returns {JSX.Element} The ElevateOnView component.
  */
-function ElevateOnView({ children, duration = 0.5, marginY = '-100px', yPos = 100, className='' }) {
+function ElevateOnView({ children, duration = 1, marginY = '-200px', yPos = 100, className='' }) {
   const controls = useAnimation();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: `0px 0px ${marginY} 0px` });

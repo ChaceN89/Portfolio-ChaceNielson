@@ -1,69 +1,75 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
-import Tooltip from '@/components/uiElements/Tooltip';
-import ShowIcon from '@/components/uiElements/ShowIcon';
+
 import { openModal } from '@/utils/utils';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { techStackParam } from '@/data/globals';
 
 import MyBtn from '@/components/buttons/MyBtn';
+import MainSkills from '@/components/homeSections/techStacks/MainSkills';
 
-export default function TechStackSection({ title, techStack, description }) {
-  // Icon sizing based on screen width
-  const isSmallScreen = useMediaQuery({ query: '(max-width: 400px)' });
-  const isReallySmallScreen = useMediaQuery({ query: '(max-width: 300px)' });
-  const iconSize = isReallySmallScreen ? '2rem' : isSmallScreen ? '3rem' : '4.5rem';
-
-
-  // navigate an dlocation 
-
+export default function TechStackSection({ 
+  techStack,
+  hoverIndex,
+  handleMouseEnter,
+  handleMouseLeave,
+  index,
+  translation
+}) {
   const navigate = useNavigate();
   const location = useLocation();
 
-
-
-  // openModal()
   const learnMoreClick = () => {
-    // check if the current location is not the same as the target location
+    openModal({
+      type: techStackParam,
+      id: techStack?.id,
+      navigate,
+      location
+    });
+  };
 
-      openModal({
-        type: techStackParam,
-        id: techStack?.id,
-        navigate,
-        location
-      });
-    
-  }
-
+  const isBlurred = hoverIndex !== null && hoverIndex !== index;
+  const isMobile = useMediaQuery({ query: '(max-width: 600px)' });
 
   return (
-    <div className={`w-full flex flex-col items-center justify-between gap-8 text-center `}>
-      {/* Title */}
-        <h3>{title}</h3>
 
-      {/* Blurb */}
-      <p className="max-w-md text-base italic h-20">
-        {description}
-      </p>
+    <div
+      className={`
+        h-full flex flex-col justify-between
+        text-secondary dark:text-primary
+        border-2 rounded-[30px] p-6
+        transition-all duration-500
+        
+        
+        ${isBlurred && !isMobile ? // the affect when the other card is hovered 
+          'opacity-60 scale-[0.2] blur-[1px]  transition-all duration-500 ease-out ' + translation
+          : 'transition-all duration-500 ease-out'}
 
-      {/* Grid of Icons */}
-      <div className="grid grid-cols-3 sm:grid-cols-4  gap-6  p-4 rounded-[30px] bg-secondary/80">
-        {techStack?.commonTools?.map((tool, idx) => (
-          <Tooltip
-            key={idx}
-            openDuration={300}
-            className="max-w-xs"
-            text={tool.name}
-          >
-            <ShowIcon skill={tool} size={iconSize} useWhiteText />
-          </Tooltip>
-        ))}
+        bg-primary/50 dark:bg-secondary/50 backdrop-blur-xl
+        hover:shadow-xl 
+      `}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="flex flex-col gap-6 flex-grow">
+        <div className="flex flex-col space-y-3">
+          <h3 className="text-3xl font-bold leading-tight tracking-tight">
+            {techStack.name}
+          </h3>
+          <p className="text-sm opacity-80 leading-relaxed">
+            {techStack.description}
+          </p>
+        </div>
+        <div className="flex justify-center items-center w-full">
+          <MainSkills topSkills={techStack.commonTools} />
+        </div>
       </div>
 
-      <MyBtn sm callBack={learnMoreClick} className="mt-2">
-        Learn More
-      </MyBtn>
-
+      <div className="pt-6">
+        <MyBtn sm callBack={learnMoreClick} className="w-full">
+          Learn More
+        </MyBtn>
+      </div>
     </div>
   );
 }

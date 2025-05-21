@@ -22,95 +22,119 @@ export const fullstack = {
 
   commonTools: [
     IconLibrary.REACT,
-    IconLibrary.VITE,
-    IconLibrary.EXPRESSJS,
-    IconLibrary.MONGODB,
-    
     IconLibrary.NEXT,
-    IconLibrary.JAVASCRIPT,
     IconLibrary.TAILWIND,
     IconLibrary.AWS,
+    IconLibrary.TYPESCRIPT,     // Strong typing & modern dev best practices
+    IconLibrary.EXPRESSJS,      // Widely used backend framework, shows full stack fluency
+    IconLibrary.DOCKER,         // Signals DevOps knowledge and deploy readiness
+    IconLibrary.GITHUB,         // Team collaboration, CI/CD, open source familiarity
   ],
 
-  otherTools: [
+  allTools: [
+  {
+    category: "Frontend",
+    skills: [
+      IconLibrary.REACT,
+      IconLibrary.VITE,
+      IconLibrary.NEXT,
+      IconLibrary.VUE,
+      IconLibrary.TAILWIND,
+      IconLibrary.JAVASCRIPT,
+      IconLibrary.TYPESCRIPT,
+      IconLibrary.HTML,
+      IconLibrary.CSS,
+      IconLibrary.RESPONSIVE_DESIGN,
+      IconLibrary.FRAMER_MOTION,
+      IconLibrary.REDUX,
+      IconLibrary.PWA,
+      IconLibrary.SEO,
+      IconLibrary.CHART_JS,
+      IconLibrary.MAPBOX_GL,
+    ],
+  },
+  {
+    category: "Backend",
+    skills: [
+      IconLibrary.NODE_JS,
+      IconLibrary.EXPRESSJS,
+      IconLibrary.DJANGO,
+      IconLibrary.FASTAPI,
+      IconLibrary.REST_API,
+      IconLibrary.SWAGGER_UI,
+      IconLibrary.AUTHENTICATION,
+      IconLibrary.JWT,
+      IconLibrary.OAUTH,
+    ],
+  },
+  {
+    category: "Databases & Storage",
+    skills: [
+      IconLibrary.MONGODB,
+      IconLibrary.MYSQL,
+      IconLibrary.SQLITE,
+      IconLibrary.POSTGRESQL,
+      IconLibrary.RDS,
+      IconLibrary.S3,
+    ],
+  },
+  {
+    category: "Cloud & Infrastructure",
+    skills: [
+      IconLibrary.AWS,
+      IconLibrary.AMPLIFY,
+      IconLibrary.TERRAFORM,
+      IconLibrary.CLOUD_DEPLOYMENT,
+    ],
+  },
+  {
+    category: "Deployment Platforms",
+    skills: [
+      IconLibrary.VERCEL,
+      IconLibrary.NETLIFY,
+      IconLibrary.RENDER,
+      IconLibrary.RAILWAY,
+    ],
+  },
+  {
+    category: "DevOps & CI/CD",
+    skills: [
+      IconLibrary.CI_CD,
+      IconLibrary.DOCKER,
+      IconLibrary.GIT,
+      IconLibrary.GITHUB,
+    ],
+  },
+  {
+    category: "Tooling & Collaboration",
+    skills: [
+      IconLibrary.AUTOMATION,
+      IconLibrary.AGILE_TOOLS,
+      IconLibrary.CODE_REVIEWS,
+    ],
+  },
+  {
+    category: "Data & Machine Learning",
+    skills: [
+      IconLibrary.PYTHON,
+      IconLibrary.JUPYTER,
+      IconLibrary.DATA_ANALYSIS,
+      IconLibrary.DATA_VISUALIZATION,
+      IconLibrary.MACHINE_LEARNING,
+      IconLibrary.TENSORFLOW,
+      IconLibrary.APACHE_SPARK,
+      IconLibrary.PLOTLY_DASH,
+      IconLibrary.STREAMLIT,
+    ],
+  },
+  {
+    category: "Monitoring & Analytics",
+    skills: [
+      IconLibrary.GOOGLE_ANALYTICS,
+      IconLibrary.EMAIL_JS,
+    ],
+  },
+]
 
-    {
-      category: "Frontend",
-      skills: [
-        IconLibrary.REACT,
-        IconLibrary.VITE,
-        IconLibrary.NEXT,
-        IconLibrary.TAILWIND,
-        IconLibrary.JAVASCRIPT,
-        IconLibrary.TYPESCRIPT,
-        IconLibrary.VUE,
-        IconLibrary.HTML,
-        IconLibrary.CSS,
-        IconLibrary.RESPONSIVE_DESIGN,
-        IconLibrary.FRAMER_MOTION,
-      ],
-    },
-    {
-      category: "Backend",
-      skills: [
-        IconLibrary.EXPRESSJS,
-        IconLibrary.NODE_JS,
-        IconLibrary.REST_API,
-        IconLibrary.JWT,
-        IconLibrary.OAUTH,
-        IconLibrary.SQLITE,
-        IconLibrary.POSTGRESQL,
-        IconLibrary.DJANGO,
-      ],
-    }, 
-    {
-      category: "DevOps & CI/CD",
-      skills: [
-        IconLibrary.CI_CD,
-        IconLibrary.DOCKER,
-        IconLibrary.GIT,
-        IconLibrary.GITHUB,
-        IconLibrary.CODE_REVIEWS,
-        IconLibrary.AUTOMATION,
-        IconLibrary.AGILE_TOOLS,
-      ],
-    },
-    {
-      category: "Cloud & Infrastructure",
-      skills: [
-        IconLibrary.AWS,
-        IconLibrary.AMPLIFY,
-        IconLibrary.S3,
-        IconLibrary.RDS,
-        IconLibrary.TERRAFORM,
-        IconLibrary.VERCEL,
-        IconLibrary.NETLIFY,
-        IconLibrary.CLOUD_DEPLOYMENT,
-      ],
-    },
-    {
-      category: "Authentication & Security",
-      skills: [
-        IconLibrary.AUTHENTICATION,
-        IconLibrary.JWT,
-        IconLibrary.OAUTH,
-      ],
-    },
-    
-    {
-      category: "Data & Analytics Tools",
-      skills: [
-        IconLibrary.STREAMLIT,
-        IconLibrary.PLOTLY_DASH,
-        IconLibrary.DATA_VISUALIZATION,
-        IconLibrary.JUPYTER,
-        IconLibrary.DATA_ANALYSIS,
-        IconLibrary.HADOOP,
-        IconLibrary.APACHE_SPARK,
-        IconLibrary.MACHINE_LEARNING,
-        IconLibrary.TENSORFLOW,
-      ],
-    }
-  ],
 
 };

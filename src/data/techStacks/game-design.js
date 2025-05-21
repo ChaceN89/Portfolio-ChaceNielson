@@ -4,62 +4,59 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated Jan 23, 2025
+ * @updated May 21, 2025
  */
 
 import IconLibrary from "../iconLibrary";
-
 
 export const gameDesign = { 
   id: "game-development",
   name: "Game Development", 
   description: "I create games that feel great to play — responsive, immersive, and thoughtfully designed from code to controls.",
 
-  longDescription: "From animated elements that make sites stand out to complex, data-driven applications with dynamic user interactions, I develop full stack solutions across the entire web stack. My work spans static homepages, RESTful APIs, and integrated platforms with external databases, user authentication, and modern deployment pipelines on AWS and Vercel. I focus on creating seamless experiences that are both functional and visually engaging.",
+  longDescription: "From physics-driven mechanics and gameplay patterns to immersive shaders, audio, and animations, I develop games from the ground up. My workflow spans scripting, editor tooling, art integration, and production pipelines — ensuring systems are robust, intuitive, and fun to play.",
 
   commonTools: [
-    IconLibrary.UNITY,
-    IconLibrary.BLENDER,
-    IconLibrary.PLASTIC_SCM,
-    IconLibrary.CSHARP,
-    IconLibrary.PYTHON,
-    // IconLibrary.GAME_DESIGN,
-    IconLibrary.SOFTWARE_ARCHITECTURE,
-    IconLibrary.TEAM_COLLABORATION,
-    IconLibrary.DOCUMENTATION,
-
-    // Odin Inspecotor 
-    // collaboration
-    // SOFTWARE_ARCHITECTURE
-    // DOCUMENTATION
-
-    
+    IconLibrary.UNITY,             // Core engine
+    IconLibrary.CSHARP,           // Primary scripting language
+    IconLibrary.BLENDER,          // 3D modeling & animation
+    IconLibrary.INSPECTOR_TOOLS,  // Advanced Unity editor tooling
+    IconLibrary.SHADER_GRAPH,     // Technical art & VFX
+    IconLibrary.GIMP,             // Pixel art and sprite animations
+    IconLibrary.PLASTIC_SCM,      // Version control for Unity workflows
+    IconLibrary.FMOD,             // Pro-level audio integration
   ],
-  minorSkills: [
+
+  all: [
     {
-      category: "Game Design",
+      category: "Gameplay Systems",
       skills: [
-        IconLibrary.GAME_DESIGN,
-        IconLibrary.ANIMATION,
-        IconLibrary.PATHFINDING,
         IconLibrary.UNITY_PHYSICS,
+        IconLibrary.PATHFINDING,
         IconLibrary.FACTORY_PATTERN,
         IconLibrary.OBSERVER_PATTERN,
         IconLibrary.FLYWEIGHT_PATTERN,
       ],
     },
     {
-      category: "Game Development",
+      category: "Technical Art & Audio",
+      skills: [
+        IconLibrary.SHADER_GRAPH,
+        IconLibrary.GIMP,
+        IconLibrary.ANIMATION,
+        IconLibrary.FMOD,
+      ],
+    },
+    {
+      category: "Development & Tooling",
       skills: [
         IconLibrary.UNITY,
         IconLibrary.CSHARP,
+        IconLibrary.INSPECTOR_TOOLS,
+        IconLibrary.BLENDER,
         IconLibrary.GITHUB,
         IconLibrary.PLASTIC_SCM,
-        IconLibrary.BLENDER,
-        IconLibrary.PYTHON,
       ],
     },
-
   ],
-
 };

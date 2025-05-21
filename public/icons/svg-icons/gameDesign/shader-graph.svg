@@ -1,0 +1,20 @@
+
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="64" height="64" rx="10" fill="#1E1E1E"/>
+
+  <!-- Nodes -->
+  <rect x="10" y="10" width="12" height="12" rx="2" fill="#00C2FF"/>
+  <rect x="42" y="10" width="12" height="12" rx="2" fill="#FF6F91"/>
+  <rect x="10" y="42" width="12" height="12" rx="2" fill="#FFD93D"/>
+  <rect x="42" y="42" width="12" height="12" rx="2" fill="#6BCB77"/>
+
+  <!-- Connections -->
+  <line x1="22" y1="16" x2="42" y2="16" stroke="#AAAAAA" stroke-width="2"/>
+  <line x1="16" y1="22" x2="16" y2="42" stroke="#AAAAAA" stroke-width="2"/>
+  <line x1="22" y1="48" x2="42" y2="48" stroke="#AAAAAA" stroke-width="2"/>
+
+  <!-- Glow effect (optional subtle visual flair) -->
+  <circle cx="16" cy="16" r="6" fill="#00C2FF" fill-opacity="0.15"/>
+  <circle cx="48" cy="48" r="6" fill="#6BCB77" fill-opacity="0.15"/>
+</svg>

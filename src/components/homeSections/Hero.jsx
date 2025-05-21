@@ -19,11 +19,11 @@ export default function Hero() {
   // list of all delays
   const delays = [
     splashScreenDelay+0, 
+    splashScreenDelay+0.2, 
     splashScreenDelay+0.4, 
+    splashScreenDelay+0.6, 
     splashScreenDelay+0.8, 
-    splashScreenDelay+1.2, 
-    splashScreenDelay+1.6, 
-    splashScreenDelay+2.0,
+    splashScreenDelay+1.0,
   ];
 
 

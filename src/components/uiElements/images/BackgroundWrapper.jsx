@@ -99,12 +99,14 @@ export default function BackgroundWrapper({
       )}
 
       {/* Overlay blur as a separate layer */}
-      {blur>0 && (
-        <div
-          className="absolute inset-0 z-[1] pointer-events-none"
-          style={{ backdropFilter: `blur(${blur}px)` }}
-        />
-      )}
+      <div
+        className="absolute inset-0 z-[1] pointer-events-none transition-all duration-500 ease-in-out"
+        style={{
+          backdropFilter: `blur(${blur}px)`,
+          WebkitBackdropFilter: `blur(${blur}px)`,
+        }}
+      />
+
 
 
             {/* 👇 Overlay elements like ScrollWheelBtn */}

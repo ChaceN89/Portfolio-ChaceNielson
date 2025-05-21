@@ -1,7 +1,6 @@
 import React from 'react'
 import Hero from '@/components/homeSections/Hero'
 import AboutMeHero from '@/components/homeSections/AboutMeHero'
-import TechSkills from '@/components/specificSections/techSkills/TechSkills'
 import TechStacks from '@/components/homeSections/techStacks/TechStacks'
 import FeaturedProjects from '@/components/homeSections/featuredProjects/FeaturedProjects'
 import LetsConnects from '@/components/homeSections/LetsConnects'

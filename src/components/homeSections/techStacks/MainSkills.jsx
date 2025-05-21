@@ -14,16 +14,14 @@ import Tooltip from '../../uiElements/Tooltip';
 import ShowIcon from '../../uiElements/ShowIcon';
 import { useMediaQuery } from 'react-responsive';
 
-function MainSkills({ topSkills }) {
-
+export default function MainSkills({ topSkills }) {
   // check screen size for icon size  
   const isSmallScreen = useMediaQuery({ query: '(max-width: 400px)' });
   const isReallySmallScreen = useMediaQuery({ query: '(max-width: 300px)' });
-  const iconSize = isReallySmallScreen ? '2rem' : isSmallScreen ? '3rem' : '4.5rem';
-
+  const iconSize = isReallySmallScreen ? '2rem' : isSmallScreen ? '4rem' : '5rem';
 
   return (
-    <div className="flex justify-center w-full space-x-4 sm:space-x-0 sm:grid grid-cols-2 sm:gap-4 "> 
+    <div className="grid grid-cols-4 gap-4 sm:gap-6 items-center justify-items-center w-full">
       {topSkills.map((topSkill, idx) => (
         <Tooltip 
           key={idx}
@@ -31,11 +29,10 @@ function MainSkills({ topSkills }) {
           className="max-w-xs"
           text={topSkill.name}
         >
-          <ShowIcon skill={topSkill} size={iconSize} useWhiteText={true} />
+          <ShowIcon skill={topSkill} size={iconSize} useWhiteText={true} className="transition-transform duration-200 hover:scale-110" />
         </Tooltip>
       ))}
     </div>
   );
 }
 
-export default MainSkills;

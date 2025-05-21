@@ -58,7 +58,7 @@ export default function FeatureSection({ project, background, nextId }) {
         id={`featured-${project.id}`}
         background={src}
         backgroundClass="w-screen"
-        childClass="flex flex-col md:flex-row items-center justify-center gap-12 min-h-[65vh] px-8 py-24 relative container mx-auto"
+        childClass="flex flex-col md:flex-row items-center justify-center gap-12 min-h-[75vh] px-8 py-24 relative container mx-auto"
         fixed
         noise
         overlay={<ScrollWheelBtn to={nextId} />}
