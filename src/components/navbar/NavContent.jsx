@@ -38,12 +38,16 @@ export default function NavContent() {
     <>
       {/* Top nav container with blur and noise (overflow hidden ONLY here) */}
       <div
-        className="z-10 relative min-w-full h-nav-height px-4 flex flex-col justify-center transition-all duration-500 overflow-hidden bg-primary/20 "
+        className="
+          px-4 xl:px-10 2xl:px-20 
+          z-10 relative  overflow-hidden
+          min-w-full h-nav-height  
+          flex flex-col justify-center 
+          transition-all duration-500 
+          bg-primary/50 dark:bg-secondary/50 "
         style={{
           backgroundColor: isAtTop && "transparent",
-          backdropFilter: isAtTop ? "none" : "blur(6px)",
-          // text color
-          color: isAtTop ? "var(--text-primary)" : "var(--text-secondary)",
+          backdropFilter: isAtTop ? "none" : "blur(10px)",
         }}
       >
 
@@ -77,7 +81,7 @@ export default function NavContent() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             onClick={() => setIsMobileMenuOpen(false)}
-            className="fixed inset-0 bg-accent/60  noise"
+            className="fixed inset-0 bg-secondary/80"
             style={{ pointerEvents: 'auto' }}
           />
         )}

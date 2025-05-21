@@ -24,7 +24,7 @@ export default function SplashScreen({
   // z index for the splash screen is above the rest of the app
   return (
     <div className={` overflow-hidden
-      fixed inset-0 z-50 flex flex-col justify-between min-h-screen bg-primary 
+      fixed inset-0 z-50 flex flex-col justify-between min-h-screen bg-accent
       ${transitionOut && 'splash-exit'}`}
     >
       {/* SVG Filter for Noise */}
@@ -41,7 +41,7 @@ export default function SplashScreen({
       <div className="z-[30]">
         <HexSeparator 
           rows={6}
-          hexClass="bg-black opacity-85"
+          hexClass="bg-black opacity-65"
           bottom={false}
         />
       </div>
@@ -58,9 +58,9 @@ export default function SplashScreen({
             <ErrorDisplay errorInfo={errorInfo} />
           ) : (
             <>
-            <div className="mt-0 sm:-mt-8 flex flex-col items-center">
+            {/* <div className="mt-0 sm:-mt-8 flex flex-col items-center">
               <HexLoader animate={animateLoader} />
-            </div>
+            </div> */}
               <PercentLoader loadPercent={loadPercent} />
             </>
           )}
@@ -71,7 +71,7 @@ export default function SplashScreen({
       <div className="z-[30]">
         <HexSeparator 
           rows={6}
-          hexClass="bg-black opacity-85"
+          hexClass="bg-black opacity-65"
           bottom={true}
         />
       </div>

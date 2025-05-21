@@ -15,14 +15,14 @@
  * @created May 9, 2025
  * @updated May 9, 2025
  */
-import React, { useState } from 'react'
+import DarkModeButton from './DarkModeButton'
 import LinkItem from './LinkItem'
 import { navLinks } from '@/data/nav/navData'
 
 export default function NavDesktop() {
  
   return (     
-    <div className="z-10 items-center gap-4 flex flex-col w-screen justify-items-center  lg:flex-row   lg:w-auto ">
+    <div className="z-10 items-center gap-4 flex flex-col w-screen justify-items-center lg:flex-row lg:w-auto ">
       {navLinks.map(({ label, icon: Icon, ...linkProps }, index) => (
         <LinkItem key={label} {...linkProps}
           className='hover:text-accent-alt'
@@ -40,6 +40,10 @@ export default function NavDesktop() {
           </h6>
         </LinkItem>
       ))}
+      <div className='pl-4.5 lg:pl-0'>
+
+      <DarkModeButton/>
+      </div>
     </div>
   )
 }

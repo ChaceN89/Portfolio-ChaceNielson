@@ -22,7 +22,7 @@ export default function HomePage() {
       <div id="tech-stacks"> 
         <TechStacks/>
       </div>
-      <div id="lets-connect"> 
+      <div id="about-me"> 
         <LetsConnects/>
       </div>
     </div>

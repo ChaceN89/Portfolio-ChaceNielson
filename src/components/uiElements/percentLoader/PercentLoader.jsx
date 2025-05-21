@@ -8,14 +8,14 @@ export default function PercentLoader({ loadPercent }) {
   }
 
   return (
-    <div className="flex items-center justify-center  gap-2 px-4 w-screen">
+    <div className="flex items-center justify-center  gap-2 px-4 w-screen text-">
       <div
         className="h-[7px] bg-secondary transition-all duration-300 w-full rounded-full"
         style={{ flex: loadPercent / 200 }}
       />
 
       {/* Percent */}
-      <h3 className="whitespace-nowrap text-lg font-medium w-24">
+      <h3 className="whitespace-nowrap text-lg font-medium w-24 text-secondary">
         {percentText}
       </h3>
 

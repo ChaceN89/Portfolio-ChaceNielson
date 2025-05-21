@@ -45,12 +45,13 @@ export default function NavMobile({ setIsOpen, isOpen }) {
           animate={{ height: 'auto', opacity: 1 }}
           exit={{ height: 0, opacity: 0 }}
           transition={{ duration: 0.5, ease: 'easeInOut' }}
-          className="w-full absolute top-full left-0 z-30 overflow-hidden"
+          className="w-full absolute top-full left-0 z-30 overflow-hidden  backdrop-blur-sm"
         >
           <div className="
-            bg-secondary/95 text-white py-10 border-t-2 border-white/50 rounded-b-4xl 
-            w-full flex flex-col items-center gap-4 
-            max-h-[50svh] overflow-y-auto scroll-element
+            bg-primary/70 text-secondary
+            border-t-2 border-b-2 border-secondary/90 rounded-b-4xl 
+            w-full flex flex-col items-center gap-4  py-10 
+            max-h-[50svh] overflow-y-auto scroll-element 
           ">
             <NavDesktop />
           </div>

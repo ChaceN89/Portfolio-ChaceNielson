@@ -84,7 +84,7 @@ export default function Navbar({forceLock=true}) {
       initial={{ y: 0 }}
       animate={{ y: hidden ? "-100%" : "0%" }}
       transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="fixed top-0 w-full z-35"
+      className="fixed top-0 w-full z-35 px-0 "
       >
       <NavContent />
     </motion.nav>

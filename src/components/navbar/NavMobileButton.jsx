@@ -29,9 +29,9 @@ export default function NavMobileButton({
       onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
     >
       {isMobileMenuOpen ? (
-        <HiX className="text-white w-6 h-6 transition-transform duration-200 hover:text-accent hover:scale-125 my-drop-shadow" />
+        <HiX className=" w-6 h-6 transition-transform duration-200 hover:text-accent hover:scale-125 " />
       ) : (
-        <HiBars3BottomRight className="text-white w-6 h-6 transition-transform duration-200 hover:text-accent hover:scale-125 my-drop-shadow" />
+        <HiBars3BottomRight className=" w-6 h-6 transition-transform duration-200 hover:text-accent hover:scale-125 " />
       )}
     </button>
   )

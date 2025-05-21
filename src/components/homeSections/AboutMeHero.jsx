@@ -24,14 +24,15 @@ export default function AboutMeHero() {
   });
 
   const opacity = useTransform(scrollYProgress, [0, 0.4, 0.8, 1], [0, 1, 1, 0]);
-const y = useTransform(scrollYProgress, [0, 0.3, 0.75, 1], [150, 0, -80, -100]);
+  const y = useTransform(scrollYProgress, [0, 0.3, 0.75, 1], [150, 0, -80, -100]);
+  const scale = useTransform(scrollYProgress, [0, 0.3, 1], [0.6, 1, 1]);
 
   return (
     <motion.div
-      id="about-me"
+      id="about-me-hero"
       ref={sectionRef}
-      className="flex flex-col md:flex-row items-center justify-center gap-10 p-20 text-secondary"
-      style={{ opacity, y }}
+      className="flex flex-col md:flex-row items-center justify-center gap-10 p-20 "
+      style={{ opacity, y, scale }}
     >
       {/* Image */}
       <div className="min-w-48 lg:max-w-60 overflow-hidden rounded-xl rounded-bl-[100px] hover:rounded-bl-xl rounded-tr-[100px] hover:rounded-tr-xl transition-all duration-400 ease-in-out flex justify-center">

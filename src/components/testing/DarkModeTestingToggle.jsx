@@ -27,13 +27,15 @@ function DarkModeTestingToggle() {
 
   // Update the dark mode class on the HTML root element
   const toggleDarkMode = () => {
-    setIsDarkMode((prev) => !prev);
-    const html = document.documentElement;
-    if (!isDarkMode) {
-      html.classList.add('dark');
-    } else {
-      html.classList.remove('dark');
-    }
+    setIsDarkMode((prev) => {
+      const html = document.documentElement;
+      if (!prev) {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+      return !prev;
+    });
   };
 
   // Set the initial dark mode state based on the class on mount

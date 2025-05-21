@@ -6,7 +6,7 @@ import Footer from "../footer/Footer";
 export default function Layout() {
 
   return (
-    <div className="flex flex-col min-h-screen min-w-56 relative overflow-hidden bg-primary">
+    <div className="flex flex-col min-h-screen min-w-[100px] relative overflow-hidden ">
 
       {/* 🟡 Noise background layer */}
       <div className="noise-bg" />

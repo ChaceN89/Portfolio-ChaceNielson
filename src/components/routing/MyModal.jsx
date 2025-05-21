@@ -1,7 +1,8 @@
 /**
  * @file Modal.jsx
  * @module Modal
- * @desc A simplified reusable modal component with a close button and backdrop support. No animations.
+ * @desc A simplified reusable modal component with a close button and backdrop support. 
+ * contains a background wrapper for noise and a slide transition for the modal content.
  * 
  * @author Chace Nielson
  * @created Jan 23, 2025
@@ -57,7 +58,6 @@ export default function MyModal({ children }) {
         className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 "
       />
 
-
       {/* Modal container - spacing location for content */}
       <div
         className="absolute left-0 right-0 flex justify-center items-center z-0"
@@ -78,9 +78,7 @@ export default function MyModal({ children }) {
               delay={0.2}
             >
               <BackgroundWrapper 
-              
                 backgroundClass="relative rounded-3xl border-2 border-primary/80 bg-accent/50 "
-                opacity={0}
                 noise
               >
                 {/* Close button */}

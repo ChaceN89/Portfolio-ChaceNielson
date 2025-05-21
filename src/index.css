@@ -20,6 +20,8 @@
 
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 
 /* Theme for the site  */
 @theme {
@@ -44,36 +46,39 @@
   --color-tertiary-alt: rgb(255, 194, 161);        /* Light peach (backgrounds, hover) */
 
   --spacing-nav-height: 4rem
+
 }
 
 /* Headers */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-title-text);
 }
+
 h1 {
-  font-size: 4.5rem;
+  font-size: clamp(2.25rem, 10vw, 4.5rem); /* 36px - 72px */
   font-weight: 700;
 }
 h2 {
-  font-size: 3.75rem;
+  font-size: clamp(2rem, 9vw, 3.75rem); /* 32px - 60px */
   font-weight: 600;
 }
 h3 {
-  font-size: 3.25rem;
+  font-size: clamp(1.75rem, 8vw, 3.25rem); /* 28px - 52px */
   font-weight: 500;
 }
 h4 {
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 6vw, 2.5rem); /* 24px - 40px */
   font-weight: 400;
 }
 h5 {
-  font-size: 1.75rem;
+  font-size: clamp(1.25rem, 5vw, 1.75rem); /* 20px - 28px */
   font-weight: 300;
 }
 h6 {
-  font-size: 1.15rem;
+  font-size: clamp(1rem, 4vw, 1.15rem); /* 16px - 18.4px */
   font-weight: 100;
 }
+
 /* Paragraphs */
 p {
   font-size: 1rem;
@@ -102,13 +107,27 @@ body::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
 
+
+/* For changinfrom light to dark and dark to ligh */
+body.changing-theme * {
+  transition: none !important;
+}
+
 /* Global HTML & Body styles */
 html, body {
-  background-color: var(--color-secondary);
+  background-color: var(--color-primary);
   color: var(--color-secondary);
   font-family: var(--font-main-text);
   overscroll-behavior: none;
 }
+
+/* Dark mode override - manual */
+html.dark, .dark body {
+  background-color: --alpha(var(--color-secondary) / 70%);
+  color: var(--color-primary);
+}
+
+
 
 /* Important Global Styles */
 
@@ -120,25 +139,39 @@ html, body {
   z-index: 0;
 
   filter: url(#noiseFilter);
-  mix-blend-mode: multiply;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
+/* small shadow to outline text subtly */
 .my-drop-shadow {
-  /* filter: drop-shadow(1px 1px 1px black);   */
   filter: drop-shadow(2px 2px 0px var(--color-secondary));  
 }
-
-.my-drop-shadow-lg {
-  filter: drop-shadow(10px 10px 1px var(--color-secondary));
+.dark .my-drop-shadow {
+  filter: drop-shadow(2px 2px 0px var(--color-primary)); /* Opposite for dark */
 }
 
-.outlined-text {
+/* Large shadow to conve depth */
+.my-drop-shadow-lg {
+  filter: drop-shadow(12px 12px 3px var(--color-secondary));
+}
+.dark .my-drop-shadow-lg {
+  filter: drop-shadow(12px 12px 3px var(--color-primary));
+}
+
+/* Outlined text class */
+.outlined-text-dark {
   text-shadow:
     -1.5px -1.5px 0 black,  
      1.5px -1.5px 0 black,
     -1.5px  1.5px 0 black,
      1.5px  1.5px 0 black;
+}
+.outlined-text-light {
+  text-shadow:
+    -1.5px -1.5px 0 white,  
+     1.5px -1.5px 0 white,
+    -1.5px  1.5px 0 white,
+     1.5px  1.5px 0 white;
 }
 
 

@@ -28,7 +28,7 @@
 import {
   FaHome,
   FaTools,
-  FaHandshake,
+  // FaHandshake,
   FaUser,
   FaCodeBranch,
   FaEnvelopeOpenText,
@@ -38,12 +38,12 @@ import { MdFeaturedPlayList } from "react-icons/md";
 export const navLinks = [
   // Home Page Scroll Links
   { label: "Home", scrollTo: "hero", router: "/", icon: FaHome },
-  { label: "Featured", scrollTo: "featured-projects", router: "/", icon: MdFeaturedPlayList },
-  { label: "Skills", scrollTo: "tech-stacks", router: "/", icon: FaTools },
-  { label: "Let's Talk", scrollTo: "lets-connect", router: "/", icon: FaHandshake },
+  { label: "Showcase", scrollTo: "featured-projects", router: "/", icon: MdFeaturedPlayList },
+  { label: "Expertise", scrollTo: "tech-stacks", router: "/", icon: FaTools },
+  { label: "About Me", scrollTo: "about-me", router: "/", icon: FaUser },
   
   // Pages
-  { label: "About", router: "/about", icon: FaUser },
+  // { label: "About", router: "/about", icon: FaUser },
   { label: "Projects", router: "/projects", icon: FaCodeBranch },
   { label: "Contact", router: "/contact", icon: FaEnvelopeOpenText },
 ];
