@@ -26,7 +26,8 @@ import NotFoundPage from '@/pages/NotFoundPage';
 import Layout from './Layout';                                  // Main Layout Component - nav, footer, outlet for main content
 import MyModal from './MyModal';                              // Global Modal Component 
 import ProjectModal from '@/pages/ProjectModal';                         // Project Modal Content
-// import SpecializationModal from '@/pages/SpecializationModal';           // Specialization Modal Content
+import TechStackModal from '@/pages/TeckStackModal';
+
 import { techStackParam, projectParam } from '@/data/globals';  // Modal Param names
 
 // Page Transition Duration Global
@@ -38,7 +39,7 @@ export default function AppRoutes() {
   // Get query parameters for Modal
   const params = new URLSearchParams(location.search); // Get the query parameters from the URL
   const projectID = params.get(projectParam);          // Get the project ID from the query parameters
-  // const specializationID = params.get(techStackParam);     // Get the specialization ID from the query parameters
+  const techStackID = params.get(techStackParam);     // Get the tech stack ID from the query parameters
 
   // Get pathname for on change and navigation type
   const { pathname } = useLocation(); // Get the current location of Router
@@ -62,18 +63,18 @@ export default function AppRoutes() {
 
   // Handle the modal state
   const [showProjectModal, setShowProjectModal] = useState(false);
+  const [showTechStackModal, setShowTechStackModal] = useState(false);
 
   useEffect(() => {
-    // If i have a project id then show the project modal
-    if (projectID) {
-      setShowProjectModal(true);
-    }
+    if (projectID) setShowProjectModal(true);// If i have a project id then show the project modal
+    if (!projectID && showProjectModal) setShowProjectModal(false)   // if project id is removed and the modal is open, close the modal imme
 
-    // if project id is removed and the modal is open, close the modal imme
-    if (!projectID && showProjectModal) {
-      setShowProjectModal(false)    
-    }
-  }, [projectID]);
+    if (techStackID) setShowTechStackModal(true); // If i have a tech stack id then show the tech stack modal
+    if (!techStackID && showTechStackModal) setShowTechStackModal(false)   // if tech stack id is removed and the modal is open, close the modal imme
+  
+
+
+  }, [projectID, techStackID]); // Activated when projectID or techStackID changes
 
 
   return (
@@ -83,6 +84,11 @@ export default function AppRoutes() {
         {showProjectModal && (
           <MyModal >
             <ProjectModal projectName={projectID} />
+          </MyModal>
+        )}
+        {showTechStackModal && (
+          <MyModal >
+            <TechStackModal techId={techStackID} />
           </MyModal>
         )}
       </AnimatePresence>

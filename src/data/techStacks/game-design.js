@@ -14,7 +14,7 @@ export const gameDesign = {
   name: "Game Development", 
   description: "I create games that feel great to play — responsive, immersive, and thoughtfully designed from code to controls.",
 
-  longDescription: "From physics-driven mechanics and gameplay patterns to immersive shaders, audio, and animations, I develop games from the ground up. My workflow spans scripting, editor tooling, art integration, and production pipelines — ensuring systems are robust, intuitive, and fun to play.",
+modalDescription: "This section highlights the tools, frameworks, and design patterns I use to create games from prototype to polish. From scripting and physics systems to shaders, animations, and editor tooling, each category below breaks down the core components of my game development workflow.",
 
   commonTools: [
     IconLibrary.UNITY,             // Core engine
@@ -27,15 +27,16 @@ export const gameDesign = {
     IconLibrary.FMOD,             // Pro-level audio integration
   ],
 
-  all: [
+  allTools: [
     {
-      category: "Gameplay Systems",
+      category: "Development & Tooling",
       skills: [
-        IconLibrary.UNITY_PHYSICS,
-        IconLibrary.PATHFINDING,
-        IconLibrary.FACTORY_PATTERN,
-        IconLibrary.OBSERVER_PATTERN,
-        IconLibrary.FLYWEIGHT_PATTERN,
+        IconLibrary.UNITY,
+        IconLibrary.CSHARP,
+        IconLibrary.BLENDER,
+        IconLibrary.INSPECTOR_TOOLS,
+        IconLibrary.GITHUB,
+        IconLibrary.PLASTIC_SCM,
       ],
     },
     {
@@ -48,15 +49,14 @@ export const gameDesign = {
       ],
     },
     {
-      category: "Development & Tooling",
+      category: "Gameplay Systems",
       skills: [
-        IconLibrary.UNITY,
-        IconLibrary.CSHARP,
-        IconLibrary.INSPECTOR_TOOLS,
-        IconLibrary.BLENDER,
-        IconLibrary.GITHUB,
-        IconLibrary.PLASTIC_SCM,
+        IconLibrary.UNITY_PHYSICS,
+        IconLibrary.PATHFINDING,
+        IconLibrary.FACTORY_PATTERN,
+        IconLibrary.OBSERVER_PATTERN,
+        IconLibrary.FLYWEIGHT_PATTERN,
       ],
-    },
+    }
   ],
 };

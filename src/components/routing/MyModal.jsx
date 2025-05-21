@@ -55,7 +55,7 @@ export default function MyModal({ children }) {
         exit={{ opacity: 0 }}
         delay={0.1}
         transition={{ duration: 0.5 }}
-        className="absolute inset-0 bg-black/70 backdrop-blur-sm z-0 "
+        className="absolute inset-0 bg-black/80 backdrop-blur-sm z-0 "
       />
 
       {/* Modal container - spacing location for content */}

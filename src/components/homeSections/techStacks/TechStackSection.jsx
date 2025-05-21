@@ -42,7 +42,7 @@ export default function TechStackSection({
         
         
         ${isBlurred && !isMobile ? // the affect when the other card is hovered 
-          'opacity-60 scale-[0.2] blur-[1px]  transition-all duration-500 ease-out ' + translation
+          'opacity-60 scale-[0.2] blur-[1px]  transition-all duration-500 delay-500 ease-out ' + translation
           : 'transition-all duration-500 ease-out'}
 
         bg-primary/50 dark:bg-secondary/50 backdrop-blur-xl

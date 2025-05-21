@@ -10,8 +10,8 @@
  * @since 2.1
  */
 import React from 'react';
-import Tooltip from '../../uiElements/Tooltip';
-import ShowIcon from '../../uiElements/ShowIcon';
+import Tooltip from '@/components/uiElements/Tooltip';
+import ShowIcon from '@/components/uiElements/skillBox/ShowIcon';
 import { useMediaQuery } from 'react-responsive';
 
 export default function MainSkills({ topSkills }) {

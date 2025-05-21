@@ -16,9 +16,9 @@ export const fullstack = {
   name: "Full Stack Development",
   linkName: "Explore Full Stack Projects & Tools",
 
-  description: "From animated elements that make sites stand out to complex, data-driven applications with dynamic user interactions, I build custom full stack solutions tailored to each project's needs.",
+  description: "I craft modern web applications from the ground up — building smooth, interactive frontends and robust backend systems tailored to performance, usability, and scalability.",
 
-  longDescription: "From animated elements that make sites stand out to complex, data-driven applications with dynamic user interactions, I develop full stack solutions across the entire web stack. My work spans static homepages, RESTful APIs, and integrated platforms with external databases, user authentication, and modern deployment pipelines on AWS and Vercel. I focus on creating seamless experiences that are both functional and visually engaging.",
+  modalDescription: "This section showcases the frontend libraries, backend frameworks, cloud infrastructure, and DevOps tools I use to build full stack applications. From responsive UIs and API integrations to authentication, deployment, and analytics — each tool contributes to building scalable, production-ready systems.",
 
   commonTools: [
     IconLibrary.REACT,

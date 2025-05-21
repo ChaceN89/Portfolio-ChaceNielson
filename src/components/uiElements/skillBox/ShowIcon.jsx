@@ -40,7 +40,7 @@
  */
 
 import React from 'react';
-import Magnetic from '../animations/Magnetic';
+import Magnetic from '@/components/animations/Magnetic';
 
 /**
  * ShowIcon component
@@ -52,7 +52,7 @@ import Magnetic from '../animations/Magnetic';
  * @param {boolean} [props.noDropShadow=false] - Flag to determine if the drop shadow should be removed.
  * @returns {JSX.Element} The ShowIcon component.
  */
-function ShowIcon({ skill, size = "2rem", useWhiteText = false, diableMag=false, noDropShadow=false }) {
+function ShowIcon({ skill, size = "2rem", useWhiteText = false, diableMag=false }) {
   // Determine the icon color based on the useWhiteText prop
   let iconColor;
   if (useWhiteText) {
@@ -70,7 +70,7 @@ function ShowIcon({ skill, size = "2rem", useWhiteText = false, diableMag=false,
 
   return (
     <Magnetic padding={5} disabled={diableMag}>
-      <div className={`${!noDropShadow && 'drop-shadow'}`} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: size, height: size }}>
+      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: size, height: size }}>
         {IconComponent ? (
           <IconComponent className="brightness-125" style={iconStyle} />
         ) : (

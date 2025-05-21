@@ -48,9 +48,9 @@
 
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { globals } from '../../../data/globals';
-import ShowIcon from '../../uiElements/ShowIcon';
-import Tooltip from '../../uiElements/Tooltip';
+import { globals } from '@/data/globals';
+import ShowIcon from '@/components/uiElements/skillBox/ShowIcon';
+import Tooltip from '@/components/uiElements/Tooltip';
 
 function CardText({ project, isInitialLoad, inView }) {
   return (

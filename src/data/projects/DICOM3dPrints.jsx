@@ -38,6 +38,7 @@ export const long = (
 export const dicom3dPrint = {
   id: "dicom-to-3d-pint", 
   name: "DICOM to 3D Print", 
+  rawName: "DICOM",
   tag: "Engineering", 
   blurb: short,
   description: long,

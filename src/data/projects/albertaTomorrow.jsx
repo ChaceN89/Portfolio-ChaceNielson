@@ -35,7 +35,8 @@ const proj_id = "alberta-tomorrow-homepage";
 export const albertaTomorrowHomepage = {
   starred: true,
   id:proj_id,
-  name: <>Alberta Tomorrow Homepage</>,
+  name: "Alberta Tomorrow Homepage",
+  rawName: "Alberta Tomorrow",
   tag: "Education",
   blurb: short,
   description: long,

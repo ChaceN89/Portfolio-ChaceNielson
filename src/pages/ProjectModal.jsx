@@ -14,11 +14,12 @@ import React, { useEffect, useState } from 'react';
 import { projects } from '@/data/pageData/projectData'; // Assuming you have a file with project data
 
 // components
-import SkillBoxContainer from '@/components/uiElements/SkillBoxContainer';
+import SkillBoxContainer from '@/components/uiElements/skillBox/SkillBoxContainer';
 import ExternalLinks from '@/components/specificSections/projects/ExternalLinks';
 import ProjectImageCarousel from '@/components/specificSections/projects/ProjectImageCarousel';
 import NotFoundInfo from '@/components/uiElements/NotFoundInfo';
 import MediaFrame from '@/components/uiElements/mediaFrame/MediaFrame';
+import PageHeader from '@/components/uiElements/PageHeader';
 
 export default function ProjectModal({ projectName }) {
   const [safeProjectName, setSafeProjectName] = useState(projectName);
@@ -44,14 +45,13 @@ export default function ProjectModal({ projectName }) {
   // Get the full stack by combining the main stack and extended stack
   const fullStack = project.extendedStack ? [...project.mainStack, ...project.extendedStack] : project.mainStack;
 
+
   return (
     <div  className="text-primary">
-      <div className='space-y-1'>
-        <h2 className='font-bold'>{project.name}</h2>
-        <p className='text-darken'>{project.blurb}</p>
-
-      </div>
+      <PageHeader name={project.name} description={project.description} pageTitle={project.rawName}  />
       <ExternalLinks externalLinks={project.externalLinks} />
+
+      {project.name} // outputs string name
 
       <hr className="border-primary border-opacity-60 mb-4" />
 
