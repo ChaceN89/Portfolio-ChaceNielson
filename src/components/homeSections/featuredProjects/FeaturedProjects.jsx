@@ -11,6 +11,8 @@ import { featuredProjects } from '@/data/pageData/projectData';
 import FeatureSection from './FeatureSection';
 import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper';
 import ProjectCarousel from '../ProjectCarousel/ProjectCarousel';
+import MyBtn from '@/components/buttons/MyBtn';
+import { useNavigate } from 'react-router-dom';
 
 export default function FeaturedProjects() {
 
@@ -21,6 +23,12 @@ export default function FeaturedProjects() {
     {src: "/backgrounds/light-secondary.jpg", textColor: "text-primary outlined-text", bgColor: "bg-secondary/0"},
     {src: "/backgrounds/light-tertiary.jpg", textColor: "text-secondary", bgColor: "bg-tertiary/0"},
   ]
+
+  
+  const navigate = useNavigate();
+  const handleProjectClick = () => {
+    navigate('/projects');
+  }
 
   return (
     <div className='flex flex-col w-full'>
@@ -44,8 +52,11 @@ export default function FeaturedProjects() {
         background={backgrounds[0].src}
         fixed
         noise
+        childClass='flex flex-col items-center justify-center gap-4 py-4'
       >
+        
         <ProjectCarousel/>
+          <MyBtn sm callBack={handleProjectClick}> See All Projects</MyBtn>
       </BackgroundWrapper>  
     </div>
   );

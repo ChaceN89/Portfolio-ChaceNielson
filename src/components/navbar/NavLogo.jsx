@@ -23,7 +23,7 @@ export default function NavLogo() {
           alt="Logo"
           className="h-8 group-hover:opacity-80"
         />
-        <h6 className="group-hover:text-accent my-drop-shadow ">CHACE NIELSON</h6>
+        <h6 className="group-hover:text-accent  ">CHACE NIELSON</h6>
       </div>
     </LinkItem>
   )

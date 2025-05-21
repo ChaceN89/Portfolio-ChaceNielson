@@ -25,6 +25,7 @@ import DisplayTesting from './components/testing/DisplayTesting'; // for display
 import AnalyticsProvider from './components/analytics/AnalyticsProvider';
 import ErrorBoundary from './components/routing/ErrorBoundary';
 import SplashScreen from './components/uiElements/splashScreen/SplashScreen';
+import { SplashProvider } from './components/uiElements/splashScreen/SplashContext';
 
 const AppLoading = memo(lazy(() => import("./components/routing/AppLoading"))); // Memoized Home component
 
@@ -34,7 +35,9 @@ const AppWithRouter = () => (
       <Router>
         <DisplayTesting />
         <AnalyticsProvider>
-          <AppLoading/>  
+          <SplashProvider>
+            <AppLoading/>  
+          </SplashProvider>
         </AnalyticsProvider>
       </Router>
     </Suspense>

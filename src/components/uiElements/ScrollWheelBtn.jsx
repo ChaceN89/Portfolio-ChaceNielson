@@ -56,7 +56,7 @@ import { useInView } from 'react-intersection-observer';
 // data
 import { globals } from '../../data/globals';
 
-export default function ScrollWheelBtn({ to = "about-me" }) {
+export default function ScrollWheelBtn({ to = "about-me", extraDelay = 0 }) {
   // Check if the screen height is greater than 400px
   const isTallEnough = useMediaQuery({ query: '(min-height: 400px)' });
 
@@ -82,7 +82,7 @@ export default function ScrollWheelBtn({ to = "about-me" }) {
   const fadeInProps = {
     initial: { opacity: 0 },
     animate: inView ? { opacity: 1 } : { opacity: 0 },
-    transition: { delay: 5, duration: 1 }, // Delay and duration for fade-in
+    transition: { delay: 3 + extraDelay, duration: 1.5 }, // Delay and duration for fade-in
   };
 
   return (

@@ -25,46 +25,46 @@ export default function ProjectCarousel() {
   };
 
   // Auto-scrolling with reset for infinite loop
-useEffect(() => {
-  const track = trackRef.current;
-  if (!track) return;
+  useEffect(() => {
+    const track = trackRef.current;
+    if (!track) return;
 
-  let frame;
-  const speed = 0.8; // pixels per frame (60fps ~= 48px/sec)
+    let frame;
+    const speed = 0.8; // pixels per frame (60fps ~= 48px/sec)
 
-  const scroll = () => {
-    if (track.scrollLeft >= track.scrollWidth / 1.5) {
-      track.scrollTo({ left: 0, behavior: 'auto' });
-    } else {
-      track.scrollLeft += speed;
-    }
-    frame = requestAnimationFrame(scroll);
-  };
+    const scroll = () => {
+      if (track.scrollLeft >= track.scrollWidth / 1.5) {
+        track.scrollTo({ left: 0, behavior: 'auto' });
+      } else {
+        track.scrollLeft += speed;
+      }
+      frame = requestAnimationFrame(scroll);
+    };
 
-  const stopScroll = () => cancelAnimationFrame(frame);
-  const startScroll = () => frame = requestAnimationFrame(scroll);
+    const stopScroll = () => cancelAnimationFrame(frame);
+    const startScroll = () => frame = requestAnimationFrame(scroll);
 
-  startScroll();
+    startScroll();
 
-  track.addEventListener('mouseenter', stopScroll);
-  track.addEventListener('mouseleave', startScroll);
+    track.addEventListener('mouseenter', stopScroll);
+    track.addEventListener('mouseleave', startScroll);
 
-  const arrows = document.querySelectorAll('.carousel-arrow');
-  arrows.forEach(btn => {
-    btn.addEventListener('mouseenter', stopScroll);
-    btn.addEventListener('mouseleave', startScroll);
-  });
-
-  return () => {
-    stopScroll();
-    track.removeEventListener('mouseenter', stopScroll);
-    track.removeEventListener('mouseleave', startScroll);
+    const arrows = document.querySelectorAll('.carousel-arrow');
     arrows.forEach(btn => {
-      btn.removeEventListener('mouseenter', stopScroll);
-      btn.removeEventListener('mouseleave', startScroll);
+      btn.addEventListener('mouseenter', stopScroll);
+      btn.addEventListener('mouseleave', startScroll);
     });
-  };
-}, []);
+
+    return () => {
+      stopScroll();
+      track.removeEventListener('mouseenter', stopScroll);
+      track.removeEventListener('mouseleave', startScroll);
+      arrows.forEach(btn => {
+        btn.removeEventListener('mouseenter', stopScroll);
+        btn.removeEventListener('mouseleave', startScroll);
+      });
+    };
+  }, []);
 
 
   const scrollLeft = () => {

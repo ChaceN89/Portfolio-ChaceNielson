@@ -15,12 +15,16 @@
 
 import React, { useEffect, useState } from 'react';
 import AppRoutes from './AppRoutes';
-import SplashScreen from '../uiElements/splashScreen/SplashScreen';
+import SplashScreen from '@/components/uiElements/splashScreen/SplashScreen';
+import { useSplash } from '../uiElements/splashScreen/SplashContext';
 
 export default function AppLoading() {
   const [showSplash, setShowSplash] = useState(true);      // Show the loading screen/splash screen - remove from DOM after fade out (after animation)
   const [removeSplash, setRemoveSplash] = useState(false); // flag to start removing the splash screen in an animation
   const [loadPercent, setLoadPercent] = useState(0);       // percentage of loading - used to animate the loading bar in the splash screen (artificial)
+
+
+  const { setSplashDone } = useSplash();
 
 
   const artificialLoadingTime = 1500; // artificial loading time before he splash screen fades out
@@ -42,6 +46,7 @@ export default function AppLoading() {
       if (count >= steps) {
         clearInterval(interval);
         setRemoveSplash(true); // ✅ start fade-out
+        setSplashDone(true); // ✅ set the splash screen to done
       }
     }, incrementTime);
     

@@ -24,7 +24,7 @@
  */
 export const globals = {
   scrollDuration: 1000, // Duration of the scroll animation in milliseconds
-  navbarHeight: -50, // Offset to account for fixed headers
+  navbarHeight: -66, // Offset to account for fixed headers
 
   project: {
     slide: 0.4, // Slide value for project animations
