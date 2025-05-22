@@ -40,7 +40,6 @@ export const glassGeckoGames = {
   starred: true,
   id: proj_id,
   name: <>Glass Gecko Games Homepage</>,
-  tag: "Glass Gecko Games",
   tag: "Game Dev",
   blurb: short,
   description: long,

@@ -35,9 +35,9 @@
  */
 
 import React from 'react';
-import { openPdf } from '../../../utils/utils';
-import MyButton from '../../buttons/MyButton';
+import { openPdf } from '@/utils/utils';
 import { FaFileDownload } from "react-icons/fa";
+import MyBtn from '../buttons/MyBtn';
 
 function DownloadCV() {
   // Functions to open PDFs in a separate tab
@@ -45,13 +45,13 @@ function DownloadCV() {
   const openCoverLetter = () => openPdf("Chace Nielson - Cover Letter.pdf");
 
   return (
-    <div className='flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:space-x-6'>
-      <MyButton onClick={openResume}>
+    <div className=' my-2 flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:space-x-6'>
+      <MyBtn sm callBack={openResume}>
         <span className='flex items-center gap-1'>Resume <FaFileDownload/></span>
-      </MyButton>
-      <MyButton onClick={openCoverLetter}>
+      </MyBtn>
+      <MyBtn sm callBack={openCoverLetter}>
         <span className='flex items-center gap-1'>Cover Letter <FaFileDownload/></span>
-      </MyButton>
+      </MyBtn>
     </div>
   );
 }

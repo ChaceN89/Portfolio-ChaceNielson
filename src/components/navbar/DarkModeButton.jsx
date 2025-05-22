@@ -49,7 +49,7 @@ export default function DarkModeButton() {
   }, []);
 
   return (
-    <Tooltip text={isDarkMode ? "Toggle Light Mode" : "Toggle Dark Mode"} openDuration={1200}>
+    <Tooltip text={isDarkMode ? "Light Mode" : "Dark Mode"} openDuration={1200}>
     <button
       onClick={toggleDarkMode}
       className={`

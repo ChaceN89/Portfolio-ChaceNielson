@@ -12,9 +12,6 @@
  */
 
 export const contactPageData = {
-  title: "Let's Connect",
-  description: "Send me a message and let's start a conversation.",
-
   // EmailJS variables
   EMAILJS_USER_ID: import.meta.env.VITE_APP_EMAILJS_USER_ID,
   EMAILJS_SERVICE_ID: import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,

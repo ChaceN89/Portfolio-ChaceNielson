@@ -36,7 +36,6 @@ export const albertaTomorrowHomepage = {
   starred: true,
   id:proj_id,
   name: "Alberta Tomorrow Homepage",
-  tag: "Alberta Tomorrow",
   tag: "Web App",
   blurb: short,
   description: long,

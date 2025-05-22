@@ -38,7 +38,6 @@ export const imageProcessor = {
   starred: true,
   id: "image-processor",
   name: "Image Processor",
-  tag: "Image Processor",
   tag: "Backend",
   blurb: short,
   description: long,

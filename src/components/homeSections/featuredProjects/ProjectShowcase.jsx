@@ -128,7 +128,7 @@ export default function ProjectShowcase({ project, background, nextId }) {
           {/* Icons and btn */}
           <div className='flex flex-col md:flex-row items-start lg:justify-end lg:items-center gap-6'>
 
-            <div className="flex gap-3 items-center flex-wrap">
+            <div className="flex gap-4 items-center flex-wrap">
               {project.mainStack?.map((iconObj, i) => (
                 <Tooltip text={iconObj.name} key={i}>
                   <ShowIcon key={i} skill={iconObj} size={iconSize} />

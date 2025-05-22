@@ -41,7 +41,6 @@ export const cubeGame = {
   id: "cube-game",
   name: "Cube game",
   tag: "Unity Game",
-  tag: "Game",
   blurb: short,
   description: long,
   images: [

@@ -9,17 +9,20 @@
  * 
  * @author Chace Nielson
  * @created Jan 26, 2025
- * @updated Jan 26, 2025
+ * @updated May 22, 2025
  */
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { toast, Toaster } from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-import MyButton from '../../buttons/MyButton';
-import { contactPageData } from '../../../data/pageData/contactPageData';
+import MyBtn from '../buttons/MyBtn';
+import { contactPageData } from '@/data/pageData/contactPageData';
 
-function Form() {
+export default function Form() {
+
+  const formRef = useRef();
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -61,7 +64,11 @@ function Form() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
+    <form 
+      ref={formRef}
+      onSubmit={handleSubmit} 
+      className="space-y-6"
+    >
       <Toaster />
       <div>
         <label htmlFor="name" className="contact-label">Name</label>
@@ -103,10 +110,11 @@ function Form() {
         />
       </div>
       <div className='w-full flex justify-start'>
-        <MyButton type="submit">Send Message</MyButton>
+        <MyBtn sm callBack={() => formRef.current?.requestSubmit()}>
+          Send Message
+        </MyBtn>
       </div>
     </form>
   );
 }
 
-export default Form;

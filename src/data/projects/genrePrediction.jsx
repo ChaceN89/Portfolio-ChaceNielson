@@ -32,7 +32,6 @@ const long = (
 export const genrePrediction = {
   id: "genre-prediction",
   name: "Genre Prediction",
-  tag: "Genre Prediction",
   tag: "Machine Learning",
   blurb: short,
   description: long,
