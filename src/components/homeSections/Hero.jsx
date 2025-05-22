@@ -43,7 +43,7 @@ export default function Hero() {
 
 
   return (
-    <div className="w-screen min-h-[85vh] pt-32 flex flex-col lg:flex-row lg:flex-reverse items-center justify-center px-8 md:px-20 py-12 gap-12 relative overflow-hidden">
+    <div className="w-screen min-h-[85vh] pt-20 flex flex-col lg:flex-row lg:flex-reverse items-center justify-center px-8 md:px-20 py-12 gap-12 relative overflow-hidden">
 
       {/* Left Text Block */}
       <div className="flex flex-col gap-4 z-10">

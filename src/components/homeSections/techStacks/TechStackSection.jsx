@@ -41,10 +41,11 @@ export default function TechStackSection({
         transition-all duration-500
         
         ${isBlurred && !isMobile ? // the affect when the other card is hovered 
-          'opacity-60 scale-[0.2] blur-[1px]  transition-all duration-400 delay-200 ease-out ' + translation
+          'opacity-60 scale-[0.2] blur-[1px]  transition-all duration-400 delay-400 ease-out ' + translation
           : 'transition-all duration-500 ease-out'
         }
-
+        
+        hover:border-accent/90
         bg-primary/60 dark:bg-secondary/20 backdrop-blur-3xl
         hover:shadow-xl 
       `}

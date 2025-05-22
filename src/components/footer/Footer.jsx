@@ -40,11 +40,11 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="bg-accent-alt/40 py-4 text-center text-sm space-y-4">
+        {/* <div className="bg-accent-alt/40 py-4 text-center text-sm space-y-4">
           <p>
             I'm always open to connecting with creative minds, collaborators, and curious teams — let's build something great together.
           </p>
-        </div>
+        </div> */}
       </BackgroundWrapper>
     </footer>
     </motion.footer>

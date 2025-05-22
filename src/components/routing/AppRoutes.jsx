@@ -78,7 +78,7 @@ export default function AppRoutes() {
 
 
   return (
-    <div className='min-w-56 overflow-x-hidden z-'>
+    <div className='min-w-56 overflow-x-hidden'>
 
       <AnimatePresence>
         {showProjectModal && (
