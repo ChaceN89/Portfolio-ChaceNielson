@@ -44,45 +44,39 @@
  * @created 2024-07-28
  * @updated 2024-07-28
  */
-
 import React from 'react';
 // Libraries
 import { motion } from 'framer-motion';
 import { useMediaQuery } from 'react-responsive';
 import { Link as ScrollLink } from 'react-scroll';
 import { useInView } from 'react-intersection-observer';
-
+import { BsMouse } from 'react-icons/bs'; // Scroll wheel icon
 
 // data
 import { globals } from '../../data/globals';
 
 export default function ScrollWheelBtn({ to = "about-me", extraDelay = 0 }) {
-  // Check if the screen height is greater than 400px
   const isTallEnough = useMediaQuery({ query: '(min-height: 400px)' });
+  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.4 });
 
-  const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.4 }); 
-
-  // Only render the component if the screen height is greater than 400px
-  if (!isTallEnough) {
-    return null;
-  }
+  if (!isTallEnough) return null;
 
   const bounceProps = {
-    initial: { y: 0 }, // Initial position
-    animate: { y: [0, -20, 0] }, // Keyframes for the bouncing effect
+    initial: { y: 0 },
+    animate: { y: [0, -20, 0] },
     transition: {
-      duration: 2, // Duration of the animation
-      times: [0, 0.5, 1], // Timing for each keyframe
-      repeat: Infinity, // Repeat the animation indefinitely
-      repeatDelay: 1, // Delay before repeating the animation
-      ease: 'easeInOut', // Easing function
+      duration: 2,
+      times: [0, 0.5, 1],
+      repeat: Infinity,
+      repeatDelay: 1,
+      ease: 'easeInOut',
     },
   };
 
   const fadeInProps = {
     initial: { opacity: 0 },
     animate: inView ? { opacity: 1 } : { opacity: 0 },
-    transition: { delay: 3 + extraDelay, duration: 1.5 }, // Delay and duration for fade-in
+    transition: { delay: 2 + extraDelay, duration: 1.5 },
   };
 
   return (
@@ -90,22 +84,17 @@ export default function ScrollWheelBtn({ to = "about-me", extraDelay = 0 }) {
       ref={ref}
       className="hidden absolute inset-0 z-15 md:flex justify-center items-end pointer-events-none"
     >
-      
-      {/* Scroll button content */}
       <motion.div className="mb-4 z-10 pointer-events-auto" {...fadeInProps}>
         <motion.div {...bounceProps}>
           <ScrollLink
-            className="hover:cursor-pointer my-drop-shadow"
+            className="hover:cursor-pointer"
             to={to}
             spy={true}
             smooth={true}
             offset={globals.navbarHeight}
             duration={globals.scrollDuration}
           >
-            <img
-              src='/icons/site-icons/scroll.png'
-              className="h-12 lg:h-14 xl:h-16 hover:scale-110 opacity-45 hover:opacity-75 cursor-s-resize"
-            />
+            <BsMouse className="opacity-50 rotate-180  hover:text-tertiary/60 hover:opacity-100 transition-all duration-300 text-4xl xl:text-5xl" />
           </ScrollLink>
         </motion.div>
       </motion.div>

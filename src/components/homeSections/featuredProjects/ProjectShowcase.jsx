@@ -121,12 +121,12 @@ export default function ProjectShowcase({ project, background, nextId }) {
 
           {/* Title */}
           <h2 className="text-4xl font-bold">{project.name}</h2>
-          <hr className={`${borderColor} border-t  dark:border-primary/40 my-2 lg:ml-20`} />
+          <hr className={`${borderColor} border-t   my-2 lg:ml-20`} />
           <p className="text-xl opacity-90 italic">{project.blurb}</p>
 
 
           {/* Icons and btn */}
-          <div className='flex flex-col md:flex-row items-start lg:justify-end items-center gap-6'>
+          <div className='flex flex-col md:flex-row items-start lg:justify-end lg:items-center gap-6'>
 
             <div className="flex gap-3 items-center flex-wrap">
               {project.mainStack?.map((iconObj, i) => (
