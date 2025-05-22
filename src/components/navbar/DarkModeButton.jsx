@@ -22,6 +22,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { FaSun, FaMoon } from 'react-icons/fa';
+import Tooltip from '../uiElements/Tooltip';
 
 export default function DarkModeButton() {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -48,6 +49,7 @@ export default function DarkModeButton() {
   }, []);
 
   return (
+    <Tooltip text={isDarkMode ? "Toggle Light Mode" : "Toggle Dark Mode"} openDuration={1200}>
     <button
       onClick={toggleDarkMode}
       className={`
@@ -59,5 +61,6 @@ export default function DarkModeButton() {
     >
       {isDarkMode ? <FaMoon /> : <FaSun />}
     </button>
+    </Tooltip>
   );
 }

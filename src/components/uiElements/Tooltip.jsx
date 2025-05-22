@@ -113,7 +113,7 @@ const Tooltip = ({ text, openDuration = 1000, className = "", children }) => {
       {createPortal(
         <div
           ref={tooltipRef}
-          className={`fixed p-1 text-sm text-primary bg-secondary/75 border rounded-lg w-fit whitespace-nowrap ${className}`}
+          className={`fixed p-1.5 text-sm text-primary bg-secondary  border rounded-lg w-fit whitespace-nowrap ${className}`}
           style={{ ...tooltipStyle, zIndex: 9999 }}
         >
           {text}
