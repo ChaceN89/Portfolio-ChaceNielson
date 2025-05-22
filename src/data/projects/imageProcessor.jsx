@@ -38,7 +38,7 @@ export const imageProcessor = {
   starred: true,
   id: "image-processor",
   name: "Image Processor",
-  tag: "Backend",
+  tags: ["Web App", "Backend", "FastAPI"],
   blurb: short,
   description: long,
   images: [

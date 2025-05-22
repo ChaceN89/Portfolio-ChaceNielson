@@ -32,7 +32,7 @@ export const jobDashboard = {
   starred: true,
   id: "job-dashboard",
   name: "Job Dashboard",
-  tag: "Backend",
+  tags: ["Web App", "Job Tracker", "FastAPI"],
   blurb: short,
   description: long,
   images: [

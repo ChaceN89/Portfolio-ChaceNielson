@@ -46,7 +46,7 @@ export const portfolio = {
   starred: true,
   id: "portfolio",
   name: "My Portfolio",
-  tag: "UX/UI",
+  tags: ["Web App", "Portfolio", "Personal"],
   blurb: short,
   description: long,
   images: [

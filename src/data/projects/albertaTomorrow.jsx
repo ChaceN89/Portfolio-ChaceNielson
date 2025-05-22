@@ -36,14 +36,15 @@ export const albertaTomorrowHomepage = {
   starred: true,
   id:proj_id,
   name: "Alberta Tomorrow Homepage",
-  tag: "Web App",
+  tags: ["Web App", "Educational", "Simulation"],
   blurb: short,
   description: long,
   thumbnail:{
     src: "/projects/" + proj_id + "/abTomorrow-0.jpg",
     blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ",
   },
-  youtubeID: "MHDH_m0agFM", // Add video if available
+  youtubeID: "MHDH_m0agFM", // youtube video - thumbnail is used as a placeholder while loading the video
+  // list of images to display in the modal carousel
   images: [
     { src: "abTomorrow-1.jpg", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
     { src: "abTomorrow-2.jpg", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed

@@ -49,7 +49,7 @@ const proj_id = "scale-the-depths";
 export const scaleTheDepths = {
   id: proj_id,
   name: "Scale The Depths",
-  tag: "Game",
+  tags: ["Game", "Unity", "Jam"],
   blurb: short,
   description: long,
   thumbnail:{

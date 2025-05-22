@@ -15,7 +15,7 @@ import DownloadCV from './DownloadCV';
 
 export default function ContactForm() {
   return (
-    <div className='container mx-auto py-20 px-2'>
+    <div >
       <h2>Contact Me</h2>
       <p>I would love to hear from you! Please fill out the form below to get in touch.</p>
       <DownloadCV /> 

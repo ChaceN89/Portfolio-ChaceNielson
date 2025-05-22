@@ -63,7 +63,7 @@ export const geoPredict = {
   starred: true,
   id: "geo-predict", // id and folder name in the projects folder
   name: "GEO Predict",
-  tag: "Full-Stack",
+  tags: ["Web App", "Machine Learning", "Data Visualization"],
   blurb: short,
   description: long,
   images: [

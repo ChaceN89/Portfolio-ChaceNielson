@@ -38,7 +38,7 @@ export default function CarouselCard({ project, onClick }) {
       </div>
 
       <div className="bg-primary dark:bg-secondary text-secondary dark:text-primary text-center py-2 text-sm font-medium">
-        {project.name} | {project.tag}
+        {project.name}
       </div>
     </div>
   );

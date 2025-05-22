@@ -37,7 +37,7 @@ export const voiceIdentification = {
   starred: true,
   id: "voice-identification",
   name: "Voice Identification",
-  tag: "Machine Learning",
+  tags: ["Machine Learning", "Voice Recognition", "Python"],
   blurb: short,
   description: long,
   images: [

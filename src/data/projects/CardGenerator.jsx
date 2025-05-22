@@ -33,7 +33,7 @@ export const cardGenerator = {
   starred: true,
   id: "card-generator", 
   name: "Card Generator",
-  tag: "UX/UI",
+  tags: ["Web App", "Game", "Card"],
   blurb: short,
   description: long,
   images: [

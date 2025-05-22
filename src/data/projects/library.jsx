@@ -36,7 +36,7 @@ const proj_id = "library";
 export const library = {
   id: proj_id,
   name: "PageFlow Library",
-  tag: "Full-Stack",
+  tags: ["Web App", "Library", "Django"],
   blurb: short,
   description: long,
   thumbnail:{

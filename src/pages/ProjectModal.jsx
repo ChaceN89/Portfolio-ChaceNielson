@@ -48,7 +48,7 @@ export default function ProjectModal({ projectName }) {
 
   return (
     <div  className="text-primary">
-      <PageHeader name={project.name} description={project.description} pageTitle={"Project: " +project.tag}  />
+      <PageHeader name={project.name} description={project.description} pageTitle={"Project: " +project.name}  />
       <ExternalLinks externalLinks={project.externalLinks} />
 
       {project.name} // outputs string name
