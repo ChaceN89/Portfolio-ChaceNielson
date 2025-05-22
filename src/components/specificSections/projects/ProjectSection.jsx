@@ -10,7 +10,7 @@
  * @updated Jan 26 2025
  */
 import React, { useState, useEffect } from 'react';
-import { projects, projectPageData } from '@/data/pageData/projectData';
+import { projects,  } from '@/data/pageData/projectData';
 import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper';
 import SectionWrapper from '@/components/wrappers/SectionWrapper';
 import ProjectCard from './ProjectCard';
@@ -53,8 +53,8 @@ function ProjectSection() {
       backgroundRepeat="repeat"
     >
       <SectionWrapper
-        title={projectPageData.title}
-        subtitle={projectPageData.description}
+        title={"projectPageData.title"}
+        subtitle={"projectPageData.description"}
       >
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
           {visibleProjects.map((project, index) => (

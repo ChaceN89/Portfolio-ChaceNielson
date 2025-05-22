@@ -52,25 +52,18 @@ import Magnetic from '@/components/animations/Magnetic';
  * @param {boolean} [props.noDropShadow=false] - Flag to determine if the drop shadow should be removed.
  * @returns {JSX.Element} The ShowIcon component.
  */
-function ShowIcon({ skill, size = "2rem", useWhiteText = false, diableMag=false }) {
-  // Determine the icon color based on the useWhiteText prop
-  let iconColor;
-  if (useWhiteText) {
-    iconColor = skill.color === 'black' ? 'white' : skill.color;
-  } else {
-    iconColor = skill.color === 'white' ? 'black' : skill.color;
-  }
+function ShowIcon({ skill, size = "2rem",  diableMag=false }) {
 
   // If it's a react-icon use the icon component, otherwise use the svg
   const IconComponent = skill.icon;
 
   // Styles for the icon and image elements
-  const iconStyle = { color: iconColor, fontSize: size };
+  const iconStyle = { color: skill.color, fontSize: size };
   const imgStyle = { width: size, height: size };
 
   return (
     <Magnetic padding={5} disabled={diableMag}>
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: size, height: size }}>
+      <div className='black-drop-shadow' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: size, height: size }}>
         {IconComponent ? (
           <IconComponent className="brightness-125" style={iconStyle} />
         ) : (

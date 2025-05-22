@@ -6,6 +6,7 @@ import Tooltip from '@/components/uiElements/Tooltip';
 import { openModal } from '@/utils/utils';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import MyBtn from '@/components/buttons/MyBtn';
 
 export default function ProjectCarousel() {
   const trackRef = useRef(null);
@@ -75,34 +76,46 @@ export default function ProjectCarousel() {
     trackRef.current?.scrollBy({ left: itemWidth, behavior: 'smooth' });
   };
 
+
+  const handleProjectClick = () => {
+    navigate('/projects');
+  }
+
   return (
-    <div className="project-carousel-container group">
-      <button onClick={scrollLeft} className="carousel-arrow left-arrow">
-        <FaChevronLeft />
-      </button>
-      <button onClick={scrollRight} className="carousel-arrow right-arrow">
-        <FaChevronRight />
-      </button>
+    <div
+    className='flex flex-col items-center justify-center gap-4 py-8'
+    >
 
-      <div ref={trackRef} className="project-carousel-track ">
-        {projects.concat(projects, projects).map((project, index) => {
-          const image = project.images?.[0];
-          if (!image?.src) return null;
+  
+      <div className="project-carousel-container group">
+        <button onClick={scrollLeft} className="carousel-arrow left-arrow">
+          <FaChevronLeft />
+        </button>
+        <button onClick={scrollRight} className="carousel-arrow right-arrow">
+          <FaChevronRight />
+        </button>
 
-          return (
-            <div onClick={() => handleClick(project.id)} key={`${project.id}-${index}`} className="carousel-item">
-              <Tooltip text={project.name} openDuration={200}>
-                <ImageComponent
-                  src={`/projects/${project.id}/${image.src}`}
-                  blurHash={image.blurhash}
-                  alt={project.name}
-                  className="carousel-image object-cover object-top"
-                />
-              </Tooltip>
-            </div>
-          );
-        })}
+        <div ref={trackRef} className="project-carousel-track ">
+          {projects.concat(projects, projects).map((project, index) => {
+            const image = project.images?.[0];
+            if (!image?.src) return null;
+
+            return (
+              <div onClick={() => handleClick(project.id)} key={`${project.id}-${index}`} className="carousel-item">
+                <Tooltip text={project.name} openDuration={200}>
+                  <ImageComponent
+                    src={`/projects/${project.id}/${image.src}`}
+                    blurHash={image.blurhash}
+                    alt={project.name}
+                    className="carousel-image object-cover object-top"
+                  />
+                </Tooltip>
+              </div>
+            );
+          })}
+        </div>
       </div>
+      <MyBtn sm callBack={handleProjectClick}> See All Projects</MyBtn>
     </div>
   );
 }

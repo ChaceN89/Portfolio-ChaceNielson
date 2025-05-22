@@ -29,7 +29,7 @@ export default function MainSkills({ topSkills }) {
           className="max-w-xs"
           text={topSkill.name}
         >
-          <ShowIcon skill={topSkill} size={iconSize} useWhiteText={true} className="transition-transform duration-200 hover:scale-110" />
+          <ShowIcon skill={topSkill} size={iconSize} className="transition-transform duration-200 hover:scale-110" />
         </Tooltip>
       ))}
     </div>

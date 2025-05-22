@@ -150,6 +150,10 @@ html.dark, .dark body {
   filter: drop-shadow(2px 2px 0px var(--color-primary)); /* Opposite for dark */
 }
 
+.black-drop-shadow {
+  filter: drop-shadow(1px 2px 1.5px var(--color-secondary));
+}
+
 /* Large shadow to conve depth */
 .my-drop-shadow-lg {
   filter: drop-shadow(12px 12px 3px var(--color-secondary));

@@ -40,20 +40,20 @@ export default function TechStackSection({
         border-2 rounded-[30px] p-6
         transition-all duration-500
         
-        
         ${isBlurred && !isMobile ? // the affect when the other card is hovered 
           'opacity-60 scale-[0.2] blur-[1px]  transition-all duration-400 delay-200 ease-out ' + translation
-          : 'transition-all duration-500 ease-out'}
+          : 'transition-all duration-500 ease-out'
+        }
 
-        bg-primary/50 dark:bg-secondary/30 backdrop-blur-xl
+        bg-primary/60 dark:bg-secondary/20 backdrop-blur-3xl
         hover:shadow-xl 
       `}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <div className="flex flex-col gap-6 flex-grow">
+      <div className="flex flex-col gap-6 flex-grow justify-between">
         <div className="flex flex-col space-y-3">
-          <h3 className="text-3xl font-bold leading-tight tracking-tight">
+          <h3 className="leading-tight tracking-tight">
             {techStack.name}
           </h3>
           <p className="text-sm opacity-80 leading-relaxed">

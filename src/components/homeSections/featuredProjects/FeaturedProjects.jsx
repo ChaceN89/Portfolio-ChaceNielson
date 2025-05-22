@@ -24,11 +24,7 @@ export default function FeaturedProjects() {
     {src: "/backgrounds/light-tertiary.jpg", textColor: "text-secondary", bgColor: "bg-tertiary/0"},
   ]
 
-  
-  const navigate = useNavigate();
-  const handleProjectClick = () => {
-    navigate('/projects');
-  }
+
 
   return (
     <div className='flex flex-col w-full'>
@@ -47,17 +43,6 @@ export default function FeaturedProjects() {
           </div>
         );
       })}
-      <BackgroundWrapper
-        id={``}
-        background={backgrounds[0].src}
-        fixed
-        noise
-        childClass='flex flex-col items-center justify-center gap-4 py-4'
-      >
-        
-        <ProjectCarousel/>
-          <MyBtn sm callBack={handleProjectClick}> See All Projects</MyBtn>
-      </BackgroundWrapper>  
     </div>
   );
 }

@@ -32,17 +32,22 @@ import { dicom3dPrint } from "../projects/DICOM3dPrints";
 import { energyTomorrow } from "../projects/EnergyTomorrow";
 import { library } from "../projects/library";
 
-export const projectPageData = {
-  title: "My Projects",
-  description: "A collection of my projects showcasing a variety of skills and technologies.",
-};
-
 export const featuredProjects = [
   albertaTomorrowHomepage,
   glassGeckoGames,
   scaleTheDepths,
   library,
 ]
+
+export const carouselProjects = [
+  albertaTomorrowHomepage,
+  glassGeckoGames,
+  energyTomorrow,
+  geoPredict,
+  dicom3dPrint,
+
+]
+
 
 export const projects = [
   albertaTomorrowHomepage,
