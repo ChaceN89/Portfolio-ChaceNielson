@@ -8,23 +8,17 @@
  * @updated May 20, 2025
  */
 import { featuredProjects } from '@/data/pageData/projectData';
-import FeatureSection from './FeatureSection';
-import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper';
-import ProjectCarousel from '../ProjectCarousel/ProjectCarousel';
-import MyBtn from '@/components/buttons/MyBtn';
-import { useNavigate } from 'react-router-dom';
+import ProjectShowcase from './ProjectShowcase';
 
 export default function FeaturedProjects() {
 
-  // Light
+  // Light - for 4 featured projects
   const backgrounds = [
-    {src: "/backgrounds/light-accent.jpg", textColor: "text-primary outlined-text", bgColor: "bg-accent/0"},
-    {src: "/backgrounds/light-primary.jpg", textColor: "text-secondary", bgColor: "bg-primary/0"},
-    {src: "/backgrounds/light-secondary.jpg", textColor: "text-primary outlined-text", bgColor: "bg-secondary/0"},
-    {src: "/backgrounds/light-tertiary.jpg", textColor: "text-secondary", bgColor: "bg-tertiary/0"},
+    {src: "/backgrounds/light-accent.jpg",    rippleColor:"var(--color-accent)",    textColor: "text-primary outlined-text",  borderColor: "border-primary"},
+    {src: "/backgrounds/light-primary.jpg",   rippleColor:"var(--color-primary)",   textColor: "text-secondary",              borderColor: "border-secondary"},
+    {src: "/backgrounds/light-secondary.jpg", rippleColor:"var(--color-secondary)", textColor: "text-primary outlined-text",  borderColor: "border-primary"},
+    {src: "/backgrounds/light-tertiary.jpg",  rippleColor:"var(--color-tertiary)",  textColor: "text-secondary",              borderColor: "border-secondary"},
   ]
-
-
 
   return (
     <div className='flex flex-col w-full'>
@@ -34,7 +28,7 @@ export default function FeaturedProjects() {
 
         return (
           <div className="relative" key={project.id}>
-            <FeatureSection
+            <ProjectShowcase
               project={project}
               background={backgrounds[index % backgrounds.length]}
               isLast={isLast}
@@ -46,5 +40,3 @@ export default function FeaturedProjects() {
     </div>
   );
 }
-
-

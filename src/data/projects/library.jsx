@@ -66,11 +66,11 @@ export const library = {
   mainStack: [
     IconLibrary.NEXT,
     IconLibrary.DJANGO,
-    IconLibrary.S3,
-    IconLibrary.RDS,
+    IconLibrary.AWS,
   ],
   extendedStack: [
-    IconLibrary.AWS,
+    IconLibrary.RDS,
+    IconLibrary.S3,
     IconLibrary.POSTGRESQL,
     IconLibrary.FULL_STACK,
     IconLibrary.AUTHENTICATION,

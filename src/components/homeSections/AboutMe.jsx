@@ -61,7 +61,7 @@ export default function AboutMe() {
   const bottomY = useTransform(scrollYProgress, [0, 0.6, 1], [200, -20, 80 ])
 
   return (
-    <motion.section ref={sectionRef} className="py-16  max-w-4xl mx-auto" id="lets-connect">
+    <motion.section ref={sectionRef} className="py-16 px-2  max-w-4xl mx-auto" id="lets-connect">
       {/* Header */}
       <motion.div
         style={{ opacity: topOpacity, y: topY }}

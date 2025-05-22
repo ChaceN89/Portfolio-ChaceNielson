@@ -11,7 +11,8 @@ import { createRoot } from 'react-dom/client'
 
 // Import all Global CSS styles
 import './index.css'
-import './global-styles/ParticleEffect.styles.css'
+import './global-styles/Particle-Effect.styles.css'
+import './global-styles/Ripple-Effect.styles.css'
 
 // Import the main App component
 import App from './App.jsx'

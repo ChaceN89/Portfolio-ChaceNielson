@@ -18,10 +18,10 @@ export default function MainSkills({ topSkills }) {
   // check screen size for icon size  
   const isSmallScreen = useMediaQuery({ query: '(max-width: 400px)' });
   const isReallySmallScreen = useMediaQuery({ query: '(max-width: 300px)' });
-  const iconSize = isReallySmallScreen ? '2rem' : isSmallScreen ? '4rem' : '5rem';
+  const iconSize = isReallySmallScreen ? '1rem' : isSmallScreen ? '4rem' : '5rem';
 
   return (
-    <div className="grid grid-cols-4 gap-4 sm:gap-6 items-center justify-items-center w-full">
+    <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 items-center justify-items-center w-full">
       {topSkills.map((topSkill, idx) => (
         <Tooltip 
           key={idx}

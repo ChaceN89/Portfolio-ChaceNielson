@@ -15,23 +15,25 @@
  * @created May 22, 2025
  * @updated May 22, 2025
  */
-import ImageComponent from '../uiElements/images/ImageComponent';
+import ImageComponent from "@/components/uiElements/images/ImageComponent";
 
 export default function CarouselCard({ project, onClick }) {
   const image = project.thumbnail?.src;
-  const blurhash = project.thumbnail?.blurhash ;
+  const blurhash = project.thumbnail?.blurhash;
 
   return (
     <div
       onClick={onClick}
-      className="group overflow-hidden border-2 border-secondary/40 dark:border-primary/60 rounded-lg shadow-md bg-black cursor-pointer transition-transform "
+      className="group overflow-hidden border-2 border-secondary/40 dark:border-primary/60 rounded-lg shadow-md bg-black cursor-pointer transition-transform"
     >
-      <div className='overflow-hidden border-b-2 border-secondary/40 dark:border-primary/60 '>
+      {/* Aspect-ratio wrapper */}
+      <div className="relative aspect-[4/3] overflow-hidden border-b-2 border-secondary/40 dark:border-primary/60">
+        <span className="ripple-hover z-10" />
         <ImageComponent
           src={image}
           blurHash={blurhash}
           alt={project.name}
-          className="w-full h-64 object-cover object-top transition-transform duration-300 group-hover:scale-105"
+          className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
         />
       </div>
 

@@ -15,7 +15,7 @@
  * @created May 22, 2025
  * @updated May 22, 2025
  */
-// data
+// data - list of projects to display in the carousel
 import { carouselProjects } from '@/data/pageData/projectData';
 
 // utils
@@ -24,7 +24,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 // components
 import MyBtn from '@/components/buttons/MyBtn';
-import CarouselCard from '@/components/projectCards/CarouselCard';
+import CarouselCard from '@/components/homeSections/ProjectCarousel/CarouselCard';
 
 // Library components
 import Carousel from 'react-multi-carousel';
@@ -55,14 +55,13 @@ export default function ProjectCarousel() {
         infinite
         arrows
         autoPlay
-        autoPlaySpeed={2000}
+        autoPlaySpeed={3000}
         keyBoardControl
         pauseOnHover
         draggable
         swipeable
         className="w-full"
-        containerClass="px-4"
-        itemClass="px-2"
+        itemClass="px-5"
       >
         {carouselProjects.map((project) => {
           const image = project.images?.[0];
