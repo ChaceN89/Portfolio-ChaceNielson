@@ -34,7 +34,7 @@ export const drillbotics = {
   starred: true,
   id: "drillbotics",
   name: "Mini Drill Rig",
-  rawName: "Drillbotics",
+  tag: "Drillbotics",
   tag: "Engineering",
   blurb: short,
   description: long,

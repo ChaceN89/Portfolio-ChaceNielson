@@ -34,7 +34,7 @@ const long = (
 export const jenga = {
   id: "jenga",
   name: "Virtual Jenga",
-  rawName: "Jenga",
+  tag: "Jenga",
   tag: "Game",
   blurb: short,
   description: long,

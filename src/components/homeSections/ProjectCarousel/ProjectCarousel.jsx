@@ -1,121 +1,84 @@
-import React, { useEffect, useRef } from 'react';
-import { projects } from '@/data/pageData/projectData';
-import ImageComponent from '@/components/uiElements/images/ImageComponent';
-import './ProjectCarousel.styles.css';
-import Tooltip from '@/components/uiElements/Tooltip';
+
+/**
+ * @file ProjectCarousel.jsx
+ * @module ProjectCarousel
+ * @desc Responsive multi-device carousel that displays a subset of featured projects.
+ *       Uses `react-multi-carousel` for smooth, swipeable behavior and modular `CarouselCard` components.
+ * 
+ * @features
+ * - Auto-plays with hover pause and swipe support
+ * - Displays projects with image, name, and category tag
+ * - Opens project modals on click
+ * - Includes a button to view the full Projects page
+ * 
+ * @author Chace Nielson
+ * @created May 22, 2025
+ * @updated May 22, 2025
+ */
+// data
+import { carouselProjects } from '@/data/pageData/projectData';
+
+// utils
 import { openModal } from '@/utils/utils';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import { useNavigate, useLocation } from 'react-router-dom';
+
+// components
 import MyBtn from '@/components/buttons/MyBtn';
+import CarouselCard from '@/components/projectCards/CarouselCard';
+
+// Library components
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
+
+const responsive = {
+  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3, partialVisibilityGutter: 40 },
+  tablet:  { breakpoint: { max: 1024, min: 464 }, items: 2, partialVisibilityGutter: 30 },
+  mobile:  { breakpoint: { max: 464, min: 0 },    items: 1, partialVisibilityGutter: 30 }
+};
 
 export default function ProjectCarousel() {
-  const trackRef = useRef(null);
   const navigate = useNavigate();
   const location = useLocation();
 
-
-  const itemWidth = 28 * 16 + 32; // ≈ 480px
-
   const handleClick = (id) => {
-    openModal({
-      type: 'project',
-      id,
-      navigate,
-      location,
-    });
+    openModal({ type: 'project', id, navigate, location });
   };
-
-  // Auto-scrolling with reset for infinite loop
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track) return;
-
-    let frame;
-    const speed = 0.8; // pixels per frame (60fps ~= 48px/sec)
-
-    const scroll = () => {
-      if (track.scrollLeft >= track.scrollWidth / 1.5) {
-        track.scrollTo({ left: 0, behavior: 'auto' });
-      } else {
-        track.scrollLeft += speed;
-      }
-      frame = requestAnimationFrame(scroll);
-    };
-
-    const stopScroll = () => cancelAnimationFrame(frame);
-    const startScroll = () => frame = requestAnimationFrame(scroll);
-
-    startScroll();
-
-    track.addEventListener('mouseenter', stopScroll);
-    track.addEventListener('mouseleave', startScroll);
-
-    const arrows = document.querySelectorAll('.carousel-arrow');
-    arrows.forEach(btn => {
-      btn.addEventListener('mouseenter', stopScroll);
-      btn.addEventListener('mouseleave', startScroll);
-    });
-
-    return () => {
-      stopScroll();
-      track.removeEventListener('mouseenter', stopScroll);
-      track.removeEventListener('mouseleave', startScroll);
-      arrows.forEach(btn => {
-        btn.removeEventListener('mouseenter', stopScroll);
-        btn.removeEventListener('mouseleave', startScroll);
-      });
-    };
-  }, []);
-
-
-  const scrollLeft = () => {
-    trackRef.current?.scrollBy({ left: -itemWidth, behavior: 'smooth' });
-  };
-
-  const scrollRight = () => {
-    trackRef.current?.scrollBy({ left: itemWidth, behavior: 'smooth' });
-  };
-
 
   const handleProjectClick = () => {
     navigate('/projects');
-  }
+  };
 
   return (
-    <div
-    className='flex flex-col items-center justify-center gap-4 py-8'
-    >
+    <div className='flex flex-col items-center justify-center gap-4 py-8'>
+      <Carousel
+        responsive={responsive}
+        infinite
+        arrows
+        autoPlay
+        autoPlaySpeed={2000}
+        keyBoardControl
+        pauseOnHover
+        draggable
+        swipeable
+        className="w-full"
+        containerClass="px-4"
+        itemClass="px-2"
+      >
+        {carouselProjects.map((project) => {
+          const image = project.images?.[0];
+          if (!image?.src) return null;
 
-  
-      <div className="project-carousel-container group">
-        <button onClick={scrollLeft} className="carousel-arrow left-arrow">
-          <FaChevronLeft />
-        </button>
-        <button onClick={scrollRight} className="carousel-arrow right-arrow">
-          <FaChevronRight />
-        </button>
+          return (
+            <CarouselCard
+              key={project.id}
+              project={project}
+              onClick={() => handleClick(project.id)}
+            />
+          );
+        })}
+      </Carousel>
 
-        <div ref={trackRef} className="project-carousel-track ">
-          {projects.concat(projects, projects).map((project, index) => {
-            const image = project.images?.[0];
-            if (!image?.src) return null;
-
-            return (
-              <div onClick={() => handleClick(project.id)} key={`${project.id}-${index}`} className="carousel-item">
-                <Tooltip text={project.name} openDuration={200}>
-                  <ImageComponent
-                    src={`/projects/${project.id}/${image.src}`}
-                    blurHash={image.blurhash}
-                    alt={project.name}
-                    className="carousel-image object-cover object-top"
-                  />
-                </Tooltip>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-      <MyBtn sm callBack={handleProjectClick}> See All Projects</MyBtn>
+      <MyBtn sm callBack={handleProjectClick}>See All Projects</MyBtn>
     </div>
   );
 }

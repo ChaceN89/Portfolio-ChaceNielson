@@ -40,7 +40,7 @@ const long = (
 export const cubeGame = {
   id: "cube-game",
   name: "Cube game",
-  rawName: "Unity Game",
+  tag: "Unity Game",
   tag: "Game",
   blurb: short,
   description: long,

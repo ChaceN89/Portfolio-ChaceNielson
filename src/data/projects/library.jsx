@@ -36,7 +36,7 @@ const proj_id = "library";
 export const library = {
   id: proj_id,
   name: "PageFlow Library",
-  rawName: "PageFlow Library",
+  tag: "PageFlow Library",
   tag: "Full-Stack",
   blurb: short,
   description: long,

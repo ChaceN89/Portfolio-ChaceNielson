@@ -32,7 +32,7 @@ export const musicPlayer = {
   starred: true,
   id: "music-player",
   name: "Music Player",
-  rawName: "Music Player",
+  tag: "Music Player",
   tag: "UX/UI",
   blurb: short,
   description: long,

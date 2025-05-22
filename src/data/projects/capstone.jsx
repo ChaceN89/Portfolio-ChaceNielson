@@ -36,7 +36,7 @@ export const capstone = {
   starred: true,
   id: "capstone", // id and folder name in the projects folder
   name: <>Ocean CO<sub>2</sub> Condenser</>,
-  rawName: "Ocean CO2 Condenser",
+  tag: "Ocean CO2 Condenser",
   tag: "Engineering",
   blurb: short,
   description: long,
