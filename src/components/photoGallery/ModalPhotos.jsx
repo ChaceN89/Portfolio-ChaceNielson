@@ -52,7 +52,7 @@
  */
 
 import React from 'react';
-import ImageComponent from '../wrappers/ImageComponent';
+import ImageComponent from '../uiElements/images/ImageComponent';
 import Modal from 'react-modal';
 import { FaArrowLeft, FaArrowRight, FaTimes } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -108,9 +108,9 @@ function ModalPhotos({
       onRequestClose={closeModal}
       contentLabel={`Photo Library Modal`}
       className="flex items-center justify-center outline-none pt-12"
-      overlayClassName="fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center"
+      overlayClassName="fixed inset-0 bg-black/70 z-50 flex items-center justify-center"
     >
-      <div className='relative z-35 max-h-section-height h-120 min-w-[34rem] w-full bg-secondary p-10 rounded'>
+      <div className='relative z-10 h-[80vh] min-w-[50vw] w-full bg-secondary p-10 rounded'>
         {/* Close button for the modal */}
         <button
           onClick={closeModal}
@@ -125,7 +125,7 @@ function ModalPhotos({
         >
           <FaArrowLeft size={24} />
         </button>
-        <div className='relative w-full h-full overflow-hidden'>
+        <div className='relative w-full h-full overflow-hidden '>
           <AnimatePresence initial={false} custom={direction}>
             <motion.div
               key={activePhotoIndex}
@@ -135,7 +135,7 @@ function ModalPhotos({
               animate="center"
               exit="exit"
               transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-              className='absolute top-0 left-0 w-full h-full'
+              className='absolute top-0 left-0 w-full h-full flex items-center justify-center '
             >
               <ImageComponent
                 src={`/${galleryFolder}/${galleryPhotos[activePhotoIndex].src}`}
@@ -143,7 +143,6 @@ function ModalPhotos({
                 className='object-cover w-full rounded-sm'
                 blurHash={galleryPhotos[activePhotoIndex].blurhash}
               />
-              <div className='text-black'>{`/${galleryFolder}/${galleryPhotos[activePhotoIndex].src}`}</div>
             </motion.div>
           </AnimatePresence>
         </div>
@@ -154,6 +153,7 @@ function ModalPhotos({
         >
           <FaArrowRight size={24} />
         </button>
+        
       </div>
     </Modal>
   );

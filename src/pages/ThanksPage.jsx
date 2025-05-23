@@ -3,32 +3,6 @@
  * @module ThanksPage
  * @desc A React component that displays a thank you message after an email is sent.
  * It will redirect the user to the home page after 4 seconds.
- *
- * @component ThanksPage
- *
- * @requires react
- * @requires useEffect from 'react'
- * @requires useNavigate from 'react-router-dom'
- * @requires AiOutlineCheckCircle from 'react-icons/ai'
- * @requires MyButton from '../components/buttons/MyButton'
- * @requires BackgroundWrapper from '../wrappers/BackgroundWrapper'
- *
- * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
- * @see {@link https://reactrouter.com/ | React Router Documentation}
- *
- * @example
- * // Example usage of ThanksPage component
- * import ThanksPage from './ThanksPage';
- *
- * function App() {
- *   return (
- *     <div className="App">
- *       <ThanksPage />
- *     </div>
- *   );
- * }
- *
- * @exports ThanksPage
  * 
  * @author Chace Nielson
  * @created 2024-07-28

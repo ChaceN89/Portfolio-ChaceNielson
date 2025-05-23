@@ -65,6 +65,7 @@ export default function AppRoutes() {
   const [showProjectModal, setShowProjectModal] = useState(false);
   const [showTechStackModal, setShowTechStackModal] = useState(false);
 
+  // use Effect to show/hide modals based on projectID and techStackID
   useEffect(() => {
     if (projectID) setShowProjectModal(true);// If i have a project id then show the project modal
     if (!projectID && showProjectModal) setShowProjectModal(false)   // if project id is removed and the modal is open, close the modal imme
@@ -72,14 +73,13 @@ export default function AppRoutes() {
     if (techStackID) setShowTechStackModal(true); // If i have a tech stack id then show the tech stack modal
     if (!techStackID && showTechStackModal) setShowTechStackModal(false)   // if tech stack id is removed and the modal is open, close the modal imme
   
-
-
   }, [projectID, techStackID]); // Activated when projectID or techStackID changes
 
 
   return (
     <div className='min-w-56 overflow-x-hidden'>
 
+      {/* Modal routes */}
       <AnimatePresence>
         {showProjectModal && (
           <MyModal >

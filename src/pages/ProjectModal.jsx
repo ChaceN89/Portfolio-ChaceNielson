@@ -45,7 +45,6 @@ export default function ProjectModal({ projectName }) {
   // Get the full stack by combining the main stack and extended stack
   const fullStack = project.extendedStack ? [...project.mainStack, ...project.extendedStack] : project.mainStack;
 
-
   return (
     <div  className="text-primary">
       <ModalHeader name={project.name}  />

@@ -14,7 +14,6 @@
  * @author Chace Nielson
  * @created 2024-07-26
  * @updated Jan 23rd 2025
- * @since 2.1
  */
 
 import React, { Suspense, lazy, memo} from 'react';

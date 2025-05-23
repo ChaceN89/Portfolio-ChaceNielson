@@ -48,7 +48,6 @@ export default function MyModal({ children }) {
       onClick={handleBackdropClick}
       className="fixed inset-0 z-35 flex-col items-center justify-center"
     >
-
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -1,5 +1,13 @@
+/**
+ * @file ProjectsPage.jsx
+ * @module Pages/Projects
+ * @desc Displays all featured and side projects using the `ProjectSection` component.
+ *
+ * @author Chace Nielson
+ * @created May 23, 2025
+ * @updated May 23, 2025
+ */
 import ProjectSection from '@/components/projects/ProjectSection'
-import React from 'react'
 
 export default function ProjectsPage() {
   return (

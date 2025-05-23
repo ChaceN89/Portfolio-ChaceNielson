@@ -42,8 +42,7 @@
 
 import React from 'react';
 import LazyLoad from 'react-lazy-load';
-import ImageComponent from '../wrappers/ImageComponent';
-import ScrollToTop from '../../utils/ScrollToTop';
+import ImageComponent from '../uiElements/images/ImageComponent';
 
 /**
  * Photo component
@@ -56,8 +55,6 @@ import ScrollToTop from '../../utils/ScrollToTop';
  */
 function Photo({ item, galleryFolder, index, openModal }) {
   return (
-    <>
-      <ScrollToTop />
       <div className='flex flex-col max-w-full'>
         <LazyLoad height={300} offsetVertical={600}>
           <div
@@ -74,7 +71,6 @@ function Photo({ item, galleryFolder, index, openModal }) {
           </div>
         </LazyLoad>
       </div>
-    </>
   );
 }
 
