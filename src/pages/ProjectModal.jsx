@@ -48,45 +48,64 @@ export default function ProjectModal({ projectName }) {
 
   return (
     <div  className="text-primary">
-      <ModalHeader name={project.name} description={project.blurb} />
+      <ModalHeader name={project.name}  />
       <ExternalLinks externalLinks={project.externalLinks} />
 
       <hr className="border-2 rounded-full border-primary border-opacity-60 mb-4" />
 
       {/* Content */}
-      <div className='grid grid-cols-1 xl:grid-cols-2  gap-4'>
+      <div className='grid grid-cols-1 xl:grid-cols-2 gap-4'>
 
-    
+      {/* Description - Always first */}
+      <div className='order-0'>{project.description}</div>
 
-        <div >{project.description}</div>
-
-        <div className="w-full flex justify-center ">
-          <div className="w-full max-w-2xl">
-            <ProjectImageCarousel
-              images={project.images}
-              id={project.id}
-              title={project.name}
-            />
-          </div>
-        </div>
-
-      
-        {project.youtubeID ? ( // If a YouTube ID is provided, show the video and skill box as grid componets 
-          <>
-            <MediaFrame
+      {/* Video or Carousel */}
+      {project.youtubeID ? (
+        <>
+          {/* Video - Top right */}
+          <div className='order-1 xl:order-1'>
+            <MediaFrame 
               thumbnail={project.thumbnail.src}
               videoId={project.youtubeID} 
             />
-            <SkillBoxContainer stack={fullStack} isSmall  />
-          </>
-
-        ):( // If no YouTube ID is provided, show the skill box in its large form over 2 columns
-          <div className='xl:col-span-2'>
-            <SkillBoxContainer stack={fullStack}  />
           </div>
-        ) }
-    
-      </div>
+
+          {/* Skills - Bottom left */}
+          <div className='order-2 xl:order-2'>
+            <SkillBoxContainer stack={fullStack} isSmall />
+          </div>
+
+          {/* Carousel - Bottom right */}
+          <div className='order-3 xl:order-3 w-full flex justify-center'>
+            <div className='w-full max-w-2xl'>
+              <ProjectImageCarousel
+                images={project.images}
+                id={project.id}
+                title={project.name}
+              />
+            </div>
+          </div>
+        </>
+      ) : (
+        <>
+          {/* Carousel - Top right */}
+          <div className='order-1 xl:order-1 w-full flex justify-center'>
+            <div className='w-full max-w-2xl'>
+              <ProjectImageCarousel
+                images={project.images}
+                id={project.id}
+                title={project.name}
+              />
+            </div>
+          </div>
+
+          {/* Skills - Bottom full-width */}
+          <div className='order-2 xl:order-2 xl:col-span-2'>
+            <SkillBoxContainer stack={fullStack} />
+          </div>
+        </>
+      )}
+    </div>
     </div>
   );
 }
