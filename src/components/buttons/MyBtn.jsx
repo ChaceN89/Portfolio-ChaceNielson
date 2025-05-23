@@ -16,9 +16,13 @@
 import { useRef, useState } from 'react';
 import { FaArrowRight } from 'react-icons/fa';
 import './Button.styles.css';
-import { popEffect } from '../../utils/particleEffects';
+import { popEffect } from '@/utils/particleEffects';
+import useAnalyticsEvent from '@/components/analytics/useAnalyticsEvent';
 
-export default function MyBtn({ children, callBack, sm}) {
+
+export default function MyBtn({ children, callBack, sm, GA_label=null}) {
+
+  const trackEvent = useAnalyticsEvent();
 
   const particleRef = useRef(null);
   const particleBoxRef = useRef(null);
@@ -44,7 +48,11 @@ export default function MyBtn({ children, callBack, sm}) {
     });
   
     setTimeout(() => {
-      if (typeof callBack === 'function') callBack();
+      if (GA_label){
+        trackEvent('UI Interaction', 'Button Click', GA_label, 1);  // track the event if GA_label is provided
+      }
+      // call the callback function
+      if (typeof callBack === 'function') callBack(); 
     }, 300);
   
     setTimeout(() => {

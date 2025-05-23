@@ -104,7 +104,12 @@ export default function AboutMe() {
         </p>
 
         <div className="mt-8 flex justify-center">
-          <MyBtn callBack={() => navigate('/contact')}>Contact Me</MyBtn>
+          <MyBtn 
+            callBack={() => navigate('/contact')} 
+            GA_label="About Page Contact Me Button"
+          >
+            Contact Me
+          </MyBtn>
         </div>
       </motion.div>
     </motion.section>

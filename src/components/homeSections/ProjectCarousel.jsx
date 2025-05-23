@@ -73,7 +73,13 @@ export default function ProjectCarousel() {
         })}
       </Carousel>
 
-      <MyBtn sm callBack={handleProjectClick}>See All Projects</MyBtn>
+      <MyBtn 
+        sm 
+        callBack={handleProjectClick}
+        GA_label='Project Carousel See All Button'
+      >
+        See All Projects
+      </MyBtn>
     </div>
   );
 }

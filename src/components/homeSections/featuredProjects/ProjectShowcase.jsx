@@ -27,6 +27,7 @@ import MyBtn from '@/components/buttons/MyBtn';
 import { openModal } from '@/utils/utils';
 import ShowIcon from '@/components/uiElements/skillBox/ShowIcon';
 import Tooltip from '@/components/uiElements/Tooltip';
+import useAnalyticsEvent from '@/components/analytics/useAnalyticsEvent';
 
 export default function ProjectShowcase({ project, background, nextId }) {
   const { src, textColor, borderColor, rippleColor } = background;
@@ -38,7 +39,11 @@ export default function ProjectShowcase({ project, background, nextId }) {
   const navigate = useNavigate();
   const location = useLocation();
 
+  const trackEvent = useAnalyticsEvent();
+ 
+
   const handleProjectClick = (id) => {
+    trackEvent('UI Interaction', 'Button Click', "Showcase Image Click", 1);  // track the event
     openModal({
       type: "project",
       id,
@@ -136,7 +141,11 @@ export default function ProjectShowcase({ project, background, nextId }) {
               ))}
             </div>
 
-            <MyBtn sm callBack={() => handleProjectClick(project.id)}>
+            <MyBtn 
+              sm 
+              callBack={() => handleProjectClick(project.id)}
+              GA_label={`Project Showcase ${project.name} Button`}
+            >
               Learn More
             </MyBtn>
           </div>

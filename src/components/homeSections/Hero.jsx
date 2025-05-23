@@ -68,7 +68,12 @@ export default function Hero() {
         <motion.div
           {...animationInfo(delays[5])}
         >
-          <MyBtn callBack={handleRouteClick}>Let's Talk</MyBtn>
+          <MyBtn 
+            callBack={handleRouteClick}
+            GA_label="Hero Button"
+          >
+            Let's Talk
+          </MyBtn>
         </motion.div>
       </div>
 

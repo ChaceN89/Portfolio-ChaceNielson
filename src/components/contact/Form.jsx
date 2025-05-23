@@ -110,7 +110,7 @@ export default function Form() {
         />
       </div>
       <div className='w-full flex justify-start'>
-        <MyBtn sm callBack={() => formRef.current?.requestSubmit()}>
+        <MyBtn sm callBack={() => formRef.current?.requestSubmit()} GA_label="Contact Form Submit">
           Send Message
         </MyBtn>
       </div>

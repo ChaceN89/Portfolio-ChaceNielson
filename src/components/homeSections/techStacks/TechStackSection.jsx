@@ -67,7 +67,9 @@ export default function TechStackSection({
       </div>
 
       <div className="pt-6">
-        <MyBtn sm callBack={learnMoreClick} className="w-full">
+        <MyBtn sm callBack={learnMoreClick} className="w-full"
+          GA_label={`Tech Stack ${techStack.name} Button`}
+        >
           Learn More
         </MyBtn>
       </div>
