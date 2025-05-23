@@ -11,7 +11,7 @@ const folder = "programmingLanguages";
 
 const programmingLanguageIcons = {
   JAVASCRIPT: { name: "JavaScript", svg_path: `${folder}/javascript.svg` },
-  TYPESCRIPT: { name: "TypeScript", icon: SiTypescript, color: "#38BDF9" },
+  TYPESCRIPT: { name: "TypeScript", icon: SiTypescript, color: "#1C7CB6" }, // darker blue
   PYTHON: { name: "Python", svg_path: `${folder}/python.svg` },
   JAVA: { name: "Java", svg_path: `${folder}/java.svg` },
   CPP: { name: "C++", svg_path: `${folder}/c-plus-plus.svg` },

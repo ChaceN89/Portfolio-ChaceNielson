@@ -19,7 +19,7 @@ import TailwindBreakPoints from './TailwindBreakPoints'
 import DarkModeTestingToggle from './DarkModeTestingToggle'
 // import HeaderTesting from './HeaderTesting';
 // import ColorBoxes from './ColorBoxes';
-import IconList from './IconList';
+// import IconList from './IconList';
 
 export default function DisplayTesting() {
   // Check if the environment is development
@@ -36,10 +36,7 @@ export default function DisplayTesting() {
   return (
     <>
       <TailwindBreakPoints/>
-      {/* <DarkModeTestingToggle/> */}
-      {/* <HeaderTesting/> */}
-      {/* <ColorBoxes/> */}
-      {/* <IconList/> */}
+      <DarkModeTestingToggle/>
     </>
   )
 }

@@ -10,23 +10,13 @@
  * @updated Aug 21, 2024
  */
 
-import { frontend } from '../skills/frontend';
-import { backend } from '../skills/backend';
-import { gameDesign } from '../skills/gameDesign';
-import { devOps } from '../skills/devOps';
 
-// Data for the skill page header
-export const skillPageData = {
-  title: "Technical Skills",
-  description: "A deeper dive into my technical expertise. Click on a specialization to learn more.",
-  relatedProjectTitle: "Related Projects",
-};
+import { gameDesign } from '../techStacks/game-design';
+import { fullstack } from '../techStacks/full-stack';
 
 // Data for various technical skills
 export const techSkills = [
-  frontend,
-  backend,
   gameDesign,
-  devOps
+  fullstack,
 ];
 

@@ -26,6 +26,7 @@ import React, { useState, useEffect } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import Photo from './Photo';
 import ModalPhotos from './ModalPhotos';
+import './Gallery.styles.css'
 
 const sectionVariants = {
   hidden: {},
@@ -36,8 +37,10 @@ const sectionVariants = {
   },
 };
 
+import { galleryFolder, galleryPhotos } from '@/data/pageData/galleryData';
 
-export default function GalleryPhotos({galleryFolder, galleryPhotos}) {
+
+export default function GalleryPhotos() {
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [direction, setDirection] = useState(0);

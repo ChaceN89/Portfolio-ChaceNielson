@@ -24,36 +24,50 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 
+
 const SlideTransition = ({ 
   children,
   enter = 'left', 
   exit = 'left', 
   duration = 0.3, 
   delay = 0.1, 
-  translationDist = 100,
-  className=''
+  translationDist = 100, // interpreted as percentage of viewport width
+  className = ''
 }) => {
+  const location = useLocation();
 
-  const location = useLocation(); // Get the current location from the router
+  // Convert translationDist to vw string (e.g., "100vw")
+  const enterValue = enter === 'left' ? `-${translationDist}vw` : `${translationDist}vw`;
+  const exitValue = exit === 'left' ? `-${translationDist}vw` : `${translationDist}vw`;
 
-  const movX = translationDist; // Set the x-axis translation distance
-
-  // Set the variants for the animation for when the component is hidden, entering, and exiting
   const variants = {
-    hidden: { opacity: 0, x: enter === 'left' ? -1 * movX : movX },
-    enter: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: exit === 'left' ? -1 * movX : movX }, // Adjusted the exit position
+    hidden: {
+      position: 'relative',
+      left: enterValue,
+      opacity: 0,
+      filter: 'blur(50px)'
+    },
+    enter: {
+      position: 'relative',
+      left: 0,
+      opacity: 1,
+      filter: 'blur(0px)'
+    },
+    exit: {
+      position: 'relative',
+      left: exitValue,
+      opacity: 0,
+      filter: 'blur(50px)'
+    }
   };
 
-  // Set the transition for the animation
   const transition = {
-    type: 'tween', 
-    duration: duration,
-    ease: 'easeInOut', // Options: easeIn, easeOut, easeInOut
-    delay: delay,
+    type: 'tween',
+    duration,
+    ease: 'easeInOut',
+    delay
   };
 
-  // Return the SlideTransition Wrapper
   return (
     <motion.div
       key={location.pathname}
@@ -65,10 +79,10 @@ const SlideTransition = ({
       className={className}
       onClick={(e) => e.stopPropagation()}
     >
-      {children} 
-      {/* is in a react fragment so flex doens't work - need a inner class to handle more specific CSS */}
+      {children}
     </motion.div>
   );
 };
 
 export default SlideTransition;
+

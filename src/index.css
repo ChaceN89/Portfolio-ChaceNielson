@@ -1,97 +1,182 @@
 /**
- * @file index.css
- * @module index
- * @desc Main CSS file for the entire application. This file includes Tailwind CSS base, 
- * components, and utilities. It also imports Google Fonts and applies global styles 
- * for various HTML elements.
- *
- * @requires tailwindcss
- * @requires @import url from 'https://fonts.googleapis.com'
+ * Filename: index.css
+ * Author: Chace Nielson
+ * Created: May 6th, 2025
+ * Updated: May 6th, 2025
  * 
- * @see {@link https://tailwindcss.com/docs | Tailwind CSS Documentation}
- * @see {@link https://fonts.google.com | Google Fonts}
+ * Description:
+ * This stylesheet cotains global/base styles for the website. It includes
+ * definitions for the primary and secondary color schemes, as well as
+ * utility classes for spacing, text alignment, and other common styles.
  * 
- * @example
- * // Example usage of Tailwind CSS classes in a React component
- * import React from 'react';
- * 
- * function ExampleComponent() {
- *   return (
- *     <div className="bg-frosted-glass text-darken border-faint">
- *       <h1>Example Heading</h1>
- *       <p>Example paragraph text.</p>
- *     </div>
- *   );
- * }
- * 
- * export default ExampleComponent;
- * 
- * @exports index.css
- * 
- * @author Chace Nielson
- * @created 2024-07-28
- * @updated 2024-07-28
+ * Notes
+ *    - This file is imported by all other stylesheets in the project if they need access to its styles specifically, jsx does not need to import this file
+ *    - It is used to define global styles and variables that are shared across
+ *    Tailwind 4 https://tailwindcss.com/blog/tailwindcss-v4
  */
- @import url("https://fonts.googleapis.com/css2?family=Lexend");
- @import url("https://fonts.googleapis.com/css2?family=Lexend&family=Open+Sans&family=Roboto&family=Lato&family=Montserrat&family=Nunito");
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Bebas+Neue&display=swap');
- 
- @tailwind base;
- @tailwind components;
- @tailwind utilities;
- 
- /* overall Css for all html */
- html{
-   @apply bg-primary text-secondary font-montserrat;
- }
- .text-darken{
-   @apply opacity-75;
- }
- 
- .border-faint{
-   @apply border-2 border-secondary p-4 border-opacity-20 rounded-lg;
- }
- 
- .bg-frosted-glass {
-   @apply bg-primary bg-opacity-65 backdrop-blur-md;
- }
- 
- .bg-frosted-container {
-   @apply relative z-10;
- }
- 
- .hamburger-bg {
-   @apply bg-primary bg-opacity-90;
- }
- 
- .button-secondary{
-   @apply bg-primary hover:bg-accent text-secondary hover:text-primary border-secondary border
-   transition duration-300;
- }
- 
- /* headers */
- h1{
-   @apply text-7xl font-bold font-mangold;
- }
- 
- h2{
-   @apply text-4xl font-bold font-mangold;
- }
- 
- h3{
-   @apply text-2xl ;
- }
- 
- h4{
-   @apply text-lg ;
- }
- 
-/* scrollbar styles */
-/* Style the scrollbar track */
-/* Default global scrollbar settings (hides scrollbar) */
-::-webkit-scrollbar {
-  width: 0px; /* Adjust the width of the scrollbar */
-  height: 0px; /* Adjust the height of the scrollbar */
+
+/* IMport fonts and tailwind */
+@import url('https://fonts.googleapis.com/css2?family=Lexend&family=Open+Sans&family=Roboto&family=Lato&family=Montserrat&family=Nunito&family=Poppins:wght@400;700&family=Bebas+Neue&display=swap');
+
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* Theme for the site  */
+@theme {
+  /* === Typography === */
+  --font-title-text: "Lexend", sans-serif;        /* Display titles, headers */
+  --font-main-text: "Montserrat", sans-serif;     /* Body text */
+
+  /* === Primary Backgrounds (light, clean, elegant) === */
+  --color-primary: rgb(255, 245, 250);             /* Blush white */
+  --color-primary-alt: rgb(235, 245, 255);         /* Light icy blue */
+
+  /* === Secondary (Dark UI Base) === */
+  --color-secondary: rgb(35, 31, 31);              /* Deep black-gray (text / backgrounds) */
+  --color-secondary-alt: rgb(17, 17, 17);          /* Slate gray (cards / contrast panels) */
+
+  /* === Accent (Cool Teal for interactive elements) === */
+  --color-accent: rgb(0, 191, 166);                /* Teal accent (buttons, icons) */
+  --color-accent-alt: rgb(102, 211, 194);          /* Soft teal (hover/secondary accent) */
+
+  /* === Tertiary (Warm tone for CTAs, highlights) === */
+  --color-tertiary: rgb(255, 153, 102);            /* Burnt peach (alerts, highlights) */
+  --color-tertiary-alt: rgb(255, 194, 161);        /* Light peach (backgrounds, hover) */
+
+  --spacing-nav-height: 4rem
+
 }
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-title-text);
+}
+
+h1 {
+  font-size: clamp(2.25rem, 10vw, 4.5rem); /* 36px - 72px */
+  font-weight: 700;
+}
+h2 {
+  font-size: clamp(2rem, 9vw, 3.75rem); /* 32px - 60px */
+  font-weight: 600;
+}
+h3 {
+  font-size: clamp(1.75rem, 8vw, 3.25rem); /* 28px - 52px */
+  font-weight: 500;
+}
+h4 {
+  font-size: clamp(1.5rem, 6vw, 2.5rem); /* 24px - 40px */
+  font-weight: 400;
+}
+h5 {
+  font-size: clamp(1.25rem, 5vw, 1.75rem); /* 20px - 28px */
+  font-weight: 300;
+}
+h6 {
+  font-size: clamp(1rem, 4vw, 1.15rem); /* 16px - 18.4px */
+  font-weight: 100;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+small {
+  font-size: 0.875rem;
+  line-height: 1.25;
+  font-weight: 300;
+}
+
+/* No Scroll bar */
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+/* No scroll for individual elements - use on a single overflow component you don't want to overflow */
+.scroll-element {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
+}
+
+.scroll-element::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+
+/* For changinfrom light to dark and dark to ligh */
+body.changing-theme * {
+  transition: none !important;
+}
+
+/* Global HTML & Body styles */
+html, body {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  font-family: var(--font-main-text);
+  overscroll-behavior: none;
+}
+
+/* Dark mode override - manual */
+html.dark, .dark body {
+  background-color: --alpha(var(--color-secondary) / 70%);
+  color: var(--color-primary);
+}
+
+
+
+/* Important Global Styles */
+
+/* Global noise background */
+.noise-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+
+  filter: url(#noiseFilter);
+  opacity: 0.7;
+}
+
+/* small shadow to outline text subtly */
+.my-drop-shadow {
+  filter: drop-shadow(2px 2px 0px var(--color-secondary));  
+}
+.dark .my-drop-shadow {
+  filter: drop-shadow(2px 2px 0px var(--color-primary)); /* Opposite for dark */
+}
+
+.black-drop-shadow {
+  filter: drop-shadow(1px 2px 1.5px var(--color-secondary));
+}
+
+/* Large shadow to conve depth */
+.my-drop-shadow-lg {
+  filter: drop-shadow(12px 12px 3px var(--color-secondary));
+}
+.dark .my-drop-shadow-lg {
+  filter: drop-shadow(12px 12px 3px var(--color-primary));
+}
+
+/* Outlined text class */
+.outlined-text-dark {
+  text-shadow:
+    -1.5px -1.5px 0 black,  
+     1.5px -1.5px 0 black,
+    -1.5px  1.5px 0 black,
+     1.5px  1.5px 0 black;
+}
+.outlined-text-light {
+  text-shadow:
+    -1.5px -1.5px 0 white,  
+     1.5px -1.5px 0 white,
+    -1.5px  1.5px 0 white,
+     1.5px  1.5px 0 white;
+}
+
 
 

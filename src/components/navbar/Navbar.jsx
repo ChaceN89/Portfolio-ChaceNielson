@@ -1,112 +1,92 @@
 /**
  * @file Navbar.jsx
  * @module Navbar
- * @desc React component for the navigation bar. 
- * This component includes a logo link, navigation items, and a responsive hamburger menu for smaller screens.
- * It also displays a progress bar at the top of the navbar that indicates the scroll progress of the page.
- * 
- * @note This component is part of the main layout of the application.
+ * @desc React component for the global navigation bar.
+ *       Handles scroll-based visibility, mobile responsiveness, and dynamic locking behavior.
  *
- * @component Navbar
- * 
- * @requires react
- * @requires useState from 'react'
- * @requires NavbarItems from './NavbarItems'
- * @requires framer-motion { motion, useScroll, useSpring }
- * @requires hamburger-react { Squash as Hamburger }
- * @requires ./Navbar.css
- * 
- * @see {@link https://react.dev/ | React Documentation}
- * @see {@link https://www.framer.com/docs/ | Framer Motion Documentation}
- * @see {@link https://hamburger-react.netlify.app/ | Hamburger React Documentation}
- * 
- * @returns {JSX.Element} The Navbar component that provides navigation links and a responsive menu.
- * 
- * @example
- * // Example usage of Navbar in a layout component
- * import Navbar from '../components/navbar/Navbar';
- * 
- * function Layout() {
- *   return (
- *     <div className="layout">
- *       <Navbar />
- *       // Main content here
- *     </div>
- *   );
- * }
- * 
- * @exports Navbar
- * 
- * @created 2024-07-28
- * @updated 2024-08-08
- * @since 2.1
- */
-
-import React, { useState } from 'react';
-import NavbarItems from './NavbarItems';
-import { motion, useScroll, useSpring } from 'framer-motion';
-import { Squash as Hamburger } from 'hamburger-react';
-import "./Navbar.css";
-
-/**
- * Navbar component
+ * @features
+ * - Hides the navbar on scroll down after a threshold (500px) and reveals on scroll up.
+ * - Reveals the navbar when the mouse approaches the top of the screen (desktop only).
+ * - Locks the navbar visibility on mobile (`< 1020px`) to ensure it always remains visible.
+ * - Responds to screen resizing to toggle mobile lock state in real time.
+ * - Uses Framer Motion for smooth slide-in/out animations.
  *
- * @returns {JSX.Element} The Navbar component.
+ * @author Chace Nielson
+ * @created May 9, 2025
+ * @updated May 9, 2025
  */
-function Navbar() {
-  const [isHamburgerNavOpen, setIsHamburgerNavOpen] = useState(false);
-  const [animateMenu, setAnimateMenu] = useState(false);
+import React, { useState, useEffect } from "react";
+import { useScroll, useMotionValueEvent, motion } from "framer-motion";
+import NavContent from "./NavContent";
 
-  // Create a spring animation for the scroll progress
-  const { scrollYProgress } = useScroll();
-  const springScrollYProgress = useSpring(scrollYProgress, {
-    stiffness: 300,
-    damping: 30,
-    mass: 1
+export default function Navbar({forceLock=false}) {
+
+  // States for hidden nav, initial scroll and the last Y position of the scaoll
+  const [hidden, setHidden] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const [lastY, setLastY] = useState(0);
+
+  // get the scroll Positions
+  const { scrollY } = useScroll();
+  const [isNavPosLocked, setIsNavPosLocked] = useState(false); // is the nav bar locked or can it animation up on scroll
+
+  // useMotionValueEvent is a framer motion hook that allows you to listen to changes in a motion value
+  useMotionValueEvent(scrollY, "change", (latest) => {
+
+    if (isNavPosLocked) return; // if locked, do not add event listener
+
+    // If this is the first time the user is scrolling, mark as scrolled
+    if (!hasScrolled && latest > 0) setHasScrolled(true);
+
+    // If the user is scrolling up or down, update the hidden state
+    if (hasScrolled && latest > lastY && latest > 200) {
+      setHidden(true); // scrolling down
+    } else if (hasScrolled) {
+      setHidden(false); // scrolling up
+    }
+
+    setLastY(latest);
   });
 
-  // Toggle the hamburger menu
-  const toggleMenu = () => {
-    if (!isHamburgerNavOpen) {
-      setIsHamburgerNavOpen(true);
-      setAnimateMenu(true);
-    } else {
-      setAnimateMenu(false);
-      setTimeout(() => setIsHamburgerNavOpen(false), 150); // slight delay to allow animation to finish
-    }
-  };
+  // handle the mouse moving close to the top of the screen to trigger the nav to show
+  useEffect(() => {
+    if (isNavPosLocked) return; // if locked, do not add event listener
+
+    // Function to handle mouse movement if it is close to the top of the screen
+    const handleMouseMove = (e) => {
+      if (e.clientY < 200) {
+        setHidden(false); // Reveal nav when mouse is near top
+      }
+    };
+
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
+  }, [isNavPosLocked]);
+
+
+  useEffect(() => {
+    const checkLockState = () => {
+      const shouldLock = forceLock ;
+      setIsNavPosLocked(shouldLock);
+
+      if (shouldLock) {
+        setHidden(false);
+      }
+    };
+  
+    checkLockState(); // Run on mount
+    window.addEventListener("resize", checkLockState);
+    return () => window.removeEventListener("resize", checkLockState);
+  }, []);
 
   return (
-    <nav className="bg-frosted-glass pb-1 fixed top-0 w-full z-45">
-
-      {/* Scroll progress bar */}
-      <motion.div 
-        className='w-full h-1 bg-accent origin-left z-40'
-        style={{ scaleX: springScrollYProgress }}
-      />
-      <div className="bg-frosted-container container mx-auto flex justify-end md:justify-center items-center p-0.5 md:p-2">
-        
-        {/* Navigation items for large screens */}
-        <div className="hidden md:flex">
-          <NavbarItems textSize="text-lg" />
-        </div>
-  
-        {/* Hamburger menu button for small screens */}
-        <button onClick={toggleMenu} className="text-secondary -mt-1.5 md:hidden z-50 hover:text-accent-dark flex gap-1 h-0">
-          <Hamburger size={20} toggled={isHamburgerNavOpen} rounded />
-        </button>
-  
-        {/* Hamburger menu items */}
-        {isHamburgerNavOpen && (
-          <div className={`fixed md:hidden min-h-screen top-0 left-0 z-45 w-full flex justify-center items-center transition-opacity duration-300 h-full ${animateMenu ? 'opacity-100 fade-in' : 'opacity-0 fade-out'}`}>
-            <div className="hamburger-bg flex justify-center items-center w-full h-full">
-              <NavbarItems toggleMenu={toggleMenu} textSize="text-2xl" />
-            </div>
-          </div>
-        )}
-      </div>
-    </nav>
+    <motion.nav
+      initial={{ y: 0 }}
+      animate={{ y: hidden ? "-100%" : "0%" }}
+      transition={{ duration: 0.3, ease: "easeInOut" }}
+      className="fixed top-0 w-full z-35 px-0 "
+      >
+      <NavContent />
+    </motion.nav>
   );
 }
-
-export default Navbar;

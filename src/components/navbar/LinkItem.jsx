@@ -1,94 +1,116 @@
 /**
  * @file LinkItem.jsx
  * @module LinkItem
- * @desc Component representing an individual navigation link item for the navbar.
- * Applies active and hover styles based on the navigation state.
- * 
- * @component LinkItem
- * 
- * @param {Object} props - The component props.
- * @param {string} props.to - The path to navigate to or the target to scroll to.
- * @param {React.ReactNode} props.children - The child elements to be rendered inside the link.
- * @param {Function} [props.onClick] - Optional click handler for the link.
- * @param {boolean} [props.routerLink=false] - If true, use NavLink for routing, otherwise use Link for scrolling.
- * 
- * @requires react
- * @requires react-scroll { Link as ScrollLink }
- * @requires react-router-dom { NavLink }
- * 
- * @see {@link https://reactjs.org/docs/getting-started.html | React Documentation}
- * @see {@link https://reactrouter.com/ | React Router Documentation}
- * @see {@link https://www.npmjs.com/package/react-scroll | React Scroll Documentation}
- * 
- * @returns {JSX.Element} The rendered LinkItem component.
- * 
- * @example
- * // Example usage of LinkItem component for scrolling
- * <LinkItem to="about" onClick={handleClick}>
- *   Our Team
- * </LinkItem>
- * 
- * @example
- * // Example usage of LinkItem component for routing
- * <LinkItem to="/about" routerLink={true} onClick={handleClick}>
- *   About Us
- * </LinkItem>
- * 
- * @exports LinkItem
- * 
- * @author Chace Nielson
- * @created 2024-07-10
- * @updated 2024-08-05
- * @since 2.1
- */
-
-import React from 'react';
-import { Link as ScrollLink } from 'react-scroll';
-import { NavLink } from 'react-router-dom';
-import { globals } from '../../data/globals';
-
-/**
- * LinkItem component
+ * @desc A reusable navigation link component that supports react-scroll, react-router, and href links.
  *
- * @param {Object} props - The component props.
- * @param {string} props.to - The path to navigate to or the target to scroll to.
- * @param {React.ReactNode} props.children - The child elements to be rendered inside the link.
- * @param {Function} [props.onClick] - Optional click handler for the link.
- * @param {boolean} [props.routerLink=false] - If true, use NavLink for routing, otherwise use Link for scrolling.
- * @returns {JSX.Element} The LinkItem component.
+ * @see {@link https://reactrouter.com/en/main | React Router Documentation}
+ * @see {@link https://www.npmjs.com/package/react-scroll | React Scroll Documentation}
+ *
+ * @author Chace Nielson
+ * @created Mar 17, 2025
+ * @updated Mar 21, 2025
  */
-const LinkItem = ({ to, children, onClick, routerLink = false }) => {
-  return (
-    <li>
-      {routerLink ? (
-        <NavLink
-          to={to}
-          className={({ isActive }) =>
-            `${isActive ? 'bg-secondary bg-opacity-20 text-secondary rounded-3xl' : 
-            'hover:text-accent bg-none duration-300'
-            } 
-            px-4 py-2 transition-all `
+
+import React from "react";
+import { Link as ScrollLink, scroller } from "react-scroll";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+
+export default function LinkItem({
+  scrollTo,
+  router,
+  children,
+  className = "",
+  activeClassName = "",
+  disableActive = false,
+  handleMouseEnter = null,
+  handleMouseLeave = null
+}) {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const onSamePage = location.pathname ? location.pathname === router : false;
+
+  const scrollOffset = -63
+  const scrollDelay = 600;
+  const scrollDuration = 1000;
+
+  const handleClick = (e) => {
+    e.preventDefault();
+
+    // If there is a scroll to and we are't in the home page
+    if (scrollTo && !onSamePage) {
+        navigate(router, { replace: true });
+        console.log("navigating to home page before scroll");
+
+        const observer = new MutationObserver(() => {
+          const targetElement = document.getElementById(scrollTo);
+          if (targetElement) {
+            observer.disconnect();
+
+            const duration = scrollTo === "hero" ? 0 : scrollDuration;
+            const delay = scrollTo === "hero" ? 0 : scrollDelay;
+
+            setTimeout(() => {
+              scroller.scrollTo(scrollTo, {
+                smooth: true,
+                // duration: scrollDuration,
+                duration: duration,
+                offset: scrollOffset,
+              });
+            }, delay);
           }
-          onClick={onClick}
-        >
-          {children}
-        </NavLink>
-      ) : (
+        });
+
+        observer.observe(document.body, { childList: true, subtree: true });
+    
+    } else if (router) {
+      navigate(router);
+    }
+  };
+
+  return (
+    <div 
+      className="relative hover:cursor-pointer"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+
+      {/* Scrill Link on the same page - active style when in section on the page  */}
+      {scrollTo && onSamePage && (
         <ScrollLink
-          to={to}
-          spy={true}
+          to={scrollTo}
           smooth={true}
-          offset={globals.ScrollLink.offset}  // Adjust this offset based on your fixed navbar height
-          duration={globals.ScrollLink.duration}
-          className="px-4 py-2 transition-all hover:text-accent duration-300 cursor-pointer"
-          activeClass="bg-secondary bg-opacity-20 text-secondary rounded-3xl"
-          onClick={onClick}
+          duration={scrollDuration}
+          spy={true}
+          offset={scrollOffset}
+          activeClass={!disableActive ? activeClassName : ""}
+          className={className}
+          onClick={(e) => {
+            e.preventDefault();
+            navigate(location.pathname); // closes modal smoothly
+          }}
         >
           {children}
         </ScrollLink>
       )}
-    </li>
-  );
-};
 
-export default LinkItem;
+      {/* Scroll Link not on the same page - no need for active style */}
+      {scrollTo && !onSamePage && (
+        <a href="/" onClick={handleClick} className={className}>
+          {children}
+        </a>
+      )}
+
+      {/* Router Link with no scrollto - can be active is page is a simple navlink page */}
+      {router && !scrollTo && (
+        <NavLink
+          to={router}
+          className={({ isActive }) =>
+            `${className} ${isActive && !disableActive ? activeClassName : ""}`
+          }
+        >
+          {children}
+        </NavLink>
+      )}
+    </div>
+  );
+}

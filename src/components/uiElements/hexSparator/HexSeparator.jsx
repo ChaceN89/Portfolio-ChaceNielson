@@ -42,7 +42,7 @@ export default function HexSeparator({
   randomColors = false 
 }) {
 
-  const colorClasses = ['bg-primary', 'bg-accent', 'bg-tertiary', 'bg-secondary'];
+  const colorClasses = ['bg-primary', 'bg-secondary', 'bg-accent', 'bg-secondary-alt'];
 
   const getRandomColorClass = () => {
     const randomIndex = Math.floor(Math.random() * colorClasses.length);

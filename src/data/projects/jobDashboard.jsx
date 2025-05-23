@@ -29,12 +29,15 @@ const long = (
 );
 
 export const jobDashboard = {
-  starred: true,
   id: "job-dashboard",
   name: "Job Dashboard",
-  tag: "Backend",
+  tags: ["Web App", "Vue", "FastAPI"],
   blurb: short,
   description: long,
+  thumbnail: {
+    src: "jobDashboard.jpg",
+    blurhash: "L7Op#=4mxu?cE2IokBxb9+%jj=Mv",
+  },
   images: [
     { src: "jobDashboard.jpg", blurhash: "L7Op#=4mxu?cE2IokBxb9+%jj=Mv" },
   ],

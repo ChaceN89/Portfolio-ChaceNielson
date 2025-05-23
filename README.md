@@ -1,181 +1,200 @@
-# Chace Nielson Portfolio
+# 🧑‍💻 Chace Nielson Portfolio
 
-Welcome to the repository for Chace Nielson's portfolio. This site showcases my skills, work experience, projects, and more. The application has been migrated to **React + Vite** for improved performance and development efficiency.
+Welcome to the codebase for **Chace Nielson’s developer portfolio**, a site showcasing my full stack and game development experience, selected projects, tech stack, and contact information. Built with **React + Vite** for fast performance and smooth animations.
 
----
+> 📍 Deployed via [Vercel](https://vercel.com/)
 
-## Table of Contents
+<br>
 
-1. [About the Project](#about-the-project)
-2. [Features](#features)
-3. [Technologies Used](#technologies-used)
-4. [Installation](#installation)
-5. [Environment Variables](#environment-variables)
-6. [Running the Project](#running-the-project)
-7. [Testing the Build](#testing-the-build)
-8. [Data Files](#data-files)
-9. [Public Folder Structure](#public-folder-structure)
-10. [Pages](#pages)
-11. [Components](#components)
-12. [Development](#development)
-13. [Libraries Used](#libraries-used)
-14. [More Information](#more-information)
+## 📑 Table of Contents
 
----
+- [🧰 Technologies Used](#🧰-technologies-used)
+- [✨ Features](#✨-features)
+- [🔧 Installation](#🔧-installation)
+- [🔐 Environment Variables](#🔐-environment-variables)
+- [🏃 Running the Project](#🏃-running-the-project)
+- [🔍 Testing the Build](#🔍-testing-the-build)
+- [📁 Project Structure](#📁-project-structure)
+- [📊 Google Analytics](#📊-google-analytics)
+- [📬 Contact](#📬-contact)
+- [🚀 Deployment](#🚀-deployment)
 
-## About the Project
+<br>
 
-This project is a professional portfolio website showcasing Chace Nielson's skills, projects, and work experience. It has been developed to provide a seamless, interactive, and visually appealing experience. The application uses **React + Vite** for faster builds and better development workflow.
+## 🧰 Technologies Used
 
----
+### 🧱 Core
+- **React** (v19+)
+- **Vite** (v5+)
+- **Tailwind CSS** (v4)
 
-## Features
+### 🧩 Libraries
+- `react-router-dom` – Routing and modals
+- `framer-motion` – Animations
+- `react-ga4` – Google Analytics
+- `emailjs-com` – Contact form messaging
+- `blurhash` – Image loading effects
+- `react-icons` – Icons
 
-- **Modal Routing Using Params**  
-  Modal-based routing allows users to view detailed project information without leaving the main page. Example:  
-  `http://localhost:4173/?project=scale-the-depths`
+<br>
 
-- **Contact Form with EmailJS**  
-  Users can send messages directly via a contact form integrated with EmailJS.
+## ✨ Features
 
-- **Google Analytics**  
-  Tracks user interactions and behavior using Google Analytics for insights.
+- **💡 Modal-Based Routing**  
+  Project modals are linked using query params (`?project=id`) without leaving the main page.
 
-- **Animations**  
-  Smooth animations are implemented using **Framer Motion** for better user experience.
+- **📨 EmailJS Contact Form**  
+  Users can send direct messages via the integrated contact form.
 
-- **Optimized Build**  
-  The application leverages Vite for lightning-fast build times and efficient development.
+- **📊 Google Analytics (GA4)**  
+  Tracks page views and button interactions, only in production.
 
----
+- **🎨 Framer Motion Animations**  
+  Smooth fade, slide, and staggered UI effects for polished UX.
 
-## Technologies Used
+- **⚡ Vite Performance**  
+  Instant reloads and optimized bundling for dev + production.
 
-- **React**  
-- **Vite**  
-- **Tailwind CSS**  
-- **Framer Motion**  
-- **EmailJS**  
-- **Google Analytics**  
-- **React Router**  
-- **React Icons**  
-- **Blurhash**  
+<br>
 
----
+## 🔧 Installation
 
-## Installation
-
-To install the necessary dependencies, run:
+Clone the repository and install dependencies:
 
 ```bash
 npm install
 ```
 
----
+<br>
 
-## Environment Variables
+## 🔐 Environment Variables
 
-Create a `.env` file in the root directory with the following content:
+Create a `.env` file in the project root with the following keys:
 
 ```env
-VITE_APP_EMAILJS_SERVICE_ID=service_.......
-VITE_APP_EMAILJS_TEMPLATE_ID=template_.......
-VITE_APP_EMAILJS_USER_ID=.......
-
-VITE_APP_VERSION=0.0.0
-VITE_GOOGLE_MEASUREMENT_ID=G-........
-
 VITE_APP_ENVIRONMENT=development
+
+# EmailJS
+VITE_APP_EMAILJS_SERVICE_ID=service_...
+VITE_APP_EMAILJS_TEMPLATE_ID=template_...
+VITE_APP_EMAILJS_USER_ID=user_...
+
+# Google Analytics
+VITE_APP_VERSION=2.0.0
+VITE_GOOGLE_MEASUREMENT_ID=G-XXXXXXX
 ```
-- The `.env` file will not be tracked by git.
 
----
+> These values are excluded from Git and only used during build/runtime.
 
-## Running the Project
+<br>
 
-To run the local version of the project, use:
+## 🏃 Running the Project
+
+Launch the development server:
 
 ```bash
 npm run dev
 ```
 
----
+<br>
 
-## Testing the Build
+## 🔍 Testing the Build
 
-To test the production build locally:
+Create and preview a production build:
 
 ```bash
 npm run build
 npm run preview
 ```
 
----
+<br>
 
-## Data Files
+## 📁 Project Structure
 
-### Application Data
+```
+src/
+├── components/          # Reusable UI components organized by feature (navbar, footer, home sections, etc.)
+│   ├── analytics/           # Google Analytics integration
+│   ├── animations/          # Reusable motion components (e.g., magnetic hover)
+│   ├── buttons/             # Custom button components and styles
+│   ├── contact/             # Contact form and related utilities
+│   ├── footer/              # Footer layout and social components
+│   ├── homeSections/        # Sections for homepage (Hero, Projects, TechStacks, About)
+│   ├── navbar/              # Desktop/mobile nav components
+│   ├── photoGallery/        # Photo gallery grid and modal viewer
+│   ├── projects/            # Project display components (cards, filters, carousels)
+│   ├── routing/             # App router setup, error boundaries, and layout wrapper
+│   ├── testing/             # Developer utilities for theme/debugging
+│   └── uiElements/          # Generic UI elements (modals, loaders, wrappers, scroll buttons)
 
-- The `src/data` folder contains data for:
-  - Home page sections (e.g., Hero, Skills, Projects)
-  - Project and skill details
-  - Contact page content
+├── data/                # Static data files for projects, skills, tech stacks, and site content
+│   ├── iconData/            # Categorized icons (frontend, backend, soft skills, etc.)
+│   ├── pageData/            # Section-level data (hero text, contact info, etc.)
+│   ├── projects/            # Individual project metadata
+│   ├── techStacks/          # Technology groupings (Full Stack, Game Design)
+│   └── nav/                 # Navigation link data
 
----
+├── global-styles/       # Global animation and effect styles for specific items (e.g., ripple, particle)
 
-## Public Folder Structure
+├── pages/               # Top-level pages used with React Router (Home, Contact, Projects, etc.)
 
-The `public` folder contains:
+├── utils/               # Utility functions and helpers (e.g., scroll, analytics, image effects)
 
-- **Images**: Project images, logos, and background images.
-- **Icons**: A folder with SVG icons for the site.
-- **Manifest**: The `manifest.json` file for PWA support.
+├── index.css            # Tailwind base + global styles
+├── App.jsx              # Main App wrapper
+└── main.jsx             # App entry point
+```
 
----
+**public/**
+```
+public/
+├── backgrounds/         # Background images for different sections
+├── logos/               # Personal and project logos
+├── icons/               # SVGs used in the UI
+└── manifest.json        # PWA and metadata configuration
+```
 
-## Pages
+<br>
 
-The site includes the following pages:
+## 📊 Google Analytics
 
-- **Home**: Showcasing skills, work experience, projects, and more.
-- **Photos**: A carousel of images and videos.
-- **Thanks**: Displayed after form submission.
+Analytics are initialized with `react-ga4` in production only.
 
----
+### 🔍 How it Works
+- GA is set up via `useGoogleAnalytics.js`
+- Page views are tracked using `AnalyticsProvider.jsx`
+- Custom events (e.g., clicks) use `useAnalyticsEvent.js`
 
-## Components
+### Example:
+```js
+const trackEvent = useAnalyticsEvent();
+trackEvent("Button", "Click", "Hero CTA", 1);
+```
 
-The `src/components` folder contains modular components used across the site. Each component is documented and reused for consistency.
+> The `VITE_GOOGLE_MEASUREMENT_ID` is required in your `.env` file.
 
----
+<br>
 
-## Development
+## 📬 Contact
 
-- The `TailwindBreakPoints.jsx` component shows breakpoints during development. It can be toggled off by changing the environment variable `VITE_APP_ENVIRONMENT` to something other than `development`.
+- **Portfolio:** [chacenielson.com](https://chacenielson.com)
+- **Email:** [chacen@shaw.ca](mailto:chacen@shaw.ca)
 
----
+For collaboration inquiries or freelance opportunities, feel free to reach out.
 
-## Libraries Used
+<br>
 
-- **React**
-- **Vite**
-- **Tailwind CSS**
-- **Framer Motion**
-- **React Router**
-- **EmailJS**
-- **React Icons**
-- **React GA4**
-- **React Modal**
-- **Blurhash**
+## 🚀 Deployment
 
-For a complete list of libraries, refer to the `package.json` file.
+### Vercel Hosting
 
----
+This site is continuously deployed on **[Vercel](https://vercel.com/)** via GitHub integration.
 
-## More Information
+To deploy manually:
 
-For more information, contact Chace Nielson:
+```bash
+npm run build
+vercel --prod
+```
 
-- Website: [chacenielson.com](https://chacenielson.com)  
-- Email: [chacen@shaw.ca](mailto:chacen@shaw.ca)
-
+> Make sure your environment variables are added in your Vercel dashboard.

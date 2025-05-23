@@ -23,10 +23,9 @@
  * @property {number} project.initialSlide - The initial slide value for project animations.
  */
 export const globals = {
-  ScrollLink: {
-    duration: 1000, // Duration of the scroll animation in milliseconds
-    offset: -50 // Offset to account for fixed headers
-  },
+  scrollDuration: 1000, // Duration of the scroll animation in milliseconds
+  navbarHeight: -66, // Offset to account for fixed headers
+
   project: {
     slide: 0.4, // Slide value for project animations
     initialSlide: 0.5 // Initial slide value for project animations
@@ -35,4 +34,4 @@ export const globals = {
 
 // for routing parameters - names to be used in the URL link (ex. to={`?${projectParam}=capstone`})
 export const projectParam = "project";
-export const skillParam = "specialization";
+export const techStackParam = "tech-stack";

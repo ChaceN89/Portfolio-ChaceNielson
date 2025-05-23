@@ -20,21 +20,24 @@ const short = "A Flappy Bird clone developed using Unity Game Engine.";
 const long = (
   <div className='space-y-2'>
     <p>
-      This project is a Flappy Bird clone built with Unity and C#. Players control a bird, navigating through pipes while avoiding collisions.    </p>
+      This project is a Flappy Bird clone built with Unity and C#. Players control a bird, navigating through pipes while avoiding collisions.   
+    </p>
   </div>
 );
 
 export const flappyBirdClone = {
   id: "flappy-bird-clone",
   name: "Flappy Bird Clone",
-  tag: "Game",
+  tags: ["Game", "Unity"],
   blurb: short,
   description: long,
-  hidePhotos: true,
+  thumbnail: {
+    src: "flappyBird.jpg",
+    blurhash: "L2Ps@p00~nS^00OT_2D*008^R;Di",
+  },
   images: [
     { src: "flappyBird.jpg", blurhash: "L8CI]Vs~Ros~8[obWHkA.Uk8oYs~" },
   ],
-  youtubeEmbed: "https://www.youtube.com/watch?v=KOZBFfWv8B8"  ,
   mainStack: [
     IconLibrary.UNITY,
     IconLibrary.CSHARP,

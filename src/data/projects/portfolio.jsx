@@ -43,12 +43,15 @@ const long = (
 );
 
 export const portfolio = {
-  starred: true,
   id: "portfolio",
   name: "My Portfolio",
-  tag: "UX/UI",
+  tags: ["Web App", "React", "CSS", "Tailwind"],
   blurb: short,
   description: long,
+  thumbnail: {
+    src: "portfolio0.jpg",
+    blurhash: "C78g,54m9F_4X9V?aexv",
+  },
   images: [
     { src: "portfolio0.jpg", blurhash: "C78g,54m9F_4X9V?aexv" },
     { src: "portfolio1.jpg", blurhash: "C78g,54m9F_4X9V?aexv" },

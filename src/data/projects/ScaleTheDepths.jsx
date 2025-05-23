@@ -21,35 +21,29 @@ const short = "Fishing game and winner of the 2024 GMTK Game Jam.";
 const long = (
   <div className="space-y-2">
     <p>
-      <BoldSpan>Scale The Depths</BoldSpan> was created for the <BoldSpan>2024 GMTK Game Jam</BoldSpan>, where the theme was "Built to Scale." Players control a robot tasked with scaling fish to feed hungry aquatic customers in a creative and literal interpretation of the theme. The game stood out among over 7,000 submissions, earning the title of <BoldSpan>Game Jam Winners</BoldSpan>.
+      <BoldSpan>Scale The Depths</BoldSpan> was the winning entry for the <BoldSpan>2024 GMTK Game Jam</BoldSpan>, where the theme was "Built to Scale." Players control a robot tasked with scaling fish to feed hungry aquatic customers in a creative and literal interpretation of the theme. The game stood out among over 7,000 submissions, earning the title of <BoldSpan>Game Jam Winners</BoldSpan>.
     </p>
     <p>
-      Since its release, the game has gained significant traction on <BoldSpan>Itch.io</BoldSpan>, receiving over <BoldSpan>50K views</BoldSpan> and maintaining a <BoldSpan>4.6-star rating</BoldSpan>. Its success has also sparked interest in a full version, resulting in over <BoldSpan>12K wishlists</BoldSpan> on <BoldSpan>Steam</BoldSpan>.
+      Since its release, the game has gained significant traction on <BoldSpan>Itch.io</BoldSpan>, receiving over <BoldSpan>200K views</BoldSpan> and maintaining a <BoldSpan>4.6-star rating</BoldSpan>. Its success has also sparked interest in a full version, resulting in over <BoldSpan>30K wishlists</BoldSpan> on <BoldSpan>Steam</BoldSpan>.
     </p>
 
-    <iframe
-      className="rounded-xl"
-      frameBorder="0"
-      src="https://itch.io/embed/2912112?border_width=5&amp;link_color=FFA500"
-      width="100%"
-      height="165"
-    >
-      <a href="https://serpexnessie.itch.io/scale-the-depths">
-        Scale the Depths by Serpexnessie, Mancavea, Glass Gecko Games, Kar2fast, 4n6u, E-man248, Pepocandii
-      </a>
-    </iframe>
     <p>
       This project highlights creative gameplay design, polished visuals, and seamless collaboration with a diverse team of developers, resulting in a highly engaging and award-winning experience.
     </p>
   </div>
 );
 
+
 export const scaleTheDepths = {
   id: "scale-the-depths",
   name: "Scale The Depths",
-  tag: "Game",
+  tags: ["Game", "Unity"],
   blurb: short,
   description: long,
+  thumbnail:{
+    src: "scaleTheDepths1.jpg",
+    blurhash: "LaJuWDA0SdTLuPIUwbt8buRPtSoz",
+  },
   images: [
     { src: "scaleTheDepths1.jpg", blurhash: "LaJuWDA0SdTLuPIUwbt8buRPtSoz" },
     { src: "scaleTheDepths2.jpg", blurhash: "LoGKwfoexZI@.TjYn$S54;WAM{t7" },
@@ -58,7 +52,6 @@ export const scaleTheDepths = {
     { src: "scaleTheDepths5.jpg", blurhash: "LaNwD:IU?wNGM{RjV@WC.8t7IAWB" },
     { src: "scaleTheDepths6.jpg", blurhash: "LcIaDlIpXA={u6X9IpsSD%kCI;Rk" },
   ],
-  // youtubeEmbed: "",
   mainStack:[
     IconLibrary.UNITY,
     IconLibrary.CSHARP,
@@ -68,7 +61,7 @@ export const scaleTheDepths = {
     IconLibrary.TEAM_COLLABORATION,
   ],
   externalLinks: [
-    { name: "GMTK Game Jam 2024", link: "https://itch.io/jam/gmtk-2024", icon: IconLibrary.WORLD.icon },
+    { name: "GMTK Game Jam 2024", link: "https://itch.io/jam/gmtk-2024", icon:IconLibrary.ITCHIO.icon },
     { name: "Top 20 Results Video", link: "https://youtu.be/gqCAeFjB8Uo?si=Wxp0ATxZGN4vtOGH&t=1133", icon: IconLibrary.YOUTUBE.icon },
   ],
 };

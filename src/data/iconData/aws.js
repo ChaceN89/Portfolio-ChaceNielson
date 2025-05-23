@@ -15,6 +15,8 @@ const awsIcons = {
   RDS: { name: "RDS", svg_path: `${folder}/RDS.svg` },
   S3: { name: "S3", svg_path: `${folder}/S3.svg` },
   TERRAFORM: { name: "Terraform", svg_path: `${folder}/terraform.svg` },
+  DYNAMODB: { name: "DynamoDB", svg_path: `${folder}/dynamoDB.svg` },
+  CLOUDFRONT: { name: "CloudFront", svg_path: `${folder}/cloudFront.svg` },
 };
 
 export default awsIcons;

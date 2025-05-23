@@ -60,19 +60,22 @@ const long = (
 
 
 export const geoPredict = {
-  starred: true,
   id: "geo-predict", // id and folder name in the projects folder
-  name: "GEO Predict",
-  tag: "Full-Stack",
+  name: "Geothermal Drilling Prediction",
+  tags: ["Web App", "Machine Learning", "Data Visualization", "FastAPI","Tailwind","React", "CSS","Python"],
   blurb: short,
   description: long,
+  thumbnail: {
+    src: "highlight.jpg",
+    blurhash: "L7Op#=4mxu?cE2IokBxb9+%jj=Mv",
+  },
   images: [
     { src: "highlight.jpg", blurhash: "G39%h%.lA8yWNExv4.t600%M^,X7-qITNG9Y" },
     { src: "crossPlot.jpg", blurhash: "q2Hog|GOtj%4nAwQ$n$-=OnBr_kBX4XNkUbq+S#uVtNYXfXNNrSb*EPKSva3nAm@m@nADhaMxcs;NFR%ozoy:vr2srgJS[Xfkob=" },
     { src: "homePage.jpg", blurhash: "qANAxJD*9Z%LNGxvRixu00t7?bV@-;R*%LWB~WaxD%bIIUt6M|WCIVt6adR+Rjn~WYR+00WBxtogs;j=j]a#IAj[RjjFWBWqV@of" },
     { src: "login.jpg", blurhash: "q7Mtjn8^xU-oVrxsn#t6xtRia_odj?a_axj[9a?wNyIpo$R.bcWC-=x^a%RnWFj^j]WV^kDinN%2nOnhjExaxWMwsjxWs*n#jYoJ" },
   ],
-  youtubeEmbed: "https://www.youtube.com/watch?v=oTU0C_8-dSw",
+  youtubeID: "oTU0C_8-dSw",
   mainStack: [
     IconLibrary.REACT,
     IconLibrary.FASTAPI,
@@ -93,6 +96,6 @@ export const geoPredict = {
     IconLibrary.DATA_VISUALIZATION,
   ],
   externalLinks: [
-    { name: "Website", link: "http://136.159.140.62/", icon: IconLibrary.WORLD.icon },
+    // { name: "Website", link: "http://136.159.140.62/", icon: IconLibrary.WORLD.icon },
   ],
 };

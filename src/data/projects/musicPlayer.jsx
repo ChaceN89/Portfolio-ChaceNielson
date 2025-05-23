@@ -29,12 +29,15 @@ const long = (
 );
 
 export const musicPlayer = {
-  starred: true,
   id: "music-player",
   name: "Music Player",
-  tag: "UX/UI",
+  tags: ["Web App", "Vue"],
   blurb: short,
   description: long,
+  thumbnail: {
+    src: "musicPlayer2.jpg",
+    blurhash: "LADl{3~pIV00ROxvt7MxD*00xv?b",
+  },
   images: [
     { src: "musicPlayer2.jpg", blurhash: "LANm]1_M?brt-;D*js%L~W%3RjD%" },
     { src: "musicPlayer.jpg", blurhash: "LADl{3~pIV00ROxvt7MxD*00xv?b" },

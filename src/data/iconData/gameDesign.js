@@ -11,11 +11,17 @@ import { IoGameController } from "react-icons/io5";
 import { FaGear } from "react-icons/fa6";
 import { FiFeather } from "react-icons/fi";
 import { GiMaze } from "react-icons/gi";
+import { SiFmod } from "react-icons/si";
+
 
 const folder = "gameDesign";
 
 const gameDesignIcons = {
   UNITY: { name: "Unity", icon: FaUnity, color: "white" },
+  GIMP: { name: "GIMP", svg_path: `${folder}/gimp.svg` },
+  FMOD: { name: "FMOD", icon: SiFmod, color: "white" },
+  SHADER_GRAPH: { name: "Shader Graph", svg_path: `${folder}/shader-graph.svg` },
+  INSPECTOR_TOOLS: { name: "Inspector Tools", svg_path: `${folder}/odin-inspector.svg` },
   
   FACTORY_PATTERN: { name: "Factory Pattern", icon: FaGear, color: "white" },
   OBSERVER_PATTERN: { name: "Observer Pattern", icon: FaEye, color: "white" },

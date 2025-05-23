@@ -31,12 +31,15 @@ const long = (
 
 
 export const drillbotics = {
-  starred: true,
   id: "drillbotics",
-  name: "Drillbotics",
-  tag: "Engineering",
+  name: "Mini Drill Rig",
+  tags: ["Engineering", "Data Visualization", "Python"],
   blurb: short,
   description: long,
+  thumbnail: {
+    src: "drillbotics6.jpg",
+    blurhash: "L2Ps@p00~nS^00OT_2D*008^R;Di",
+  },
   images: [
     { src: "drillbotics1.jpg", blurhash: "LAH-rkQ,yG-ncrO@%M0L=}00-iIB" },
     { src: "drillbotics0.jpg", blurhash: "L2Ps@p00~nS^00OT_2D*008^R;Di" },
@@ -46,7 +49,7 @@ export const drillbotics = {
     { src: "drillbotics5.jpg", blurhash: "L7GudjTH=v~D%$Io9a-:01%LR+D*" },
     { src: "drillbotics6.jpg", blurhash: "LAF=jk~p-p?a_3o#tQRjR5RkIoRi" },
   ],
-  youtubeEmbed: "https://www.youtube.com/watch?v=5Z8g44RXl2c",
+  youtubeID: "5Z8g44RXl2c",
   mainStack: [
     IconLibrary.PLOTLY_DASH,
     IconLibrary.PYTHON,
@@ -59,7 +62,7 @@ export const drillbotics = {
     IconLibrary.FABRICATION
   ],
   externalLinks: [
-    { name: "GUI Example", link: "https://www.youtube.com/watch?v=xF9heykeFU4", icon: IconLibrary.YOUTUBE.icon },
+    { name: "Real Time GUI Example", link: "https://www.youtube.com/watch?v=xF9heykeFU4", icon: IconLibrary.YOUTUBE.icon },
     { name: "Drillbotics Results for the 2023-2024 Competition", link: "https://drillbotics.com/winners/", icon: IconLibrary.WORLD.icon },
   ],
 };

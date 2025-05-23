@@ -35,9 +35,13 @@ const long = (
 export const library = {
   id: "library",
   name: "PageFlow Library",
-  tag: "Full-Stack",
+  tags: ["Web App", "Next", "Django", "AWS"],
   blurb: short,
   description: long,
+  thumbnail:{
+    src: "library5.jpg",
+    blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw",
+  },
   images: [
     { src: "library5.jpg", blurhash: "L8Pj4700D$?H004.D%Mx8_~q%MIV" },
     { src: "library0.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
@@ -60,11 +64,11 @@ export const library = {
   mainStack: [
     IconLibrary.NEXT,
     IconLibrary.DJANGO,
-    IconLibrary.S3,
-    IconLibrary.RDS,
+    IconLibrary.AWS,
   ],
   extendedStack: [
-    IconLibrary.AWS,
+    IconLibrary.RDS,
+    IconLibrary.S3,
     IconLibrary.POSTGRESQL,
     IconLibrary.FULL_STACK,
     IconLibrary.AUTHENTICATION,

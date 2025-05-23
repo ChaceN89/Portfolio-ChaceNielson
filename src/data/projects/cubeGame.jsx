@@ -37,12 +37,17 @@ const long = (
   </div>
 );
 
+
 export const cubeGame = {
   id: "cube-game",
   name: "Cube game",
-  tag: "Game",
+  tags: ["Game", "Unity",],
   blurb: short,
   description: long,
+  thumbnail: {
+    src: "cube0.jpg",
+    blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%",
+  },
   images: [
     { src: "cube00.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
     { src: "cube0.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
@@ -59,5 +64,7 @@ export const cubeGame = {
     IconLibrary.GAME_DESIGN,
     IconLibrary.UNITY_PHYSICS,
   ],
-
+  externalLinks: [
+    { name: "Play", link: "https://kar2fast.itch.io/cube-game", icon:IconLibrary.ITCHIO.icon },
+  ],
 };

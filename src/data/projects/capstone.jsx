@@ -33,24 +33,26 @@ const long = (
 );
 
 export const capstone = {
-  starred: true,
-  id: "capstone", // id and folder name in the projects folder
+  id: "capstone",
   name: <>Ocean CO<sub>2</sub> Condenser</>,
-  tag: "Engineering",
+  tags: ["Simulation", "Engineering", "Unity", "Blender"],
   blurb: short,
+  thumbnail:{
+    src: "capstone2.jpg",
+    blurhash: "L8HeI3D4^H_4~B=sDj^*-BH;00%L",
+  },
   description: long,
   images: [
     { src: "capstone0.jpg", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" },
     { src: "capstone1.jpg", blurhash: "LCCtd@4#5[xt_8kMITWU0C-s-qRj" },
     { src: "capstone2.jpg", blurhash: "L8HeI3D4^H_4~B=sDj^*-BH;00%L" },
+    { src: "capstone6.jpg", blurhash: "LdEz+.kHT2ng_9t0oZkD%CoubWkC" },
     { src: "capstone3.jpg", blurhash: "LAD11#-;^dQ.}+?RS%E+=|kiV:I]" },
     { src: "capstone5.jpg", blurhash: "L3Ss50%g?aM{?aIV%Mxt00Mx_4t7" },
-    { src: "capstone6.jpg", blurhash: "LnD_REohbujd_7oxWBk8%Wobawf8" },
     { src: "capstone7.jpg", blurhash: "LQEEl-NTX9t9~YRXtRa_^|bzb:i^" },
     { src: "capstone8.jpg", blurhash: "LdEz+.kHT2ng_9t0oZkD%CoubWkC" },
-    { src: "capstone9.jpg", blurhash: "LdEz+.kHT2ng_9t0oZkD%CoubWkC" },
   ],
-  youtubeEmbed: "https://www.youtube.com/watch?v=TvnBOPB7dhc",
+  youtubeID: "TvnBOPB7dhc",
   mainStack: [
     IconLibrary.UNITY,
     IconLibrary.BLENDER,
@@ -62,7 +64,6 @@ export const capstone = {
     IconLibrary.ENGINEERING,
     IconLibrary.CIRCUITY,
     IconLibrary.ANIMATION,
-    IconLibrary.ADAPTABILITY,
     IconLibrary.DESIGN_3D,
     IconLibrary.FABRICATION,
     IconLibrary.LEADERSHIP,

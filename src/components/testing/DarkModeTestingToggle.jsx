@@ -27,13 +27,15 @@ function DarkModeTestingToggle() {
 
   // Update the dark mode class on the HTML root element
   const toggleDarkMode = () => {
-    setIsDarkMode((prev) => !prev);
-    const html = document.documentElement;
-    if (!isDarkMode) {
-      html.classList.add('dark');
-    } else {
-      html.classList.remove('dark');
-    }
+    setIsDarkMode((prev) => {
+      const html = document.documentElement;
+      if (!prev) {
+        html.classList.add('dark');
+      } else {
+        html.classList.remove('dark');
+      }
+      return !prev;
+    });
   };
 
   // Set the initial dark mode state based on the class on mount
@@ -52,7 +54,7 @@ function DarkModeTestingToggle() {
   return (
     <div
       onClick={toggleDarkMode}
-      className={`cursor-pointer opacity-30 fixed top-0 right-0 m-1 p-1 z-[100] font-mono text-white h-10 w-10 rounded-full flex items-center justify-center ${
+      className={`cursor-pointer opacity-30 fixed top-32 right-0 m-1 p-1 z-[100] font-mono text-white h-10 w-10 rounded-full flex items-center justify-center ${
         isDarkMode ? 'bg-gray-900' : 'bg-gray-700'
       }`}
     >
