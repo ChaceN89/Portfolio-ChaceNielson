@@ -40,7 +40,7 @@
 
 import React from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { globals } from '../../../data/globals';
+import { globals } from '@/data/globals';
 
 function CardLearnMore({ isHovered }) {
   return (

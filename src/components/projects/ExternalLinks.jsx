@@ -37,8 +37,8 @@
  * @since 2.1
  */
 import React from 'react';
-import { openPdf } from '../../../utils/utils';
-import useAnalyticsEvent from '../../analytics/useAnalyticsEvent';
+import { openPdf } from '../../utils/utils';
+import useAnalyticsEvent from '../analytics/useAnalyticsEvent';
 
 function ExternalLinks({ externalLinks }) {
   const trackEvent = useAnalyticsEvent();

@@ -122,7 +122,7 @@ export default function MediaFrame({
   if (!videoId) return null;
 
   return (
-    <div className={`w-full max-w-4xl mx-auto space-y-2 text-inherit `}>
+    <div className={`w-full max-w-2xl mx-auto space-y-2 text-inherit `}>
       {title && <h3 className="text-xl font-semibold">{title}</h3>}
 
       <div ref={ref} className={`relative overflow-hidden rounded-2xl ${className}`}>

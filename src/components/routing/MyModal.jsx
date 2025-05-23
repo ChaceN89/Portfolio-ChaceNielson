@@ -69,16 +69,17 @@ export default function MyModal({ children }) {
 
         {/* Slide transition for the visual part of the modal */}
         <div className="flex items-center justify-center z-20 h-full">
-          <div className="relative w-full mx-auto min-w-[40%] max-w-[85%]">
+          <div className="relative w-full mx-auto min-w-[40%] max-w-[85%] ">
             <SlideTransition
               enter="right"
               exit="left"
               duration={0.5}
               translationDist={100}
               delay={0.2}
+              className='bg-secondary rounded-3xl' // behind darker solid to dull the bg of the 
             >
               <BackgroundWrapper 
-                backgroundClass="relative rounded-3xl border-2 border-primary/80 bg-accent/50 "
+                backgroundClass="relative rounded-3xl border-2 border-primary/80 bg-accent/40 "
                 noise
               >
                 {/* Close button */}

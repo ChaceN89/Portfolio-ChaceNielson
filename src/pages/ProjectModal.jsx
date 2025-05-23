@@ -15,11 +15,11 @@ import { projects } from '@/data/pageData/projectData'; // Assuming you have a f
 
 // components
 import SkillBoxContainer from '@/components/uiElements/skillBox/SkillBoxContainer';
-import ExternalLinks from '@/components/specificSections/projects/ExternalLinks';
-import ProjectImageCarousel from '@/components/specificSections/projects/ProjectImageCarousel';
+import ExternalLinks from '@/components/projects/ExternalLinks';
+import ProjectImageCarousel from '@/components/projects/ProjectImageCarousel';
 import NotFoundInfo from '@/components/uiElements/NotFoundInfo';
 import MediaFrame from '@/components/uiElements/mediaFrame/MediaFrame';
-import PageHeader from '@/components/uiElements/PageHeader';
+import ModalHeader from '@/components/uiElements/ModalHeader';
 
 export default function ProjectModal({ projectName }) {
   const [safeProjectName, setSafeProjectName] = useState(projectName);
@@ -48,48 +48,46 @@ export default function ProjectModal({ projectName }) {
 
   return (
     <div  className="text-primary">
-      <PageHeader name={project.name} description={project.description} pageTitle={"Project: " +project.name}  />
+      <ModalHeader name={project.name} description={project.blurb} />
       <ExternalLinks externalLinks={project.externalLinks} />
 
-      {project.name} // outputs string name
-
-      <hr className="border-primary border-opacity-60 mb-4" />
+      <hr className="border-2 rounded-full border-primary border-opacity-60 mb-4" />
 
       {/* Content */}
-      <div className='flex  flex-col lg:flex-row gap-4'>
+      <div className='grid grid-cols-1 xl:grid-cols-2  gap-4'>
 
-        <div className='lg:w-1/2'>
-          <div className='black lg:hidden'>
     
-            <DisplayVideo project={project} />
-            
+
+        <div >{project.description}</div>
+
+        <div className="w-full flex justify-center ">
+          <div className="w-full max-w-2xl">
+            <ProjectImageCarousel
+              images={project.images}
+              id={project.id}
+              title={project.name}
+            />
           </div>
-          <div className='pb-2'>
-            {project.description}
+        </div>
+
+      
+        {project.youtubeID ? ( // If a YouTube ID is provided, show the video and skill box as grid componets 
+          <>
+            <MediaFrame
+              thumbnail={project.thumbnail.src}
+              videoId={project.youtubeID} 
+            />
+            <SkillBoxContainer stack={fullStack} isSmall  />
+          </>
+
+        ):( // If no YouTube ID is provided, show the skill box in its large form over 2 columns
+          <div className='xl:col-span-2'>
+            <SkillBoxContainer stack={fullStack}  />
           </div>
-          <SkillBoxContainer stack={fullStack} isSmall />
-        </div>
-        <div className='lg:w-1/2'>
-          <div className='hidden lg:block'>
-            <DisplayVideo project={project} />
-          </div>  
-          <ProjectImageCarousel images={project.images} id={project.id} title={project.name} hidePhotos={project.hidePhotos} />
-        </div>
+        ) }
+    
       </div>
     </div>
   );
 }
 
-
-// display for the video portion of the project modal
-function DisplayVideo({project}){
-  if(!project.youtubeID ) return null // display nothing
-  return(
-    <div className='pb-4'>
-      <MediaFrame
-        thumbnail={project.thumbnail.src}
-        videoId={project.youtubeID} 
-      />
-    </div>
-  )
-}

@@ -57,7 +57,7 @@ export default function AboutMe() {
 
 
   const bottomOpacity = useTransform(scrollYProgress, [0, 0.4, 1], [0, 1,1])
-  const bottomY = useTransform(scrollYProgress, [0, 0.6, 1], [240, 0, 0 ])
+  const bottomY = useTransform(scrollYProgress, [0, 0.6, 1], [200, 0, 0 ])
 
   return (
     <motion.section ref={sectionRef} className="py-16 px-2  max-w-4xl mx-auto" id="lets-connect">

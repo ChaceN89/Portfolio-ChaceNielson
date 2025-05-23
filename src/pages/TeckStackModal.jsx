@@ -14,7 +14,7 @@ import { techSkills } from '@/data/pageData/skillsData';
 // Components
 import NotFoundInfo from '@/components/uiElements/NotFoundInfo';
 import SkillBoxContainer from '@/components/uiElements/skillBox/SkillBoxContainer';
-import PageHeader from '@/components/uiElements/PageHeader';
+import ModalHeader from '@/components/uiElements/ModalHeader';
 
 export default function TechStackModal({ techId }) {
   const [safeTechId, setSafeTechId] = useState(techId);
@@ -36,13 +36,15 @@ export default function TechStackModal({ techId }) {
   return (
     <div className="text-primary">
       {/* Title & Description */}
-      <PageHeader name={tech.name} description={tech.modalDescription} pageTitle={tech.name} />
+      <ModalHeader name={tech.name} description={tech.modalDescription} />
+
+      <hr className="border-2 mt-2 rounded-full border-primary border-opacity-60 mb-4" />
 
       {/* Categorized Tool Sections */}
       {tech.allTools?.map((group, index) => (
         <div key={group.category + index} className="mt-6">
-          <h3 className="font-semibold text-sm uppercase tracking-wide text-darken mb-2">{group.category}</h3>
-          <SkillBoxContainer stack={group.skills} isSmall />
+          <h4 className="font-semibold text-sm uppercase tracking-wide text-darken mb-2">{group.category}</h4>
+          <SkillBoxContainer stack={group.skills} />
         </div>
       ))}
     </div>

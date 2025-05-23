@@ -54,9 +54,9 @@ export default function TechStackSection({
     >
       <div className="flex flex-col gap-6 flex-grow justify-between">
         <div className="flex flex-col space-y-3">
-          <h3 className="leading-tight tracking-tight">
+          <h4 className="leading-tight tracking-tight max-w-full lg:max-w-72 xl:max-w-full">
             {techStack.name}
-          </h3>
+          </h4>
           <p className="text-sm opacity-80 leading-relaxed">
             {techStack.description}
           </p>
