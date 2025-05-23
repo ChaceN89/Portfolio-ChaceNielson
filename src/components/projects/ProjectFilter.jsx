@@ -25,7 +25,7 @@ export default function ProjectFilter({ tags = [], selectedTags = [], onChange }
   };
 
   return (
-    <div className="mb-8 bg-primary/60 dark:bg-secondary/60 p-4 rounded-2xl">
+    <div className="mb-6 bg-primary/60 dark:bg-secondary/60 p-4 rounded-2xl">
       {/* Title and Toggle */}
       <div
         className="flex items-center justify-between  cursor-pointer"
