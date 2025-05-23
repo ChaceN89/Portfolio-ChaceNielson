@@ -27,8 +27,11 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCode, FaServer, FaGamepad } from 'react-icons/fa';
 import { useInitialLoading } from '../routing/InitialLoadingContext';
+import { useAnimationSettings } from '@/components/animations/AnimationContext';
 
 export default function Hero() {
+
+  const { animationsEnabled } = useAnimationSettings(); // Get animation settings from context
 
   // Hook to get the current location and navigate
   const navigate = useNavigate();
@@ -50,8 +53,14 @@ export default function Hero() {
     splashScreenDelay+1.0,
   ];
 
+
+
+
   // The specific animation info for each element with a delay as a prop so they can be staggered
   const animationInfo =(delay) => {
+
+    if (!animationsEnabled) return {}; // ✅ Avoid spreading `null`
+
     return {
       initial: { opacity: 0, y: 20 },
       animate: { opacity: 1, y: 0 },

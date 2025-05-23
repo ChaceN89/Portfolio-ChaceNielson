@@ -10,7 +10,7 @@
  * @created 2024-07-26
  * @updated May 12th, 2025
  */
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import { Routes, Route, useLocation, useNavigationType } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 
@@ -28,7 +28,11 @@ import MyModal from './MyModal';                              // Global Modal Co
 import ProjectModal from '@/pages/ProjectModal';                         // Project Modal Content
 import TechStackModal from '@/pages/TeckStackModal';
 
+//data for the modal routes
 import { techStackParam, projectParam } from '@/data/globals';  // Modal Param names
+
+
+import { useAnimationSettings } from '@/components/animations/AnimationContext';
 
 // Page Transition Duration Global
 const pageTransitionDuration = 0.6; // Duration of the page transition animation
@@ -75,6 +79,8 @@ export default function AppRoutes() {
   
   }, [projectID, techStackID]); // Activated when projectID or techStackID changes
 
+  // mobile friendly - if the screen is smaller than 768px, set the mobile flag to true
+
 
   return (
     <div className='min-w-56 overflow-x-hidden'>
@@ -119,6 +125,20 @@ const PageTransition = ({ children }) => {
   // Use the pathname to determine the current location
   const { pathname } = useLocation(); // Get the current location of Router as a mount key to reset the animation
   const [fadeOut, setFadeOut] = useState(false); // if the page is fading out or not
+
+  const { animationsEnabled } = useAnimationSettings(); // Get the mobile state from the AnimationContext
+
+  // ⛔ Prevent re-animation on resize by capturing initial value only once per mount
+  const initialAnimationEnabledRef = useRef(animationsEnabled);
+
+  // 💡 Optional: reset fadeOut when route changes
+  useEffect(() => {
+    setFadeOut(false);
+  }, [pathname]);
+
+  if (!initialAnimationEnabledRef.current) {
+    return <>{children}</>;
+  }
 
   return (
     <>

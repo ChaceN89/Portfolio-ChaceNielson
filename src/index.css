@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(2.25rem, 10vw, 4.5rem); /* 36px - 72px */
+  font-size: clamp(2.5rem, 10vw, 4.5rem); /* 36px - 72px */
   font-weight: 700;
 }
 h2 {
@@ -81,12 +81,13 @@ h6 {
 
 /* Paragraphs */
 p {
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 3vw, 1rem); /* 16px - 18.4px */
   line-height: 1.5;
   font-weight: 400;
 }
 small {
   font-size: 0.875rem;
+  font-size: clamp(0.7rem, 2vw, 0.875rem); /* 14px - 16px */
   line-height: 1.25;
   font-weight: 300;
 }

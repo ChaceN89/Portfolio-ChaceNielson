@@ -9,13 +9,18 @@
  * @created May 12, 2025
  * @updated May 20, 2025
  */
-import React, { useRef } from 'react';
+import React, { useMemo, useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import ImageComponent from '@/components/uiElements/images/ImageComponent';
 import MyBtn from '@/components/buttons/MyBtn';
 import { ScrollToID } from '@/utils/utils';
+import { useAnimationSettings } from '@/components/animations/AnimationContext';
+
 
 export default function AboutMeHero() {
+
+  const { animationsEnabled } = useAnimationSettings(); // Get animation settings from context
+
   const sectionRef = useRef();
 
   const { scrollYProgress } = useScroll({
@@ -27,12 +32,18 @@ export default function AboutMeHero() {
   const y = useTransform(scrollYProgress, [0, 0.3, 0.75, 1], [150, 0, -80, -100]);
   const scale = useTransform(scrollYProgress, [0, 0.3, 1], [0.6, 1, 1]);
 
+
+  const animatedStyle = useMemo(() => {
+    if (!animationsEnabled) return {};
+    return { opacity, y, scale };
+  }, [animationsEnabled, opacity, y, scale]);
+
   return (
     <motion.div
       id="about-me-hero"
       ref={sectionRef}
       className="flex flex-col md:flex-row items-center justify-center gap-10 p-20 "
-      style={{ opacity, y, scale }}
+      style={animatedStyle}
     >
       {/* Image */}
       <div className="min-w-48 lg:max-w-60 overflow-hidden rounded-xl rounded-bl-[100px] hover:rounded-bl-xl rounded-tr-[100px] hover:rounded-tr-xl transition-all duration-400 ease-in-out flex justify-center">
