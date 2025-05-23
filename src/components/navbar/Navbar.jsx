@@ -66,7 +66,7 @@ export default function Navbar({forceLock=false}) {
 
   useEffect(() => {
     const checkLockState = () => {
-      const shouldLock = forceLock || window.innerWidth < 1020;
+      const shouldLock = forceLock ;
       setIsNavPosLocked(shouldLock);
 
       if (shouldLock) {
