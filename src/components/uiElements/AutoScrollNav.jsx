@@ -87,7 +87,7 @@ export default function AutoScrollNav({ shouldScroll, setShouldScroll, scrollSpe
         <input
           type="range"
           min="1"
-          max="3"
+          max="4"
           step="0.5"
           value={scrollSpeed}
           onChange={(e) => setScrollSpeed(parseFloat(e.target.value))}

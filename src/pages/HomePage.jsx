@@ -26,7 +26,7 @@ export default function HomePage() {
 
   // Auto scroll state settings
   const [scrolling, setScrolling] = useState(false);
-  const [scrollSpeed, setScrollSpeed] = useState(1.5); // user-controlled speed
+  const [scrollSpeed, setScrollSpeed] = useState(2); // user-controlled speed
   const frameRef = useRef(null);
 
   // the accumulated scroll amount for auto scroll
