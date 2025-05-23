@@ -37,9 +37,8 @@ export const energyTomorrow = {
   tags: ["Game", "Simulation", "Unity"],
   blurb: short,
   description: long,
-  hidePhotos: true,
   thumbnail: {
-    src: "/energyTomorrow0.jpg",
+    src: "energyTomorrow0.jpg",
     blurhash: "L97Bima~RjbZ_NogWBay?boybHai",
   },
   youtubeID: "Uca8En3ZHH0", // youtube video - thumbnail is used as a placeholder while loading the video

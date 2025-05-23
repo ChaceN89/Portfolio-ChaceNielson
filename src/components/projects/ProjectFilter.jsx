@@ -53,9 +53,9 @@ export default function ProjectFilter({ tags = [], selectedTags = [], onChange }
                 className={`
                   px-3 py-1 rounded-full text-sm border transition cursor-pointer
                   ${isActive
-                    ? 'bg-accent text-primary border-accent'
+                    ? 'bg-accent hover:bg-accent/70 text-primary border-accent'
                     : 'bg-transparent text-secondary border-secondary dark:text-primary dark:border-primary'}
-                  hover:bg-accent hover:text-primary
+                  hover:bg-accent/40 hover:text-primary hover:scale-105
                 `}
               >
                 {tag}

@@ -35,12 +35,15 @@ const long = (
 );
 
 export const imageProcessor = {
-  starred: true,
   id: "image-processor",
-  name: "Image Processor extra ling title",
-  tags: ["Web App", "Backend", "FastAPI"],
+  name: "Image Processor",
+  tags: ["Web App", "FastAPI"],
   blurb: short,
   description: long,
+  thumbnail: {
+    src: "imageProcessor0.jpg",
+    blurhash: "LFL$FtRP.S_N0]%MM_E14PRjQ-D%",
+  },
   images: [
     { src: "imageProcessor0.jpg", blurhash: "LFL$FtRP.S_N0]%MM_E14PRjQ-D%" },
     { src: "imageProcessor2.jpg", blurhash: "LFEseT-^{v9#LfUvK%%M2hD19[#8" },

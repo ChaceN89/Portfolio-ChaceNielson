@@ -34,10 +34,13 @@ const long = (
 export const jenga = {
   id: "jenga",
   name: "Virtual Jenga",
-  tags: ["Game", "Unity", "Haptics"],
+  tags: ["Game", "Unity"],
   blurb: short,
   description: long,
-  hidePhotos: true,
+  thumbnail: {
+    src: "jenga1.jpg",
+    blurhash: "LJFiSzt700WB00Rj~pof?uofMeWB",
+  },
   images: [
     { src: "jenga5.jpg", blurhash: "LJFiSzt700WB00Rj~pof?uofMeWB" },
     { src: "jenga4.jpg", blurhash: "LCIhpix[00M|00M{~pt7?vt7Meae" },
@@ -45,7 +48,7 @@ export const jenga = {
     { src: "jenga2.jpg", blurhash: "LNCZ@QRQ8wRj00xu-;t7~WM{OXRj" },
     { src: "jenga1.jpg", blurhash: "LaK-,:fkIuoL9haykDWB.Aof%Lof" },
   ],
-  youtubeEmbed: "https://www.youtube.com/watch?v=e-xqfE_f2uc",
+  youtubeID: "e-xqfE_f2uc",
   mainStack:[
     IconLibrary.UNITY,
     IconLibrary.CSHARP,

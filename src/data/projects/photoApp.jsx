@@ -33,10 +33,14 @@ const long = (
 
 export const photoApp = {
   id: "photo-app",
-  name: "Photo App",
-  tags: ["Web App", "Photo Gallery", "MERN"],
+  name: "Photo Collection App",
+  tags: ["Web App", "React", "MongoDB", "Express"],
   blurb: short,
   description: long,
+  thumbnail: {
+    src: "photo2.jpg",
+    blurhash: "LCAKgzxu00Sjx]xu.AWC_2t8Rks+",
+  },
   images: [
     { src: "photo2.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
     { src: "photo6.jpg", blurhash: "LG9@uBj[4nR..At8ogkC%Lt8xuad" },
@@ -45,7 +49,7 @@ export const photoApp = {
     { src: "photo3.jpg", blurhash: "LGAdcs%L00NI?wxvoJkBx]o#-;$%" },
     { src: "photo1.jpg", blurhash: "LCAKgzxu00Sjx]xu.AWC_2t8Rks+" },
   ],
-  youtubeEmbed:"https://www.youtube.com/watch?v=mktAIV4sjFQ",
+  youtubeID:"mktAIV4sjFQ",
   mainStack: [
     IconLibrary.REACT,
     IconLibrary.MONGODB,

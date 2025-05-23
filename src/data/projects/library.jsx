@@ -31,16 +31,15 @@ const long = (
     </p>
   </div>
 );
-const proj_id = "library";
 
 export const library = {
-  id: proj_id,
+  id: "library",
   name: "PageFlow Library",
-  tags: ["Web App", "Library", "Django"],
+  tags: ["Web App", "Next", "Django", "AWS"],
   blurb: short,
   description: long,
   thumbnail:{
-    src: "/projects/" + proj_id + "/library6.jpg",
+    src: "library5.jpg",
     blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw",
   },
   images: [

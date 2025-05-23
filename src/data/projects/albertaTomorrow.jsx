@@ -31,14 +31,13 @@ const long = (
 );
 
 export const albertaTomorrowHomepage = {
-  starred: true,
   id:"alberta-tomorrow-homepage",
   name: "Alberta Tomorrow Homepage",
-  tags: ["Web App", "Educational", "Next", "Tailwind"],
+  tags: ["Web App", "Educational", "Next", "Tailwind", "CSS", "Express"],
   blurb: short,
   description: long,
   thumbnail:{
-    src: "/abTomorrow-0.jpg",
+    src: "abTomorrow-0.jpg",
     blurhash: "L%J@{^-.slkC.T-oWVj[EUa$WCj[",
   },
   youtubeID: "MHDH_m0agFM", // youtube video - thumbnail is used as a placeholder while loading the video

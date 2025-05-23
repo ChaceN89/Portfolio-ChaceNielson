@@ -32,14 +32,15 @@ const long = (
 export const spaceSurvive = {
   id: "space-survive",
   name: "Space Survive",
-  tags: ["Game", "Unity", "2D"],
+  tags: ["Game", "Unity"],
   blurb: short,
   description: long,
-  hidePhotos: true,
-  images: [
-    { src: "spaceSurvive.jpg", blurhash: "L26@E32tL#5kq?Io%%%hyEofR3j?" },
-  ],
-  youtubeEmbed:"https://www.youtube.com/watch?v=pwIbyhqWbsM",
+
+  thumbnail: {
+    src: "spaceSurvive.jpg",
+    blurhash: "L26@E32tL#5kq?Io%%%hyEofR3j?",
+  },
+  youtubeID:"pwIbyhqWbsM",
   mainStack: [
     IconLibrary.UNITY,
     IconLibrary.CSHARP,

@@ -37,18 +37,16 @@ const long = (
 const proj_id="glass-gecko-games"
 
 export const glassGeckoGames = {
-  starred: true,
   id: proj_id,
   name: <>Glass Gecko Games Homepage</>,
-  tags: ["Web App", "Game", "Team"],
+  tags: ["Web App", "React", "Tailwind",],
   blurb: short,
   description: long,
   thumbnail:{
-    src: "/projects/" + proj_id + "/glassGecko5.jpg",
+    src: "glassGecko5.jpg",
     blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP",
   },
   images: [
-    { src: "glassGecko0.jpg", blurhash: "q5CZOvIAxgbY5lM|00S4^ssp%4ogJBoMMxWB9QX4XLogZ$WAx]Rj[DxvYixaVGNGROMxDlbZo{s;i_WBt7V@uNn~ZORkXObHR-WB" },
     { src: "glassGecko1.jpg", blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP" },
     { src: "glassGecko2.jpg", blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP" },
     { src: "glassGecko3.jpg", blurhash: "LBCjFmd7MM9FsK55xH%M4,=zR$RP" },

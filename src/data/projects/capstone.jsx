@@ -32,15 +32,13 @@ const long = (
   </div>
 );
 
-
 export const capstone = {
-  starred: true,
   id: "capstone",
   name: <>Ocean CO<sub>2</sub> Condenser</>,
   tags: ["Simulation", "Engineering", "Unity", "Blender"],
   blurb: short,
   thumbnail:{
-    src: "/capstone2.jpg",
+    src: "capstone2.jpg",
     blurhash: "L8HeI3D4^H_4~B=sDj^*-BH;00%L",
   },
   description: long,
@@ -66,7 +64,6 @@ export const capstone = {
     IconLibrary.ENGINEERING,
     IconLibrary.CIRCUITY,
     IconLibrary.ANIMATION,
-    IconLibrary.ADAPTABILITY,
     IconLibrary.DESIGN_3D,
     IconLibrary.FABRICATION,
     IconLibrary.LEADERSHIP,

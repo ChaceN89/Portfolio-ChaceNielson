@@ -34,12 +34,15 @@ const long = (
 
 
 export const voiceIdentification = {
-  starred: true,
   id: "voice-identification",
   name: "Voice Identification",
-  tags: ["Machine Learning", "Voice Recognition", "Python"],
+  tags: ["Machine Learning", "Python", 'Data Visualization'],
   blurb: short,
   description: long,
+  thumbnail: {
+    src: "voice_recognition3.jpg",
+    blurhash: "L5S?7G$x*IJF.lXSDixB.7IpVZ%K",
+  },
   images: [
     { src: "voice_recognition0.jpg", blurhash: "L5S?7G$x*IJF.lXSDixB.7IpVZ%K" },
     { src: "voice_recognition1.jpg", blurhash: "L6PjDVxa00xu00of_4RP9FRj-;of" },

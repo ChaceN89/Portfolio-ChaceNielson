@@ -40,12 +40,10 @@ export const featuredProjects = [
 ]
 
 export const carouselProjects = [
-  albertaTomorrowHomepage,
-  glassGeckoGames,
-  energyTomorrow,
   geoPredict,
   dicom3dPrint,
-
+  voiceIdentification,
+  photoApp
 ]
 
 
@@ -87,8 +85,11 @@ export const exampleProject = {
       <p>This is a detailed description of the example project, providing insights into the development process, technologies used, and key features implemented.</p>
     </div>
   ),
-  youtubeEmbed: "youtube-embed link", // can be null if no video but direct link to yotube video if available
-  hidePhotos: true, // doens't show photos in the modal 
+  thumbnail: { // Thumbnail image for the project card
+    src: "example.jpg", // Image file name
+    blurhash: "L9AD+Zxu0z~pIVRjMxRj0L~q0La#", // Blurhash string for the image
+  },
+  youtubeID: "youtube-embed link", // the youtube ID not the whole link - uses thumbnail section 
   images: [
     { src: "example1.jpg", blurhash: "L9AD+Zxu0z~pIVRjMxRj0L~q0La#" },
     { src: "example2.jpg", blurhash: "L6CFpEbH00D$^gRkozoJ_3oLx]jE" },
