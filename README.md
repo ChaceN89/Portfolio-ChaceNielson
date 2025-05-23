@@ -113,14 +113,45 @@ npm run preview
 
 ```
 src/
-├── components/       # Reusable UI elements
-├── data/             # Static site data (projects, skills)
-├── pages/            # Route-based page files (Home, Thanks, Photos)
-├── styles/           # CSS and theme definitions
-├── utils/            # Helper functions (e.g., for GA)
+├── components/          # Reusable UI components organized by feature (navbar, footer, home sections, etc.)
+│   ├── analytics/           # Google Analytics integration
+│   ├── animations/          # Reusable motion components (e.g., magnetic hover)
+│   ├── buttons/             # Custom button components and styles
+│   ├── contact/             # Contact form and related utilities
+│   ├── footer/              # Footer layout and social components
+│   ├── homeSections/        # Sections for homepage (Hero, Projects, TechStacks, About)
+│   ├── navbar/              # Desktop/mobile nav components
+│   ├── photoGallery/        # Photo gallery grid and modal viewer
+│   ├── projects/            # Project display components (cards, filters, carousels)
+│   ├── routing/             # App router setup, error boundaries, and layout wrapper
+│   ├── testing/             # Developer utilities for theme/debugging
+│   └── uiElements/          # Generic UI elements (modals, loaders, wrappers, scroll buttons)
+
+├── data/                # Static data files for projects, skills, tech stacks, and site content
+│   ├── iconData/            # Categorized icons (frontend, backend, soft skills, etc.)
+│   ├── pageData/            # Section-level data (hero text, contact info, etc.)
+│   ├── projects/            # Individual project metadata
+│   ├── techStacks/          # Technology groupings (Full Stack, Game Design)
+│   └── nav/                 # Navigation link data
+
+├── global-styles/       # Global animation and effect styles for specific items (e.g., ripple, particle)
+
+├── pages/               # Top-level pages used with React Router (Home, Contact, Projects, etc.)
+
+├── utils/               # Utility functions and helpers (e.g., scroll, analytics, image effects)
+
+├── index.css            # Tailwind base + global styles
+├── App.jsx              # Main App wrapper
+└── main.jsx             # App entry point
+```
+
+**public/**
+```
 public/
-├── logos/            # Personal and project logos
-├── backgrounds/      # Background image assets
+├── backgrounds/         # Background images for different sections
+├── logos/               # Personal and project logos
+├── icons/               # SVGs used in the UI
+└── manifest.json        # PWA and metadata configuration
 ```
 
 <br>
