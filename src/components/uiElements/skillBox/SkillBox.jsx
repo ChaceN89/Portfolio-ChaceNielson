@@ -40,10 +40,10 @@
 import React from 'react';
 import ShowIcon from './ShowIcon';
 
-const SkillBox = ({ skill, useWhiteText = false }) => {
+const SkillBox = ({ skill, useWhiteText = false, diableMag=false }) => {
   return (
     <div className="flex flex-col items-center justify-center p-2.5 bg-white/20 border border-primary/60 rounded-lg shadow-2xl hover:shadow-sm min-w-30">
-      <ShowIcon skill={skill} size="2.5rem" useWhiteText={useWhiteText} />
+      <ShowIcon skill={skill} size="2.5rem" useWhiteText={useWhiteText} diableMag={diableMag} />
       <p className="mt-2 text-center text-sm">{skill.name}</p>
     </div>
   );

@@ -40,7 +40,7 @@ function SkillBoxContainer({ stack, isSmall=false }) {
       {stack && stack.length > 0 && (
         <div className={`grid text-sm md:text-base gap-4  ${containerClass}`}>
           {stack.map((skill, index) => (
-            <SkillBox key={index} skill={skill} />
+            <SkillBox key={index} skill={skill} diableMag />
           ))}
         </div>
       )}
