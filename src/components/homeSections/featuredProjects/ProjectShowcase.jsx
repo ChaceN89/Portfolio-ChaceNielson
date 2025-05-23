@@ -165,11 +165,12 @@ export default function ProjectShowcase({ project, background, nextId }) {
 
               {/* Image */}
               <ImageComponent
-                src={`${project.thumbnail.src}`}
+                src={"/projects/" + project.id + "/" +project.thumbnail.src}
                 alt={project.name}
                 blurHash={project.thumbnail.blurhash}
                 className="
                   aspect-[4/3] max-h-[30rem]
+                  transition-transform duration-1000
                   rounded-2xl max-w-[90vw] 
                   object-cover 
                   border-2 border-white shadow-[0_0_30px_rgba(255,255,255,0.1)]"

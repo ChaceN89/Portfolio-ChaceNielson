@@ -23,7 +23,7 @@ const responsive = {
 const CustomLeftArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white/50 dark:bg-black/50 rounded-full hover:bg-accent cursor-pointer"
+    className="absolute left-2 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white/50 dark:bg-black/50 rounded-full hover:bg-accent cursor-pointer hover:scale-115"
   >
     <FaChevronLeft className="text-black dark:text-white" size={20} />
   </button>
@@ -32,7 +32,7 @@ const CustomLeftArrow = ({ onClick }) => (
 const CustomRightArrow = ({ onClick }) => (
   <button
     onClick={onClick}
-    className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white/50 dark:bg-black/50 rounded-full hover:bg-accent cursor-pointer"
+    className="absolute right-2 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-white/50 dark:bg-black/50 rounded-full hover:bg-accent cursor-pointer hover:scale-115"
   >
     <FaChevronRight className="text-black dark:text-white" size={20} />
   </button>

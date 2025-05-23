@@ -61,7 +61,7 @@ function ExternalLinks({ externalLinks }) {
               {link.pdf ? (
                 <button
                   onClick={() => handleButtonClick(link)} 
-                  className="m-2 text-primary text-opacity-80 hover:text-accent flex items-center"
+                  className="m-2 text-primary text-opacity-80 hover:text-accent flex items-center  cursor-pointer"
                 >
                   {link.icon && <link.icon className="inline-block mr-1" />}
                   {link.name}
@@ -72,7 +72,7 @@ function ExternalLinks({ externalLinks }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => trackEvent('Button', 'Click', `Opened External Link: ${truncateURL(link.link)}`, 1)}
-                  className="m-2 text-primary text-opacity-80 hover:text-accent flex items-center"
+                  className="m-2 text-primary text-opacity-80 hover:text-accent flex items-center cursor-pointer"
                 >
                   {link.icon && <link.icon className="inline-block mr-1" />}
                   {link.name}

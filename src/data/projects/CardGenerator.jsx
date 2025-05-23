@@ -31,11 +31,15 @@ const long = (
 
 export const cardGenerator = {
   starred: true,
-  id: "card-generator", 
+  id: "card-generator",
   name: "Card Generator",
-  tags: ["Web App", "Game", "Card"],
+  tags: ["Web App", "Game", "React", "Tailwind"],
   blurb: short,
   description: long,
+  thumbnail:{
+    src: "/cardGenerator1.jpg",
+    blurhash: "LDPjP,bc~VxC$uW?NPr=DkWs%Ks8",
+  },
   images: [
     { src: "cardGenerator1.jpg", blurhash: "LDPjP,bc~VxC$uW?NPr=DkWs%Ks8" },
     { src: "cardGenerator2.jpg", blurhash: "LLONRkWDkCjJ~Mj[ofayEBj[oJbF" },

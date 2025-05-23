@@ -34,9 +34,13 @@ export const drillbotics = {
   starred: true,
   id: "drillbotics",
   name: "Mini Drill Rig",
-  tags: ["Engineering", "GUI", "Data Visualization"],
+  tags: ["Engineering", "Data Visualization"],
   blurb: short,
   description: long,
+  thumbnail: {
+    src: "/drillbotics6.jpg",
+    blurhash: "L2Ps@p00~nS^00OT_2D*008^R;Di",
+  },
   images: [
     { src: "drillbotics1.jpg", blurhash: "LAH-rkQ,yG-ncrO@%M0L=}00-iIB" },
     { src: "drillbotics0.jpg", blurhash: "L2Ps@p00~nS^00OT_2D*008^R;Di" },

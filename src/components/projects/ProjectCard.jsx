@@ -47,13 +47,13 @@ export default function ProjectCard({ project, showDetails = false }) {
   return (
     <div
       onClick={handleClick}
-      className="group cursor-pointer bg-primary/10 dark:bg-secondary/10 border-2 border-secondary/40 dark:border-primary/40 rounded-xl shadow-2xl transition-transform hover:scale-[1.01] overflow-hidden"
+      className="group cursor-pointer bg-primary/10 dark:bg-secondary/10 border-2 border-secondary/40 dark:border-primary/40 rounded-xl shadow-2xl transition-transform hover:scale-[1.01] overflow-hidden "
     >
       {/* Image + Ripple Layer */}
       <div className="relative aspect-[4/3] overflow-hidden border-b-2 border-secondary/40 dark:border-primary/60">
         <span className="ripple-hover z-10" />
         <ImageComponent
-          src={project.thumbnail?.src}
+          src={"/projects/" + project.id + "/" +project.thumbnail?.src}
           blurHash={project.thumbnail?.blurhash}
           alt={project.name}
           className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
@@ -61,7 +61,7 @@ export default function ProjectCard({ project, showDetails = false }) {
       </div>
 
       {/* Text + Icons */}
-      <div className="p-4 space-y-2 bg-primary/50 dark:bg-secondary/50">
+      <div className="p-4 space-y-2 bg-primary/50 dark:bg-secondary/50 h-full">
         {isTitleClamped ? (
           <Tooltip text={project.name} openDuration={1500}>
             <h6 ref={titleRef} className="text-lg font-semibold line-clamp-1">{project.name}</h6>
@@ -81,7 +81,7 @@ export default function ProjectCard({ project, showDetails = false }) {
             )}
 
             {project.mainStack?.length > 0 && (
-              <div className="flex flex-wrap gap-3 pt-2">
+              <div className="flex flex-wrap gap-3 pt-2 ">
                 {project.mainStack.slice(0, 5).map((iconObj, i) => (
                   <Tooltip text={iconObj.name} key={i}>
                     <ShowIcon skill={iconObj} size="2.5rem" />

@@ -12,6 +12,7 @@
  */
 
 import IconLibrary from "../iconLibrary";
+import { FaItchIo } from "react-icons/fa";
 
 // Short description (blurb) to be displayed on the project card
 const short = "A simple endless runner built in Unity, using physics.";
@@ -37,12 +38,17 @@ const long = (
   </div>
 );
 
+
 export const cubeGame = {
   id: "cube-game",
   name: "Cube game",
-  tags: ["Game", "Unity", "Physics"],
+  tags: ["Game", "Unity",],
   blurb: short,
   description: long,
+  thumbnail: {
+    src: "/cube0.jpg",
+    blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%",
+  },
   images: [
     { src: "cube00.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
     { src: "cube0.jpg", blurhash: "LHO:^eD%4.%M00xv%2of_Nxt-;D%" },
@@ -59,5 +65,7 @@ export const cubeGame = {
     IconLibrary.GAME_DESIGN,
     IconLibrary.UNITY_PHYSICS,
   ],
-
+  externalLinks: [
+    { name: "Play", link: "https://kar2fast.itch.io/cube-game", icon:FaItchIo  },
+  ],
 };

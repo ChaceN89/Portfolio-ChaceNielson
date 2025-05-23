@@ -64,7 +64,7 @@ export default function ProjectModal({ projectName }) {
           {/* Video - Top right */}
           <div className='order-1 xl:order-1'>
             <MediaFrame 
-              thumbnail={project.thumbnail.src}
+              thumbnail={"/projects/" + project.id + "/" +project.thumbnail.src}
               videoId={project.youtubeID} 
             />
           </div>

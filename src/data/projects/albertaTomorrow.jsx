@@ -10,9 +10,9 @@
  * @updated May 12, 2025
  */
 
-import { Thumbnail } from "react-pdf";
 import IconLibrary from "../iconLibrary";
 import { BoldSpan } from "@/components/uiElements/InLineText";
+import { FaHome } from "react-icons/fa";
 
 const short = <>Interactive homepage and gateway for accessing Alberta Tomorrow’s <BoldSpan>sustainable land-use simulator</BoldSpan> and educational resources.</>;
 
@@ -30,26 +30,25 @@ const long = (
   </div>
 );
 
-const proj_id = "alberta-tomorrow-homepage";
-
 export const albertaTomorrowHomepage = {
   starred: true,
-  id:proj_id,
+  id:"alberta-tomorrow-homepage",
   name: "Alberta Tomorrow Homepage",
-  tags: ["Web App", "Educational", "Simulation"],
+  tags: ["Web App", "Educational", "Next", "Tailwind"],
   blurb: short,
   description: long,
   thumbnail:{
-    src: "/projects/" + proj_id + "/abTomorrow-0.jpg",
-    blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ",
+    src: "/abTomorrow-0.jpg",
+    blurhash: "L%J@{^-.slkC.T-oWVj[EUa$WCj[",
   },
   youtubeID: "MHDH_m0agFM", // youtube video - thumbnail is used as a placeholder while loading the video
+  
   // list of images to display in the modal carousel
   images: [
-    { src: "abTomorrow-1.jpg", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
-    { src: "abTomorrow-2.jpg", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
-    { src: "abTomorrow-3.jpg", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
-    { src: "abTomorrow-4.jpg", blurhash: "LlC8%[oOozfA_7owjFk8%oobj;jZ" }, // Replace or add more images as needed
+    { src: "abTomorrow-1.jpg", blurhash: "LmJa_z$_xuV?_4%Ms,R-5GWGWAa$" }, // Replace or add more images as needed
+    { src: "abTomorrow-2.jpg", blurhash: "LKA_-Q0K~W4.EMbbaKkDv0r=Shnh" }, // Replace or add more images as needed
+    { src: "abTomorrow-3.jpg", blurhash: "L5OD^9L100.m00=b~W=x009t0xE1" }, // Replace or add more images as needed
+    { src: "abTomorrow-4.jpg", blurhash: "L9OW$-~pD+t6009Zxt%MENtQD%t7" }, // Replace or add more images as needed
   ],
   mainStack: [
     IconLibrary.NEXT,
@@ -59,13 +58,10 @@ export const albertaTomorrowHomepage = {
   extendedStack: [
     IconLibrary.FRAMER_MOTION,
     IconLibrary.REACT,
-    // IconLibrary.UI_UX,
-    // IconLibrary.EDUCATION,
     IconLibrary.SIMULATION,
     IconLibrary.SEO,
-    // IconLibrary.DEPLOYMENT,
   ],
   externalLinks: [
-    { name: "Live Site", link: "https://albertatomorrow.ca/", icon: IconLibrary.WORLD.icon },
+    { name: "Homepage", link: "https://albertatomorrow.ca/", icon: FaHome  },
   ],
 };

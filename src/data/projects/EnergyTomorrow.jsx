@@ -38,10 +38,11 @@ export const energyTomorrow = {
   blurb: short,
   description: long,
   hidePhotos: true,
-  images: [
-    { src: "energyTomorrow0.jpg", blurhash: "L97Bima~RjbZ_NogWBay?boybHai" },
-  ],
-  youtubeEmbed: "https://www.youtube.com/watch?v=Uca8En3ZHH0",
+  thumbnail: {
+    src: "/energyTomorrow0.jpg",
+    blurhash: "L97Bima~RjbZ_NogWBay?boybHai",
+  },
+  youtubeID: "Uca8En3ZHH0", // youtube video - thumbnail is used as a placeholder while loading the video
   mainStack:[
     IconLibrary.UNITY,
     IconLibrary.CSHARP,
