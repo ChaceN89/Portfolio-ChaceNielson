@@ -7,11 +7,18 @@
  * 
  * @author Chace Nielson
  * @created 2024-07-28
- * @updated may 22 2025
+ * @updated May 22 2025
  */
 import React, { useState, useEffect } from 'react';
+
+// data - list of projects to display 
 import { projects } from '@/data/pageData/projectData';
+
+// components
 import ProjectCard from './ProjectCard';
+import ProjectFilter from './ProjectFilter';
+
+// utils
 import {
   getInitialVisibleCards,
   getAdditionalProjects,
@@ -19,7 +26,6 @@ import {
   addResizeListener,
   removeResizeListener,
 } from '@/utils/projectFuncs';
-import ProjectFilter from './ProjectFilter';
 
 export default function ProjectSection() {
   const [visibleCards, setVisibleCards] = useState(getInitialVisibleCards());
@@ -73,7 +79,7 @@ export default function ProjectSection() {
         
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
           {visibleProjects.map((project, index) => (
-           <ProjectCard project={project} key={index} />
+           <ProjectCard key={index}  project={project} showDetails />
           ))}
         </div>
         {visibleProjects.length < filteredProjects.length && (

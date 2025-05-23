@@ -54,25 +54,13 @@ export default function AboutMe() {
     offset: ['start end', 'end start'],
   })
 
-  const topOpacity = useTransform(scrollYProgress, [0, 0.3], [0, 1])
-  const topY = useTransform(scrollYProgress, [0, 0.2,1], [100, 0,0])
+
 
   const bottomOpacity = useTransform(scrollYProgress, [0, 0.4, 1], [0, 1,1])
-  const bottomY = useTransform(scrollYProgress, [0, 0.6, 1], [200, -20, 80 ])
+  const bottomY = useTransform(scrollYProgress, [0, 0.6, 1], [240, 0, 0 ])
 
   return (
     <motion.section ref={sectionRef} className="py-16 px-2  max-w-4xl mx-auto" id="lets-connect">
-      {/* Header */}
-      <motion.div
-        style={{ opacity: topOpacity, y: topY }}
-        className="text-center mb-16"
-      >
-        <h2 className="text-3xl font-bold">Working With Me</h2>
-        <p className="mt-2 text-base font-medium">
-          Here's what you can expect when we team up — thoughtful collaboration, technical clarity, and solutions that work.
-        </p>
-      </motion.div>
-
       {/* Skill Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2  gap-6 px-6 lg:px-10">
         {skills.map(({ title, description, icon: Icon, bg, text }, index) => {
@@ -108,7 +96,7 @@ export default function AboutMe() {
       {/* CTA */}
       <motion.div
         style={{ opacity: bottomOpacity, y: bottomY }}
-        className="mt-24 text-center"
+        className="mt-18 text-center"
       >
         <h3 className="text-2xl font-semibold">Let’s Build Something Together</h3>
         <p className="mt-2 text-sm opacity-80">

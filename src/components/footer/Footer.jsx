@@ -30,8 +30,8 @@ export default function Footer() {
     exit={{ y: 100, opacity: 0 }} // slides down + fades out
     transition={{ duration: 0.4, ease: 'easeInOut' }}
   >
-    <footer className="w-full bg-secondary-alt text-white overflow-hidden rounded-t-2xl ">
-      <BackgroundWrapper  noise backgroundSm="/overlays/dots-1.png" backgroundClass="bg-accent/40">
+    <footer className="w-full bg-secondary-alt text-primary overflow-hidden rounded-t-[50px] border-t-2 border-secondary dark:border-primary">
+      <BackgroundWrapper  noise backgroundSm="/overlays/dots-1.png" backgroundClass="bg-accent/40 rounded-t-[50px]">
         <div className="px-6 lg:px-16 py-12">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
             <FooterContact />
@@ -40,11 +40,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* <div className="bg-accent-alt/40 py-4 text-center text-sm space-y-4">
-          <p>
-            I'm always open to connecting with creative minds, collaborators, and curious teams — let's build something great together.
-          </p>
-        </div> */}
+
       </BackgroundWrapper>
     </footer>
     </motion.footer>

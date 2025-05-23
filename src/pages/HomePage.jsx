@@ -4,7 +4,7 @@ import AboutMeHero from '@/components/homeSections/AboutMeHero';
 import TechStacks from '@/components/homeSections/techStacks/TechStacks';
 import FeaturedProjects from '@/components/homeSections/featuredProjects/FeaturedProjects';
 import AboutMe from '@/components/homeSections/AboutMe';
-import ProjectCarousel from '@/components/homeSections/ProjectCarousel/ProjectCarousel';
+import ProjectCarousel from '@/components/homeSections/ProjectCarousel';
 import AutoScrollNav from '@/components/uiElements/AutoScrollNav';
 
 export default function HomePage() {

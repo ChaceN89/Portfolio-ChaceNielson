@@ -24,7 +24,7 @@ import { useNavigate, useLocation } from 'react-router-dom';
 
 // components
 import MyBtn from '@/components/buttons/MyBtn';
-import CarouselCard from '@/components/homeSections/ProjectCarousel/CarouselCard';
+import ProjectCard from '@/components/projects/ProjectCard';
 
 // Library components
 import Carousel from 'react-multi-carousel';
@@ -49,7 +49,7 @@ export default function ProjectCarousel() {
   };
 
   return (
-    <div className='flex flex-col items-center justify-center gap-4 py-8'>
+    <div className='flex flex-col items-center justify-center gap-4 py-8 '>
       <Carousel
         responsive={responsive}
         infinite
@@ -61,18 +61,14 @@ export default function ProjectCarousel() {
         draggable
         swipeable
         className="w-full"
-        itemClass="px-5"
+        itemClass="px-5 py-1"
       >
         {carouselProjects.map((project) => {
           const image = project.images?.[0];
           if (!image?.src) return null;
 
           return (
-            <CarouselCard
-              key={project.id}
-              project={project}
-              onClick={() => handleClick(project.id)}
-            />
+            <ProjectCard project={project} key={project.id} />
           );
         })}
       </Carousel>

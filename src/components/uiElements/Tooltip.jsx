@@ -55,7 +55,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 
-const Tooltip = ({ text, openDuration = 1000, className = "", children }) => {
+const Tooltip = ({ text, openDuration = 1000, className = "w-fit whitespace-nowrap", children }) => {
   const [hovered, setHovered] = useState(false);
   const [showTooltip, setShowTooltip] = useState(false);
   const [tooltipStyle, setTooltipStyle] = useState({ left: 0, top: 0, visibility: 'hidden' });
@@ -113,7 +113,7 @@ const Tooltip = ({ text, openDuration = 1000, className = "", children }) => {
       {createPortal(
         <div
           ref={tooltipRef}
-          className={`fixed p-1.5 text-sm text-primary bg-secondary  border rounded-lg w-fit whitespace-nowrap ${className}`}
+          className={`fixed p-1.5 text-sm text-primary bg-secondary  border rounded-lg  ${className}`}
           style={{ ...tooltipStyle, zIndex: 9999 }}
         >
           {text}

@@ -7,8 +7,8 @@
  * @props {string[]} selectedTags - Tags currently selected
  * @props {function} onChange - Callback to update selected tags
  *
- * @created May 23, 2025
- * @updated May 23, 2025
+ * @created May 22, 2025
+ * @updated May 22, 2025
  */
 
 import React, { useState } from 'react';
@@ -25,7 +25,7 @@ export default function ProjectFilter({ tags = [], selectedTags = [], onChange }
   };
 
   return (
-    <div className="mb-8 bg-primary/60 p-4 rounded-2xl">
+    <div className="mb-8 bg-primary/60 dark:bg-secondary/60 p-4 rounded-2xl">
       {/* Title and Toggle */}
       <div
         className="flex items-center justify-between  cursor-pointer"
