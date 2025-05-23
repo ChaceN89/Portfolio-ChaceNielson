@@ -1,3 +1,22 @@
+/**
+ * @file ripple-effect.styles.css
+ * @module Styles/RippleEffect
+ * @desc Contains hover-based ripple animation styles for interactive UI elements.
+ *       Uses a radial scale-up effect to simulate a soft expanding ripple on hover.
+ *
+ * @features
+ * - `.ripple-hover`: Centered expanding circle with dynamic scaling and fade-out
+ * - `@keyframes ripple-hover`: Scales from 0 to 10x with opacity fade
+ * - Tailwind-compatible with `group:hover` trigger support
+ * - Customizable color via `--ripple-color` from theme
+ *
+ * @see {@link https://tailwindcss.com/docs/hover-focus-and-other-states | Tailwind Hover Docs}
+ *
+ * @author Chace Nielson
+ * @created May 23, 2025
+ * @updated May 23, 2025
+ */
+
 /* import tailwind */
 @import "tailwindcss";
 

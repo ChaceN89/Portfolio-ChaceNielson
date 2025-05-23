@@ -32,16 +32,14 @@ import useAnalyticsEvent from '@/components/analytics/useAnalyticsEvent';
 export default function ProjectShowcase({ project, background, nextId }) {
   const { src, textColor, borderColor, rippleColor } = background;
 
-  // Set ripple color for this element specifcially 
-
   const sectionRef = useRef();
 
   const navigate = useNavigate();
   const location = useLocation();
 
+  // for tracking GA events
   const trackEvent = useAnalyticsEvent();
  
-
   const handleProjectClick = (id) => {
     trackEvent('UI Interaction', 'Button Click', "Showcase Image Click", 1);  // track the event
     openModal({

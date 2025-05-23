@@ -18,7 +18,7 @@ import ShowIcon from '@/components/uiElements/skillBox/ShowIcon';
 import ImageComponent from '@/components/uiElements/images/ImageComponent';
 import { openModal } from '@/utils/utils';
 import { useNavigate, useLocation } from 'react-router-dom';
-import CardLearnMore from './CardLearnMore';
+
 export default function ProjectCard({ project, showDetails = false }) {
   const navigate = useNavigate();
   const location = useLocation();
@@ -49,7 +49,6 @@ export default function ProjectCard({ project, showDetails = false }) {
       onClick={handleClick}
       className="group cursor-pointer bg-primary/10 dark:bg-secondary/10 border-2 border-secondary/40 dark:border-primary/40 rounded-xl shadow-2xl transition-transform hover:scale-[1.01] overflow-hidden"
     >
-      <CardLearnMore/>
       {/* Image + Ripple Layer */}
       <div className="relative aspect-[4/3] overflow-hidden border-b-2 border-secondary/40 dark:border-primary/60">
         <span className="ripple-hover z-10" />

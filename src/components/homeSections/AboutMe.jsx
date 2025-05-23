@@ -14,6 +14,7 @@ import { FaComments, FaFileAlt, FaUsers, FaLightbulb } from 'react-icons/fa'
 import MyBtn from '@/components/buttons/MyBtn'
 import { useNavigate } from 'react-router-dom'
 
+// Soft skills data
 const skills = [
   {
     title: 'Communication',
@@ -54,8 +55,7 @@ export default function AboutMe() {
     offset: ['start end', 'end start'],
   })
 
-
-
+  // Animation settings 
   const bottomOpacity = useTransform(scrollYProgress, [0, 0.4, 1], [0, 1,1])
   const bottomY = useTransform(scrollYProgress, [0, 0.6, 1], [200, 0, 0 ])
 

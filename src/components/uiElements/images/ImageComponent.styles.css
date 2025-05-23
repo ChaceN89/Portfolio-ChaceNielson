@@ -1,3 +1,21 @@
+/**
+ * @file ImageComponent.styles.css
+ * @module Styles/ImageComponent
+ * @desc Contains custom styles for shimmer loading effects used in image components.
+ *       Includes a diagonal animated shimmer overlay and color theming integration.
+ *
+ * @features
+ * - Shimmer animation using a rotated gradient
+ * - Uses custom `--color-shimmer` based on Tailwind theme color
+ * - Designed to work with blurred image placeholders or loading skeletons
+ *
+ * @see {@link https://tailwindcss.com/docs/customizing-colors | Tailwind Custom Theme Docs}
+ * @see {@link https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes | CSS Keyframes}
+ * 
+ * @author Chace Nielson
+ * @created May 23, 2025
+ * @updated May 23, 2025
+ */
 
 @import "tailwindcss";
 

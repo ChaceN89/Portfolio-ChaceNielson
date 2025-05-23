@@ -46,13 +46,17 @@ export default function LinkItem({
           if (targetElement) {
             observer.disconnect();
 
+            const duration = scrollTo === "hero" ? 0 : scrollDuration;
+            const delay = scrollTo === "hero" ? 0 : scrollDelay;
+
             setTimeout(() => {
               scroller.scrollTo(scrollTo, {
                 smooth: true,
-                duration: scrollDuration,
+                // duration: scrollDuration,
+                duration: duration,
                 offset: scrollOffset,
               });
-            }, scrollDelay);
+            }, delay);
           }
         });
 

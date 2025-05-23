@@ -10,7 +10,9 @@
  * @example
  * <MyButton callBack={() => console.log("Clicked!")}>Click Me</MyButton>
  *
+ * @author Chace Nielson
  * @created May 9, 2025
+ * @updated May 22, 2025
  */
 
 import { useRef, useState } from 'react';

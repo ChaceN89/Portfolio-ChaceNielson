@@ -1,3 +1,23 @@
+/**
+ * @file particle-effect.styles.css
+ * @module Styles/ParticleEffect
+ * @desc Defines CSS styles and animations for particle-based visual effects and background flashes.
+ *       Used in UI interactions such as button clicks or dynamic element highlights.
+ *
+ * @features
+ * - `.particle`: Circular particle element with customizable motion and opacity
+ * - `@keyframes particle-float`: Animates particle translation and fade-out
+ * - `.bg-flash-overlay`: Background element for flash effects
+ * - `@keyframes flash-fade`: Simple opacity fade-out for flash overlay
+ *
+ * @usage
+ * Used in combination with dynamic JS-based particle emitters or interaction-based UI effects.
+ *
+ * @author Chace Nielson
+ * @created May 23, 2025
+ * @updated May 23, 2025
+ */
+
 /* Effects styles for the particle */
 .particle {
   position: absolute;

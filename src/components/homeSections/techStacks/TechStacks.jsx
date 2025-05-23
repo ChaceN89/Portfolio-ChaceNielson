@@ -1,12 +1,30 @@
-import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper'
+/**
+ * @file TechStacks.jsx
+ * @module Sections/TechStacks
+ * @desc Displays categorized tech stack sections (e.g., Full Stack, Game Design) with animated backgrounds.
+ *       Uses `BackgroundWrapper` and `TechStackSection` for interactive UI with hover-based blur effects.
+ *
+ * @features
+ * - Dynamically renders sections from `sectionList`
+ * - Applies background images with blur and noise filters
+ * - Highlights hovered section by reducing blur on focus
+ *
+ * @see {@link /components/uiElements/images/BackgroundWrapper | BackgroundWrapper}
+ * @see {@link /components/homeSections/techStacks/TechStackSection | TechStackSection}
+ *
+ * @author Chace Nielson
+ * @created Jan 26, 2025
+ * @updated May 23, 2025
+ */
 import React, { useState } from 'react'
 
+// components
 import TechStackSection from './TechStackSection'
+import BackgroundWrapper from '@/components/uiElements/images/BackgroundWrapper'
 
-
+// data
 import { fullstack } from '@/data/techStacks/full-stack'
 import { gameDesign } from '@/data/techStacks/game-design'
-
 
 export default function TechStacks() {
 

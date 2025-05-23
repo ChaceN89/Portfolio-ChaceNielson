@@ -1,5 +1,21 @@
-import React from 'react'
-
+/**
+ * @file PercentLoader.jsx
+ * @module UI/PercentLoader
+ * @desc Displays a horizontal loading indicator with a percentage label.
+ *       Visually shows load progress using two flexible bars on either side of a numeric label.
+ *
+ * @features
+ * - Symmetrical loading bar animation using flex-based scaling
+ * - Displays percentage text at center
+ * - Minimum visible fill at 0% to avoid collapse
+ *
+ * @example
+ * <PercentLoader loadPercent={75} />
+ *
+ * @author Chace Nielson
+ * @created May 23, 2025
+ * @updated May 23, 2025
+ */
 export default function PercentLoader({ loadPercent }) {
 
   var percentText = loadPercent.toString();

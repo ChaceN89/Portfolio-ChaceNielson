@@ -38,15 +38,6 @@ const responsive = {
 
 export default function ProjectCarousel() {
   const navigate = useNavigate();
-  const location = useLocation();
-
-  const handleClick = (id) => {
-    openModal({ type: 'project', id, navigate, location });
-  };
-
-  const handleProjectClick = () => {
-    navigate('/projects');
-  };
 
   return (
     <div className='flex flex-col items-center justify-center gap-4 py-8 '>
@@ -55,7 +46,7 @@ export default function ProjectCarousel() {
         infinite
         arrows
         autoPlay
-        autoPlaySpeed={3000}
+        autoPlaySpeed={2000}
         keyBoardControl
         pauseOnHover
         draggable
@@ -75,7 +66,7 @@ export default function ProjectCarousel() {
 
       <MyBtn 
         sm 
-        callBack={handleProjectClick}
+        callBack={() => navigate('/projects')}
         GA_label='Project Carousel See All Button'
       >
         See All Projects

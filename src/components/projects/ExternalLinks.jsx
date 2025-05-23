@@ -49,10 +49,8 @@ function ExternalLinks({ externalLinks }) {
     trackEvent('Button', 'Click', `External Project Link PDF ${link.pdf}`, 1); // Example event
   }
 
-
+  // Function to truncate the URL for GA purposes
   const truncateURL = (url) => url.replace(/(^\w+:|^)\/\//, '').split('/')[0];
-
-
 
   return (
     <div className="flex flex-wrap items-center text-lg">

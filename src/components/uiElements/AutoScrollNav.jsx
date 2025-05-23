@@ -1,3 +1,27 @@
+/**
+ * @file AutoScrollNav.jsx
+ * @module UI/AutoScrollNav
+ * @desc Floating side panel component for controlling auto-scroll behavior on the homepage.
+ *       Includes toggle for auto-scrolling, speed adjustment, and a scroll-to-top button.
+ *       Automatically hides on small screens and uses a slide-in/out animation.
+ *
+ * @features
+ * - Toggleable visibility with spring-based Framer Motion animation
+ * - Scroll speed slider (range 1–3)
+ * - Auto-scroll pause/resume button
+ * - Scroll-to-top shortcut
+ * - Portal-rendered to document body to avoid layout conflicts
+ * - Tooltip-enhanced controls
+ * - Responsive behavior: hidden on screens < 1020px
+ *
+ * @see {@link https://www.framer.com/motion/ | Framer Motion Docs}
+ * @see {@link ./Tooltip.jsx | Tooltip Component}
+ *
+ * @author Chace Nielson
+ * @created Jan 26, 2025
+ * @updated May 23, 2025
+ */
+
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { FiMoreVertical } from 'react-icons/fi';

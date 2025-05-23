@@ -1,13 +1,37 @@
+/**
+ * @file Hero.jsx
+ * @module Sections/Hero
+ * @desc Hero section component for the landing page. Introduces the developer with animated titles and a call-to-action.
+ *       Includes scroll-triggered navigation and motion-based bullet point animations.
+ *
+ * @features
+ * - Intro text with staggered animations using Framer Motion
+ * - Role highlights using icons (Software Engineer, Full-Stack Developer, Game Developer)
+ * - Animated scroll-to-section button
+ * - Call-to-action button with GA tracking ("Let's Talk")
+ *
+ * @see {@link /components/buttons/MyBtn | MyBtn}
+ * @see {@link /components/uiElements/ScrollWheelBtn | ScrollWheelBtn}
+ * @see {@link https://www.framer.com/motion/ | Framer Motion Docs}
+ *
+ * @author Chace Nielson
+ * @created Jan 26, 2025
+ * @updated May 23, 2025
+ */
+
+// components 
 import MyBtn from '@/components/buttons/MyBtn';
-import { useNavigate } from 'react-router-dom';
 import ScrollWheelBtn from '../uiElements/ScrollWheelBtn';
 
+import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCode, FaServer, FaGamepad } from 'react-icons/fa';
 import { useInitialLoading } from '../routing/InitialLoadingContext';
 
-
 export default function Hero() {
+
+  // Hook to get the current location and navigate
+  const navigate = useNavigate();
 
   // SHould the animation be shown or not based on the loading state of the app
   const { InitialLoadingDone } = useInitialLoading();
@@ -26,7 +50,6 @@ export default function Hero() {
     splashScreenDelay+1.0,
   ];
 
-
   // The specific animation info for each element with a delay as a prop so they can be staggered
   const animationInfo =(delay) => {
     return {
@@ -37,10 +60,6 @@ export default function Hero() {
         : { duration: 0 },
     };
   }
-
-    const navigate = useNavigate();
-  const handleRouteClick = () => navigate('/contact');
-
 
   return (
     <div className="w-screen min-h-[85vh] pt-20 flex flex-col lg:flex-row lg:flex-reverse items-center justify-center px-8 md:px-20 py-12 gap-12 relative overflow-hidden">
@@ -69,7 +88,7 @@ export default function Hero() {
           {...animationInfo(delays[5])}
         >
           <MyBtn 
-            callBack={handleRouteClick}
+            callBack={() => navigate('/contact')}
             GA_label="Hero Button"
           >
             Let's Talk
