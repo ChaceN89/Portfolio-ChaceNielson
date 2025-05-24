@@ -8,11 +8,12 @@
  * @updated May 22, 2025
  */
 
-import React, { useRef } from 'react'
+import React, { useMemo, useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { FaComments, FaFileAlt, FaUsers, FaLightbulb } from 'react-icons/fa'
 import MyBtn from '@/components/buttons/MyBtn'
 import { useNavigate } from 'react-router-dom'
+import { useAnimationSettings } from '@/components/animations/AnimationContext'
 
 // Soft skills data
 const skills = [
@@ -50,6 +51,8 @@ export default function AboutMe() {
   const navigate = useNavigate()
   const sectionRef = useRef(null)
 
+  const { animationsEnabled } = useAnimationSettings() // Get animation settings from context
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start end', 'end start'],
@@ -58,6 +61,13 @@ export default function AboutMe() {
   // Animation settings 
   const bottomOpacity = useTransform(scrollYProgress, [0, 0.4, 1], [0, 1,1])
   const bottomY = useTransform(scrollYProgress, [0, 0.6, 1], [200, 0, 0 ])
+
+
+  const animatedStyle = useMemo(() => {
+    if (!animationsEnabled) return {}
+    return { opacity: bottomOpacity, y: bottomY }
+  }, [animationsEnabled, bottomOpacity, bottomY])
+
 
   return (
     <motion.section ref={sectionRef} className="py-16 px-2  max-w-4xl mx-auto" id="lets-connect">
@@ -69,18 +79,21 @@ export default function AboutMe() {
             [0.1 + index * 0.05, 0.3 + index * 0.05],
             [1, 0]
           )
-          // based on index being even or odd, we can determine if the card should come from the left or right
-          const fromLeft = index % 2 === 0 ? -1 : 1
 
-          const x = useTransform(cardProgress, [1, 0], [fromLeft*150, 0])
+          const fromLeft = index % 2 === 0 ? -1 : 1
+          const x = useTransform(cardProgress, [1, 0], [fromLeft * 150, 0])
           const y = useTransform(cardProgress, [1, 0], [180, 0])
-          const rotate = useTransform(cardProgress, [1, 0], [fromLeft*-10, 0])
+          const rotate = useTransform(cardProgress, [1, 0], [fromLeft * -10, 0])
           const opacity = useTransform(cardProgress, [1, 0], [0, 1])
+
+          const cardAnimatedStyle = animationsEnabled
+            ? { x, y, opacity, rotate }
+            : {}
 
           return (
             <motion.div
               key={title}
-              style={{ x, y, opacity, rotate }}
+              style={cardAnimatedStyle}
               className={`flex flex-col items-center text-center p-6 rounded-xl ${bg} ${text} shadow-2xl`}
             >
               <div className="flex items-center justify-between gap-4">
@@ -91,12 +104,13 @@ export default function AboutMe() {
             </motion.div>
           )
         })}
+
       </div>
 
       {/* CTA */}
       <motion.div
-        style={{ opacity: bottomOpacity, y: bottomY }}
-        className="mt-18 text-center"
+        style={animatedStyle}
+        className="mt-16 text-center"
       >
         <h3 className="text-2xl font-semibold">Let’s Build Something Together</h3>
         <p className="mt-2 text-sm opacity-80">

@@ -16,7 +16,7 @@
  * @updated May 22, 2025
  */
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -29,8 +29,12 @@ import ShowIcon from '@/components/uiElements/skillBox/ShowIcon';
 import Tooltip from '@/components/uiElements/Tooltip';
 import useAnalyticsEvent from '@/components/analytics/useAnalyticsEvent';
 
+import { useAnimationSettings } from '@/components/animations/AnimationContext';
+
 export default function ProjectShowcase({ project, background, nextId }) {
   const { src, textColor, borderColor, rippleColor } = background;
+
+  const { animationsEnabled } = useAnimationSettings(); // Get animation settings from context
 
   const sectionRef = useRef();
 
@@ -75,6 +79,29 @@ export default function ProjectShowcase({ project, background, nextId }) {
   const textScale = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], [0.8, 1, 1, 1, 0.8]);
 
 
+  // memos to avoid re-calculating styles on every render
+  const imageStyle = useMemo(() => {
+    if (!animationsEnabled) return {};
+    return {
+      x: imageX,
+      y: imageY,
+      opacity: imageOpacity,
+      rotate: imageRotate,
+      scale: imageScale,
+    };
+  }, [animationsEnabled, imageX, imageY, imageOpacity, imageRotate, imageScale]);
+
+
+  const textStyle = useMemo(() => {
+    if (!animationsEnabled) return {};
+    return {
+      opacity: textOpacity,
+      y: textY,
+      scale: textScale,
+    };
+  }, [animationsEnabled, textOpacity, textY, textScale]);
+
+
   // determine the icon size based on the screen size
   const [iconSize, setIconSize] = useState("5rem")
 
@@ -86,8 +113,6 @@ export default function ProjectShowcase({ project, background, nextId }) {
         case width < 1024: // < lg
           setIconSize("3.5rem");
           break;
-  
-      
         case width < 1280: // lg to xl
           setIconSize("3rem");
           break;
@@ -111,7 +136,7 @@ export default function ProjectShowcase({ project, background, nextId }) {
         id={`featured-${project.id}`}
         background={src}
         backgroundClass="w-screen"
-        childClass="px-10 flex flex-col lg:flex-row items-center justify-center gap-12 min-h-[75vh]  py-24 relative  "
+        childClass="px-10 flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-12 min-h-[75vh]  py-24 relative  "
         fixed
         noise
         overlay={<ScrollWheelBtn to={nextId} />}
@@ -119,7 +144,8 @@ export default function ProjectShowcase({ project, background, nextId }) {
 
         <motion.div
           className={` lg:text-right w-full lg:w-1/2 space-y-4 ${textColor}  p-4 max-w-2xl `}
-          style={{ opacity: textOpacity, y: textY, scale: textScale }}
+            style={textStyle}
+
         >
 
           {/* Title */}
@@ -129,7 +155,7 @@ export default function ProjectShowcase({ project, background, nextId }) {
 
 
           {/* Icons and btn */}
-          <div className='flex flex-col md:flex-row items-start lg:justify-end lg:items-center gap-6'>
+          <div className='flex flex-col md:flex-row items-center justify-center lg:justify-end lg:items-center gap-4'>
 
             <div className="flex gap-4 items-center flex-wrap">
               {project.mainStack?.map((iconObj, i) => (
@@ -139,20 +165,22 @@ export default function ProjectShowcase({ project, background, nextId }) {
               ))}
             </div>
 
-            <MyBtn 
-              sm 
-              callBack={() => handleProjectClick(project.id)}
-              GA_label={`Project Showcase ${project.name} Button`}
-            >
-              Learn More
-            </MyBtn>
+            <div className='hidden lg:block'>
+              <MyBtn 
+                sm 
+                callBack={() => handleProjectClick(project.id)}
+                GA_label={`Project Showcase ${project.name} Button`}
+                >
+                Learn More
+              </MyBtn>
+            </div>
           </div>
 
         </motion.div>
 
         <motion.div
           className="group relative w-full lg:w-1/2 flex justify-center cursor-pointer"
-          style={{ x: imageX, y: imageY, opacity: imageOpacity, rotate: imageRotate, scale: imageScale }}
+          style={imageStyle}
           onClick={() => handleProjectClick(project.id)}
         >
           <Tooltip text="View Case">

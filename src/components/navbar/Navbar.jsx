@@ -13,79 +13,75 @@
  *
  * @author Chace Nielson
  * @created May 9, 2025
- * @updated May 9, 2025
+ * @updated May 23, 2025
  */
-import React, { useState, useEffect } from "react";
+
+import React, { useState, useEffect, useMemo } from "react";
 import { useScroll, useMotionValueEvent, motion } from "framer-motion";
 import NavContent from "./NavContent";
+import { useAnimationSettings } from "@/components/animations/AnimationContext";
 
-export default function Navbar({forceLock=false}) {
+export default function Navbar({ forceLock = false }) {
+  const { animationsEnabled } = useAnimationSettings();
 
-  // States for hidden nav, initial scroll and the last Y position of the scaoll
   const [hidden, setHidden] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
   const [lastY, setLastY] = useState(0);
+  const [isNavPosLocked, setIsNavPosLocked] = useState(false);
 
-  // get the scroll Positions
   const { scrollY } = useScroll();
-  const [isNavPosLocked, setIsNavPosLocked] = useState(false); // is the nav bar locked or can it animation up on scroll
 
-  // useMotionValueEvent is a framer motion hook that allows you to listen to changes in a motion value
   useMotionValueEvent(scrollY, "change", (latest) => {
+    if (isNavPosLocked) return;
 
-    if (isNavPosLocked) return; // if locked, do not add event listener
-
-    // If this is the first time the user is scrolling, mark as scrolled
     if (!hasScrolled && latest > 0) setHasScrolled(true);
 
-    // If the user is scrolling up or down, update the hidden state
     if (hasScrolled && latest > lastY && latest > 200) {
-      setHidden(true); // scrolling down
+      setHidden(true);
     } else if (hasScrolled) {
-      setHidden(false); // scrolling up
+      setHidden(false);
     }
 
     setLastY(latest);
   });
 
-  // handle the mouse moving close to the top of the screen to trigger the nav to show
   useEffect(() => {
-    if (isNavPosLocked) return; // if locked, do not add event listener
+    if (isNavPosLocked) return;
 
-    // Function to handle mouse movement if it is close to the top of the screen
     const handleMouseMove = (e) => {
-      if (e.clientY < 200) {
-        setHidden(false); // Reveal nav when mouse is near top
-      }
+      if (e.clientY < 200) setHidden(false);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [isNavPosLocked]);
 
-
   useEffect(() => {
     const checkLockState = () => {
-      const shouldLock = forceLock ;
+      const shouldLock = forceLock;
       setIsNavPosLocked(shouldLock);
-
-      if (shouldLock) {
-        setHidden(false);
-      }
+      if (shouldLock) setHidden(false);
     };
-  
-    checkLockState(); // Run on mount
+
+    checkLockState();
     window.addEventListener("resize", checkLockState);
     return () => window.removeEventListener("resize", checkLockState);
   }, []);
 
+  const motionProps = useMemo(() => {
+    if (!animationsEnabled) return {};
+    return {
+      initial: { y: 0 },
+      animate: { y: hidden ? "-100%" : "0%" },
+      transition: { duration: 0.3, ease: "easeInOut" }
+    };
+  }, [animationsEnabled, hidden]);
+
   return (
     <motion.nav
-      initial={{ y: 0 }}
-      animate={{ y: hidden ? "-100%" : "0%" }}
-      transition={{ duration: 0.3, ease: "easeInOut" }}
-      className="fixed top-0 w-full z-35 px-0 "
-      >
+      {...motionProps}
+      className="fixed top-0 w-full z-35 px-0"
+    >
       <NavContent />
     </motion.nav>
   );

@@ -14,35 +14,43 @@
  *
  * @author Chace Nielson
  * @created Mar 27, 2025
- * @updated May 9, 2025
+ * @updated May 23, 2025
  */
 import FooterContact from './FooterContact';
 import BackgroundWrapper from "../uiElements/images/BackgroundWrapper";
 import QuickLinks from './QuickLinks';
 import { motion } from 'framer-motion';
 import SocialBreadcrumbs from "./SocialBreadCrumbs";
+import { useAnimationSettings } from '@/components/animations/AnimationContext';
+import { useMemo } from 'react';
 
 export default function Footer() {
+  const { animationsEnabled } = useAnimationSettings();
+
+  // Only memoize animation props if animations are enabled
+  const animationProps = useMemo(() => {
+    if (!animationsEnabled) return {};
+    return {
+      initial: { y: 100, opacity: 0 },
+      animate: { y: 0, opacity: 1 },
+      exit: { y: 100, opacity: 0 },
+      transition: { duration: 0.4, ease: 'easeInOut' },
+    };
+  }, [animationsEnabled]);
+
   return (
-    <motion.footer
-    initial={{ y: 100, opacity: 0 }}
-    animate={{ y: 0, opacity: 1 }}
-    exit={{ y: 100, opacity: 0 }} // slides down + fades out
-    transition={{ duration: 0.4, ease: 'easeInOut' }}
-  >
-    <footer className="w-full bg-secondary-alt text-primary overflow-hidden rounded-t-[50px] border-t-2 border-secondary dark:border-primary">
-      <BackgroundWrapper  noise backgroundSm="/overlays/dots-1.png" backgroundClass="bg-accent/40 rounded-t-[50px]">
-        <div className="px-6 lg:px-16 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-            <FooterContact />
-            <QuickLinks />
-            <SocialBreadcrumbs/>
+    <motion.footer {...animationProps}>
+      <footer className="w-full bg-secondary-alt text-primary overflow-hidden rounded-t-[50px] border-t-2 border-secondary dark:border-primary">
+        <BackgroundWrapper noise backgroundSm="/overlays/dots-1.png" backgroundClass="bg-accent/40 rounded-t-[50px]">
+          <div className="px-6 lg:px-16 py-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
+              <FooterContact />
+              <QuickLinks />
+              <SocialBreadcrumbs />
+            </div>
           </div>
-        </div>
-
-
-      </BackgroundWrapper>
-    </footer>
+        </BackgroundWrapper>
+      </footer>
     </motion.footer>
   );
 }
