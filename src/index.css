@@ -134,7 +134,7 @@ html.dark, .dark body {
 
 /* Global noise background */
 .noise-bg {
-  position: fixed;
+  position: absolute;
   inset: 0;
   pointer-events: none;
   z-index: 0;

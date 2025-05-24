@@ -59,7 +59,7 @@ export default function Hero() {
   // The specific animation info for each element with a delay as a prop so they can be staggered
   const animationInfo =(delay) => {
 
-    if (!animationsEnabled) return {}; // ✅ Avoid spreading `null`
+    // if (!animationsEnabled) return {}; // ✅ Avoid spreading `null`
 
     return {
       initial: { opacity: 0, y: 20 },
