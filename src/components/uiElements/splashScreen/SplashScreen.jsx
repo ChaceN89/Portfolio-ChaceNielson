@@ -18,7 +18,6 @@ import './SplashScreen.styles.css'; // Import the CSS file for hexagon styles
 export default function SplashScreen({ 
   loadPercent = 0,
   transitionOut = false, 
-  animateLoader = true,
   errorInfo = null,
 }) {
   // z index for the splash screen is above the rest of the app
@@ -51,7 +50,7 @@ export default function SplashScreen({
         <img
           src="/logos/my-logos/logoFull-tight.png"
           alt="Site Logo"
-          className="min-w-[300px] overflow-hidden"
+          className="min-w-[300px] overflow-hidden px-4"
         />
         <div className="text-xl text-center">
           {errorInfo ? (

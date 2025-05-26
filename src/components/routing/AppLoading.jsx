@@ -65,7 +65,7 @@ export default function AppLoading() {
 
 
   // Debug line to just show the splash screen to work on it
-  // return <SplashScreen loadPercent={loadPercent} />;
+  return <SplashScreen loadPercent={loadPercent} />;
 
   // Return the loading screen above the main app content
   return (

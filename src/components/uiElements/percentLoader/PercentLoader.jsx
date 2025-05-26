@@ -20,7 +20,7 @@ export default function PercentLoader({ loadPercent }) {
 
   var percentText = loadPercent.toString();
   if (loadPercent === 0) {
-    loadPercent = 1;
+    loadPercent = 3;
   }
 
   return (
