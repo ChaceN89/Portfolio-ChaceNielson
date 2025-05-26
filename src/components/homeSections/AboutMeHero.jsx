@@ -46,7 +46,10 @@ export default function AboutMeHero() {
       style={animatedStyle}
     >
       {/* Image */}
-      <div className="min-w-48 lg:max-w-60 overflow-hidden rounded-xl rounded-bl-[100px] hover:rounded-bl-xl rounded-tr-[100px] hover:rounded-tr-xl transition-all duration-400 ease-in-out flex justify-center ">
+      <div className="min-w-48 lg:max-w-60 overflow-hidden rounded-xl rounded-bl-[100px] hover:rounded-bl-xl rounded-tr-[100px] hover:rounded-tr-xl transition-all duration-400 ease-in-out flex justify-center "
+        style={{ width: "288px", height: "288px" }} // 72x72
+
+      >
         <ImageComponent
           src="/portraits/pngs/chace-2.png"
           alt="Chace Nielson"

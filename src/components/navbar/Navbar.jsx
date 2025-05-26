@@ -31,8 +31,12 @@ export default function Navbar({ forceLock = false }) {
 
   const { scrollY } = useScroll();
 
+  // for determining if the mobile menu is open
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // 🖱️ Hide navbar on scroll down after threshold
   useMotionValueEvent(scrollY, "change", (latest) => {
-    if (isNavPosLocked) return;
+    if (isNavPosLocked || isMobileMenuOpen) return; // 🛑 prevent hiding if menu is open
 
     if (!hasScrolled && latest > 0) setHasScrolled(true);
 
@@ -45,8 +49,9 @@ export default function Navbar({ forceLock = false }) {
     setLastY(latest);
   });
 
+  // 🖱️ Show navbar when mouse moves near top of screen
   useEffect(() => {
-    if (isNavPosLocked) return;
+    if (isNavPosLocked || isMobileMenuOpen) return; // 🛑 block mouse-triggered reveal
 
     const handleMouseMove = (e) => {
       if (e.clientY < 200) setHidden(false);
@@ -54,8 +59,9 @@ export default function Navbar({ forceLock = false }) {
 
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [isNavPosLocked]);
+  }, [isNavPosLocked, isMobileMenuOpen]);
 
+  // 📱 Lock navbar position on mobile screens
   useEffect(() => {
     const checkLockState = () => {
       const shouldLock = forceLock;
@@ -68,9 +74,9 @@ export default function Navbar({ forceLock = false }) {
     return () => window.removeEventListener("resize", checkLockState);
   }, []);
 
+  // 🖥️ Disable animations if user perfers reduced motion or save the animation settings
   const motionProps = useMemo(() => {
     if (prefersReducedMotion) return {}; // Disable animations if on small screens
-    
     
     return {
       initial: { y: 0 },
@@ -84,7 +90,10 @@ export default function Navbar({ forceLock = false }) {
       {...motionProps}
       className="fixed top-0 w-full z-35 px-0"
     >
-      <NavContent />
+      <NavContent
+        isMobileMenuOpen={isMobileMenuOpen}
+        setIsMobileMenuOpen={setIsMobileMenuOpen}
+      />
     </motion.nav>
   );
 }

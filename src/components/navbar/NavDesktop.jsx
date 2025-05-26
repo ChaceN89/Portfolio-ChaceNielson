@@ -19,15 +19,19 @@ import DarkModeButton from './DarkModeButton'
 import LinkItem from './LinkItem'
 import { navLinks } from '@/data/nav/navData'
 
-export default function NavDesktop() {
+export default function NavDesktop({setCloseFunction=null}) {
  
   return (     
-    <div className="z-10 items-center gap-4 flex flex-col w-screen justify-items-center lg:flex-row lg:w-auto ">
+    <div className="z-10 items-center gap-4 lg:flex grid grid-cols-2 w-screen justify-items-center lg:flex-row lg:w-auto" >
+
+      
       {navLinks.map(({ label, icon: Icon, ...linkProps }, index) => (
         <LinkItem key={label} {...linkProps}
           className='hover:text-accent-alt'
           activeClassName="underline"
+          scrollCallback={setCloseFunction}
         >
+
           <h6 className=" group flex items-center justify-end  transition-all duration-300 ease-in-out ">
             <div
               className="opacity-0 -translate-x-2 transition-all duration-400 group-hover:opacity-100 group-hover:translate-x-1.5"

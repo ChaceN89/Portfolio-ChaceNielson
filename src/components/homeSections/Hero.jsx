@@ -107,12 +107,14 @@ export default function Hero() {
       {/* Right Side Visual */}
       <motion.div
         {...animationInfo(delays[0])}
-        className="max-w-sm md:max-w-md flex-[1_1_300px] z-0 hidden md:block  "
+        className="max-w-sm md:max-w-md flex-[1_1_300px] z-0 hidden  lg:flex justify-center  "
       >
-        <img
+        <img 
           src="/logos/my-logos/logo562x562.png"
           alt="Chace working"
-          className="w-full  p-2 my-drop-shadow-lg "
+          width="562"
+          height="562"
+          class="w-full max-w-[400px] p-2 my-drop-shadow-lg flex justify-center"
         />
       </motion.div>
 

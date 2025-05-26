@@ -50,10 +50,12 @@ export default function NavMobile({ setIsOpen, isOpen }) {
           <div className="
             bg-primary/70 text-secondary
             border-t-2 border-b-2 border-secondary/90 rounded-b-4xl 
-            w-full flex flex-col items-center gap-4  py-10 
-            max-h-[50svh] overflow-y-auto scroll-element 
+            w-full gap-4 py-4 
+            md:max-h-[60svh] overflow-y-auto scroll-element 
           ">
-            <NavDesktop />
+            <NavDesktop
+              setCloseFunction ={() => setIsOpen(false)}
+            />
           </div>
         </motion.div>
       )}

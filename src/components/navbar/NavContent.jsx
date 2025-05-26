@@ -22,9 +22,8 @@ import NavLogo from "./NavLogo";
 import NavMobileButton from "./NavMobileButton";
 import { AnimatePresence, motion } from "framer-motion";
 
-export default function NavContent() {
+export default function NavContent({isMobileMenuOpen, setIsMobileMenuOpen}) {
   const [scrollY, setScrollY] = useState(0);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrollY(window.scrollY);
@@ -55,16 +54,14 @@ export default function NavContent() {
         <div className="relative flex items-center justify-between z-40">
           <NavLogo />
           <div className="hidden lg:flex">
-            <NavDesktop />
+            <NavDesktop/>
           </div>
           <NavMobileButton
             setIsMobileMenuOpen={setIsMobileMenuOpen}
             isMobileMenuOpen={isMobileMenuOpen}
           />
         </div>
-      </div>
-
- 
+      </div> 
 
       {/* Mobile dropdown outside the overflow-hidden container */}
       <div className="flex lg:hidden relative z-35">
@@ -86,8 +83,6 @@ export default function NavContent() {
           />
         )}
       </AnimatePresence>
-
-
     </>
   );
 }

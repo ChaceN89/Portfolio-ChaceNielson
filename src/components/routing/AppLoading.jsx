@@ -26,7 +26,7 @@ export default function AppLoading() {
   // context to set the splash screen to done
   const { setInitialLoadingDone } = useInitialLoading();
 
-  const artificialLoadingTime = 1000; // artificial loading time before he splash screen fades out
+  const artificialLoadingTime = 1500; // artificial loading time before he splash screen fades out
   const steps = 4; // how many increments between 0 and 100% the loading bar will have
   const incrementTime = artificialLoadingTime / steps; // time between each increment in milliseconds based on the number of steps
   const percentIncrement = 100 / steps; // percentage increment per step based on the number of steps 

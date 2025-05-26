@@ -22,8 +22,7 @@ export default function LinkItem({
   className = "",
   activeClassName = "",
   disableActive = false,
-  handleMouseEnter = null,
-  handleMouseLeave = null
+  scrollCallback, // Function to close mobile menu
 }) {
   const location = useLocation();
   const navigate = useNavigate();
@@ -62,17 +61,14 @@ export default function LinkItem({
 
         observer.observe(document.body, { childList: true, subtree: true });
     
+    // If there is no scrollTo, just navigate to the router link
     } else if (router) {
       navigate(router);
     }
   };
 
   return (
-    <div 
-      className="relative hover:cursor-pointer"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-    >
+    <div className="relative hover:cursor-pointer">
 
       {/* Scrill Link on the same page - active style when in section on the page  */}
       {scrollTo && onSamePage && (
@@ -85,8 +81,9 @@ export default function LinkItem({
           activeClass={!disableActive ? activeClassName : ""}
           className={className}
           onClick={(e) => {
-            e.preventDefault();
-            navigate(location.pathname); // closes modal smoothly
+            if (typeof scrollCallback === 'function') {
+              scrollCallback();
+            }          
           }}
         >
           {children}
