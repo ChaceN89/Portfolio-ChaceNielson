@@ -27,11 +27,11 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCode, FaServer, FaGamepad } from 'react-icons/fa';
 import { useInitialLoading } from '../routing/InitialLoadingContext';
-import { useAnimationSettings } from '@/components/animations/AnimationContext';
+// import { useAnimationSettings } from '@/components/animations/AnimationContext'; // for disabling animations on small screens if this component is too much computationally expensive on mobile devices
 
 export default function Hero() {
 
-  const { animationsEnabled } = useAnimationSettings(); // Get animation settings from context
+  // const { animationsEnabled } = useAnimationSettings(); // Get animation settings from context
 
   // Hook to get the current location and navigate
   const navigate = useNavigate();
@@ -54,12 +54,10 @@ export default function Hero() {
   ];
 
 
-
-
   // The specific animation info for each element with a delay as a prop so they can be staggered
   const animationInfo =(delay) => {
 
-    // if (!animationsEnabled) return {}; // ✅ Avoid spreading `null`
+    // if (!animationsEnabled) return {}; // have no animation on small screens
 
     return {
       initial: { opacity: 0, y: 20 },
@@ -71,13 +69,14 @@ export default function Hero() {
   }
 
   return (
-    <div className="w-screen min-h-[85vh] pt-20 flex flex-col lg:flex-row lg:flex-reverse items-center justify-center px-8 md:px-20 py-12 gap-12 relative overflow-hidden">
+    <div className="w-screen min-h-[85vh] pt-24 flex flex-col lg:flex-row lg:flex-reverse items-center justify-center px-8 md:px-20 py-12 gap-12 relative overflow-hidden">
 
       {/* Left Text Block */}
       <div className="flex flex-col gap-4 z-10">
 
-        <motion.h1 {...animationInfo(delays[0])} className='underline decoration-2 underline-offset-8 '>
-          Chace Nielson
+        <motion.h1 {...animationInfo(delays[0])} className="relative inline-block">
+          <span className="hero-gradient-text">Chace Nielson</span>
+          <div className="absolute left-0 bottom-1 h-[2px] w-full hero-gradient-bg" />
         </motion.h1>
 
         {/* Bullet points */}
@@ -87,7 +86,7 @@ export default function Hero() {
 
         <motion.div
           {...animationInfo(delays[4])}
-          className="opacity-90 italic space-y-1"
+          className="opacity-90 italic space-y-1 hero-gradient-text"
         >
           <p>“Custom software. Creative solutions.</p>
           <p>Whether it's web or games—I’ve got you covered.”</p>
@@ -127,10 +126,13 @@ function BulletPoint({ animationInfo, delay, icon, text }) {
   return (
     <motion.h4
       {...animationInfo(delay)}
-      className="opacity-80 flex items-center gap-2"
+      className="opacity-80 flex items-center gap-2 "
     >
       {icon}
+      <span className='hero-gradient-text'>
+
       {text}
+      </span>
     </motion.h4>
   );
 }

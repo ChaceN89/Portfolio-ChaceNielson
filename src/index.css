@@ -129,6 +129,22 @@ html.dark, .dark body {
 }
 
 
+.hero-gradient-text {
+  @apply bg-gradient-to-br 
+         from-secondary-alt via-secondary to-accent 
+         dark:from-primary dark:via-primary-alt dark:to-accent-alt
+         text-transparent bg-clip-text;
+}
+
+.hero-gradient-bg {
+  @apply bg-gradient-to-br 
+         from-secondary-alt via-secondary to-accent 
+         dark:from-primary dark:via-primary-alt dark:to-accent-alt;
+}
+
+
+
+
 
 /* Important Global Styles */
 
