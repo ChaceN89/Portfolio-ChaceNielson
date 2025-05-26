@@ -15,13 +15,17 @@ const AnimationContext = createContext();
 
 export function AnimationProvider({ children }) {
 
-  // Ifif a user have a small screen, we will not show the animation 
-  // or if the user has requested reduced motion, we will not show the animations
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const [animationsEnabled] = useState(() => window.innerWidth >= 640 && !prefersReducedMotion);
+  // no animations on small screens and a vairbale
+  const [prefersReducedMotion] = useState(() =>
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
+
+  const [animationsEnabled] = useState(() =>
+    window.innerWidth >= 640 && !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+  );
 
   return (
-    <AnimationContext.Provider value={{ animationsEnabled }}>
+    <AnimationContext.Provider value={{ animationsEnabled, prefersReducedMotion }}>
       {children}
     </AnimationContext.Provider>
   );

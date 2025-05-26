@@ -53,7 +53,7 @@ export default function TechStacks() {
         <BackgroundWrapper
           key={index}
           background={section.background}
-          backgroundClass={`lg:w-1/2 p-12 `}
+          backgroundClass={`lg:w-1/2 py-12 px-4 xl:px-10 `}
           childClass="flex items-center justify-center h-full"
           noise
           blur={hoveredIndex !== null && hoveredIndex !== section.index ? 0 : 5}

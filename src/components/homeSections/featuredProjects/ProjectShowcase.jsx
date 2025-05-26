@@ -136,16 +136,15 @@ export default function ProjectShowcase({ project, background, nextId }) {
         id={`featured-${project.id}`}
         background={src}
         backgroundClass="w-screen"
-        childClass="px-10 flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-12 min-h-[75vh]  py-24 relative  "
+        childClass="p-4 flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-12 min-h-[75vh] px-4 py-12 relative  "
         fixed
         noise
         overlay={<ScrollWheelBtn to={nextId} />}
       >
 
         <motion.div
-          className={` lg:text-right w-full lg:w-1/2 space-y-4 ${textColor}  p-4 max-w-2xl `}
-            style={textStyle}
-
+          className={` lg:text-right w-full lg:w-1/2 space-y-4 ${textColor}  max-w-2xl `}
+          style={textStyle}
         >
 
           {/* Title */}
@@ -179,29 +178,27 @@ export default function ProjectShowcase({ project, background, nextId }) {
         </motion.div>
 
         <motion.div
-          className="group relative w-full lg:w-1/2 flex justify-center cursor-pointer"
+          className="relative w-full lg:w-1/2 flex justify-center "
           style={imageStyle}
-          onClick={() => handleProjectClick(project.id)}
+          
         >
           <Tooltip text="View Case">
-            <div className="relative overflow-hidden">
+            <div 
+              className="relative inline-block overflow-hidden rounded-2xl max-w-[90vw] group cursor-pointer"
+              onClick={() => handleProjectClick(project.id)}
+            >
               {/* Ripple Layer */}
               <span 
-                className="ripple-hover z-10"
+                className="absolute inset-0 z-10 pointer-events-none ripple-hover"
                 style={{ '--ripple-color': rippleColor }}
               />
 
               {/* Image */}
               <ImageComponent
-                src={"/projects/" + project.id + "/" +project.thumbnail.src}
+                src={`/projects/${project.id}/${project.thumbnail.src}`}
                 alt={project.name}
                 blurHash={project.thumbnail.blurhash}
-                className="
-                  aspect-[4/3] max-h-[30rem]
-                  transition-transform duration-1000
-                  rounded-2xl max-w-[90vw] 
-                  object-cover 
-                  border-2 border-white shadow-[0_0_30px_rgba(255,255,255,0.1)]"
+                className="aspect-[4/3] max-h-[30rem] object-cover w-full h-auto border-2 border-white shadow-[0_0_30px_rgba(255,255,255,0.1)] rounded-2xl"
               />
             </div>
           </Tooltip>

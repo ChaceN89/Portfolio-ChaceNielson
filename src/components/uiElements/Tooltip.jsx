@@ -99,6 +99,19 @@ const Tooltip = ({ text, openDuration = 1000, className = "w-fit whitespace-nowr
     }
   }, [hovered, openDuration]);
 
+
+  // Avoid showing it on touch devices
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    const hasTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    setIsTouchDevice(hasTouch);
+  }, []);
+
+    if (isTouchDevice) {
+    return <>{children}</>; // Completely disable tooltip on touch devices
+  }
+
   return (
     <div
       className="relative"

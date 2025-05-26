@@ -62,15 +62,14 @@ export default function AboutMe() {
   const bottomOpacity = useTransform(scrollYProgress, [0, 0.4, 1], [0, 1,1])
   const bottomY = useTransform(scrollYProgress, [0, 0.6, 1], [200, 0, 0 ])
 
-
+  // Memoize the animated style to avoid unnecessary recalculations
   const animatedStyle = useMemo(() => {
     if (!animationsEnabled) return {}
     return { opacity: bottomOpacity, y: bottomY }
   }, [animationsEnabled, bottomOpacity, bottomY])
 
-
   return (
-    <motion.section ref={sectionRef} className="py-16 px-2  max-w-4xl mx-auto" id="lets-connect">
+    <motion.section ref={sectionRef} className="py-12 px-4  max-w-4xl mx-auto" id="lets-connect">
       {/* Skill Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2  gap-6 px-6 lg:px-10">
         {skills.map(({ title, description, icon: Icon, bg, text }, index) => {
@@ -110,9 +109,9 @@ export default function AboutMe() {
       {/* CTA */}
       <motion.div
         style={animatedStyle}
-        className="mt-16 text-center"
+        className="mt-16 text-center "
       >
-        <h3 className="text-2xl font-semibold">Let’s Build Something Together</h3>
+        <h3 className="text-2xl font-semibold">Let's Build Something Together</h3>
         <p className="mt-2 text-sm opacity-80">
           I’m always excited to meet new collaborators. If you’ve got a project or an idea — let’s talk!
         </p>

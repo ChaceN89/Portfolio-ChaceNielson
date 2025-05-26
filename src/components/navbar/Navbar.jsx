@@ -22,7 +22,7 @@ import NavContent from "./NavContent";
 import { useAnimationSettings } from "@/components/animations/AnimationContext";
 
 export default function Navbar({ forceLock = false }) {
-  const { animationsEnabled } = useAnimationSettings();
+  const { prefersReducedMotion } = useAnimationSettings();
 
   const [hidden, setHidden] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -69,13 +69,15 @@ export default function Navbar({ forceLock = false }) {
   }, []);
 
   const motionProps = useMemo(() => {
-    if (!animationsEnabled) return {};
+    if (prefersReducedMotion) return {}; // Disable animations if on small screens
+    
+    
     return {
       initial: { y: 0 },
       animate: { y: hidden ? "-100%" : "0%" },
       transition: { duration: 0.3, ease: "easeInOut" }
     };
-  }, [animationsEnabled, hidden]);
+  }, [prefersReducedMotion, hidden]);
 
   return (
     <motion.nav

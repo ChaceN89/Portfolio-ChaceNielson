@@ -42,16 +42,16 @@ export default function AboutMeHero() {
     <motion.div
       id="about-me-hero"
       ref={sectionRef}
-      className="flex flex-col md:flex-row items-center justify-center gap-10 p-20 "
+      className="flex flex-col md:flex-row items-center justify-center gap-10 px-4 py-12 "
       style={animatedStyle}
     >
       {/* Image */}
-      <div className="min-w-48 lg:max-w-60 overflow-hidden rounded-xl rounded-bl-[100px] hover:rounded-bl-xl rounded-tr-[100px] hover:rounded-tr-xl transition-all duration-400 ease-in-out flex justify-center">
+      <div className="min-w-48 lg:max-w-60 overflow-hidden rounded-xl rounded-bl-[100px] hover:rounded-bl-xl rounded-tr-[100px] hover:rounded-tr-xl transition-all duration-400 ease-in-out flex justify-center ">
         <ImageComponent
           src="/portraits/pngs/chace-2.png"
           alt="Chace Nielson"
-          className="h-72 w-72 object-cover object-top flex justify-center"
-          imgClass="w-full h-full transition-transform duration-400 ease-in-out hover:scale-110"
+          className="h-56 md:h-72 w-56 md:w-72 object-cover object-top flex justify-center"
+          imgClass="w-full h-full transition-transform duration-400 ease-in-out hover:scale-110 "
         />
       </div>
 

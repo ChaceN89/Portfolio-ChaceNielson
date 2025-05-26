@@ -87,14 +87,14 @@ export default function ScrollWheelBtn({ to = "about-me", extraDelay = 0 }) {
       <motion.div className="mb-4 z-10 pointer-events-auto" {...fadeInProps}>
         <motion.div {...bounceProps}>
           <ScrollLink
-            className="hover:cursor-pointer"
+            className="hover:cursor-pointer "
             to={to}
             spy={true}
             smooth={true}
             offset={globals.navbarHeight}
             duration={globals.scrollDuration}
           >
-            <BsMouse className="opacity-50 rotate-180  hover:text-tertiary/60 hover:opacity-100 transition-all duration-300 text-4xl xl:text-5xl" />
+            <BsMouse className="opacity-25 rotate-180 hover:scale-110  hover:text-tertiary/60 hover:opacity-100 transition-all duration-300 text-4xl xl:text-5xl" />
           </ScrollLink>
         </motion.div>
       </motion.div>

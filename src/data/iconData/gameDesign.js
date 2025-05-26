@@ -21,7 +21,7 @@ const gameDesignIcons = {
   GIMP: { name: "GIMP", svg_path: `${folder}/gimp.svg` },
   FMOD: { name: "FMOD", icon: SiFmod, color: "white" },
   SHADER_GRAPH: { name: "Shader Graph", svg_path: `${folder}/shader-graph.svg` },
-  INSPECTOR_TOOLS: { name: "Inspector Tools", svg_path: `${folder}/odin-inspector.svg` },
+  INSPECTOR_TOOLS: { name: "Odin Inspector Tools", svg_path: `${folder}/odin-inspector.svg` },
   
   FACTORY_PATTERN: { name: "Factory Pattern", icon: FaGear, color: "white" },
   OBSERVER_PATTERN: { name: "Observer Pattern", icon: FaEye, color: "white" },

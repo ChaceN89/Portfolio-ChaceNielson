@@ -27,11 +27,11 @@ import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { FaCode, FaServer, FaGamepad } from 'react-icons/fa';
 import { useInitialLoading } from '../routing/InitialLoadingContext';
-// import { useAnimationSettings } from '@/components/animations/AnimationContext'; // for disabling animations on small screens if this component is too much computationally expensive on mobile devices
+import { useAnimationSettings } from '@/components/animations/AnimationContext'; // for disabling animations on small screens if this component is too much computationally expensive on mobile devices
 
 export default function Hero() {
 
-  // const { animationsEnabled } = useAnimationSettings(); // Get animation settings from context
+  const { prefersReducedMotion } = useAnimationSettings(); // Get animation settings from context
 
   // Hook to get the current location and navigate
   const navigate = useNavigate();
@@ -57,7 +57,7 @@ export default function Hero() {
   // The specific animation info for each element with a delay as a prop so they can be staggered
   const animationInfo =(delay) => {
 
-    // if (!animationsEnabled) return {}; // have no animation on small screens
+    if (prefersReducedMotion) return {}; // Disable animations if on small screens
 
     return {
       initial: { opacity: 0, y: 20 },
@@ -69,7 +69,7 @@ export default function Hero() {
   }
 
   return (
-    <div className="w-screen min-h-[85vh] pt-24 flex flex-col lg:flex-row lg:flex-reverse items-center justify-center px-8 md:px-20 py-12 gap-12 relative overflow-hidden">
+    <div className="w-screen min-h-[85vh] pt-24 flex flex-col lg:flex-row lg:flex-reverse items-center justify-center px-4 md:px-20 py-12 gap-12 relative overflow-hidden">
 
       {/* Left Text Block */}
       <div className="flex flex-col gap-4 z-10">
