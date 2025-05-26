@@ -41,7 +41,7 @@ export default function Hero() {
   const shouldAnimate = !InitialLoadingDone;
 
   // Global delay for the splash screen
-  const splashScreenDelay = 2; // seconds to wait before starting the animation
+  const splashScreenDelay = 2.5; // seconds to wait before starting the animation
 
   // list of all delays
   const delays = [
@@ -114,7 +114,7 @@ export default function Hero() {
           alt="Chace working"
           width="562"
           height="562"
-          class="w-full max-w-[400px] p-2 my-drop-shadow-lg flex justify-center"
+          className="w-full max-w-[400px] p-2 my-drop-shadow-lg flex justify-center"
         />
       </motion.div>
 
