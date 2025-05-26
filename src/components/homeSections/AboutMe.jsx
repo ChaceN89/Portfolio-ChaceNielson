@@ -51,7 +51,7 @@ export default function AboutMe() {
   const navigate = useNavigate()
   const sectionRef = useRef(null)
 
-  const { animationsEnabled } = useAnimationSettings() // Get animation settings from context
+  const { prefersReducedMotion, } = useAnimationSettings() // Get animation settings from context
 
   const { scrollYProgress } = useScroll({
     target: sectionRef,
@@ -64,9 +64,9 @@ export default function AboutMe() {
 
   // Memoize the animated style to avoid unnecessary recalculations
   const animatedStyle = useMemo(() => {
-    if (!animationsEnabled) return {}
+    if (prefersReducedMotion) return {}
     return { opacity: bottomOpacity, y: bottomY }
-  }, [animationsEnabled, bottomOpacity, bottomY])
+  }, [prefersReducedMotion, bottomOpacity, bottomY])
 
   return (
     <motion.section ref={sectionRef} className="py-12 px-4  max-w-4xl mx-auto" id="lets-connect">
@@ -85,7 +85,7 @@ export default function AboutMe() {
           const rotate = useTransform(cardProgress, [1, 0], [fromLeft * -10, 0])
           const opacity = useTransform(cardProgress, [1, 0], [0, 1])
 
-          const cardAnimatedStyle = animationsEnabled
+          const cardAnimatedStyle = !prefersReducedMotion
             ? { x, y, opacity, rotate }
             : {}
 

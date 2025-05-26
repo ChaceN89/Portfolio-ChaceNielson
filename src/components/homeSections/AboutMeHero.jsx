@@ -34,7 +34,7 @@ export default function AboutMeHero() {
 
 
   const animatedStyle = useMemo(() => {
-    if (!animationsEnabled) return {};
+    // if (!animationsEnabled) return {};
     return { opacity, y, scale };
   }, [animationsEnabled, opacity, y, scale]);
 
