@@ -68,17 +68,18 @@ export default function AutoScrollNav({ shouldScroll, setShouldScroll, scrollSpe
             scrollToTop();
             setShouldScroll(false);
           }}
-          className=" cursor-pointer"
+  className="cursor-pointer flex items-center group"
         >
           
-          <FaArrowUpWideShort size={18} className="inline-block mr-1" />
+          <FaArrowUpWideShort size={18}     className="mr-1 group-hover:scale-x-85 origin-left transition-transform duration-200 ease-in-out"
+ />
 
         </button>
 
         {/* Toggle Scroll */}
         <button
           onClick={() => setShouldScroll(prev => !prev)}
-          className="px-3 py-1 bg-secondary dark:bg-primary  text-primary dark:text-secondary rounded whitespace-nowrap w-28  cursor-pointer"
+          className="px-3 py-1 bg-secondary dark:bg-primary  text-primary dark:text-secondary rounded whitespace-nowrap w-28  cursor-pointer hover:opacity-80"
         >
           {shouldScroll ? 'Pause' : 'Auto Scroll'}
         </button>
