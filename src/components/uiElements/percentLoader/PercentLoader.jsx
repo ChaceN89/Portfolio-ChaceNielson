@@ -19,14 +19,11 @@
 export default function PercentLoader({ loadPercent }) {
 
   var percentText = loadPercent.toString();
-  if (loadPercent === 0) {
-    loadPercent = 3;
-  }
 
   return (
     <div className="flex items-center justify-center  gap-2 px-4 w-screen text-">
       <div
-        className="h-[7px] bg-secondary transition-all duration-300 w-full rounded-full"
+        className="h-[7px] bg-secondary transition-all duration-300 w-full rounded-full min-w-1.5 "
         style={{ flex: loadPercent / 200 }}
       />
 
@@ -37,7 +34,7 @@ export default function PercentLoader({ loadPercent }) {
 
       {/* Right Line */}
       <div
-        className="h-[7px] bg-secondary transition-all duration-300 w-full rounded-full"
+        className="h-[7px] bg-secondary transition-all duration-300 w-full rounded-full min-w-1.5"
         style={{ flex: loadPercent / 200 }}
       />
     </div>
