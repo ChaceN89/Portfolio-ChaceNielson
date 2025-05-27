@@ -136,7 +136,7 @@ export default function ProjectShowcase({ project, background, nextId }) {
         id={`featured-${project.id}`}
         background={src}
         backgroundClass="w-screen"
-        childClass="p-4 flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-12 min-h-[75vh] px-4 py-12 relative  "
+        childClass="p-4 flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-12 min-h-[80vh] px-4 py-12 relative  "
         fixed
         noise
         overlay={<ScrollWheelBtn to={nextId} />}
@@ -152,7 +152,7 @@ export default function ProjectShowcase({ project, background, nextId }) {
             <h2 className="text-4xl font-bold ">{project.name}</h2>
             <hr className={`${borderColor} border-t  my-2 `} />
             <h6 className="text-xl ">{project.badge} </h6>
-            <p className="opacity-90 italic  lg:max-w-[53ch] lg:ml-auto lg:text-right">
+            <p className="opacity-90 italic leading-snug tracking-tight lg:max-w-[48ch] lg:ml-auto lg:text-right">
               {project.blurb}
             </p>
           </div>

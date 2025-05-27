@@ -61,9 +61,9 @@ export const albertaTomorrowHomepage = {
   ],
   extendedStack: [
     IconLibrary.FRAMER_MOTION,
+    IconLibrary.MAPBOX_GL,
     IconLibrary.REACT,
     IconLibrary.SEO,
-    IconLibrary.MAPBOX_GL
   ],
   externalLinks: [
     { name: "Homepage", link: "https://albertatomorrow.ca/", icon: FaHome  },

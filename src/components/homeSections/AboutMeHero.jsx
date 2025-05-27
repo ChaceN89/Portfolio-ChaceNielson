@@ -63,11 +63,11 @@ export default function AboutMeHero() {
         <h2 className="text-3xl font-bold">A Little About Me</h2>
         <p className="text-lg leading-relaxed">
           Hey, I'm <strong>Chace Nielson</strong> — a software engineer with a passion for building intuitive websites and immersive games.
-          Whether it's crafting smooth user interfaces or designing engaging game mechanics, I love turning ideas into interactive experiences.
+          Whether I'm crafting smooth user interfaces or designing engaging game mechanics, I love turning ideas into interactive experiences.
           Coding is how I express creativity — it's where logic meets imagination.
         </p>
 
-        <MyBtn callBack={() => ScrollToID("about-me")}
+        <MyBtn sm callBack={() => ScrollToID("about-me")}
           GA_label='About Me Hero Button'
           >Learn More</MyBtn>
       </div>

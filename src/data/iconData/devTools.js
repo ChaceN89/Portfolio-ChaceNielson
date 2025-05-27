@@ -22,6 +22,8 @@ const devToolIcons = {
   VERCEL: { name: "Vercel", icon: SiVercel, color: "black" },
   RAILWAY: { name: "Railway", icon: SiRailway, color: "black" },
   RENDER: { name: "Render", icon: SiRender, color: "black" },
+  SUPABASE: { name: "Supabase", svg_path: `${folder}/supabase.svg` },
+  
   GITHUB: { name: "GitHub", icon: BsGithub, color: "white" },
   GIT: { name: "Git", icon: ImGit, color: "#EE513B" },
   DOCKER: { name: "Docker", icon: FaDocker, color: "#089CEC" },

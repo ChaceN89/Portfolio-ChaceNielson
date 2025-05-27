@@ -86,7 +86,7 @@ export default function Hero() {
 
         <motion.div
           {...animationInfo(delays[4])}
-          className="opacity-90 italic space-y-1 hero-gradient-text"
+          className="opacity-90 italic space-y-1"
         >
           <p>“Custom software. Creative solutions.</p>
           <p>Whether it's web or games—I’ve got you covered.”</p>

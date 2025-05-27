@@ -15,7 +15,7 @@ import IconLibrary from "../iconLibrary";
 import { BoldSpan } from "../../components/uiElements/InLineText";
 
 // Short description (blurb) to be displayed on the project card
-const short = <>A homepage built for the Glass Gecko Games team—highlighting our studio, games, and creative identity through polished web design.</>;
+const short = <>A homepage built to showcase our studio, games, and creative identity through polished, responsive web design.</>;
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
@@ -28,8 +28,6 @@ const long = (
     </p>
   </div>
 );
-
-
 
 export const glassGeckoGames = {
   id: "glass-gecko-games",

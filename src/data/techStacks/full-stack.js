@@ -10,13 +10,12 @@
 
 import IconLibrary from "../iconLibrary";
 
-
 export const fullstack = {
   id: "fullstack-development",
   name: "Full Stack Development",
   linkName: "Explore Full Stack Projects & Tools",
 
-  description: "I craft modern web applications from the ground up — building smooth, interactive frontends and robust backend systems tailored to performance, usability, and scalability.",
+  description: "I build full stack applications from frontend to backend — fast, functional, and custom tailored for performance and usability.",
 
   modalDescription: "This section showcases the frontend libraries, backend frameworks, cloud infrastructure, and DevOps tools I use to build full stack applications. From responsive UIs and API integrations to authentication, deployment, and analytics — each tool contributes to building scalable, production-ready systems.",
 
@@ -94,6 +93,7 @@ export const fullstack = {
       IconLibrary.NETLIFY,
       IconLibrary.RENDER,
       IconLibrary.RAILWAY,
+      IconLibrary.SUPABASE,
     ],
   },
   {

@@ -16,7 +16,7 @@ import { BoldSpan } from "../../components/uiElements/InLineText";
 import { FaSteam } from "react-icons/fa";
 
 // Short description (blurb) to be displayed on the project card
-const short = <>A relaxing fish-scaling game with 200K+ plays, 30K+ wishlists, and a full Steam release on the horizon.</>;
+const short = <>A relaxing fish-scaling game from the 2024 GMTK Game Jam, with 200K+ plays, 30K+ wishlists, and an upcoming Steam release.</>;
 
 // Long description for the modal page, providing detailed information about the project
 const long = (

@@ -14,7 +14,7 @@ export const gameDesign = {
   name: "Game Development", 
   description: "I create games that feel great to play — responsive, immersive, and thoughtfully designed from code to controls.",
 
-modalDescription: "This section highlights the tools, frameworks, and design patterns I use to create games from prototype to polish. From scripting and physics systems to shaders, animations, and editor tooling, each category below breaks down the core components of my game development workflow.",
+  modalDescription: "This section highlights the tools, frameworks, and design patterns I use to create games from prototype to polish. From scripting and physics systems to shaders, animations, and editor tooling, each category below breaks down the core components of my game development workflow.",
 
   commonTools: [
     IconLibrary.UNITY,             // Core engine

@@ -43,7 +43,8 @@ export const carouselProjects = [
   geoPredict,
   dicom3dPrint,
   voiceIdentification,
-  photoApp
+  jenga,
+  capstone
 ]
 
 
