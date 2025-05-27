@@ -67,7 +67,7 @@ export default function AboutMeHero() {
           Coding is how I express creativity — it's where logic meets imagination.
         </p>
 
-        <MyBtn sm callBack={() => ScrollToID("about-me")}
+        <MyBtn sm callBack={() => ScrollToID("tech-stacks")}
           GA_label='About Me Hero Button'
           >Learn More</MyBtn>
       </div>
