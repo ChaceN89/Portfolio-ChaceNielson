@@ -37,7 +37,7 @@ const long = (
 export const imageProcessor = {
   id: "image-processor",
   name: "Image Processor",
-  tags: ["Web App", "FastAPI"],
+  tags: ["Web App", "FastAPI", "Python", "TypeScript"],
   blurb: short,
   description: long,
   thumbnail: {

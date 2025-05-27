@@ -38,7 +38,7 @@ const long = (
 export const library = {
   id: "library",
   name: "PageFlow Library",
-  tags: ["Web App", "Next", "Django", "AWS"],
+  tags: ["Web App", "Next", "Django", "AWS", "Python", "JavaScript"],
   badge: "Personal Full-Stack Project",
   blurb: short,
   description: long,
@@ -64,9 +64,10 @@ export const library = {
   mainStack: [
     IconLibrary.NEXT,
     IconLibrary.DJANGO,
-    IconLibrary.AWS,
+    IconLibrary.PYTHON,
   ],
   extendedStack: [
+    IconLibrary.AWS,
     IconLibrary.SUPABASE,
     IconLibrary.S3,
     IconLibrary.POSTGRESQL,

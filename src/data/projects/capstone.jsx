@@ -35,7 +35,7 @@ const long = (
 export const capstone = {
   id: "capstone",
   name: <>Ocean CO<sub>2</sub> Condenser</>,
-  tags: ["Simulation", "Engineering", "Unity", "Blender"],
+  tags: ["Simulation", "Engineering", "Unity", "Blender", "C#"],
   blurb: short,
   thumbnail:{
     src: "capstone2.jpg",

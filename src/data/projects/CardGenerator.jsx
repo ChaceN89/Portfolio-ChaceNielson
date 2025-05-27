@@ -32,7 +32,7 @@ const long = (
 export const cardGenerator = {
   id: "card-generator",
   name: "Card Generator",
-  tags: ["Web App", "Game", "React", "Tailwind"],
+  tags: ["Web App", "Game", "React", "Tailwind", "JavaScript"],
   blurb: short,
   description: long,
   thumbnail:{

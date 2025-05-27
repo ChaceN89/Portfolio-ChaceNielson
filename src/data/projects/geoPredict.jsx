@@ -62,7 +62,7 @@ const long = (
 export const geoPredict = {
   id: "geo-predict", // id and folder name in the projects folder
   name: "Geothermal Drilling Prediction",
-  tags: ["Web App", "Machine Learning", "Data Visualization", "FastAPI","Tailwind","React", "CSS","Python"],
+  tags: ["Web App", "Machine Learning", "Data Visualization", "FastAPI", "Tailwind", "React", "CSS", "Python", "JavaScript"],
   blurb: short,
   description: long,
   thumbnail: {

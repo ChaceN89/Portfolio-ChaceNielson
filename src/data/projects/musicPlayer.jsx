@@ -31,7 +31,7 @@ const long = (
 export const musicPlayer = {
   id: "music-player",
   name: "Music Player",
-  tags: ["Web App", "Vue"],
+  tags: ["Web App", "Vue", "JavaScript"],
   blurb: short,
   description: long,
   thumbnail: {

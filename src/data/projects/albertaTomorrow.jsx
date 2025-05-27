@@ -30,11 +30,10 @@ const long = (
   </div>
 );
 
-
 export const albertaTomorrowHomepage = {
   id:"alberta-tomorrow-homepage",
   name: "Alberta Tomorrow Learning Hub",
-  tags: ["Web App", "Educational", "Next", "Tailwind", "CSS", "Express"],
+  tags: ["Web App", "Educational", "Next", "Tailwind", "CSS", "Express", "AWS", "Mapbox", "JavaScript"],
   badge: "Full-Stack Learning Hub",
   blurb: short,
   description: long,

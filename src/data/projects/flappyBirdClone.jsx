@@ -28,7 +28,7 @@ const long = (
 export const flappyBirdClone = {
   id: "flappy-bird-clone",
   name: "Flappy Bird Clone",
-  tags: ["Game", "Unity"],
+  tags: ["Game", "Unity", "C#"],
   blurb: short,
   description: long,
   thumbnail: {

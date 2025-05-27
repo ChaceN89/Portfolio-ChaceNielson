@@ -34,7 +34,7 @@ const long = (
 export const photoApp = {
   id: "photo-app",
   name: "Photo Collection App",
-  tags: ["Web App", "React", "MongoDB", "Express"],
+  tags: ["Web App", "React", "MongoDB", "Express", "JavaScript"],
   blurb: short,
   description: long,
   thumbnail: {

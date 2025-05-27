@@ -34,7 +34,7 @@ const long = (
 export const energyTomorrow = {
   id: "energy-tomorrow",
   name: "Energy Tomorrow",
-  tags: ["Game", "Simulation", "Unity"],
+  tags: ["Game", "Simulation", "Unity", "C#"],
   blurb: short,
   description: long,
   thumbnail: {

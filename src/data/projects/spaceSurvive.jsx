@@ -32,7 +32,7 @@ const long = (
 export const spaceSurvive = {
   id: "space-survive",
   name: "Space Survive",
-  tags: ["Game", "Unity"],
+  tags: ["Game", "Unity", "C#"],
   blurb: short,
   description: long,
 

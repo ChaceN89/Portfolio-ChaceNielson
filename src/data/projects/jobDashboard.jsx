@@ -31,7 +31,7 @@ const long = (
 export const jobDashboard = {
   id: "job-dashboard",
   name: "Job Dashboard",
-  tags: ["Web App", "Vue", "FastAPI"],
+  tags: ["Web App", "Vue", "FastAPI", "Python", "JavaScript"],
   blurb: short,
   description: long,
   thumbnail: {

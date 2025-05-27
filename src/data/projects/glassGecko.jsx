@@ -32,7 +32,7 @@ const long = (
 export const glassGeckoGames = {
   id: "glass-gecko-games",
   name: "Glass Gecko Games Homepage",
-  tags: ["Web App", "React", "Tailwind"],
+  tags: ["Web App", "React", "Tailwind", "CSS", "JavaScript","Game"],
   badge: "Animated Landing Page",
   blurb: short,
   description: long,

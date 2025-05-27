@@ -45,7 +45,7 @@ const long = (
 export const portfolio = {
   id: "portfolio",
   name: "My Portfolio",
-  tags: ["Web App", "React", "CSS", "Tailwind"],
+  tags: ["Web App", "React", "CSS", "Tailwind", "JavaScript"],
   blurb: short,
   description: long,
   thumbnail: {
