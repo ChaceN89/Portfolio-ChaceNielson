@@ -67,9 +67,9 @@ export default function ProjectShowcase({ project, background, nextId }) {
   const exitDis = 0.3
 
   // Image animations
-  const imageX = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], ['25%', '0%', '0%', '0%', '25%']);
+  const imageX = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], ['35%', '0%', '0%', '0%', '35%']);
   const imageOpacity = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], [0, 1, 1, 1, 0.2]);
-  const imageRotate = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], ['-10eg', '0deg', '0deg', '0deg', '10deg']);
+  const imageRotate = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], ['-15eg', '0deg', '0deg', '0deg', '15deg']);
   const imageY = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], ['100%', '0%', '0%', '0%', '-100%']);
   const imageScale = useTransform(centeredScroll, [-1, enterDis, 0, exitDis, 1], [0.8, 1, 1, 1, 0.8]);
 

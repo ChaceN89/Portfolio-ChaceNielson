@@ -43,7 +43,7 @@ export const dicom3dPrint = {
   description: long,
   thumbnail:{
     src: "3dPrint_8.jpg",
-    blurhash: "L8H@~^9F4.9F~qRj%M%M~qRj%M%M",
+    blurhash: "LKI5Y-9FxuIU4nIUf7j[~qt7s;of",
   },
   images: [
     { src: "3dPrint_8.jpg", blurhash: "LKI5Y-9FxuIU4nIUf7j[~qt7s;of" },

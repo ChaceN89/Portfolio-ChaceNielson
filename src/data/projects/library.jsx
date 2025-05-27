@@ -35,7 +35,6 @@ const long = (
 );
 
 
-
 export const library = {
   id: "library",
   name: "PageFlow Library",
@@ -45,22 +44,22 @@ export const library = {
   description: long,
   thumbnail:{
     src: "pageflow-0.jpg",
-    blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw",
+    blurhash: "LQHLVd%J%2NI4oIVWBxu~qoeayof",
   },
   images: [
-    { src: "pageflow-1.jpg", blurhash: "L8Pj4700D$?H004.D%Mx8_~q%MIV" },
-    { src: "pageflow-2.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
-    { src: "pageflow-3.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
-    { src: "pageflow-4.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
-    { src: "pageflow-5.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
-    { src: "pageflow-6.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
-    { src: "pageflow-7.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
-    { src: "pageflow-8.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
-    { src: "pageflow-9.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
-    { src: "pageflow-10.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
-    { src: "pageflow-11.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
-    { src: "pageflow-12.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
-    { src: "pageflow-13.jpg", blurhash: "LID9xL$$01OGcbx^s8i^%fsmozbw" },
+    { src: "pageflow-1.jpg", blurhash: "LPO3,[xYtlNf_4M|M_xCDij[jZad" },
+    { src: "pageflow-2.jpg", blurhash: "LZN^PQ-p_N%h8_-pIAIpIURjayax" },
+    { src: "pageflow-3.jpg", blurhash: "LZN^PQ-p_N%h8_-pIAIpIURjayax" },
+    { src: "pageflow-4.jpg", blurhash: "LZN^PQ-p_N%h8_-pIAIpIURjayax" },
+    { src: "pageflow-5.jpg", blurhash: "LZN^PQ-p_N%h8_-pIAIpIURjayax" },
+    { src: "pageflow-6.jpg", blurhash: "LZN^PQ-p_N%h8_-pIAIpIURjayax" },
+    { src: "pageflow-7.jpg", blurhash: "LZN^PQ-p_N%h8_-pIAIpIURjayax" },
+    { src: "pageflow-8.jpg", blurhash: "LZN^PQ-p_N%h8_-pIAIpIURjayax" },
+    { src: "pageflow-9.jpg", blurhash: "LZN^PQ-p_N%h8_-pIAIpIURjayax" },
+    { src: "pageflow-10.jpg", blurhash: "LZN^PQ-p_N%h8_-pIAIpIURjayax" },
+    { src: "pageflow-11.jpg", blurhash: "L770}TxtMwICo%flW8nh|}WCj:s," },
+    { src: "pageflow-12.jpg", blurhash: "L770}TxtMwICo%flW8nh|}WCj:s," },
+    { src: "pageflow-13.jpg", blurhash: "L770}TxtMwICo%flW8nh|}WCj:s," },
   ],
   mainStack: [
     IconLibrary.NEXT,
