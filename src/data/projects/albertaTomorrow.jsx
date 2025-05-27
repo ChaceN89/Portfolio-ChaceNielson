@@ -12,35 +12,40 @@
 
 import IconLibrary from "../iconLibrary";
 import { BoldSpan } from "@/components/uiElements/InLineText";
-import { FaHome } from "react-icons/fa";
+import { FaHome, FaMapMarkedAlt } from "react-icons/fa";
 
-const short = <>Interactive homepage and gateway for accessing Alberta Tomorrow’s <BoldSpan>sustainable land-use simulator</BoldSpan> and educational resources.</>;
+const short = <>Interactive homepage and central hub for accessing the <BoldSpan>land-use simulator</BoldSpan>, lesson plans, videos, and other educational resources.</>;
 
 const long = (
   <div className="space-y-2">
     <p>
-      The <BoldSpan>Alberta Tomorrow Homepage</BoldSpan> serves as the central access point for the simulator and associated educational tools. It introduces students and educators to Alberta’s environmental past, present, and future through interactive visuals, engaging media, and curriculum-aligned content.
+      The <BoldSpan>Alberta Tomorrow Homepage</BoldSpan> is the central entry point for the Alberta Tomorrow platform, connecting students and educators to land-use education, environmental history, and sustainability tools across Alberta.
     </p>
     <p>
-      Visitors are encouraged to explore the <BoldSpan>land-use simulator</BoldSpan>, which enables hands-on scenario planning involving forestry, agriculture, oil and gas, and other land uses. The homepage also provides access to other learning platforms such as <BoldSpan>Energy Tomorrow</BoldSpan> and <BoldSpan>Wildlife Tomorrow</BoldSpan>.
+      Designed to support both classroom and independent learning, the homepage includes information about the <BoldSpan>organization</BoldSpan>, an <BoldSpan>Indigenous Voices module</BoldSpan>, access to <BoldSpan>lesson plans</BoldSpan>, <BoldSpan>educational videos</BoldSpan>, and acts as a hub to explore the <BoldSpan>land-use simulator</BoldSpan> and future tools like <BoldSpan>Energy Tomorrow</BoldSpan> and <BoldSpan>Wildlife Tomorrow</BoldSpan>.
     </p>
     <p>
-      The frontend is built with <BoldSpan>Next.js and Tailwind CSS</BoldSpan>, featuring smooth scroll animations via <BoldSpan>Framer Motion</BoldSpan>. It is deployed as a static site using <BoldSpan>AWS S3 and CloudFront</BoldSpan>.
+      I designed and built the homepage as part of the broader Alberta Tomorrow platform team, where I also contribute to the development of the <BoldSpan>land-use simulator</BoldSpan> and related educational tools.
     </p>
   </div>
 );
 
+
 export const albertaTomorrowHomepage = {
   id:"alberta-tomorrow-homepage",
-  name: "Alberta Tomorrow Homepage",
+  name: "Alberta Tomorrow Learning Hub",
   tags: ["Web App", "Educational", "Next", "Tailwind", "CSS", "Express"],
+  badge: "Full-Stack Learning Hub",
   blurb: short,
   description: long,
+  
   thumbnail:{
     src: "abTomorrow-0.jpg",
     blurhash: "L%J@{^-.slkC.T-oWVj[EUa$WCj[",
   },
-  youtubeID: "MHDH_m0agFM", // youtube video - thumbnail is used as a placeholder while loading the video
+  
+  // youtube video - thumbnail is used as a placeholder while loading the video
+  youtubeID: "MHDH_m0agFM", 
   
   // list of images to display in the modal carousel
   images: [
@@ -57,10 +62,11 @@ export const albertaTomorrowHomepage = {
   extendedStack: [
     IconLibrary.FRAMER_MOTION,
     IconLibrary.REACT,
-    IconLibrary.SIMULATION,
     IconLibrary.SEO,
+    IconLibrary.MAPBOX_GL
   ],
   externalLinks: [
     { name: "Homepage", link: "https://albertatomorrow.ca/", icon: FaHome  },
+    { name: "Land-Use Simulator", link: "https://www.simulator.albertatomorrow.ca/", icon: FaMapMarkedAlt},
   ],
 };

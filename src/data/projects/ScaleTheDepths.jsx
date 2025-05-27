@@ -13,31 +13,33 @@
 
 import IconLibrary from "../iconLibrary";
 import { BoldSpan } from "../../components/uiElements/InLineText";
+import { FaSteam } from "react-icons/fa";
 
 // Short description (blurb) to be displayed on the project card
-const short = "Fishing game and winner of the 2024 GMTK Game Jam.";
+const short = <>A relaxing fish-scaling game with 200K+ plays, 30K+ wishlists, and a full Steam release on the horizon.</>;
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
   <div className="space-y-2">
     <p>
-      <BoldSpan>Scale The Depths</BoldSpan> was the winning entry for the <BoldSpan>2024 GMTK Game Jam</BoldSpan>, where the theme was "Built to Scale." Players control a robot tasked with scaling fish to feed hungry aquatic customers in a creative and literal interpretation of the theme. The game stood out among over 7,000 submissions, earning the title of <BoldSpan>Game Jam Winners</BoldSpan>.
+      <BoldSpan>Scale The Depths</BoldSpan> is the award-winning fish-scaling game that took first place in the <BoldSpan>2024 GMTK Game Jam</BoldSpan>. Built around the theme “Built to Scale,” players control a robot chef who scales fish to feed demanding underwater customers. The game was selected as the <BoldSpan>top entry out of 7,000+ submissions</BoldSpan>, praised for its originality, execution, and charm.
     </p>
     <p>
-      Since its release, the game has gained significant traction on <BoldSpan>Itch.io</BoldSpan>, receiving over <BoldSpan>200K views</BoldSpan> and maintaining a <BoldSpan>4.6-star rating</BoldSpan>. Its success has also sparked interest in a full version, resulting in over <BoldSpan>30K wishlists</BoldSpan> on <BoldSpan>Steam</BoldSpan>.
+      Since launch, the demo has attracted <BoldSpan>200,000+ plays on Itch.io</BoldSpan> and maintains a <BoldSpan>4.6-star rating</BoldSpan>. Its popularity led to a full version now in active development, with over <BoldSpan>30,000 wishlists</BoldSpan> on <BoldSpan>Steam</BoldSpan>.
     </p>
-
     <p>
-      This project highlights creative gameplay design, polished visuals, and seamless collaboration with a diverse team of developers, resulting in a highly engaging and award-winning experience.
+      This project reflects my passion for creative gameplay, Unity-based polish, and collaborative teamwork. I contributed to core gameplay systems, visual polish, and performance optimization throughout the jam and now in the full version's ongoing development.
     </p>
   </div>
 );
+
 
 
 export const scaleTheDepths = {
   id: "scale-the-depths",
   name: "Scale The Depths",
   tags: ["Game", "Unity"],
+  badge: "Game Jam Winning Video Game",
   blurb: short,
   description: long,
   thumbnail:{
@@ -59,9 +61,12 @@ export const scaleTheDepths = {
   extendedStack:[
     IconLibrary.PLASTIC_SCM,
     IconLibrary.TEAM_COLLABORATION,
+    IconLibrary.SHADER_GRAPH,
+    IconLibrary.INSPECTOR_TOOLS,
   ],
   externalLinks: [
-    { name: "GMTK Game Jam 2024", link: "https://itch.io/jam/gmtk-2024", icon:IconLibrary.ITCHIO.icon },
+    { name: "Play On Itch.io", link: "https://serpexnessie.itch.io/scale-the-depths", icon:IconLibrary.ITCHIO.icon },
+    { name: "Steam Page", link: "https://store.steampowered.com/app/3198890/Scale_the_Depths/", icon: FaSteam },
     { name: "Top 20 Results Video", link: "https://youtu.be/gqCAeFjB8Uo?si=Wxp0ATxZGN4vtOGH&t=1133", icon: IconLibrary.YOUTUBE.icon },
   ],
 };

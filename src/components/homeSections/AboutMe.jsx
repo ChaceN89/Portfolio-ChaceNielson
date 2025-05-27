@@ -69,9 +69,9 @@ export default function AboutMe() {
   }, [animationsEnabled, bottomOpacity, bottomY])
 
   return (
-    <motion.section ref={sectionRef} className="py-12 px-4  max-w-4xl mx-auto" id="lets-connect">
+    <motion.section ref={sectionRef} className="py-20 px-4  max-w-4xl mx-auto space-y-20" id="lets-connect">
       {/* Skill Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2  gap-6 px-6 lg:px-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 px-6 lg:px-10">
         {skills.map(({ title, description, icon: Icon, bg, text }, index) => {
           const cardProgress = useTransform(
             scrollYProgress,
@@ -109,7 +109,7 @@ export default function AboutMe() {
       {/* CTA */}
       <motion.div
         style={animatedStyle}
-        className="mt-16 text-center "
+        className="text-center "
       >
         <h3 className="text-2xl font-semibold">Let's Build Something Together</h3>
         <p className="mt-2 text-sm opacity-80">

@@ -13,33 +13,29 @@
 
 import IconLibrary from "../iconLibrary";
 import { BoldSpan } from "../../components/uiElements/InLineText";
-import { Thumbnail } from "react-pdf";
 
 // Short description (blurb) to be displayed on the project card
-const short = "The website built for the Glass Gecko Games team.";
+const short = <>A homepage built for the Glass Gecko Games team—highlighting our studio, games, and creative identity through polished web design.</>;
 
 // Long description for the modal page, providing detailed information about the project
 const long = (
   <div className='space-y-2'>
     <p>
-      This website was created for the <BoldSpan>Glass Gecko Games</BoldSpan> team. Built using <BoldSpan>React</BoldSpan> and <BoldSpan>Tailwind CSS</BoldSpan>, it features animations and <BoldSpan>blurhashing</BoldSpan> of images and backgrounds for a seamless and visually appealing experience. 
-      The site highlights <BoldSpan>games</BoldSpan> and the <BoldSpan>team</BoldSpan>.
+      I designed and developed this homepage for the <BoldSpan>Glass Gecko Games</BoldSpan> team, using <BoldSpan>React</BoldSpan> and <BoldSpan>Tailwind CSS</BoldSpan>. It features <BoldSpan>Framer Motion</BoldSpan> animations and <BoldSpan>blurhash</BoldSpan>-based image loading for a smooth, visually polished experience that highlights both our <BoldSpan>games</BoldSpan> and <BoldSpan>team</BoldSpan>.
     </p>
     <p>
-      The website ensures an engaging user experience through improved <BoldSpan>organization</BoldSpan>, 
-      animations using <BoldSpan>Framer Motion</BoldSpan>, and the use of <BoldSpan>reusable components</BoldSpan>. 
-      Deployed on <BoldSpan>Netlify</BoldSpan> using <BoldSpan>continuous integration</BoldSpan>, it demonstrates the 
-      effective integration of <BoldSpan>modern web technologies</BoldSpan> to create a dynamic and interactive platform for showcasing our team's work.
+      The project combines clean component architecture with a <BoldSpan>bright, playful design</BoldSpan>, delivering a modern UI that feels both polished and approachable. Built with <BoldSpan>reusable components</BoldSpan> and <BoldSpan>responsive layouts</BoldSpan>, and deployed via <BoldSpan>Netlify</BoldSpan> with <BoldSpan>continuous integration</BoldSpan>, it reflects my focus on user experience, maintainability, and performance—all while capturing the creative spirit of the studio.
     </p>
   </div>
 );
 
-const proj_id="glass-gecko-games"
+
 
 export const glassGeckoGames = {
-  id: proj_id,
-  name: <>Glass Gecko Games Homepage</>,
-  tags: ["Web App", "React", "Tailwind",],
+  id: "glass-gecko-games",
+  name: "Glass Gecko Games Homepage",
+  tags: ["Web App", "React", "Tailwind"],
+  badge: "Animated Landing Page",
   blurb: short,
   description: long,
   thumbnail:{

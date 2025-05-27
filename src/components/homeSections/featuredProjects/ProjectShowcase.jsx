@@ -143,14 +143,19 @@ export default function ProjectShowcase({ project, background, nextId }) {
       >
 
         <motion.div
-          className={` lg:text-right w-full lg:w-1/2 space-y-4 ${textColor}  max-w-2xl `}
+          className={` lg:text-right w-full lg:w-1/2 space-y-4 ${textColor}  max-w-2xl  `}
           style={textStyle}
         >
 
           {/* Title */}
-          <h2 className="text-4xl font-bold">{project.name}</h2>
-          <hr className={`${borderColor} border-t   my-2 lg:ml-20`} />
-          <p className="text-xl opacity-90 italic">{project.blurb}</p>
+          <div className='space-y-2 lg:ml-10 '>
+            <h2 className="text-4xl font-bold ">{project.name}</h2>
+            <hr className={`${borderColor} border-t  my-2 `} />
+            <h6 className="text-xl ">{project.badge} </h6>
+            <p className="opacity-90 italic  lg:max-w-[53ch] lg:ml-auto lg:text-right">
+              {project.blurb}
+            </p>
+          </div>
 
 
           {/* Icons and btn */}
@@ -184,7 +189,7 @@ export default function ProjectShowcase({ project, background, nextId }) {
         >
           <Tooltip text="View Case">
             <div 
-              className="relative inline-block overflow-hidden rounded-2xl max-w-[90vw] group cursor-pointer"
+              className="relative inline-block overflow-hidden rounded-3xl max-w-[90vw] group cursor-pointer"
               onClick={() => handleProjectClick(project.id)}
             >
               {/* Ripple Layer */}
@@ -198,7 +203,7 @@ export default function ProjectShowcase({ project, background, nextId }) {
                 src={`/projects/${project.id}/${project.thumbnail.src}`}
                 alt={project.name}
                 blurHash={project.thumbnail.blurhash}
-                className="aspect-[4/3] max-h-[30rem] object-cover w-full h-auto border-2 border-white shadow-[0_0_30px_rgba(255,255,255,0.1)] rounded-2xl"
+                className="aspect-[4/3] max-h-[30rem] object-cover w-full h-auto border-2 border-white shadow-[0_0_30px_rgba(255,255,255,0.1)] rounded-3xl"
               />
             </div>
           </Tooltip>
