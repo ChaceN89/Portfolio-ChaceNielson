@@ -20,6 +20,8 @@ const responsive = {
   mobile: { breakpoint: { max: 640, min: 0 }, items: 1 },
 };
 
+import SelectArrow from '../uiElements/SelectArrow';
+
 const CustomLeftArrow = ({ onClick }) => (
   <button
     onClick={onClick}
@@ -50,9 +52,10 @@ export default function ProjectImageCarousel({ images = [], id, title, hidePhoto
         autoPlay
         autoPlaySpeed={2500}
         keyBoardControl
-        customLeftArrow={<CustomLeftArrow />}
-        customRightArrow={<CustomRightArrow />}
+        customLeftArrow={<SelectArrow direction="left" />}
+        customRightArrow={<SelectArrow direction="right" />}
         arrows
+        swipeable
         itemClass="px-1"
         containerClass="w-full h-full"
       >

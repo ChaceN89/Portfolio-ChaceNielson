@@ -19,12 +19,12 @@
 import { carouselProjects } from '@/data/pageData/projectData';
 
 // utils
-import { openModal } from '@/utils/utils';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 // components
 import MyBtn from '@/components/buttons/MyBtn';
 import ProjectCard from '@/components/projects/ProjectCard';
+import SelectArrow from '../uiElements/SelectArrow';
 
 // Library components
 import Carousel from 'react-multi-carousel';
@@ -51,6 +51,8 @@ export default function ProjectCarousel() {
         pauseOnHover
         draggable
         swipeable
+        customLeftArrow={<SelectArrow direction="left" />}
+        customRightArrow={<SelectArrow direction="right" />}
         className="w-full"
         itemClass="px-5 py-1"
       >
