@@ -46,25 +46,28 @@ export default function AboutMeHero() {
       style={animatedStyle}
     >
       {/* Image */}
-      <div className="min-w-48 lg:max-w-60 overflow-hidden rounded-xl rounded-bl-[100px] hover:rounded-bl-xl rounded-tr-[100px] hover:rounded-tr-xl transition-all duration-400 ease-in-out flex justify-center "
-        style={{ width: "288px", height: "288px" }} // 72x72
-
+      <div className="min-w-48 lg:max-w-80 overflow-hidden rounded-xl rounded-bl-[100px] hover:rounded-bl-xl rounded-tr-[100px] hover:rounded-tr-xl transition-all duration-400 ease-in-out flex justify-center h-56 w-48  sm:h-80 sm:w-72 "
       >
         <ImageComponent
           src="/portraits/pngs/chace-2.png"
           alt="Chace Nielson"
-          className="h-56 md:h-72 w-56 md:w-72 object-cover object-top flex justify-center"
-          imgClass="w-full h-full transition-transform duration-400 ease-in-out hover:scale-110 "
+          className="h-full w-full object-cover object-top flex justify-center"
+          imgClass="w-full h-full transition-transform duration-400 ease-in-out hover:scale-110"
         />
       </div>
 
       {/* Text */}
-      <div className="max-w-xl text-center md:text-left space-y-4">
+      <div className="max-w-xl text-center md:text-left space-y-2">
         <h2 className="text-3xl font-bold">A Little About Me</h2>
         <p className="text-lg leading-relaxed">
           Hey, I'm <strong>Chace Nielson</strong> — a software engineer with a passion for building intuitive websites and immersive games.
           Whether I'm crafting smooth user interfaces or designing engaging game mechanics, I love turning ideas into interactive experiences.
+        </p>
+        <p className="text-lg leading-relaxed">
+          I care deeply about accessibility and inclusivity, and I build with everyone in mind — creating experiences that are intuitive, enjoyable, and usable for all.
+        </p>
           Coding is how I express creativity — it's where logic meets imagination.
+        <p className="text-lg leading-relaxed">
         </p>
 
         <MyBtn sm callBack={() => ScrollToID("tech-stacks")}
