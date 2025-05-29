@@ -66,8 +66,8 @@ export default function AboutMeHero() {
         <p className="text-lg leading-relaxed">
           I care deeply about accessibility and inclusivity, and I build with everyone in mind — creating experiences that are intuitive, enjoyable, and usable for all.
         </p>
-          Coding is how I express creativity — it's where logic meets imagination.
         <p className="text-lg leading-relaxed">
+          Coding is how I express creativity — it's where logic meets imagination.
         </p>
 
         <MyBtn sm callBack={() => ScrollToID("tech-stacks")}
