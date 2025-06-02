@@ -49,7 +49,7 @@ export const fullstack = {
       IconLibrary.PWA,
       IconLibrary.SEO,
       IconLibrary.CHART_JS,
-      IconLibrary.MAPBOX_GL,
+      IconLibrary.MAPBOX,
     ],
   },
   {

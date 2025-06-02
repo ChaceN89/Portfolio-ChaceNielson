@@ -65,7 +65,7 @@ export const albertaTomorrowWork = {
     IconLibrary.S3,
     IconLibrary.VUE,
     IconLibrary.CSS,
-    IconLibrary.MAPBOX_GL,
+    IconLibrary.MAPBOX,
     IconLibrary.UNITY,
     IconLibrary.BLENDER,
   ],

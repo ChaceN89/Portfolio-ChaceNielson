@@ -10,7 +10,7 @@ import { SiChartdotjs, SiMapbox } from "react-icons/si";
 const folder = "generalTech";
 
 const generalTechIcons = {
-  MAPBOX_GL: { name: "Mapbox GL", icon: SiMapbox, color: "black" },
+  MAPBOX: { name: "Mapbox", icon: SiMapbox, color: "black" },
   CHART_JS: { name: "Chart.js", icon: SiChartdotjs, color: '#FE777B' },
   EMAIL_JS: { name: "Email.js", svg_path: `${folder}/emailjs.svg` },
   VS_CODE: { name: "VS Code", svg_path: `${folder}/vs-code.svg` },

@@ -60,7 +60,7 @@ export const albertaTomorrowHomepage = {
   ],
   extendedStack: [
     IconLibrary.FRAMER_MOTION,
-    IconLibrary.MAPBOX_GL,
+    IconLibrary.MAPBOX,
     IconLibrary.REACT,
     IconLibrary.SEO,
   ],
