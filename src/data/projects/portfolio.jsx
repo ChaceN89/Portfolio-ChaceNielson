@@ -73,8 +73,10 @@ export const portfolio = {
     IconLibrary.BLURHASH,
   ],
   externalLinks: [
-    { name: "Version 1", link: "https://portfolio-chace-nielson.vercel.app/", icon: IconLibrary.WORLD.icon },
-    { name: "Version 1 Code", link: "https://github.com/ChaceN89/Portfolio-ChaceNielson", icon: IconLibrary.GITHUB.icon },
-    { name: "Version 2 Code",  link: "https://github.com/ChaceN89/Portfolio-ChaceNielson-V2", icon: IconLibrary.GITHUB.icon },
+    { name: "V3 Code",  link: "https://github.com/ChaceN89/Portfolio-ChaceNielson", icon: IconLibrary.GITHUB.icon },
+    { name: "V2 Link", link: "https://portfolio-chace-nielson.vercel.app/", icon: IconLibrary.WORLD.icon },
+    { name: "V2 Code",  link: "https://github.com/ChaceN89/Portfolio-ChaceNielson/tree/Version-2-Code", icon: IconLibrary.GITHUB.icon },
+    { name: "V1 Link", link: "https://portfolio-chace-nielson.vercel.app/", icon: IconLibrary.WORLD.icon },
+    { name: "V1 Code", link: "https://github.com/ChaceN89/Portfolio-ChaceNielson/tree/Version-1-Code", icon: IconLibrary.GITHUB.icon },
   ]
 };
