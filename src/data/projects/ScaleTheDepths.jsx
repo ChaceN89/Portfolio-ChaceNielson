@@ -38,7 +38,7 @@ export const scaleTheDepths = {
   id: "scale-the-depths",
   name: "Scale The Depths",
   tags: ["Game", "Unity", "C#"],
-  badge: "Game Jam Winning Video Game",
+  badge: "GMTK Game Jam Winner",
   blurb: short,
   description: long,
   thumbnail:{
