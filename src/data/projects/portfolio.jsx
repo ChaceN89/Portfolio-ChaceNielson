@@ -21,26 +21,24 @@ const short = "Showcasing my skills and projects with a modern, streamlined port
 const long = (
   <div className="space-y-2">
     <p>
-      <BoldSpan>My Portfolio</BoldSpan> is a personal website designed to showcase my technical skills, projects, and contact information. Built with <BoldSpan>React</BoldSpan>, <BoldSpan>Tailwind CSS</BoldSpan>, and <BoldSpan>Vite</BoldSpan>, the portfolio features a clean, modern design that highlights my work.
+      <BoldSpan>My Portfolio</BoldSpan> has evolved through multiple versions, each reflecting my growth as a developer and designer. Built with <BoldSpan>React</BoldSpan>, <BoldSpan>Tailwind CSS</BoldSpan>, <BoldSpan>Vite</BoldSpan> and other libraries, it showcases my skills, projects, and ongoing learning process.
     </p>
     <p>
-      <BoldSpan>Version 1</BoldSpan> of my portfolio served as my first personal branding website, but it included too much extra information and lacked organization in showcasing projects. While it effectively demonstrated the basics of web development, it left room for improvement in terms of design and usability.
+      <BoldSpan>Version 1</BoldSpan> was my first personal branding site. It was simple, but lacked a clear structure and user-friendly navigation. It taught me the basics of React, but the user experience was far from ideal.
     </p>
     <div>
-      <BoldSpan>Version 2</BoldSpan> addresses these shortcomings with several enhancements:
-      <ul className="list-disc list-inside pl-5">
-        <li>Implemented <BoldSpan>blurhashing</BoldSpan> to blur images during loading, enhancing performance and aesthetics.</li>
-        <li>Integrated <BoldSpan>Framer Motion</BoldSpan> for animations, adding dynamic interactions to create a polished experience.</li>
-        <li>Streamlined the layout and navigation to better organize projects and skills.</li>
-        <li><BoldSpan>Modal routing</BoldSpan> is used to display skills and projects over the main page.</li>
-        <li>Enhanced responsiveness and accessibility for a consistent experience across devices.</li>
-      </ul>
+      <BoldSpan>Version 2</BoldSpan> improved upon this by adding animations, better design, and user-friendly features, but I overcomplicated it with too much personal content and images. The best take away from this one was that simplicity is best.
+
     </div>
     <p>
-      Deployed on <BoldSpan>Vercel</BoldSpan>, the portfolio demonstrates modern web development practices, with features like responsive design, SEO optimization, and progressive web app (PWA) functionality.
+      <BoldSpan>Version 3</BoldSpan>, is more streamlined, with a focus on my freelancing and full-stack design skills. New projects are easier to add, and the portfolio is more aligned with my professional goals.
+    </p>
+    <p>
+      I plan to continue iterating as I learn new techniques and refine my design and development skills, ensuring my portfolio grows along with my career.
     </p>
   </div>
 );
+
 
 export const portfolio = {
   id: "portfolio",
@@ -49,13 +47,14 @@ export const portfolio = {
   blurb: short,
   description: long,
   thumbnail: {
-    src: "portfolio0.jpg",
+    src: "portfolio-v3.jpg",
     blurhash: "C78g,54m9F_4X9V?aexv",
   },
   images: [
-    { src: "portfolio0.jpg", blurhash: "C78g,54m9F_4X9V?aexv" },
-    { src: "portfolio1.jpg", blurhash: "C78g,54m9F_4X9V?aexv" },
-    { src: "portfolio2.jpg", blurhash: "L78g,54m9F_4X9V?aexv9Ft7s;I." },
+    { src: "portfolio-v3.jpg", blurhash: "L19a8J-=8_Dh_3tRMxIA00RP.8x]" },
+    { src: "portfolio-v2.jpg", blurhash: "LICj3500xu?c00?wRjRNM{a{WBWY" },
+    { src: "portfolio-v2-2.jpg", blurhash: "LLJ*r1Rj00t7~qof9Fj[00ae_3oe" },
+    { src: "portfolio-v1.jpg", blurhash: "L78g,54m9F_4X9V?aexv9Ft7s;I." },
   ],
   mainStack: [
     IconLibrary.REACT,
@@ -74,7 +73,7 @@ export const portfolio = {
   ],
   externalLinks: [
     { name: "V3 Code",  link: "https://github.com/ChaceN89/Portfolio-ChaceNielson", icon: IconLibrary.GITHUB.icon },
-    { name: "V2 Link", link: "https://portfolio-chace-nielson.vercel.app/", icon: IconLibrary.WORLD.icon },
+    { name: "V2 Link", link: "https://portfolio-chace-nielson-delta.vercel.app/", icon: IconLibrary.WORLD.icon },
     { name: "V2 Code",  link: "https://github.com/ChaceN89/Portfolio-ChaceNielson/tree/Version-2-Code", icon: IconLibrary.GITHUB.icon },
     { name: "V1 Link", link: "https://portfolio-chace-nielson.vercel.app/", icon: IconLibrary.WORLD.icon },
     { name: "V1 Code", link: "https://github.com/ChaceN89/Portfolio-ChaceNielson/tree/Version-1-Code", icon: IconLibrary.GITHUB.icon },
