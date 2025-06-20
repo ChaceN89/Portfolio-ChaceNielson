@@ -1,199 +1,262 @@
-/**
- * Filename: index.css
- * Author: Chace Nielson
- * Created: May 6th, 2025
- * Updated: May 6th, 2025
- * 
- * Description:
- * This stylesheet cotains global/base styles for the website. It includes
- * definitions for the primary and secondary color schemes, as well as
- * utility classes for spacing, text alignment, and other common styles.
- * 
- * Notes
- *    - This file is imported by all other stylesheets in the project if they need access to its styles specifically, jsx does not need to import this file
- *    - It is used to define global styles and variables that are shared across
- *    Tailwind 4 https://tailwindcss.com/blog/tailwindcss-v4
- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* IMport fonts and tailwind */
-@import url('https://fonts.googleapis.com/css2?family=Lexend&family=Open+Sans&family=Roboto&family=Lato&family=Montserrat&family=Nunito&family=Poppins:wght@400;700&family=Bebas+Neue&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend");
 
-@import "tailwindcss";
-
-@custom-variant dark (&:where(.dark, .dark *));
-
-
-/* Theme for the site  */
-@theme {
-  /* === Typography === */
-  --font-title-text: "Lexend", sans-serif;        /* Display titles, headers */
-  --font-main-text: "Montserrat", sans-serif;     /* Body text */
-
-  /* === Primary Backgrounds (light, clean, elegant) === */
-  --color-primary: rgb(255, 245, 250);             /* Blush white */
-  --color-primary-alt: rgb(235, 245, 255);         /* Light icy blue */
-
-  /* === Secondary (Dark UI Base) === */
-  --color-secondary: rgb(35, 31, 31);              /* Deep black-gray (text / backgrounds) */
-  --color-secondary-alt: rgb(17, 17, 17);          /* Slate gray (cards / contrast panels) */
-
-  /* === Accent (Cool Teal for interactive elements) === */
-  --color-accent: rgb(0, 191, 166);                /* Teal accent (buttons, icons) */
-  --color-accent-alt: rgb(102, 211, 194);          /* Soft teal (hover/secondary accent) */
-
-  /* === Tertiary (Warm tone for CTAs, highlights) === */
-  --color-tertiary: rgb(255, 153, 102);            /* Burnt peach (alerts, highlights) */
-  --color-tertiary-alt: rgb(255, 194, 161);        /* Light peach (backgrounds, hover) */
-
-  --spacing-nav-height: 4rem
-
+body{
+  @apply font-montserrat
+}
+.titleFont{
+  @apply font-lato
 }
 
-/* Headers */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-title-text);
+@layer components {
+  /* for all sections */
+  .section {
+    @apply  min-h-screen py-10 container mx-auto px-2 sm:px-7 md:px-1
+  }
+
+  /* for introduction paragraph */
+  .introParagraph{
+    @apply place-self-stretch text-justify sm:px-10 lg:px-6 xl:px-8 2xl:px-10
+  }
+  .introParagraph > p{
+    @apply p-2
+  }
+
+
+  /* grid list for projects and hobbies */
+  .projectCardList {
+    @apply grid
+      grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 
+      mx-10 md:mx-14 
+      gap-4 lg:gap-6 xl:gap-8
+      text-xs  md:text-sm
+      pt-6 justify-items-stretch
+  }
+
+
+  /* items for contact page */
+  .contactLabel{
+    @apply block mb-2 text-sm font-medium text-gray-300
+  }
+  .contactInput{
+    @apply block w-full p-2.5 shadow-lg rounded-lg bg-gray-50 bg-opacity-10 backdrop-blur-xl
+  }
+  .contactButton{
+    @apply bg-black text-white rounded-2xl bg-opacity-20 backdrop-blur-xl shadow-lg font-medium py-3 px-6 w-fit hover:bg-white hover:text-black
+  }
+
+
+  /* position elements for gallery using tailwind */
+  .model{
+    @apply w-full fixed top-0 left-0 flex justify-center items-center bg-black bg-opacity-70
+  }
+  .isOpen{
+    @apply  select-none
+  }
+  .model > img{
+    @apply w-auto max-w-full h-auto max-h-full block p-10 mx-auto
+  }
 }
 
-h1 {
-  font-size: clamp(2.5rem, 10vw, 4.5rem); /* 36px - 72px */
-  font-weight: 700;
-}
-h2 {
-  font-size: clamp(2rem, 9vw, 3.75rem); /* 32px - 60px */
-  font-weight: 600;
-}
-h3 {
-  font-size: clamp(1.75rem, 8vw, 3.25rem); /* 28px - 52px */
-  font-weight: 500;
-}
-h4 {
-  font-size: clamp(1.5rem, 6vw, 2.5rem); /* 24px - 40px */
-  font-weight: 400;
-}
-h5 {
-  font-size: clamp(1.25rem, 5vw, 1.75rem); /* 20px - 28px */
-  font-weight: 300;
-}
-h6 {
-  font-size: clamp(1rem, 4vw, 1.15rem); /* 16px - 18.4px */
-  font-weight: 100;
+/* transisiton properties of gallery using regular css */
+.modal {
+  transition: opacity .4s ease, visibility .4s ease transform .5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0);
+  overflow: hidden;
+  z-index: 999;
 }
 
-/* Paragraphs */
-p {
-  font-size: clamp(0.8rem, 3vw, 1rem); /* 16px - 18.4px */
-  line-height: 1.5;
-  font-weight: 400;
-}
-small {
-  font-size: 0.875rem;
-  font-size: clamp(0.7rem, 2vw, 0.875rem); /* 14px - 16px */
-  line-height: 1.25;
-  font-weight: 300;
+.model.isOpen {
+  visibility: visible;
+  opacity: 1;
+  transition-duration: .4s;
+  transform: scale(1);
 }
 
-/* No Scroll bar */
-html::-webkit-scrollbar, 
+
+.closeModal{
+  @apply   z-50 p-1 fixed 
+  top-2 
+  right-2
+  hover:text-white hover:opacity-100 
+  opacity-50 
+  hover:scale-150 
+  cursor-pointer
+}
+
+
+/* for gallery layout with responsive layout */
+@media only screen and (max-width: 400px) {
+  .gallery{
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    -column-count: 1;
+    -webkit-column-width:100%;
+    -moz-column-width:100%;
+    -column-width:100%;
+  } 
+}
+
+@media only screen and (min-width: 400px) {
+  .gallery{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    -column-count: 2;
+    -webkit-column-width:50%;
+    -moz-column-width:50%;
+    -column-width:50%;
+  } 
+}
+
+@media only screen and (min-width: 600px) {
+  .gallery{
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    -column-count: 3;
+    -webkit-column-width:33%;
+    -moz-column-width:33%;
+    -column-width:33%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .gallery{
+    -webkit-column-count:4;
+    -moz-column-count: 4;
+    -column-count: 4;
+    -webkit-column-width:25%;
+    -moz-column-width:25%;
+    -column-width:25%;
+  }
+}
+
+
+@media only screen and (min-width: 1400px) {
+  .gallery{
+    -webkit-column-count: 5;
+    -moz-column-count: 5;
+    -column-count: 5;
+    -webkit-column-width:20%;
+    -moz-column-width:20%;
+    -column-width:20%;
+  }
+}
+
+
+
+
+
+/* remove scrollbar on text areas */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* remove main scroll bar */
+/* hide scrollbar but allow scrolling */
+body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll; 
+}
+
 body::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
-
-/* No scroll for individual elements - use on a single overflow component you don't want to overflow */
-.scroll-element {
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer 11 */
-}
-
-.scroll-element::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+  display: none; /* for Chrome, Safari, and Opera */
 }
 
 
-/* For changinfrom light to dark and dark to ligh */
-body.changing-theme * {
-  transition: none !important;
+/* animations on scroll */
+/* class for when things are hidden */
+.hiddenClass {
+  opacity: 0;
+  filter: blur((5px));
+  translate: translateX(-100%);
+  transition: all 0.5s;
 }
 
-/* Global HTML & Body styles */
-html, body {
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
-  font-family: var(--font-main-text);
-  overscroll-behavior: none;
+/* class for when thigns are shown */
+.showClass {
+  opacity: 1;
+  transition-delay: 400ms; /* speed to transition delay from when its on the screen to visible*/
 }
 
-/* Dark mode override - manual */
-html.dark, .dark body {
-  background-color: --alpha(var(--color-secondary) / 70%);
-  color: var(--color-primary);
+/* if user doesn't want transitions with browser preference */
+@media(prefers-reduced-motion){
+  .hiddenClass{
+    transition:none
+  }
 }
 
 
-.hero-gradient-text {
-  @apply bg-gradient-to-br 
-         from-secondary-alt via-secondary to-accent 
-         dark:from-primary dark:via-primary-alt dark:to-accent-alt
-         text-transparent bg-clip-text;
-}
-
-.hero-gradient-bg {
-  @apply bg-gradient-to-br 
-         from-secondary-alt via-secondary to-accent 
-         dark:from-primary dark:via-primary-alt dark:to-accent-alt;
+/* main color of text and the background */
+html {
+    color: rgb(255, 255, 255);
+    background-repeat: no-repeat;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    /* white with angles white slashes */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='900' height='250' preserveAspectRatio='none' viewBox='0 0 900 250'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1276%26quot%3b)' fill='none'%3e%3crect width='900' height='250' x='0' y='0' fill='rgba(22%2c 23%2c 24%2c 1)'%3e%3c/rect%3e%3cpath d='M14 250L264 0L447 0L197 250z' fill='url(%23SvgjsLinearGradient1277)'%3e%3c/path%3e%3cpath d='M150.5 250L400.5 0L477 0L227 250z' fill='url(%23SvgjsLinearGradient1277)'%3e%3c/path%3e%3cpath d='M311 250L561 0L682.5 0L432.5 250z' fill='url(%23SvgjsLinearGradient1277)'%3e%3c/path%3e%3cpath d='M463.5 250L713.5 0L928 0L678 250z' fill='url(%23SvgjsLinearGradient1277)'%3e%3c/path%3e%3cpath d='M896 250L646 0L467.5 0L717.5 250z' fill='url(%23SvgjsLinearGradient1278)'%3e%3c/path%3e%3cpath d='M723.5 250L473.5 0L347.5 0L597.5 250z' fill='url(%23SvgjsLinearGradient1278)'%3e%3c/path%3e%3cpath d='M602 250L352 0L137.5 0L387.5 250z' fill='url(%23SvgjsLinearGradient1278)'%3e%3c/path%3e%3cpath d='M441.5 250L191.5 0L136 0L386 250z' fill='url(%23SvgjsLinearGradient1278)'%3e%3c/path%3e%3cpath d='M733.8564474423836 250L900 83.85644744238351L900 250z' fill='url(%23SvgjsLinearGradient1277)'%3e%3c/path%3e%3cpath d='M0 250L166.1435525576165 250L 0 83.85644744238351z' fill='url(%23SvgjsLinearGradient1278)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1276'%3e%3crect width='900' height='250' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1277'%3e%3cstop stop-color='rgba(138%2c 140%2c 143%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(138%2c 140%2c 143%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1278'%3e%3cstop stop-color='rgba(138%2c 140%2c 143%2c 0.2)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(138%2c 140%2c 143%2c 0.2)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
 }
 
 
 
+/* Carousel.css */
 
+.carousel-container {
+  position: relative;
+  width: 100%;
+  padding-top: 3rem;
+}
 
-/* Important Global Styles */
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
 
-/* Global noise background */
-.noise-bg {
+.carousel-item {
   position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-
-  filter: url(#noiseFilter);
-  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out;
 }
 
-/* small shadow to outline text subtly */
-.my-drop-shadow {
-  filter: drop-shadow(2px 2px 0px var(--color-secondary));  
-}
-.dark .my-drop-shadow {
-  filter: drop-shadow(2px 2px 0px var(--color-primary)); /* Opposite for dark */
-}
-
-.black-drop-shadow {
-  filter: drop-shadow(1px 2px 1.5px var(--color-secondary));
-}
-
-/* Large shadow to conve depth */
-.my-drop-shadow-lg {
-  filter: drop-shadow(12px 12px 3px var(--color-secondary));
-}
-.dark .my-drop-shadow-lg {
-  filter: drop-shadow(12px 12px 3px var(--color-primary));
+.control-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 9999px;
+  transition: background 0.3s;
 }
 
-/* Outlined text class */
-.outlined-text-dark {
-  text-shadow:
-    -1.5px -1.5px 0 black,  
-     1.5px -1.5px 0 black,
-    -1.5px  1.5px 0 black,
-     1.5px  1.5px 0 black;
-}
-.outlined-text-light {
-  text-shadow:
-    -1.5px -1.5px 0 white,  
-     1.5px -1.5px 0 white,
-    -1.5px  1.5px 0 white,
-     1.5px  1.5px 0 white;
+.control-arrow:hover {
+  background: rgba(255, 255, 255, 0.7);
+  transform: scale(1.2);
 }
 
+.carousel-control.left {
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
 
-
+.carousel-control.right {
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+}
