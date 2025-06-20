@@ -2,6 +2,8 @@
 
 Welcome to the repository for Chace Nielson's portfolio. This site showcases my skills, work experience, projects, and more. The application has been migrated to **React + Vite** for improved performance and development efficiency.
 
+This is the version 2 application - there is a newer version in the master branch of this project
+
 ---
 
 ## Table of Contents
