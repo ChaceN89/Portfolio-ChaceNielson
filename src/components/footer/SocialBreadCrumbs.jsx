@@ -38,19 +38,19 @@ const documentLinks = [
     icon: <HiDocumentText />,
     onClick: () => openPdf("Chace Nielson - Resume.pdf"),
   },
-  {
-    label: 'Cover Letter',
-    icon: <HiDocumentText />,
-    onClick: () => openPdf("Chace Nielson - Cover Letter.pdf"),
-  },
+  // {
+  //   label: 'Cover Letter',
+  //   icon: <HiDocumentText />,
+  //   onClick: () => openPdf("Chace Nielson - Cover Letter.pdf"),
+  // },
 ];
 
-    
+
 export default function SocialBreadcrumbs() {
   return (
     <div>
       <h4 className="text-xl font-semibold mb-2">Learn More</h4>
-      
+
       {/* Social Links */}
       <ul className="flex flex-wrap items-center gap-2 text-sm text-white">
         {socialLinks.map(({ label, icon, href }, idx) => (

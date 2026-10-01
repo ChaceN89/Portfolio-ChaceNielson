@@ -47,11 +47,11 @@ function DownloadCV() {
   return (
     <div className=' my-2 flex flex-col space-y-2 sm:space-y-0 sm:flex-row sm:space-x-6'>
       <MyBtn sm callBack={openResume} GA_label="Resume Download">
-        <span className='flex items-center gap-1'>Resume <FaFileDownload/></span>
+        <span className='flex items-center gap-1'>Resume <FaFileDownload /></span>
       </MyBtn>
-      <MyBtn sm callBack={openCoverLetter} GA_label="Cover Letter Download">
+      {/* <MyBtn sm callBack={openCoverLetter} GA_label="Cover Letter Download">
         <span className='flex items-center gap-1'>Cover Letter <FaFileDownload/></span>
-      </MyBtn>
+      </MyBtn> */}
     </div>
   );
 }
